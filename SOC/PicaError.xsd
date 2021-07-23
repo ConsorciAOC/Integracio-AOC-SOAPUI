@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2005 rel. 3 U (http://www.altova.com) by  () -->
+<xs:schema xmlns="http://gencat.net/scsp/esquemes/PicaError"
+	xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	targetNamespace="http://gencat.net/scsp/esquemes/PicaError"
+	elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:element name="PICAError">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="CodiError" type="xs:string" />
+				<xs:element name="Error" type="xs:string" />
+				<xs:element name="Descripcio" type="xs:string" />
+				<xs:element name="Causa" type="xs:string" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

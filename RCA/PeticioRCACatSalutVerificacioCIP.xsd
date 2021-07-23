@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- edited with XMLSpy v2007 (http://www.altova.com) by acc (ACME) -->
+<xsd:schema xmlns="http://pica.gencat.net/rca-catsalut/schemes/PeticioVerificacioCIP" xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="http://pica.gencat.net/rca-catsalut/schemes/PeticioVerificacioCIP" elementFormDefault="qualified" attributeFormDefault="unqualified" version="1.0">
+	<xsd:element name="PeticioVerificacioCIP">
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element name="CIP" type="xsd:string">
+				</xsd:element>
+				<xsd:element name="PrimerCognom" type="xsd:string">
+					<xsd:annotation>
+						<xsd:documentation>ISO-8859-1</xsd:documentation>
+					</xsd:annotation>
+				</xsd:element>
+				<xsd:element name="DataReferencia" type="xsd:string" minOccurs="0">
+					<xsd:annotation>
+						<xsd:documentation>Data de referència: és una dada opcional que en el cas concret que no s’informi, s’obtindran les dades de l’assegurat a data del sistema. Format AAAAMMDD</xsd:documentation>
+					</xsd:annotation>
+				</xsd:element>
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+</xsd:schema>

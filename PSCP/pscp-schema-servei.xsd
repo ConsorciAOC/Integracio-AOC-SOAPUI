@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://webservices.pscp.economia.gencat.capgemini.com" xmlns:ns3="http://entity.webservices.pscp.economia.gencat.capgemini.com" xmlns:ns2="http://exceptions.model.pscp.economia.gencat.cat" targetNamespace="http://webservices.pscp.economia.gencat.capgemini.com" elementFormDefault="qualified" attributeFormDefault="qualified">
+	<xsd:import namespace="http://entity.webservices.pscp.economia.gencat.capgemini.com" schemaLocation="pscp-schema-missatgeria.xsd"/>
+	<xsd:import namespace="http://exceptions.model.pscp.economia.gencat.cat" schemaLocation="pscp-schema-excepcio.xsd"/>
+	<xsd:element name="cancelTendering">
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element maxOccurs="1" minOccurs="1" name="in0" type="ns3:WSCancellationNotice" nillable="true"/>
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+	<xsd:complexType name="ArrayOfString">
+		<xsd:sequence>
+			<xsd:element maxOccurs="unbounded" minOccurs="0" name="string" nillable="true" type="xsd:string"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:element name="cancelTenderingResponse">
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element maxOccurs="1" minOccurs="1" name="out" type="ns3:WSResult" nillable="true"/>
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+	<xsd:element name="PscpBusinessException" type="ns2:PscpWSBusinessFaultDetail"/>
+	<xsd:element name="publishContractAwardNotice">
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element maxOccurs="1" minOccurs="1" name="in0" type="ns3:WSContractAward" nillable="true"/>
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+	<xsd:element name="publishContractAwardNoticeResponse">
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element maxOccurs="1" minOccurs="1" name="out" type="ns3:WSResult" nillable="true"/>
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+	<xsd:element name="publishContractNotice">
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element maxOccurs="1" minOccurs="1" name="in0" type="ns3:WSContractNotice" nillable="true"/>
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+	<xsd:element name="publishContractNoticeResponse">
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element maxOccurs="1" minOccurs="1" name="out" type="ns3:WSResult" nillable="true"/>
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+</xsd:schema>

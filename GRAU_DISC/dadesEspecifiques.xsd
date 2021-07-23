@@ -1,0 +1,82 @@
+<?xml version="1.0"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="http://www.aocat.net/discapacitat" targetNamespace="http://www.aocat.net/discapacitat" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<!-- ======================================================= -->
+	<!-- Consulta simple                               					                                     -->
+	<!-- ======================================================= -->
+	<xs:element name="peticioConsultaDiscapacitatSimple">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="dadesPersona"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="respostaConsultaDiscapacitatSimple">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="dadesPersona" minOccurs="0"/>
+				<xs:element name="resposta" type="tRespostaSimple" minOccurs="0"/>
+				<xs:element ref="resultat"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="dadesPersona">
+		<xs:complexType>
+			<xs:all>
+				<xs:element name="nom" type="xs:string"/>
+				<xs:element name="cognoms" type="xs:string"/>
+				<xs:element name="dataNaixement" type="xs:string"/>
+			</xs:all>
+		</xs:complexType>
+	</xs:element>
+	<xs:complexType name="tRespostaSimple">
+		<xs:all>
+			<xs:element name="reconeixement" type="xs:string"/>
+			<xs:element name="grupGrauDiscapacitat" type="xs:unsignedInt" minOccurs="0"/>
+			<xs:element name="descripcioGrupGrauDiscapacitat" type="xs:string" minOccurs="0"/>
+			<xs:element name="missatge" type="xs:string" minOccurs="0"/>
+		</xs:all>
+	</xs:complexType>
+	<!-- ======================================================= -->
+	<!-- Consulta total                               					                                          -->
+	<!-- ======================================================= -->
+	<xs:element name="peticioConsultaDiscapacitatTotal">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="dadesPersona"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="respostaConsultaDiscapacitatTotal">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="dadesPersona" minOccurs="0"/>			
+				<xs:element name="resposta" type="tRespostaTotal" minOccurs="0"/>
+				<xs:element ref="resultat"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:complexType name="tRespostaTotal">
+		<xs:all>
+			<xs:element name="reconeixement" type="xs:string"/>
+			<xs:element name="grauDiscapacitat" type="xs:decimal" minOccurs="0"/>
+			<xs:element name="dataEfecte" type="xs:string" minOccurs="0"/>
+			<xs:element name="baremDependencia" type="xs:string" minOccurs="0"/>
+			<xs:element name="baremMobilitat" type="xs:string" minOccurs="0"/>
+			<xs:element name="acompanyantTransport" type="xs:string" minOccurs="0"/>
+			<xs:element name="validesa" type="xs:string" minOccurs="0"/>
+			<xs:element name="dataVenciment" type="xs:string" minOccurs="0"/>
+			<xs:element name="missatge" type="xs:string" minOccurs="0"/>
+		</xs:all>
+	</xs:complexType>
+	<!-- ======================================================= -->
+	<!-- Resultat                                                                                                  -->
+	<!-- ======================================================= -->
+	<xs:element name="resultat">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="codiResultat" type="xs:string"/>
+				<xs:element name="descripcio" type="xs:string"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

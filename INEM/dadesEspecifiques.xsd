@@ -1,0 +1,55 @@
+<?xml version="1.0"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="http://www.aocat.net/inem" xmlns:map="http://www.map.es/scsp/esquemas/datosespecificos" targetNamespace="http://www.aocat.net/inem" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:import namespace="http://www.map.es/scsp/esquemas/datosespecificos" schemaLocation="datos-especificos.xsd"/>
+	<!-- ======================================================= -->
+	<!-- Verificació dades atur                                                        					 -->
+	<!-- ======================================================= -->
+	<xs:element name="respostaVerificacioDadesAtur">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="map:DatosDesempleo" minOccurs="0"/>
+				<xs:element ref="resultat"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<!-- ======================================================= -->
+	<!-- Verificació import actuals                                                     				 -->
+	<!-- ======================================================= -->
+	<xs:element name="respostaVerificacioImportsActuals">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="map:DatosImporteActual" minOccurs="0"/>
+				<xs:element ref="resultat"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>	
+	<!-- ======================================================= -->
+	<!-- Verificació import períodes                                                                    -->
+	<!-- ======================================================= -->
+	<xs:element name="peticioVerificacioImportsPeriode">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="map:DatosImportePeriodo"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="respostaVerificacioImportsPeriode">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="map:DatosImportePeriodo" minOccurs="0"/>
+				<xs:element ref="resultat"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>	
+	<!-- ======================================================= -->
+	<!-- Resultat                                                                                                  -->
+	<!-- ======================================================= -->
+	<xs:element name="resultat">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="codiResultat" type="xs:string"/>
+				<xs:element name="descripcio" type="xs:string"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

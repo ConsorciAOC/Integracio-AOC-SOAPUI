@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- edited with XMLSpy v2007 (http://www.altova.com) by acc (ACME) -->
+<xsd:schema xmlns="http://pica.gencat.net/rca-catsalut/schemes/PeticioConsultaCIP" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:ns1="http://pica.gencat.net/rca-catsalut/schemes/PeticioConsultaCIP" targetNamespace="http://pica.gencat.net/rca-catsalut/schemes/PeticioConsultaCIP" elementFormDefault="qualified" attributeFormDefault="unqualified" version="1.0">
+	<xsd:element name="PeticioConsultaCIP">
+		<xsd:complexType>
+			<xsd:choice>
+				<xsd:element ref="ns1:CodiIdentificacioPersonal"/>
+				<xsd:element ref="ns1:DadesIdentificatives"/>
+			</xsd:choice>
+		</xsd:complexType>
+	</xsd:element>
+	<xsd:element name="CodiIdentificacioPersonal">
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element name="CIP" type="xsd:string">
+					<xsd:annotation>
+						<xsd:documentation>Codi d'Identificació Personal</xsd:documentation>
+					</xsd:annotation>
+				</xsd:element>
+				<xsd:element name="DataReferencia" type="xsd:string" minOccurs="0">
+					<xsd:annotation>
+						<xsd:documentation>Data de referència: és una dada opcional que en el cas concret que no s’informi, s’obtindran les dades de l’assegurat a data del sistema. Format DDMMYYYY</xsd:documentation>
+					</xsd:annotation>
+				</xsd:element>
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+	<xsd:element name="DadesIdentificatives">
+		<xsd:complexType>
+			<xsd:choice maxOccurs="unbounded">
+				<xsd:element ref="ns1:DadesPersonals" minOccurs="0"/>
+				<xsd:element ref="ns1:DocumentIdentificador" minOccurs="0"/>
+			</xsd:choice>
+		</xsd:complexType>
+	</xsd:element>
+	<xsd:element name="DocumentIdentificador">
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element name="TipusDocumentacio" type="xsd:string"/>
+				<xsd:element name="Documentacio" type="xsd:string"/>
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+	<xsd:element name="DadesPersonals">
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element name="Nom" type="xsd:string" minOccurs="0"/>
+				<xsd:element name="PrimerCognom" type="xsd:string"/>
+				<xsd:element name="SegonCognom" type="xsd:string" minOccurs="0">
+					<xsd:annotation>
+						<xsd:documentation>Obligatori si l'usuari té segon cognom.</xsd:documentation>
+					</xsd:annotation>
+				</xsd:element>
+				<xsd:element name="DataNaixement" type="xsd:string">
+					<xsd:annotation>
+						<xsd:documentation>Format DDMMYYYY</xsd:documentation>
+					</xsd:annotation>
+				</xsd:element>
+				<xsd:element name="Sexe" type="xsd:string">
+					<xsd:annotation>
+						<xsd:documentation>0: Home, 1: Dona</xsd:documentation>
+					</xsd:annotation>
+				</xsd:element>
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+</xsd:schema>

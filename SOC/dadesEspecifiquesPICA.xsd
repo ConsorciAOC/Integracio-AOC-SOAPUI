@@ -1,0 +1,587 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns="http://gencat.net/scsp/esquemes/SOC" xmlns:ns1="http://gencat.net/scsp/esquemes/PicaError" xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="http://gencat.net/scsp/esquemes/SOC" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xsd:import namespace="http://gencat.net/scsp/esquemes/PicaError" schemaLocation="PicaError.xsd"/>
+	<xsd:element name="CertificatRequest">
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element ref="DataIniciSollicitud" minOccurs="0"/>
+				<xsd:element ref="IdPersona"/>
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+	<xsd:element name="CertPerceptorResponse">
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element ref="CertificatRequest" minOccurs="0"/>
+				<xsd:element ref="DataProces" minOccurs="0"/>
+				<xsd:element ref="DadesComunes" minOccurs="0"/>
+				<xsd:element ref="CertPerceptor" minOccurs="0"/>
+				<xsd:element ref="ns1:PICAError" minOccurs="0"/>
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+	<xsd:element name="CertInscripcioResponse">
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element ref="CertificatRequest" minOccurs="0"/>
+				<xsd:element ref="DataProces" minOccurs="0"/>
+				<xsd:element ref="DadesComunes" minOccurs="0"/>
+				<xsd:element ref="CertInscripcio" minOccurs="0"/>
+				<xsd:element ref="ns1:PICAError" minOccurs="0"/>
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+	<xsd:element name="CertUltimPeriodeResponse">
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element ref="CertificatRequest" minOccurs="0"/>
+				<xsd:element ref="DataProces" minOccurs="0"/>
+				<xsd:element ref="DadesComunes" minOccurs="0"/>
+				<xsd:element ref="CertUltimPeriode" minOccurs="0"/>
+				<xsd:element ref="ns1:PICAError" minOccurs="0"/>
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+	<xsd:element name="CertDadesPersonalsResponse">
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element ref="CertificatRequest" minOccurs="0"/>
+				<xsd:element ref="DataProces" minOccurs="0"/>
+				<xsd:element ref="DadesComunes" minOccurs="0"/>
+				<xsd:element ref="CertDadesPersonals" minOccurs="0"/>
+				<xsd:element ref="ns1:PICAError" minOccurs="0"/>
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+	<xsd:element name="CertDonoResponse">
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element ref="CertificatRequest" minOccurs="0"/>
+				<xsd:element ref="DataProces" minOccurs="0"/>
+				<xsd:element ref="CertDono" minOccurs="0"/>
+				<xsd:element ref="ns1:PICAError" minOccurs="0"/>
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+	<!-- INI: PeticioCertificat -->
+	<!-- CodiCertificat -->
+	<xsd:element name="CodiCertificat">
+		<xsd:simpleType>
+			<xsd:restriction base="xsd:string"/>
+		</xsd:simpleType>
+	</xsd:element>
+	<!-- Data -->
+	<xsd:element name="DataIniciSollicitud">
+		<xsd:simpleType>
+			<xsd:restriction base="xsd:string">
+				<xsd:maxLength value="8"/>
+			</xsd:restriction>
+		</xsd:simpleType>
+	</xsd:element>
+	<xsd:element name="DataProces">
+		<xsd:simpleType>
+			<xsd:restriction base="xsd:dateTime"/>
+		</xsd:simpleType>
+	</xsd:element>
+	<!-- IdOrganRequeridor -->
+	<xsd:element name="IdOrganRequeridor">
+		<xsd:simpleType>
+			<xsd:restriction base="xsd:string">
+				<xsd:maxLength value="10"/>
+			</xsd:restriction>
+		</xsd:simpleType>
+	</xsd:element>
+	<!-- NomOrganRequeridor -->
+	<xsd:element name="NomOrganRequeridor">
+		<xsd:simpleType>
+			<xsd:restriction base="xsd:string">
+				<xsd:maxLength value="50"/>
+			</xsd:restriction>
+		</xsd:simpleType>
+	</xsd:element>
+	<!-- Grup  -->
+	<xsd:element name="IdPersona">
+		<xsd:complexType>
+			<xsd:choice>
+				<xsd:element ref="NIF"/>
+				<xsd:element ref="PerCod"/>
+			</xsd:choice>
+		</xsd:complexType>
+	</xsd:element>
+	<xsd:element name="NIF">
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element ref="TipusDocument"/>
+				<xsd:element ref="NumDocument"/>
+				<!--				<xsd:element ref="LletraDocument"/> -->
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+	<xsd:element name="TipusDocument">
+		<xsd:simpleType>
+			<xsd:restriction base="xsd:int">
+				<xsd:enumeration value="1"/>
+				<xsd:enumeration value="2"/>
+				<xsd:enumeration value="3"/>
+				<xsd:enumeration value="4"/>
+				<xsd:enumeration value="5"/>
+				<xsd:enumeration value="6"/>
+				<xsd:enumeration value="7"/>
+				<!-- values 6 i 7: tipus propis per a SOC; 6: titular de la UE; 7: titular extern a la UE però amb familiars de la UE -->
+			</xsd:restriction>
+		</xsd:simpleType>
+	</xsd:element>
+	<xsd:element name="NumDocument">
+		<xsd:simpleType>
+			<xsd:restriction base="xsd:string">
+				<xsd:maxLength value="10"/>
+			</xsd:restriction>
+		</xsd:simpleType>
+	</xsd:element>
+	<xsd:element name="LletraDocument">
+		<xsd:simpleType>
+			<xsd:restriction base="xsd:string">
+				<xsd:maxLength value="1"/>
+			</xsd:restriction>
+		</xsd:simpleType>
+	</xsd:element>
+	<xsd:element name="PerCod">
+		<xsd:simpleType>
+			<xsd:restriction base="xsd:int">
+				<xsd:totalDigits value="8"/>
+				<xsd:minInclusive value="0"/>
+			</xsd:restriction>
+		</xsd:simpleType>
+	</xsd:element>
+	<!-- FIN: PeticioCertificat -->
+	<!-- INI: RespostaCertificat -->
+	<!-- GRUP DadesComunes -->
+	<xsd:element name="DadesComunes">
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element name="NIF">
+					<xsd:complexType>
+						<xsd:sequence>
+							<xsd:element name="TipusDocument">
+								<xsd:simpleType>
+									<xsd:restriction base="xsd:string">
+										<xsd:enumeration value="D"/>
+										<xsd:enumeration value="E"/>
+										<xsd:enumeration value="H"/>
+										<xsd:enumeration value="U"/>
+										<xsd:enumeration value="W"/>
+									</xsd:restriction>
+								</xsd:simpleType>
+							</xsd:element>
+							<xsd:element name="DescTipusDocument">
+								<xsd:simpleType>
+									<xsd:restriction base="xsd:string">
+										<xsd:maxLength value="20"/>
+									</xsd:restriction>
+								</xsd:simpleType>
+							</xsd:element>
+							<xsd:element ref="NumDocument"/>
+							<xsd:element ref="LletraDocument"/>
+						</xsd:sequence>
+					</xsd:complexType>
+				</xsd:element>
+				<xsd:element ref="PerCod"/>
+				<xsd:element ref="Nom"/>
+				<xsd:element ref="Cognom1"/>
+				<xsd:element ref="Cognom2" minOccurs="0"/>
+				<xsd:element ref="Nacionalitat"/>
+				<xsd:element ref="DescNacionalitat"/>
+				<xsd:element ref="Sexe"/>
+				<xsd:element ref="DescSexe"/>
+				<xsd:element ref="DataNaixement"/>
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+	<xsd:element name="Nom">
+		<xsd:simpleType>
+			<xsd:restriction base="xsd:string">
+				<xsd:maxLength value="15"/>
+			</xsd:restriction>
+		</xsd:simpleType>
+	</xsd:element>
+	<xsd:element name="Cognom1">
+		<xsd:simpleType>
+			<xsd:restriction base="xsd:string">
+				<xsd:maxLength value="20"/>
+			</xsd:restriction>
+		</xsd:simpleType>
+	</xsd:element>
+	<xsd:element name="Cognom2">
+		<xsd:simpleType>
+			<xsd:restriction base="xsd:string">
+				<xsd:maxLength value="20"/>
+			</xsd:restriction>
+		</xsd:simpleType>
+	</xsd:element>
+	<xsd:element name="DataNaixement">
+		<xsd:simpleType>
+			<xsd:restriction base="xsd:date"/>
+		</xsd:simpleType>
+	</xsd:element>
+	<xsd:element name="Nacionalitat">
+		<xsd:simpleType>
+			<xsd:restriction base="xsd:int">
+				<xsd:totalDigits value="3"/>
+				<xsd:minInclusive value="0"/>
+			</xsd:restriction>
+		</xsd:simpleType>
+	</xsd:element>
+	<xsd:element name="DescNacionalitat">
+		<xsd:simpleType>
+			<xsd:restriction base="xsd:string"/>
+		</xsd:simpleType>
+	</xsd:element>
+	<xsd:element name="Sexe">
+		<xsd:simpleType>
+			<xsd:restriction base="xsd:int">
+				<xsd:enumeration value="1"/>
+				<xsd:enumeration value="2"/>
+			</xsd:restriction>
+		</xsd:simpleType>
+	</xsd:element>
+	<xsd:element name="DescSexe">
+		<xsd:simpleType>
+			<xsd:restriction base="xsd:string"/>
+		</xsd:simpleType>
+	</xsd:element>
+	<!-- GRUP CertInscripcio -->
+	<xsd:element name="CertInscripcio">
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element ref="DemandantInscrit"/>
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+	<xsd:element name="DemandantInscrit">
+		<xsd:simpleType>
+			<xsd:restriction base="xsd:string">
+				<xsd:enumeration value="S"/>
+				<xsd:enumeration value="N"/>
+			</xsd:restriction>
+		</xsd:simpleType>
+	</xsd:element>
+	<!-- GRUP CertUltimPeriode -->
+	<xsd:element name="CertUltimPeriode">
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element ref="NumDiesInscrit"/>
+				<xsd:element ref="PeriodeIns" minOccurs="0" maxOccurs="unbounded"/>
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+	<xsd:element name="NumDiesInscrit">
+		<xsd:simpleType>
+			<xsd:restriction base="xsd:int">
+				<xsd:totalDigits value="4"/>
+			</xsd:restriction>
+		</xsd:simpleType>
+	</xsd:element>
+	<xsd:element name="PeriodeIns">
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element ref="IniciPeriode"/>
+				<xsd:element ref="FiPeriode"/>
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+	<xsd:element name="IniciPeriode">
+		<xsd:simpleType>
+			<xsd:restriction base="xsd:date"/>
+		</xsd:simpleType>
+	</xsd:element>
+	<xsd:element name="FiPeriode">
+		<xsd:simpleType>
+			<xsd:restriction base="xsd:date"/>
+		</xsd:simpleType>
+	</xsd:element>
+	<!-- GRUP CertPerceptor -->
+	<xsd:element name="CertPerceptor">
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element ref="PerceptorPrestacions"/>
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+	<xsd:element name="PerceptorPrestacions">
+		<xsd:simpleType>
+			<xsd:restriction base="xsd:string">
+				<xsd:enumeration value="S"/>
+				<xsd:enumeration value="N"/>
+			</xsd:restriction>
+		</xsd:simpleType>
+	</xsd:element>
+	<!-- GRUP CertDadesPersonals -->
+	<xsd:element name="CertDadesPersonals">
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element ref="PaisResidencia"/>
+				<xsd:element ref="DescPaisResidencia"/>
+				<xsd:element ref="DadesResidencia"/>
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+	<xsd:element name="PaisResidencia">
+		<xsd:simpleType>
+			<xsd:restriction base="xsd:string">
+				<xsd:maxLength value="3"/>
+			</xsd:restriction>
+		</xsd:simpleType>
+	</xsd:element>
+	<xsd:element name="DescPaisResidencia">
+		<xsd:simpleType>
+			<xsd:restriction base="xsd:string"/>
+		</xsd:simpleType>
+	</xsd:element>
+	<!-- SubGRUP DadesResidencia -->
+	<xsd:element name="DadesResidencia">
+		<xsd:complexType>
+			<xsd:choice>
+				<xsd:element ref="DomiciliEspanya"/>
+				<xsd:element ref="DomiciliEstranger"/>
+			</xsd:choice>
+		</xsd:complexType>
+	</xsd:element>
+	<xsd:element name="DomiciliEspanya">
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element ref="TipusVia" minOccurs="0"/>
+				<xsd:element ref="DescVia" minOccurs="0"/>
+				<xsd:element ref="NomVia" minOccurs="0"/>
+				<xsd:element ref="NumVia" minOccurs="0"/>
+				<xsd:element ref="BisDup" minOccurs="0"/>
+				<xsd:element ref="DescBisDup" minOccurs="0"/>
+				<xsd:element ref="Escala" minOccurs="0"/>
+				<xsd:element ref="Pis" minOccurs="0"/>
+				<xsd:element ref="LletraNum" minOccurs="0"/>
+				<xsd:element ref="Provincia" minOccurs="0"/>
+				<xsd:element ref="DescProvincia" minOccurs="0"/>
+				<xsd:element ref="Illa" minOccurs="0"/>
+				<xsd:element ref="DescIlla" minOccurs="0"/>
+				<xsd:element ref="Municipi" minOccurs="0"/>
+				<xsd:element ref="DescMunicipi" minOccurs="0"/>
+				<xsd:element ref="Localitat" minOccurs="0"/>
+				<xsd:element ref="DescLocalitat" minOccurs="0"/>
+				<xsd:element ref="CodiPostal" minOccurs="0"/>
+				<xsd:element ref="EntitatSingular" minOccurs="0"/>
+				<xsd:element ref="DescEntitatSingular" minOccurs="0"/>
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+	<xsd:element name="TipusVia">
+		<xsd:simpleType>
+			<xsd:restriction base="xsd:string">
+				<xsd:maxLength value="2"/>
+			</xsd:restriction>
+		</xsd:simpleType>
+	</xsd:element>
+	<xsd:element name="DescVia">
+		<xsd:simpleType>
+			<xsd:restriction base="xsd:string"/>
+		</xsd:simpleType>
+	</xsd:element>
+	<xsd:element name="NomVia">
+		<xsd:simpleType>
+			<xsd:restriction base="xsd:string">
+				<xsd:maxLength value="50"/>
+			</xsd:restriction>
+		</xsd:simpleType>
+	</xsd:element>
+	<xsd:element name="NumVia">
+		<xsd:simpleType>
+			<xsd:restriction base="xsd:string">
+				<xsd:maxLength value="4"/>
+			</xsd:restriction>
+		</xsd:simpleType>
+	</xsd:element>
+	<xsd:element name="BisDup">
+		<xsd:simpleType>
+			<xsd:restriction base="xsd:string">
+				<xsd:maxLength value="2"/>
+			</xsd:restriction>
+		</xsd:simpleType>
+	</xsd:element>
+	<xsd:element name="DescBisDup">
+		<xsd:simpleType>
+			<xsd:restriction base="xsd:string"/>
+		</xsd:simpleType>
+	</xsd:element>
+	<xsd:element name="Escala">
+		<xsd:simpleType>
+			<xsd:restriction base="xsd:string">
+				<xsd:maxLength value="2"/>
+			</xsd:restriction>
+		</xsd:simpleType>
+	</xsd:element>
+	<xsd:element name="Pis">
+		<xsd:simpleType>
+			<xsd:restriction base="xsd:string">
+				<xsd:maxLength value="2"/>
+			</xsd:restriction>
+		</xsd:simpleType>
+	</xsd:element>
+	<xsd:element name="LletraNum">
+		<xsd:simpleType>
+			<xsd:restriction base="xsd:string">
+				<xsd:maxLength value="4"/>
+			</xsd:restriction>
+		</xsd:simpleType>
+	</xsd:element>
+	<xsd:element name="Provincia">
+		<xsd:simpleType>
+			<xsd:restriction base="xsd:string">
+				<xsd:maxLength value="2"/>
+			</xsd:restriction>
+		</xsd:simpleType>
+	</xsd:element>
+	<xsd:element name="DescProvincia">
+		<xsd:simpleType>
+			<xsd:restriction base="xsd:string"/>
+		</xsd:simpleType>
+	</xsd:element>
+	<xsd:element name="Illa">
+		<xsd:simpleType>
+			<xsd:restriction base="xsd:string">
+				<xsd:maxLength value="4"/>
+			</xsd:restriction>
+		</xsd:simpleType>
+	</xsd:element>
+	<xsd:element name="DescIlla">
+		<xsd:simpleType>
+			<xsd:restriction base="xsd:string"/>
+		</xsd:simpleType>
+	</xsd:element>
+	<xsd:element name="Municipi">
+		<xsd:simpleType>
+			<xsd:restriction base="xsd:string">
+				<xsd:maxLength value="5"/>
+			</xsd:restriction>
+		</xsd:simpleType>
+	</xsd:element>
+	<xsd:element name="DescMunicipi">
+		<xsd:simpleType>
+			<xsd:restriction base="xsd:string"/>
+		</xsd:simpleType>
+	</xsd:element>
+	<xsd:element name="Localitat">
+		<xsd:simpleType>
+			<xsd:restriction base="xsd:string">
+				<xsd:maxLength value="7"/>
+			</xsd:restriction>
+		</xsd:simpleType>
+	</xsd:element>
+	<xsd:element name="DescLocalitat">
+		<xsd:simpleType>
+			<xsd:restriction base="xsd:string"/>
+		</xsd:simpleType>
+	</xsd:element>
+	<xsd:element name="CodiPostal">
+		<xsd:simpleType>
+			<xsd:restriction base="xsd:string">
+				<xsd:maxLength value="5"/>
+			</xsd:restriction>
+		</xsd:simpleType>
+	</xsd:element>
+	<xsd:element name="EntitatSingular">
+		<xsd:simpleType>
+			<xsd:restriction base="xsd:string">
+				<xsd:maxLength value="9"/>
+			</xsd:restriction>
+		</xsd:simpleType>
+	</xsd:element>
+	<xsd:element name="DescEntitatSingular">
+		<xsd:simpleType>
+			<xsd:restriction base="xsd:string"/>
+		</xsd:simpleType>
+	</xsd:element>
+	<!-- SubGRUP DomiciliEstranger -->
+	<xsd:element name="DomiciliEstranger">
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element ref="DomiciliEstranger1"/>
+				<xsd:element ref="DomiciliEstranger2"/>
+				<xsd:element ref="CodiPostalEstranger"/>
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+	<xsd:element name="DomiciliEstranger1">
+		<xsd:simpleType>
+			<xsd:restriction base="xsd:string">
+				<xsd:maxLength value="50"/>
+			</xsd:restriction>
+		</xsd:simpleType>
+	</xsd:element>
+	<xsd:element name="DomiciliEstranger2">
+		<xsd:simpleType>
+			<xsd:restriction base="xsd:string">
+				<xsd:maxLength value="50"/>
+			</xsd:restriction>
+		</xsd:simpleType>
+	</xsd:element>
+	<xsd:element name="CodiPostalEstranger">
+		<xsd:simpleType>
+			<xsd:restriction base="xsd:string">
+				<xsd:maxLength value="8"/>
+			</xsd:restriction>
+		</xsd:simpleType>
+	</xsd:element>
+	<!-- Dades DONO -->
+	<xsd:element name="CertDono">
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element ref="Demanda"/>
+				<xsd:element ref="PersonaFisica"/>
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+	<xsd:element name="PersonaFisica">
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element name="NIF">
+					<xsd:complexType>
+						<xsd:sequence>
+							<xsd:element name="TipusDocument">
+								<xsd:simpleType>
+									<xsd:restriction base="xsd:string">
+										<xsd:enumeration value="D"/>
+										<xsd:enumeration value="E"/>
+										<xsd:enumeration value="H"/>
+										<xsd:enumeration value="U"/>
+										<xsd:enumeration value="W"/>
+									</xsd:restriction>
+								</xsd:simpleType>
+							</xsd:element>
+							<xsd:element name="DescTipusDocument">
+								<xsd:simpleType>
+									<xsd:restriction base="xsd:string">
+										<xsd:maxLength value="20"/>
+									</xsd:restriction>
+								</xsd:simpleType>
+							</xsd:element>
+							<xsd:element ref="NumDocument"/>
+							<xsd:element ref="LletraDocument"/>
+						</xsd:sequence>
+					</xsd:complexType>
+				</xsd:element>
+				<xsd:element ref="PerCod"/>
+				<xsd:element ref="Nom"/>
+				<xsd:element ref="Cognom1"/>
+				<xsd:element ref="Cognom2" minOccurs="0"/>
+				<xsd:element ref="PaisResidencia"/>
+				<xsd:element ref="DescPaisResidencia"/>
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+	<xsd:element name="Demanda">
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element name="IndDono" type="xsd:string"/>
+				<xsd:element name="DataDono" type="xsd:date"/>
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+</xsd:schema>

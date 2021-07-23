@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="http://www.aoc.cat/tfm" targetNamespace="http://www.aoc.cat/tfm" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:element name="resultat">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="codiResultat" type="xs:string"/>
+				<xs:element name="descripcio" type="xs:string"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:simpleType name="tTipusDocumentacio">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="NIF"/>
+			<xs:enumeration value="NIE"/>
+			<xs:enumeration value="Passaport"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<!-- ===================================================================== -->
+	<!-- TFM_VIGENCIA  >>   TFM_CV_DNITIT_CATDAT + TFM_CV_PCDNTIT_CATDAT       -->
+	<!-- ===================================================================== -->
+	<xs:element name="peticioConsultaVigencia">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:choice>
+					<xs:element name="identificadorTitular">
+						<xs:complexType>
+							<xs:sequence>
+								<xs:element name="tipusDocumentacio" type="tTipusDocumentacio"/>
+								<xs:element name="documentacio" type="xs:string"/>
+							</xs:sequence>
+						</xs:complexType>
+					</xs:element>
+					<xs:element name="dadesTitular">
+						<xs:complexType>
+							<xs:sequence>
+								<xs:element name="primerCognom" type="xs:string"/>
+								<xs:element name="dataNaixement" type="xs:string"/>
+							</xs:sequence>
+						</xs:complexType>
+					</xs:element>
+				</xs:choice>
+				<xs:element name="numeroTitol" type="xs:string"/>
+				<xs:element name="categoria" type="xs:string" minOccurs="0"/>
+				<xs:element name="data" type="xs:string"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="respostaConsultaVigencia">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="peticioConsultaVigencia" minOccurs="0"/>
+				<xs:element name="resposta" type="tRespostaVigencia" minOccurs="0"/>
+				<xs:element ref="resultat"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:complexType name="tRespostaVigencia">
+		<xs:sequence>
+			<xs:element name="indicadorVigencia" type="xs:string"/>
+			<xs:element name="codiAvis" type="xs:string" minOccurs="0"/>
+		</xs:sequence>
+	</xs:complexType>
+	<!-- ===================================================================== -->
+	<!-- TFM_DADESCOMPLETES                                                    -->
+	<!-- ===================================================================== -->
+	<xs:element name="peticioDadesCompletes">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:choice>
+					<xs:element name="identificadorTitular">
+						<xs:complexType>
+							<xs:sequence>
+								<xs:element name="tipusDocumentacio" type="tTipusDocumentacio"/>
+								<xs:element name="documentacio" type="xs:string"/>
+							</xs:sequence>
+						</xs:complexType>
+					</xs:element>
+					<xs:element name="dadesTitular">
+						<xs:complexType>
+							<xs:sequence>
+								<xs:element name="primerCognom" type="xs:string"/>
+								<xs:element name="dataNaixement" type="xs:string"/>
+							</xs:sequence>
+						</xs:complexType>
+					</xs:element>
+				</xs:choice>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="respostaDadesCompletes">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="peticioDadesCompletes" minOccurs="0"/>
+				<xs:element name="resposta" type="tRespostaDadesCompletes" minOccurs="0"/>
+				<xs:element ref="resultat"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:complexType name="tRespostaDadesCompletes">
+		<xs:sequence>
+			<xs:element name="numeroTitol" type="xs:string" minOccurs="0"/>
+			<xs:element name="nom" type="xs:string" minOccurs="0"/>
+			<xs:element name="primerCognom" type="xs:string" minOccurs="0"/>
+			<xs:element name="segonCognom" type="xs:string" minOccurs="0"/>
+			<xs:element name="numeroFills" type="xs:int" minOccurs="0"/>
+			<xs:element name="categoria" type="xs:string" minOccurs="0"/>
+			<xs:element name="estat" type="xs:string" minOccurs="0"/>
+			<xs:element name="tipusVia" type="xs:string" minOccurs="0"/>
+			<xs:element name="nomVia" type="xs:string" minOccurs="0"/>
+			<xs:element name="bloc" type="xs:string" minOccurs="0"/>
+			<xs:element name="numero" type="xs:string" minOccurs="0"/>
+			<xs:element name="pis" type="xs:string" minOccurs="0"/>
+			<xs:element name="escala" type="xs:string" minOccurs="0"/>
+			<xs:element name="porta" type="xs:string" minOccurs="0"/>
+			<xs:element name="codiPostal" type="xs:string" minOccurs="0"/>
+			<xs:element name="localitat" type="xs:string" minOccurs="0"/>
+			<xs:element name="provincia" type="xs:string" minOccurs="0"/>
+			<xs:element name="dataIniciVigencia" type="xs:string" minOccurs="0"/>			
+			<xs:element name="dataCaducitat" type="xs:string" minOccurs="0"/>
+			<xs:element name="tipus" type="xs:string" minOccurs="0"/>
+			<!-- només TFN_DADESCOMPLETES_DIS -->
+			<xs:element name="numDiscapacitats" type="xs:int" minOccurs="0"/>
+		</xs:sequence>
+	</xs:complexType>
+	<!-- ===================================================================== -->
+	<!-- TFM_DADESCOMPLETES_DIS                                                                                           -->
+	<!-- ===================================================================== -->
+	<xs:element name="peticioDadesCompletesDiscapacitats">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="identificadorTitular">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="tipusDocumentacio" type="tTipusDocumentacio"/>
+							<xs:element name="documentacio" type="xs:string"/>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="respostaDadesCompletesDiscapacitats">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="peticioDadesCompletesDiscapacitats" minOccurs="0"/>
+				<xs:element name="resposta" type="tRespostaDadesCompletes" minOccurs="0"/>
+				<xs:element ref="resultat"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<!-- ===================================================================== -->
+	<!-- TFM_DADESCOMPLETES_MASSIU                                                                                    -->
+	<!-- ===================================================================== -->
+	<xs:element name="respostaDadesCompletesMassiu">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="resposta" type="tRespostaDadesCompletesMassiu" minOccurs="0"/>
+				<xs:element ref="resultat"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:complexType name="tRespostaDadesCompletesMassiu">
+		<xs:sequence>
+			<xs:element name="efectius" type="xs:int"/>
+			<xs:element name="resultat" type="xs:base64Binary" minOccurs="0"/>
+		</xs:sequence>
+	</xs:complexType>
+	<!-- ===================================================================== -->
+	<!-- TFM_DADESCOMPLETES_DIS_MASSIU                                         -->
+	<!-- ===================================================================== -->
+	<xs:element name="respostaDadesCompletesDiscapacitatsMassiu">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="resposta" type="tRespostaDadesCompletesMassiu" minOccurs="0"/>
+				<xs:element ref="resultat"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns="http://gencat.net/scsp/esquemes/PicaError" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://gencat.net/scsp/esquemes/PicaError" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:element name="PICAError">
+		<xs:annotation>
+			<xs:documentation>Aquest element existirà sempre que es produeixi un error tècnic a la petició</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="CodiError" type="xs:string">
+					<xs:annotation>
+						<xs:documentation>Codi de l'error</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+				<xs:element name="Error" type="xs:string">
+					<xs:annotation>
+						<xs:documentation>Títol de l'error</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+				<xs:element name="Descripcio" type="xs:string">
+					<xs:annotation>
+						<xs:documentation>Text descriptiu de l'error</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+				<xs:element name="Causa" type="xs:string">
+					<xs:annotation>
+						<xs:documentation>Causa subjacent que ha produit l'error</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xsd:schema xmlns="http://gencat.net/productes/sad" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:err="http://gencat.net/scsp/esquemes/PicaError" targetNamespace="http://gencat.net/productes/sad" elementFormDefault="qualified" attributeFormDefault="unqualified" version="1.0">
+	<xsd:import namespace="http://gencat.net/scsp/esquemes/PicaError" schemaLocation="PicaError.xsd"/>
+	<xsd:element name="consultaSimple">
+		<xsd:annotation>
+			<xsd:documentation>Petició feta pel requeridor a la PICA per obtindre aquest resultat. En el cas de que s'hagi produit un error tècnic i no s'hagi pogut recuperar la petició, no vindrà informat</xsd:documentation>
+		</xsd:annotation>
+		<xsd:complexType>
+			<xsd:all>
+				<xsd:annotation>
+					<xsd:documentation>És obligatori emplenar 1 dels 2 elements: identificador o dadesPersona. Si s'emplenen els 2, es farà cas a "identificador"</xsd:documentation>
+				</xsd:annotation>
+				<xsd:element name="identificador" type="identificador" minOccurs="0">
+					<xsd:annotation>
+						<xsd:documentation>Document identificatiu de la persona que es vol consultar</xsd:documentation>
+					</xsd:annotation>
+				</xsd:element>
+				<xsd:element name="dadesPersona" type="dadesPersona" minOccurs="0">
+					<xsd:annotation>
+						<xsd:documentation>Dades de la persona que es vol consultar</xsd:documentation>
+					</xsd:annotation>
+				</xsd:element>
+			</xsd:all>
+		</xsd:complexType>
+	</xsd:element>
+	<xsd:element name="respostaConsultaSimple">
+		<xsd:complexType>
+			<xsd:all>
+				<xsd:element ref="consultaSimple" minOccurs="0">
+					<xsd:annotation>
+						<xsd:documentation>Consulta que s'ha fet per obtindre aquesta resposta</xsd:documentation>
+					</xsd:annotation>
+				</xsd:element>
+				<xsd:element name="resposta" minOccurs="0">
+					<xsd:annotation>
+						<xsd:documentation>Resposta retornada per l'emissor. Si s'ha produit un error tècnic, no vindrà informat</xsd:documentation>
+					</xsd:annotation>
+					<xsd:complexType>
+						<xsd:all>
+							<xsd:element name="reconeixement" type="xsd:string">
+								<xsd:annotation>
+									<xsd:documentation>Disposa del reconeixement de Grau de Discapacitat:
+- NO TROBAT
+- SI
+- NO
+- EN TRÀMIT
+- CADUCAT I PENDENT DE NOVA REVISIÓ</xsd:documentation>
+								</xsd:annotation>
+							</xsd:element>
+							<xsd:element name="grupGrauDiscapacitat" type="xsd:unsignedInt" minOccurs="0">
+								<xsd:annotation>
+									<xsd:documentation>Grau de discapacitat:
+- 1: pertany al grup 1, discapacitat del 0% al 32%
+- 2: pertany al grup 2, discapacitat del 33% al 64%
+- 3: pertany al grup 3, discapacitat del 65% al 74%
+- 4: pertany al grup 4, discapacitat del 75% o més</xsd:documentation>
+								</xsd:annotation>
+							</xsd:element>
+							<xsd:element name="descripcioGrupGrauDiscapacitat" type="xsd:string" minOccurs="0">
+								<xsd:annotation>
+									<xsd:documentation>Descripció del grup de grau de discapacitat al que pertany el ciutadà (per exemple: discapacitat del 0% al 32%)</xsd:documentation>
+								</xsd:annotation>
+							</xsd:element>
+							<xsd:element name="missatge" type="xsd:string" minOccurs="0">
+								<xsd:annotation>
+									<xsd:documentation>Descripció de la incidència detectada al realitzar la consulta</xsd:documentation>
+								</xsd:annotation>
+							</xsd:element>
+						</xsd:all>
+					</xsd:complexType>
+				</xsd:element>
+				<xsd:element ref="err:PICAError" minOccurs="0"/>
+			</xsd:all>
+		</xsd:complexType>
+	</xsd:element>
+	<xsd:element name="consultaTotal">
+		<xsd:annotation>
+			<xsd:documentation>Petició feta pel requeridor a la PICA per obtindre aquest resultat. En el cas de que s'hagi produit un error tècnic i no s'hagi pogut recuperar la petició, no vindrà informat</xsd:documentation>
+		</xsd:annotation>
+		<xsd:complexType>
+			<xsd:all>
+				<xsd:annotation>
+					<xsd:documentation>És obligatori emplenar 1 dels 2 elements: identificador o dadesPersona. Si s'emplenen els 2, es farà cas a "identificador"</xsd:documentation>
+				</xsd:annotation>
+				<xsd:element name="identificador" type="identificador" minOccurs="0">
+					<xsd:annotation>
+						<xsd:documentation>Document identificatiu de la persona que es vol consultar</xsd:documentation>
+					</xsd:annotation>
+				</xsd:element>
+				<xsd:element name="dadesPersona" type="dadesPersona" minOccurs="0">
+					<xsd:annotation>
+						<xsd:documentation>Dades de la persona que es vol consultar</xsd:documentation>
+					</xsd:annotation>
+				</xsd:element>
+			</xsd:all>
+		</xsd:complexType>
+	</xsd:element>
+	<xsd:element name="respostaConsultaTotal">
+		<xsd:complexType>
+			<xsd:all>
+				<xsd:element ref="consultaTotal" minOccurs="0">
+					<xsd:annotation>
+						<xsd:documentation>Consulta que s'ha fet per obtindre aquesta resposta</xsd:documentation>
+					</xsd:annotation>
+				</xsd:element>
+				<xsd:element name="resposta" minOccurs="0">
+					<xsd:annotation>
+						<xsd:documentation>Resposta retornada per l'emissor. Si s'ha produit un error tècnic, no vindrà informat</xsd:documentation>
+					</xsd:annotation>
+					<xsd:complexType>
+						<xsd:all>
+							<xsd:element name="reconeixement" type="xsd:string">
+								<xsd:annotation>
+									<xsd:documentation>Disposa del reconeixement de Grau de Discapacitat:
+- NO TROBAT
+- SI
+- NO
+- EN TRÀMIT
+- CADUCAT I PENDENT DE NOVA REVISIÓ</xsd:documentation>
+								</xsd:annotation>
+							</xsd:element>
+							<xsd:element name="grauDiscapacitat" type="xsd:decimal" minOccurs="0">
+								<xsd:annotation>
+									<xsd:documentation>Grau de discapacitat indicat com a percentatge</xsd:documentation>
+								</xsd:annotation>
+							</xsd:element>
+							<xsd:element name="dataEfecte" type="xsd:string" minOccurs="0">
+								<xsd:annotation>
+									<xsd:documentation>Data efecte del grau de discapacitat. Format: DDMMAAAA (DD: dia, MM: mes, AAAA: any). Per exemple: 31122009</xsd:documentation>
+								</xsd:annotation>
+							</xsd:element>
+							<xsd:element name="baremDependencia" type="xsd:string" minOccurs="0">
+								<xsd:annotation>
+									<xsd:documentation>Barem de dependència: SI / NO</xsd:documentation>
+								</xsd:annotation>
+							</xsd:element>
+							<xsd:element name="baremMobilitat" type="xsd:string" minOccurs="0">
+								<xsd:annotation>
+									<xsd:documentation>Té reconegut barem de mobilitat: SI / NO</xsd:documentation>
+								</xsd:annotation>
+							</xsd:element>
+							<xsd:element name="acompanyantTransport" type="xsd:string" minOccurs="0">
+								<xsd:annotation>
+									<xsd:documentation>Necessita acompanyant per transport públic: SI / NO</xsd:documentation>
+								</xsd:annotation>
+							</xsd:element>
+							<xsd:element name="validesa" type="xsd:string" minOccurs="0">
+								<xsd:annotation>
+									<xsd:documentation>Validesa del reconeixement: DEFINITIU / PROVISIONAL</xsd:documentation>
+								</xsd:annotation>
+							</xsd:element>
+							<xsd:element name="dataVenciment" type="xsd:string" minOccurs="0">
+								<xsd:annotation>
+									<xsd:documentation>Data de venciment de la validesa. Format: DDMMAAAA (DD: dia, MM: mes, AAAA: any). Per exemple: 31122009</xsd:documentation>
+								</xsd:annotation>
+							</xsd:element>
+							<xsd:element name="missatge" type="xsd:string" minOccurs="0">
+								<xsd:annotation>
+									<xsd:documentation>Descripció de la incidència detectada al realitzar la consulta</xsd:documentation>
+								</xsd:annotation>
+							</xsd:element>
+						</xsd:all>
+					</xsd:complexType>
+				</xsd:element>
+				<xsd:element ref="err:PICAError" minOccurs="0"/>
+			</xsd:all>
+		</xsd:complexType>
+	</xsd:element>
+	<xsd:simpleType name="tipusDocuments">
+		<xsd:restriction base="xsd:string">
+			<xsd:enumeration value="NIF"/>
+			<xsd:enumeration value="NIE"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:complexType name="identificador">
+		<xsd:all>
+			<xsd:element name="TipusDocumentacio" type="tipusDocuments">
+				<xsd:annotation>
+					<xsd:documentation>Tipus del document identificador de la persona a consultar:
+- NIF
+- NIE</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="Documentacio" type="xsd:string">
+				<xsd:annotation>
+					<xsd:documentation>Document identificador de la persona a consultar. Format:
+- NIF: DDDDDDDDL (D: dígit, L: lletra). Per exemple: 11111111A
+- NIE: LDDDDDDDL (D: dígit, L: lletra). Per exemple: X1111111A</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+		</xsd:all>
+	</xsd:complexType>
+	<xsd:complexType name="dadesPersona">
+		<xsd:all>
+			<xsd:element name="nom" type="xsd:string">
+				<xsd:annotation>
+					<xsd:documentation>Nom de la persona a consultar. En majúscules, sense accents ni dièresi i com a màxim de 16 caràcters</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="cognoms" type="xsd:string">
+				<xsd:annotation>
+					<xsd:documentation>Cognoms de la persona a consultar. En majúscules, sense accents ni dièresi i com a màxim de 35 caràcters. És necessari indicar els 2 cognoms de la persona (si en té)</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="dataNaixement" type="xsd:string">
+				<xsd:annotation>
+					<xsd:documentation>Data de naixement de la persona a consultar. Format: DDMMAAAA (DD: dia, MM: mes, AAAA: any). Per exemple: 31122009</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+		</xsd:all>
+	</xsd:complexType>
+</xsd:schema>

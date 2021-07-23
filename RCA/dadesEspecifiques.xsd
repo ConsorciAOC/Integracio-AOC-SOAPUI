@@ -1,0 +1,132 @@
+<?xml version="1.0"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="http://www.aocat.net/rca" targetNamespace="http://www.aocat.net/rca" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<!-- ======================================================= -->
+	<!-- RCA_CONSULTA                                                                                   -->
+	<!-- ======================================================= -->
+	<xs:element name="peticioConsultaAssegurat">
+		<xs:complexType>
+			<xs:choice>
+				<xs:element ref="codiIdentificacioPersonal"/>
+				<xs:element name="dadesPersonals">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="nom" type="xs:string"/>
+							<xs:element name="primerCognom" type="xs:string"/>
+							<xs:element name="segonCognom" type="xs:string" minOccurs="0"/>
+							<xs:element name="dataNaixement" type="xs:string"/>
+							<xs:element name="sexe" type="xs:string"/>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element ref="documentIdentificador"/>
+			</xs:choice>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="codiIdentificacioPersonal">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="CIP" type="xs:string"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="documentIdentificador">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="tipusDocumentacio" type="xs:string"/>
+				<xs:element name="documentacio" type="xs:string"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="respostaConsultaAssegurat">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="peticioConsultaAssegurat" minOccurs="0"/>
+				<xs:element name="resposta" type="tRespostaConsultaAssegurat" minOccurs="0"/>
+				<xs:element ref="resultat"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:complexType name="tRespostaConsultaAssegurat">
+		<xs:sequence>
+			<xs:element name="CIPVigent" type="xs:string"/>
+			<xs:element name="situacioAssegurat" type="xs:string"/>
+			<xs:element ref="adreca"/>
+			<xs:element name="dadesPersonals">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="nom" type="xs:string"/>
+						<xs:element name="primerCognom" type="xs:string"/>
+						<xs:element name="segonCognom" type="xs:string" minOccurs="0"/>
+						<xs:element name="sexe" type="xs:string"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element ref="documentIdentificador"/>
+			<xs:element ref="dadesCobertura"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:element name="adreca">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="nomLocalitat" type="xs:string"/>
+				<xs:element name="codiLocalitat" type="xs:string"/>
+				<xs:element name="districtePostal" type="xs:string"/>
+				<xs:element name="nomVia" type="xs:string"/>
+				<xs:element name="numeroViaInicial" type="xs:string"/>
+				<xs:element name="numeroViaFinal" type="xs:string"/>
+				<xs:element name="tipusVia" type="xs:string"/>
+				<xs:element name="portal" type="xs:string"/>
+				<xs:element name="indicadorBis" type="xs:string"/>
+				<xs:element name="pis" type="xs:string"/>
+				<xs:element name="porta" type="xs:string"/>
+				<xs:element name="escala" type="xs:string"/>
+				<xs:element name="quilometre" type="xs:string"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="dadesCobertura">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="codiNivellCobertura" type="xs:string"/>
+				<xs:element name="descripcioNivellCobertura" type="xs:string"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<!-- ======================================================= -->
+	<!-- RCA_VALIDACIO                                                                                   -->
+	<!-- ======================================================= -->
+	<xs:element name="peticioVerificacioAssegurat">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="CIP" type="xs:string"/>
+				<xs:element name="primerCognom" type="xs:string"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="respostaVerificacioAssegurat">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="peticioVerificacioAssegurat" minOccurs="0"/>
+				<xs:element name="resposta" type="tRespostaVerificacioAssegurat" minOccurs="0"/>
+				<xs:element ref="resultat"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:complexType name="tRespostaVerificacioAssegurat">
+		<xs:sequence>
+			<xs:element name="CIPVigent" type="xs:string"/>
+			<xs:element name="situacioAssegurat" type="xs:string"/>
+		</xs:sequence>
+	</xs:complexType>
+	<!-- ======================================================= -->
+	<!-- Resultat                                                                                                  -->
+	<!-- ======================================================= -->
+	<xs:element name="resultat">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="codiResultat" type="xs:string"/>
+				<xs:element name="descripcio" type="xs:string"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

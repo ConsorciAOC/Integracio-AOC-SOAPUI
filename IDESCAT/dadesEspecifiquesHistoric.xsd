@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xsd:schema xmlns="http://www.aocat.net/padro" xmlns:volante="http://www.red.es/padron" xmlns:ine="http://www.map.es/scsp/esquemas/datosespecificos" xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.aocat.net/padro" elementFormDefault="qualified" attributeFormDefault="unqualified" version="1.0">
+	<xsd:import namespace="http://www.red.es/padron" schemaLocation="VolanteEmpadronamiento.xsd"/>
+	<xsd:element name="peticionDatosTitularHistorico">
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element name="numExpediente" type="xsd:string"/>
+				<xsd:choice>
+					<xsd:element ref="documentacionTitular"/>
+					<xsd:element name="datosTitular" type="tDatosTitular"/>
+				</xsd:choice>
+				<xsd:element name="fechaInicio" type="xsd:date" minOccurs="0"/>
+				<xsd:element name="fechaFin" type="xsd:date" minOccurs="0"/>
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+	<xsd:element name="respuestaDatosTitularHistorico">
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element ref="peticionDatosTitularHistorico" minOccurs="0"/>
+				<xsd:element name="codigoResultado" type="xsd:int"/>
+				<xsd:choice>
+					<xsd:element ref="periodo" minOccurs="0" maxOccurs="unbounded"/>
+					<xsd:element ref="titulares" minOccurs="0"/>
+				</xsd:choice>
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+	<xsd:element name="peticionDatosConvivientesHistorico">
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element name="numExpediente" type="xsd:string"/>
+				<xsd:choice>
+					<xsd:element ref="documentacionTitular"/>
+					<xsd:element name="datosTitular" type="tDatosTitular"/>
+				</xsd:choice>
+				<xsd:element name="fechaInicio" type="xsd:date" minOccurs="0"/>
+				<xsd:element name="fechaFin" type="xsd:date" minOccurs="0"/>
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+	<xsd:element name="respuestaDatosConvivientesHistorico">
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element ref="peticionDatosConvivientesHistorico" minOccurs="0"/>
+				<xsd:element name="codigoResultado" type="xsd:int"/>
+				<xsd:choice>
+					<xsd:element ref="periodo" minOccurs="0" maxOccurs="unbounded"/>
+					<xsd:element ref="titulares" minOccurs="0"/>
+				</xsd:choice>
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+	<xsd:element name="documentacionTitular">
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element name="tipoDocumentacion" type="xsd:int"/>
+				<xsd:element name="documentacion" type="xsd:string"/>
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+	<xsd:element name="titulares">
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element name="fecha" type="xsd:string"/>
+				<xsd:element name="titular" type="tDatosTitularFiltro" minOccurs="0" maxOccurs="unbounded"/>
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+	<xsd:complexType name="tDatosTitular">
+		<xsd:sequence>
+			<xsd:element name="nombre" type="xsd:string"/>
+			<xsd:element name="primerApellido" type="xsd:string"/>
+			<xsd:element name="segundoApellido" type="xsd:string" minOccurs="0"/>
+			<xsd:element name="fechaNacimiento" type="xsd:string"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:complexType name="tDatosTitularFiltro">
+		<xsd:sequence>
+			<xsd:element name="nombre" type="xsd:string"/>
+			<xsd:element name="primerApellido" type="xsd:string"/>
+			<xsd:element name="segundoApellido" type="xsd:string" minOccurs="0"/>
+			<xsd:element name="fechaNacimiento" type="xsd:string"/>
+			<xsd:element name="tipoDocumentacion" type="xsd:int"/>
+			<xsd:element name="documentacion" type="xsd:string"/>
+			<xsd:element name="codigoProvincia" type="xsd:string"/>
+			<xsd:element name="codigoMunicipio" type="xsd:string"/>
+			<xsd:element name="domicilio" type="xsd:string"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:element name="periodo">
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element name="fecha" type="xsd:string"/>
+				<xsd:element name="codigoResultado" type="xsd:int"/>
+				<xsd:element name="descripcionResultado" type="xsd:string"/>
+				<xsd:element ref="volante:VolanteEmpadronamiento" minOccurs="0"/>
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+</xsd:schema>
