@@ -1,0 +1,511 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2008 rel. 2 sp2 (http://www.altova.com) by Sergio Figueras (Consorci Administració Oberta de Catalunya) -->
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="http://www.aoc.cat/regentitats" targetNamespace="http://www.aoc.cat/regentitats" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:element name="peticioDadesConsulta">
+		<xs:complexType>
+			<xs:choice>
+				<xs:element name="idIntern" type="xs:string"/>
+				<xs:sequence>
+					<xs:element name="numInscripcio" type="xs:string"/>
+					<xs:element name="demTerritorial" type="xs:string"/>
+					<xs:element name="tipusEntitat" type="xs:string"/>
+				</xs:sequence>
+			</xs:choice>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="peticioBasicaConsulta">
+		<xs:complexType>
+			<xs:all>
+				<xs:element name="nomEntitat" type="xs:string" minOccurs="0"/>
+				<xs:element name="numInscripcio" type="xs:string" minOccurs="0"/>
+				<xs:element name="tipusEntitat" type="xs:string" minOccurs="0"/>
+				<xs:element name="demTerritorial" type="xs:string" minOccurs="0"/>
+				<xs:element name="comarca" type="xs:string" minOccurs="0"/>
+				<xs:element name="provincia" type="xs:string" minOccurs="0"/>
+				<xs:element name="CIF" type="xs:string" minOccurs="0"/>
+				<xs:element name="estat" type="xs:string" minOccurs="0"/>
+				<xs:element name="dataInscripcio" type="xs:string" minOccurs="0">
+					<xs:annotation>
+						<xs:documentation>Format "YYYY-MM-DD"</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+				<xs:element name="dataDissolucio" type="xs:string" minOccurs="0">
+					<xs:annotation>
+						<xs:documentation>Format "YYYY-MM-DD"</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+				<xs:element name="classificacio" type="xs:string" minOccurs="0"/>
+			</xs:all>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="peticioRegistreFundacions">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="capcalera">
+					<xs:annotation>
+						<xs:documentation>Dades generals de la petició</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+				<xs:element ref="dadesFundacio">
+					<xs:annotation>
+						<xs:documentation>Dades de la entitat</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+				<xs:element ref="escriptura">
+					<xs:annotation>
+						<xs:documentation>Copia de l'escriptura</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+				<xs:element ref="estatuts" minOccurs="0">
+					<xs:annotation>
+						<xs:documentation>Copia dels estatuts</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="peticioDadesConsultaComptes">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:choice>
+					<xs:element name="idIntern" type="xs:string"/>
+					<xs:sequence>
+						<xs:element name="numInscripcio" type="xs:string"/>
+						<xs:element name="demTerritorial" type="xs:string"/>
+						<xs:element name="tipusEntitat" type="xs:string"/>
+					</xs:sequence>
+				</xs:choice>
+				<xs:element name="anyInici" type="xs:gYear"/>
+				<xs:element name="anyFi" type="xs:gYear" minOccurs="0"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="respostaDadesEntitat">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="peticioDadesConsulta" minOccurs="0"/>
+				<xs:element name="entitat" minOccurs="0">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="dadesIdentificatives">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element name="numInscripcio" type="xs:string"/>
+										<xs:element name="tipusEntitat" type="xs:string"/>
+										<xs:element name="demTerritorial" type="xs:string"/>
+										<xs:element name="nomOficialEntitat" type="xs:string"/>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+							<xs:element name="organGovern" minOccurs="0" maxOccurs="unbounded">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element name="carrec" type="xs:string"/>
+										<xs:element name="dataInscripcio" type="xs:string">
+											<xs:annotation>
+												<xs:documentation>Format YYYY-MM-DD</xs:documentation>
+											</xs:annotation>
+										</xs:element>
+										<xs:element name="dataPrevistaBaixa" type="xs:string" minOccurs="0">
+											<xs:annotation>
+												<xs:documentation>Format YYYY-MM-DD</xs:documentation>
+											</xs:annotation>
+										</xs:element>
+										<xs:element name="dataBaixa" type="xs:string" minOccurs="0">
+											<xs:annotation>
+												<xs:documentation>Format YYY-MM-DD</xs:documentation>
+											</xs:annotation>
+										</xs:element>
+										<xs:element name="vitalici" type="xs:string">
+											<xs:annotation>
+												<xs:documentation>Valor 0 / 1</xs:documentation>
+											</xs:annotation>
+										</xs:element>
+										<xs:element name="natural" type="xs:string">
+											<xs:annotation>
+												<xs:documentation>Valor 0 / 1</xs:documentation>
+											</xs:annotation>
+										</xs:element>
+										<xs:choice>
+											<xs:element name="personaFisica">
+												<xs:complexType>
+													<xs:sequence>
+														<xs:element name="nom" type="xs:string"/>
+														<xs:element name="primerCognom" type="xs:string"/>
+														<xs:element name="segonCognom" type="xs:string" minOccurs="0"/>
+													</xs:sequence>
+												</xs:complexType>
+											</xs:element>
+											<xs:element name="personaJuridica">
+												<xs:complexType>
+													<xs:sequence>
+														<xs:element name="denominacio" type="xs:string"/>
+														<xs:element name="CIF" type="xs:string"/>
+													</xs:sequence>
+												</xs:complexType>
+											</xs:element>
+										</xs:choice>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+							<xs:element name="dadesDomiciliaries" minOccurs="0" maxOccurs="unbounded">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element name="tipusVia" type="xs:string"/>
+										<xs:element name="nomVia" type="xs:string"/>
+										<xs:element name="numero" type="xs:string" minOccurs="0"/>
+										<xs:element name="bloc" type="xs:string" minOccurs="0"/>
+										<xs:element name="escala" type="xs:string" minOccurs="0"/>
+										<xs:element name="pis" type="xs:string" minOccurs="0"/>
+										<xs:element name="porta" type="xs:string" minOccurs="0"/>
+										<xs:element name="telefon" type="xs:string" minOccurs="0"/>
+										<xs:element name="fax" type="xs:string" minOccurs="0"/>
+										<xs:element name="restaDomicili" type="xs:string" minOccurs="0"/>
+										<xs:element name="codiPostal" type="xs:string" minOccurs="0"/>
+										<xs:choice>
+											<xs:sequence>
+												<xs:element name="comarca" type="xs:string" minOccurs="0"/>
+												<xs:element name="provincia" type="xs:string" minOccurs="0"/>
+												<xs:element name="codiPoblacio" type="xs:string" minOccurs="0"/>
+												<xs:element name="nomPoblacio" type="xs:string" minOccurs="0"/>
+											</xs:sequence>
+											<xs:element name="municipiForaCatalunya" type="xs:string" minOccurs="0"/>
+										</xs:choice>
+										<xs:element name="pais" type="xs:string" minOccurs="0"/>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element ref="resultat"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="respostaInscripcionsEntitats">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="peticioBasicaConsulta" minOccurs="0"/>
+				<xs:element name="entitat" minOccurs="0" maxOccurs="unbounded">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="dadesIdentificatives">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element name="numInscripcio" type="xs:string"/>
+										<xs:element name="tipusEntitat" type="xs:string"/>
+										<xs:element name="demTerritorial" type="xs:string"/>
+										<xs:element name="idIntern" type="xs:string"/>
+										<xs:element name="CIF" type="xs:string"/>
+										<xs:element name="nomOficialEntitat" type="xs:string"/>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+							<xs:element name="dadesFitxaEntitat">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element name="estat" type="xs:string"/>
+										<xs:element name="poblacio" type="xs:string"/>
+										<xs:element name="dataInscripcio" type="xs:string">
+											<xs:annotation>
+												<xs:documentation>Format "YYYY-MM-DD"</xs:documentation>
+											</xs:annotation>
+										</xs:element>
+										<xs:element name="utilitatPublica" type="xs:string">
+											<xs:annotation>
+												<xs:documentation>Valor 0 / 1</xs:documentation>
+											</xs:annotation>
+										</xs:element>
+										<xs:element name="adaptada" type="xs:string">
+											<xs:annotation>
+												<xs:documentation>Valor 0 / 1</xs:documentation>
+											</xs:annotation>
+										</xs:element>
+										<xs:element name="juvenil" type="xs:string">
+											<xs:annotation>
+												<xs:documentation>Valor 0 / 1</xs:documentation>
+											</xs:annotation>
+										</xs:element>
+										<xs:element name="professional" type="xs:string">
+											<xs:annotation>
+												<xs:documentation>Valor 0 / 1</xs:documentation>
+											</xs:annotation>
+										</xs:element>
+										<xs:element name="provincia" type="xs:string"/>
+										<xs:element name="comarca" type="xs:string"/>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+							<xs:element name="dadesOrgansGovern">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element name="vigenciaCarrec" type="xs:string"/>
+										<xs:element name="organsCaducats" type="xs:string">
+											<xs:annotation>
+												<xs:documentation>Valor 0 / 1</xs:documentation>
+											</xs:annotation>
+										</xs:element>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element ref="resultat"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="respostaDocEstatuts">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="peticioDadesConsulta" minOccurs="0"/>
+				<xs:element name="documentacio" minOccurs="0">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="dadesIdentificatives">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element name="numInscripcio" type="xs:string"/>
+										<xs:element name="tipusEntitat" type="xs:string"/>
+										<xs:element name="demTerritorial" type="xs:string"/>
+										<xs:element name="nomOficialEntitat" type="xs:string"/>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+							<xs:element name="guid" type="xs:string" minOccurs="0"/>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element ref="resultat"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="respostaRegistreFundacions">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="resultat">
+					<xs:annotation>
+						<xs:documentation>Resultat de la operació.</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="capcalera">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="codiCadastre">
+					<xs:simpleType>
+						<xs:restriction base="xs:string">
+							<xs:length value="9"/>
+						</xs:restriction>
+					</xs:simpleType>
+				</xs:element>
+				<xs:element name="codiUltimesVoluntats">
+					<xs:simpleType>
+						<xs:restriction base="xs:string">
+							<xs:length value="7"/>
+						</xs:restriction>
+					</xs:simpleType>
+				</xs:element>
+				<xs:element name="numProtocol" type="xs:int"/>
+				<xs:element name="numProtocolBis" type="xs:int" minOccurs="0"/>
+				<xs:element name="anyProtocol" type="xs:int"/>
+				<xs:element name="nomNotari" type="xs:string"/>
+				<xs:element name="cognomsNotari" type="xs:string"/>
+				<xs:element name="municipi" type="xs:string"/>
+				<xs:element name="acteJuridic">
+					<xs:simpleType>
+						<xs:restriction base="xs:string">
+							<xs:maxLength value="50"/>
+						</xs:restriction>
+					</xs:simpleType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="dadesFundacio">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="nom" type="xs:string"/>
+				<xs:element name="CIF" type="xs:string" minOccurs="0"/>
+				<xs:element ref="domicili" minOccurs="0"/>
+				<xs:element name="codiPostal" minOccurs="0">
+					<xs:annotation>
+						<xs:documentation>Codi postal</xs:documentation>
+					</xs:annotation>
+					<xs:simpleType>
+						<xs:restriction base="xs:string">
+							<xs:length value="5"/>
+						</xs:restriction>
+					</xs:simpleType>
+				</xs:element>
+				<xs:element name="codiProvincia" minOccurs="0">
+					<xs:annotation>
+						<xs:documentation>Codi INE de província.</xs:documentation>
+					</xs:annotation>
+					<xs:simpleType>
+						<xs:restriction base="xs:string">
+							<xs:length value="2"/>
+						</xs:restriction>
+					</xs:simpleType>
+				</xs:element>
+				<xs:element name="codiMunicipi" minOccurs="0">
+					<xs:annotation>
+						<xs:documentation>Codi INE de municipi.</xs:documentation>
+					</xs:annotation>
+					<xs:simpleType>
+						<xs:restriction base="xs:string">
+							<xs:length value="4"/>
+						</xs:restriction>
+					</xs:simpleType>
+				</xs:element>
+				<xs:element name="finalitats" minOccurs="0">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="finalitat" type="xs:string" maxOccurs="5"/>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="dataConstitucio" type="xs:date" minOccurs="0">
+					<xs:annotation>
+						<xs:documentation>Data de constitució de la entitat</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="escriptura">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="nom" type="xs:string"/>
+				<xs:element name="mimeType">
+					<xs:simpleType>
+						<xs:annotation>
+							<xs:documentation>text/xml, application/pdf, application/msword, application/unknown</xs:documentation>
+						</xs:annotation>
+						<xs:restriction base="xs:string">
+							<xs:enumeration value="XML"/>
+							<xs:enumeration value="PDF"/>
+							<xs:enumeration value="RTF"/>
+							<xs:enumeration value="DOC"/>
+							<xs:enumeration value="UNKNOWN"/>
+						</xs:restriction>
+					</xs:simpleType>
+				</xs:element>
+				<xs:element name="id" type="xs:string"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="estatuts">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="nom" type="xs:string"/>
+				<xs:element name="mimeType">
+					<xs:simpleType>
+						<xs:annotation>
+							<xs:documentation>text/xml, application/pdf, application/msword, application/unknown</xs:documentation>
+						</xs:annotation>
+						<xs:restriction base="xs:string">
+							<xs:enumeration value="XML"/>
+							<xs:enumeration value="PDF"/>
+							<xs:enumeration value="RTF"/>
+							<xs:enumeration value="DOC"/>
+							<xs:enumeration value="UNKNOWN"/>
+						</xs:restriction>
+					</xs:simpleType>
+				</xs:element>
+				<xs:element name="id" type="xs:string"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="domicili">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="tipusVia">
+					<xs:annotation>
+						<xs:documentation>Codi INE de tipus de via.</xs:documentation>
+					</xs:annotation>
+					<xs:simpleType>
+						<xs:restriction base="xs:string">
+							<xs:maxLength value="50"/>
+						</xs:restriction>
+					</xs:simpleType>
+				</xs:element>
+				<xs:element name="nomVia" type="xs:string">
+					<xs:annotation>
+						<xs:documentation>Nom de la via</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+				<xs:element name="numero" type="xs:string" minOccurs="0">
+					<xs:annotation>
+						<xs:documentation>Número</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+				<xs:element name="portal" type="xs:string" minOccurs="0">
+					<xs:annotation>
+						<xs:documentation>Portal</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+				<xs:element name="bloc" type="xs:string" minOccurs="0">
+					<xs:annotation>
+						<xs:documentation>Bloc</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+				<xs:element name="escala" type="xs:string" minOccurs="0">
+					<xs:annotation>
+						<xs:documentation>Escala</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+				<xs:element name="planta" type="xs:string" minOccurs="0">
+					<xs:annotation>
+						<xs:documentation>Planta</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+				<xs:element name="porta" type="xs:string" minOccurs="0">
+					<xs:annotation>
+						<xs:documentation>Porta</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+				<xs:element name="resta" type="xs:string" minOccurs="0">
+					<xs:annotation>
+						<xs:documentation>Dades addicionals per descriure característiques particulars del domicili.</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="respostaDadesConsultaComptes">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="peticioDadesConsultaComptes" minOccurs="0"/>
+				<xs:element name="documentacio" minOccurs="0">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="dadesIdentificatives">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element name="numInscripcio" type="xs:string"/>
+										<xs:element name="tipusEntitat" type="xs:string"/>
+										<xs:element name="demTerritorial" type="xs:string"/>
+										<xs:element name="nomOficialEntitat" type="xs:string"/>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+							<xs:element name="guid" type="xs:string" minOccurs="0"/>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element ref="resultat"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="resultat">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="codiResultat" type="xs:string"/>
+				<xs:element name="descripcio" type="xs:string"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>
