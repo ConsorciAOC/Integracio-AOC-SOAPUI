@@ -41,7 +41,7 @@ En aquest cas, per carregar el wsdl, ens el tindrem que descarregar de la web i 
 ---
 ## Carregar WSDL adaptat
 
-Ens tindrem que descarregar el wsdl que tenim en aquesta web
+Ens tindrem que descarregar el wsdl que tenim en aquesta web i les carpetes amb els .xsd en local
 
 ![wsdl](capturas/soap0.png)
 
