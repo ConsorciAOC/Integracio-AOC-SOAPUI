@@ -21,16 +21,16 @@
 			</xs:element>
 		</xs:schema>
 
-		<xs:schema xmlns="http://gencat.net/scsp/esquemes/peticion" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xmime="http://www.w3.org/2005/05/xmlmime" xmlns:inem="http://www.aocat.net/inem"  xmlns:pscp="http://webservices.pscp.economia.gencat.capgemini.com" xmlns:tfn="http://www.aoc.cat/tfn" xmlns:tfm="http://www.aoc.cat/tfm" xmlns:idescat="http://www.aocat.net/padro" xmlns:grau="http://www.aocat.net/discapacitat" xmlns:soc="http://gencat.net/scsp/esquemes/SOC"   xmlns:rca="http://www.aocat.net/rca" xmlns:reg="http://justicia.gencat.cat/spicanot/esquemas/consulta"  targetNamespace="http://gencat.net/scsp/esquemes/peticion"  elementFormDefault="qualified" attributeFormDefault="unqualified">
-			<xs:import namespace="http://www.aocat.net/inem" schemaLocation="./INEM/dadesEspecifiques.xsd"/>
-			<xs:import namespace="http://www.aoc.cat/tfn" schemaLocation="./TFN/dadesEspecifiques.xsd"/>
+		<xs:schema xmlns="http://gencat.net/scsp/esquemes/peticion" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xmime="http://www.w3.org/2005/05/xmlmime" xmlns:inem="http://www.aocat.net/inem"  xmlns:pscp="http://webservices.pscp.economia.gencat.capgemini.com" xmlns:tfn="http://www.aoc.cat/tfn" xmlns:tfm="http://www.aoc.cat/tfm" xmlns:idescat="http://www.aocat.net/padro" xmlns:grau="http://www.aocat.net/discapacitat" xmlns:soc="http://gencat.net/scsp/esquemes/SOC"   xmlns:rca="http://www.aocat.net/rca" xmlns:reg="http://www.aoc.cat/regentitats"  targetNamespace="http://gencat.net/scsp/esquemes/peticion"  elementFormDefault="qualified" attributeFormDefault="unqualified">
+			<xs:import namespace="http://www.aocat.net/inem" schemaLocation="./VO/VO - ESTAT/INEM/dadesEspecifiques.xsd"/>
+			<xs:import namespace="http://www.aoc.cat/tfn" schemaLocation="./VO/VO - GENE/TFN/dadesEspecifiques.xsd"/>
 			<xs:import namespace="http://webservices.pscp.economia.gencat.capgemini.com" schemaLocation="./PSCP/pscp-schema-servei.xsd"/>
-			<xs:import namespace="http://www.aocat.net/padro" schemaLocation="./IDESCAT/dadesEspecifiquesHistoric.xsd"/>
-			<xs:import namespace="http://www.aoc.cat/tfm" schemaLocation="./TFM/dadesEspecifiques.xsd"/>
-			<xs:import namespace="http://www.aocat.net/discapacitat" schemaLocation="./GRAU_DISC/dadesEspecifiques.xsd"/>
-			<xs:import namespace="http://gencat.net/scsp/esquemes/SOC" schemaLocation="./SOC/dadesEspecifiquesPICA.xsd"/>
-			<xs:import namespace="http://www.aocat.net/rca" schemaLocation="./RCA/dadesEspecifiques.xsd"/>
-			<xs:import namespace="http://justicia.gencat.cat/spicanot/esquemas/consulta" schemaLocation="./REG_ENT/consultas.xsd"/>
+			<xs:import namespace="http://www.aocat.net/padro" schemaLocation="./VO/VO - GENE/IDESCAT/dadesEspecifiquesHistoric.xsd"/>
+			<xs:import namespace="http://www.aoc.cat/tfm" schemaLocation="./VO/VO - GENE/TFM/dadesEspecifiques.xsd"/>
+			<xs:import namespace="http://www.aocat.net/discapacitat" schemaLocation="./VO/VO - GENE/GRAU_DISC/dadesEspecifiques.xsd"/>
+			<xs:import namespace="http://gencat.net/scsp/esquemes/SOC" schemaLocation="./VO/VO - GENE/SOC/dadesEspecifiquesPICA.xsd"/>
+			<xs:import namespace="http://www.aocat.net/rca" schemaLocation="./VO/VO - GENE/RCA/dadesEspecifiques.xsd"/>
+			<xs:import namespace="http://www.aoc.cat/regentitats" schemaLocation="./VO/VO - GENE/REG_ENT/dadesEspecifiques.xsd"/>
 
 			<xs:element name="Apellido1">
 				<xs:simpleType>
@@ -313,9 +313,9 @@
 						<xs:element ref="soc:CertificatRequest" minOccurs="0"/>
 						<xs:element ref="rca:peticioConsultaAssegurat" minOccurs="0"/>
 						<xs:element ref="rca:peticioVerificacioAssegurat" minOccurs="0"/>
-						<xs:element ref="reg:PeticioDadesConsulta" minOccurs="0"/>
-						<xs:element ref="reg:PeticioDadesConsultaComptes" minOccurs="0"/>
-						<xs:element ref="reg:PeticioBasicaConsulta" minOccurs="0"/>
+						<xs:element ref="reg:peticioDadesConsulta" minOccurs="0"/>
+						<xs:element ref="reg:peticioDadesConsultaComptes" minOccurs="0"/>
+						<xs:element ref="reg:peticioBasicaConsulta" minOccurs="0"/>
 
 					</xs:choice>
 				</xs:complexType>
