@@ -5,6 +5,19 @@ En el nostre cas, per tal de poder oferir un millor servei de suport, explicarem
 
 ![circuit](capturas/grafic.png)
 
+1 Generem XML que apunta a l'endpoint del servei que volem consumir (APP, IOP, NT)
+
+2 Amb la petició signada WSS o per canal SSL enviem l'XML que pasarà per les pases:
+
+    2.1 Validació SIRI (capa seguretat per validar que l'autenticació sigui correcte)
+
+    2.2 Una vegada validat, es pasa la petició a la MTI per orquestrar a quin servei s'ha d'enviar
+
+    2.3 S'envia al servei
+
+    2.4 S'envia cap a l'emissor (és fa el consum)
+
+
 # Preparació projecte SOAP
 
 ## Importar el WSDL
@@ -19,6 +32,27 @@ Importem WSDL de PRE per IOP: **https://serveis3-pre.iop.aoc.cat/siri-proxy/serv
 Amb aquestes dues accions hem generat el projecte:
 
 ![wsdl](capturas/wsdl3.png)
+
+---
+Tenim un WSDL adaptat amb els .xsd dels diferents serveis per fer la validació dels XML tant per missatgeria específica com per missatgeria genèrica
+
+En aquest cas, per carregar el wsdl, ens el tindrem que descarregar de la web i carregar el SOAP-ui
+
+---
+## Carregar WSDL adaptat
+
+Ens tindrem que descarregar el wsdl que tenim en aquesta web
+
+![wsdl](capturas/soap0.png)
+
+En el nostre projecte, clickem al botó dret del ratolí i seleccionem "ADD WSDL"
+
+![wsdl](capturas/soap1.png)
+
+Carreguem el WSDL
+
+![wsdl](capturas/soap2.png)
+![wsdl](capturas/soap3.png)
 
 ---
 
