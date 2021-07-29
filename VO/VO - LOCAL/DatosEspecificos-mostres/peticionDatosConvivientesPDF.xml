@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<peticionDatosConvivientesPDF xmlns="http://www.aocat.net/padro">
+	<numExpediente>String</numExpediente>
+	<tipoDocumentacion>0</tipoDocumentacion>
+	<documentacion>String</documentacion>
+	<codigoMunicipio>String</codigoMunicipio>
+	<codigoProvincia>String</codigoProvincia>
+	<idescat>0</idescat>
+</peticionDatosConvivientesPDF>

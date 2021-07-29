@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<peticionMunicipioResidencia xmlns="http://www.aocat.net/padro">
+	<numExpediente>String</numExpediente>
+	<tipoDocumentacion>0</tipoDocumentacion>
+	<documentacion>String</documentacion>
+</peticionMunicipioResidencia>

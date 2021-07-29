@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<respuestaMunicipioResidencia xmlns="http://www.aocat.net/padro">
+	<numExpediente>String</numExpediente>
+	<tipoDocumentacion>0</tipoDocumentacion>
+	<documentacion>String</documentacion>
+	<codigoResultado>0</codigoResultado>
+	<codigoMunicipio>String</codigoMunicipio>
+	<codigoProvincia>String</codigoProvincia>
+</respuestaMunicipioResidencia>

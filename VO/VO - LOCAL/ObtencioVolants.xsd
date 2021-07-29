@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xsd:schema targetNamespace="http://www.aocat.net/padro/modalitats/ObtencioVolant" xmlns="http://www.aocat.net/padro/modalitats/ObtencioVolant" xmlns:volante="http://www.red.es/padron" xmlns:xsd="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" attributeFormDefault="unqualified" version="1.0">
+	<xsd:import namespace="http://www.red.es/padron" schemaLocation="VolanteEmpadronamiento.xsd"/>
+
+	<xsd:element name="respostaObtencioVolant">
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element name="codiResultat" type="xsd:string"/>
+				<xsd:element ref="volante:VolanteEmpadronamiento" minOccurs="0"/>
+                <xsd:element name="idescat" type="xsd:int"/>
+                <xsd:element name="idescatMotiu" type="xsd:int"/>
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+	
+</xsd:schema>	

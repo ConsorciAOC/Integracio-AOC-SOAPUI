@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<respuestaDatosTitular xmlns="http://www.aocat.net/padro" xmlns:volante="http://www.red.es/padron">
+	<numExpediente>String</numExpediente>
+	<tipoDocumentacion>0</tipoDocumentacion>
+	<documentacion>String</documentacion>
+	<codigoMunicipio>String</codigoMunicipio>
+	<codigoProvincia>String</codigoProvincia>
+	<codigoResultado>0</codigoResultado>
+	<volante:VolanteEmpadronamiento>text</volante:VolanteEmpadronamiento>
+	<fuente>String</fuente>
+	<idescatMotivo>0</idescatMotivo>
+</respuestaDatosTitular>

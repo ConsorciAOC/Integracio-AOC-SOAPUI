@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<peticionDatosTitularINE xmlns="http://www.aocat.net/padro">
+	<numExpediente>String</numExpediente>
+	<tipoDocumentacion>0</tipoDocumentacion>
+	<documentacion>String</documentacion>
+	<nombre>String</nombre>
+	<primerApellido>String</primerApellido>
+	<segundoApellido>String</segundoApellido>
+	<espanol>String</espanol>
+	<codigoMunicipio>String</codigoMunicipio>
+	<codigoProvincia>String</codigoProvincia>
+</peticionDatosTitularINE>

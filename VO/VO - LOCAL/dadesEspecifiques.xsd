@@ -1,0 +1,367 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xsd:schema xmlns="http://www.aocat.net/padro" xmlns:volante="http://www.red.es/padron" xmlns:ine="http://www.map.es/scsp/esquemas/datosespecificos" xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.aocat.net/padro" elementFormDefault="qualified" attributeFormDefault="unqualified" version="1.0">
+	<xsd:import namespace="http://www.red.es/padron" schemaLocation="VolanteEmpadronamiento.xsd"/>
+	<xsd:import namespace="http://www.map.es/scsp/esquemas/datosespecificos" schemaLocation="datos-especificos-ine.xsd"/>
+	<xsd:element name="peticionResidente">
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element name="numExpediente" type="xsd:string"/>
+				<xsd:element name="tipoDocumentacion" type="xsd:int"/>
+				<xsd:element name="documentacion" type="xsd:string"/>
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+	<xsd:element name="respuestaResidente">
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element name="numExpediente" type="xsd:string"/>
+				<xsd:element name="tipoDocumentacion" type="xsd:int"/>
+				<xsd:element name="documentacion" type="xsd:string"/>
+				<xsd:element name="codigoResultado" type="xsd:int"/>
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+	<xsd:element name="peticionMunicipioResidencia">
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element name="numExpediente" type="xsd:string"/>
+				<xsd:element name="tipoDocumentacion" type="xsd:int"/>
+				<xsd:element name="documentacion" type="xsd:string"/>
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+	<xsd:element name="respuestaMunicipioResidencia">
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element name="numExpediente" type="xsd:string"/>
+				<xsd:element name="tipoDocumentacion" type="xsd:int"/>
+				<xsd:element name="documentacion" type="xsd:string"/>
+				<xsd:element name="codigoResultado" type="xsd:int"/>
+				<xsd:element name="codigoMunicipio" type="xsd:string"/>
+				<xsd:element name="codigoProvincia" type="xsd:string"/>
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+	<xsd:element name="peticionResidenteMunicipio">
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element name="numExpediente" type="xsd:string"/>
+				<xsd:element name="tipoDocumentacion" type="xsd:int"/>
+				<xsd:element name="documentacion" type="xsd:string"/>
+				<xsd:element name="codigoMunicipio" type="xsd:string"/>
+				<xsd:element name="codigoProvincia" type="xsd:string"/>
+				<xsd:element name="idescat" type="xsd:int"/>
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+	<xsd:element name="respuestaResidenteMunicipio">
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element name="numExpediente" type="xsd:string"/>
+				<xsd:element name="tipoDocumentacion" type="xsd:int"/>
+				<xsd:element name="documentacion" type="xsd:string"/>
+				<xsd:element name="codigoMunicipio" type="xsd:string"/>
+				<xsd:element name="codigoProvincia" type="xsd:string"/>
+				<xsd:element name="codigoResultado" type="xsd:int"/>
+				<xsd:element name="fuente" type="xsd:string"/>
+				<xsd:element name="idescatMotivo" type="xsd:int" minOccurs="0"/>
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+	<xsd:element name="peticionNumeroConvivientes">
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element name="numExpediente" type="xsd:string"/>
+				<xsd:element name="tipoDocumentacion" type="xsd:int"/>
+				<xsd:element name="documentacion" type="xsd:string"/>
+				<xsd:element name="codigoMunicipio" type="xsd:string"/>
+				<xsd:element name="codigoProvincia" type="xsd:string"/>
+				<xsd:element name="idescat" type="xsd:int"/>
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+	<xsd:element name="respuestaNumeroConvivientes">
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element name="numExpediente" type="xsd:string"/>
+				<xsd:element name="tipoDocumentacion" type="xsd:int"/>
+				<xsd:element name="documentacion" type="xsd:string"/>
+				<xsd:element name="codigoMunicipio" type="xsd:string"/>
+				<xsd:element name="codigoProvincia" type="xsd:string"/>
+				<xsd:element name="codigoResultado" type="xsd:int"/>
+				<xsd:element name="numeroConvivientes" type="xsd:int"/>
+				<xsd:element ref="volante:DireccionEmpadronamiento" minOccurs="0"/>
+				<xsd:element name="fuente" type="xsd:string"/>
+				<xsd:element name="idescatMotivo" type="xsd:int" minOccurs="0"/>
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+	<xsd:element name="peticionComprobacionConvivientes">
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element name="numExpediente" type="xsd:string"/>
+				<xsd:element name="tipoDocumentacion" type="xsd:int"/>
+				<xsd:element name="documentacion" type="xsd:string"/>
+				<xsd:element name="codigoMunicipio" type="xsd:string"/>
+				<xsd:element name="codigoProvincia" type="xsd:string"/>
+				<xsd:element name="numeroConvivientes" type="xsd:int"/>
+				<xsd:element name="idescat" type="xsd:int"/>
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+	<xsd:element name="respuestaComprobacionConvivientes">
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element name="numExpediente" type="xsd:string"/>
+				<xsd:element name="tipoDocumentacion" type="xsd:int"/>
+				<xsd:element name="documentacion" type="xsd:string"/>
+				<xsd:element name="codigoMunicipio" type="xsd:string"/>
+				<xsd:element name="codigoProvincia" type="xsd:string"/>
+				<xsd:element name="codigoResultado" type="xsd:int"/>
+				<xsd:element name="numeroConvivientes" type="xsd:int"/>
+				<xsd:element ref="volante:DireccionEmpadronamiento" minOccurs="0"/>
+				<xsd:element name="fuente" type="xsd:string"/>
+				<xsd:element name="idescatMotivo" type="xsd:int" minOccurs="0"/>
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+	<xsd:element name="peticionDatosTitular">
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element name="numExpediente" type="xsd:string"/>
+				<xsd:element name="tipoDocumentacion" type="xsd:int"/>
+				<xsd:element name="documentacion" type="xsd:string"/>
+				<xsd:element name="codigoMunicipio" type="xsd:string" minOccurs="0"/>
+				<xsd:element name="codigoProvincia" type="xsd:string" minOccurs="0"/>
+				<xsd:element name="idescat" type="xsd:int"/>
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+	<xsd:element name="respuestaDatosTitular">
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element name="numExpediente" type="xsd:string"/>
+				<xsd:element name="tipoDocumentacion" type="xsd:int"/>
+				<xsd:element name="documentacion" type="xsd:string"/>
+				<xsd:element name="codigoMunicipio" type="xsd:string" minOccurs="0"/>
+				<xsd:element name="codigoProvincia" type="xsd:string" minOccurs="0"/>
+				<xsd:element name="codigoResultado" type="xsd:int"/>
+				<xsd:element ref="volante:VolanteEmpadronamiento" minOccurs="0"/>
+				<xsd:element name="fuente" type="xsd:string"/>
+				<xsd:element name="idescatMotivo" type="xsd:int" minOccurs="0"/>
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+	<xsd:element name="peticionDatosTitularPDF">
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element name="numExpediente" type="xsd:string"/>
+				<xsd:element name="tipoDocumentacion" type="xsd:int"/>
+				<xsd:element name="documentacion" type="xsd:string"/>
+				<xsd:element name="codigoMunicipio" type="xsd:string"/>
+				<xsd:element name="codigoProvincia" type="xsd:string"/>
+				<xsd:element name="idescat" type="xsd:int"/>
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+	<xsd:element name="respuestaDatosTitularPDF">
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element name="numExpediente" type="xsd:string"/>
+				<xsd:element name="tipoDocumentacion" type="xsd:int"/>
+				<xsd:element name="documentacion" type="xsd:string"/>
+				<xsd:element name="codigoMunicipio" type="xsd:string"/>
+				<xsd:element name="codigoProvincia" type="xsd:string"/>
+				<xsd:element name="codigoResultado" type="xsd:int"/>
+				<xsd:element name="volante" type="xsd:base64Binary" minOccurs="0"/>
+				<xsd:element ref="volante:VolanteEmpadronamiento" minOccurs="0"/>
+				<xsd:element name="fuente" type="xsd:string"/>
+				<xsd:element name="idescatMotivo" type="xsd:int" minOccurs="0"/>
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+	<xsd:element name="peticionDatosConvivientes">
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element name="numExpediente" type="xsd:string"/>
+				<xsd:element name="tipoDocumentacion" type="xsd:int"/>
+				<xsd:element name="documentacion" type="xsd:string"/>
+				<xsd:element name="codigoMunicipio" type="xsd:string" minOccurs="0"/>
+				<xsd:element name="codigoProvincia" type="xsd:string" minOccurs="0"/>
+				<xsd:element name="idescat" type="xsd:int"/>
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+	<xsd:element name="respuestaDatosConvivientes">
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element name="numExpediente" type="xsd:string"/>
+				<xsd:element name="tipoDocumentacion" type="xsd:int"/>
+				<xsd:element name="documentacion" type="xsd:string"/>
+				<xsd:element name="codigoMunicipio" type="xsd:string" minOccurs="0"/>
+				<xsd:element name="codigoProvincia" type="xsd:string" minOccurs="0"/>
+				<xsd:element name="codigoResultado" type="xsd:int"/>
+				<xsd:element ref="volante:VolanteEmpadronamiento" minOccurs="0"/>
+				<xsd:element name="fuente" type="xsd:string"/>
+				<xsd:element name="idescatMotivo" type="xsd:int" minOccurs="0"/>
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+	<xsd:element name="peticionDatosConvivientesPDF">
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element name="numExpediente" type="xsd:string"/>
+				<xsd:element name="tipoDocumentacion" type="xsd:int"/>
+				<xsd:element name="documentacion" type="xsd:string"/>
+				<xsd:element name="codigoMunicipio" type="xsd:string"/>
+				<xsd:element name="codigoProvincia" type="xsd:string"/>
+				<xsd:element name="idescat" type="xsd:int"/>
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+	<xsd:element name="respuestaDatosConvivientesPDF">
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element name="numExpediente" type="xsd:string"/>
+				<xsd:element name="tipoDocumentacion" type="xsd:int"/>
+				<xsd:element name="documentacion" type="xsd:string"/>
+				<xsd:element name="codigoMunicipio" type="xsd:string"/>
+				<xsd:element name="codigoProvincia" type="xsd:string"/>
+				<xsd:element name="codigoResultado" type="xsd:int"/>
+				<xsd:element name="volante" type="xsd:base64Binary" minOccurs="0"/>
+				<xsd:element ref="volante:VolanteEmpadronamiento" minOccurs="0"/>
+				<xsd:element name="fuente" type="xsd:string"/>
+				<xsd:element name="idescatMotivo" type="xsd:int" minOccurs="0"/>
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+	<xsd:element name="peticionValidacionConvivientes">
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element name="numExpediente" type="xsd:string"/>
+				<xsd:element ref="conviviente" maxOccurs="unbounded"/>
+				<xsd:element name="codigoMunicipio" type="xsd:string"/>
+				<xsd:element name="codigoProvincia" type="xsd:string"/>
+				<xsd:element name="idescat" type="xsd:int"/>
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+	<xsd:element name="respuestaValidacionConvivientes">
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element name="numExpediente" type="xsd:string"/>
+				<xsd:element ref="conviviente" maxOccurs="unbounded"/>
+				<xsd:element name="codigoMunicipio" type="xsd:string"/>
+				<xsd:element name="codigoProvincia" type="xsd:string"/>
+				<xsd:element name="codigoResultado" type="xsd:int"/>
+				<xsd:element ref="volante:DireccionEmpadronamiento" minOccurs="0"/>
+				<xsd:element name="fuente" type="xsd:string"/>
+				<xsd:element name="idescatMotivo" type="xsd:int" minOccurs="0"/>
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+	<xsd:element name="conviviente">
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element name="tipoDocumentacion" type="xsd:int"/>
+				<xsd:element name="documentacion" type="xsd:string"/>
+				<xsd:element name="fechaAltaPadron" type="xsd:string" minOccurs="0"/>
+				<xsd:element name="resultado" type="xsd:int" minOccurs="0"/>
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+	<xsd:element name="peticionBusquedaTitular">
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element name="numExpediente" type="xsd:string"/>
+				<xsd:element name="tipoDocumentacion" type="xsd:int"/>
+				<xsd:element name="documentacion" type="xsd:string"/>
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+	<xsd:element name="respuestaBusquedaTitular">
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element name="numExpediente" type="xsd:string"/>
+				<xsd:element name="tipoDocumentacion" type="xsd:int"/>
+				<xsd:element name="documentacion" type="xsd:string"/>
+				<xsd:element name="codigoMunicipioIdescat" type="xsd:string"/>
+				<xsd:element name="codigoProvinciaIdescat" type="xsd:string"/>
+				<xsd:element name="codigoResultadoIdescat" type="xsd:int"/>
+				<xsd:element name="fechaIdescat" type="xsd:string"/>
+				<xsd:element ref="resultadoBusqueda" maxOccurs="unbounded"/>
+				<xsd:element ref="volante:VolanteEmpadronamiento" minOccurs="0"/>
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+	<xsd:element name="resultadoBusqueda">
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element name="codigoMunicipio" type="xsd:string"/>
+				<xsd:element name="codigoProvincia" type="xsd:string"/>
+				<xsd:element name="codigoResultado" type="xsd:int"/>
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+	<xsd:element name="peticionDatosTitularINE">
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element name="numExpediente" type="xsd:string"/>
+				<xsd:element name="tipoDocumentacion" type="xsd:int"/>
+				<xsd:element name="documentacion" type="xsd:string"/>
+				<xsd:element name="nombre" type="xsd:string" minOccurs="0"/>
+				<xsd:element name="primerApellido" type="xsd:string" minOccurs="0"/>
+				<xsd:element name="segundoApellido" type="xsd:string" minOccurs="0"/>
+				<xsd:element name="espanol" type="xsd:string"/>
+				<xsd:element name="codigoMunicipio" type="xsd:string" minOccurs="0"/>
+				<xsd:element name="codigoProvincia" type="xsd:string" minOccurs="0"/>
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+	<xsd:element name="respuestaDatosTitularINE">
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element name="numExpediente" type="xsd:string"/>
+				<xsd:element name="tipoDocumentacion" type="xsd:int"/>
+				<xsd:element name="documentacion" type="xsd:string"/>
+				<xsd:element name="nombre" type="xsd:string" minOccurs="0"/>
+				<xsd:element name="primerApellido" type="xsd:string" minOccurs="0"/>
+				<xsd:element name="segundoApellido" type="xsd:string" minOccurs="0"/>
+				<xsd:element name="espanol" type="xsd:string"/>
+				<xsd:element name="codigoMunicipio" type="xsd:string" minOccurs="0"/>
+				<xsd:element name="codigoProvincia" type="xsd:string" minOccurs="0"/>
+				<xsd:element name="codigoResultado" type="xsd:int"/>
+				<xsd:element ref="volante:VolanteEmpadronamiento" minOccurs="0"/>
+				<xsd:element ref="ine:Domicilio" minOccurs="0"/>
+				<xsd:element name="fuente" type="xsd:string"/>
+				<xsd:element name="ineMotivo" type="xsd:int" minOccurs="0"/>
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+	<xsd:element name="peticionDatosTitularIDESCAT">
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element name="numExpediente" type="xsd:string"/>
+				<xsd:element name="tipoDocumentacion" type="xsd:int"/>
+				<xsd:element name="documentacion" type="xsd:string"/>
+				<xsd:element name="codigoMunicipio" type="xsd:string" minOccurs="0"/>
+				<xsd:element name="codigoProvincia" type="xsd:string" minOccurs="0"/>
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+	<xsd:element name="respuestaDatosTitularIDESCAT">
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element name="numExpediente" type="xsd:string"/>
+				<xsd:element name="tipoDocumentacion" type="xsd:int"/>
+				<xsd:element name="documentacion" type="xsd:string"/>
+				<xsd:element name="codigoMunicipio" type="xsd:string" minOccurs="0"/>
+				<xsd:element name="codigoProvincia" type="xsd:string" minOccurs="0"/>
+				<xsd:element name="codigoResultado" type="xsd:int"/>
+				<xsd:element ref="volante:VolanteEmpadronamiento" minOccurs="0"/>
+				<xsd:element name="fuente" type="xsd:string"/>
+				<xsd:element name="idescatMotivo" type="xsd:int" minOccurs="0"/>
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+</xsd:schema>

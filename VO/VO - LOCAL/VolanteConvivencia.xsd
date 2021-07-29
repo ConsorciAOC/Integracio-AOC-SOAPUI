@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<xs:schema targetNamespace="http://www.red.es/padron" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xmldsig="http://www.w3.org/2000/09/xmldsig#" xmlns="http://www.red.es/padron" elementFormDefault="qualified">
+	<!-- schemas -->
+	<xs:import namespace="http://www.w3.org/2000/09/xmldsig#" schemaLocation="xmldsig-core-schema.xsd"/>
+	<xs:include schemaLocation="VolanteConvivenciaTipos.xsd"/>
+	<!-- volante convivencia -->
+	<xs:element name="VolanteEmpadronamiento">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="VolanteEmpadronamientoDatosFirmados"/>
+				<xs:element ref="xmldsig:Signature" minOccurs="0"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<!-- referencias -->
+	<xs:element name="VolanteEmpadronamientoDatosFirmados">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="FechaExpedicion" type="tipo_fecha"/>
+				<xs:element ref="DatosPersonales"/>
+				<xs:element ref="NumeroAcompanantes"/>
+				<xs:element ref="DatosPersonalesAcompanante" minOccurs="0" maxOccurs="unbounded"/>
+				<xs:element ref="DireccionEmpadronamiento" minOccurs="0"/>
+			</xs:sequence>
+			<xs:attribute name="Id" type="tipo_id" use="required"/>
+			<xs:attribute name="Version" type="tipo_version" use="required" fixed="01.00"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="DatosPersonales">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="Nombre" type="tipo_nombreApellido"/>
+				<xs:element name="PrimerApellido" type="tipo_nombreApellido"/>
+				<xs:element name="ParticulaPrimerApellido" type="tipo_particulaApellido" minOccurs="0"/>
+				<xs:element name="SegundoApellido" type="tipo_nombreApellido" minOccurs="0"/>
+				<xs:element name="ParticulaSegundoApellido" type="tipo_particulaApellido" minOccurs="0"/>
+				<xs:element name="FechaNacimiento" type="tipo_fecha"/>
+				<xs:element name="CodigoMunicipioNacimiento" type="tipo_codigoMunicipio"/>
+				<xs:element name="CodigoProvinciaNacimiento" type="tipo_codigoProvincia"/>
+				<xs:element name="Sexo" type="tipo_sexo"/>
+				<xs:element name="CodigoNacionalidad" type="tipo_codigoNacionalidad"/>
+				<xs:element name="TipoDocumentacion" type="tipo_tipoDocumentacion"/>
+				<xs:element name="Documentacion" type="tipo_documentacion"/>
+				<xs:element name="FechaAltaPadron" type="tipo_fecha"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="NumeroAcompanantes">
+		<xs:simpleType>
+			<xs:restriction base="xs:integer">
+				<xs:totalDigits value="3"/>
+			</xs:restriction>
+		</xs:simpleType>
+	</xs:element>
+	<xs:element name="DatosPersonalesAcompanante">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="Nombre" type="tipo_nombreApellido"/>
+				<xs:element name="PrimerApellido" type="tipo_nombreApellido"/>
+				<xs:element name="ParticulaPrimerApellido" type="tipo_particulaApellido" minOccurs="0"/>
+				<xs:element name="SegundoApellido" type="tipo_nombreApellido" minOccurs="0"/>
+				<xs:element name="ParticulaSegundoApellido" type="tipo_particulaApellido" minOccurs="0"/>
+				<xs:element name="FechaNacimiento" type="tipo_fecha"/>
+				<xs:element name="TipoDocumentacion" type="tipo_tipoDocumentacion"/>
+				<xs:element name="Documentacion" type="tipo_documentacion"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="DireccionEmpadronamiento">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="Localidad"/>
+				<xs:element name="CodigoPostal" type="tipo_codigoPostal"/>
+				<xs:element ref="Via"/>
+				<xs:element ref="Numeracion"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="Localidad">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="CodigoProvincia" type="tipo_codigoProvincia"/>
+				<xs:element name="CodigoMunicipio" type="tipo_codigoMunicipio"/>
+				<xs:element name="CodigoUnidadPoblacional" type="tipo_codigoUnidadPoblacional"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="Via">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="TipoVia" type="tipo_tipoVia"/>
+				<xs:element name="NombreVia" type="tipo_nombreVia"/>
+				<xs:element name="Pseudovia" type="tipo_pseudovia" minOccurs="0"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="Numeracion">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="Numero" type="tipo_numero" minOccurs="0"/>
+				<xs:element name="CalificadorNumero" type="tipo_calificadorNumero" minOccurs="0"/>
+				<xs:element name="NumeroSuperior" type="tipo_numero" minOccurs="0"/>
+				<xs:element name="CalificadorNumeroSuperior" type="tipo_calificadorNumero" minOccurs="0"/>
+				<xs:element name="Kilometro" type="tipo_kilometro" minOccurs="0"/>
+				<xs:element name="Hectometro" type="tipo_hectometro" minOccurs="0"/>
+				<xs:element name="Bloque" type="tipo_bloquePortalEsc" minOccurs="0"/>
+				<xs:element name="Portal" type="tipo_bloquePortalEsc" minOccurs="0"/>
+				<xs:element name="Escalera" type="tipo_bloquePortalEsc" minOccurs="0"/>
+				<xs:element name="Planta" type="tipo_planta" minOccurs="0"/>
+				<xs:element name="Puerta" type="tipo_puerta" minOccurs="0"/>
+				<xs:element name="TipoLocal" type="tipo_local" minOccurs="0"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

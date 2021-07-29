@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<respuestaBusquedaTitular xmlns="http://www.aocat.net/padro" xmlns:volante="http://www.red.es/padron">
+	<numExpediente>String</numExpediente>
+	<tipoDocumentacion>0</tipoDocumentacion>
+	<documentacion>String</documentacion>
+	<codigoMunicipioIdescat>String</codigoMunicipioIdescat>
+	<codigoProvinciaIdescat>String</codigoProvinciaIdescat>
+	<codigoResultadoIdescat>0</codigoResultadoIdescat>
+	<fechaIdescat>String</fechaIdescat>
+	<resultadoBusqueda>
+		<codigoMunicipio>String</codigoMunicipio>
+		<codigoProvincia>String</codigoProvincia>
+		<codigoResultado>0</codigoResultado>
+	</resultadoBusqueda>
+	<volante:VolanteEmpadronamiento>text</volante:VolanteEmpadronamiento>
+</respuestaBusquedaTitular>
