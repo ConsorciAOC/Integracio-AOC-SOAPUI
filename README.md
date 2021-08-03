@@ -2,70 +2,34 @@
 
 
 # Integracio-AOC-SOAPUI
-Projecte SOAPUI amb peticions d'exemple de les diferents modalitats de consum dels serveis web del consorci AOC.
 
-En el nostre cas, per tal de poder oferir un millor servei de suport, explicarem com configurar el nostre SOAP-ui amb els WSDL i configurant un certificat per tal de poder reproduir un circuit sencer de petició AOC:
-
-![circuit](capturas/grafic.png)
-
-1 Generem XML que apunta a l'endpoint del servei que volem consumir (APP, IOP, NT)
-
-2 Amb la petició signada WSS o per canal SSL enviem l'XML que pasarà per les pases:
-
-    2.1 Validació SIRI (capa seguretat per validar que l'autenticació sigui correcte)
-
-    2.2 Una vegada validat, es pasa la petició a la MTI per orquestrar a quin servei s'ha d'enviar
-
-    2.3 S'envia al servei
-
-    2.4 S'envia cap a l'emissor (és fa el consum)
-
-
-# Preparació projecte SOAP
-
-## Importar el WSDL
-
-Importem WSDL de PRE per IOP: **https://serveis3-pre.iop.aoc.cat/siri-proxy/services/Sincron?wsdl** (pot ser APP, NT, entorn de PRO, DEV...) → Els podem trobar en el [DI de la PCI][URL1]
-
-[URL1]: https://github.com/ConsorciAOC/PCI/blob/main/Missatgeria/README.md
-
-![wsdl](capturas/wsdl1.png)
-![wsdl](capturas/wsdl2.png)
-
-Amb aquestes dues accions hem generat el projecte:
-
-![wsdl](capturas/wsdl3.png)
+Oferim un Projecte SOAPUI amb XMLs de peticions d'exemple per a que els integradors puguin fer les validacions oportunes a nivell de missatgeria PCI + Específica de cada servei.
 
 ---
-Tenim un WSDL adaptat amb els .xsd dels diferents serveis per fer la validació dels XML tant per missatgeria específica com per missatgeria genèrica
-
-En aquest cas, per carregar el wsdl, ens el tindrem que descarregar de la web i carregar el SOAP-ui
-
+<span style="color:red">Important, **has d'estar autoritzat per consumir el servei, modalitat i finalitat en la PCI.** </span>.
 ---
-## Carregar WSDL adaptat
-
-Ens tindrem que descarregar el wsdl que tenim en aquesta web i les carpetes amb els .xsd en local
-
-![wsdl](capturas/soap0.png)
-
-En el nostre projecte, clickem al botó dret del ratolí i seleccionem "ADD WSDL"
-
-![wsdl](capturas/soap1.png)
-
-Carreguem el WSDL
-
-![wsdl](capturas/soap2.png)
-![wsdl](capturas/soap3.png)
 
 ---
 
-**Com revisar els logs en cas d'error de càrrega del WSDL**
+En cas contrari, heu de seguir les passes indicades en la [FAQ][URL1].
 
-En cas d'error al carregar el WSDL, els logs els podrem trobar en:
+[URL1]: https://www.aoc.cat/knowledge-base/quines-dades-necessita-consorci-aoc-me-integrar-servei/
 
-_''C:\Program Files\SmartBear\SoapUI-5.2.1\bin_
+Per qualsevol dubte o aclariment, podeu obrir tiquet a través del [formulari][URLFORM].
 
-![wsdl](capturas/logs.png)
+[URLFORM]: https://www.aoc.cat/portal-suport/peticio-integradors/
+
+Per altra banda, oferim el WSDL adaptat que s’haurà de descarregar perquè el projecte SOAP funcioni.
+
+## Accions a realitzar
+
+1. Descarregueu el Projecte.
+2. Descarregueu el WSDL i el configureu.
+3. Configuració del [certificat][link1]
+
+[link1]: https://github.com/ConsorciAOC/Integracio-AOC-SOAPUI#configuraci%C3%B3-certificat-per-fer-els-consums
+
+
 
 ---
 
