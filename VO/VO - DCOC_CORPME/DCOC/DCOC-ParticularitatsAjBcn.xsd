@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2008 rel. 2 sp2 (http://www.altova.com) by Sergio Figueras (Consorci Administració Oberta de Catalunya) -->
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="http://aoc.cat/dcoc/bloc1" targetNamespace="http://aoc.cat/dcoc/bloc1" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:element name="dades">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="illaCodi" type="xs:string" minOccurs="0"/>
+				<xs:element name="parcelaCodi" type="xs:string" minOccurs="0"/>
+				<xs:element name="actuacioCodi" type="xs:string" minOccurs="0"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

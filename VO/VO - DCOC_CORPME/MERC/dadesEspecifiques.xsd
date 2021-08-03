@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xsd:schema targetNamespace="http://www.aocat.net/registradors" elementFormDefault="qualified" attributeFormDefault="unqualified" version="1.0" xmlns="http://www.aocat.net/registradors" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	<xsd:element name="peticionHonorariosInformacionGeneralMercantil">
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element name="segmentosSolicitados" type="segmentosType"/>
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+	<xsd:element name="respuestaHonorariosInformacionGeneralMercantil">
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element ref="peticionHonorariosInformacionGeneralMercantil" minOccurs="0"/>
+				<xsd:element name="codigoResultado" type="xsd:int"/>
+				<xsd:element name="literalError" type="xsd:string" minOccurs="0"/>
+                <xsd:element name="ticket" type="xsd:string" minOccurs="0"/>
+				<xsd:element name="segmentosDisponibles" type="segmentosType" minOccurs="0"/>
+				<xsd:element name="honorarios" type="xsd:string" minOccurs="0"/>
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+	<xsd:element name="peticionInformacionGeneralMercantil">
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element name="ticket" type="xsd:string"/>
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+	<xsd:element name="respuestaInformacionGeneralMercantil">
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element ref="peticionInformacionGeneralMercantil" minOccurs="0"/>
+				<xsd:element name="codigoResultado" type="xsd:int"/>
+				<xsd:element name="literalError" type="xsd:string" minOccurs="0"/>
+				<xsd:element name="fichero" type="xsd:base64Binary" minOccurs="0"/>
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+	<xsd:complexType name="segmentosType">
+		<xsd:sequence>
+			<xsd:element name="capitalSocial" type="xsd:string" minOccurs="0"/>
+			<xsd:element name="representacionSocial-administradores" type="xsd:string" minOccurs="0"/>
+			<xsd:element name="representacionSocial-apoderados" type="xsd:string" minOccurs="0"/>
+			<xsd:element name="representacionSocial-auditores" type="xsd:string" minOccurs="0"/>
+			<xsd:element name="actos" type="xsd:string" minOccurs="0"/>
+			<xsd:element name="cuentas" type="xsd:string" minOccurs="0"/>
+			<xsd:element name="libros" type="xsd:string" minOccurs="0"/>
+		</xsd:sequence>
+	</xsd:complexType>
+</xsd:schema>

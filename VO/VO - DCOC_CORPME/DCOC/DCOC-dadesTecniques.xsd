@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2008 rel. 2 sp2 (http://www.altova.com) by Sergio Figueras (Consorci Administració Oberta de Catalunya) -->
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:dt="http://aoc.net/dcoc/dadesTecniques" targetNamespace="http://aoc.net/dcoc/dadesTecniques" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:element name="tecnicRedactor">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="nom" type="xs:string" minOccurs="0"/>
+				<xs:element name="cognom1" type="xs:string" minOccurs="0"/>
+				<xs:element name="cognom2" type="xs:string" minOccurs="0"/>
+				<xs:element name="tipusDocument" type="xs:string" minOccurs="0"/>
+				<xs:element name="numDocument" type="xs:string" minOccurs="0"/>
+				<xs:element name="tipusTecnic" type="xs:string" minOccurs="0"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="planta">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="ordre" type="xs:integer" minOccurs="0"/>
+				<xs:element name="superficie" type="xs:double" minOccurs="0"/>
+				<xs:element name="usPrincipal" type="xs:string" minOccurs="0"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="dadesTecniques">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="dt:tecnicRedactor" minOccurs="0"/>
+				<xs:element name="usActual" type="xs:string" minOccurs="0"/>
+				<xs:element name="usProposat" type="xs:string" minOccurs="0"/>
+				<xs:element name="numPlantes" type="xs:integer" minOccurs="0"/>
+				<xs:element ref="dt:planta" minOccurs="0" maxOccurs="unbounded"/>
+				<xs:element name="superficieTotalEdifici" type="xs:double" minOccurs="0"/>
+				<xs:element name="superficieSobreRasant" type="xs:double" minOccurs="0"/>
+				<xs:element name="superficieSotaRasant" type="xs:double" minOccurs="0"/>
+				<xs:element name="alcadaSobreRasant" type="xs:double" minOccurs="0"/>
+				<xs:element name="alcadaSotaRasant" type="xs:double" minOccurs="0"/>
+				<xs:element name="superficieNP" type="xs:double" minOccurs="0"/>
+				<xs:element name="superficieAM" type="xs:double" minOccurs="0"/>
+				<xs:element name="superficieRF" type="xs:double" minOccurs="0"/>
+				<xs:element name="numTotalHabitatges" type="xs:integer" minOccurs="0"/>
+				<xs:element name="numHabitatgesNP" type="xs:integer" minOccurs="0"/>
+				<xs:element name="numHabitatgesRF" type="xs:integer" minOccurs="0"/>
+				<xs:element name="numHabitatgesPO" type="xs:integer" minOccurs="0"/>
+				<xs:element name="numHabitatgesLloguer" type="xs:integer" minOccurs="0"/>
+				<xs:element name="numLocalsComercials" type="xs:integer" minOccurs="0"/>
+				<xs:element name="numPlacesAparCotxes" type="xs:integer" minOccurs="0"/>
+				<xs:element name="numPlacesAparMotos" type="xs:integer" minOccurs="0"/>
+				<xs:element name="numPlacesResidencia" type="xs:integer" minOccurs="0"/>
+				<xs:element name="numAltresLocals" type="xs:integer" minOccurs="0"/>
+				<xs:element name="placesHoteleres" type="xs:integer" minOccurs="0"/>
+				<xs:element name="pressupost" type="xs:double" minOccurs="0"/>
+				<xs:element name="importDipositResidus" type="xs:double" minOccurs="0"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

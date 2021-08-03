@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xsd:schema xmlns="http://www.aocat.net/registradors" xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.aocat.net/registradors" elementFormDefault="qualified" attributeFormDefault="unqualified" version="1.0">
+	<xsd:element name="peticionNotaSimpleRegistroPropiedad">
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:choice>
+					<xsd:element ref="datosRegistrales"/>
+					<xsd:element name="idufir" type="xsd:string"/>
+					<xsd:element ref="datosTitular"/>
+					<xsd:element ref="otrosDatos"/>
+				</xsd:choice>
+				<xsd:element name="observaciones" type="xsd:string" minOccurs="0"/>
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+	<xsd:element name="respuestaNotaSimpleRegistroPropiedad">
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:choice minOccurs="0">
+					<xsd:element ref="datosRegistrales"/>
+					<xsd:element name="idufir" type="xsd:string"/>
+					<xsd:element ref="datosTitular"/>
+					<xsd:element ref="otrosDatos"/>
+				</xsd:choice>
+				<xsd:element name="observaciones" type="xsd:string" minOccurs="0"/>
+				<xsd:element name="codigoResultado" type="xsd:int"/>
+				<xsd:element name="literalError" type="xsd:string" minOccurs="0"/>
+				<xsd:element ref="informacion" minOccurs="0" maxOccurs="unbounded"/>
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+	<xsd:element name="peticionNotaLocalizacionRegistroPropiedad">
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element ref="datosTitular"/>
+				<xsd:element name="observaciones" type="xsd:string" minOccurs="0"/>
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+	<xsd:element name="respuestaNotaLocalizacionRegistroPropiedad">
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element ref="datosTitular" minOccurs="0"/>
+				<xsd:element name="observaciones" type="xsd:string" minOccurs="0"/>
+				<xsd:element name="codigoResultado" type="xsd:int"/>
+				<xsd:element name="literalError" type="xsd:string" minOccurs="0"/>
+				<xsd:element ref="informacion" minOccurs="0" maxOccurs="unbounded"/>
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+	<xsd:element name="datosRegistrales">
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element name="registro" type="xsd:int"/>
+				<xsd:element name="municipio" type="xsd:int"/>
+				<xsd:element name="provincia" type="xsd:int"/>
+				<xsd:element name="seccion" type="xsd:int"/>
+				<xsd:element name="finca" type="xsd:int"/>
+				<xsd:element name="subfinca" type="xsd:string" minOccurs="0"/>
+				<xsd:element name="duplicado" type="xsd:string" minOccurs="0"/>
+				<xsd:element name="datosAdicionales" type="xsd:string" minOccurs="0"/>
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+	<xsd:element name="datosTitular">
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element name="nif" type="xsd:string"/>
+				<xsd:element name="maxFincas" type="xsd:int"/>
+				<xsd:element name="tipo" type="xsd:int" minOccurs="0"/>
+				<xsd:element name="derecho" type="xsd:int" minOccurs="0"/>
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+	<xsd:element name="otrosDatos">
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element name="registro" type="xsd:int"/>
+				<xsd:element name="municipio" type="xsd:int"/>
+				<xsd:element name="provincia" type="xsd:int"/>
+               <xsd:element name="finca" minOccurs="0">
+                 <xsd:complexType>
+                   <xsd:sequence>
+                     <xsd:element name="numero" type="xsd:int" minOccurs="0"/>
+                     <xsd:element name="nombre" type="xsd:string" minOccurs="0"/>
+                   </xsd:sequence>
+                 </xsd:complexType>
+               </xsd:element>
+               <xsd:element name="direccion" minOccurs="0">
+                 <xsd:complexType>
+                   <xsd:sequence>
+                     <xsd:element name="calle" type="xsd:string"/>
+                     <xsd:element name="numero" type="xsd:string"  minOccurs="0"/>
+                   </xsd:sequence>
+                 </xsd:complexType>
+               </xsd:element>
+				<xsd:element name="titular" type="xsd:string" minOccurs="0"/>
+				<xsd:element name="datosAdicionales" type="xsd:string" minOccurs="0"/>
+				<xsd:element name="datosAnteriores" type="xsd:string" minOccurs="0"/>
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+	<xsd:element name="informacion">
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element name="tipoRespuesta" type="xsd:int"/>
+				<xsd:element name="registro" type="xsd:int"/>
+				<xsd:element name="identificador" type="xsd:string" minOccurs="0"/>
+				<xsd:element name="fichero" type="xsd:base64Binary" minOccurs="0"/>
+				<xsd:element name="texto" type="xsd:string" minOccurs="0"/>
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+</xsd:schema>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:pet="http://aoc.net/dcoc/v2/peticio" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://aoc.net/dcoc/v2/peticio" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:element name="peticioDCOC">
+		<xs:annotation>
+			<xs:documentation>Peticio</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="idProjecte" type="xs:string"/>
+				<xs:element name="idColegi" type="xs:string"/>
+				<xs:element name="idColegiat" type="xs:string" minOccurs="0"/>
+				<xs:element name="idDocumentSolicitat" type="xs:string" minOccurs="0"/>
+				<xs:element name="dadesEspecifiques" type="xs:anyType" minOccurs="0"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

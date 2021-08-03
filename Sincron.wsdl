@@ -21,7 +21,7 @@
 			</xs:element>
 		</xs:schema>
 
-		<xs:schema xmlns="http://gencat.net/scsp/esquemes/peticion" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xmime="http://www.w3.org/2005/05/xmlmime" xmlns:inem="http://www.aocat.net/inem"  xmlns:pscp="http://webservices.pscp.economia.gencat.capgemini.com" xmlns:tfn="http://www.aoc.cat/tfn" xmlns:tfm="http://www.aoc.cat/tfm" xmlns:idescat="http://www.aocat.net/padro" xmlns:grau="http://www.aocat.net/discapacitat" xmlns:soc="http://gencat.net/scsp/esquemes/SOC"   xmlns:rca="http://www.aocat.net/rca" xmlns:reg="http://www.aoc.cat/regentitats" xmlns:padro="http://www.aocat.net/padro" targetNamespace="http://gencat.net/scsp/esquemes/peticion"  elementFormDefault="qualified" attributeFormDefault="unqualified">
+		<xs:schema xmlns="http://gencat.net/scsp/esquemes/peticion" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xmime="http://www.w3.org/2005/05/xmlmime" xmlns:inem="http://www.aocat.net/inem"  xmlns:pscp="http://webservices.pscp.economia.gencat.capgemini.com" xmlns:tfn="http://www.aoc.cat/tfn" xmlns:tfm="http://www.aoc.cat/tfm" xmlns:idescat="http://www.aocat.net/padro" xmlns:grau="http://www.aocat.net/discapacitat" xmlns:soc="http://gencat.net/scsp/esquemes/SOC"   xmlns:rca="http://www.aocat.net/rca" xmlns:reg="http://www.aoc.cat/regentitats" xmlns:padro="http://www.aocat.net/padro" xmlns:merc="http://www.aocat.net/registradors" xmlns:prop="http://www.aocat.net/registradors" targetNamespace="http://gencat.net/scsp/esquemes/peticion"  elementFormDefault="qualified" attributeFormDefault="unqualified">
 			<xs:import namespace="http://www.aocat.net/inem" schemaLocation="./VO/VO - ESTAT/INEM/dadesEspecifiques.xsd"/>
 			<xs:import namespace="http://www.aoc.cat/tfn" schemaLocation="./VO/VO - GENE/TFN/dadesEspecifiques.xsd"/>
 			<xs:import namespace="http://webservices.pscp.economia.gencat.capgemini.com" schemaLocation="./PSCP/pscp-schema-servei.xsd"/>
@@ -32,7 +32,9 @@
 			<xs:import namespace="http://www.aocat.net/rca" schemaLocation="./VO/VO - GENE/RCA/dadesEspecifiques.xsd"/>
 			<xs:import namespace="http://www.aoc.cat/regentitats" schemaLocation="./VO/VO - GENE/REG_ENT/dadesEspecifiques.xsd"/>
 			<xs:import namespace="http://www.aocat.net/padro" schemaLocation="./VO/VO - LOCAL/dadesEspecifiques.xsd"/>
-			<xs:element name="Apellido1">
+			<xs:import namespace="http://www.aocat.net/registradors" schemaLocation="./VO/VO - DCOC_CORPME/PROP/dadesEspecifiques.xsd"/>
+			<xs:import namespace="http://www.aocat.net/registradors" schemaLocation="./VO/VO - DCOC_CORPME/MERC/dadesEspecifiques.xsd"/>
+				<xs:element name="Apellido1">
 				<xs:simpleType>
 					<xs:restriction base="xs:string">
 						<xs:maxLength value="40"/>
@@ -317,6 +319,10 @@
 						<xs:element ref="reg:peticioDadesConsultaComptes" minOccurs="0"/>
 						<xs:element ref="reg:peticioBasicaConsulta" minOccurs="0"/>
 						<xs:element ref="padro:peticionDatosConvivientes" minOccurs="0"/>
+						<xs:element ref="merc:peticionHonorariosInformacionGeneralMercantil" minOccurs="0"/>
+						<xs:element ref="merc:peticionInformacionGeneralMercantil" minOccurs="0"/>
+						<xs:element ref="prop:peticionNotaSimpleRegistroPropiedad" minOccurs="0"/>
+						<xs:element ref="prop:peticionNotaLocalizacionRegistroPropiedad" minOccurs="0"/>
 
 					</xs:choice>
 				</xs:complexType>
