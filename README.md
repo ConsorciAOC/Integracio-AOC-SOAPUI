@@ -7,7 +7,6 @@ Oferim un Projecte SOAPUI amb XMLs de peticions d'exemple per a que els integrad
 
 ---
 <span style="color:red">Important, **has d'estar autoritzat per consumir el servei, modalitat i finalitat en la PCI.** </span>
----
 
 ---
 
