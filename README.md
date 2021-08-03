@@ -36,9 +36,6 @@ En el client, tenim un properties que haruem d'omplir amb les dades de l'entiat 
 <span style="color:red">Important, **Si no es modifica el properties, obtindreu error** </span>
 
 
-
----
-
 ## Configuració certificat per fer els consums
 
 ---
