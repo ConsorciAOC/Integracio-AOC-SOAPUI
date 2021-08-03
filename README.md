@@ -1,12 +1,12 @@
 # EN FASE CONSTRUCCIÓ
 
 
-# Integracio-AOC-SOAPUI
+# Integració-AOC-SOAPUI
 
 Oferim un Projecte SOAPUI amb XMLs de peticions d'exemple per a que els integradors puguin fer les validacions oportunes a nivell de missatgeria PCI + Específica de cada servei.
 
 ---
-<span style="color:red">Important, **has d'estar autoritzat per consumir el servei, modalitat i finalitat en la PCI.** </span>.
+<span style="color:red">Important, **has d'estar autoritzat per consumir el servei, modalitat i finalitat en la PCI.** </span>
 ---
 
 ---
@@ -105,9 +105,3 @@ Per consumir per MTOM, no ha de tindre Capçalera de seguretat. Hem fet la confi
 Els adjunts, els fiquem dintre del tag Ficheros i en "Contenido" (1) (tal com indica la imatge i en el "+" afegim el document a adjuntar (2).
 
 ![wsdl](capturas/MTOM1.png)
-
-
-
-
-
-
