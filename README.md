@@ -29,14 +29,13 @@ Per altra banda, oferim el WSDL adaptat que s’haurà de descarregar perquè el
 [link1]: https://github.com/ConsorciAOC/Integracio-AOC-SOAPUI#configuraci%C3%B3-certificat-per-fer-els-consums
 
 
----
 En el client, tenim un properties que haruem d'omplir amb les dades de l'entiat que s'està integrant
 
 ![properties](capturas/PROPERTIES.png)
 
 <span style="color:red">Important, **Si no es modifica el properties, obtindreu error** </span>
 
----
+
 
 ---
 
