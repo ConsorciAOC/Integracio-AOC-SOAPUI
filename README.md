@@ -7,17 +7,7 @@ Oferim un Projecte SOAPUI amb XMLs de peticions d'exemple per a que els integrad
 
 ---
 ```diff
-- Important, **has d'estar autoritzat per consumir el servei, modalitat i finalitat en la PCI.**
-```
-
-<span style="color:red">Important, **has d'estar autoritzat per consumir el servei, modalitat i finalitat en la PCI.** </span>
-
-```diff
-- text in red
-+ text in green
-! text in orange
-# text in gray
-@@ text in purple (and bold)@@
+- Important, has d'estar autoritzat per consumir el servei, modalitat i finalitat en la PCI.
 ```
 
 ---
@@ -45,7 +35,10 @@ En el client, tenim un properties que haruem d'omplir amb les dades de l'entiat 
 
 ![properties](capturas/PROPERTIES.png)
 
-<span style="color:red">Important, **Si no es modifica el properties, obtindreu error** </span>
+---
+```diff
+- Important, Si no es modifica el properties, obtindreu error.
+```
 
 
 ## Configuració certificat per fer els consums
