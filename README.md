@@ -6,7 +6,19 @@
 Oferim un Projecte SOAPUI amb XMLs de peticions d'exemple per a que els integradors puguin fer les validacions oportunes a nivell de missatgeria PCI + Específica de cada servei.
 
 ---
+```diff
+- Important, **has d'estar autoritzat per consumir el servei, modalitat i finalitat en la PCI.**
+```
+
 <span style="color:red">Important, **has d'estar autoritzat per consumir el servei, modalitat i finalitat en la PCI.** </span>
+
+```diff
+- text in red
++ text in green
+! text in orange
+# text in gray
+@@ text in purple (and bold)@@
+```
 
 ---
 
