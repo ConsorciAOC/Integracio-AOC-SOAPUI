@@ -21,7 +21,30 @@
 			</xs:element>
 		</xs:schema>
 
-		<xs:schema xmlns="http://gencat.net/scsp/esquemes/peticion" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xmime="http://www.w3.org/2005/05/xmlmime" xmlns:inem="http://www.aocat.net/inem"  xmlns:pscp="http://webservices.pscp.economia.gencat.capgemini.com" xmlns:tfn="http://www.aoc.cat/tfn" xmlns:tfm="http://www.aoc.cat/tfm" xmlns:idescat="http://www.aocat.net/padro" xmlns:grau="http://www.aocat.net/discapacitat" xmlns:soc="http://gencat.net/scsp/esquemes/SOC"   xmlns:rca="http://www.aocat.net/rca" xmlns:reg="http://www.aoc.cat/regentitats" xmlns:padro="http://www.aocat.net/padro" xmlns:merc="http://www.aocat.net/registradors" xmlns:prop="http://www.aocat.net/registradors" xmlns:dcoc="http://aoc.net/dcoc/v2/peticio" targetNamespace="http://gencat.net/scsp/esquemes/peticion"  elementFormDefault="qualified" attributeFormDefault="unqualified">
+		<xs:schema 
+		xmlns="http://gencat.net/scsp/esquemes/peticion" 
+		xmlns:xs="http://www.w3.org/2001/XMLSchema" 
+		xmlns:xmime="http://www.w3.org/2005/05/xmlmime" 
+		xmlns:inem="http://www.aocat.net/inem"  
+		xmlns:pscp="http://webservices.pscp.economia.gencat.capgemini.com" 
+		xmlns:tfn="http://www.aoc.cat/tfn" 
+		xmlns:tfm="http://www.aoc.cat/tfm" 
+		xmlns:idescat="http://www.aocat.net/padro" 
+		xmlns:grau="http://www.aocat.net/discapacitat" 
+		xmlns:soc="http://gencat.net/scsp/esquemes/SOC"   
+		xmlns:rca="http://www.aocat.net/rca" 
+		xmlns:reg="http://www.aoc.cat/regentitats" 
+		xmlns:padro="http://www.aocat.net/padro" 
+		xmlns:merc="http://www.aocat.net/registradors" 
+		xmlns:prop="http://www.aocat.net/registradors" 
+		xmlns:dcoc="http://aoc.net/dcoc/v2/peticio" 
+		xmlns:ppe="http://www.aocat.net/aeat/irpf" 
+		xmlns:iae="http://www.aoc.cat/aeat/iae" 
+		xmlns:irpf20="http://www.aocat.net/aeat/irpf" 
+		xmlns:irpf="http://www.aocat.net/aeat/irpf" 
+		
+		
+		targetNamespace="http://gencat.net/scsp/esquemes/peticion"  elementFormDefault="qualified" attributeFormDefault="unqualified">
 			<xs:import namespace="http://www.aocat.net/inem" schemaLocation="./VO/VO - ESTAT/INEM/dadesEspecifiques.xsd"/>
 			<xs:import namespace="http://www.aoc.cat/tfn" schemaLocation="./VO/VO - GENE/TFN/dadesEspecifiques.xsd"/>
 			<xs:import namespace="http://webservices.pscp.economia.gencat.capgemini.com" schemaLocation="./PSCP/pscp-schema-servei.xsd"/>
@@ -34,7 +57,15 @@
 			<xs:import namespace="http://www.aocat.net/padro" schemaLocation="./VO/VO - LOCAL/dadesEspecifiques.xsd"/>
 			<xs:import namespace="http://www.aocat.net/registradors" schemaLocation="./VO/VO - DCOC_CORPME/PROP/dadesEspecifiques.xsd"/>
 			<xs:import namespace="http://www.aocat.net/registradors" schemaLocation="./VO/VO - DCOC_CORPME/MERC/dadesEspecifiques.xsd"/>
-			<xs:import namespace="http://aoc.net/dcoc/v2/peticio" schemaLocation="./VO/VO - DCOC_CORPME/DCOC/DCOC-peticiov2.xsd"/>
+			<xs:import namespace="http://aoc.net/dcoc/v2/peticio" schemaLocation="./VO/VO - DCOC_CORPME/DCOC/DCOC-peticiov2.xsd"/>			
+			<xs:import namespace="http://www.aocat.net/aeat/irpf" schemaLocation="./VO/VO - ESTAT/AEAT/dadesEspecifiques-AEATPPE.xsd"/>
+			<xs:import namespace="http://www.aoc.cat/aeat/iae" schemaLocation="./VO/VO - ESTAT/AEAT/dadesEspecifiques-AEATIAE.xsd"/>
+			<xs:import namespace="http://www.aocat.net/aeat/irpf" schemaLocation="./VO/VO - ESTAT/AEAT/dadesEspecifiques-ADWSIRPF-202X.xsd"/>
+			<xs:import namespace="http://www.aocat.net/aeat/irpf" schemaLocation="./VO/VO - ESTAT/AEAT/dadesEspecifiques-ADWSIRPF.xsd"/>
+			
+			
+			
+			
 				<xs:element name="Apellido1">
 				<xs:simpleType>
 					<xs:restriction base="xs:string">
@@ -324,7 +355,13 @@
 						<xs:element ref="merc:peticionInformacionGeneralMercantil" minOccurs="0"/>
 						<xs:element ref="prop:peticionNotaSimpleRegistroPropiedad" minOccurs="0"/>
 						<xs:element ref="prop:peticionNotaLocalizacionRegistroPropiedad" minOccurs="0"/>
-						<xs:element ref="dcoc:peticioDCOC" minOccurs="0"/>
+						<xs:element ref="dcoc:peticioDCOC" minOccurs="0"/>						
+						<xs:element ref="ppe:peticioConsultaPPE" minOccurs="0"/>
+						<xs:element ref="iae:peticioConsultaIAE" minOccurs="0"/>
+						<xs:element ref="irpf20:peticioConsultaIRPF" minOccurs="0"/>
+						<xs:element ref="irpf:peticioConsultaIRPF" minOccurs="0"/>
+						
+						
 
 					</xs:choice>
 				</xs:complexType>
