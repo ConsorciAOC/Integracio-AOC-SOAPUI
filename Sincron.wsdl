@@ -41,11 +41,10 @@
 		xmlns:ppe="http://www.aocat.net/aeat/irpf" 
 		xmlns:iae="http://www.aoc.cat/aeat/iae" 
 		xmlns:irpf20="http://www.aocat.net/aeat/irpf" 
-		xmlns:irpf="http://www.aocat.net/aeat/irpf" 
-		
+		xmlns:irpf="http://www.aocat.net/aeat/irpf" 		
 		xmlns:tgss_alta_fecha="http://www.tgss.es/altafecha/esquemas/afiliacion/datosespecificos" 
 		xmlns:tgss_agra="http://www.tgss.es/actividadagraria/esquemas/afiliacion/datosespecificos" 
-		
+		xmlns:tgss_lab="http://www.aoc.cat/tgss" 
 		
 		targetNamespace="http://gencat.net/scsp/esquemes/peticion"  elementFormDefault="qualified" attributeFormDefault="unqualified">
 			<xs:import namespace="http://www.aocat.net/inem" schemaLocation="./VO/VO - ESTAT/INEM/dadesEspecifiques.xsd"/>
@@ -67,6 +66,7 @@
 			<xs:import namespace="http://www.aocat.net/aeat/irpf" schemaLocation="./VO/VO - ESTAT/AEAT/dadesEspecifiques-ADWSIRPF.xsd"/>
 			<xs:import namespace="http://www.tgss.es/altafecha/esquemas/afiliacion/datosespecificos" schemaLocation="./VO/VO - ESTAT/TGSS/datos-especificos-Q2827003ATGSS006.xsd"/>
 			<xs:import namespace="http://www.tgss.es/actividadagraria/esquemas/afiliacion/datosespecificos" schemaLocation="./VO/VO - ESTAT/TGSS/datos-especificos-Q2827003ATGSS008.xsd"/>
+			<xs:import namespace="http://www.aoc.cat/tgss" schemaLocation="./VO/VO - ESTAT/TGSS_VIDA_LAB/dadesEspecifiques.xsd"/>
 			
 			
 			
@@ -367,6 +367,8 @@
 						<xs:element ref="irpf:peticioConsultaIRPF" minOccurs="0"/>
 						<xs:element ref="tgss_alta_fecha:DatosEspecificos" minOccurs="0"/>
 						<xs:element ref="tgss_agra:DatosEspecificos" minOccurs="0"/>
+						<xs:element ref="tgss_lab:peticioConsultaVidaLaboral" minOccurs="0"/>
+						
 										
 
 					</xs:choice>

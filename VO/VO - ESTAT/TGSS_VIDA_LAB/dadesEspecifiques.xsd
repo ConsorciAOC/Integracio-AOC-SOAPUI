@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<xs:schema xmlns="http://www.aoc.cat/tgss" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.aoc.cat/tgss" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:element name="peticioConsultaVidaLaboral">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="dataInici" type="xs:date"/>
+				<xs:element name="dataFi" type="xs:date"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="respostaConsultaVidaLaboral">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="resposta" minOccurs="0">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="consulta">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element name="dataInici" type="xs:date"/>
+										<xs:element name="dataFi" type="xs:date"/>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+							<xs:element name="vidaLaboral" minOccurs="0">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element name="numeroSituacions" type="xs:int"/>
+										<xs:element name="numerosAfiliacio" minOccurs="0">
+											<xs:complexType>
+												<xs:sequence>
+													<xs:element name="numeroAfiliacio" maxOccurs="10">
+														<xs:simpleType>
+															<xs:restriction base="xs:string">
+																<xs:length value="12"/>
+															</xs:restriction>
+														</xs:simpleType>
+													</xs:element>
+												</xs:sequence>
+											</xs:complexType>
+										</xs:element>
+										<xs:element name="dataNaixement" type="xs:date"/>
+										<xs:element name="transferenciaDretsCEE">
+											<xs:simpleType>
+												<xs:restriction base="xs:string">
+													<xs:enumeration value="S"/>
+													<xs:enumeration value="N"/>
+												</xs:restriction>
+											</xs:simpleType>
+										</xs:element>
+										<xs:element name="resum" minOccurs="0">
+											<xs:complexType>
+												<xs:sequence>
+													<xs:element name="totals">
+														<xs:complexType>
+															<xs:sequence>
+																<xs:element name="totalDiesAlta" type="xs:int"/>
+																<xs:element name="diesPluriocupacio" type="xs:int"/>
+																<xs:element name="anysAlta" type="xs:int"/>
+																<xs:element name="mesosAlta" type="xs:int"/>
+																<xs:element name="diesAlta" type="xs:int"/>
+															</xs:sequence>
+														</xs:complexType>
+													</xs:element>
+													<xs:element name="pluriocupacio">
+														<xs:complexType>
+															<xs:sequence>
+																<xs:element name="totalDiesAlta" type="xs:int"/>
+																<xs:element name="anysAlta" type="xs:int"/>
+																<xs:element name="mesosAlta" type="xs:int"/>
+																<xs:element name="diesAlta" type="xs:int"/>
+															</xs:sequence>
+														</xs:complexType>
+													</xs:element>
+												</xs:sequence>
+											</xs:complexType>
+										</xs:element>
+										<xs:element name="situacions" minOccurs="0">
+											<xs:complexType>
+												<xs:sequence>
+													<xs:element name="situacio" maxOccurs="unbounded">
+														<xs:complexType>
+															<xs:sequence>
+																<xs:element name="numeroAfiliacio">
+																	<xs:simpleType>
+																		<xs:restriction base="xs:string">
+																			<xs:length value="12"/>
+																		</xs:restriction>
+																	</xs:simpleType>
+																</xs:element>
+																<xs:element name="regim" minOccurs="0">
+																	<xs:simpleType>
+																		<xs:restriction base="xs:string">
+																			<xs:minLength value="1"/>
+																			<xs:maxLength value="50"/>
+																		</xs:restriction>
+																	</xs:simpleType>
+																</xs:element>
+																<xs:element name="empresa">
+																	<xs:simpleType>
+																		<xs:restriction base="xs:string">
+																			<xs:minLength value="1"/>
+																			<xs:maxLength value="75"/>
+																		</xs:restriction>
+																	</xs:simpleType>
+																</xs:element>
+																<xs:element name="codiCompteCotitzacio" minOccurs="0">
+																	<xs:simpleType>
+																		<xs:restriction base="xs:string">
+																			<xs:maxLength value="11"/>
+																		</xs:restriction>
+																	</xs:simpleType>
+																</xs:element>
+																<xs:element name="provincia" minOccurs="0">
+																	<xs:simpleType>
+																		<xs:restriction base="xs:string">
+																			<xs:pattern value="\d{2}"/>
+																		</xs:restriction>
+																	</xs:simpleType>
+																</xs:element>
+																<xs:element name="dataAlta" type="xs:date" minOccurs="0"/>
+																<xs:element name="dataEfectes" type="xs:date" minOccurs="0"/>
+																<xs:element name="dataBaixa" type="xs:date" minOccurs="0"/>
+																<xs:element name="contracteTreball" minOccurs="0">
+																	<xs:simpleType>
+																		<xs:restriction base="xs:string">
+																			<xs:minLength value="1"/>
+																			<xs:maxLength value="100"/>
+																		</xs:restriction>
+																	</xs:simpleType>
+																</xs:element>
+																<xs:element name="contracteTempsParcial" minOccurs="0">
+																	<xs:simpleType>
+																		<xs:restriction base="xs:decimal">
+																			<xs:totalDigits value="3"/>
+																			<xs:fractionDigits value="1"/>
+																		</xs:restriction>
+																	</xs:simpleType>
+																</xs:element>
+																<xs:element name="grupCotitzacio" minOccurs="0">
+																	<xs:annotation>
+																		<xs:documentation>Grupo de Cotización</xs:documentation>
+																	</xs:annotation>
+																	<xs:simpleType>
+																		<xs:restriction base="xs:string">
+																			<xs:minLength value="1"/>
+																			<xs:maxLength value="10"/>
+																		</xs:restriction>
+																	</xs:simpleType>
+																</xs:element>
+																<xs:element name="diesAlta" type="xs:int" minOccurs="0"/>
+															</xs:sequence>
+														</xs:complexType>
+													</xs:element>
+												</xs:sequence>
+											</xs:complexType>
+										</xs:element>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element ref="resultat"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="respostaConsultaNumerosAfiliacio">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="resposta" minOccurs="0">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="numerosAfiliacio" minOccurs="0">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element name="numeroAfiliacio" maxOccurs="10">
+											<xs:simpleType>
+												<xs:restriction base="xs:string">
+													<xs:length value="12"/>
+												</xs:restriction>
+											</xs:simpleType>
+										</xs:element>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element ref="resultat"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<!-- ======================================================= -->
+	<!-- Resultat                                               													 -->
+	<!-- ======================================================= -->
+	<xs:element name="resultat">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="codiResultat" type="xs:string"/>
+				<xs:element name="descripcio" type="xs:string"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<!-- ======================================================= -->
+	<!-- Tipus                                                   													-->
+	<!-- ======================================================= -->
+</xs:schema>
