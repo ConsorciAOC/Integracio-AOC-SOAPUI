@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<xs:schema xmlns="http://www.aoc.cat/dgp/identitat" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.aoc.cat/dgp/identitat" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<!-- ======================================================= -->
+	<!-- Consulta dades identitat												 							-->
+	<!-- ======================================================= -->
+	<xs:element name="peticioConsultaDadesIdentitat">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="numeroSuport" minOccurs="0"/>
+				<xs:element ref="anyNaixement" minOccurs="0"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="respostaConsultaDadesIdentitat">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="peticioConsultaDadesIdentitat" minOccurs="0"/>
+				<xs:element name="dadesTitular" minOccurs="0">
+					<xs:complexType>
+						<xs:all>
+							<xs:element ref="numeroSuport" minOccurs="0"/>
+							<xs:element ref="nom" minOccurs="0"/>
+							<xs:element ref="primerCognom" minOccurs="0"/>
+							<xs:element ref="segonCognom" minOccurs="0"/>
+							<xs:element ref="nacionalitat" minOccurs="0"/>
+							<xs:element ref="sexe" minOccurs="0"/>
+							<xs:element name="dadesNaixement" type="tDadesNaixementConsulta" minOccurs="0"/>
+							<xs:element ref="nomPare" minOccurs="0"/>
+							<xs:element ref="nomMare" minOccurs="0"/>
+							<xs:element ref="dataCaducitat" minOccurs="0"/>
+						</xs:all>
+					</xs:complexType>
+				</xs:element>
+				<xs:element ref="resultat"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<!-- ======================================================= -->
+	<!-- Verificació dades identitat												 							-->
+	<!-- ======================================================= -->
+	<xs:element name="peticioVerificacioDadesIdentitat">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="numeroSuport" minOccurs="0"/>
+				<xs:element ref="sexe" minOccurs="0"/>
+				<xs:element name="dadesNaixement" type="tDadesNaixementVerificacio" minOccurs="0"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="respostaVerificacioDadesIdentitat">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="peticioVerificacioDadesIdentitat" minOccurs="0"/>
+				<xs:element ref="resultat"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<!-- ======================================================= -->
+	<!-- Dades																			 							-->
+	<!-- ======================================================= -->
+	<xs:element name="dataCaducitat">
+		<xs:simpleType>
+			<xs:restriction base="xs:string">
+				<xs:length value="8"/>
+				<xs:whiteSpace value="collapse"/>
+			</xs:restriction>
+		</xs:simpleType>
+	</xs:element>
+	<xs:element name="nacionalitat">
+		<xs:simpleType>
+			<xs:restriction base="xs:string">
+				<xs:maxLength value="22"/>
+				<xs:minLength value="1"/>
+				<xs:whiteSpace value="collapse"/>
+			</xs:restriction>
+		</xs:simpleType>
+	</xs:element>
+	<xs:element name="nomMare">
+		<xs:simpleType>
+			<xs:restriction base="xs:string">
+				<xs:maxLength value="40"/>
+				<xs:minLength value="1"/>
+				<xs:whiteSpace value="preserve"/>
+			</xs:restriction>
+		</xs:simpleType>
+	</xs:element>
+	<xs:element name="nomPare">
+		<xs:simpleType>
+			<xs:restriction base="xs:string">
+				<xs:maxLength value="40"/>
+				<xs:minLength value="1"/>
+				<xs:whiteSpace value="collapse"/>
+			</xs:restriction>
+		</xs:simpleType>
+	</xs:element>
+	<xs:element name="nom">
+		<xs:simpleType>
+			<xs:restriction base="xs:string">
+				<xs:maxLength value="40"/>
+				<xs:minLength value="1"/>
+				<xs:whiteSpace value="collapse"/>
+			</xs:restriction>
+		</xs:simpleType>
+	</xs:element>
+	<xs:element name="primerCognom">
+		<xs:simpleType>
+			<xs:restriction base="xs:string">
+				<xs:maxLength value="40"/>
+				<xs:minLength value="1"/>
+				<xs:whiteSpace value="collapse"/>
+			</xs:restriction>
+		</xs:simpleType>
+	</xs:element>
+	<xs:element name="segonCognom">
+		<xs:simpleType>
+			<xs:restriction base="xs:string">
+				<xs:maxLength value="40"/>
+				<xs:minLength value="1"/>
+				<xs:whiteSpace value="collapse"/>
+			</xs:restriction>
+		</xs:simpleType>
+	</xs:element>
+	<xs:element name="data">
+		<xs:simpleType>
+			<xs:restriction base="xs:string">
+				<xs:length value="8"/>
+				<xs:whiteSpace value="collapse"/>
+			</xs:restriction>
+		</xs:simpleType>
+	</xs:element>
+	<xs:element name="numeroSuport">
+		<xs:simpleType>
+			<xs:restriction base="xs:string">
+				<xs:length value="9"/>
+				<xs:whiteSpace value="collapse"/>
+			</xs:restriction>
+		</xs:simpleType>
+	</xs:element>
+	<xs:element name="sexe">
+		<xs:simpleType>
+			<xs:restriction base="xs:string">
+				<xs:enumeration value="M"/>
+				<xs:enumeration value="F"/>
+				<xs:enumeration value="I"/>
+			</xs:restriction>
+		</xs:simpleType>
+	</xs:element>
+	<xs:element name="provincia">
+		<xs:simpleType>
+			<xs:restriction base="xs:string">
+				<xs:maxLength value="40"/>
+				<xs:minLength value="1"/>
+				<xs:whiteSpace value="collapse"/>
+			</xs:restriction>
+		</xs:simpleType>
+	</xs:element>
+	<xs:element name="pais">
+		<xs:simpleType>
+			<xs:restriction base="xs:string">
+				<xs:maxLength value="3"/>
+			</xs:restriction>
+		</xs:simpleType>
+	</xs:element>
+	<xs:element name="localitat">
+		<xs:simpleType>
+			<xs:restriction base="xs:string">
+				<xs:maxLength value="40"/>
+				<xs:minLength value="1"/>
+				<xs:whiteSpace value="collapse"/>
+			</xs:restriction>
+		</xs:simpleType>
+	</xs:element>
+	<xs:element name="anyNaixement">
+		<xs:simpleType>
+			<xs:restriction base="xs:int">
+				<xs:totalDigits value="4"/>
+				<xs:minExclusive value="1900"/>
+			</xs:restriction>
+		</xs:simpleType>
+	</xs:element>
+	<!-- ======================================================= -->
+	<!-- Resultat                                                -->
+	<!-- ======================================================= -->
+	<xs:element name="resultat">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="codiResultat" type="xs:string"/>
+				<xs:element name="descripcio" type="xs:string"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<!-- ======================================================= -->
+	<!-- Dades Naixement                                                -->
+	<!-- ======================================================= -->
+	<xs:complexType name="tDadesNaixementConsulta">
+		<xs:all>
+			<xs:element ref="data" minOccurs="0"/>
+			<xs:element ref="localitat" minOccurs="0"/>
+			<xs:element ref="provincia" minOccurs="0"/>
+		</xs:all>
+	</xs:complexType>
+	<xs:complexType name="tDadesNaixementVerificacio">
+		<xs:all>
+			<xs:element ref="data" minOccurs="0"/>
+			<xs:element ref="provincia" minOccurs="0"/>
+			<xs:element ref="pais" minOccurs="0"/>
+		</xs:all>
+	</xs:complexType>
+</xs:schema>
