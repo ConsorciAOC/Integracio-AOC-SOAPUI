@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2008 rel. 2 sp1 (http://www.altova.com) by AppsPortables (Aplicaciones Portables) -->
+<!-- edited with XMLSPY v2004 rel. 2 U (http://www.xmlspy.com) by xmlspy (xmlspy) -->
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="http://www.tgss.es/actividadagraria/esquemas/afiliacion/datosespecificos" targetNamespace="http://www.tgss.es/actividadagraria/esquemas/afiliacion/datosespecificos" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:element name="DatosEspecificos" type="DatosEspecificos"/>
+	<xs:complexType name="DatosEspecificos">
+		<xs:all>
+			<xs:element name="IPF" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Identificador de persona física.Númerorico de 11 posiciones, siendo el primero el tipo 1 para DNI, 6 para NIE y 7 para pasaporte.</xs:documentation>
+				</xs:annotation>
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:maxLength value="11"/>
+						<xs:minLength value="11"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="Fecha_Desde" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Campo opcional. Válido para limitar la consulta de un vida laboral. aaaamm</xs:documentation>
+				</xs:annotation>
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:minLength value="6"/>
+						<xs:maxLength value="6"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="Fecha_Hasta" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Campo opcional. Válido para limitar la consulta de un vida laboral. aaaamm</xs:documentation>
+				</xs:annotation>
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:minLength value="6"/>
+						<xs:maxLength value="6"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="Retorno" minOccurs="0">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="Codigo">
+							<xs:annotation>
+								<xs:documentation>Código de resultado. 0000 Operación correcta
+0001 No existen situaciones del alta para este IPF.
+0002 El IPF no es correcto.
+0003 El IPF no existe en base de datos.
+0004 El IPF está duplicado en base de datos.
+0005 Error en el formato de las fechas.
+0006 Hay más de 100 situaciones. </xs:documentation>
+							</xs:annotation>
+							<xs:simpleType>
+								<xs:restriction base="xs:string">
+									<xs:minLength value="4"/>
+									<xs:maxLength value="4"/>
+								</xs:restriction>
+							</xs:simpleType>
+						</xs:element>
+						<xs:element name="Descripcion" type="xs:string">
+							<xs:annotation>
+								<xs:documentation>Literal del código de resultado.</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+						<xs:element name="SITUACIONES">
+							<xs:complexType>
+								<xs:sequence>
+									<xs:element name="SITUACION" minOccurs="0" maxOccurs="100">
+										<xs:complexType>
+											<xs:all>
+												<xs:element name="NORMALIZACION">
+													<xs:annotation>
+														<xs:documentation>Indica si está normalizado el campo nombre y apellidos: 1 - No normalizado / 2 - Normalizado</xs:documentation>
+													</xs:annotation>
+													<xs:simpleType>
+														<xs:restriction base="xs:unsignedInt">
+															<xs:minInclusive value="1"/>
+															<xs:maxInclusive value="2"/>
+														</xs:restriction>
+													</xs:simpleType>
+												</xs:element>
+												<xs:element name="NOMBRE">
+													<xs:simpleType>
+														<xs:restriction base="xs:string">
+															<xs:minLength value="1"/>
+															<xs:maxLength value="99"/>
+														</xs:restriction>
+													</xs:simpleType>
+												</xs:element>
+												<xs:element name="NAF">
+													<xs:annotation>
+														<xs:documentation>Numeró de afiliación sobre el que se informa la situación.</xs:documentation>
+													</xs:annotation>
+													<xs:simpleType>
+														<xs:restriction base="xs:string">
+															<xs:minLength value="12"/>
+															<xs:maxLength value="12"/>
+														</xs:restriction>
+													</xs:simpleType>
+												</xs:element>
+												<xs:element name="REGIMEN">
+													<xs:annotation>
+														<xs:documentation>Litetral del Régimen de Seguridad Social</xs:documentation>
+													</xs:annotation>
+													<xs:simpleType>
+														<xs:restriction base="xs:string"/>
+													</xs:simpleType>
+												</xs:element>
+												<xs:element name="CNAE">
+													<xs:annotation>
+														<xs:documentation>Actividad Económica</xs:documentation>
+													</xs:annotation>
+													<xs:simpleType>
+														<xs:restriction base="xs:string">
+															<xs:minLength value="1"/>
+															<xs:maxLength value="5"/>
+														</xs:restriction>
+													</xs:simpleType>
+												</xs:element>
+												<xs:element name="FECHA_REAL_ALTA" type="xs:string">
+													<xs:annotation>
+														<xs:documentation>Fecha de inicio de la actividad laboral. AAAAMMDD</xs:documentation>
+													</xs:annotation>
+												</xs:element>
+												<xs:element name="FECHA_EFECTO_ALTA" type="xs:string">
+													<xs:annotation>
+														<xs:documentation>Fecha en que se producen los efectos del alta. AAAAMMDD</xs:documentation>
+													</xs:annotation>
+												</xs:element>
+												<xs:element name="FECHA_REAL_BAJA" type="xs:string">
+													<xs:annotation>
+														<xs:documentation>Fecha de finalizacion de la actividad laboral. AAAAMMDD</xs:documentation>
+													</xs:annotation>
+												</xs:element>
+												<xs:element name="FECHA_EFECTO_BAJA" type="xs:string">
+													<xs:annotation>
+														<xs:documentation>Fecha en que se producen los efectos de la baja. AAAAMMDD</xs:documentation>
+													</xs:annotation>
+												</xs:element>
+											</xs:all>
+										</xs:complexType>
+									</xs:element>
+								</xs:sequence>
+							</xs:complexType>
+						</xs:element>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<!-- edited with XMLSPY v2004 rel. 2 U (http://www.xmlspy.com) by xmlspy (xmlspy) -->
+		</xs:all>
+	</xs:complexType>
+</xs:schema>

@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8" ?><xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" targetNamespace="http://www.map.es/scsp/esquemas/datosespecificos" xmlns="http://www.map.es/scsp/esquemas/datosespecificos" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+	<xs:element name="DatosEspecificos" type="DatosEspecificos"></xs:element>
+	<xs:complexType name="DatosEspecificos">
+		<xs:all>
+			<xs:element minOccurs="0" name="Documento_Id">
+				<xs:complexType>
+					<xs:all>
+						<xs:element name="Tipo">
+							<xs:simpleType>
+								<xs:restriction base="xs:string">
+									<xs:enumeration value="DNI"></xs:enumeration>
+									<xs:enumeration value="Pasaporte"></xs:enumeration>
+									<xs:enumeration value="NIE"></xs:enumeration>
+									<xs:enumeration value="CIF"></xs:enumeration>
+								</xs:restriction>
+							</xs:simpleType>
+						</xs:element>
+						<xs:element name="Numero" type="xs:string"></xs:element>
+						<xs:element minOccurs="0" name="Descripcion" type="xs:string"></xs:element>
+					</xs:all>
+				</xs:complexType>
+			</xs:element>
+			<xs:element minOccurs="0" name="Regimen">
+				<xs:complexType>
+					<xs:all>
+						<xs:element name="Codigo">
+							<xs:simpleType>
+								<xs:restriction base="xs:string">
+									<xs:enumeration value="0111"></xs:enumeration>
+									<xs:enumeration value="0112"></xs:enumeration>
+									<xs:enumeration value="0113"></xs:enumeration>
+									<xs:enumeration value="0114"></xs:enumeration>
+									<xs:enumeration value="0115"></xs:enumeration>
+									<xs:enumeration value="0121"></xs:enumeration>
+									<xs:enumeration value="0131"></xs:enumeration>
+									<xs:enumeration value="0132"></xs:enumeration>
+									<xs:enumeration value="0133"></xs:enumeration>
+									<xs:enumeration value="0134"></xs:enumeration>
+									<xs:enumeration value="0136"></xs:enumeration>
+									<xs:enumeration value="0137"></xs:enumeration>
+									<xs:enumeration value="0140"></xs:enumeration>
+									<xs:enumeration value="0150"></xs:enumeration>
+									<xs:enumeration value="0151"></xs:enumeration>
+									<xs:enumeration value="0152"></xs:enumeration>
+									<xs:enumeration value="0160"></xs:enumeration>
+									<xs:enumeration value="0170"></xs:enumeration>
+									<xs:enumeration value="0180"></xs:enumeration>
+									<xs:enumeration value="0521"></xs:enumeration>
+									<xs:enumeration value="0522"></xs:enumeration>
+									<xs:enumeration value="0540"></xs:enumeration>
+									<xs:enumeration value="0611"></xs:enumeration>
+									<xs:enumeration value="0612"></xs:enumeration>
+									<xs:enumeration value="0613"></xs:enumeration>
+									<xs:enumeration value="0640"></xs:enumeration>
+									<xs:enumeration value="0650"></xs:enumeration>
+									<xs:enumeration value="0721"></xs:enumeration>
+									<xs:enumeration value="0722"></xs:enumeration>
+									<xs:enumeration value="0723"></xs:enumeration>
+									<xs:enumeration value="0740"></xs:enumeration>
+									<xs:enumeration value="0800"></xs:enumeration>
+									<xs:enumeration value="0811"></xs:enumeration>
+									<xs:enumeration value="0812"></xs:enumeration>
+									<xs:enumeration value="0813"></xs:enumeration>
+									<xs:enumeration value="0814"></xs:enumeration>
+									<xs:enumeration value="0821"></xs:enumeration>
+									<xs:enumeration value="0822"></xs:enumeration>
+									<xs:enumeration value="0823"></xs:enumeration>
+									<xs:enumeration value="0825"></xs:enumeration>
+									<xs:enumeration value="0840"></xs:enumeration>
+									<xs:enumeration value="0850"></xs:enumeration>
+									<xs:enumeration value="0899"></xs:enumeration>
+									<xs:enumeration value="0911"></xs:enumeration>
+									<xs:enumeration value="0940"></xs:enumeration>
+									<xs:enumeration value="0950"></xs:enumeration>
+									<xs:enumeration value="1200"></xs:enumeration>
+									<xs:enumeration value="1211"></xs:enumeration>
+									<xs:enumeration value="1221"></xs:enumeration>
+									<xs:enumeration value="1240"></xs:enumeration>
+									<xs:enumeration value="1250"></xs:enumeration>
+									<xs:enumeration value="1911"></xs:enumeration>
+									<xs:enumeration value="2300"></xs:enumeration>
+									<xs:enumeration value="2311"></xs:enumeration>
+									<xs:enumeration value="3011"></xs:enumeration>
+									<xs:enumeration value="3040"></xs:enumeration>
+									<xs:enumeration value="3100"></xs:enumeration>
+									<xs:enumeration value="3200"></xs:enumeration>
+									<xs:enumeration value="3300"></xs:enumeration>
+									<xs:enumeration value="3600"></xs:enumeration>
+									<xs:enumeration value="3700"></xs:enumeration>
+									<xs:enumeration value="3800"></xs:enumeration>
+									<xs:enumeration value="3900"></xs:enumeration>
+									<xs:enumeration value="4008"></xs:enumeration>
+									<xs:enumeration value="6500"></xs:enumeration>
+									<xs:enumeration value="6700"></xs:enumeration>
+									<xs:enumeration value="6800"></xs:enumeration>
+								</xs:restriction>
+							</xs:simpleType>
+						</xs:element>
+						<xs:element minOccurs="0" name="Denominacion" type="xs:string"></xs:element>
+					</xs:all>
+				</xs:complexType>
+			</xs:element>
+			<xs:element minOccurs="0" name="CCC">
+				<xs:complexType>
+					<xs:all>
+						<xs:element name="Codigo" type="xs:double"></xs:element>
+						<xs:element minOccurs="0" name="Principal">
+							<xs:simpleType>
+								<xs:restriction base="xs:string">
+									<xs:enumeration value="Si"></xs:enumeration>
+									<xs:enumeration value="No"></xs:enumeration>
+									<xs:enumeration value="SI"></xs:enumeration>
+									<xs:enumeration value="NO"></xs:enumeration>
+								</xs:restriction>
+							</xs:simpleType>
+						</xs:element>
+					</xs:all>
+				</xs:complexType>
+			</xs:element>
+			<xs:element minOccurs="0" name="NAF" type="xs:double"></xs:element>
+			<xs:element minOccurs="0" name="Periodo">
+				<xs:complexType>
+					<xs:all>
+						<xs:element name="Inicio" type="xs:date"></xs:element>
+						<xs:element name="Fin" type="xs:date"></xs:element>
+					</xs:all>
+				</xs:complexType>
+			</xs:element>
+			<xs:element minOccurs="0" name="Retorno">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="Codigo" type="xs:string"></xs:element>
+						<xs:element name="Resultado" type="xs:string"></xs:element>
+						<xs:element name="Descripcion" type="xs:string"></xs:element>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+		</xs:all>
+	</xs:complexType>
+</xs:schema>
