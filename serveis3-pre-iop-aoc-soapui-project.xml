@@ -48581,7 +48581,7 @@
                <ns1:DatosAutorizacion>\r
                   <ns1:IdentificadorSolicitante>${Properties#IdentificadorSolicitante}</ns1:IdentificadorSolicitante>\r
                   <ns1:NombreSolicitante>Ajuntament</ns1:NombreSolicitante>\r
-                  <ns1:Finalidad>PROVES</ns1:Finalidad>\r
+                  <ns1:Finalidad>9821920002_PROVES</ns1:Finalidad>\r
                </ns1:DatosAutorizacion>\r
                <ns1:Emisor>\r
                   <ns1:NifEmisor>Q0801175A</ns1:NifEmisor>\r
@@ -48602,7 +48602,7 @@
                      <ns1:Solicitante>\r
                         <ns1:IdentificadorSolicitante>${Properties#IdentificadorSolicitante}</ns1:IdentificadorSolicitante>\r
                         <ns1:NombreSolicitante>Ajuntament</ns1:NombreSolicitante>\r
-                        <ns1:Finalidad>PROVES</ns1:Finalidad>\r
+                        <ns1:Finalidad>9821920002_PROVES</ns1:Finalidad>\r
                         <ns1:Consentimiento>Ley</ns1:Consentimiento>\r
                         <ns1:Funcionario>\r
                            <ns1:NombreCompletoFuncionario>${Properties#NombreCompletoFuncionario}</ns1:NombreCompletoFuncionario>\r
@@ -48622,7 +48622,7 @@
                   </ns1:DatosGenericos>\r
                   <ns1:DatosEspecificos>\r
                      <ns1:peticioConsultaVehicle xmlns:ns1="http://www.aoc.cat/dgt" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">\r
-                        <ns1:matricula>5375FTJ</ns1:matricula>\r
+                        <ns1:matricula>AB1234D</ns1:matricula>\r
                      </ns1:peticioConsultaVehicle>\r
                   </ns1:DatosEspecificos>\r
                </ns1:SolicitudTransmision>\r
@@ -48630,7 +48630,7 @@
          </ns1:Peticion>\r
       </open:procesa>\r
    </soapenv:Body>\r
-</soapenv:Envelope>]]></con:request><con:assertion type="SOAP Response" id="1c7555af-bbba-435a-b18c-e5f8ad74c6e6" name="SOAP Response"/><con:credentials><con:selectedAuthProfile>Basic</con:selectedAuthProfile><con:addedBasicAuthenticationTypes>Basic</con:addedBasicAuthenticationTypes><con:preemptive>true</con:preemptive><con:authType>Preemptive</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://www.openuri.org/procesa"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:testStep type="request" id="787b7e6a-2847-4793-9fb1-2e97b1502dc7" name="VO - DGT_CON_VEH_SANC - WSS"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>SincronSoap</con:interface><con:operation>procesa</con:operation><con:request name="VO - DGT_CON_VEH_SANC - WSS" outgoingWss="CERT_PROVES" incomingWss="" timeout="" sslKeystore="" useWsAddressing="false" useWsReliableMessaging="false" wssPasswordType="" id="b8102efb-d443-4dfc-b817-02e7693fa0e0"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>https://serveis3-pre.iop.aoc.cat:443/siri-proxy/services/Sincron</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:open="http://www.openuri.org/" xmlns:pet="http://gencat.net/scsp/esquemes/peticion" xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/">\r
+</soapenv:Envelope>]]></con:request><con:assertion type="SOAP Response" id="1c7555af-bbba-435a-b18c-e5f8ad74c6e6" name="SOAP Response"/><con:credentials><con:selectedAuthProfile>Basic</con:selectedAuthProfile><con:addedBasicAuthenticationTypes>Basic</con:addedBasicAuthenticationTypes><con:preemptive>true</con:preemptive><con:authType>Preemptive</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://www.openuri.org/procesa"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:testStep type="request" id="787b7e6a-2847-4793-9fb1-2e97b1502dc7" name="VO - DGT_CON_TIT_VIA - WSS"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>SincronSoap</con:interface><con:operation>procesa</con:operation><con:request name="VO - DGT_CON_TIT_VIA - WSS" outgoingWss="CERT_PROVES" incomingWss="" timeout="" sslKeystore="" useWsAddressing="false" useWsReliableMessaging="false" wssPasswordType="" id="b8102efb-d443-4dfc-b817-02e7693fa0e0"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>https://serveis3-pre.iop.aoc.cat:443/siri-proxy/services/Sincron</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:open="http://www.openuri.org/" xmlns:pet="http://gencat.net/scsp/esquemes/peticion" xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/">\r
    <soapenv:Header/>\r
    <soapenv:Body wsu:Id="id-2FCB69B934F938128B162694603391719" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd">\r
       <open:procesa>\r
@@ -48645,7 +48645,7 @@
                <ns1:DatosAutorizacion>\r
                   <ns1:IdentificadorSolicitante>${Properties#IdentificadorSolicitante}</ns1:IdentificadorSolicitante>\r
                   <ns1:NombreSolicitante>Ajuntament</ns1:NombreSolicitante>\r
-                  <ns1:Finalidad>PROVES</ns1:Finalidad>\r
+                  <ns1:Finalidad>9821920002_PROVES</ns1:Finalidad>\r
                </ns1:DatosAutorizacion>\r
                <ns1:Emisor>\r
                   <ns1:NifEmisor>Q0801175A</ns1:NifEmisor>\r
@@ -48666,7 +48666,7 @@
                      <ns1:Solicitante>\r
                         <ns1:IdentificadorSolicitante>${Properties#IdentificadorSolicitante}</ns1:IdentificadorSolicitante>\r
                         <ns1:NombreSolicitante>Ajuntament</ns1:NombreSolicitante>\r
-                        <ns1:Finalidad>PROVES</ns1:Finalidad>\r
+                        <ns1:Finalidad>9821920002_PROVES</ns1:Finalidad>\r
                         <ns1:Consentimiento>Ley</ns1:Consentimiento>\r
                         <ns1:Funcionario>\r
                            <ns1:NombreCompletoFuncionario>${Properties#NombreCompletoFuncionario}</ns1:NombreCompletoFuncionario>\r
@@ -48686,7 +48686,7 @@
                   </ns1:DatosGenericos>\r
                   <ns1:DatosEspecificos>\r
                      <ns1:peticioConsultaTitularVia xmlns:ns1="http://www.aoc.cat/dgt" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">\r
-                        <ns1:matricula>7003FFG</ns1:matricula>\r
+                        <ns1:matricula>0000CSG</ns1:matricula>\r
                      </ns1:peticioConsultaTitularVia>\r
                   </ns1:DatosEspecificos>\r
                </ns1:SolicitudTransmision>\r
@@ -48694,7 +48694,7 @@
          </ns1:Peticion>\r
       </open:procesa>\r
    </soapenv:Body>\r
-</soapenv:Envelope>]]></con:request><con:assertion type="SOAP Response" id="1c7555af-bbba-435a-b18c-e5f8ad74c6e6" name="SOAP Response"/><con:credentials><con:selectedAuthProfile>Basic</con:selectedAuthProfile><con:addedBasicAuthenticationTypes>Basic</con:addedBasicAuthenticationTypes><con:preemptive>true</con:preemptive><con:authType>Preemptive</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://www.openuri.org/procesa"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:testStep type="request" id="8cf05254-bf6b-4293-b05a-d74be25aec91" name="VO - DGT_CON_TIT_VIA - WSS"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>SincronSoap</con:interface><con:operation>procesa</con:operation><con:request name="VO - DGT_CON_TIT_VIA - WSS" outgoingWss="CERT_PROVES" incomingWss="" timeout="" sslKeystore="" useWsAddressing="false" useWsReliableMessaging="false" wssPasswordType="" id="b8102efb-d443-4dfc-b817-02e7693fa0e0"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>https://serveis3-pre.iop.aoc.cat:443/siri-proxy/services/Sincron</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:open="http://www.openuri.org/" xmlns:pet="http://gencat.net/scsp/esquemes/peticion" xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/">\r
+</soapenv:Envelope>]]></con:request><con:assertion type="SOAP Response" id="1c7555af-bbba-435a-b18c-e5f8ad74c6e6" name="SOAP Response"/><con:credentials><con:selectedAuthProfile>Basic</con:selectedAuthProfile><con:addedBasicAuthenticationTypes>Basic</con:addedBasicAuthenticationTypes><con:preemptive>true</con:preemptive><con:authType>Preemptive</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://www.openuri.org/procesa"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:testStep type="request" id="8cf05254-bf6b-4293-b05a-d74be25aec91" name="VO - DGT_CON_VEH_SANC - WSS"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>SincronSoap</con:interface><con:operation>procesa</con:operation><con:request name="VO - DGT_CON_VEH_SANC - WSS" outgoingWss="CERT_PROVES" incomingWss="" timeout="" sslKeystore="" useWsAddressing="false" useWsReliableMessaging="false" wssPasswordType="" id="b8102efb-d443-4dfc-b817-02e7693fa0e0"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>https://serveis3-pre.iop.aoc.cat:443/siri-proxy/services/Sincron</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:open="http://www.openuri.org/" xmlns:pet="http://gencat.net/scsp/esquemes/peticion" xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/">\r
    <soapenv:Header/>\r
    <soapenv:Body wsu:Id="id-2FCB69B934F938128B162694603391719" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd">\r
       <open:procesa>\r
@@ -48709,7 +48709,7 @@
                <ns1:DatosAutorizacion>\r
                   <ns1:IdentificadorSolicitante>${Properties#IdentificadorSolicitante}</ns1:IdentificadorSolicitante>\r
                   <ns1:NombreSolicitante>Ajuntament</ns1:NombreSolicitante>\r
-                  <ns1:Finalidad>PROVES</ns1:Finalidad>\r
+                  <ns1:Finalidad>9821920002_PROVES</ns1:Finalidad>\r
                </ns1:DatosAutorizacion>\r
                <ns1:Emisor>\r
                   <ns1:NifEmisor>Q0801175A</ns1:NifEmisor>\r
@@ -48730,7 +48730,7 @@
                      <ns1:Solicitante>\r
                         <ns1:IdentificadorSolicitante>${Properties#IdentificadorSolicitante}</ns1:IdentificadorSolicitante>\r
                         <ns1:NombreSolicitante>Ajuntament</ns1:NombreSolicitante>\r
-                        <ns1:Finalidad>PROVES</ns1:Finalidad>\r
+                        <ns1:Finalidad>9821920002_PROVES</ns1:Finalidad>\r
                         <ns1:Consentimiento>Ley</ns1:Consentimiento>\r
                         <ns1:Funcionario>\r
                            <ns1:NombreCompletoFuncionario>${Properties#NombreCompletoFuncionario}</ns1:NombreCompletoFuncionario>\r
@@ -48750,7 +48750,7 @@
                   </ns1:DatosGenericos>\r
                   <ns1:DatosEspecificos>\r
                      <ns1:peticioConsultaVehicleSancions xmlns:ns1="http://www.aoc.cat/dgt" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">\r
-                        <ns1:matricula>1835-GNK</ns1:matricula>\r
+                        <ns1:matricula>AB1234D</ns1:matricula>\r
                      </ns1:peticioConsultaVehicleSancions>\r
                   </ns1:DatosEspecificos>\r
                </ns1:SolicitudTransmision>\r
