@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<xs:schema xmlns="http://www.aoc.cat/dgt" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:dgt="http://intermediacion.redsara.es/scsp/esquemas/datosespecificos" targetNamespace="http://www.aoc.cat/dgt" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:import namespace="http://intermediacion.redsara.es/scsp/esquemas/datosespecificos" schemaLocation="datos-especificos-SVDDGTVEHICULODANOSVIAWS01.xsd"/>
+	<!-- ======================================================= -->
+	<!-- Consulta titular via							 -->
+	<!-- ======================================================= -->
+	<xs:element name="peticioConsultaTitularVia">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:choice>
+					<xs:element name="matricula" type="xs:string"/>
+					<xs:element name="bastidor" type="xs:string"/>
+					<xs:element name="nive" type="xs:string"/>
+				</xs:choice>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="respostaConsultaTitularVia">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="peticioConsultaTitularVia" minOccurs="0"/>
+				<xs:element name="resposta" minOccurs="0">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element ref="dgt:DomicilioNotificacionTitular" minOccurs="0"/>
+							<xs:element ref="dgt:DatosTitular" minOccurs="0"/>
+							<xs:element ref="dgt:DatosSeguro"/>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element ref="resultat"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<!-- ======================================================= -->
+	<!-- Resultat                                                -->
+	<!-- ======================================================= -->
+	<xs:element name="resultat">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="codiResultat" type="xs:string"/>
+				<xs:element name="descripcio" type="xs:string"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>
