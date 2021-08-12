@@ -47,6 +47,8 @@
 		xmlns:tgss_lab="http://www.aoc.cat/tgss"
 		xmlns:dgp="http://www.aoc.cat/dgp/identitat" 
 		xmlns:dgt="http://www.aoc.cat/dgt" 
+		xmlns:cad="http://www.aocat.net/cadastre" 
+		xmlns:inss="http://www.aoc.cat/inss" 
 		
 		targetNamespace="http://gencat.net/scsp/esquemes/peticion"  elementFormDefault="qualified" attributeFormDefault="unqualified">
 			<xs:import namespace="http://www.aocat.net/inem" schemaLocation="./VO/VO - ESTAT/INEM/dadesEspecifiques.xsd"/>
@@ -75,7 +77,12 @@
 			<xs:import namespace="http://www.aoc.cat/dgt" schemaLocation="./VO/VO - ESTAT/DGT/dadesEspecifiques-DGT_PERMISOS_CONDUCTOR.xsd"/>
 			<xs:import namespace="http://www.aoc.cat/dgt" schemaLocation="./VO/VO - ESTAT/DGT/dadesEspecifiques-DGT_SANCIONS_CONDUCTOR.xsd"/>
 			<xs:import namespace="http://www.aoc.cat/dgt" schemaLocation="./VO/VO - ESTAT/DGT/dadesEspecifiques-DGT_TITULAR_VIA.xsd"/>
-			<xs:import namespace="http://www.aoc.cat/dgt" schemaLocation="./VO/VO - ESTAT/DGT/dadesEspecifiques-DGT_VEHICLES_CONDUCTOR.xsd"/>
+			<xs:import namespace="http://www.aoc.cat/dgt" schemaLocation="./VO/VO - ESTAT/DGT/dadesEspecifiques-DGT_VEHICLES_CONDUCTOR.xsd"/>		
+			<xs:import namespace="http://www.aocat.net/cadastre" schemaLocation="./VO/VO - ESTAT/CADASTRE/dadesEspecifiques-CERTIFICACIO_TITULARITAT.xsd"/>
+			<xs:import namespace="http://www.aocat.net/cadastre" schemaLocation="./VO/VO - ESTAT/CADASTRE/dadesEspecifiques-DADES_CADASTRALS.xsd"/>
+			<xs:import namespace="http://www.aocat.net/cadastre" schemaLocation="./VO/VO - ESTAT/CADASTRE/dadesEspecifiques-DESCRIPTIVA_GRAFICA.xsd"/>			
+			<xs:import namespace="http://www.aoc.cat/inss" schemaLocation="./VO/VO - ESTAT/INSS/dadesEspecifiques-PRESTACIONS_HISTORIC.xsd"/>
+			
 			
 			
 			
@@ -382,6 +389,11 @@
 						<xs:element ref="dgt:peticioConsultaVehicle" minOccurs="0"/>
 						<xs:element ref="dgt:peticioConsultaVehicleSancions" minOccurs="0"/>
 						<xs:element ref="dgt:peticioConsultaTitularVia" minOccurs="0"/>
+						<xs:element ref="cad:peticioCertificacioTitular" minOccurs="0"/>
+						<xs:element ref="cad:peticioConsultaDades" minOccurs="0"/>
+						<xs:element ref="cad:peticioDescriptivaIGrafica" minOccurs="0"/>
+						<xs:element ref="inss:peticioConsultaPrestacionsHistoric" minOccurs="0"/>
+						
 						
 										
 										

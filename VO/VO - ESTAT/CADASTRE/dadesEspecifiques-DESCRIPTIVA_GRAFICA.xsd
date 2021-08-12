@@ -1,0 +1,34 @@
+<?xml version="1.0"?>
+<xs:schema targetNamespace="http://www.aocat.net/cadastre" elementFormDefault="qualified" attributeFormDefault="unqualified" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="http://www.aocat.net/cadastre" xmlns:map="http://www.map.es/scsp/esquemas/datosespecificos">
+	<xs:import namespace="http://www.map.es/scsp/esquemas/datosespecificos" schemaLocation="datos-especificos-ObtenerDescriptivaYGrafica.xsd"/>
+	<!-- ======================================================= -->
+	<!-- DescriptivaYGrafica                          					 -->
+	<!-- ======================================================= -->
+	<xs:element name="peticioDescriptivaIGrafica">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="map:DatosEntrada"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="respostaDescriptivaIGrafica">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="peticioDescriptivaIGrafica" minOccurs="0"/>
+				<xs:element ref="map:DatosSalida" minOccurs="0"/>
+				<xs:element ref="resultat"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<!-- ======================================================= -->
+	<!-- Resultat                                                -->
+	<!-- ======================================================= -->
+	<xs:element name="resultat">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="codiResultat" type="xs:string"/>
+				<xs:element name="descripcio" type="xs:string"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

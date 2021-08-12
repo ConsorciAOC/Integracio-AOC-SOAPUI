@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<xs:schema xmlns="http://www.aoc.cat/inss" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:inss="http://intermediacion.redsara.es/scsp/esquemas/datosespecificos" targetNamespace="http://www.aoc.cat/inss" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:import namespace="http://intermediacion.redsara.es/scsp/esquemas/datosespecificos" schemaLocation="datos-especificos-historico.xsd"/>
+	<!-- ======================================================= -->
+	<!-- PRESTACIONS_HISTORIC                                    -->
+	<!-- ======================================================= -->
+	<xs:element name="peticioConsultaPrestacionsHistoric">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="dataInici" type="xs:date"/>
+				<xs:element name="dataFi" type="xs:date"/>				
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="respostaConsultaPrestacionsHistoric">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="peticioConsultaPrestacionsHistoric" minOccurs="0"/>
+				<xs:element name="resposta" minOccurs="0">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element ref="inss:DocumentoIdentificativoUnivoco" minOccurs="0"/>
+							<xs:element ref="inss:NumeroPrestacionesEncontradas" minOccurs="0"/>
+							<xs:element ref="inss:Prestacion" minOccurs="0" maxOccurs="unbounded"/>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element ref="resultat"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<!-- ======================================================= -->
+	<!-- Resultat                                                -->
+	<!-- ======================================================= -->
+	<xs:element name="resultat">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="codiResultat" type="xs:string"/>
+				<xs:element name="descripcio" type="xs:string"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>
