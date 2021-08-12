@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<xs:schema xmlns="http://www.aoc.cat/registre-civil" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.aoc.cat/registre-civil" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:element name="peticioConsultaRegistreCivil">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="dataFetRegistral" type="xs:date" minOccurs="0"/>
+				<xs:element name="absenciaSegonCognom" type="xs:boolean"/>
+				<xs:choice>
+					<xs:element ref="dadesRegistrals" minOccurs="0"/>
+					<xs:element ref="altresDades" minOccurs="0"/>
+				</xs:choice>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="dadesRegistrals">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="registreCivil" type="tIdentificadorRegistre"/>
+				<xs:element name="tom" type="tIdentificadorTom"/>
+				<xs:element name="pagina" type="tIdentificadorPagina"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="altresDades">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="poblacioFetRegistral" type="tPoblacio"/>
+				<xs:element name="dataNaixement" type="xs:date"/>
+				<xs:element name="poblacioNaixement" type="tPoblacio" minOccurs="0"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="respostaConsultaRegistreCivil">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="peticioConsultaRegistreCivil" minOccurs="0"/>
+				<xs:element ref="resposta" minOccurs="0"/>
+				<xs:element ref="resultat"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="resposta">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="dadesFetRegistral" minOccurs="0"/>
+				<xs:element ref="dadesRegistrals" minOccurs="0"/>
+				<xs:element ref="dadesAddicionalsTitular" minOccurs="0"/>
+				<xs:choice>
+					<xs:element ref="dadesConjuges" minOccurs="0"/>
+					<xs:element ref="dadesProgenitors" minOccurs="0"/>
+				</xs:choice>
+				<xs:element name="dataConfirmacio" type="xs:date"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="dadesFetRegistral">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="data" type="xs:date" minOccurs="0"/>
+				<xs:element name="poblacio" type="tPoblacio" minOccurs="0"/>
+				<xs:element name="pais" type="tPais" minOccurs="0"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="dadesAddicionalsTitular">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="sexe" type="tSexe" minOccurs="0"/>
+				<xs:element name="dataNaixement" type="xs:date" minOccurs="0"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="dadesConjuges">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="conjuge" type="tPersona" minOccurs="0" maxOccurs="2"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="dadesProgenitors">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="progenitor" type="tPersona" minOccurs="0" maxOccurs="2"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<!-- ======================================================= -->
+	<!-- Resultat                                                                                                  -->
+	<!-- ======================================================= -->
+	<xs:element name="resultat">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="codiResultat" type="xs:string"/>
+				<xs:element name="descripcio" type="xs:string"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<!-- ======================================================= -->
+	<!-- Tipus                                                                                                       -->
+	<!-- ======================================================= -->
+	<xs:complexType name="tPersona">
+		<xs:sequence>
+			<xs:element name="tipusDocumentacio" type="tTipusDocumentacio" minOccurs="0"/>
+			<xs:element name="documentacion" type="tDocumentacio" minOccurs="0"/>
+			<xs:element name="nom" type="tNomCognom"/>
+			<xs:element name="primerCognom" type="tNomCognom"/>
+			<xs:element name="segonCognom" type="tNomCognom" minOccurs="0"/>
+			<xs:element name="sexe" type="tSexe" minOccurs="0"/>
+			<xs:element name="dataNaixement" type="xs:date" minOccurs="0"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:simpleType name="tTipusDocumentacio">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="NIF"/>
+			<xs:enumeration value="Passaport"/>
+			<xs:enumeration value="NIE"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="tDocumentacio">
+		<xs:restriction base="xs:string">
+			<xs:maxLength value="14"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="tIdentificadorRegistre">
+		<xs:restriction base="xs:string">
+			<xs:length value="12"/>
+			<xs:pattern value="\d*"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="tIdentificadorTom">
+		<xs:restriction base="xs:string">
+			<xs:maxLength value="10"/>
+			<xs:pattern value="([0-9]{5})([ ]|[_]|\w)*"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="tIdentificadorPagina">
+		<xs:restriction base="xs:string">
+			<xs:maxLength value="10"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="tNomCognom">
+		<xs:restriction base="xs:string">
+			<xs:minLength value="1"/>
+			<xs:maxLength value="50"/>
+			<xs:pattern value="[A-Za-zÁáÉéÍíÓóÚúüÑñÀàÈèÌìÒòÙùÄäËëÏïÖöÜüÂâÊêÎîÔôÛûÇç·'\-\s,.()/\\]+"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="tPoblacio">
+		<xs:restriction base="xs:string">
+			<xs:pattern value="\d{5}"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="tPais">
+		<xs:restriction base="xs:string">
+			<xs:maxLength value="3"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="tSexe">
+		<xs:restriction base="xs:string">
+			<xs:length value="1"/>
+			<xs:enumeration value="H"/>
+			<xs:enumeration value="D"/>
+		</xs:restriction>
+	</xs:simpleType>
+</xs:schema>

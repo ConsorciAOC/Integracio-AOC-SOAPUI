@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<xs:schema xmlns="http://www.aoc.cat/antecedents-penals" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.aoc.cat/antecedents-penals" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:complexType name="tAntecedentsPenals">
+		<xs:choice>
+			<xs:group ref="filiacio"/>
+			<xs:group ref="documentacio"/>
+		</xs:choice>
+	</xs:complexType>
+	<xs:group name="filiacio">
+		<xs:sequence>
+			<xs:element ref="nacionalitat"/>
+			<xs:element ref="sexe" minOccurs="0"/>
+			<xs:element ref="nomPare" minOccurs="0"/>
+			<xs:element ref="nomMare" minOccurs="0"/>
+			<xs:element name="dadesNaixement">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element ref="data"/>
+						<xs:element ref="pais"/>
+						<xs:element ref="provincia" minOccurs="0"/>
+						<xs:element ref="poblacio" minOccurs="0"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element ref="correu" minOccurs="0"/>
+			<xs:element ref="telefon" minOccurs="0"/>
+		</xs:sequence>
+	</xs:group>
+	<xs:group name="documentacio">
+		<xs:sequence>
+			<xs:element ref="anyNaixement" minOccurs="0"/>
+			<xs:element ref="correu" minOccurs="0"/>
+			<xs:element ref="telefon" minOccurs="0"/>
+		</xs:sequence>
+	</xs:group>
+	<xs:element name="peticioInexistenciaAntecedentsPenals" type="tAntecedentsPenals"/>
+	<xs:element name="peticioInexistenciaAntecedentsPenalsDelictesSexuals" type="tAntecedentsPenals"/>
+	<xs:element name="respostaInexistenciaAntecedentsPenals">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="peticioInexistenciaAntecedentsPenals" minOccurs="0"/>
+				<xs:element ref="resposta" minOccurs="0"/>
+				<xs:element ref="resultat"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="respostaInexistenciaAntecedentsPenalsDelictesSexuals">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="peticioInexistenciaAntecedentsPenalsDelictesSexuals" minOccurs="0"/>
+				<xs:element ref="resposta" minOccurs="0"/>
+				<xs:element ref="resultat"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="poblacio">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="codi" minOccurs="0"/>
+				<xs:element ref="nom" minOccurs="0"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="nacionalitat" type="ISO3166_3"/>
+	<xs:element name="pais" type="ISO3166_3"/>
+	<xs:simpleType name="ISO3166_3">
+		<xs:restriction base="xs:string">
+			<xs:whiteSpace value="collapse"/>
+			<xs:pattern value="[0-9]{3}"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:element name="sexe">
+		<xs:simpleType>
+			<xs:restriction base="xs:string">
+				<xs:enumeration value="H"/>
+				<xs:enumeration value="D"/>
+			</xs:restriction>
+		</xs:simpleType>
+	</xs:element>
+	<xs:element name="nomPare" type="Nom"/>
+	<xs:element name="nomMare" type="Nom"/>
+	<xs:simpleType name="Nom">
+		<xs:restriction base="xs:string">
+			<xs:whiteSpace value="collapse"/>
+			<xs:minLength value="1"/>
+			<xs:maxLength value="100"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:element name="provincia">
+		<xs:simpleType>
+			<xs:restriction base="xs:string">
+				<xs:length value="2"/>
+				<xs:pattern value="\d{2}"/>
+			</xs:restriction>
+		</xs:simpleType>
+	</xs:element>
+	<xs:element name="codi">
+		<xs:simpleType>
+			<xs:restriction base="xs:string">
+				<xs:length value="5"/>
+				<xs:pattern value="\d{5}"/>
+			</xs:restriction>
+		</xs:simpleType>
+	</xs:element>
+	<xs:element name="nom">
+		<xs:simpleType>
+			<xs:restriction base="xs:string">
+				<xs:whiteSpace value="collapse"/>
+				<xs:minLength value="1"/>
+				<xs:maxLength value="100"/>
+			</xs:restriction>
+		</xs:simpleType>
+	</xs:element>
+	<xs:element name="data">
+		<xs:simpleType>
+			<xs:restriction base="xs:string">
+				<xs:length value="10"/>
+				<xs:pattern value="([0-2][0-9]|[3][0-1])/([0][0-9]|[1][0-2])/([1][9][2-9][0-9]|[2][0-9]{3})"/>
+			</xs:restriction>
+		</xs:simpleType>
+	</xs:element>
+	<xs:element name="correu">
+		<xs:simpleType>
+			<xs:restriction base="xs:string">
+				<xs:whiteSpace value="collapse"/>
+				<xs:minLength value="1"/>
+				<xs:maxLength value="100"/>
+			</xs:restriction>
+		</xs:simpleType>
+	</xs:element>
+	<xs:element name="telefon">
+		<xs:simpleType>
+			<xs:restriction base="xs:string">
+				<xs:whiteSpace value="collapse"/>
+				<xs:pattern value="(\+)?[0-9]{1,14}"/>
+			</xs:restriction>
+		</xs:simpleType>
+	</xs:element>
+	<xs:element name="anyNaixement">
+		<xs:simpleType>
+			<xs:restriction base="xs:int">
+				<xs:totalDigits value="4"/>
+				<xs:minExclusive value="1900"/>
+			</xs:restriction>
+		</xs:simpleType>
+	</xs:element>
+	<xs:element name="resposta">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="csv">
+					<xs:simpleType>
+						<xs:restriction base="xs:string">
+							<xs:whiteSpace value="collapse"/>
+							<xs:minLength value="1"/>
+							<xs:maxLength value="22"/>
+						</xs:restriction>
+					</xs:simpleType>
+				</xs:element>
+				<xs:element name="url">
+					<xs:simpleType>
+						<xs:restriction base="xs:string">
+							<xs:whiteSpace value="collapse"/>
+							<xs:minLength value="1"/>
+						</xs:restriction>
+					</xs:simpleType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<!-- ======================================================= -->
+	<!-- Resultat                                                													 -->
+	<!-- ======================================================= -->
+	<xs:element name="resultat">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="codiResultat" type="xs:string"/>
+				<xs:element name="descripcio" type="xs:string"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

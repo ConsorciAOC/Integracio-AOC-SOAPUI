@@ -49,6 +49,8 @@
 		xmlns:dgt="http://www.aoc.cat/dgt" 
 		xmlns:cad="http://www.aocat.net/cadastre" 
 		xmlns:inss="http://www.aoc.cat/inss" 
+		xmlns:reg_civ="http://www.aoc.cat/registre-civil"
+		xmlns:ant_pen="http://www.aoc.cat/antecedents-penals"
 		
 		targetNamespace="http://gencat.net/scsp/esquemes/peticion"  elementFormDefault="qualified" attributeFormDefault="unqualified">
 			<xs:import namespace="http://www.aocat.net/inem" schemaLocation="./VO/VO - ESTAT/INEM/dadesEspecifiques.xsd"/>
@@ -82,8 +84,8 @@
 			<xs:import namespace="http://www.aocat.net/cadastre" schemaLocation="./VO/VO - ESTAT/CADASTRE/dadesEspecifiques-DADES_CADASTRALS.xsd"/>
 			<xs:import namespace="http://www.aocat.net/cadastre" schemaLocation="./VO/VO - ESTAT/CADASTRE/dadesEspecifiques-DESCRIPTIVA_GRAFICA.xsd"/>			
 			<xs:import namespace="http://www.aoc.cat/inss" schemaLocation="./VO/VO - ESTAT/INSS/dadesEspecifiques-PRESTACIONS_HISTORIC.xsd"/>
-			
-			
+			<xs:import namespace="http://www.aoc.cat/registre-civil" schemaLocation="./VO/VO - ESTAT/REG_CIVIL/dadesEspecifiques.xsd"/>	
+			<xs:import namespace="http://www.aoc.cat/antecedents-penals" schemaLocation="./VO/VO - ESTAT/ANT_PENAL/dadesEspecifiques.xsd"/>				
 			
 			
 			
@@ -393,10 +395,10 @@
 						<xs:element ref="cad:peticioConsultaDades" minOccurs="0"/>
 						<xs:element ref="cad:peticioDescriptivaIGrafica" minOccurs="0"/>
 						<xs:element ref="inss:peticioConsultaPrestacionsHistoric" minOccurs="0"/>
-						
-						
-										
-										
+						<xs:element ref="reg_civ:peticioConsultaRegistreCivil" minOccurs="0"/>
+						<xs:element ref="ant_pen:peticioInexistenciaAntecedentsPenals" minOccurs="0"/>
+						<xs:element ref="ant_pen:peticioInexistenciaAntecedentsPenalsDelictesSexuals" minOccurs="0"/>
+																	
 
 					</xs:choice>
 				</xs:complexType>
