@@ -1,0 +1,628 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:pet="http://net.aocat/MUX2/PeticioRegistre" targetNamespace="http://net.aocat/MUX2/PeticioRegistre" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:element name="PeticioRegistre">
+		<xs:complexType>
+			<xs:choice>
+				<xs:element ref="pet:AltaAssentament"/>
+				<xs:element ref="pet:ConsultaAssentaments"/>
+				<xs:element ref="pet:ConsolidacioAssentament"/>
+			</xs:choice>
+			<xs:attribute name="IdAplicacio" use="required">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:maxLength value="10"/>
+						<xs:minLength value="3"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:attribute>
+			<xs:attribute name="IdTransaccio">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:maxLength value="70"/>
+						<xs:pattern value="([A-Z,a-z,0-9,\-,\.]*)"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:attribute>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="AltaAssentament">
+		<xs:complexType>
+			<xs:choice>
+				<xs:element name="Entrada" type="pet:EntradaType"/>
+				<xs:element name="Sortida" type="pet:SortidaType"/>
+			</xs:choice>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="ConsultaAssentaments">
+		<xs:complexType>
+			<xs:choice>
+				<xs:sequence>
+					<xs:element name="DataInici" type="xs:dateTime"/>
+					<xs:element name="DataFi" type="xs:dateTime"/>
+					<xs:element name="Tipus" minOccurs="0">
+						<xs:simpleType>
+							<xs:restriction base="xs:string">
+								<xs:enumeration value="Entrada"/>
+								<xs:enumeration value="Sortida"/>
+							</xs:restriction>
+						</xs:simpleType>
+					</xs:element>
+					<xs:element name="Registre" minOccurs="0">
+						<xs:simpleType>
+							<xs:restriction base="xs:string">
+								<xs:enumeration value="Principal"/>
+								<xs:enumeration value="Auxiliar"/>
+							</xs:restriction>
+						</xs:simpleType>
+					</xs:element>
+					<xs:element name="NomesTramits" type="xs:boolean" minOccurs="0"/>
+					<xs:element name="Assumpte" type="xs:string" minOccurs="0"/>
+				</xs:sequence>
+				<xs:element name="NumeroAssentament" type="xs:string"/>
+			</xs:choice>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="ConsolidacioAssentament">
+		<xs:complexType>
+			<xs:choice>
+				<xs:element name="Entrada">
+					<xs:complexType>
+						<xs:complexContent>
+							<xs:extension base="pet:EntradaType">
+								<xs:sequence>
+									<xs:element ref="pet:DadesAssentament"/>
+								</xs:sequence>
+							</xs:extension>
+						</xs:complexContent>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="Sortida">
+					<xs:complexType>
+						<xs:complexContent>
+							<xs:extension base="pet:SortidaType">
+								<xs:sequence>
+									<xs:element ref="pet:DadesAssentament"/>
+								</xs:sequence>
+							</xs:extension>
+						</xs:complexContent>
+					</xs:complexType>
+				</xs:element>
+			</xs:choice>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="DocumentsAnnexats">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="pet:Document" maxOccurs="255"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="DadesAssentament">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="NumeroAssentament" type="xs:string"/>
+				<xs:element name="DataAssentament" type="xs:dateTime"/>
+				<xs:element name="DataConsolidacio" type="xs:dateTime"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="Document">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="DataEmissio" type="xs:dateTime"/>
+				<xs:element ref="pet:Tipus" minOccurs="0"/>
+				<xs:element ref="pet:Tema" minOccurs="0"/>
+				<xs:element ref="pet:TipusSuport" minOccurs="0"/>
+				<xs:element ref="pet:Classificacio" minOccurs="0"/>
+				<xs:element name="Nom">
+					<xs:simpleType>
+						<xs:restriction base="xs:string">
+							<xs:minLength value="5"/>
+							<xs:maxLength value="255"/>
+						</xs:restriction>
+					</xs:simpleType>
+				</xs:element>
+				<xs:element ref="pet:Descripcio" minOccurs="0"/>
+				<xs:element ref="pet:URL" minOccurs="0"/>
+				<xs:element ref="pet:MimeType" minOccurs="0"/>
+				<xs:element ref="pet:Hash" minOccurs="0"/>
+				<xs:element ref="pet:HashAlgorithm" minOccurs="0"/>
+				<xs:element name="GUID" minOccurs="0">
+					<xs:simpleType>
+						<xs:restriction base="xs:string"/>
+					</xs:simpleType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="Tipus">
+		<xs:simpleType>
+			<xs:restriction base="xs:string">
+				<xs:minLength value="2"/>
+				<xs:maxLength value="10"/>
+			</xs:restriction>
+		</xs:simpleType>
+	</xs:element>
+	<xs:element name="Tema">
+		<xs:simpleType>
+			<xs:restriction base="xs:string">
+				<xs:minLength value="2"/>
+				<xs:maxLength value="20"/>
+			</xs:restriction>
+		</xs:simpleType>
+	</xs:element>
+	<xs:element name="TipusSuport">
+		<xs:simpleType>
+			<xs:restriction base="xs:string">
+				<xs:minLength value="2"/>
+				<xs:maxLength value="10"/>
+			</xs:restriction>
+		</xs:simpleType>
+	</xs:element>
+	<xs:element name="Classificacio">
+		<xs:simpleType>
+			<xs:restriction base="xs:string">
+				<xs:minLength value="2"/>
+				<xs:maxLength value="10"/>
+			</xs:restriction>
+		</xs:simpleType>
+	</xs:element>
+	<xs:element name="Descripcio">
+		<xs:simpleType>
+			<xs:restriction base="xs:string">
+				<xs:maxLength value="1024"/>
+			</xs:restriction>
+		</xs:simpleType>
+	</xs:element>
+	<xs:element name="URL">
+		<xs:simpleType>
+			<xs:restriction base="xs:string">
+				<xs:minLength value="5"/>
+				<xs:maxLength value="1024"/>
+			</xs:restriction>
+		</xs:simpleType>
+	</xs:element>
+	<xs:element name="MimeType">
+		<xs:simpleType>
+			<xs:restriction base="xs:string">
+				<xs:minLength value="5"/>
+				<xs:maxLength value="50"/>
+			</xs:restriction>
+		</xs:simpleType>
+	</xs:element>
+	<xs:element name="Hash">
+		<xs:simpleType>
+			<xs:restriction base="xs:base64Binary">
+				<xs:minLength value="20"/>
+				<xs:maxLength value="100"/>
+			</xs:restriction>
+		</xs:simpleType>
+	</xs:element>
+	<xs:element name="HashAlgorithm">
+		<xs:simpleType>
+			<xs:restriction base="xs:string">
+				<xs:enumeration value="MD2"/>
+				<xs:enumeration value="MD4"/>
+				<xs:enumeration value="MD5"/>
+				<xs:enumeration value="RIPEMD-160"/>
+				<xs:enumeration value="RIPEMD-320"/>
+				<xs:enumeration value="SHA1"/>
+				<xs:enumeration value="SHA256"/>
+				<xs:enumeration value="SHA384"/>
+				<xs:enumeration value="SHA512"/>
+			</xs:restriction>
+		</xs:simpleType>
+	</xs:element>
+	<xs:element name="Administracio">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="pet:INE10"/>
+				<xs:element ref="pet:OficinaRegistre" minOccurs="0"/>
+				<xs:element name="UnitatOrganica" type="xs:string" minOccurs="0"/>
+				<xs:element ref="pet:Poblacio" minOccurs="0"/>
+				<xs:element ref="pet:Representant" minOccurs="0"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="PersonaFisica">
+		<xs:complexType id="PersonaFisicaType">
+			<xs:sequence>
+				<xs:element name="ID">
+					<xs:complexType>
+						<xs:choice>
+							<xs:element ref="pet:NIF"/>
+							<xs:element ref="pet:NIE"/>
+							<xs:element ref="pet:Passaport"/>
+						</xs:choice>
+					</xs:complexType>
+				</xs:element>
+				<xs:element ref="pet:Nom"/>
+				<xs:element ref="pet:Cognom1"/>
+				<xs:element ref="pet:Cognom2" minOccurs="0"/>
+				<xs:choice>
+					<xs:element ref="pet:Poblacio"/>
+					<xs:element ref="pet:Domicili"/>
+				</xs:choice>
+				<xs:element ref="pet:Representant" minOccurs="0"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="Representant">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="ID">
+					<xs:complexType>
+						<xs:choice>
+							<xs:element ref="pet:NIF"/>
+							<xs:element ref="pet:NIE"/>
+							<xs:element ref="pet:Passaport"/>
+						</xs:choice>
+					</xs:complexType>
+				</xs:element>
+				<xs:element ref="pet:Nom"/>
+				<xs:element ref="pet:Cognom1"/>
+				<xs:element ref="pet:Cognom2" minOccurs="0"/>
+				<xs:choice>
+					<xs:element ref="pet:Poblacio"/>
+					<xs:element ref="pet:Domicili"/>
+				</xs:choice>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="PersonaJuridica">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:choice>
+					<xs:element ref="pet:CIF"/>
+					<xs:element ref="pet:VATNumber"/>
+				</xs:choice>
+				<xs:element ref="pet:RaoSocial"/>
+				<xs:choice>
+					<xs:element ref="pet:Poblacio"/>
+					<xs:element ref="pet:Domicili"/>
+				</xs:choice>
+				<xs:element ref="pet:Representant" minOccurs="0"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="Poblacio">
+		<xs:complexType>
+			<xs:choice>
+				<xs:element ref="pet:CodiPostal"/>
+				<xs:element ref="pet:INE10"/>
+			</xs:choice>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="Assumpte">
+		<xs:simpleType>
+			<xs:restriction base="xs:string">
+				<xs:maxLength value="1000"/>
+			</xs:restriction>
+		</xs:simpleType>
+	</xs:element>
+	<xs:element name="INE10">
+		<xs:simpleType>
+			<xs:restriction base="xs:string">
+				<xs:length value="10"/>
+				<xs:pattern value="\d{10}"/>
+			</xs:restriction>
+		</xs:simpleType>
+	</xs:element>
+	<xs:element name="NIF">
+		<xs:simpleType>
+			<xs:restriction base="xs:string">
+				<xs:length value="9"/>
+				<xs:pattern value="\d{8}[A-Z]"/>
+			</xs:restriction>
+		</xs:simpleType>
+	</xs:element>
+	<xs:element name="NIE">
+		<xs:simpleType>
+			<xs:restriction base="xs:string">
+				<xs:pattern value="[X-Z]\d{7,8}[A-Z]"/>
+			</xs:restriction>
+		</xs:simpleType>
+	</xs:element>
+	<xs:element name="CIF">
+		<xs:simpleType>
+			<xs:restriction base="xs:string">
+				<xs:pattern value="[A-Z](\d{7,8})[A-Z,0-9]"/>
+			</xs:restriction>
+		</xs:simpleType>
+	</xs:element>
+	<xs:element name="Passaport">
+		<xs:simpleType>
+			<xs:restriction base="xs:string">
+				<xs:maxLength value="15"/>
+			</xs:restriction>
+		</xs:simpleType>
+	</xs:element>
+	<xs:element name="VATNumber">
+		<xs:simpleType>
+			<xs:restriction base="xs:string">
+				<xs:maxLength value="50"/>
+			</xs:restriction>
+		</xs:simpleType>
+	</xs:element>
+	<xs:element name="Observacions">
+		<xs:simpleType>
+			<xs:restriction base="xs:string">
+				<xs:maxLength value="4000"/>
+			</xs:restriction>
+		</xs:simpleType>
+	</xs:element>
+	<xs:element name="URLAplicacio">
+		<xs:simpleType>
+			<xs:restriction base="xs:string">
+				<xs:minLength value="5"/>
+				<xs:maxLength value="1024"/>
+			</xs:restriction>
+		</xs:simpleType>
+	</xs:element>
+	<xs:element name="DescriptorTramit">
+		<xs:simpleType>
+			<xs:restriction base="xs:string">
+				<xs:maxLength value="4000"/>
+			</xs:restriction>
+		</xs:simpleType>
+	</xs:element>
+	<xs:element name="OficinaRegistre">
+		<xs:simpleType>
+			<xs:restriction base="xs:string">
+				<xs:maxLength value="15"/>
+				<xs:minLength value="1"/>
+			</xs:restriction>
+		</xs:simpleType>
+	</xs:element>
+	<xs:element name="Nom">
+		<xs:simpleType>
+			<xs:restriction base="xs:string">
+				<xs:minLength value="1"/>
+				<xs:maxLength value="50"/>
+			</xs:restriction>
+		</xs:simpleType>
+	</xs:element>
+	<xs:element name="Cognom1">
+		<xs:simpleType>
+			<xs:restriction base="xs:string">
+				<xs:minLength value="1"/>
+				<xs:maxLength value="50"/>
+			</xs:restriction>
+		</xs:simpleType>
+	</xs:element>
+	<xs:element name="Cognom2">
+		<xs:simpleType>
+			<xs:restriction base="xs:string">
+				<xs:minLength value="1"/>
+				<xs:maxLength value="50"/>
+			</xs:restriction>
+		</xs:simpleType>
+	</xs:element>
+	<xs:element name="RaoSocial">
+		<xs:simpleType>
+			<xs:restriction base="xs:string">
+				<xs:minLength value="1"/>
+				<xs:maxLength value="255"/>
+			</xs:restriction>
+		</xs:simpleType>
+	</xs:element>
+	<xs:element name="CodiPostal">
+		<xs:simpleType>
+			<xs:restriction base="xs:string">
+				<xs:length value="5"/>
+				<xs:pattern value="\d{5}"/>
+			</xs:restriction>
+		</xs:simpleType>
+	</xs:element>
+	<xs:element name="Entrada" type="pet:EntradaType"/>
+	<xs:element name="Sortida" type="pet:SortidaType"/>
+	<xs:complexType name="EntradaType">
+		<xs:sequence>
+			<xs:element ref="pet:Assumpte"/>
+			<xs:element name="DataPresentacio" type="xs:dateTime"/>
+			<xs:element ref="pet:Observacions" minOccurs="0"/>
+			<xs:element ref="pet:URLAplicacio" minOccurs="0"/>
+			<xs:element ref="pet:DescriptorTramit" minOccurs="0"/>
+			<xs:element name="ViaPresentacio" minOccurs="0">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:minLength value="3"/>
+						<xs:maxLength value="5"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element ref="pet:DocumentsAnnexats" minOccurs="0"/>
+			<xs:element name="Procedencia">
+				<xs:complexType>
+					<xs:choice>
+						<xs:element ref="pet:Administracio"/>
+						<xs:element ref="pet:PersonaFisica"/>
+						<xs:element ref="pet:PersonaJuridica"/>
+					</xs:choice>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="Destinacio">
+				<xs:complexType>
+					<xs:all>
+						<xs:element ref="pet:Administracio"/>
+					</xs:all>
+				</xs:complexType>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="SortidaType">
+		<xs:sequence>
+			<xs:element ref="pet:Assumpte"/>
+			<xs:element name="DataPresentacio" type="xs:dateTime"/>
+			<xs:element ref="pet:Observacions" minOccurs="0"/>
+			<xs:element ref="pet:URLAplicacio" minOccurs="0"/>
+			<xs:element ref="pet:DescriptorTramit" minOccurs="0"/>
+			<xs:element name="ViaTramesa" minOccurs="0">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:minLength value="3"/>
+						<xs:maxLength value="5"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element ref="pet:DocumentsAnnexats" minOccurs="0"/>
+			<xs:element name="Procedencia">
+				<xs:complexType>
+					<xs:all>
+						<xs:element ref="pet:Administracio"/>
+					</xs:all>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="Destinacio">
+				<xs:complexType>
+					<xs:choice>
+						<xs:element ref="pet:Administracio"/>
+						<xs:element ref="pet:PersonaFisica"/>
+						<xs:element ref="pet:PersonaJuridica"/>
+					</xs:choice>
+				</xs:complexType>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:element name="Domicili" type="pet:DadesAdrecaType"/>
+	<xs:complexType name="DadesAdrecaType">
+		<xs:sequence>
+			<xs:element name="TipusVia">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:enumeration value="ALT"/>
+						<xs:enumeration value="AV"/>
+						<xs:enumeration value="ATP"/>
+						<xs:enumeration value="BAR"/>
+						<xs:enumeration value="BDA"/>
+						<xs:enumeration value="BNC"/>
+						<xs:enumeration value="C"/>
+						<xs:enumeration value="CA"/>
+						<xs:enumeration value="CV"/>
+						<xs:enumeration value="CAMI"/>
+						<xs:enumeration value="CANL"/>
+						<xs:enumeration value="CINC"/>
+						<xs:enumeration value="CRO"/>
+						<xs:enumeration value="CSTA"/>
+						<xs:enumeration value="CTRA"/>
+						<xs:enumeration value="DREC"/>
+						<xs:enumeration value="ESC"/>
+						<xs:enumeration value="FNC"/>
+						<xs:enumeration value="GV"/>
+						<xs:enumeration value="GAL"/>
+						<xs:enumeration value="GRU"/>
+						<xs:enumeration value="ILLA"/>
+						<xs:enumeration value="JARD"/>
+						<xs:enumeration value="MAS"/>
+						<xs:enumeration value="MNCP"/>
+						<xs:enumeration value="MDOR"/>
+						<xs:enumeration value="MOLL"/>
+						<xs:enumeration value="PARC"/>
+						<xs:enumeration value="PAS"/>
+						<xs:enumeration value="PDA"/>
+						<xs:enumeration value="PDIS"/>
+						<xs:enumeration value="PG"/>
+						<xs:enumeration value="PL"/>
+						<xs:enumeration value="PLA"/>
+						<xs:enumeration value="PLTA"/>
+						<xs:enumeration value="POLG"/>
+						<xs:enumeration value="PTGE"/>
+						<xs:enumeration value="PTJA"/>
+						<xs:enumeration value="RBLA"/>
+						<xs:enumeration value="RDA"/>
+						<xs:enumeration value="RIER"/>
+						<xs:enumeration value="SEC"/>
+						<xs:enumeration value="STOR"/>
+						<xs:enumeration value="T"/>
+						<xs:enumeration value="TRAV"/>
+						<xs:enumeration value="TRVS"/>
+						<xs:enumeration value="URB"/>
+						<xs:enumeration value="VIA"/>
+						<xs:enumeration value="VIAD"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="NomVia">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:minLength value="3"/>
+						<xs:maxLength value="500"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="NumeroSuperior" minOccurs="0">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:minLength value="1"/>
+						<xs:maxLength value="10"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="NumeroInferior">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:minLength value="1"/>
+						<xs:maxLength value="10"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="Bloc" minOccurs="0">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:minLength value="1"/>
+						<xs:maxLength value="10"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="Escala" minOccurs="0">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:minLength value="1"/>
+						<xs:maxLength value="10"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="Pis" minOccurs="0">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:minLength value="1"/>
+						<xs:maxLength value="10"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="Porta" minOccurs="0">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:minLength value="1"/>
+						<xs:maxLength value="10"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="NomPoblacio">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:minLength value="3"/>
+						<xs:maxLength value="500"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element ref="pet:CodiPostal"/>
+			<xs:element name="NomProvincia">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:minLength value="3"/>
+						<xs:maxLength value="50"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="Pais" minOccurs="0">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:minLength value="3"/>
+						<xs:maxLength value="50"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>
