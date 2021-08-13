@@ -53,6 +53,7 @@
 		xmlns:ant_pen="http://www.aoc.cat/antecedents-penals"
 	    xmlns:estrangeria="http://www.aoc.cat/estrangeria/residencia-legal"
 		xmlns:mux="http://net.aocat/MUX2/PeticioRegistre"
+		xmlns:mux_con="http://net.aocat/MUX2/PeticioRegistre"
 		
 		targetNamespace="http://gencat.net/scsp/esquemes/peticion"  elementFormDefault="qualified" attributeFormDefault="unqualified">
 			<xs:import namespace="http://www.aocat.net/inem" schemaLocation="./VO/VO - ESTAT/INEM/dadesEspecifiques.xsd"/>
@@ -405,9 +406,9 @@
 						<xs:element ref="ant_pen:peticioInexistenciaAntecedentsPenalsDelictesSexuals" minOccurs="0"/>
 						<xs:element ref="estrangeria:peticioConsultaDadesResidenciaLegal" minOccurs="0"/>
 						<xs:element ref="mux:PeticioRegistre" minOccurs="0"/>
-						<xs:element ref="mux:ConsultaAssentaments" minOccurs="0"/>
-						<xs:element ref="mux:AltaAssentament" minOccurs="0"/>
-						<xs:element ref="mux:ConsolidacioAssentament" minOccurs="0"/>
+						<xs:element ref="mux_con:ConsultaAssentaments" minOccurs="0"/>
+						<xs:element ref="mux_con:AltaAssentament" minOccurs="0"/>
+						<xs:element ref="mux_con:ConsolidacioAssentament" minOccurs="0"/>
 																	
 																	
 
