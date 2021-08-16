@@ -62,9 +62,7 @@ En el client, tenim un properties que haruem d'omplir amb les dades de l'entiat 
 La configuració per SSL es recomana per MTOM, no obstant, tambè es factible per serveis no MTOM
 ~~~~
 
-En l'apartat de "Preferences anirem a "SSL Settings" i configurem el certificat. En aquest cas és el SEGELL_AOC.jks 
-
-El certificat de proves (Serveis_Administracio_Electronica.cer) el podem trobar en la ruta de xarxa : ***\\\192.168.166.135\tecnologia\SUPORT_TECNIC\CERTIFICATS\SEGELL\Segell Administracio Electronica_Gener_2019***
+En l'apartat de "Preferences anirem a "SSL Settings" i configurem el certificat. 
 
 ![wsdl](capturas/SSL1.png)
 
