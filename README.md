@@ -70,7 +70,7 @@ En l'apartat de "Preferences anirem a "SSL Settings" i configurem el certificat.
 
 En el projecte que hem generat, donem doble click en la carpeta i anem a "WS-Security Configurations"
 
-AFegim el certificat, en l'apartat de "keystore"
+Afegim el certificat (haureu de generar un .JKS amb el certificat que utilitzareu per signar les peticions), en l'apartat de "keystore"
 
 ![wsdl](capturas/wss0.png)
 
