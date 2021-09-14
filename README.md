@@ -3,7 +3,7 @@
 
 # Integració-AOC-SOAPUI
 
-Oferim un Projecte SOAPUI amb XMLs de peticions d'exemple per a que els integradors puguin fer les validacions oportunes a nivell de missatgeria PCI + Específica de cada servei.
+Oferim un Projecte SOAPUI amb XMLs de peticions d'exemple perquè els integradors puguin fer les validacions oportunes de missatgeria PCI + Específica de cada servei.
 
 ---
 ```diff
