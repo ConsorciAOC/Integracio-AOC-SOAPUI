@@ -1,0 +1,605 @@
+<?xml version="1.0"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="http://www.aoc.cat/over" targetNamespace="http://www.aoc.cat/over" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<!-- ======================================================= -->
+	<!-- FORMULARI                                               -->
+	<!-- ======================================================= -->
+	<xs:element name="peticioFormulariTramit">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="codiCataleg" type="xs:string"/>
+				<xs:element name="codiFuncionalServei" type="xs:string"/>
+				<xs:element name="codiFuncionalTramit" type="xs:string"/>
+				<xs:element name="codiInstanciaServei" type="xs:long" minOccurs="0"/>
+				<xs:element name="codiInstanciaTramitPredecessor" type="xs:long" minOccurs="0"/>
+				<xs:element name="codiEns" type="xs:string"/>
+				<xs:element name="codiEnsOrigen" type="xs:string" minOccurs="0"/>
+				<xs:element name="codiEnsDesti" type="xs:string" minOccurs="0"/>
+				<xs:element name="dadesAddicionals" type="xs:anyType" minOccurs="0"/>
+				<xs:element name="groupID" type="xs:string" minOccurs="0"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="respostaFormulariTramit">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="peticioFormulariTramit" minOccurs="0"/>
+				<xs:element name="resposta">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="codiInstanciaTramit" type="xs:long" minOccurs="0"/>
+							<xs:element name="codiInstanciaServei" type="xs:long" minOccurs="0"/>
+							<xs:choice>
+								<xs:element name="formulari" type="xs:base64Binary"/>
+								<xs:element name="ruta" type="xs:string"/>
+							</xs:choice>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element ref="resultat"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<!-- ======================================================= -->
+	<!-- CONTEXT           										 -->
+	<!-- ======================================================= -->
+	<xs:element name="peticioContextTramit">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="codiCataleg" type="xs:string"/>
+				<xs:element name="codiFuncionalServei" type="xs:string"/>
+				<xs:element name="codiFuncionalTramit" type="xs:string"/>
+				<xs:element name="codiInstanciaServei" type="xs:long" minOccurs="0"/>
+				<xs:element name="codiInstanciaTramitPredecessor" type="xs:long" minOccurs="0"/>
+				<xs:element name="codiEns" type="xs:string"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="respostaContextTramit">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="peticioContextTramit" minOccurs="0"/>
+				<xs:element name="resposta" minOccurs="0">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="codiInstanciaTramit" type="xs:long"/>
+							<xs:element name="codiInstanciaServei" type="xs:long"/>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element ref="resultat"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<!-- ======================================================= -->
+	<!-- DESCARREGA DOCUMENTACIO                                 -->
+	<!-- ======================================================= -->
+	<xs:element name="peticioDocumentacioTramit">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:choice>
+					<xs:element name="codiInstanciaTramit" type="xs:long"/>
+					<xs:element name="numeroAssentament" type="xs:string"/>
+				</xs:choice>
+				<xs:element name="dadesTramit" type="xs:int" minOccurs="0"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="respostaDocumentacioTramit">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="peticioDocumentacioTramit" minOccurs="0"/>
+				<xs:element name="resposta" minOccurs="0">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="document" minOccurs="0" maxOccurs="unbounded">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element name="tipus">
+											<xs:simpleType>
+												<xs:restriction base="xs:string">
+													<xs:enumeration value="ADJUNT"/>
+													<xs:enumeration value="ALTRES"/>
+													<xs:enumeration value="MIS_ORIGINAL"/>
+													<xs:enumeration value="MIS_ACTUALITZAT"/>
+													<xs:enumeration value="MUX_EVIDENCIA_ENTRADA"/>
+													<xs:enumeration value="MUX_EVIDENCIA_SORTIDA"/>
+													<xs:enumeration value="PDF_DESCARREGA"/>
+													<xs:enumeration value="PDF_ORIGINAL"/>
+													<xs:enumeration value="TIQUET"/>
+												</xs:restriction>
+											</xs:simpleType>
+										</xs:element>
+										<xs:element name="nom" type="xs:string" minOccurs="0"/>
+										<xs:choice>
+											<xs:element name="contingut" type="xs:base64Binary"/>
+											<xs:element name="guid" type="xs:string"/>
+										</xs:choice>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+							<xs:element name="dadesTramit" minOccurs="0">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element name="codiInstanciaServei" type="xs:long"/>
+										<xs:element name="codiInstanciaTramit" type="xs:long"/>
+										<xs:element name="codiInstanciaTramitPredecesor" type="xs:long" minOccurs="0"/>
+										<xs:element name="dataTramit" type="xs:dateTime" minOccurs="0"/>
+										<xs:element name="codiEnsOrigen" type="xs:string"/>
+										<xs:element name="codiEnsDesti" type="xs:string"/>
+										<xs:element name="nomEnsOrigen" type="xs:string" minOccurs="0"/>
+										<xs:element name="nomEnsDesti" type="xs:string" minOccurs="0"/>
+										<xs:element name="registreSortida" type="tDadesRegistre" minOccurs="0"/>
+										<xs:element name="registreEntrada" type="tDadesRegistre" minOccurs="0"/>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element ref="resultat"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<!-- ======================================================= -->
+	<!-- EXECUCIO                                                -->
+	<!-- ======================================================= -->
+	<xs:element name="peticioExecucioTramit">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="codiCataleg" type="xs:string"/>
+				<xs:element name="codiFuncionalServei" type="xs:string"/>
+				<xs:element name="codiFuncionalTramit" type="xs:string"/>
+				<xs:element name="codiInstanciaServei" type="xs:long" minOccurs="0"/>
+				<xs:element name="codiInstanciaTramit" type="xs:long" minOccurs="0"/>
+				<xs:element ref="formulari"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="respostaExecucioTramit">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="peticioExecucioTramit" minOccurs="0"/>
+				<xs:element name="resposta" minOccurs="0">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="codiInstanciaServei" type="xs:long"/>
+							<xs:element name="codiInstanciaTramit" type="xs:long"/>
+							<xs:element name="tiquet" type="xs:base64Binary" minOccurs="0"/>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element ref="resultat"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<!-- ======================================================= -->
+	<!-- ACTUALITZAR INSTANCIA                                   -->
+	<!-- ======================================================= -->
+	<xs:element name="peticioActualitzacioTramit">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="codiInstanciaServei" type="xs:long"/>
+				<xs:element name="dada" maxOccurs="unbounded">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="tipus">
+								<xs:simpleType>
+									<xs:restriction base="xs:string">
+										<xs:enumeration value="NUM_EXPEDIENT"/>
+										<xs:enumeration value="ESTAT"/>
+										<xs:enumeration value="ALTRES"/>
+									</xs:restriction>
+								</xs:simpleType>
+							</xs:element>
+							<xs:element name="dada" type="xs:string"/>
+							<xs:element name="valor" type="xs:string"/>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="respostaActualitzacioTramit">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="peticioActualitzacioTramit"/>
+				<xs:element ref="resultat"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<!-- ======================================================= -->
+	<!-- CONSULTA TRAMITS           										 -->
+	<!-- ======================================================= -->
+	<xs:element name="peticioConsultaTramits">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="codiCataleg" type="xs:string"/>
+				<xs:element name="codiFuncionalServei" type="xs:string"/>
+				<xs:element name="codiFuncionalTramit" type="xs:string" minOccurs="0"/>
+				<xs:element name="dataInici" type="xs:dateTime"/>
+				<xs:element name="dataFi" type="xs:dateTime"/>
+				<xs:element name="tipus" minOccurs="0">
+					<xs:simpleType>
+						<xs:restriction base="xs:string">
+							<xs:enumeration value="E"/>
+							<xs:enumeration value="S"/>
+						</xs:restriction>
+					</xs:simpleType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="respostaConsultaTramits">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="peticioConsultaTramits" minOccurs="0"/>
+				<xs:element name="resposta" minOccurs="0">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="instanciaTramit" minOccurs="0" maxOccurs="unbounded">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element name="codiInstanciaServei" type="xs:long"/>
+										<xs:element name="codiInstanciaTramit" type="xs:long"/>
+										<xs:element name="codiInstanciaTramitPredecessor" type="xs:long" minOccurs="0"/>
+										<xs:element name="data" type="xs:dateTime"/>
+										<xs:element name="codiEns" type="xs:string"/>
+										<xs:element name="nomEns" type="xs:string"/>
+										<xs:choice>
+											<xs:element name="registreSortida" type="tDadesRegistre"/>
+											<xs:element name="registreEntrada" type="tDadesRegistre"/>
+										</xs:choice>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element ref="resultat"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:complexType name="tDadesRegistre">
+		<xs:sequence>
+			<xs:element name="numero" type="xs:string"/>
+			<xs:element name="data" type="xs:string"/>
+		</xs:sequence>
+	</xs:complexType>
+	<!-- ======================================================= -->
+	<!-- LLISTA EXPEDIENTS  									 -->
+	<!-- ======================================================= -->
+	<xs:element name="peticioLlistaExpedients">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:choice>
+					<xs:element name="cerca">
+						<xs:complexType>
+							<xs:sequence>
+								<xs:element name="codiEnsPromotor" type="xs:string" minOccurs="0"/>
+								<xs:element name="codiFuncionalServei" type="xs:string" minOccurs="0"/>
+								<xs:element name="codiFuncionalTramit" type="xs:string" minOccurs="0"/>
+								<xs:element name="codiFuncionalTramitTeResposta" type="xs:boolean" minOccurs="0"/>
+								<xs:element name="codiEnsInteressat" type="xs:string" minOccurs="0"/>
+								<xs:element name="dataInici" type="xs:dateTime"/>
+								<xs:element name="dataFi" type="xs:dateTime"/>
+							</xs:sequence>
+						</xs:complexType>
+					</xs:element>
+					<xs:element name="codiInstanciaTramit" type="xs:long"/>
+					<xs:element name="numExpedient" type="xs:string"/>
+					<xs:element name="numRegistre" type="xs:string"/>
+				</xs:choice>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="respostaLlistaExpedients">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="peticioLlistaExpedients" minOccurs="0"/>
+				<xs:element name="resposta" minOccurs="0">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="instanciaServei" minOccurs="0" maxOccurs="unbounded">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element name="codiInstanciaServei" type="xs:long"/>
+										<xs:element name="ensPromotor" type="tEns"/>
+										<xs:element name="serveiFuncional" type="tCodiFuncional"/>			   
+										<xs:element name="ensInteressat" type="tEns"/>
+										<xs:element name="nTramits" type="xs:int"/>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element ref="resultat"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:complexType name="tCodiFuncional">
+		<xs:simpleContent>
+			<xs:extension base="xs:string">
+				<xs:attribute name="codi" type="xs:string" use="required" />
+			</xs:extension>
+		</xs:simpleContent>
+	</xs:complexType>
+	<!-- ======================================================= -->
+	<!-- CONSULTA EXPEDIENT  									 -->
+	<!-- ======================================================= -->
+	<xs:element name="peticioConsultaExpedient">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="codiInstanciaServei" type="xs:long"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="respostaConsultaExpedient">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="peticioConsultaExpedient" minOccurs="0"/>
+				<xs:element name="resposta" minOccurs="0">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="ensPromotor" type="tEns"/>
+							<xs:element name="serveiFuncional" type="tCodiFuncional"/>			   
+							<xs:element name="informacioRelacionada" minOccurs="0">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element name="info" minOccurs="0" maxOccurs="unbounded">
+											<xs:complexType>
+												<xs:simpleContent>
+													<xs:extension base="xs:string">
+														<xs:attribute name="tipus" type="xs:string" use="required" />
+														<xs:attribute name="data" type="xs:dateTime" use="required" />
+													</xs:extension>
+												</xs:simpleContent>
+											</xs:complexType>
+										</xs:element>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+							<xs:element name="tramits" minOccurs="0">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element name="instanciaTramit" minOccurs="0" maxOccurs="unbounded">
+											<xs:complexType>
+												<xs:sequence>
+													<xs:element name="codiInstanciaTramit" type="xs:long"/>
+													<xs:element name="codiInstanciaTramitPredecessor" type="xs:long" minOccurs="0"/>
+													<xs:element name="tramitsResposta" minOccurs="0">
+														<xs:complexType>
+															<xs:sequence>
+																<xs:element name="codiInstanciaTramit" type="xs:long" minOccurs="0" maxOccurs="unbounded" />
+															</xs:sequence>
+														</xs:complexType>
+													</xs:element>
+													<xs:element name="tramitFuncional" type="tCodiFuncional"/>
+													<xs:element name="observacions" type="xs:string" minOccurs="0"/>
+													<xs:element name="data" type="xs:dateTime"/>
+													<xs:element name="ensOrigen" type="tEns"/>
+													<xs:element name="ensDesti" type="tEns"/>
+													<xs:element name="registreSortida" type="tDadesRegistre"/>
+													<xs:element name="registreEntrada" type="tDadesRegistre"/>
+													<xs:element name="resum" type="xs:base64Binary" minOccurs="0"/>
+												</xs:sequence>
+											</xs:complexType>
+										</xs:element>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element ref="resultat"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:complexType name="tEns">
+		<xs:simpleContent>
+			<xs:extension base="xs:string">
+				<xs:attribute name="ine10" type="xs:string" use="required" />
+			</xs:extension>
+		</xs:simpleContent>
+	</xs:complexType>
+	<!-- ======================================================= -->
+	<!-- LLISTA SERVEIS  										 -->
+	<!-- ======================================================= -->
+	<xs:element name="peticioLlistaServeis">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="codiEnsPromotor" type="xs:string"/>
+				<xs:element name="mostrarInactius" type="xs:boolean" minOccurs="0"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="respostaLlistaServeis">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="peticioLlistaServeis" minOccurs="0"/>
+				<xs:element name="resposta" minOccurs="0">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="servei" minOccurs="0" maxOccurs="unbounded">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element name="servei" type="tCodiFuncional"/>
+										<xs:element name="dataInici" type="xs:dateTime" minOccurs="0"/>
+										<xs:element name="dataFi" type="xs:dateTime" minOccurs="0"/>
+										<xs:element name="actiu" type="xs:boolean"/>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element ref="resultat"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<!-- ======================================================= -->
+	<!-- LLISTA TRAMITS		  									 -->
+	<!-- ======================================================= -->
+	<xs:element name="peticioLlistaTramits">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="codiEnsPromotor" type="xs:string"/>
+				<xs:element name="codiFuncionalServei" type="xs:string"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="respostaLlistaTramits">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="peticioLlistaTramits" minOccurs="0"/>
+				<xs:element name="resposta" minOccurs="0">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="tramit" minOccurs="0" maxOccurs="unbounded">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element name="tramit" type="tCodiFuncional"/>
+										<xs:element name="inicial" type="xs:boolean" minOccurs="0"/>
+										<xs:element name="tramitsResposta" minOccurs="0">
+											<xs:complexType>
+												<xs:sequence>
+													<xs:element name="tramit" type="tCodiFuncional" minOccurs="0" maxOccurs="unbounded" />
+												</xs:sequence>
+											</xs:complexType>
+										</xs:element>
+										<xs:element name="dataInici" type="xs:dateTime" minOccurs="0"/>
+										<xs:element name="dataFi" type="xs:dateTime" minOccurs="0"/>
+										<xs:element name="actiu" type="xs:boolean"/>
+										<xs:element name="integrable" type="xs:boolean" minOccurs="0"/>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element ref="resultat"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<!-- ======================================================= -->
+	<!-- OVER TIQUET                                             -->
+	<!-- ======================================================= -->
+	<xs:element name="peticioTiquetTramit">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="codiInstanciaTramit" type="xs:long"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="respostaTiquetTramit">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="peticioTiquetTramit" minOccurs="0"/>
+				<xs:element name="resposta" minOccurs="0">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="tiquet" type="xs:base64Binary"/>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element ref="resultat"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<!-- ======================================================= -->
+	<!-- OVER_INTEGRACIO										 -->
+	<!-- ======================================================= -->
+	<xs:element name="peticioIntegracio">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="peticioFormulariTramit"/>
+				<xs:element ref="dadesContingut"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="dadesContingut">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="versio">
+					<xs:simpleType>
+						<xs:restriction base="xs:string">
+							<xs:pattern value="[1-9]?[0-9][.][1-9]?[0-9]"/>
+						</xs:restriction>
+					</xs:simpleType>
+				</xs:element>
+				<xs:element name="formulari" type="xs:string"/>
+				<xs:element name="aliesNomTramit" type="xs:string" minOccurs="0"/>
+				<xs:element name="registreOrigen" type="TypeResultatRegistre" minOccurs="0"/>
+				<xs:element name="registreDesti" type="TypeResultatRegistre" minOccurs="0"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:complexType name="TypeResultatRegistre">
+		<xs:sequence>
+			<xs:element name="dataRegistre">
+				<xs:simpleType>
+					<xs:restriction base="xs:dateTime"/>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="assentamentRegistre">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:maxLength value="100"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="evidenciaRegistre" minOccurs="0">
+				<xs:simpleType>
+					<xs:restriction base="xs:base64Binary">
+						<xs:maxLength value="1000"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+		</xs:sequence>
+		<xs:attribute name="tipusRegistre" use="required">
+			<xs:simpleType>
+				<xs:restriction base="xs:string">
+					<xs:maxLength value="20"/>
+				</xs:restriction>
+			</xs:simpleType>
+		</xs:attribute>
+	</xs:complexType>
+	<xs:element name="respostaIntegracio">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="peticioIntegracio" minOccurs="0"/>
+				<xs:element name="resposta" minOccurs="0">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="codiInstanciaServei" type="xs:long"/>
+							<xs:element name="codiInstanciaTramit" type="xs:long"/>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element ref="resultat"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<!-- ======================================================= -->
+	<!-- COMU                                                    -->
+	<!-- ======================================================= -->
+	<xs:element name="resultat">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="codiResultat" type="xs:int"/>
+				<xs:element name="descripcio" type="xs:string"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="formulari">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:choice>
+					<xs:element name="contingut" type="xs:base64Binary"/>
+					<xs:element name="ruta" type="xs:string"/>
+					<xs:element name="id" type="xs:string"/>
+				</xs:choice>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

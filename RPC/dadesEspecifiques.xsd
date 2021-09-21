@@ -1,0 +1,1531 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema elementFormDefault="qualified" targetNamespace="http://cat.aoc/rpc/peticion" version="1.0" xmlns:ns1="http://schemas.xmlsoap.org/soap/http" xmlns:pet="http://cat.aoc/rpc/peticion" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tns="http://cat.aoc/rpc/peticion" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	<xs:element name="comunicacio" type="tns:comunicacio"/>
+	<xs:complexType name="comunicacio">
+		<xs:sequence>
+			<xs:element name="atributs" type="tns:atributs"/>
+			<xs:element minOccurs="0" name="contractes" nillable="true" type="tns:contractes"/>
+			<xs:element minOccurs="0" name="lots" nillable="true" type="tns:lots"/>
+			<xs:element minOccurs="0" name="prorrogues" nillable="true" type="tns:prorrogues"/>
+			<xs:element minOccurs="0" name="liquidacions" nillable="true" type="tns:liquidacions"/>
+			<xs:element minOccurs="0" name="modificacionsLot" nillable="true" type="tns:modificacionsLot"/>
+			<xs:element minOccurs="0" name="modificacionsProrroga" nillable="true" type="tns:modificacionsProrroga"/>
+			<xs:element minOccurs="0" name="cessionsLot" nillable="true" type="tns:cessionsLot"/>
+			<xs:element minOccurs="0" name="subrogacionsLot" nillable="true" type="tns:subrogacionsLot"/>
+			<xs:element minOccurs="0" name="subcontractacionsLot" nillable="true" type="tns:subcontractacionsLot"/>
+			<xs:element minOccurs="0" name="cessionsProrroga" nillable="true" type="tns:cessionsProrroga"/>
+			<xs:element minOccurs="0" name="subrogacionsProrroga" nillable="true" type="tns:subrogacionsProrroga"/>
+			<xs:element minOccurs="0" name="subcontractacionsProrroga" nillable="true" type="tns:subcontractacionsProrroga"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="atributs">
+		<xs:sequence>
+			<xs:element name="idPeticio">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:minLength value="1"/>
+						<xs:maxLength value="100"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="data" type="xs:dateTime"/>
+			<xs:element name="dadesAutenticacio" type="tns:dadesAutenticacio"/>
+			<xs:element name="peticionari" type="tns:peticionari"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="dadesAutenticacio">
+		<xs:sequence>
+			<xs:element name="usuari">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:minLength value="1"/>
+						<xs:maxLength value="9"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="contrasenya" type="xs:string"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="peticionari">
+		<xs:sequence>
+			<xs:element name="nomPeticionari">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:minLength value="1"/>
+						<xs:maxLength value="80"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="identificadorPeticionari">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:minLength value="1"/>
+						<xs:maxLength value="9"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="sistemaPeticionari">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:minLength value="1"/>
+						<xs:maxLength value="10"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="contractes">
+		<xs:sequence>
+			<xs:element maxOccurs="unbounded" name="contracte" type="tns:contracte"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="contracte">
+		<xs:sequence>
+			<xs:element name="idContracte" type="tns:idContracte"/>
+			<xs:element name="dadesContracte" type="tns:dadesContracte"/>
+			<xs:element minOccurs="0" name="lots" nillable="true" type="tns:lots"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="idContracte">
+		<xs:sequence>
+			<xs:element name="organisme">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:minLength value="1"/>
+						<xs:maxLength value="8"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element minOccurs="0" name="numeroRegistre">
+				<xs:simpleType>
+					<xs:restriction base="xs:int">
+						<xs:totalDigits value="7"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="anyExecucio">
+				<xs:simpleType>
+					<xs:restriction base="xs:int">
+						<xs:totalDigits fixed="true" value="4"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="dadesContracte">
+		<xs:sequence>
+			<xs:element minOccurs="0" name="unitatContractacio">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:minLength value="1"/>
+						<xs:maxLength value="15"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="grupContracte">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:length value="2"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="tipusContracte">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:length value="2"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="numeroLots">
+				<xs:simpleType>
+					<xs:restriction base="xs:int">
+						<xs:totalDigits value="4"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="plurianual" type="xs:boolean"/>
+			<xs:element minOccurs="0" name="modalitat">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:length value="2"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="complementariObres" type="xs:boolean"/>
+			<xs:element minOccurs="0" name="dataBOE" type="xs:date"/>
+			<xs:element minOccurs="0" name="dataDOGC" type="xs:date"/>
+			<xs:element minOccurs="0" name="dataDOUE" type="xs:date"/>
+			<xs:element minOccurs="0" name="dataBOP" type="xs:date"/>
+			<xs:element minOccurs="0" name="dataPremsa" type="xs:date"/>
+			<xs:element minOccurs="0" name="dataAltres" type="xs:date"/>
+			<xs:element minOccurs="0" name="dataAnunci" type="xs:date"/>
+			<xs:element minOccurs="0" name="criteriValoracio">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:length value="2"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="descripcio">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:minLength value="1"/>
+						<xs:maxLength value="2000"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element minOccurs="0" name="tipusSubministraments">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:length value="2"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="procedimentAdjudicacio">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:minLength value="1"/>
+						<xs:maxLength value="2"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element minOccurs="0" name="expedient">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:minLength value="1"/>
+						<xs:maxLength value="43"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="classeExpedient">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:minLength value="1"/>
+						<xs:maxLength value="2"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element minOccurs="0" name="importLicitacio">
+				<xs:simpleType>
+					<xs:restriction base="xs:decimal">
+						<xs:totalDigits value="13"/>
+						<xs:fractionDigits value="2"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element minOccurs="0" name="importLicitacioIVA">
+				<xs:simpleType>
+					<xs:restriction base="xs:decimal">
+						<xs:totalDigits value="13"/>
+						<xs:fractionDigits value="2"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element minOccurs="0" name="importValorEstimat">
+				<xs:simpleType>
+					<xs:restriction base="xs:decimal">
+						<xs:totalDigits value="13"/>
+						<xs:fractionDigits value="2"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="importsDeterminar" type="xs:boolean"/>
+			<xs:element minOccurs="0" name="causaLegal">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:length value="2"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element minOccurs="0" name="numeroInvitacions">
+				<xs:simpleType>
+					<xs:restriction base="xs:int">
+						<xs:totalDigits value="3"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element minOccurs="0" name="segonContractista" type="xs:boolean"/>
+			<xs:element minOccurs="0" name="numeroRegistreAnterior">
+				<xs:simpleType>
+					<xs:restriction base="xs:int">
+						<xs:totalDigits value="7"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element minOccurs="0" name="anyExecucioAnterior">
+				<xs:simpleType>
+					<xs:restriction base="xs:int">
+						<xs:totalDigits fixed="true" value="4"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element minOccurs="0" name="acordMarc">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:minLength value="1"/>
+						<xs:maxLength value="15"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element minOccurs="0" name="subministramentsHomologats" type="xs:boolean"/>
+			<xs:element minOccurs="0" name="subministramentsAgregats" type="xs:boolean"/>
+			<xs:element minOccurs="0" name="sistemaAdjudicacio">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:minLength value="1"/>
+						<xs:maxLength value="2"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element minOccurs="0" name="reservat" type="xs:boolean"/>
+			<xs:element minOccurs="0" name="pertanyCat2Llei302007" type="xs:boolean"/>
+			<xs:element minOccurs="0" name="senseDespesaAsociada" type="xs:boolean"/>
+			<xs:element minOccurs="0" name="responsableContracte" type="xs:boolean"/>
+			<xs:element minOccurs="0" name="preuUnitari" type="xs:boolean"/>
+			<xs:element minOccurs="0" name="clausulesSocials" type="xs:boolean"/>
+			<xs:element name="dadesClausulesSocials" type="tns:dadesClausulesSocials" minOccurs="0"/>
+			<xs:element minOccurs="0" name="clausulesAmbientals" type="xs:boolean"/>
+			<xs:element minOccurs="0" name="clausulesArbitratge" type="xs:boolean"/>
+			<xs:element minOccurs="0" name="clausulesRDI" type="xs:boolean"/>
+			<xs:element minOccurs="0" name="contracteComplementari" type="xs:boolean"/>
+			<xs:element minOccurs="0" name="classificacioEmpresarial" type="xs:boolean"/>
+			<xs:element minOccurs="0" name="modalitatDeterminacioPreus">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:length value="2"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element minOccurs="0" name="aportacionsPubliquesConstruccio">
+				<xs:simpleType>
+					<xs:restriction base="xs:decimal">
+						<xs:totalDigits value="13"/>
+						<xs:fractionDigits value="2"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element minOccurs="0" name="despesaAnticipada" type="xs:boolean"/>
+			<xs:element minOccurs="0" name="innovacio">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:minLength value="1"/>
+						<xs:maxLength value="4"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element minOccurs="0" name="gestioEficient">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:minLength value="1"/>
+						<xs:maxLength value="2"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element minOccurs="0" name="contractacioConjunta">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:minLength value="1"/>
+						<xs:maxLength value="2"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>			
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="dadesClausulesSocials">
+		<xs:sequence>
+			<xs:element name="codi" type="xs:string" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="lots">
+		<xs:sequence>
+			<xs:element maxOccurs="unbounded" minOccurs="0" name="lot" type="tns:lot"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="lot">
+		<xs:sequence>
+			<xs:element name="idLot" type="tns:idLot"/>
+			<xs:element name="dadesLot" type="tns:dadesLot"/>
+			<xs:element minOccurs="0" name="adjudicatari" type="tns:adjudicatari"/>
+			<xs:element minOccurs="0" name="anualitatsLot" type="tns:anualitatsLot"/>
+			<xs:element minOccurs="0" name="liquidacions" type="tns:liquidacions"/>
+			<xs:element minOccurs="0" name="ofertesLot" type="tns:ofertesLot"/>
+			<xs:element minOccurs="0" name="documentsLot" type="tns:documentsLot"/>
+			<xs:element minOccurs="0" name="modificacionsLot" type="tns:modificacionsLot"/>
+			<xs:element minOccurs="0" name="prorrogues" type="tns:prorrogues"/>
+			<xs:element minOccurs="0" name="cessionsLot" type="tns:cessionsLot"/>
+			<xs:element minOccurs="0" name="subrogacionsLot" type="tns:subrogacionsLot"/>
+			<xs:element minOccurs="0" name="subcontractacionsLot" type="tns:subcontractacionsLot"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="idLot">
+		<xs:sequence>
+			<xs:element name="numeroLot">
+				<xs:simpleType>
+					<xs:restriction base="xs:int">
+						<xs:totalDigits value="4"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="idContracte" type="tns:idContracte"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="dadesLot">
+		<xs:sequence>
+			<xs:element name="dataAdjudicacio" type="xs:date"/>
+			<xs:element minOccurs="0" name="dataFormalitzacio" type="xs:date"/>
+			<xs:element minOccurs="0" name="dataAprovacio" type="xs:date"/>
+			<xs:element name="cofinancament" type="xs:boolean"/>
+			<xs:element minOccurs="0" name="importCofinancament">
+				<xs:simpleType>
+					<xs:restriction base="xs:decimal">
+						<xs:totalDigits value="13"/>
+						<xs:fractionDigits value="2"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element minOccurs="0" name="importCofinancamentIVA">
+				<xs:simpleType>
+					<xs:restriction base="xs:decimal">
+						<xs:totalDigits value="13"/>
+						<xs:fractionDigits value="2"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element minOccurs="0" name="importAdjudicacio">
+				<xs:simpleType>
+					<xs:restriction base="xs:decimal">
+						<xs:totalDigits value="13"/>
+						<xs:fractionDigits value="2"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element minOccurs="0" name="importAdjudicacioIVA">
+				<xs:simpleType>
+					<xs:restriction base="xs:decimal">
+						<xs:totalDigits value="13"/>
+						<xs:fractionDigits value="2"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element minOccurs="0" name="importCanon">
+				<xs:simpleType>
+					<xs:restriction base="xs:decimal">
+						<xs:totalDigits value="13"/>
+						<xs:fractionDigits value="2"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element minOccurs="0" name="importCanonIVA">
+				<xs:simpleType>
+					<xs:restriction base="xs:decimal">
+						<xs:totalDigits value="13"/>
+						<xs:fractionDigits value="2"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element minOccurs="0" name="periodicitatCanon">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:length value="1"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element minOccurs="0" name="importSubvencioAdministracio">
+				<xs:simpleType>
+					<xs:restriction base="xs:decimal">
+						<xs:totalDigits value="13"/>
+						<xs:fractionDigits value="2"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element minOccurs="0" name="importSubvencioAdministracioIVA">
+				<xs:simpleType>
+					<xs:restriction base="xs:decimal">
+						<xs:totalDigits value="13"/>
+						<xs:fractionDigits value="2"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="importSubvencioAdministracioPER" minOccurs="0">
+				<xs:simpleType>
+					<xs:restriction base="xs:decimal">
+						<xs:totalDigits value="4"/>
+						<xs:fractionDigits value="2"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element minOccurs="0" name="tipusIVA">
+				<xs:simpleType>
+					<xs:restriction base="xs:int">
+						<xs:totalDigits value="4"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="objecte">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:minLength value="1"/>
+						<xs:maxLength value="2000"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element minOccurs="0" name="paisProcedenciaProducte">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:length value="2"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element minOccurs="0" name="importLicitacio">
+				<xs:simpleType>
+					<xs:restriction base="xs:decimal">
+						<xs:totalDigits value="13"/>
+						<xs:fractionDigits value="2"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element minOccurs="0" name="importLicitacioIVA">
+				<xs:simpleType>
+					<xs:restriction base="xs:decimal">
+						<xs:totalDigits value="13"/>
+						<xs:fractionDigits value="2"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element minOccurs="0" name="duradaConcessio">
+				<xs:simpleType>
+					<xs:restriction base="xs:int">
+						<xs:totalDigits value="4"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element minOccurs="0" name="anysTermini">
+				<xs:simpleType>
+					<xs:restriction base="xs:int">
+						<xs:totalDigits value="3"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="mesosTermini">
+				<xs:simpleType>
+					<xs:restriction base="xs:int">
+						<xs:totalDigits value="3"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="diesTermini">
+				<xs:simpleType>
+					<xs:restriction base="xs:int">
+						<xs:totalDigits value="3"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element minOccurs="0" name="numeroLotAnterior">
+				<xs:simpleType>
+					<xs:restriction base="xs:int">
+						<xs:totalDigits value="4"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element minOccurs="0" name="codiCPA">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:minLength value="1"/>
+						<xs:maxLength value="8"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element minOccurs="0" name="codiCPV">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:length value="10"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element minOccurs="0" name="contracteMixt" type="xs:boolean"/>
+			<xs:element minOccurs="0" name="contracteMarc" type="xs:boolean"/>
+			<xs:element name="anualitats" type="xs:boolean"/>
+			<xs:element minOccurs="0" name="modalitatsDeterminantsImport">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:length value="2"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="previstaRevisioPreus" type="xs:boolean" minOccurs="0"/>
+			<xs:element name="lotDesert" type="xs:boolean"/>
+			<xs:element minOccurs="0" name="tipusProducte">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:minLength value="1"/>
+						<xs:maxLength value="2"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element minOccurs="0" name="obraPublica" type="xs:boolean"/>
+			<xs:element minOccurs="0" name="dataInici" type="xs:date"/>
+			<xs:element name="estudiDictamen" type="xs:boolean"/>
+			<xs:element minOccurs="0" name="partidaPressupostaria">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:minLength value="1"/>
+						<xs:maxLength value="30"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element minOccurs="0" name="compteComptable">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:minLength value="1"/>
+						<xs:maxLength value="30"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element minOccurs="0" name="motiuUtilitatContracte">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:minLength value="1"/>
+						<xs:maxLength value="4000"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element minOccurs="0" name="ivaMultiple" type="xs:boolean"/>
+			<xs:element minOccurs="0" name="importAdjudicacioIVAMultiple">
+				<xs:simpleType>
+					<xs:restriction base="xs:decimal">
+						<xs:totalDigits value="13"/>
+						<xs:fractionDigits value="2"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element minOccurs="0" name="fomentSocial" type="xs:boolean"/>
+			<xs:element minOccurs="0" name="tipusEntitat">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:length value="2"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element minOccurs="0" name="revisioPreus">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:length value="2"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element minOccurs="0" name="paisOrigenProducte">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:length value="2"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element minOccurs="0" name="classificacio">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:minLength value="1"/>
+						<xs:maxLength value="300"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element minOccurs="0" name="garantiaProvisional" type="xs:boolean"/>
+			<xs:element name="garantiaProvisionalImport" minOccurs="0">
+				<xs:simpleType>
+					<xs:restriction base="xs:decimal">
+						<xs:totalDigits value="15"/>
+						<xs:fractionDigits value="2"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element minOccurs="0" name="garantiaProvisionalPercentatge">
+				<xs:simpleType>
+					<xs:restriction base="xs:decimal">
+						<xs:totalDigits value="4"/>
+						<xs:fractionDigits value="2"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element minOccurs="0" name="garantiaDefinitiva" type="xs:boolean"/>
+			<xs:element name="garantiaDefinitivaImport" minOccurs="0">
+				<xs:simpleType>
+					<xs:restriction base="xs:decimal">
+						<xs:totalDigits value="15"/>
+						<xs:fractionDigits value="2"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element minOccurs="0" name="garantiaDefinitivaPercentatge">
+				<xs:simpleType>
+					<xs:restriction base="xs:decimal">
+						<xs:totalDigits value="4"/>
+						<xs:fractionDigits value="2"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element minOccurs="0" name="garantiaComplementaria" type="xs:boolean"/>
+			<xs:element name="garantiaComplementariaImport" minOccurs="0">
+				<xs:simpleType>
+					<xs:restriction base="xs:decimal">
+						<xs:totalDigits value="15"/>
+						<xs:fractionDigits value="2"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element minOccurs="0" name="garantiaComplementariaPercentatge">
+				<xs:simpleType>
+					<xs:restriction base="xs:decimal">
+						<xs:totalDigits value="4"/>
+						<xs:fractionDigits value="2"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element minOccurs="0" name="garantiaGlobal" type="xs:boolean"/>
+			<xs:element name="garantiaGlobalImport" minOccurs="0">
+				<xs:simpleType>
+					<xs:restriction base="xs:decimal">
+						<xs:totalDigits value="15"/>
+						<xs:fractionDigits value="2"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element minOccurs="0" name="garantiaGlobalPercentatge">
+				<xs:simpleType>
+					<xs:restriction base="xs:decimal">
+						<xs:totalDigits value="4"/>
+						<xs:fractionDigits value="2"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element minOccurs="0" name="llocExecucio">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:length value="2"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element minOccurs="0" name="compratInnovacio">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:minLength value="1"/>
+						<xs:maxLength value="2"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="adjudicatari">
+		<xs:sequence>
+			<xs:element minOccurs="0" name="empresa" type="tns:empresaWS"/>
+			<xs:element minOccurs="0" name="ute" type="tns:uteWS"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="empresaWS">
+		<xs:sequence>
+			<xs:element name="nif">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:minLength value="1"/>
+						<xs:maxLength value="15"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="nom">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:minLength value="1"/>
+						<xs:maxLength value="700"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element minOccurs="0" name="pais">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:length value="2"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element minOccurs="0" name="municipi">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:length value="5"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element minOccurs="0" name="tercerSector">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:length value="2"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="uteWS">
+		<xs:sequence>
+			<xs:element minOccurs="0" name="nif">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:minLength value="1"/>
+						<xs:maxLength value="15"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="nom">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:minLength value="1"/>
+						<xs:maxLength value="700"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="empreses" type="tns:empresesWS"/>
+			<xs:element minOccurs="0" name="pais">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:length value="2"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element minOccurs="0" name="municipi">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:length value="5"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element minOccurs="0" name="tercerSector">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:length value="2"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="empresesWS">
+		<xs:sequence>
+			<xs:element maxOccurs="unbounded" name="empresa" type="tns:empresaWS"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="anualitatsLot">
+		<xs:sequence>
+			<xs:element maxOccurs="unbounded" name="anualitatLot" type="tns:anualitatLot"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="anualitatLot">
+		<xs:sequence>
+			<xs:element name="idAnualitatLot" type="tns:idAnualitatLot"/>
+			<xs:element name="dadesAnualitatLot" type="tns:dadesAnualitatLot"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="idAnualitatLot">
+		<xs:sequence>
+			<xs:element name="anyAnualitat">
+				<xs:simpleType>
+					<xs:restriction base="xs:int">
+						<xs:totalDigits fixed="true" value="4"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="idLot" type="tns:idLot"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="dadesAnualitatLot">
+		<xs:sequence>
+			<xs:element minOccurs="0" name="importLicitacio">
+				<xs:simpleType>
+					<xs:restriction base="xs:decimal">
+						<xs:totalDigits value="13"/>
+						<xs:fractionDigits value="2"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element minOccurs="0" name="importAdjudicacio">
+				<xs:simpleType>
+					<xs:restriction base="xs:decimal">
+						<xs:totalDigits value="13"/>
+						<xs:fractionDigits value="2"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="liquidacions">
+		<xs:sequence>
+			<xs:element maxOccurs="unbounded" minOccurs="0" name="liquidacio" type="tns:liquidacio"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="liquidacio">
+		<xs:sequence>
+			<xs:element name="idLot" type="tns:idLot"/>
+			<xs:element minOccurs="0" name="liquidacioCompliment" type="tns:liquidacioCompliment"/>
+			<xs:element minOccurs="0" name="liquidacioResolucio" type="tns:liquidacioResolucio"/>
+			<xs:element minOccurs="0" name="contracteObjecteRecurs" type="xs:boolean"/>
+			<xs:element minOccurs="0" name="tipusRecurs" type="xs:string"/>
+			<xs:element minOccurs="0" name="sentitResolucio" type="xs:string"/>
+			<xs:element minOccurs="0" name="documentLiquidacio" type="tns:documentLiquidacio"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="liquidacioCompliment">
+		<xs:sequence>
+			<xs:element name="dataRecepcio" type="xs:date"/>
+			<xs:element name="revisioPreus" type="xs:boolean"/>
+			<xs:element name="importCompliment">
+				<xs:simpleType>
+					<xs:restriction base="xs:decimal">
+						<xs:totalDigits value="13"/>
+						<xs:fractionDigits value="2"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="importComplimentIVA">
+				<xs:simpleType>
+					<xs:restriction base="xs:decimal">
+						<xs:totalDigits value="13"/>
+						<xs:fractionDigits value="2"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="dataLiquidacio" type="xs:date"/>
+			<xs:element name="terminiProrrogat" type="xs:boolean"/>
+			<xs:element minOccurs="0" name="anysProrroga" type="xs:int"/>
+			<xs:element minOccurs="0" name="mesosProrroga" type="xs:int"/>
+			<xs:element minOccurs="0" name="diesProrroga" type="xs:int"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="liquidacioResolucio">
+		<xs:sequence>
+			<xs:element name="causaResolucio" type="xs:string"/>
+			<xs:element name="dataResolucio" type="xs:date"/>
+			<xs:element name="importLiquidacio">
+				<xs:simpleType>
+					<xs:restriction base="xs:decimal">
+						<xs:totalDigits value="13"/>
+						<xs:fractionDigits value="2"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="importLiquidacioIVA">
+				<xs:simpleType>
+					<xs:restriction base="xs:decimal">
+						<xs:totalDigits value="13"/>
+						<xs:fractionDigits value="2"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="revisioPreus" type="xs:boolean"/>
+			<xs:element name="incautacioGarantiaDefinitiva" type="xs:boolean"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="documentLiquidacio">
+		<xs:sequence>
+			<xs:element name="idDocumentLiquidacio" type="tns:idDocumentLiquidacio"/>
+			<xs:element name="dadesDocumentLiquidacio" type="tns:dadesDocumentLot"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="idDocumentLiquidacio">
+		<xs:sequence>
+			<xs:element name="idLot" type="tns:idLot"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="ofertesLot">
+		<xs:sequence>
+			<xs:element maxOccurs="unbounded" name="ofertaLot" type="tns:ofertaLot"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="ofertaLot">
+		<xs:sequence>
+			<xs:element name="idOfertaLot" type="tns:idOfertaLot"/>
+			<xs:element name="dadesOfertaLot" type="tns:dadesOfertaLot"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="idOfertaLot">
+		<xs:sequence>
+			<xs:element name="numeroOferta">
+				<xs:simpleType>
+					<xs:restriction base="xs:int">
+						<xs:totalDigits value="6"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="idLot" type="tns:idLot"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="dadesOfertaLot">
+		<xs:sequence>
+			<xs:element minOccurs="0" name="empresa" type="tns:empresaWS"/>
+			<xs:element minOccurs="0" name="ute" type="tns:uteWS"/>
+			<xs:element minOccurs="0" name="importOferta">
+				<xs:simpleType>
+					<xs:restriction base="xs:decimal">
+						<xs:totalDigits value="13"/>
+						<xs:fractionDigits value="2"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="modificacionsLot">
+		<xs:sequence>
+			<xs:element maxOccurs="unbounded" name="modificacioLot" type="tns:modificacioLot"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="prorrogues">
+		<xs:sequence>
+			<xs:element maxOccurs="unbounded" name="prorroga" type="tns:prorroga"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="prorroga">
+		<xs:sequence>
+			<xs:element name="idProrroga" type="tns:idProrroga"/>
+			<xs:element name="dadesProrroga" type="tns:dadesProrroga"/>
+			<xs:element minOccurs="0" name="anualitatsProrroga" type="tns:anualitatsProrroga"/>
+			<xs:element minOccurs="0" name="modificacionsProrroga" type="tns:modificacionsProrroga"/>
+			<xs:element minOccurs="0" name="cessionsProrroga" type="tns:cessionsProrroga"/>
+			<xs:element minOccurs="0" name="subrogacionsProrroga" type="tns:subrogacionsProrroga"/>
+			<xs:element minOccurs="0" name="subcontractacionsProrroga" type="tns:subcontractacionsProrroga"/>
+			<xs:element minOccurs="0" name="documentProrroga" type="tns:documentProrroga"/> 
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="idProrroga">
+		<xs:sequence>
+			<xs:element name="numeroProrroga" type="xs:int"/>
+			<xs:element name="idLot" type="tns:idLot"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="dadesProrroga">
+		<xs:sequence>
+			<xs:element name="expedient" minOccurs="0">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:minLength value="1"/>
+						<xs:maxLength value="43"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element minOccurs="0" name="dataFormalitzacio" type="xs:date"/>
+			<xs:element name="anualitatsProrroga" type="xs:boolean"/>
+			<xs:element minOccurs="0" name="dataAcord" type="xs:date"/>
+			<xs:element minOccurs="0" name="importAdjudicacio">
+				<xs:simpleType>
+					<xs:restriction base="xs:decimal">
+						<xs:totalDigits value="13"/>
+						<xs:fractionDigits value="2"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element minOccurs="0" name="importAdjudicacioIVA">
+				<xs:simpleType>
+					<xs:restriction base="xs:decimal">
+						<xs:totalDigits value="13"/>
+						<xs:fractionDigits value="2"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="dataInici" type="xs:date"/>
+			<xs:element name="dataFi" type="xs:date"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="anualitatsProrroga">
+		<xs:sequence>
+			<xs:element maxOccurs="unbounded" name="anualitatProrroga" type="tns:anualitatProrroga"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="anualitatProrroga">
+		<xs:sequence>
+			<xs:element name="idAnualitatProrroga" type="tns:idAnualitatProrroga"/>
+			<xs:element name="dadesAnualitatProrroga" type="tns:dadesAnualitatProrroga"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="idAnualitatProrroga">
+		<xs:sequence>
+			<xs:element name="anyAnualitat" type="xs:int"/>
+			<xs:element name="idProrroga" type="tns:idProrroga"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="dadesAnualitatProrroga">
+		<xs:sequence>
+			<xs:element minOccurs="0" name="importLicitacio">
+				<xs:simpleType>
+					<xs:restriction base="xs:decimal">
+						<xs:totalDigits value="13"/>
+						<xs:fractionDigits value="2"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element minOccurs="0" name="importLicitacioIVA">
+				<xs:simpleType>
+					<xs:restriction base="xs:decimal">
+						<xs:totalDigits value="13"/>
+						<xs:fractionDigits value="2"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element minOccurs="0" name="importAdjudicacio">
+				<xs:simpleType>
+					<xs:restriction base="xs:decimal">
+						<xs:totalDigits value="13"/>
+						<xs:fractionDigits value="2"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element minOccurs="0" name="importAdjudicacioIVA">
+				<xs:simpleType>
+					<xs:restriction base="xs:decimal">
+						<xs:totalDigits value="13"/>
+						<xs:fractionDigits value="2"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="modificacionsProrroga">
+		<xs:sequence>
+			<xs:element maxOccurs="unbounded" name="modificacioProrroga" type="tns:modificacioProrroga"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="modificacioProrroga">
+		<xs:sequence>
+			<xs:element name="idModificacioProrroga" type="tns:idModificacioProrroga"/>
+			<xs:element name="dadesModificacioProrroga" type="tns:dadesModificacioProrroga"/>
+			<xs:element minOccurs="0" name="modificacionsAnualitatProrroga" type="tns:modificacionsAnualitatProrroga"/>
+			<xs:element minOccurs="0" name="documentModificacioProrroga" type="tns:documentModificacioProrroga"/> 
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="idModificacioProrroga">
+		<xs:sequence>
+			<xs:element minOccurs="0" name="numeroModificacio" type="xs:int"/>
+			<xs:element name="idProrroga" type="tns:idProrroga"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="dadesModificacioProrroga">
+		<xs:sequence>
+			<xs:element name="tipusModificacio" type="xs:string"/>
+			<xs:element minOccurs="0" name="importModificacio" type="xs:decimal"/>
+			<xs:element minOccurs="0" name="importModificacioIVA" type="xs:decimal"/>
+			<xs:element name="modificacioSuperior" type="xs:boolean"/>
+			<xs:element name="dataAprovacio" type="xs:date"/>
+			<xs:element minOccurs="0" name="anysTermini" type="xs:int"/>
+			<xs:element minOccurs="0" name="mesosTermini" type="xs:int"/>
+			<xs:element minOccurs="0" name="diesTermini" type="xs:int"/>
+			<xs:element name="expedient" minOccurs="0">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:minLength value="1"/>
+						<xs:maxLength value="43"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="causaModificacio" type="xs:string"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="modificacionsAnualitatProrroga">
+		<xs:sequence>
+			<xs:element maxOccurs="unbounded" name="modificacioAnualitatProrroga" type="tns:modificacioAnualitatProrroga"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="modificacioAnualitatProrroga">
+		<xs:sequence>
+			<xs:element name="idModificacioAnualitatProrroga" type="tns:idModificacioAnualitatProrroga"/>
+			<xs:element name="dadesModificacioAnualitatProrroga" type="tns:dadesModificacioAnualitatProrroga"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="idModificacioAnualitatProrroga">
+		<xs:sequence>
+			<xs:element name="anyAnualitat" type="xs:int"/>
+			<xs:element name="idModificacioProrroga" type="tns:idModificacioProrroga"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="dadesModificacioAnualitatProrroga">
+		<xs:sequence>
+			<xs:element name="importLicitacio" type="xs:decimal"/>
+			<xs:element name="importLicitacioIVA" type="xs:decimal"/>
+			<xs:element minOccurs="0" name="importyAdjudicacio" type="xs:decimal"/>
+			<xs:element minOccurs="0" name="importyAdjudicacioIVA" type="xs:decimal"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="documentModificacioProrroga">
+		<xs:sequence>
+			<xs:element name="idDocumentModificacioProrroga" type="tns:idDocumentModificacioProrroga"/>
+			<xs:element name="dadesDocumentModificacioProrroga" type="tns:dadesDocumentLot"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="idDocumentModificacioProrroga">
+		<xs:sequence>
+			<xs:element name="idModificacioProrroga" type="tns:idModificacioProrroga"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="cessionsProrroga">
+		<xs:sequence>
+			<xs:element maxOccurs="unbounded" name="cessioProrroga" type="tns:cessioProrroga"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="cessioProrroga">
+		<xs:sequence>
+			<xs:element name="idCessioProrroga" type="tns:idCessioProrroga"/>
+			<xs:element name="dadesCessio" type="tns:dadesCessio"/>
+			<xs:element name="adjudicataris" type="tns:adjudicataris"/>					
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="adjudicataris">
+		<xs:sequence>
+			<xs:element maxOccurs="unbounded" name="adjudicatari" type="tns:adjudicatari"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="dadesCessio">
+		<xs:sequence>
+			<xs:element minOccurs="0" name="dataAprovacio" type="xs:date"/>
+			<xs:element minOccurs="0" name="dataInici" type="xs:date"/>
+			<xs:element minOccurs="0" name="importRestant">
+				<xs:simpleType>
+					<xs:restriction base="xs:decimal">
+						<xs:totalDigits value="13"/>
+						<xs:fractionDigits value="2"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element minOccurs="0" name="importRestantIVA">
+				<xs:simpleType>
+					<xs:restriction base="xs:decimal">
+						<xs:totalDigits value="13"/>
+						<xs:fractionDigits value="2"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="idCessioProrroga">
+		<xs:sequence>
+			<xs:element minOccurs="0" name="numeroCessioProrroga" type="xs:int"/>
+			<xs:element name="idProrroga" type="tns:idProrroga"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="subrogacionsProrroga">
+		<xs:sequence>
+			<xs:element maxOccurs="unbounded" name="subrogacioProrroga" type="tns:subrogacioProrroga"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="subrogacioProrroga">
+		<xs:sequence>
+			<xs:element name="idSubrogacioProrroga" type="tns:idSubrogacioProrroga"/>
+			<xs:element name="dadesSubrogacio" type="tns:dadesSubrogacio"/>
+			<xs:element name="adjudicataris" type="tns:adjudicataris"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="idSubrogacioProrroga">
+		<xs:sequence>
+			<xs:element minOccurs="0" name="numeroSubrogacioProrroga" type="xs:int"/>
+			<xs:element name="idProrroga" type="tns:idProrroga"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="dadesSubrogacio">
+		<xs:sequence>
+			<xs:element minOccurs="0" name="dataNotificacio" type="xs:date"/>
+			<xs:element minOccurs="0" name="dataInici" type="xs:date"/>
+			<xs:element minOccurs="0" name="importRestant">
+				<xs:simpleType>
+					<xs:restriction base="xs:decimal">
+						<xs:totalDigits value="13"/>
+						<xs:fractionDigits value="2"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element minOccurs="0" name="importRestantIVA">
+				<xs:simpleType>
+					<xs:restriction base="xs:decimal">
+						<xs:totalDigits value="13"/>
+						<xs:fractionDigits value="2"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="subcontractacionsProrroga">
+		<xs:sequence>
+			<xs:element maxOccurs="unbounded" name="subcontractacioProrroga" type="tns:subcontractacioProrroga"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="subcontractacioProrroga">
+		<xs:sequence>
+			<xs:element name="idSubcontractacioProrroga" type="tns:idSubcontractacioProrroga"/>
+			<xs:element name="dadesSubcontractacio" type="tns:dadesSubcontractacio"/>
+			<xs:element name="adjudicatarisSubcontractacio" type="tns:adjudicatarisSubcontractacio"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="idSubcontractacioProrroga">
+		<xs:sequence>
+			<xs:element minOccurs="0" name="numeroSubcontractacioProrroga" type="xs:int"/>
+			<xs:element name="idProrroga" type="tns:idProrroga"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="dadesSubcontractacio">
+		<xs:sequence>
+			<xs:element minOccurs="0" name="dataNotificacio" type="xs:date"/>
+			<xs:element minOccurs="0" name="dataInici" type="xs:date"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="adjudicatarisSubcontractacio">
+		<xs:sequence>
+			<xs:element maxOccurs="unbounded" name="adjudicatariSubcontractacio" type="tns:adjudicatariSubcontractacio"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="adjudicatariSubcontractacio">
+		<xs:sequence>
+			<xs:element minOccurs="0" name="importSubcontractacio" type="xs:decimal"/>
+			<xs:element minOccurs="0" name="importSubcontractacioIVA">
+				<xs:simpleType>
+					<xs:restriction base="xs:decimal">
+						<xs:totalDigits value="13"/>
+						<xs:fractionDigits value="2"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element minOccurs="0" name="percentatge">
+				<xs:simpleType>
+					<xs:restriction base="xs:decimal">
+						<xs:totalDigits value="13"/>
+						<xs:fractionDigits value="2"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="adjudicatari" type="tns:adjudicatari"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="documentProrroga">
+		<xs:sequence>
+			<xs:element name="idDocumentProrroga" type="tns:idDocumentProrroga"/>
+			<xs:element name="dadesDocumentProrroga" type="tns:dadesDocumentLot"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="idDocumentProrroga">
+		<xs:sequence>
+			<xs:element name="idProrroga" type="tns:idProrroga"/>
+		</xs:sequence>
+	</xs:complexType>			
+	<xs:complexType name="cessionsLot">
+		<xs:sequence>
+			<xs:element maxOccurs="unbounded" name="cessioLot" type="tns:cessioLot"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="cessioLot">
+		<xs:sequence>
+			<xs:element name="idCessioLot" type="tns:idCessioLot"/>
+			<xs:element name="dadesCessio" type="tns:dadesCessio"/>
+			<xs:element name="adjudicataris" type="tns:adjudicataris"/>	
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="idCessioLot">
+		<xs:sequence>
+			<xs:element minOccurs="0" name="numeroCessioLot" type="xs:int"/>
+			<xs:element name="idLot" type="tns:idLot"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="subrogacionsLot">
+		<xs:sequence>
+			<xs:element maxOccurs="unbounded" name="subrogacioLot" type="tns:subrogacioLot"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="subrogacioLot">
+		<xs:sequence>
+			<xs:element name="idSubrogacioLot" type="tns:idSubrogacioLot"/>
+			<xs:element name="dadesSubrogacio" type="tns:dadesSubrogacio"/>
+			<xs:element name="adjudicataris" type="tns:adjudicataris"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="idSubrogacioLot">
+		<xs:sequence>
+			<xs:element minOccurs="0" name="numeroSubrogacioLot" type="xs:int"/>
+			<xs:element name="idLot" type="tns:idLot"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="subcontractacionsLot">
+		<xs:sequence>
+			<xs:element maxOccurs="unbounded" name="subcontractacioLot" type="tns:subcontractacioLot"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="subcontractacioLot">
+		<xs:sequence>
+			<xs:element name="idSubcontractacioLot" type="tns:idSubcontractacioLot"/>
+			<xs:element name="dadesSubcontractacio" type="tns:dadesSubcontractacio"/>
+			<xs:element name="adjudicatarisSubcontractacio" type="tns:adjudicatarisSubcontractacio"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="idSubcontractacioLot">
+		<xs:sequence>
+			<xs:element minOccurs="0" name="numeroSubcontractacioLot" type="xs:int"/>
+			<xs:element name="idLot" type="tns:idLot"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="documentsLot">
+		<xs:sequence>
+			<xs:element maxOccurs="unbounded" name="documentLot" type="tns:documentLot"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="documentLot">
+		<xs:sequence>
+			<xs:element name="idDocumentLot" type="tns:idDocumentLot"/>
+			<xs:element name="dadesDocumentLot" type="tns:dadesDocumentLot"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="idDocumentLot">
+		<xs:sequence>
+			<xs:element name="idLot" type="tns:idLot"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="dadesDocumentLot">
+		<xs:sequence>
+			<xs:element name="nom">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:minLength value="1"/>
+						<xs:maxLength value="200"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element minOccurs="0" name="descripcio">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:minLength value="1"/>
+						<xs:maxLength value="600"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="tipusDocument">
+				<xs:simpleType>
+					<xs:restriction base="xs:int">
+						<xs:totalDigits value="4"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="grandaria">
+				<xs:simpleType>
+					<xs:restriction base="xs:decimal">
+						<xs:totalDigits value="13"/>
+						<xs:fractionDigits value="2"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="fitxer" type="tns:fitxer"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="fitxer">
+		<xs:sequence>
+			<xs:element minOccurs="0" name="idDocumentExtern">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:minLength value="1"/>
+						<xs:maxLength value="50"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element minOccurs="0" name="urlDescarrega">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:minLength value="1"/>
+						<xs:maxLength value="1000"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element minOccurs="0" name="contingut" ns1:expectedContentTypes="application/octet-stream" type="xs:base64Binary" xmlns:ns1="http://www.w3.org/2005/05/xmlmime"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="modificacioLot">
+		<xs:sequence>
+			<xs:element name="idModificacioLot" type="tns:idModificacioLot"/>
+			<xs:element name="dadesModificacioLot" type="tns:dadesModificacioLot"/>
+			<xs:element minOccurs="0" name="modificacionsAnualitatLot" type="tns:modificacionsAnualitatLot"/>
+			<xs:element minOccurs="0" name="documentModificacioLot" type="tns:documentModificacioLot"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="idModificacioLot">
+		<xs:sequence>
+			<xs:element minOccurs="0" name="numeroModificacio" type="xs:int"/>
+			<xs:element name="idLot" type="tns:idLot"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="dadesModificacioLot">
+		<xs:sequence>
+			<xs:element name="tipusModificacio" type="xs:string"/>
+			<xs:element minOccurs="0" name="importModificacio" type="xs:decimal"/>
+			<xs:element minOccurs="0" name="importModificacioIVA" type="xs:decimal"/>
+			<xs:element name="modificacioSuperior" type="xs:boolean"/>
+			<xs:element minOccurs="0" name="dataAprovacio" type="xs:date"/>
+			<xs:element minOccurs="0" name="anysTermini" type="xs:int"/>
+			<xs:element minOccurs="0" name="mesosTermini" type="xs:int"/>
+			<xs:element minOccurs="0" name="diesTermini" type="xs:int"/>
+			<xs:element name="expedient" minOccurs="0">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:minLength value="1"/>
+						<xs:maxLength value="43"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="causaModificacio" type="xs:string"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="modificacionsAnualitatLot">
+		<xs:sequence>
+			<xs:element maxOccurs="unbounded" name="modificacioAnualitatLot" type="tns:modificacioAnualitatLot"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="modificacioAnualitatLot">
+		<xs:sequence>
+			<xs:element name="idModificacioAnualitatLot" type="tns:idModificacioAnualitatLot"/>
+			<xs:element name="dadesModificacioAnualitatLot" type="tns:dadesModificacioAnualitatLot"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="idModificacioAnualitatLot">
+		<xs:sequence>
+			<xs:element name="anyAnualitat" type="xs:int"/>
+			<xs:element name="idModificacioLot" type="tns:idModificacioLot"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="dadesModificacioAnualitatLot">
+		<xs:sequence>
+			<xs:element minOccurs="0" name="importLicitacio">
+				<xs:simpleType>
+					<xs:restriction base="xs:decimal">
+						<xs:totalDigits value="13"/>
+						<xs:fractionDigits value="2"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element minOccurs="0" name="importLicitacioIVA">
+				<xs:simpleType>
+					<xs:restriction base="xs:decimal">
+						<xs:totalDigits value="13"/>
+						<xs:fractionDigits value="2"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="importAdjudicacio">
+				<xs:simpleType>
+					<xs:restriction base="xs:decimal">
+						<xs:totalDigits value="13"/>
+						<xs:fractionDigits value="2"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="importAdjudicacioIVA">
+				<xs:simpleType>
+					<xs:restriction base="xs:decimal">
+						<xs:totalDigits value="13"/>
+						<xs:fractionDigits value="2"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="documentModificacioLot">
+		<xs:sequence>
+			<xs:element name="idDocumentModificacioLot" type="tns:idDocumentModificacioLot"/>
+			<xs:element name="dadesDocumentModificacioLot" type="tns:dadesDocumentLot"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="idDocumentModificacioLot">
+		<xs:sequence>
+			<xs:element name="idModificacioLot" type="tns:idModificacioLot"/>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

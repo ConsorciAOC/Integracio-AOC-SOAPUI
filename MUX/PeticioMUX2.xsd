@@ -1,12 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:pet="http://net.aocat/MUX2/PeticioRegistre" targetNamespace="http://net.aocat/MUX2/PeticioRegistre" elementFormDefault="qualified" attributeFormDefault="unqualified">
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:pet="http://net.aocat/MUX2/PeticioRegistre" targetNamespace="http://net.aocat/MUX2/PeticioRegistre" elementFormDefault=
+"qualified" attributeFormDefault="unqualified">
 	<xs:element name="PeticioRegistre">
 		<xs:complexType>
 			<xs:choice>
 				<xs:element ref="pet:AltaAssentament"/>
 				<xs:element ref="pet:ConsultaAssentaments"/>
 				<xs:element ref="pet:ConsolidacioAssentament"/>
+				<xs:element ref="pet:CarregaDocumentacio"/>
+				<xs:element ref="pet:DescarregaDocumentacio"/>
 			</xs:choice>
+
 			<xs:attribute name="IdAplicacio" use="required">
 				<xs:simpleType>
 					<xs:restriction base="xs:string">
@@ -25,6 +29,20 @@
 			</xs:attribute>
 		</xs:complexType>
 	</xs:element>
+
+	<xs:element name="CarregaDocumentacio">
+		<xs:complexType>
+			<xs:complexContent>
+				<xs:extension base="pet:DadesAssentament2">
+					<xs:sequence>
+						<xs:element name="Document" type="pet:Document2" maxOccurs="unbounded"/>
+					</xs:sequence>
+				</xs:extension>
+			</xs:complexContent>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="DescarregaDocumentacio" type="pet:DadesAssentament2"/>
+
 	<xs:element name="AltaAssentament">
 		<xs:complexType>
 			<xs:choice>
@@ -624,5 +642,23 @@
 				</xs:simpleType>
 			</xs:element>
 		</xs:sequence>
+	</xs:complexType>
+		<xs:complexType name="Document2">
+			<xs:sequence>
+				<xs:element name="Nom" type="xs:string"/>
+				<xs:element name="Descripcio" type="xs:string"/>
+				<xs:element name="GUID" type="xs:string" minOccurs="0"/>
+				<xs:choice>
+					<xs:element name="Id" type="xs:string"/>
+					<xs:element name="Contingut" type="xs:base64Binary"/>
+				</xs:choice>
+			</xs:sequence>
+		</xs:complexType>
+	
+	<xs:complexType name="DadesAssentament2">
+		<xs:choice>
+			<xs:element name="NumeroAssentamentEntrada" type="xs:string"/>
+			<xs:element name="NumeroAssentamentSortida" type="xs:string"/>
+		</xs:choice>
 	</xs:complexType>
 </xs:schema>

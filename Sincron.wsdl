@@ -53,7 +53,8 @@
 		xmlns:ant_pen="http://www.aoc.cat/antecedents-penals"
 	    xmlns:estrangeria="http://www.aoc.cat/estrangeria/residencia-legal"
 		xmlns:mux="http://net.aocat/MUX2/PeticioRegistre"
-		xmlns:mux_con="http://net.aocat/MUX2/PeticioRegistre"
+		xmlns:rpc="http://cat.aoc/rpc/peticion"
+		
 		
 		targetNamespace="http://gencat.net/scsp/esquemes/peticion"  elementFormDefault="qualified" attributeFormDefault="unqualified">
 			<xs:import namespace="http://www.aocat.net/inem" schemaLocation="./VO/VO - ESTAT/INEM/dadesEspecifiques.xsd"/>
@@ -90,8 +91,8 @@
 			<xs:import namespace="http://www.aoc.cat/registre-civil" schemaLocation="./VO/VO - ESTAT/REG_CIVIL/dadesEspecifiques.xsd"/>	
 			<xs:import namespace="http://www.aoc.cat/antecedents-penals" schemaLocation="./VO/VO - ESTAT/ANT_PENAL/dadesEspecifiques.xsd"/>		
 			<xs:import namespace="http://www.aoc.cat/estrangeria/residencia-legal" schemaLocation="./VO/VO - ESTAT/ESTRANGERIA/dadesEspecifiques.xsd"/>			
-			<xs:import namespace="http://net.aocat/MUX2/PeticioRegistre" schemaLocation="./MUX/PeticioMUX2-documents.xsd"/>		
-			<xs:import namespace="http://net.aocat/MUX2/PeticioRegistre" schemaLocation="./MUX/PeticioMUX2.xsd"/>				
+			<xs:import namespace="http://net.aocat/MUX2/PeticioRegistre" schemaLocation="./MUX/PeticioMUX2.xsd"/>	
+			<xs:import namespace="http://cat.aoc/rpc/peticion" schemaLocation="./RPC/dadesEspecifiques.xsd"/>			
 			
 			
 			
@@ -406,10 +407,8 @@
 						<xs:element ref="ant_pen:peticioInexistenciaAntecedentsPenalsDelictesSexuals" minOccurs="0"/>
 						<xs:element ref="estrangeria:peticioConsultaDadesResidenciaLegal" minOccurs="0"/>
 						<xs:element ref="mux:PeticioRegistre" minOccurs="0"/>
-						<xs:element ref="mux_con:ConsultaAssentaments" minOccurs="0"/>
-						<xs:element ref="mux_con:AltaAssentament" minOccurs="0"/>
-						<xs:element ref="mux_con:ConsolidacioAssentament" minOccurs="0"/>
-																	
+						<xs:element ref="rpc:comunicacio" minOccurs="0"/>
+																							
 																	
 
 					</xs:choice>
