@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema targetNamespace="http://www.aoc.cat/etauler/evidencia" elementFormDefault="qualified" attributeFormDefault="unqualified" xmlns="http://www.aoc.cat/etauler/evidencia" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<!--
+<xsd:schema targetNamespace="http://www.aoc.cat/etauler/evidencia" elementFormDefault="qualified" attributeFormDefault="unqualified" xmlns="http://www.aoc.cat/etauler/evidencia" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xmldsig="http://www.w3.org/2000/09/xmldsig#">
+	<xsd:import namespace="http://www.w3.org/2000/09/xmldsig#" schemaLocation="xmldsig-core-schema.xsd"/>
+-->
+	<xsd:element name="Evidencia">
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element ref="EvidenciaSignada"/>
+				<!--
+				<xsd:element ref="xmldsig:Signature"/>
+				-->
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+	<xsd:element name="EvidenciaSignada">
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element name="Parametre" type="TParam" maxOccurs="unbounded"/>
+			</xsd:sequence>
+			<xsd:attribute name="Id" type="xsd:string" use="required"/>
+		</xsd:complexType>
+	</xsd:element>
+	<xsd:complexType name="TParam">
+		<xsd:simpleContent>
+			<xsd:extension base="xsd:string">
+				<xsd:attribute name="nom" type="xsd:string"/>
+			</xsd:extension>
+		</xsd:simpleContent>
+	</xsd:complexType>
+</xsd:schema>

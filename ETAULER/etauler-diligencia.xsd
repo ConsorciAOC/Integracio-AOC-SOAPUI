@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns="http://www.aocat.net/etauler/pdf" xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.aocat.net/etauler/pdf" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xsd:element name="PdfETauler">
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element ref="Dades"/>
+				<xsd:element ref="Bloc" maxOccurs="unbounded"/>
+				<xsd:element name="BlocParagraf" type="xsd:string" maxOccurs="unbounded"/>
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+	<xsd:element name="Dades">
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element name="Logo" type="xsd:string" minOccurs="0"/>
+				<xsd:element name="CSV" type="xsd:string" minOccurs="0"/>
+				<xsd:element name="Titol" type="xsd:string"/>
+				<xsd:element name="Text" type="xsd:string"/>
+				<xsd:element name="Peu" type="xsd:string"/>
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+	<xsd:element name="Bloc">
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element name="Titol" type="xsd:string"/>
+				<xsd:element ref="BlocDada" maxOccurs="unbounded"/>
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+	<xsd:element name="BlocDada">
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element name="Titol" type="xsd:string"/>
+				<xsd:element name="Valor" type="xsd:string"/>
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+</xsd:schema>

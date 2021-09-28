@@ -22,9 +22,11 @@
 		<xs:schema xmlns="http://gencat.net/scsp/esquemes/peticion" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xmime="http://www.w3.org/2005/05/xmlmime" targetNamespace="http://gencat.net/scsp/esquemes/peticion"
 
 	xmlns:over="http://www.aoc.cat/over"
+	xmlns:tauler="http://www.aoc.cat/etauler"
 
 		elementFormDefault="qualified" attributeFormDefault="unqualified">
 		<xs:import namespace="http://www.aoc.cat/over" schemaLocation="./OVER/dadesEspecifiques.xsd"/>
+		<xs:import namespace="http://www.aoc.cat/etauler" schemaLocation="./ETAULER/dadesEspecifiques.xsd"/>
 		
 		
 		
@@ -300,6 +302,12 @@
 						<xs:element ref="over:peticioConsultaExpedient" minOccurs="0"/>
 						<xs:element ref="over:peticioLlistaServeis" minOccurs="0"/>
 						<xs:element ref="over:peticioLlistaTramits" minOccurs="0"/>
+						<xs:element ref="tauler:peticioPublicarEdicte" minOccurs="0"/>
+						<xs:element ref="tauler:peticioCancellarEdicte" minOccurs="0"/>
+						<xs:element ref="tauler:peticioModificarEdicte" minOccurs="0"/>
+						<xs:element ref="tauler:peticioDespublicarEdicte" minOccurs="0"/>
+						<xs:element ref="tauler:peticioSincronitzarEdictes" minOccurs="0"/>
+						<xs:element ref="tauler:respostaSincronitzarEdictes" minOccurs="0"/>
 						
 						</xs:choice>
 				</xs:complexType>

@@ -1,0 +1,64 @@
+<!-- edited with XMLSpy v2008 rel. 2 sp2 (http://www.altova.com) by Consorci Administració Oberta de Catalunya -->
+<xsd:schema xmlns="http://www.aoc.cat/etauler/edicte-extern" xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.aoc.cat/etauler/edicte-extern" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<!-- ======================================================= -->
+	<!-- Metadades d'un edicte - publicació via tramitació OVER  -->
+	<!-- ======================================================= -->
+	<xsd:element name="edicte">
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element name="numExpedient">
+					<xsd:simpleType>
+						<xsd:restriction base="xsd:string">
+							<xsd:maxLength value="256"/>
+						</xsd:restriction>
+					</xsd:simpleType>
+				</xsd:element>
+				<xsd:element name="dataIniciPublicacio" type="xsd:dateTime"/>
+				<xsd:element name="dataFiPublicacio" type="xsd:dateTime" minOccurs="0"/>
+				<xsd:element name="paraulesClau" minOccurs="0">
+					<xsd:simpleType>
+						<xsd:restriction base="xsd:string">
+							<xsd:maxLength value="4000"/>
+						</xsd:restriction>
+					</xsd:simpleType>
+				</xsd:element>
+				<xsd:element name="nifs" minOccurs="0">
+					<xsd:simpleType>
+						<xsd:restriction base="xsd:string">
+							<xsd:maxLength value="4000"/>
+						</xsd:restriction>
+					</xsd:simpleType>
+				</xsd:element>
+				<xsd:element name="informacio" maxOccurs="3">
+					<xsd:complexType>
+						<xsd:sequence>
+							<xsd:element name="titol">
+								<xsd:simpleType>
+									<xsd:restriction base="xsd:string">
+										<xsd:maxLength value="300"/>
+									</xsd:restriction>
+								</xsd:simpleType>
+							</xsd:element>
+							<xsd:element name="descripcio">
+								<xsd:simpleType>
+									<xsd:restriction base="xsd:string">
+										<xsd:maxLength value="1000"/>
+									</xsd:restriction>
+								</xsd:simpleType>
+							</xsd:element>
+							<xsd:element name="idioma">
+								<xsd:simpleType>
+									<xsd:restriction base="xsd:string">
+										<xsd:enumeration value="ca"/>
+										<xsd:enumeration value="es"/>
+										<xsd:enumeration value="oc"/>
+									</xsd:restriction>
+								</xsd:simpleType>
+							</xsd:element>
+						</xsd:sequence>
+					</xsd:complexType>
+				</xsd:element>
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+</xsd:schema>

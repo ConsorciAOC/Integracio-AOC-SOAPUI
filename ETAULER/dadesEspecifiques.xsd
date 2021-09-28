@@ -1,0 +1,425 @@
+<!-- edited with XMLSpy v2008 rel. 2 sp2 (http://www.altova.com) by Consorci Administració Oberta de Catalunya -->
+<xsd:schema xmlns="http://www.aoc.cat/etauler" xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.aoc.cat/etauler" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<!-- ======================================================= -->
+	<!-- Publicar edicte                                         -->
+	<!-- ======================================================= -->
+	<xsd:element name="peticioPublicarEdicte">
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element name="edicte" type="tEdicte"/>
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+	<xsd:complexType name="tEdicte">
+		<xsd:sequence>
+			<xsd:element name="idEdicte">
+				<xsd:simpleType>
+					<xsd:restriction base="xsd:string">
+						<xsd:maxLength value="256"/>
+					</xsd:restriction>
+				</xsd:simpleType>
+			</xsd:element>
+			<xsd:element name="numExpedient">
+				<xsd:simpleType>
+					<xsd:restriction base="xsd:string">
+						<xsd:maxLength value="256"/>
+					</xsd:restriction>
+				</xsd:simpleType>
+			</xsd:element>
+			<xsd:element ref="informacio" maxOccurs="3"/>
+			<xsd:element name="dataIniciPublicacio" type="xsd:date"/>
+			<xsd:element name="dataFiPublicacio" type="xsd:date" minOccurs="0"/>
+			<xsd:element name="destacat" type="xsd:boolean" minOccurs="0"/>
+			<xsd:element ref="diligencia"/>
+			<xsd:element ref="document" maxOccurs="3"/>
+			<xsd:element ref="edicteExtern" minOccurs="0"/>
+			<xsd:element ref="classificacio" maxOccurs="3"/>
+			<xsd:element ref="dadesAddicionals" minOccurs="0"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:element name="dadesAddicionals">
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element name="paraulesClau" minOccurs="0">
+					<xsd:simpleType>
+						<xsd:restriction base="xsd:string">
+							<xsd:maxLength value="1000"/>
+						</xsd:restriction>
+					</xsd:simpleType>
+				</xsd:element>
+				<xsd:element name="nifs" minOccurs="0">
+					<xsd:simpleType>
+						<xsd:restriction base="xsd:string">
+							<xsd:maxLength value="4000"/>
+						</xsd:restriction>
+					</xsd:simpleType>
+				</xsd:element>
+				<xsd:element ref="referencia" minOccurs="0" maxOccurs="unbounded"/>
+				<xsd:element ref="adjunt" minOccurs="0" maxOccurs="unbounded"/>
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+	<xsd:element name="informacio">
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element name="titol">
+					<xsd:simpleType>
+						<xsd:restriction base="xsd:string">
+							<xsd:maxLength value="256"/>
+						</xsd:restriction>
+					</xsd:simpleType>
+				</xsd:element>
+				<xsd:element name="descripcio">
+					<xsd:simpleType>
+						<xsd:restriction base="xsd:string">
+							<xsd:maxLength value="4000"/>
+						</xsd:restriction>
+					</xsd:simpleType>
+				</xsd:element>
+				<xsd:element name="idioma" type="tIdioma"/>
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+	<xsd:element name="document">
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element name="nom">
+					<xsd:simpleType>
+						<xsd:restriction base="xsd:string">
+							<xsd:maxLength value="256"/>
+						</xsd:restriction>
+					</xsd:simpleType>
+				</xsd:element>
+				<xsd:element name="id" type="xsd:string"/>
+				<xsd:element name="idioma" type="tIdioma"/>
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+	<xsd:element name="adjunt">
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element name="id" type="xsd:string"/>
+				<xsd:element ref="enllac" maxOccurs="3"/>
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+	<xsd:element name="diligencia">
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element name="idioma" type="tIdioma"/>
+				<xsd:element name="format">
+					<xsd:simpleType>
+						<xsd:restriction base="xsd:string">
+							<xsd:enumeration value="electronica"/>
+							<xsd:enumeration value="imprimible"/>
+						</xsd:restriction>
+					</xsd:simpleType>
+				</xsd:element>
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+	<xsd:element name="classificacio">
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element name="classificacio" maxOccurs="3">
+					<xsd:complexType>
+						<xsd:sequence>
+							<xsd:element name="concepte">
+								<xsd:simpleType>
+									<xsd:restriction base="xsd:string">
+										<xsd:maxLength value="256"/>
+									</xsd:restriction>
+								</xsd:simpleType>
+							</xsd:element>
+							<xsd:element name="categoria">
+								<xsd:simpleType>
+									<xsd:restriction base="xsd:string">
+										<xsd:maxLength value="256"/>
+									</xsd:restriction>
+								</xsd:simpleType>
+							</xsd:element>
+							<xsd:element name="subcategoria" minOccurs="0">
+								<xsd:simpleType>
+									<xsd:restriction base="xsd:string">
+										<xsd:maxLength value="256"/>
+									</xsd:restriction>
+								</xsd:simpleType>
+							</xsd:element>
+							<xsd:element name="idioma" type="tIdioma"/>
+						</xsd:sequence>
+					</xsd:complexType>
+				</xsd:element>
+				<xsd:element name="tipus">
+					<xsd:simpleType>
+						<xsd:restriction base="xsd:string">
+							<xsd:enumeration value="classificacio1"/>
+							<xsd:enumeration value="classificacio2"/>
+							<xsd:enumeration value="procedencia"/>
+						</xsd:restriction>
+					</xsd:simpleType>
+				</xsd:element>
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+	<xsd:element name="eacat">
+		<xsd:annotation>
+			<xsd:documentation>Ús exclusiu per tramitació des de portal EACAT </xsd:documentation>
+		</xsd:annotation>
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element name="codiCataleg" type="xsd:string"/>
+				<xsd:element name="codiInstanciaServei" type="xsd:long"/>
+				<xsd:element name="codiInstanciaTramit" type="xsd:long"/>
+				<xsd:element name="codiEns" type="xsd:string"/>
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+	<xsd:element name="edicteExtern">
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element name="codiEnsOrigen" minOccurs="0">
+					<xsd:simpleType>
+						<xsd:restriction base="xsd:string">
+							<xsd:maxLength value="10"/>
+						</xsd:restriction>
+					</xsd:simpleType>
+				</xsd:element>
+				<xsd:element name="nomEnsOrigen">
+					<xsd:simpleType>
+						<xsd:restriction base="xsd:string">
+							<xsd:maxLength value="256"/>
+						</xsd:restriction>
+					</xsd:simpleType>
+				</xsd:element>
+				<xsd:element name="registreEntrada">
+					<xsd:simpleType>
+						<xsd:restriction base="xsd:string">
+							<xsd:maxLength value="256"/>
+						</xsd:restriction>
+					</xsd:simpleType>
+				</xsd:element>
+				<xsd:element name="dataRecepcio" type="xsd:date"/>
+				<xsd:element ref="eacat" minOccurs="0"/>
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+	<xsd:element name="referencia">
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element name="url">
+					<xsd:simpleType>
+						<xsd:restriction base="xsd:string">
+							<xsd:maxLength value="256"/>
+						</xsd:restriction>
+					</xsd:simpleType>
+				</xsd:element>
+				<xsd:element name="seu" type="xsd:boolean" minOccurs="0"/>
+				<xsd:element ref="enllac" maxOccurs="3"/>
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+	<xsd:element name="enllac">
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element name="titol">
+					<xsd:simpleType>
+						<xsd:restriction base="xsd:string">
+							<xsd:maxLength value="256"/>
+						</xsd:restriction>
+					</xsd:simpleType>
+				</xsd:element>
+				<xsd:element name="idioma" type="tIdioma"/>
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+	<xsd:element name="respostaPublicarEdicte">
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element ref="resultat"/>
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+	<!-- ======================================================= -->
+	<!-- Cancel·lar edicte                                        -->
+	<!-- ======================================================= -->
+	<xsd:element name="peticioCancellarEdicte">
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element name="idEdicte">
+					<xsd:simpleType>
+						<xsd:restriction base="xsd:string">
+							<xsd:maxLength value="256"/>
+						</xsd:restriction>
+					</xsd:simpleType>
+				</xsd:element>
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+	<xsd:element name="respostaCancellarEdicte">
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element ref="resultat"/>
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+	<!-- ======================================================= -->
+	<!-- Modificar edicte                                        -->
+	<!-- ======================================================= -->
+	<xsd:element name="peticioModificarEdicte">
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element name="idEdicte">
+					<xsd:simpleType>
+						<xsd:restriction base="xsd:string">
+							<xsd:maxLength value="256"/>
+						</xsd:restriction>
+					</xsd:simpleType>
+				</xsd:element>
+				<xsd:element name="dataFiPublicacio" type="xsd:date" minOccurs="0"/>
+				<xsd:element name="destacat" type="xsd:boolean" minOccurs="0"/>
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+	<xsd:element name="respostaModificarEdicte">
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element ref="resultat"/>
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+	<!-- ======================================================= -->
+	<!-- Despublicar edicte                                        -->
+	<!-- ======================================================= -->
+	<xsd:element name="peticioDespublicarEdicte">
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element name="idEdicte">
+					<xsd:simpleType>
+						<xsd:restriction base="xsd:string">
+							<xsd:maxLength value="256"/>
+						</xsd:restriction>
+					</xsd:simpleType>
+				</xsd:element>
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+	<xsd:element name="respostaDespublicarEdicte">
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element ref="resultat"/>
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+	<!-- ======================================================= -->
+	<!-- Sincronitzar                                            -->
+	<!-- ======================================================= -->
+	<xsd:element name="peticioSincronitzarEdictes"/>
+	<xsd:element name="respostaSincronitzarEdictes">
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element name="edicte" minOccurs="0" maxOccurs="unbounded">
+					<xsd:complexType>
+						<xsd:sequence>
+							<xsd:element name="dadesEdicte" type="tEdicte"/>
+							<xsd:element name="codiEns">
+								<xsd:simpleType>
+									<xsd:restriction base="xsd:string">
+										<xsd:maxLength value="10"/>
+									</xsd:restriction>
+								</xsd:simpleType>
+							</xsd:element>
+							<xsd:element name="operacio">
+								<xsd:simpleType>
+									<xsd:restriction base="xsd:string">
+										<xsd:enumeration value="publicar"/>
+										<xsd:enumeration value="despublicar"/>
+									</xsd:restriction>
+								</xsd:simpleType>
+							</xsd:element>
+							<xsd:element name="dataProces" type="xsd:date"/>
+						</xsd:sequence>
+					</xsd:complexType>
+				</xsd:element>
+				<xsd:element ref="resultat"/>
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+	<!-- ======================================================= -->
+	<!-- Document edicte                                       -->
+	<!-- ======================================================= -->
+	<xsd:element name="peticioConsultarDocumentEdicte">
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element name="idEdicte">
+					<xsd:simpleType>
+						<xsd:restriction base="xsd:string">
+							<xsd:maxLength value="256"/>
+						</xsd:restriction>
+					</xsd:simpleType>
+				</xsd:element>
+				<xsd:choice>
+					<xsd:element name="idioma" type="tIdioma"/>
+					<xsd:element ref="diligencia"/>
+				</xsd:choice>
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+	<xsd:element name="respostaConsultarDocumentEdicte">
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:choice>
+					<xsd:element name="diligencia" type="xsd:base64Binary"/>
+					<xsd:element name="edicte" type="xsd:base64Binary"/>
+				</xsd:choice>
+				<xsd:element ref="resultat"/>
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+	<!-- ======================================================= -->
+	<!-- Diligencia edicte                                       -->
+	<!-- ======================================================= -->
+	<xsd:element name="peticioConsultarEstatEdicte">
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element name="idEdicte">
+					<xsd:simpleType>
+						<xsd:restriction base="xsd:string">
+							<xsd:maxLength value="256"/>
+						</xsd:restriction>
+					</xsd:simpleType>
+				</xsd:element>
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+	<xsd:element name="respostaConsultarEstatEdicte">
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element name="estat" type="xsd:int"/>
+				<xsd:element name="dataIniciPublicacio" type="xsd:date"/>
+				<xsd:element name="dataIniciPublicacioEfectiva" type="xsd:date" minOccurs="0"/>
+				<xsd:element name="dataFiPublicacio" type="xsd:date" minOccurs="0"/>
+				<xsd:element name="dataFiPublicacioEfectiva" type="xsd:date" minOccurs="0"/>
+				<xsd:element name="dataRecepcio" type="xsd:date" minOccurs="0"/>
+				<xsd:element ref="resultat"/>
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+	<!-- ======================================================= -->
+	<!-- Resultat                                                -->
+	<!-- ======================================================= -->
+	<xsd:element name="resultat">
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element name="codiResultat" type="xsd:int"/>
+				<xsd:element name="descripcio" type="xsd:string"/>
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+	<xsd:simpleType name="tIdioma">
+		<xsd:restriction base="xsd:string">
+			<xsd:enumeration value="ca"/>
+			<xsd:enumeration value="es"/>
+			<xsd:enumeration value="oc"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+</xsd:schema>
