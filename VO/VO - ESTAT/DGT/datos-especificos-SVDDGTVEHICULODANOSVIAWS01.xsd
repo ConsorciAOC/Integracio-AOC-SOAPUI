@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF8"?>
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="http://intermediacion.redsara.es/scsp/esquemas/datosespecificos" targetNamespace="http://intermediacion.redsara.es/scsp/esquemas/datosespecificos" elementFormDefault="qualified" attributeFormDefault="unqualified">
 	<xs:element name="DatosEspecificos">
 		<xs:complexType>
@@ -38,7 +38,8 @@
 					</xs:annotation>
 				</xs:element>
 				<xs:element ref="DomicilioNotificacionTitular" minOccurs="0"/>
-				<xs:element ref="DatosSeguro" minOccurs="0"/>
+				<xs:element ref="ListaSeguros" minOccurs="0"/>
+				<xs:element ref="ListaTransferencias" minOccurs="0"/>
 			</xs:sequence>
 		</xs:complexType>
 	</xs:element>
@@ -328,7 +329,17 @@
 			</xs:restriction>
 		</xs:simpleType>
 	</xs:element>
-	<xs:element name="DatosSeguro">
+	<xs:element name="ListaSeguros">
+		<xs:annotation>
+			<xs:documentation>Lista de seguros que ha tenido el vehículo.</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="Seguro" maxOccurs="unbounded"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="Seguro">
 		<xs:annotation>
 			<xs:documentation>Datos del seguro del vehículo</xs:documentation>
 		</xs:annotation>
@@ -405,6 +416,83 @@
 			</xs:all>
 		</xs:complexType>
 	</xs:element>
+	<xs:element name="ListaTransferencias">
+		<xs:annotation>
+			<xs:documentation>Lista de transferencia que ha sufrido el vehículo.</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="Transferencia" maxOccurs="unbounded"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="Transferencia">
+		<xs:complexType>
+			<xs:all>
+				<xs:element ref="FechaTransferencia" minOccurs="0">
+					<xs:annotation>
+						<xs:documentation>Fecha en la que se realizó la transferencia.</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+				<xs:element ref="DocumentacionAnterior" minOccurs="0">
+					<xs:annotation>
+						<xs:documentation>Documento de identidad del titular anterior del vehículo.Puede ser CIF,NIF o NIE.</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+				<xs:element ref="Jefatura" minOccurs="0">
+					<xs:annotation>
+						<xs:documentation>Jefatura</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+				<xs:element ref="Sucursal" minOccurs="0">
+					<xs:annotation>
+						<xs:documentation>Sucursal.</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+			</xs:all>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="FechaTransferencia">
+		<xs:annotation>
+			<xs:documentation>Fecha en la que se realizó la transferencia.</xs:documentation>
+		</xs:annotation>
+		<xs:simpleType>
+			<xs:restriction base="xs:date"/>
+		</xs:simpleType>
+	</xs:element>
+	<xs:element name="DocumentacionAnterior">
+		<xs:annotation>
+			<xs:documentation>Documento de identidad del titular anterior del vehículo.Puede ser CIF,NIF o NIE.</xs:documentation>
+		</xs:annotation>
+		<xs:simpleType>
+			<xs:restriction base="xs:string">
+				<xs:minLength value="9"/>
+				<xs:maxLength value="30"/>
+			</xs:restriction>
+		</xs:simpleType>
+	</xs:element>
+	<xs:element name="Sucursal">
+		<xs:annotation>
+			<xs:documentation>Sucursal</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:all>
+				<xs:element ref="Codigo" minOccurs="0"/>
+				<xs:element ref="Descripcion" minOccurs="0"/>
+			</xs:all>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="Jefatura">
+		<xs:annotation>
+			<xs:documentation>Jefatura</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:all>
+				<xs:element ref="Codigo" minOccurs="0"/>
+				<xs:element ref="Descripcion" minOccurs="0"/>
+			</xs:all>
+		</xs:complexType>
+	</xs:element>
 	<!-- Bloc afegit a missatgeria MINHAP per retornar les dades del titular -->
 	<xs:element name="DatosTitular">
 		<xs:complexType>
@@ -412,7 +500,7 @@
 				<xs:element name="TipoDocumentacion">
 					<xs:simpleType>
 						<xs:restriction base="xs:string">
-							<xs:enumeration value="DNI"/>						
+							<xs:enumeration value="DNI"/>
 							<xs:enumeration value="NIF"/>
 							<xs:enumeration value="NIE"/>
 						</xs:restriction>
@@ -425,5 +513,5 @@
 				<xs:element name="Apellido2" type="xs:string" minOccurs="0"/>
 			</xs:sequence>
 		</xs:complexType>
-	</xs:element>	
+	</xs:element>
 </xs:schema>

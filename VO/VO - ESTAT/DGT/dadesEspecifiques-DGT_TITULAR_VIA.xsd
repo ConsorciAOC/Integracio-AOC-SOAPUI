@@ -24,7 +24,8 @@
 						<xs:sequence>
 							<xs:element ref="dgt:DomicilioNotificacionTitular" minOccurs="0"/>
 							<xs:element ref="dgt:DatosTitular" minOccurs="0"/>
-							<xs:element ref="dgt:DatosSeguro"/>
+							<xs:element ref="dgt:ListaSeguros" minOccurs="0"/>
+							<xs:element ref="dgt:ListaTransferencias" minOccurs="0"/>
 						</xs:sequence>
 					</xs:complexType>
 				</xs:element>

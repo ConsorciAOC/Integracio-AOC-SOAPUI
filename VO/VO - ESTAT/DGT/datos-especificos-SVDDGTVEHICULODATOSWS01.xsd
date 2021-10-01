@@ -446,7 +446,9 @@
 		</xs:annotation>
 		<xs:simpleType>
 			<xs:restriction base="xs:string">
-				<xs:pattern value="\d{1,4}"/>
+				<xs:minLength value="1"/>
+				<xs:maxLength value="4"/>
+				<xs:whiteSpace value="collapse"/>
 			</xs:restriction>
 		</xs:simpleType>
 	</xs:element>
@@ -481,7 +483,7 @@
 		<xs:simpleType>
 			<xs:restriction base="xs:string">
 				<xs:minLength value="1"/>
-				<xs:maxLength value="3"/>
+				<xs:maxLength value="4"/>
 				<xs:whiteSpace value="collapse"/>
 			</xs:restriction>
 		</xs:simpleType>
