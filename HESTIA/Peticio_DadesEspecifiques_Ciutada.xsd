@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- editado con XMLSpy v2020 sp1 (x64) (http://www.altova.com) por macarmona (personalextern) -->
+<xs:schema xmlns="http://www.aoc.cat/hestia" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.aoc.cat/hestia" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<!-- ======================================================= -->
+	<!-- Consulta Ciutadà                                        -->
+	<!-- ======================================================= -->
+	<xs:element name="PCIConsultaCiutada">
+		<xs:complexType>
+			<xs:annotation>
+				<xs:documentation>Es deu indicar codiINE i s'ha d'omplir només una de les tres opcions. Sinó, es retornarà l'error corresponent</xs:documentation>
+			</xs:annotation>
+			<xs:sequence>
+				<xs:element name="codiINE" type="xs:string" minOccurs="1" maxOccurs="1">
+					<xs:annotation>
+						<xs:documentation>Codi de l'Àrea Bàsica de Serveis Socials</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+				<xs:choice>
+					<xs:element name="idInternCiutada" type="xs:int" minOccurs="0">
+						<xs:annotation>
+							<xs:documentation>Identificador únic del ciutadà dins l’Hèstia</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="NIF" type="xs:string" minOccurs="0">
+						<xs:annotation>
+							<xs:documentation>NIF, NIE o Passaport del ciutadà</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="CIP" type="xs:string" minOccurs="0">
+						<xs:annotation>
+							<xs:documentation>Codi d’identificació personal assignat per CatSalut</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:choice>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

@@ -23,10 +23,16 @@
 
 	xmlns:over="http://www.aoc.cat/over"
 	xmlns:tauler="http://www.aoc.cat/etauler"
+	xmlns:hestia="http://www.aoc.cat/hestia"
 
 		elementFormDefault="qualified" attributeFormDefault="unqualified">
 		<xs:import namespace="http://www.aoc.cat/over" schemaLocation="./OVER/dadesEspecifiques.xsd"/>
 		<xs:import namespace="http://www.aoc.cat/etauler" schemaLocation="./ETAULER/dadesEspecifiques.xsd"/>
+		<xs:import namespace="http://www.aoc.cat/hestia" schemaLocation="./HESTIA/Peticio_DadesEspecifiques_Cites.xsd"/>
+		<xs:import namespace="http://www.aoc.cat/hestia" schemaLocation="./HESTIA/Peticio_DadesEspecifiques_Ciutada.xsd"/>
+		<xs:import namespace="http://www.aoc.cat/hestia" schemaLocation="./HESTIA/Peticio_DadesEspecifiques_Expedient.xsd"/>
+		<xs:import namespace="http://www.aoc.cat/hestia" schemaLocation="./HESTIA/Peticio_DadesEspecifiques_Recursos.xsd"/>
+		<xs:import namespace="http://www.aoc.cat/hestia" schemaLocation="./HESTIA/Peticio_DadesEspecifiques_Tramits.xsd"/>
 		
 		
 		
@@ -308,6 +314,12 @@
 						<xs:element ref="tauler:peticioDespublicarEdicte" minOccurs="0"/>
 						<xs:element ref="tauler:peticioSincronitzarEdictes" minOccurs="0"/>
 						<xs:element ref="tauler:respostaSincronitzarEdictes" minOccurs="0"/>
+						<xs:element ref="tauler:peticioConsultarEstatEdicte" minOccurs="0"/>
+						<xs:element ref="hestia:DadesEspecifiques" minOccurs="0"/>
+						<xs:element ref="hestia:PCIConsultaCiutada" minOccurs="0"/>
+						<xs:element ref="hestia:DadesEspecifiques" minOccurs="0"/>
+						<xs:element ref="hestia:DadesEspecifiques" minOccurs="0"/>
+						<xs:element ref="hestia:DadesEspecifiques" minOccurs="0"/>
 						
 						</xs:choice>
 				</xs:complexType>
