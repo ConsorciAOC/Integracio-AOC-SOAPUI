@@ -24,6 +24,7 @@
 	xmlns:over="http://www.aoc.cat/over"
 	xmlns:tauler="http://www.aoc.cat/etauler"
 	xmlns:hestia="http://www.aoc.cat/hestia"
+	xmlns:dogc="http://www.aoc.cat/dogc"
 
 		elementFormDefault="qualified" attributeFormDefault="unqualified">
 		<xs:import namespace="http://www.aoc.cat/over" schemaLocation="./OVER/dadesEspecifiques.xsd"/>
@@ -33,6 +34,7 @@
 		<xs:import namespace="http://www.aoc.cat/hestia" schemaLocation="./HESTIA/Peticio_DadesEspecifiques_Expedient.xsd"/>
 		<xs:import namespace="http://www.aoc.cat/hestia" schemaLocation="./HESTIA/Peticio_DadesEspecifiques_Recursos.xsd"/>
 		<xs:import namespace="http://www.aoc.cat/hestia" schemaLocation="./HESTIA/Peticio_DadesEspecifiques_Tramits.xsd"/>
+		<xs:import namespace="http://www.aoc.cat/dogc"  schemaLocation="./DOGC/dadesEspecifiques.xsd"/>
 		
 		
 		
@@ -317,9 +319,11 @@
 						<xs:element ref="tauler:peticioConsultarEstatEdicte" minOccurs="0"/>
 						<xs:element ref="hestia:DadesEspecifiques" minOccurs="0"/>
 						<xs:element ref="hestia:PCIConsultaCiutada" minOccurs="0"/>
-						<xs:element ref="hestia:DadesEspecifiques" minOccurs="0"/>
-						<xs:element ref="hestia:DadesEspecifiques" minOccurs="0"/>
-						<xs:element ref="hestia:DadesEspecifiques" minOccurs="0"/>
+						<xs:element ref="dogc:peticioSolicitudPublicacio" minOccurs="0"/>
+						<xs:element ref="dogc:peticioConsultaEstatPublicacio" minOccurs="0"/>
+									
+						
+						
 						
 						</xs:choice>
 				</xs:complexType>

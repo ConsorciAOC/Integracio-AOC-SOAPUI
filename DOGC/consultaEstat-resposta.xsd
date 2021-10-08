@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:element name="missatge">
+		<xs:complexType>
+            <xs:choice>
+                <!-- desestimada -->
+                <xs:sequence>
+                    <xs:element name="motiu">
+                        <xs:simpleType>
+    						<xs:restriction base="xs:string">
+        						<xs:maxLength value="512"/>
+            				</xs:restriction>
+                		</xs:simpleType>
+                    </xs:element>
+                </xs:sequence>
+                <!-- finalitzada -->
+                <xs:sequence>
+                    <xs:element name="diariPublicacio">
+                        <xs:simpleType>
+                            <xs:restriction base="xs:string">
+                                <xs:length value="5"/>
+                            </xs:restriction>
+                        </xs:simpleType>
+                    </xs:element>
+                    <xs:element name="dataPublicacio">
+                        <xs:simpleType>
+                            <xs:restriction base="xs:string">
+                                <xs:length value="8"/>
+                            </xs:restriction>
+                        </xs:simpleType>
+                    </xs:element>
+                    <xs:element name="urlDocument" minOccurs="0">
+                        <xs:simpleType>
+                            <xs:restriction base="xs:string">
+                                <xs:maxLength value="2000"/>
+                            </xs:restriction>
+                        </xs:simpleType>
+                    </xs:element>
+                </xs:sequence>                
+            </xs:choice>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>
