@@ -27,6 +27,7 @@
 	xmlns:dogc="http://www.aoc.cat/dogc"
 
 		elementFormDefault="qualified" attributeFormDefault="unqualified">
+		
 		<xs:import namespace="http://www.aoc.cat/over" schemaLocation="./OVER/dadesEspecifiques.xsd"/>
 		<xs:import namespace="http://www.aoc.cat/etauler" schemaLocation="./ETAULER/dadesEspecifiques.xsd"/>
 		<xs:import namespace="http://www.aoc.cat/hestia" schemaLocation="./HESTIA/DadesEspecifiques.xsd"/>
