@@ -29,11 +29,7 @@
 		elementFormDefault="qualified" attributeFormDefault="unqualified">
 		<xs:import namespace="http://www.aoc.cat/over" schemaLocation="./OVER/dadesEspecifiques.xsd"/>
 		<xs:import namespace="http://www.aoc.cat/etauler" schemaLocation="./ETAULER/dadesEspecifiques.xsd"/>
-		<xs:import namespace="http://www.aoc.cat/hestia" schemaLocation="./HESTIA/Peticio_DadesEspecifiques_Cites.xsd"/>
-		<xs:import namespace="http://www.aoc.cat/hestia" schemaLocation="./HESTIA/Peticio_DadesEspecifiques_Ciutada.xsd"/>
-		<xs:import namespace="http://www.aoc.cat/hestia" schemaLocation="./HESTIA/Peticio_DadesEspecifiques_Expedient.xsd"/>
-		<xs:import namespace="http://www.aoc.cat/hestia" schemaLocation="./HESTIA/Peticio_DadesEspecifiques_Recursos.xsd"/>
-		<xs:import namespace="http://www.aoc.cat/hestia" schemaLocation="./HESTIA/Peticio_DadesEspecifiques_Tramits.xsd"/>
+		<xs:import namespace="http://www.aoc.cat/hestia" schemaLocation="./HESTIA/DadesEspecifiques.xsd"/>
 		<xs:import namespace="http://www.aoc.cat/dogc"  schemaLocation="./DOGC/dadesEspecifiques.xsd"/>
 		
 		
