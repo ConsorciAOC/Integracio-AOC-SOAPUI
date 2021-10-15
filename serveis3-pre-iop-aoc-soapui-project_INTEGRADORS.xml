@@ -34060,8 +34060,8 @@
                   </ns1:DatosGenericos>\r
                   <ns1:DatosEspecificos>\r
                      <ns3:peticioDadesConsulta xmlns="http://www.aoc.cat/regentitats" xmlns:ns3="http://www.aoc.cat/regentitats" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">\r
-                        <ns3:numInscripcio>63363</ns3:numInscripcio>\r
-                        <ns3:demTerritorial>4</ns3:demTerritorial>\r
+                        <ns3:numInscripcio>1058</ns3:numInscripcio>\r
+                        <ns3:demTerritorial>5</ns3:demTerritorial>\r
                         <ns3:tipusEntitat>2</ns3:tipusEntitat>\r
                      </ns3:peticioDadesConsulta>\r
                   </ns1:DatosEspecificos>\r
@@ -35653,7 +35653,7 @@
                   <ns1:NifEmisor>Q0801175A</ns1:NifEmisor>\r
                   <ns1:NombreEmisor>CAOC</ns1:NombreEmisor>\r
                </ns1:Emisor>\r
-               <!--<ns1:IdSolicitanteOriginal>1DPGO049_1DPGO049_g_1</ns1:IdSolicitanteOriginal>-->\r
+               <ns1:IdSolicitanteOriginal>9821920002</ns1:IdSolicitanteOriginal>
                <ns1:Funcionario>\r
                   <ns1:NombreCompletoFuncionario>${Properties#NombreCompletoFuncionario}</ns1:NombreCompletoFuncionario>\r
                   <ns1:NifFuncionario>${Properties#NIFFuncionario}</ns1:NifFuncionario>\r
@@ -35689,10 +35689,11 @@
                   </ns1:DatosGenericos>\r
                   <ns1:DatosEspecificos>\r
                      <reg:peticionNotaSimpleRegistroPropiedad xmlns:reg="http://www.aocat.net/registradors" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">\r
-                        <reg:datosTitular>\r
+                       <reg:idufir>28084000511694</reg:idufir>
+                       <!-- <reg:datosTitular>\r
                            <reg:nif>A83717355</reg:nif>\r
                            <reg:maxFincas>5</reg:maxFincas>\r
-                        </reg:datosTitular>\r
+                        </reg:datosTitular> -->\r
                      </reg:peticionNotaSimpleRegistroPropiedad>\r
                   </ns1:DatosEspecificos>\r
                </ns1:SolicitudTransmision>\r

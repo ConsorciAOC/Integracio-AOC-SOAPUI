@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<!-- edited with XMLSpy v2008 rel. 2 sp2 (http://www.altova.com) by Sergio Figueras (Consorci Administració Oberta de Catalunya) -->
+<xs:schema xmlns="http://www.aocat.net/sct/dev" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.aocat.net/sct/dev" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<!-- ======================================================= -->
+	<!-- Peticio de consulta de publicacions				                                             -->
+	<!-- ======================================================= -->
+	<xs:element name="PeticioConsultaCredencialsDev">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="IdPeticio">
+                    <xs:simpleType>
+                        <xs:restriction base="xs:string">
+                            <xs:maxLength value="16"/>
+                        </xs:restriction>
+                    </xs:simpleType>
+                </xs:element>
+				<xs:element name="ConsultaCredencials" maxOccurs="500">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="IdSolicitud" type="xs:string"/>
+							<xs:element name="IdDocument" type="xs:string"/>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<!-- ======================================================= -->
+	<!-- Peticio de consulta de publicacions				                                             -->
+	<!-- ======================================================= -->
+	<xs:element name="RespostaConsultaCredencialsDev">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="IdPeticio" type="xs:string"/>
+				<xs:element name="EstatPeticio" type="xs:string"/>
+				<xs:element name="DescripcioEstat" type="xs:string"  minOccurs="0"/>
+				<xs:element name="ConsultaCredencials" minOccurs="0" maxOccurs="unbounded">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="IdSolicitud" type="xs:string"/>
+							<xs:element name="EstatSolicitud" type="xs:string"/>
+							<xs:element name="IdDocument" type="xs:string"/>
+							<xs:element name="Credencials" minOccurs="0">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element name="Telefon" type="xs:string" minOccurs="0" maxOccurs="5"/>
+										<xs:element name="Correu" type="xs:string" minOccurs="0" maxOccurs="5"/>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

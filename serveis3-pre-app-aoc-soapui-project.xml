@@ -20,11 +20,13 @@
         </xs:complexType>
       </xs:element>
     </xs:schema>
-    <xs:schema targetNamespace="http://gencat.net/scsp/esquemes/peticion" elementFormDefault="qualified" attributeFormDefault="unqualified" xmlns="http://gencat.net/scsp/esquemes/peticion" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:over="http://www.aoc.cat/over" xmlns:tauler="http://www.aoc.cat/etauler" xmlns:hestia="http://www.aoc.cat/hestia" xmlns:dogc="http://www.aoc.cat/dogc">
+    <xs:schema targetNamespace="http://gencat.net/scsp/esquemes/peticion" elementFormDefault="qualified" attributeFormDefault="unqualified" xmlns="http://gencat.net/scsp/esquemes/peticion" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:over="http://www.aoc.cat/over" xmlns:tauler="http://www.aoc.cat/etauler" xmlns:hestia="http://www.aoc.cat/hestia" xmlns:dogc="http://www.aoc.cat/dogc" xmlns:boe="http://www.aoc.cat/boe" xmlns:sctdev="http://www.aocat.net/sct/dev">
       <xs:import namespace="http://www.aoc.cat/over" schemaLocation="./OVER/dadesEspecifiques.xsd"/>
       <xs:import namespace="http://www.aoc.cat/etauler" schemaLocation="./ETAULER/dadesEspecifiques.xsd"/>
       <xs:import namespace="http://www.aoc.cat/hestia" schemaLocation="./HESTIA/DadesEspecifiques.xsd"/>
       <xs:import namespace="http://www.aoc.cat/dogc" schemaLocation="./DOGC/dadesEspecifiques.xsd"/>
+      <xs:import namespace="http://www.aoc.cat/boe" schemaLocation="./BOE/dadesEspecifiques.xsd"/>
+      <xs:import namespace="http://www.aocat.net/sct/dev" schemaLocation="./SCT_DEV/consultaCredencialsDEVDadesEspecifiques.xsd"/>
       <xs:element name="Apellido1">
         <xs:simpleType>
           <xs:restriction base="xs:string">
@@ -308,6 +310,10 @@
             <xs:element ref="hestia:PCIConsultaCiutada" minOccurs="0"/>
             <xs:element ref="dogc:peticioSolicitudPublicacio" minOccurs="0"/>
             <xs:element ref="dogc:peticioConsultaEstatPublicacio" minOccurs="0"/>
+            <xs:element ref="boe:peticioEnviamentAnunci" minOccurs="0"/>
+            <xs:element ref="boe:peticioConsultaEstatAnunci" minOccurs="0"/>
+            <xs:element ref="boe:peticioAnullacioAnunci" minOccurs="0"/>
+            <xs:element ref="sctdev:PeticioConsultaCredencialsDev" minOccurs="0"/>
           </xs:choice>
         </xs:complexType>
       </xs:element>
@@ -2463,6 +2469,211 @@
       </xs:sequence>
     </xs:complexType>
   </xs:element>
+</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>file:\C:\Users\cmoralea\Desktop\SOAP%20millora\Integracio-AOC-SOAPUI\BOE\dadesEspecifiques.xsd</con:url><con:content><![CDATA[<xs:schema targetNamespace="http://www.aoc.cat/boe" elementFormDefault="qualified" attributeFormDefault="unqualified" xmlns="http://www.aoc.cat/boe" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:nns="xsi:noNamespaceSchemaLocation" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <!--=======================================================-->
+  <!--Enviar-->
+  <!--=======================================================-->
+  <xs:element name="peticioEnviamentAnunci">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:choice>
+          <xs:element name="enviament" type="xs:string"/>
+          <xs:element name="id" type="xs:string"/>
+        </xs:choice>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="respostaEnviamentAnunci">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="resposta" minOccurs="0">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="idEnviamentBoe" type="xs:string" minOccurs="0"/>
+              <xs:element name="anuncis">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="anunci" maxOccurs="unbounded">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element name="id" type="xs:string" minOccurs="0"/>
+                          <xs:element name="idBoe" type="xs:string" minOccurs="0"/>
+                          <xs:element name="avisos" minOccurs="0">
+                            <xs:complexType>
+                              <xs:sequence>
+                                <xs:element ref="avis" maxOccurs="unbounded"/>
+                              </xs:sequence>
+                            </xs:complexType>
+                          </xs:element>
+                          <xs:element name="errors" minOccurs="0">
+                            <xs:complexType>
+                              <xs:sequence>
+                                <xs:element ref="error" maxOccurs="unbounded"/>
+                              </xs:sequence>
+                            </xs:complexType>
+                          </xs:element>
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element ref="resultat"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="avis">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="codi" type="xs:string"/>
+        <xs:element name="descripcio" type="xs:string"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="error">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="codi" type="xs:string"/>
+        <xs:element name="descripcio" type="xs:string"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <!--=======================================================-->
+  <!--Estat-->
+  <!--=======================================================-->
+  <xs:element name="peticioConsultaEstatAnunci">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="idEnviamentBoe" type="xs:string"/>
+        <xs:element name="idBoe" type="xs:string" minOccurs="0"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="respostaConsultaEstatAnunci">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="anunci" minOccurs="0" maxOccurs="unbounded"/>
+        <xs:element ref="resultat"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="anunci">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="id" type="xs:string" minOccurs="0"/>
+        <xs:element name="idBoe" type="xs:string"/>
+        <xs:element name="idEnviamentBoe" type="xs:string"/>
+        <xs:element name="estatBoe" type="xs:string"/>
+        <xs:element name="nboBoe" type="xs:string" minOccurs="0"/>
+        <xs:element name="dataBoe" type="xs:string" minOccurs="0"/>
+        <xs:element name="cveBoe" type="xs:string" minOccurs="0"/>
+        <xs:element name="urlBoe" type="xs:string" minOccurs="0"/>
+        <xs:element ref="motiusDevolucio" minOccurs="0"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="motiusDevolucio">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="motiu" maxOccurs="unbounded"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="motiu">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="descripcio" type="xs:string"/>
+        <xs:element name="observacio" type="xs:string" minOccurs="0"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <!--=======================================================-->
+  <!--Anul·lació-->
+  <!--=======================================================-->
+  <xs:element name="peticioAnullacioAnunci">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="idEnviamentBoe" type="xs:string"/>
+        <xs:element name="idBoe" type="xs:string" minOccurs="0"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="respostaAnullacioAnunci">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="resultat"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <!--=======================================================-->
+  <!--Resultat-->
+  <!--=======================================================-->
+  <xs:element name="resultat">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="codiResultat" type="xs:string"/>
+        <xs:element name="descripcio" type="xs:string"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>file:\C:\Users\cmoralea\Desktop\SOAP%20millora\Integracio-AOC-SOAPUI\SCT_DEV\consultaCredencialsDEVDadesEspecifiques.xsd</con:url><con:content><![CDATA[<!--edited with XMLSpy v2008 rel. 2 sp2 (http://www.altova.com) by Sergio Figueras (Consorci Administració Oberta de Catalunya)-->
+<xs:schema targetNamespace="http://www.aocat.net/sct/dev" elementFormDefault="qualified" attributeFormDefault="unqualified" xmlns="http://www.aocat.net/sct/dev" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <!--=======================================================-->
+  <!--Peticio de consulta de publicacions-->
+  <!--=======================================================-->
+  <xs:element name="PeticioConsultaCredencialsDev">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="IdPeticio">
+          <xs:simpleType>
+            <xs:restriction base="xs:string">
+              <xs:maxLength value="16"/>
+            </xs:restriction>
+          </xs:simpleType>
+        </xs:element>
+        <xs:element name="ConsultaCredencials" maxOccurs="500">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="IdSolicitud" type="xs:string"/>
+              <xs:element name="IdDocument" type="xs:string"/>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <!--=======================================================-->
+  <!--Peticio de consulta de publicacions-->
+  <!--=======================================================-->
+  <xs:element name="RespostaConsultaCredencialsDev">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="IdPeticio" type="xs:string"/>
+        <xs:element name="EstatPeticio" type="xs:string"/>
+        <xs:element name="DescripcioEstat" type="xs:string" minOccurs="0"/>
+        <xs:element name="ConsultaCredencials" minOccurs="0" maxOccurs="unbounded">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="IdSolicitud" type="xs:string"/>
+              <xs:element name="EstatSolicitud" type="xs:string"/>
+              <xs:element name="IdDocument" type="xs:string"/>
+              <xs:element name="Credencials" minOccurs="0">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="Telefon" type="xs:string" minOccurs="0" maxOccurs="5"/>
+                    <xs:element name="Correu" type="xs:string" minOccurs="0" maxOccurs="5"/>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
 </xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part></con:definitionCache><con:endpoints><con:endpoint>https://serveis3-pre.app.aoc.cat:443/siri-proxy/services/Sincron</con:endpoint></con:endpoints><con:operation id="27535704-dd40-4dc9-8144-895ac870945c" isOneWay="false" action="http://www.openuri.org/procesa" name="procesa" bindingOperationName="procesa" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="dc412aad-0078-4bac-bbc6-496f47f2e336" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>https://serveis3-pre.app.aoc.cat:443/siri-proxy/services/Sincron</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:open="http://www.openuri.org/" xmlns:pet="http://gencat.net/scsp/esquemes/peticion" xmlns:over="http://www.aoc.cat/over" xmlns:eta="http://www.aoc.cat/etauler" xmlns:hes="http://www.aoc.cat/hestia">\r
    <soapenv:Header/>\r
    <soapenv:Body>\r
@@ -2925,7 +3136,996 @@
          </pet:Peticion>\r
       </open:procesa>\r
    </soapenv:Body>\r
-</soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://www.openuri.org/procesa"/><con:wsrmConfig version="1.2"/></con:call></con:operation></con:interface><con:interface xsi:type="con:WsdlInterface" id="e99414a0-f2d5-4586-aa9d-e901a01af23b" wsaVersion="NONE" name="AsincronSoap" type="wsdl" bindingName="{http://www.openuri.org/}AsincronSoap" soapVersion="1_1" anonymous="optional" definition="https://serveis3-pre.app.aoc.cat/siri-proxy/services/Asincron?wsdl" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache type="TEXT" rootPart="https://serveis3-pre.app.aoc.cat/siri-proxy/services/Asincron?wsdl"><con:part><con:url>https://serveis3-pre.app.aoc.cat/siri-proxy/services/Asincron?wsdl</con:url><con:content><![CDATA[<!--Published by JAX-WS RI at http://jax-ws.dev.java.net. RI's version is Metro/2.2 (branches/2.2-7015; 2012-02-20T20:31:25+0000) JAXWS-RI/2.2.6 JAXWS/2.2 svn-revision#unknown.-->
+</soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://www.openuri.org/procesa"/><con:wsrmConfig version="1.2"/></con:call><con:call id="5766fb26-99ec-49fe-accc-788d9eee300b" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>https://serveis3-pre.app.aoc.cat:443/siri-proxy/services/Sincron</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:open="http://www.openuri.org/" xmlns:pet="http://gencat.net/scsp/esquemes/peticion" xmlns:over="http://www.aoc.cat/over" xmlns:eta="http://www.aoc.cat/etauler" xmlns:hes="http://www.aoc.cat/hestia" xmlns:dogc="http://www.aoc.cat/dogc" xmlns:boe="http://www.aoc.cat/boe">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <open:procesa>\r
+         <pet:Peticion>\r
+            <!--You may enter the following 2 items in any order-->\r
+            <pet:Atributos>\r
+               <!--You may enter the following 11 items in any order-->\r
+               <pet:IdPeticion>?</pet:IdPeticion>\r
+               <pet:NumElementos>?</pet:NumElementos>\r
+               <pet:TimeStamp>?</pet:TimeStamp>\r
+               <!--Optional:-->\r
+               <pet:Estado>\r
+                  <!--You may enter the following 4 items in any order-->\r
+                  <!--Optional:-->\r
+                  <pet:CodigoEstado>?</pet:CodigoEstado>\r
+                  <!--Optional:-->\r
+                  <pet:CodigoEstadoSecundario>?</pet:CodigoEstadoSecundario>\r
+                  <!--Optional:-->\r
+                  <pet:LiteralError>?</pet:LiteralError>\r
+                  <!--Optional:-->\r
+                  <pet:TiempoEstimadoRespuesta>?</pet:TiempoEstimadoRespuesta>\r
+               </pet:Estado>\r
+               <pet:CodigoCertificado>?</pet:CodigoCertificado>\r
+               <pet:CodigoProducto>?</pet:CodigoProducto>\r
+               <!--Optional:-->\r
+               <pet:DatosAutorizacion>\r
+                  <!--You may enter the following 3 items in any order-->\r
+                  <pet:IdentificadorSolicitante>?</pet:IdentificadorSolicitante>\r
+                  <pet:NombreSolicitante>?</pet:NombreSolicitante>\r
+                  <pet:Finalidad>?</pet:Finalidad>\r
+               </pet:DatosAutorizacion>\r
+               <!--Optional:-->\r
+               <pet:Emisor>\r
+                  <!--You may enter the following 2 items in any order-->\r
+                  <pet:NifEmisor>?</pet:NifEmisor>\r
+                  <pet:NombreEmisor>?</pet:NombreEmisor>\r
+               </pet:Emisor>\r
+               <!--Optional:-->\r
+               <pet:IdSolicitanteOriginal>?</pet:IdSolicitanteOriginal>\r
+               <!--Optional:-->\r
+               <pet:NomSolicitanteOriginal>?</pet:NomSolicitanteOriginal>\r
+               <!--Optional:-->\r
+               <pet:Funcionario>\r
+                  <!--Optional:-->\r
+                  <pet:NombreCompletoFuncionario>?</pet:NombreCompletoFuncionario>\r
+                  <!--Optional:-->\r
+                  <pet:NifFuncionario>?</pet:NifFuncionario>\r
+                  <!--Optional:-->\r
+                  <pet:EMailFuncionario>?</pet:EMailFuncionario>\r
+                  <!--Optional:-->\r
+                  <pet:CodigoOrganismoFuncionario>?</pet:CodigoOrganismoFuncionario>\r
+                  <!--Optional:-->\r
+                  <pet:CertificadoDigital>cid:1618188515444</pet:CertificadoDigital>\r
+               </pet:Funcionario>\r
+            </pet:Atributos>\r
+            <pet:Solicitudes>\r
+               <!--1 or more repetitions:-->\r
+               <pet:SolicitudTransmision>\r
+                  <!--You may enter the following 2 items in any order-->\r
+                  <pet:DatosGenericos>\r
+                     <!--You may enter the following 5 items in any order-->\r
+                     <!--Optional:-->\r
+                     <pet:Emisor>\r
+                        <!--You may enter the following 2 items in any order-->\r
+                        <pet:NifEmisor>?</pet:NifEmisor>\r
+                        <pet:NombreEmisor>?</pet:NombreEmisor>\r
+                     </pet:Emisor>\r
+                     <pet:Solicitante>\r
+                        <!--You may enter the following 5 items in any order-->\r
+                        <pet:IdentificadorSolicitante>?</pet:IdentificadorSolicitante>\r
+                        <pet:NombreSolicitante>?</pet:NombreSolicitante>\r
+                        <pet:Finalidad>?</pet:Finalidad>\r
+                        <pet:Consentimiento>?</pet:Consentimiento>\r
+                        <!--Optional:-->\r
+                        <pet:Funcionario>\r
+                           <!--Optional:-->\r
+                           <pet:NombreCompletoFuncionario>?</pet:NombreCompletoFuncionario>\r
+                           <!--Optional:-->\r
+                           <pet:NifFuncionario>?</pet:NifFuncionario>\r
+                           <!--Optional:-->\r
+                           <pet:EMailFuncionario>?</pet:EMailFuncionario>\r
+                           <!--Optional:-->\r
+                           <pet:CodigoOrganismoFuncionario>?</pet:CodigoOrganismoFuncionario>\r
+                           <!--Optional:-->\r
+                           <pet:CertificadoDigital>cid:1160074030101</pet:CertificadoDigital>\r
+                        </pet:Funcionario>\r
+                     </pet:Solicitante>\r
+                     <!--Optional:-->\r
+                     <pet:Titular>\r
+                        <pet:TipoDocumentacion>?</pet:TipoDocumentacion>\r
+                        <pet:Documentacion>?</pet:Documentacion>\r
+                        <!--Optional:-->\r
+                        <pet:NombreCompleto>?</pet:NombreCompleto>\r
+                        <!--Optional:-->\r
+                        <pet:Nombre>?</pet:Nombre>\r
+                        <!--Optional:-->\r
+                        <pet:Apellido1>?</pet:Apellido1>\r
+                        <!--Optional:-->\r
+                        <pet:Apellido2>?</pet:Apellido2>\r
+                     </pet:Titular>\r
+                     <pet:Transmision>\r
+                        <!--You may enter the following 4 items in any order-->\r
+                        <pet:CodigoCertificado>?</pet:CodigoCertificado>\r
+                        <pet:IdSolicitud>?</pet:IdSolicitud>\r
+                        <!--Optional:-->\r
+                        <pet:IdTransmision>?</pet:IdTransmision>\r
+                        <!--Optional:-->\r
+                        <pet:FechaGeneracion>?</pet:FechaGeneracion>\r
+                     </pet:Transmision>\r
+                     <!--Optional:-->\r
+                     <pet:Ficheros>\r
+                        <!--1 or more repetitions:-->\r
+                        <pet:Fichero>\r
+                           <!--Optional:-->\r
+                           <pet:NombreFichero>?</pet:NombreFichero>\r
+                           <!--You have a CHOICE of the next 3 items at this level-->\r
+                           <pet:RutaFichero>?</pet:RutaFichero>\r
+                           <pet:URLDescarga>?</pet:URLDescarga>\r
+                           <pet:Contenido>cid:1449559565016</pet:Contenido>\r
+                           <pet:Id>?</pet:Id>\r
+                           <!--Optional:-->\r
+                           <pet:Hash>cid:92261073487</pet:Hash>\r
+                           <!--Optional:-->\r
+                           <pet:Firma>cid:579415945699</pet:Firma>\r
+                           <!--Optional:-->\r
+                           <pet:Via>?</pet:Via>\r
+                        </pet:Fichero>\r
+                     </pet:Ficheros>\r
+                  </pet:DatosGenericos>\r
+                  <!--Optional:-->\r
+                  <pet:DatosEspecificos>\r
+                     <!--You have a CHOICE of the next 21 items at this level-->\r
+                     <!--Optional:-->\r
+                     <over:peticioIntegracio>\r
+                        <over:peticioFormulariTramit>\r
+                           <over:codiCataleg>?</over:codiCataleg>\r
+                           <over:codiFuncionalServei>?</over:codiFuncionalServei>\r
+                           <over:codiFuncionalTramit>?</over:codiFuncionalTramit>\r
+                           <!--Optional:-->\r
+                           <over:codiInstanciaServei>?</over:codiInstanciaServei>\r
+                           <!--Optional:-->\r
+                           <over:codiInstanciaTramitPredecessor>?</over:codiInstanciaTramitPredecessor>\r
+                           <over:codiEns>?</over:codiEns>\r
+                           <!--Optional:-->\r
+                           <over:codiEnsOrigen>?</over:codiEnsOrigen>\r
+                           <!--Optional:-->\r
+                           <over:codiEnsDesti>?</over:codiEnsDesti>\r
+                           <!--Optional:-->\r
+                           <over:dadesAddicionals>?</over:dadesAddicionals>\r
+                           <!--Optional:-->\r
+                           <over:groupID>?</over:groupID>\r
+                        </over:peticioFormulariTramit>\r
+                        <over:dadesContingut>\r
+                           <over:versio>?</over:versio>\r
+                           <over:formulari>?</over:formulari>\r
+                           <!--Optional:-->\r
+                           <over:aliesNomTramit>?</over:aliesNomTramit>\r
+                           <!--Optional:-->\r
+                           <over:registreOrigen tipusRegistre="?">\r
+                              <over:dataRegistre>?</over:dataRegistre>\r
+                              <over:assentamentRegistre>?</over:assentamentRegistre>\r
+                              <!--Optional:-->\r
+                              <over:evidenciaRegistre>cid:377169278206</over:evidenciaRegistre>\r
+                           </over:registreOrigen>\r
+                           <!--Optional:-->\r
+                           <over:registreDesti tipusRegistre="?">\r
+                              <over:dataRegistre>?</over:dataRegistre>\r
+                              <over:assentamentRegistre>?</over:assentamentRegistre>\r
+                              <!--Optional:-->\r
+                              <over:evidenciaRegistre>cid:848656386997</over:evidenciaRegistre>\r
+                           </over:registreDesti>\r
+                        </over:dadesContingut>\r
+                     </over:peticioIntegracio>\r
+                     <!--Optional:-->\r
+                     <over:peticioDocumentacioTramit>\r
+                        <!--You have a CHOICE of the next 2 items at this level-->\r
+                        <over:codiInstanciaTramit>?</over:codiInstanciaTramit>\r
+                        <over:numeroAssentament>?</over:numeroAssentament>\r
+                        <!--Optional:-->\r
+                        <over:dadesTramit>?</over:dadesTramit>\r
+                     </over:peticioDocumentacioTramit>\r
+                     <!--Optional:-->\r
+                     <over:peticioConsultaTramits>\r
+                        <over:codiCataleg>?</over:codiCataleg>\r
+                        <over:codiFuncionalServei>?</over:codiFuncionalServei>\r
+                        <!--Optional:-->\r
+                        <over:codiFuncionalTramit>?</over:codiFuncionalTramit>\r
+                        <over:dataInici>?</over:dataInici>\r
+                        <over:dataFi>?</over:dataFi>\r
+                        <!--Optional:-->\r
+                        <over:tipus>?</over:tipus>\r
+                     </over:peticioConsultaTramits>\r
+                     <!--Optional:-->\r
+                     <over:peticioLlistaExpedients>\r
+                        <!--You have a CHOICE of the next 4 items at this level-->\r
+                        <over:cerca>\r
+                           <!--Optional:-->\r
+                           <over:codiEnsPromotor>?</over:codiEnsPromotor>\r
+                           <!--Optional:-->\r
+                           <over:codiFuncionalServei>?</over:codiFuncionalServei>\r
+                           <!--Optional:-->\r
+                           <over:codiFuncionalTramit>?</over:codiFuncionalTramit>\r
+                           <!--Optional:-->\r
+                           <over:codiFuncionalTramitTeResposta>?</over:codiFuncionalTramitTeResposta>\r
+                           <!--Optional:-->\r
+                           <over:codiEnsInteressat>?</over:codiEnsInteressat>\r
+                           <over:dataInici>?</over:dataInici>\r
+                           <over:dataFi>?</over:dataFi>\r
+                        </over:cerca>\r
+                        <over:codiInstanciaTramit>?</over:codiInstanciaTramit>\r
+                        <over:numExpedient>?</over:numExpedient>\r
+                        <over:numRegistre>?</over:numRegistre>\r
+                     </over:peticioLlistaExpedients>\r
+                     <!--Optional:-->\r
+                     <over:peticioConsultaExpedient>\r
+                        <over:codiInstanciaServei>?</over:codiInstanciaServei>\r
+                     </over:peticioConsultaExpedient>\r
+                     <!--Optional:-->\r
+                     <over:peticioLlistaServeis>\r
+                        <over:codiEnsPromotor>?</over:codiEnsPromotor>\r
+                        <!--Optional:-->\r
+                        <over:mostrarInactius>?</over:mostrarInactius>\r
+                     </over:peticioLlistaServeis>\r
+                     <!--Optional:-->\r
+                     <over:peticioLlistaTramits>\r
+                        <over:codiEnsPromotor>?</over:codiEnsPromotor>\r
+                        <over:codiFuncionalServei>?</over:codiFuncionalServei>\r
+                     </over:peticioLlistaTramits>\r
+                     <!--Optional:-->\r
+                     <eta:peticioPublicarEdicte>\r
+                        <eta:edicte>\r
+                           <eta:idEdicte>?</eta:idEdicte>\r
+                           <eta:numExpedient>?</eta:numExpedient>\r
+                           <!--1 to 3 repetitions:-->\r
+                           <eta:informacio>\r
+                              <eta:titol>?</eta:titol>\r
+                              <eta:descripcio>?</eta:descripcio>\r
+                              <eta:idioma>?</eta:idioma>\r
+                           </eta:informacio>\r
+                           <eta:dataIniciPublicacio>?</eta:dataIniciPublicacio>\r
+                           <!--Optional:-->\r
+                           <eta:dataFiPublicacio>?</eta:dataFiPublicacio>\r
+                           <!--Optional:-->\r
+                           <eta:destacat>?</eta:destacat>\r
+                           <eta:diligencia>\r
+                              <eta:idioma>?</eta:idioma>\r
+                              <eta:format>?</eta:format>\r
+                           </eta:diligencia>\r
+                           <!--1 to 3 repetitions:-->\r
+                           <eta:document>\r
+                              <eta:nom>?</eta:nom>\r
+                              <eta:id>?</eta:id>\r
+                              <eta:idioma>?</eta:idioma>\r
+                           </eta:document>\r
+                           <!--Optional:-->\r
+                           <eta:edicteExtern>\r
+                              <!--Optional:-->\r
+                              <eta:codiEnsOrigen>?</eta:codiEnsOrigen>\r
+                              <eta:nomEnsOrigen>?</eta:nomEnsOrigen>\r
+                              <eta:registreEntrada>?</eta:registreEntrada>\r
+                              <eta:dataRecepcio>?</eta:dataRecepcio>\r
+                              <!--Optional:-->\r
+                              <eta:eacat>\r
+                                 <eta:codiCataleg>?</eta:codiCataleg>\r
+                                 <eta:codiInstanciaServei>?</eta:codiInstanciaServei>\r
+                                 <eta:codiInstanciaTramit>?</eta:codiInstanciaTramit>\r
+                                 <eta:codiEns>?</eta:codiEns>\r
+                              </eta:eacat>\r
+                           </eta:edicteExtern>\r
+                           <!--1 to 3 repetitions:-->\r
+                           <eta:classificacio>\r
+                              <!--1 to 3 repetitions:-->\r
+                              <eta:classificacio>\r
+                                 <eta:concepte>?</eta:concepte>\r
+                                 <eta:categoria>?</eta:categoria>\r
+                                 <!--Optional:-->\r
+                                 <eta:subcategoria>?</eta:subcategoria>\r
+                                 <eta:idioma>?</eta:idioma>\r
+                              </eta:classificacio>\r
+                              <eta:tipus>?</eta:tipus>\r
+                           </eta:classificacio>\r
+                           <!--Optional:-->\r
+                           <eta:dadesAddicionals>\r
+                              <!--Optional:-->\r
+                              <eta:paraulesClau>?</eta:paraulesClau>\r
+                              <!--Optional:-->\r
+                              <eta:nifs>?</eta:nifs>\r
+                              <!--Zero or more repetitions:-->\r
+                              <eta:referencia>\r
+                                 <eta:url>?</eta:url>\r
+                                 <!--Optional:-->\r
+                                 <eta:seu>?</eta:seu>\r
+                                 <!--1 to 3 repetitions:-->\r
+                                 <eta:enllac>\r
+                                    <eta:titol>?</eta:titol>\r
+                                    <eta:idioma>?</eta:idioma>\r
+                                 </eta:enllac>\r
+                              </eta:referencia>\r
+                              <!--Zero or more repetitions:-->\r
+                              <eta:adjunt>\r
+                                 <eta:id>?</eta:id>\r
+                                 <!--1 to 3 repetitions:-->\r
+                                 <eta:enllac>\r
+                                    <eta:titol>?</eta:titol>\r
+                                    <eta:idioma>?</eta:idioma>\r
+                                 </eta:enllac>\r
+                              </eta:adjunt>\r
+                           </eta:dadesAddicionals>\r
+                        </eta:edicte>\r
+                     </eta:peticioPublicarEdicte>\r
+                     <!--Optional:-->\r
+                     <eta:peticioCancellarEdicte>\r
+                        <eta:idEdicte>?</eta:idEdicte>\r
+                     </eta:peticioCancellarEdicte>\r
+                     <!--Optional:-->\r
+                     <eta:peticioModificarEdicte>\r
+                        <eta:idEdicte>?</eta:idEdicte>\r
+                        <!--Optional:-->\r
+                        <eta:dataFiPublicacio>?</eta:dataFiPublicacio>\r
+                        <!--Optional:-->\r
+                        <eta:destacat>?</eta:destacat>\r
+                     </eta:peticioModificarEdicte>\r
+                     <!--Optional:-->\r
+                     <eta:peticioDespublicarEdicte>\r
+                        <eta:idEdicte>?</eta:idEdicte>\r
+                     </eta:peticioDespublicarEdicte>\r
+                     <!--Optional:-->\r
+                     <eta:peticioSincronitzarEdictes>?</eta:peticioSincronitzarEdictes>\r
+                     <!--Optional:-->\r
+                     <eta:respostaSincronitzarEdictes>\r
+                        <!--Zero or more repetitions:-->\r
+                        <eta:edicte>\r
+                           <eta:dadesEdicte>\r
+                              <eta:idEdicte>?</eta:idEdicte>\r
+                              <eta:numExpedient>?</eta:numExpedient>\r
+                              <!--1 to 3 repetitions:-->\r
+                              <eta:informacio>\r
+                                 <eta:titol>?</eta:titol>\r
+                                 <eta:descripcio>?</eta:descripcio>\r
+                                 <eta:idioma>?</eta:idioma>\r
+                              </eta:informacio>\r
+                              <eta:dataIniciPublicacio>?</eta:dataIniciPublicacio>\r
+                              <!--Optional:-->\r
+                              <eta:dataFiPublicacio>?</eta:dataFiPublicacio>\r
+                              <!--Optional:-->\r
+                              <eta:destacat>?</eta:destacat>\r
+                              <eta:diligencia>\r
+                                 <eta:idioma>?</eta:idioma>\r
+                                 <eta:format>?</eta:format>\r
+                              </eta:diligencia>\r
+                              <!--1 to 3 repetitions:-->\r
+                              <eta:document>\r
+                                 <eta:nom>?</eta:nom>\r
+                                 <eta:id>?</eta:id>\r
+                                 <eta:idioma>?</eta:idioma>\r
+                              </eta:document>\r
+                              <!--Optional:-->\r
+                              <eta:edicteExtern>\r
+                                 <!--Optional:-->\r
+                                 <eta:codiEnsOrigen>?</eta:codiEnsOrigen>\r
+                                 <eta:nomEnsOrigen>?</eta:nomEnsOrigen>\r
+                                 <eta:registreEntrada>?</eta:registreEntrada>\r
+                                 <eta:dataRecepcio>?</eta:dataRecepcio>\r
+                                 <!--Optional:-->\r
+                                 <eta:eacat>\r
+                                    <eta:codiCataleg>?</eta:codiCataleg>\r
+                                    <eta:codiInstanciaServei>?</eta:codiInstanciaServei>\r
+                                    <eta:codiInstanciaTramit>?</eta:codiInstanciaTramit>\r
+                                    <eta:codiEns>?</eta:codiEns>\r
+                                 </eta:eacat>\r
+                              </eta:edicteExtern>\r
+                              <!--1 to 3 repetitions:-->\r
+                              <eta:classificacio>\r
+                                 <!--1 to 3 repetitions:-->\r
+                                 <eta:classificacio>\r
+                                    <eta:concepte>?</eta:concepte>\r
+                                    <eta:categoria>?</eta:categoria>\r
+                                    <!--Optional:-->\r
+                                    <eta:subcategoria>?</eta:subcategoria>\r
+                                    <eta:idioma>?</eta:idioma>\r
+                                 </eta:classificacio>\r
+                                 <eta:tipus>?</eta:tipus>\r
+                              </eta:classificacio>\r
+                              <!--Optional:-->\r
+                              <eta:dadesAddicionals>\r
+                                 <!--Optional:-->\r
+                                 <eta:paraulesClau>?</eta:paraulesClau>\r
+                                 <!--Optional:-->\r
+                                 <eta:nifs>?</eta:nifs>\r
+                                 <!--Zero or more repetitions:-->\r
+                                 <eta:referencia>\r
+                                    <eta:url>?</eta:url>\r
+                                    <!--Optional:-->\r
+                                    <eta:seu>?</eta:seu>\r
+                                    <!--1 to 3 repetitions:-->\r
+                                    <eta:enllac>\r
+                                       <eta:titol>?</eta:titol>\r
+                                       <eta:idioma>?</eta:idioma>\r
+                                    </eta:enllac>\r
+                                 </eta:referencia>\r
+                                 <!--Zero or more repetitions:-->\r
+                                 <eta:adjunt>\r
+                                    <eta:id>?</eta:id>\r
+                                    <!--1 to 3 repetitions:-->\r
+                                    <eta:enllac>\r
+                                       <eta:titol>?</eta:titol>\r
+                                       <eta:idioma>?</eta:idioma>\r
+                                    </eta:enllac>\r
+                                 </eta:adjunt>\r
+                              </eta:dadesAddicionals>\r
+                           </eta:dadesEdicte>\r
+                           <eta:codiEns>?</eta:codiEns>\r
+                           <eta:operacio>?</eta:operacio>\r
+                           <eta:dataProces>?</eta:dataProces>\r
+                        </eta:edicte>\r
+                        <eta:resultat>\r
+                           <eta:codiResultat>?</eta:codiResultat>\r
+                           <eta:descripcio>?</eta:descripcio>\r
+                        </eta:resultat>\r
+                     </eta:respostaSincronitzarEdictes>\r
+                     <!--Optional:-->\r
+                     <eta:peticioConsultarEstatEdicte>\r
+                        <eta:idEdicte>?</eta:idEdicte>\r
+                     </eta:peticioConsultarEstatEdicte>\r
+                     <!--Optional:-->\r
+                     <hes:DadesEspecifiques>\r
+                        <hes:CodINE>?</hes:CodINE>\r
+                        <!--You have a CHOICE of the next 2 items at this level-->\r
+                        <hes:IdCites>?</hes:IdCites>\r
+                        <hes:DataInici>?</hes:DataInici>\r
+                        <hes:DataFi>?</hes:DataFi>\r
+                        <!--Optional:-->\r
+                        <hes:IdProfessionals>?</hes:IdProfessionals>\r
+                     </hes:DadesEspecifiques>\r
+                     <!--Optional:-->\r
+                     <hes:PCIConsultaCiutada>\r
+                        <hes:codiINE>?</hes:codiINE>\r
+                        <!--You have a CHOICE of the next 3 items at this level-->\r
+                        <!--Optional:-->\r
+                        <hes:idInternCiutada>?</hes:idInternCiutada>\r
+                        <!--Optional:-->\r
+                        <hes:NIF>?</hes:NIF>\r
+                        <!--Optional:-->\r
+                        <hes:CIP>?</hes:CIP>\r
+                     </hes:PCIConsultaCiutada>\r
+                     <!--Optional:-->\r
+                     <dogc:peticioSolicitudPublicacio>\r
+                        <dogc:identificador>?</dogc:identificador>\r
+                        <dogc:ordreInsercio>cid:1335106684524</dogc:ordreInsercio>\r
+                        <!--Optional:-->\r
+                        <dogc:registre>\r
+                           <dogc:registreSortida>\r
+                              <dogc:numero>?</dogc:numero>\r
+                              <dogc:data>?</dogc:data>\r
+                           </dogc:registreSortida>\r
+                           <dogc:registreEntrada>\r
+                              <dogc:numero>?</dogc:numero>\r
+                              <dogc:data>?</dogc:data>\r
+                           </dogc:registreEntrada>\r
+                        </dogc:registre>\r
+                     </dogc:peticioSolicitudPublicacio>\r
+                     <!--Optional:-->\r
+                     <dogc:peticioConsultaEstatPublicacio>\r
+                        <dogc:codiSolicitud>?</dogc:codiSolicitud>\r
+                     </dogc:peticioConsultaEstatPublicacio>\r
+                     <!--Optional:-->\r
+                     <boe:peticioEnviamentAnunci>\r
+                        <!--You have a CHOICE of the next 2 items at this level-->\r
+                        <boe:enviament>?</boe:enviament>\r
+                        <boe:id>?</boe:id>\r
+                     </boe:peticioEnviamentAnunci>\r
+                     <!--Optional:-->\r
+                     <boe:peticioConsultaEstatAnunci>\r
+                        <boe:idEnviamentBoe>?</boe:idEnviamentBoe>\r
+                        <!--Optional:-->\r
+                        <boe:idBoe>?</boe:idBoe>\r
+                     </boe:peticioConsultaEstatAnunci>\r
+                     <!--Optional:-->\r
+                     <boe:peticioAnullacioAnunci>\r
+                        <boe:idEnviamentBoe>?</boe:idEnviamentBoe>\r
+                        <!--Optional:-->\r
+                        <boe:idBoe>?</boe:idBoe>\r
+                     </boe:peticioAnullacioAnunci>\r
+                  </pet:DatosEspecificos>\r
+               </pet:SolicitudTransmision>\r
+            </pet:Solicitudes>\r
+         </pet:Peticion>\r
+      </open:procesa>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://www.openuri.org/procesa"/></con:call><con:call id="79d8c0c7-ca6a-4d86-9144-83dabf724a5c" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>https://serveis3-pre.app.aoc.cat:443/siri-proxy/services/Sincron</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:open="http://www.openuri.org/" xmlns:pet="http://gencat.net/scsp/esquemes/peticion" xmlns:over="http://www.aoc.cat/over" xmlns:eta="http://www.aoc.cat/etauler" xmlns:hes="http://www.aoc.cat/hestia" xmlns:dogc="http://www.aoc.cat/dogc" xmlns:boe="http://www.aoc.cat/boe" xmlns:dev="http://www.aocat.net/sct/dev">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <open:procesa>\r
+         <pet:Peticion>\r
+            <!--You may enter the following 2 items in any order-->\r
+            <pet:Atributos>\r
+               <!--You may enter the following 11 items in any order-->\r
+               <pet:IdPeticion>?</pet:IdPeticion>\r
+               <pet:NumElementos>?</pet:NumElementos>\r
+               <pet:TimeStamp>?</pet:TimeStamp>\r
+               <!--Optional:-->\r
+               <pet:Estado>\r
+                  <!--You may enter the following 4 items in any order-->\r
+                  <!--Optional:-->\r
+                  <pet:CodigoEstado>?</pet:CodigoEstado>\r
+                  <!--Optional:-->\r
+                  <pet:CodigoEstadoSecundario>?</pet:CodigoEstadoSecundario>\r
+                  <!--Optional:-->\r
+                  <pet:LiteralError>?</pet:LiteralError>\r
+                  <!--Optional:-->\r
+                  <pet:TiempoEstimadoRespuesta>?</pet:TiempoEstimadoRespuesta>\r
+               </pet:Estado>\r
+               <pet:CodigoCertificado>?</pet:CodigoCertificado>\r
+               <pet:CodigoProducto>?</pet:CodigoProducto>\r
+               <!--Optional:-->\r
+               <pet:DatosAutorizacion>\r
+                  <!--You may enter the following 3 items in any order-->\r
+                  <pet:IdentificadorSolicitante>?</pet:IdentificadorSolicitante>\r
+                  <pet:NombreSolicitante>?</pet:NombreSolicitante>\r
+                  <pet:Finalidad>?</pet:Finalidad>\r
+               </pet:DatosAutorizacion>\r
+               <!--Optional:-->\r
+               <pet:Emisor>\r
+                  <!--You may enter the following 2 items in any order-->\r
+                  <pet:NifEmisor>?</pet:NifEmisor>\r
+                  <pet:NombreEmisor>?</pet:NombreEmisor>\r
+               </pet:Emisor>\r
+               <!--Optional:-->\r
+               <pet:IdSolicitanteOriginal>?</pet:IdSolicitanteOriginal>\r
+               <!--Optional:-->\r
+               <pet:NomSolicitanteOriginal>?</pet:NomSolicitanteOriginal>\r
+               <!--Optional:-->\r
+               <pet:Funcionario>\r
+                  <!--Optional:-->\r
+                  <pet:NombreCompletoFuncionario>?</pet:NombreCompletoFuncionario>\r
+                  <!--Optional:-->\r
+                  <pet:NifFuncionario>?</pet:NifFuncionario>\r
+                  <!--Optional:-->\r
+                  <pet:EMailFuncionario>?</pet:EMailFuncionario>\r
+                  <!--Optional:-->\r
+                  <pet:CodigoOrganismoFuncionario>?</pet:CodigoOrganismoFuncionario>\r
+                  <!--Optional:-->\r
+                  <pet:CertificadoDigital>cid:377845631311</pet:CertificadoDigital>\r
+               </pet:Funcionario>\r
+            </pet:Atributos>\r
+            <pet:Solicitudes>\r
+               <!--1 or more repetitions:-->\r
+               <pet:SolicitudTransmision>\r
+                  <!--You may enter the following 2 items in any order-->\r
+                  <pet:DatosGenericos>\r
+                     <!--You may enter the following 5 items in any order-->\r
+                     <!--Optional:-->\r
+                     <pet:Emisor>\r
+                        <!--You may enter the following 2 items in any order-->\r
+                        <pet:NifEmisor>?</pet:NifEmisor>\r
+                        <pet:NombreEmisor>?</pet:NombreEmisor>\r
+                     </pet:Emisor>\r
+                     <pet:Solicitante>\r
+                        <!--You may enter the following 5 items in any order-->\r
+                        <pet:IdentificadorSolicitante>?</pet:IdentificadorSolicitante>\r
+                        <pet:NombreSolicitante>?</pet:NombreSolicitante>\r
+                        <pet:Finalidad>?</pet:Finalidad>\r
+                        <pet:Consentimiento>?</pet:Consentimiento>\r
+                        <!--Optional:-->\r
+                        <pet:Funcionario>\r
+                           <!--Optional:-->\r
+                           <pet:NombreCompletoFuncionario>?</pet:NombreCompletoFuncionario>\r
+                           <!--Optional:-->\r
+                           <pet:NifFuncionario>?</pet:NifFuncionario>\r
+                           <!--Optional:-->\r
+                           <pet:EMailFuncionario>?</pet:EMailFuncionario>\r
+                           <!--Optional:-->\r
+                           <pet:CodigoOrganismoFuncionario>?</pet:CodigoOrganismoFuncionario>\r
+                           <!--Optional:-->\r
+                           <pet:CertificadoDigital>cid:185979863980</pet:CertificadoDigital>\r
+                        </pet:Funcionario>\r
+                     </pet:Solicitante>\r
+                     <!--Optional:-->\r
+                     <pet:Titular>\r
+                        <pet:TipoDocumentacion>?</pet:TipoDocumentacion>\r
+                        <pet:Documentacion>?</pet:Documentacion>\r
+                        <!--Optional:-->\r
+                        <pet:NombreCompleto>?</pet:NombreCompleto>\r
+                        <!--Optional:-->\r
+                        <pet:Nombre>?</pet:Nombre>\r
+                        <!--Optional:-->\r
+                        <pet:Apellido1>?</pet:Apellido1>\r
+                        <!--Optional:-->\r
+                        <pet:Apellido2>?</pet:Apellido2>\r
+                     </pet:Titular>\r
+                     <pet:Transmision>\r
+                        <!--You may enter the following 4 items in any order-->\r
+                        <pet:CodigoCertificado>?</pet:CodigoCertificado>\r
+                        <pet:IdSolicitud>?</pet:IdSolicitud>\r
+                        <!--Optional:-->\r
+                        <pet:IdTransmision>?</pet:IdTransmision>\r
+                        <!--Optional:-->\r
+                        <pet:FechaGeneracion>?</pet:FechaGeneracion>\r
+                     </pet:Transmision>\r
+                     <!--Optional:-->\r
+                     <pet:Ficheros>\r
+                        <!--1 or more repetitions:-->\r
+                        <pet:Fichero>\r
+                           <!--Optional:-->\r
+                           <pet:NombreFichero>?</pet:NombreFichero>\r
+                           <!--You have a CHOICE of the next 3 items at this level-->\r
+                           <pet:RutaFichero>?</pet:RutaFichero>\r
+                           <pet:URLDescarga>?</pet:URLDescarga>\r
+                           <pet:Contenido>cid:253492853094</pet:Contenido>\r
+                           <pet:Id>?</pet:Id>\r
+                           <!--Optional:-->\r
+                           <pet:Hash>cid:686434655265</pet:Hash>\r
+                           <!--Optional:-->\r
+                           <pet:Firma>cid:543155718425</pet:Firma>\r
+                           <!--Optional:-->\r
+                           <pet:Via>?</pet:Via>\r
+                        </pet:Fichero>\r
+                     </pet:Ficheros>\r
+                  </pet:DatosGenericos>\r
+                  <!--Optional:-->\r
+                  <pet:DatosEspecificos>\r
+                     <!--You have a CHOICE of the next 22 items at this level-->\r
+                     <!--Optional:-->\r
+                     <over:peticioIntegracio>\r
+                        <over:peticioFormulariTramit>\r
+                           <over:codiCataleg>?</over:codiCataleg>\r
+                           <over:codiFuncionalServei>?</over:codiFuncionalServei>\r
+                           <over:codiFuncionalTramit>?</over:codiFuncionalTramit>\r
+                           <!--Optional:-->\r
+                           <over:codiInstanciaServei>?</over:codiInstanciaServei>\r
+                           <!--Optional:-->\r
+                           <over:codiInstanciaTramitPredecessor>?</over:codiInstanciaTramitPredecessor>\r
+                           <over:codiEns>?</over:codiEns>\r
+                           <!--Optional:-->\r
+                           <over:codiEnsOrigen>?</over:codiEnsOrigen>\r
+                           <!--Optional:-->\r
+                           <over:codiEnsDesti>?</over:codiEnsDesti>\r
+                           <!--Optional:-->\r
+                           <over:dadesAddicionals>?</over:dadesAddicionals>\r
+                           <!--Optional:-->\r
+                           <over:groupID>?</over:groupID>\r
+                        </over:peticioFormulariTramit>\r
+                        <over:dadesContingut>\r
+                           <over:versio>?</over:versio>\r
+                           <over:formulari>?</over:formulari>\r
+                           <!--Optional:-->\r
+                           <over:aliesNomTramit>?</over:aliesNomTramit>\r
+                           <!--Optional:-->\r
+                           <over:registreOrigen tipusRegistre="?">\r
+                              <over:dataRegistre>?</over:dataRegistre>\r
+                              <over:assentamentRegistre>?</over:assentamentRegistre>\r
+                              <!--Optional:-->\r
+                              <over:evidenciaRegistre>cid:696794030987</over:evidenciaRegistre>\r
+                           </over:registreOrigen>\r
+                           <!--Optional:-->\r
+                           <over:registreDesti tipusRegistre="?">\r
+                              <over:dataRegistre>?</over:dataRegistre>\r
+                              <over:assentamentRegistre>?</over:assentamentRegistre>\r
+                              <!--Optional:-->\r
+                              <over:evidenciaRegistre>cid:699675586435</over:evidenciaRegistre>\r
+                           </over:registreDesti>\r
+                        </over:dadesContingut>\r
+                     </over:peticioIntegracio>\r
+                     <!--Optional:-->\r
+                     <over:peticioDocumentacioTramit>\r
+                        <!--You have a CHOICE of the next 2 items at this level-->\r
+                        <over:codiInstanciaTramit>?</over:codiInstanciaTramit>\r
+                        <over:numeroAssentament>?</over:numeroAssentament>\r
+                        <!--Optional:-->\r
+                        <over:dadesTramit>?</over:dadesTramit>\r
+                     </over:peticioDocumentacioTramit>\r
+                     <!--Optional:-->\r
+                     <over:peticioConsultaTramits>\r
+                        <over:codiCataleg>?</over:codiCataleg>\r
+                        <over:codiFuncionalServei>?</over:codiFuncionalServei>\r
+                        <!--Optional:-->\r
+                        <over:codiFuncionalTramit>?</over:codiFuncionalTramit>\r
+                        <over:dataInici>?</over:dataInici>\r
+                        <over:dataFi>?</over:dataFi>\r
+                        <!--Optional:-->\r
+                        <over:tipus>?</over:tipus>\r
+                     </over:peticioConsultaTramits>\r
+                     <!--Optional:-->\r
+                     <over:peticioLlistaExpedients>\r
+                        <!--You have a CHOICE of the next 4 items at this level-->\r
+                        <over:cerca>\r
+                           <!--Optional:-->\r
+                           <over:codiEnsPromotor>?</over:codiEnsPromotor>\r
+                           <!--Optional:-->\r
+                           <over:codiFuncionalServei>?</over:codiFuncionalServei>\r
+                           <!--Optional:-->\r
+                           <over:codiFuncionalTramit>?</over:codiFuncionalTramit>\r
+                           <!--Optional:-->\r
+                           <over:codiFuncionalTramitTeResposta>?</over:codiFuncionalTramitTeResposta>\r
+                           <!--Optional:-->\r
+                           <over:codiEnsInteressat>?</over:codiEnsInteressat>\r
+                           <over:dataInici>?</over:dataInici>\r
+                           <over:dataFi>?</over:dataFi>\r
+                        </over:cerca>\r
+                        <over:codiInstanciaTramit>?</over:codiInstanciaTramit>\r
+                        <over:numExpedient>?</over:numExpedient>\r
+                        <over:numRegistre>?</over:numRegistre>\r
+                     </over:peticioLlistaExpedients>\r
+                     <!--Optional:-->\r
+                     <over:peticioConsultaExpedient>\r
+                        <over:codiInstanciaServei>?</over:codiInstanciaServei>\r
+                     </over:peticioConsultaExpedient>\r
+                     <!--Optional:-->\r
+                     <over:peticioLlistaServeis>\r
+                        <over:codiEnsPromotor>?</over:codiEnsPromotor>\r
+                        <!--Optional:-->\r
+                        <over:mostrarInactius>?</over:mostrarInactius>\r
+                     </over:peticioLlistaServeis>\r
+                     <!--Optional:-->\r
+                     <over:peticioLlistaTramits>\r
+                        <over:codiEnsPromotor>?</over:codiEnsPromotor>\r
+                        <over:codiFuncionalServei>?</over:codiFuncionalServei>\r
+                     </over:peticioLlistaTramits>\r
+                     <!--Optional:-->\r
+                     <eta:peticioPublicarEdicte>\r
+                        <eta:edicte>\r
+                           <eta:idEdicte>?</eta:idEdicte>\r
+                           <eta:numExpedient>?</eta:numExpedient>\r
+                           <!--1 to 3 repetitions:-->\r
+                           <eta:informacio>\r
+                              <eta:titol>?</eta:titol>\r
+                              <eta:descripcio>?</eta:descripcio>\r
+                              <eta:idioma>?</eta:idioma>\r
+                           </eta:informacio>\r
+                           <eta:dataIniciPublicacio>?</eta:dataIniciPublicacio>\r
+                           <!--Optional:-->\r
+                           <eta:dataFiPublicacio>?</eta:dataFiPublicacio>\r
+                           <!--Optional:-->\r
+                           <eta:destacat>?</eta:destacat>\r
+                           <eta:diligencia>\r
+                              <eta:idioma>?</eta:idioma>\r
+                              <eta:format>?</eta:format>\r
+                           </eta:diligencia>\r
+                           <!--1 to 3 repetitions:-->\r
+                           <eta:document>\r
+                              <eta:nom>?</eta:nom>\r
+                              <eta:id>?</eta:id>\r
+                              <eta:idioma>?</eta:idioma>\r
+                           </eta:document>\r
+                           <!--Optional:-->\r
+                           <eta:edicteExtern>\r
+                              <!--Optional:-->\r
+                              <eta:codiEnsOrigen>?</eta:codiEnsOrigen>\r
+                              <eta:nomEnsOrigen>?</eta:nomEnsOrigen>\r
+                              <eta:registreEntrada>?</eta:registreEntrada>\r
+                              <eta:dataRecepcio>?</eta:dataRecepcio>\r
+                              <!--Optional:-->\r
+                              <eta:eacat>\r
+                                 <eta:codiCataleg>?</eta:codiCataleg>\r
+                                 <eta:codiInstanciaServei>?</eta:codiInstanciaServei>\r
+                                 <eta:codiInstanciaTramit>?</eta:codiInstanciaTramit>\r
+                                 <eta:codiEns>?</eta:codiEns>\r
+                              </eta:eacat>\r
+                           </eta:edicteExtern>\r
+                           <!--1 to 3 repetitions:-->\r
+                           <eta:classificacio>\r
+                              <!--1 to 3 repetitions:-->\r
+                              <eta:classificacio>\r
+                                 <eta:concepte>?</eta:concepte>\r
+                                 <eta:categoria>?</eta:categoria>\r
+                                 <!--Optional:-->\r
+                                 <eta:subcategoria>?</eta:subcategoria>\r
+                                 <eta:idioma>?</eta:idioma>\r
+                              </eta:classificacio>\r
+                              <eta:tipus>?</eta:tipus>\r
+                           </eta:classificacio>\r
+                           <!--Optional:-->\r
+                           <eta:dadesAddicionals>\r
+                              <!--Optional:-->\r
+                              <eta:paraulesClau>?</eta:paraulesClau>\r
+                              <!--Optional:-->\r
+                              <eta:nifs>?</eta:nifs>\r
+                              <!--Zero or more repetitions:-->\r
+                              <eta:referencia>\r
+                                 <eta:url>?</eta:url>\r
+                                 <!--Optional:-->\r
+                                 <eta:seu>?</eta:seu>\r
+                                 <!--1 to 3 repetitions:-->\r
+                                 <eta:enllac>\r
+                                    <eta:titol>?</eta:titol>\r
+                                    <eta:idioma>?</eta:idioma>\r
+                                 </eta:enllac>\r
+                              </eta:referencia>\r
+                              <!--Zero or more repetitions:-->\r
+                              <eta:adjunt>\r
+                                 <eta:id>?</eta:id>\r
+                                 <!--1 to 3 repetitions:-->\r
+                                 <eta:enllac>\r
+                                    <eta:titol>?</eta:titol>\r
+                                    <eta:idioma>?</eta:idioma>\r
+                                 </eta:enllac>\r
+                              </eta:adjunt>\r
+                           </eta:dadesAddicionals>\r
+                        </eta:edicte>\r
+                     </eta:peticioPublicarEdicte>\r
+                     <!--Optional:-->\r
+                     <eta:peticioCancellarEdicte>\r
+                        <eta:idEdicte>?</eta:idEdicte>\r
+                     </eta:peticioCancellarEdicte>\r
+                     <!--Optional:-->\r
+                     <eta:peticioModificarEdicte>\r
+                        <eta:idEdicte>?</eta:idEdicte>\r
+                        <!--Optional:-->\r
+                        <eta:dataFiPublicacio>?</eta:dataFiPublicacio>\r
+                        <!--Optional:-->\r
+                        <eta:destacat>?</eta:destacat>\r
+                     </eta:peticioModificarEdicte>\r
+                     <!--Optional:-->\r
+                     <eta:peticioDespublicarEdicte>\r
+                        <eta:idEdicte>?</eta:idEdicte>\r
+                     </eta:peticioDespublicarEdicte>\r
+                     <!--Optional:-->\r
+                     <eta:peticioSincronitzarEdictes>?</eta:peticioSincronitzarEdictes>\r
+                     <!--Optional:-->\r
+                     <eta:respostaSincronitzarEdictes>\r
+                        <!--Zero or more repetitions:-->\r
+                        <eta:edicte>\r
+                           <eta:dadesEdicte>\r
+                              <eta:idEdicte>?</eta:idEdicte>\r
+                              <eta:numExpedient>?</eta:numExpedient>\r
+                              <!--1 to 3 repetitions:-->\r
+                              <eta:informacio>\r
+                                 <eta:titol>?</eta:titol>\r
+                                 <eta:descripcio>?</eta:descripcio>\r
+                                 <eta:idioma>?</eta:idioma>\r
+                              </eta:informacio>\r
+                              <eta:dataIniciPublicacio>?</eta:dataIniciPublicacio>\r
+                              <!--Optional:-->\r
+                              <eta:dataFiPublicacio>?</eta:dataFiPublicacio>\r
+                              <!--Optional:-->\r
+                              <eta:destacat>?</eta:destacat>\r
+                              <eta:diligencia>\r
+                                 <eta:idioma>?</eta:idioma>\r
+                                 <eta:format>?</eta:format>\r
+                              </eta:diligencia>\r
+                              <!--1 to 3 repetitions:-->\r
+                              <eta:document>\r
+                                 <eta:nom>?</eta:nom>\r
+                                 <eta:id>?</eta:id>\r
+                                 <eta:idioma>?</eta:idioma>\r
+                              </eta:document>\r
+                              <!--Optional:-->\r
+                              <eta:edicteExtern>\r
+                                 <!--Optional:-->\r
+                                 <eta:codiEnsOrigen>?</eta:codiEnsOrigen>\r
+                                 <eta:nomEnsOrigen>?</eta:nomEnsOrigen>\r
+                                 <eta:registreEntrada>?</eta:registreEntrada>\r
+                                 <eta:dataRecepcio>?</eta:dataRecepcio>\r
+                                 <!--Optional:-->\r
+                                 <eta:eacat>\r
+                                    <eta:codiCataleg>?</eta:codiCataleg>\r
+                                    <eta:codiInstanciaServei>?</eta:codiInstanciaServei>\r
+                                    <eta:codiInstanciaTramit>?</eta:codiInstanciaTramit>\r
+                                    <eta:codiEns>?</eta:codiEns>\r
+                                 </eta:eacat>\r
+                              </eta:edicteExtern>\r
+                              <!--1 to 3 repetitions:-->\r
+                              <eta:classificacio>\r
+                                 <!--1 to 3 repetitions:-->\r
+                                 <eta:classificacio>\r
+                                    <eta:concepte>?</eta:concepte>\r
+                                    <eta:categoria>?</eta:categoria>\r
+                                    <!--Optional:-->\r
+                                    <eta:subcategoria>?</eta:subcategoria>\r
+                                    <eta:idioma>?</eta:idioma>\r
+                                 </eta:classificacio>\r
+                                 <eta:tipus>?</eta:tipus>\r
+                              </eta:classificacio>\r
+                              <!--Optional:-->\r
+                              <eta:dadesAddicionals>\r
+                                 <!--Optional:-->\r
+                                 <eta:paraulesClau>?</eta:paraulesClau>\r
+                                 <!--Optional:-->\r
+                                 <eta:nifs>?</eta:nifs>\r
+                                 <!--Zero or more repetitions:-->\r
+                                 <eta:referencia>\r
+                                    <eta:url>?</eta:url>\r
+                                    <!--Optional:-->\r
+                                    <eta:seu>?</eta:seu>\r
+                                    <!--1 to 3 repetitions:-->\r
+                                    <eta:enllac>\r
+                                       <eta:titol>?</eta:titol>\r
+                                       <eta:idioma>?</eta:idioma>\r
+                                    </eta:enllac>\r
+                                 </eta:referencia>\r
+                                 <!--Zero or more repetitions:-->\r
+                                 <eta:adjunt>\r
+                                    <eta:id>?</eta:id>\r
+                                    <!--1 to 3 repetitions:-->\r
+                                    <eta:enllac>\r
+                                       <eta:titol>?</eta:titol>\r
+                                       <eta:idioma>?</eta:idioma>\r
+                                    </eta:enllac>\r
+                                 </eta:adjunt>\r
+                              </eta:dadesAddicionals>\r
+                           </eta:dadesEdicte>\r
+                           <eta:codiEns>?</eta:codiEns>\r
+                           <eta:operacio>?</eta:operacio>\r
+                           <eta:dataProces>?</eta:dataProces>\r
+                        </eta:edicte>\r
+                        <eta:resultat>\r
+                           <eta:codiResultat>?</eta:codiResultat>\r
+                           <eta:descripcio>?</eta:descripcio>\r
+                        </eta:resultat>\r
+                     </eta:respostaSincronitzarEdictes>\r
+                     <!--Optional:-->\r
+                     <eta:peticioConsultarEstatEdicte>\r
+                        <eta:idEdicte>?</eta:idEdicte>\r
+                     </eta:peticioConsultarEstatEdicte>\r
+                     <!--Optional:-->\r
+                     <hes:DadesEspecifiques>\r
+                        <hes:CodINE>?</hes:CodINE>\r
+                        <!--You have a CHOICE of the next 2 items at this level-->\r
+                        <hes:IdCites>?</hes:IdCites>\r
+                        <hes:DataInici>?</hes:DataInici>\r
+                        <hes:DataFi>?</hes:DataFi>\r
+                        <!--Optional:-->\r
+                        <hes:IdProfessionals>?</hes:IdProfessionals>\r
+                     </hes:DadesEspecifiques>\r
+                     <!--Optional:-->\r
+                     <hes:PCIConsultaCiutada>\r
+                        <hes:codiINE>?</hes:codiINE>\r
+                        <!--You have a CHOICE of the next 3 items at this level-->\r
+                        <!--Optional:-->\r
+                        <hes:idInternCiutada>?</hes:idInternCiutada>\r
+                        <!--Optional:-->\r
+                        <hes:NIF>?</hes:NIF>\r
+                        <!--Optional:-->\r
+                        <hes:CIP>?</hes:CIP>\r
+                     </hes:PCIConsultaCiutada>\r
+                     <!--Optional:-->\r
+                     <dogc:peticioSolicitudPublicacio>\r
+                        <dogc:identificador>?</dogc:identificador>\r
+                        <dogc:ordreInsercio>cid:311612013481</dogc:ordreInsercio>\r
+                        <!--Optional:-->\r
+                        <dogc:registre>\r
+                           <dogc:registreSortida>\r
+                              <dogc:numero>?</dogc:numero>\r
+                              <dogc:data>?</dogc:data>\r
+                           </dogc:registreSortida>\r
+                           <dogc:registreEntrada>\r
+                              <dogc:numero>?</dogc:numero>\r
+                              <dogc:data>?</dogc:data>\r
+                           </dogc:registreEntrada>\r
+                        </dogc:registre>\r
+                     </dogc:peticioSolicitudPublicacio>\r
+                     <!--Optional:-->\r
+                     <dogc:peticioConsultaEstatPublicacio>\r
+                        <dogc:codiSolicitud>?</dogc:codiSolicitud>\r
+                     </dogc:peticioConsultaEstatPublicacio>\r
+                     <!--Optional:-->\r
+                     <boe:peticioEnviamentAnunci>\r
+                        <!--You have a CHOICE of the next 2 items at this level-->\r
+                        <boe:enviament>?</boe:enviament>\r
+                        <boe:id>?</boe:id>\r
+                     </boe:peticioEnviamentAnunci>\r
+                     <!--Optional:-->\r
+                     <boe:peticioConsultaEstatAnunci>\r
+                        <boe:idEnviamentBoe>?</boe:idEnviamentBoe>\r
+                        <!--Optional:-->\r
+                        <boe:idBoe>?</boe:idBoe>\r
+                     </boe:peticioConsultaEstatAnunci>\r
+                     <!--Optional:-->\r
+                     <boe:peticioAnullacioAnunci>\r
+                        <boe:idEnviamentBoe>?</boe:idEnviamentBoe>\r
+                        <!--Optional:-->\r
+                        <boe:idBoe>?</boe:idBoe>\r
+                     </boe:peticioAnullacioAnunci>\r
+                     <!--Optional:-->\r
+                     <dev:PeticioConsultaCredencialsDev>\r
+                        <dev:IdPeticio>?</dev:IdPeticio>\r
+                        <!--1 to 500 repetitions:-->\r
+                        <dev:ConsultaCredencials>\r
+                           <dev:IdSolicitud>?</dev:IdSolicitud>\r
+                           <dev:IdDocument>?</dev:IdDocument>\r
+                        </dev:ConsultaCredencials>\r
+                     </dev:PeticioConsultaCredencialsDev>\r
+                  </pet:DatosEspecificos>\r
+               </pet:SolicitudTransmision>\r
+            </pet:Solicitudes>\r
+         </pet:Peticion>\r
+      </open:procesa>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://www.openuri.org/procesa"/></con:call></con:operation></con:interface><con:interface xsi:type="con:WsdlInterface" id="e99414a0-f2d5-4586-aa9d-e901a01af23b" wsaVersion="NONE" name="AsincronSoap" type="wsdl" bindingName="{http://www.openuri.org/}AsincronSoap" soapVersion="1_1" anonymous="optional" definition="https://serveis3-pre.app.aoc.cat/siri-proxy/services/Asincron?wsdl" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache type="TEXT" rootPart="https://serveis3-pre.app.aoc.cat/siri-proxy/services/Asincron?wsdl"><con:part><con:url>https://serveis3-pre.app.aoc.cat/siri-proxy/services/Asincron?wsdl</con:url><con:content><![CDATA[<!--Published by JAX-WS RI at http://jax-ws.dev.java.net. RI's version is Metro/2.2 (branches/2.2-7015; 2012-02-20T20:31:25+0000) JAXWS-RI/2.2.6 JAXWS/2.2 svn-revision#unknown.-->
 <wsdl:definitions targetNamespace="http://www.openuri.org/" xmlns:conv="http://www.openuri.org/2002/04/soap/conversation/" xmlns:cw="http://www.openuri.org/2002/04/wsdl/conversation/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:jms="http://www.openuri.org/2002/04/wsdl/jms/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:s0="http://www.openuri.org/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:xmime="http://www.w3.org/2005/05/xmlmime" xmlns:xs="http://www.w3.org/2001/XMLSchema">
   <wsdl:types>
     <xs:schema elementFormDefault="qualified" targetNamespace="http://www.openuri.org/" xmlns:pet="http://gencat.net/scsp/esquemes/peticion" xmlns:con="http://gencat.net/scsp/esquemes/confirmacionPeticion">
@@ -3660,7 +4860,7 @@
          </pet:Peticion>\r
       </open:procesa>\r
    </soapenv:Body>\r
-</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://www.openuri.org/procesa"/></con:call></con:operation></con:interface><con:testSuite id="7aa4e46b-4294-40e6-96bc-17b5dfd8ff24" name="SincronSoap TestSuite"><con:settings/><con:runType>SEQUENTIAL</con:runType><con:testCase id="4a46a494-9792-44e3-962e-34509b25491e" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="procesa TestCase" searchProperties="true"><con:settings/><con:testStep type="properties" name="Properties" id="35c52c60-5d4f-4070-9a07-596ddb729cc1"><con:settings/><con:config xsi:type="con:PropertiesStep" saveFirst="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:properties><con:property><con:name>NombreCompletoFuncionario</con:name><con:value>PROVA PROVA PROVA</con:value></con:property><con:property><con:name>NIFFuncionario</con:name><con:value>12345678Z</con:value></con:property><con:property><con:name>IdentificadorSolicitante</con:name><con:value>9821920002</con:value></con:property></con:properties></con:config></con:testStep><con:testStep type="request" id="988d226d-b95b-4569-8b69-a20ad24c051e" name="OVER_INTEGRACIO"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>SincronSoap</con:interface><con:operation>procesa</con:operation><con:request name="OVER_INTEGRACIO" id="30d66e2b-c1c9-435f-9ad3-d660ba2dc9b9"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting><con:setting id="WsdlSettings@enable-mtom">true</con:setting><con:setting id="com.eviware.soapui.impl.support.AbstractHttpRequest@follow-redirects">true</con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>https://serveis3-pre.app.aoc.cat:443/siri-proxy/services/Sincron</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:open="http://www.openuri.org/" xmlns:pet="http://gencat.net/scsp/esquemes/peticion">\r
+</soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://www.openuri.org/procesa"/><con:wsrmConfig version="1.2"/></con:call></con:operation></con:interface><con:testSuite id="7aa4e46b-4294-40e6-96bc-17b5dfd8ff24" name="SincronSoap TestSuite"><con:settings/><con:runType>SEQUENTIAL</con:runType><con:testCase id="4a46a494-9792-44e3-962e-34509b25491e" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="procesa TestCase" searchProperties="true"><con:settings/><con:testStep type="properties" name="Properties" id="35c52c60-5d4f-4070-9a07-596ddb729cc1"><con:settings/><con:config xsi:type="con:PropertiesStep" saveFirst="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:properties><con:property><con:name>NombreCompletoFuncionario</con:name><con:value>PROVA PROVA PROVA</con:value></con:property><con:property><con:name>NIFFuncionario</con:name><con:value>12345678Z</con:value></con:property><con:property><con:name>IdentificadorSolicitante</con:name><con:value>9821920002</con:value></con:property></con:properties></con:config></con:testStep><con:testStep type="request" id="988d226d-b95b-4569-8b69-a20ad24c051e" name="OVER_INTEGRACIO"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>SincronSoap</con:interface><con:operation>procesa</con:operation><con:request name="OVER_INTEGRACIO" id="30d66e2b-c1c9-435f-9ad3-d660ba2dc9b9"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting><con:setting id="WsdlSettings@enable-mtom">true</con:setting><con:setting id="com.eviware.soapui.impl.support.AbstractHttpRequest@follow-redirects">true</con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>https://serveis3-pre.app.aoc.cat:443/siri-proxy/services/Sincron</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:open="http://www.openuri.org/" xmlns:pet="http://gencat.net/scsp/esquemes/peticion">\r
    <soapenv:Header/>\r
    <soapenv:Body>\r
       <open:procesa>\r
@@ -4648,6 +5848,264 @@
                      <ns3:peticioConsultaEstatPublicacio xmlns:ns3="http://www.aoc.cat/dogc" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">\r
                         <ns3:codiSolicitud>17.198.001</ns3:codiSolicitud>\r
                      </ns3:peticioConsultaEstatPublicacio>\r
+                  </ns1:DatosEspecificos>\r
+               </ns1:SolicitudTransmision>\r
+            </ns1:Solicitudes>\r
+         </ns1:Peticion>\r
+      </open:procesa>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:assertion type="SOAP Response" id="1c7555af-bbba-435a-b18c-e5f8ad74c6e6" name="SOAP Response"/><con:credentials><con:selectedAuthProfile>Basic</con:selectedAuthProfile><con:addedBasicAuthenticationTypes>Basic</con:addedBasicAuthenticationTypes><con:preemptive>true</con:preemptive><con:authType>Preemptive</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://www.openuri.org/procesa"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:testStep type="request" id="edf0fb9d-dc4d-4015-a36b-9454e01c3acb" name="BOE_ENVIAR_ANUNCI - MTOM"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>SincronSoap</con:interface><con:operation>procesa</con:operation><con:request name="BOE_ENVIAR_ANUNCI - MTOM" id="30d66e2b-c1c9-435f-9ad3-d660ba2dc9b9"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting><con:setting id="WsdlSettings@enable-mtom">true</con:setting><con:setting id="com.eviware.soapui.impl.support.AbstractHttpRequest@follow-redirects">true</con:setting><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@force_mtom">false</con:setting><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@enable_inline_files">false</con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>https://serveis3-pre.app.aoc.cat:443/siri-proxy/services/Sincron</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:open="http://www.openuri.org/" xmlns:pet="http://gencat.net/scsp/esquemes/peticion">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <open:procesa>\r
+         <Peticion xmlns="http://gencat.net/scsp/esquemes/peticion">\r
+            <Atributos>\r
+               <IdPeticion>Client_Exemple_BOE_ENVIAMENT_MTOM-${=(long)(System.currentTimeMillis())}</IdPeticion>\r
+               <NumElementos>1</NumElementos>\r
+               <TimeStamp/>\r
+               <CodigoCertificado>BOE</CodigoCertificado>\r
+               <CodigoProducto>BOE</CodigoProducto>\r
+               <DatosAutorizacion>\r
+                  <IdentificadorSolicitante>9821920002</IdentificadorSolicitante>\r
+                  <NombreSolicitante>CAOC</NombreSolicitante>\r
+                  <Finalidad>PROVES</Finalidad>\r
+               </DatosAutorizacion>\r
+               <Emisor>\r
+                  <NifEmisor>Q0801175A</NifEmisor>\r
+                  <NombreEmisor>CAOC</NombreEmisor>\r
+               </Emisor>\r
+               <Funcionario>\r
+                  <NombreCompletoFuncionario>${Properties#NombreCompletoFuncionario}</NombreCompletoFuncionario>\r
+                  <NifFuncionario>${Properties#NIFFuncionario}</NifFuncionario>\r
+               </Funcionario>\r
+            </Atributos>\r
+            <Solicitudes>\r
+               <SolicitudTransmision>\r
+                  <DatosGenericos>\r
+                     <Emisor>\r
+                        <NifEmisor>Q0801175A</NifEmisor>\r
+                        <NombreEmisor>CAOC</NombreEmisor>\r
+                     </Emisor>\r
+                     <Solicitante>\r
+                        <IdentificadorSolicitante>${Properties#IdentificadorSolicitante}</IdentificadorSolicitante>\r
+                        <NombreSolicitante>CAOC</NombreSolicitante>\r
+                        <Finalidad>PROVES</Finalidad>\r
+                        <Consentimiento>Si</Consentimiento>\r
+                        <Funcionario>\r
+                           <NombreCompletoFuncionario>${Properties#NombreCompletoFuncionario}</NombreCompletoFuncionario>\r
+                           <NifFuncionario>${Properties#NIFFuncionario}</NifFuncionario>\r
+                        </Funcionario>\r
+                     </Solicitante>\r
+                     <Transmision>\r
+                        <CodigoCertificado>BOE</CodigoCertificado>\r
+                        <IdSolicitud>1</IdSolicitud>\r
+                        <IdTransmision>EXPEDIENT</IdTransmision>\r
+                        <FechaGeneracion/>\r
+                     </Transmision>\r
+                     <Ficheros>\r
+                        <Fichero>\r
+                           <NombreFichero>BOE_MTOM.xml</NombreFichero>\r
+                           <Contenido>cid:BOE_MTOM.xml</Contenido>\r
+                           <Id>1</Id>\r
+                        </Fichero>\r
+                     </Ficheros>\r
+                  </DatosGenericos>\r
+                  <DatosEspecificos>\r
+                     <ns2:peticioEnviamentAnunci xmlns:ns2="http://www.aoc.cat/boe">\r
+                        <ns2:id>1</ns2:id>\r
+                     </ns2:peticioEnviamentAnunci>\r
+                  </DatosEspecificos>\r
+               </SolicitudTransmision>\r
+            </Solicitudes>\r
+         </Peticion>\r
+      </open:procesa>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:credentials><con:selectedAuthProfile>No Authorization</con:selectedAuthProfile><con:authType>No Authorization</con:authType></con:credentials><con:attachment><con:name>BOE_MTOM.xml</con:name><con:contentType>text/xml</con:contentType><con:size>15458</con:size><con:contentId>BOE_MTOM.xml</con:contentId><con:part>BOE_MTOM.xml</con:part><con:data>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</con:data><con:id>56a2a33e-ab4b-4c8d-b4e6-266d4a4542ac</con:id></con:attachment><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig action="http://www.openuri.org/procesa" mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:testStep type="request" id="21c559d5-24d2-4175-a3e9-488072ae0c79" name="BOE_CONS - WSS"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>SincronSoap</con:interface><con:operation>procesa</con:operation><con:request name="BOE_CONS - WSS" outgoingWss="CERT_PROVES" incomingWss="" timeout="" sslKeystore="" useWsAddressing="false" useWsReliableMessaging="false" wssPasswordType="" id="b8102efb-d443-4dfc-b817-02e7693fa0e0"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>https://serveis3-pre.app.aoc.cat:443/siri-proxy/services/Sincron</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:open="http://www.openuri.org/" xmlns:pet="http://gencat.net/scsp/esquemes/peticion" xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/">\r
+   <soapenv:Header/>\r
+   <soapenv:Body wsu:Id="id-2FCB69B934F938128B162694603391719" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd">\r
+      <open:procesa>\r
+         <ns1:Peticion xmlns:ns1="http://gencat.net/scsp/esquemes/peticion">\r
+            <ns1:Atributos>\r
+               <ns1:IdPeticion>9821920002-BOE_CONS-${=(long)(System.currentTimeMillis())}</ns1:IdPeticion>\r
+               <ns1:NumElementos>1</ns1:NumElementos>\r
+               <ns1:TimeStamp>2018-07-05 09:28:22.28</ns1:TimeStamp>\r
+               <ns1:Estado/>\r
+               <ns1:CodigoCertificado>BOE</ns1:CodigoCertificado>\r
+               <ns1:CodigoProducto>BOE</ns1:CodigoProducto>\r
+               <ns1:DatosAutorizacion>\r
+                  <ns1:IdentificadorSolicitante>${Properties#IdentificadorSolicitante}</ns1:IdentificadorSolicitante>\r
+                  <ns1:NombreSolicitante>Ajuntament</ns1:NombreSolicitante>\r
+                  <ns1:Finalidad>PROVES</ns1:Finalidad>\r
+               </ns1:DatosAutorizacion>\r
+               <ns1:Emisor>\r
+                  <ns1:NifEmisor>Q0801175A</ns1:NifEmisor>\r
+                  <ns1:NombreEmisor>CAOC</ns1:NombreEmisor>\r
+               </ns1:Emisor>\r
+               <ns1:Funcionario>\r
+                  <ns1:NombreCompletoFuncionario>${Properties#NombreCompletoFuncionario}</ns1:NombreCompletoFuncionario>\r
+                  <ns1:NifFuncionario>${Properties#NIFFuncionario}</ns1:NifFuncionario>\r
+               </ns1:Funcionario>\r
+            </ns1:Atributos>\r
+            <ns1:Solicitudes>\r
+               <ns1:SolicitudTransmision>\r
+                  <ns1:DatosGenericos>\r
+                     <ns1:Emisor>\r
+                        <ns1:NifEmisor>Q0801175A</ns1:NifEmisor>\r
+                        <ns1:NombreEmisor>CAOC</ns1:NombreEmisor>\r
+                     </ns1:Emisor>\r
+                     <ns1:Solicitante>\r
+                        <ns1:IdentificadorSolicitante>${Properties#IdentificadorSolicitante}</ns1:IdentificadorSolicitante>\r
+                        <ns1:NombreSolicitante>Ajuntament</ns1:NombreSolicitante>\r
+                        <ns1:Finalidad>PROVES</ns1:Finalidad>\r
+                        <ns1:Consentimiento>Ley</ns1:Consentimiento>\r
+                        <ns1:Funcionario>\r
+                           <ns1:NombreCompletoFuncionario>${Properties#NombreCompletoFuncionario}</ns1:NombreCompletoFuncionario>\r
+                           <ns1:NifFuncionario>${Properties#NIFFuncionario}</ns1:NifFuncionario>\r
+                        </ns1:Funcionario>\r
+                     </ns1:Solicitante>\r
+                     <!--<ns1:Titular>
+                        <ns1:TipoDocumentacion>NIF</ns1:TipoDocumentacion>
+                        <ns1:Documentacion>00000001R</ns1:Documentacion>
+                     </ns1:Titular>-->\r
+                     <ns1:Transmision>\r
+                        <ns1:CodigoCertificado>BOE</ns1:CodigoCertificado>\r
+                        <ns1:IdSolicitud>${=(long)(System.currentTimeMillis())}</ns1:IdSolicitud>\r
+                        <ns1:IdTransmision>32017</ns1:IdTransmision>\r
+                     </ns1:Transmision>\r
+                  </ns1:DatosGenericos>\r
+                  <ns1:DatosEspecificos>\r
+                     <peticioConsultaEstatAnunci xmlns="http://www.aoc.cat/boe" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">\r
+                        <idEnviamentBoe>E12021081610001834</idEnviamentBoe>\r
+                     </peticioConsultaEstatAnunci>\r
+                  </ns1:DatosEspecificos>\r
+               </ns1:SolicitudTransmision>\r
+            </ns1:Solicitudes>\r
+         </ns1:Peticion>\r
+      </open:procesa>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:assertion type="SOAP Response" id="1c7555af-bbba-435a-b18c-e5f8ad74c6e6" name="SOAP Response"/><con:credentials><con:selectedAuthProfile>Basic</con:selectedAuthProfile><con:addedBasicAuthenticationTypes>Basic</con:addedBasicAuthenticationTypes><con:preemptive>true</con:preemptive><con:authType>Preemptive</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://www.openuri.org/procesa"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:testStep type="request" id="c18457a9-f115-4471-8f98-07043290011f" name="SCT_DEV - WSS"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>SincronSoap</con:interface><con:operation>procesa</con:operation><con:request name="SCT_DEV - WSS" outgoingWss="CERT_PROVES" incomingWss="" timeout="" sslKeystore="" useWsAddressing="false" useWsReliableMessaging="false" wssPasswordType="" id="b8102efb-d443-4dfc-b817-02e7693fa0e0"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>https://serveis3-pre.app.aoc.cat:443/siri-proxy/services/Sincron</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:open="http://www.openuri.org/" xmlns:pet="http://gencat.net/scsp/esquemes/peticion" xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/">\r
+   <soapenv:Header/>\r
+   <soapenv:Body wsu:Id="id-2FCB69B934F938128B162694603391719" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd">\r
+      <open:procesa>\r
+         <ns1:Peticion xmlns:ns1="http://gencat.net/scsp/esquemes/peticion">\r
+            <ns1:Atributos>\r
+               <ns1:IdPeticion>9821920002-ENOTUM_CREDENCIALS-${=(long)(System.currentTimeMillis())}</ns1:IdPeticion>\r
+               <ns1:NumElementos>1</ns1:NumElementos>\r
+               <ns1:TimeStamp>2018-07-05 09:28:22.28</ns1:TimeStamp>\r
+               <ns1:Estado/>\r
+               <ns1:CodigoCertificado>CONSULTA_CREDENCIALS</ns1:CodigoCertificado>\r
+               <ns1:CodigoProducto>ENOTUM_CREDENCIALS</ns1:CodigoProducto>\r
+               <ns1:DatosAutorizacion>\r
+                  <ns1:IdentificadorSolicitante>${Properties#IdentificadorSolicitante}</ns1:IdentificadorSolicitante>\r
+                  <ns1:NombreSolicitante>Ajuntament</ns1:NombreSolicitante>\r
+                  <ns1:Finalidad>PROVES</ns1:Finalidad>\r
+               </ns1:DatosAutorizacion>\r
+               <ns1:Emisor>\r
+                  <ns1:NifEmisor>Q0801175A</ns1:NifEmisor>\r
+                  <ns1:NombreEmisor>CAOC</ns1:NombreEmisor>\r
+               </ns1:Emisor>\r
+               <ns1:Funcionario>\r
+                  <ns1:NombreCompletoFuncionario>${Properties#NombreCompletoFuncionario}</ns1:NombreCompletoFuncionario>\r
+                  <ns1:NifFuncionario>${Properties#NIFFuncionario}</ns1:NifFuncionario>\r
+               </ns1:Funcionario>\r
+            </ns1:Atributos>\r
+            <ns1:Solicitudes>\r
+               <ns1:SolicitudTransmision>\r
+                  <ns1:DatosGenericos>\r
+                     <ns1:Emisor>\r
+                        <ns1:NifEmisor>Q0801175A</ns1:NifEmisor>\r
+                        <ns1:NombreEmisor>CAOC</ns1:NombreEmisor>\r
+                     </ns1:Emisor>\r
+                     <ns1:Solicitante>\r
+                        <ns1:IdentificadorSolicitante>${Properties#IdentificadorSolicitante}</ns1:IdentificadorSolicitante>\r
+                        <ns1:NombreSolicitante>Ajuntament</ns1:NombreSolicitante>\r
+                        <ns1:Finalidad>PROVES</ns1:Finalidad>\r
+                        <ns1:Consentimiento>Ley</ns1:Consentimiento>\r
+                        <ns1:Funcionario>\r
+                           <ns1:NombreCompletoFuncionario>${Properties#NombreCompletoFuncionario}</ns1:NombreCompletoFuncionario>\r
+                           <ns1:NifFuncionario>${Properties#NIFFuncionario}</ns1:NifFuncionario>\r
+                        </ns1:Funcionario>\r
+                     </ns1:Solicitante>\r
+                     <ns1:Titular>\r
+                        <ns1:TipoDocumentacion>NIF</ns1:TipoDocumentacion>\r
+                        <ns1:Documentacion>00000001R</ns1:Documentacion>\r
+                     </ns1:Titular>\r
+                     <ns1:Transmision>\r
+                        <ns1:CodigoCertificado>CONSULTA_CREDENCIALS</ns1:CodigoCertificado>\r
+                        <ns1:IdSolicitud>${=(long)(System.currentTimeMillis())}</ns1:IdSolicitud>\r
+                        <ns1:IdTransmision>32017</ns1:IdTransmision>\r
+                     </ns1:Transmision>\r
+                  </ns1:DatosGenericos>\r
+               </ns1:SolicitudTransmision>\r
+            </ns1:Solicitudes>\r
+         </ns1:Peticion>\r
+      </open:procesa>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:assertion type="SOAP Response" id="1c7555af-bbba-435a-b18c-e5f8ad74c6e6" name="SOAP Response"/><con:credentials><con:selectedAuthProfile>Basic</con:selectedAuthProfile><con:addedBasicAuthenticationTypes>Basic</con:addedBasicAuthenticationTypes><con:preemptive>true</con:preemptive><con:authType>Preemptive</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://www.openuri.org/procesa"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:testStep type="request" id="427cf974-f6c2-4587-a67a-8bedba8b084d" name="SCT_DEV - ASINC"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>SincronSoap</con:interface><con:operation>procesa</con:operation><con:request name="SCT_DEV - ASINC" outgoingWss="CERT_PROVES" incomingWss="" timeout="" sslKeystore="" useWsAddressing="false" useWsReliableMessaging="false" wssPasswordType="" id="b8102efb-d443-4dfc-b817-02e7693fa0e0"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>https://serveis3-pre.app.aoc.cat:443/siri-proxy/services/Asincron</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:open="http://www.openuri.org/" xmlns:pet="http://gencat.net/scsp/esquemes/peticion" xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/">\r
+   <soapenv:Header/>\r
+   <soapenv:Body wsu:Id="id-2FCB69B934F938128B162694603391719" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd">\r
+      <open:procesa>\r
+         <ns1:Peticion xmlns:ns1="http://gencat.net/scsp/esquemes/peticion">\r
+            <ns1:Atributos>\r
+               <ns1:IdPeticion>9821920002-ENOTUM_CREDENCIALS-${=(long)(System.currentTimeMillis())}</ns1:IdPeticion>\r
+               <ns1:NumElementos>1</ns1:NumElementos>\r
+               <ns1:TimeStamp>2018-07-05 09:28:22.28</ns1:TimeStamp>\r
+               <ns1:Estado/>\r
+               <ns1:CodigoCertificado>CONSULTA_CREDENCIALS</ns1:CodigoCertificado>\r
+               <ns1:CodigoProducto>ENOTUM_CREDENCIALS</ns1:CodigoProducto>\r
+               <ns1:DatosAutorizacion>\r
+                  <ns1:IdentificadorSolicitante>${Properties#IdentificadorSolicitante}</ns1:IdentificadorSolicitante>\r
+                  <ns1:NombreSolicitante>Ajuntament</ns1:NombreSolicitante>\r
+                  <ns1:Finalidad>PROVES</ns1:Finalidad>\r
+               </ns1:DatosAutorizacion>\r
+               <ns1:Emisor>\r
+                  <ns1:NifEmisor>Q0801175A</ns1:NifEmisor>\r
+                  <ns1:NombreEmisor>CAOC</ns1:NombreEmisor>\r
+               </ns1:Emisor>\r
+               <ns1:Funcionario>\r
+                  <ns1:NombreCompletoFuncionario>${Properties#NombreCompletoFuncionario}</ns1:NombreCompletoFuncionario>\r
+                  <ns1:NifFuncionario>${Properties#NIFFuncionario}</ns1:NifFuncionario>\r
+               </ns1:Funcionario>\r
+            </ns1:Atributos>\r
+            <ns1:Solicitudes>\r
+               <ns1:SolicitudTransmision>\r
+                  <ns1:DatosGenericos>\r
+                     <ns1:Emisor>\r
+                        <ns1:NifEmisor>Q0801175A</ns1:NifEmisor>\r
+                        <ns1:NombreEmisor>CAOC</ns1:NombreEmisor>\r
+                     </ns1:Emisor>\r
+                     <ns1:Solicitante>\r
+                        <ns1:IdentificadorSolicitante>${Properties#IdentificadorSolicitante}</ns1:IdentificadorSolicitante>\r
+                        <ns1:NombreSolicitante>Ajuntament</ns1:NombreSolicitante>\r
+                        <ns1:Finalidad>PROVES</ns1:Finalidad>\r
+                        <ns1:Consentimiento>Ley</ns1:Consentimiento>\r
+                        <ns1:Funcionario>\r
+                           <ns1:NombreCompletoFuncionario>${Properties#NombreCompletoFuncionario}</ns1:NombreCompletoFuncionario>\r
+                           <ns1:NifFuncionario>${Properties#NIFFuncionario}</ns1:NifFuncionario>\r
+                        </ns1:Funcionario>\r
+                     </ns1:Solicitante>\r
+                   <!--  <ns1:Titular>\r
+                        <ns1:TipoDocumentacion>NIF</ns1:TipoDocumentacion>\r
+                        <ns1:Documentacion>00000001R</ns1:Documentacion>\r
+                     </ns1:Titular>\r -->
+                     <ns1:Transmision>\r
+                        <ns1:CodigoCertificado>CONSULTA_CREDENCIALS</ns1:CodigoCertificado>\r
+                        <ns1:IdSolicitud>${=(long)(System.currentTimeMillis())}</ns1:IdSolicitud>\r
+                        <ns1:IdTransmision>32017</ns1:IdTransmision>\r
+                     </ns1:Transmision>\r
+                  </ns1:DatosGenericos>\r
+                  <ns1:DatosEspecificos>\r
+                     <ns1:PeticioConsultaCredencialsDev xmlns:ns1="http://www.aocat.net/sct/dev" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">\r
+                        <ns1:IdPeticio>D21101403007880</ns1:IdPeticio>\r
+                        <ns1:ConsultaCredencials>\r
+                           <ns1:IdSolicitud>1</ns1:IdSolicitud>\r
+                           <ns1:IdDocument>00000001R</ns1:IdDocument>\r
+                        </ns1:ConsultaCredencials>\r
+                        <ns1:ConsultaCredencials>\r
+                           <ns1:IdSolicitud>2</ns1:IdSolicitud>\r
+                           <ns1:IdDocument>00000001R</ns1:IdDocument>\r
+                        </ns1:ConsultaCredencials>\r
+                     </ns1:PeticioConsultaCredencialsDev>\r
                   </ns1:DatosEspecificos>\r
                </ns1:SolicitudTransmision>\r
             </ns1:Solicitudes>\r

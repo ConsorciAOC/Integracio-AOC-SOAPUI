@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<xs:schema xmlns="http://www.aoc.cat/boe" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:nns="xsi:noNamespaceSchemaLocation" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" targetNamespace="http://www.aoc.cat/boe" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<!-- ======================================================= -->
+	<!-- Enviar																			 							-->
+	<!-- ======================================================= -->
+	<xs:element name="peticioEnviamentAnunci">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:choice>
+					<xs:element name="enviament" type="xs:string"/>
+					<xs:element name="id" type="xs:string"/>
+				</xs:choice>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="respostaEnviamentAnunci">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="resposta" minOccurs="0">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="idEnviamentBoe" type="xs:string" minOccurs="0"/>
+							<xs:element name="anuncis">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element name="anunci" maxOccurs="unbounded">
+											<xs:complexType>
+												<xs:sequence>
+													<xs:element name="id" type="xs:string" minOccurs="0"/>
+													<xs:element name="idBoe" type="xs:string" minOccurs="0"/>
+													<xs:element name="avisos" minOccurs="0">
+														<xs:complexType>
+															<xs:sequence>
+																<xs:element ref="avis" maxOccurs="unbounded"/>
+															</xs:sequence>
+														</xs:complexType>
+													</xs:element>
+													<xs:element name="errors" minOccurs="0">
+														<xs:complexType>
+															<xs:sequence>
+																<xs:element ref="error" maxOccurs="unbounded"/>
+															</xs:sequence>
+														</xs:complexType>
+													</xs:element>
+												</xs:sequence>
+											</xs:complexType>
+										</xs:element>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element ref="resultat"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="avis">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="codi" type="xs:string"/>
+				<xs:element name="descripcio" type="xs:string"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="error">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="codi" type="xs:string"/>
+				<xs:element name="descripcio" type="xs:string"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<!-- ======================================================= -->
+	<!-- Estat																			 							-->
+	<!-- ======================================================= -->
+	<xs:element name="peticioConsultaEstatAnunci">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="idEnviamentBoe" type="xs:string"/>
+				<xs:element name="idBoe" type="xs:string" minOccurs="0"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="respostaConsultaEstatAnunci">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="anunci" minOccurs="0" maxOccurs="unbounded"/>
+				<xs:element ref="resultat"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="anunci">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="id" type="xs:string" minOccurs="0"/>
+				<xs:element name="idBoe" type="xs:string"/>
+				<xs:element name="idEnviamentBoe" type="xs:string"/>
+				<xs:element name="estatBoe" type="xs:string"/>
+				<xs:element name="nboBoe" type="xs:string" minOccurs="0"/>
+				<xs:element name="dataBoe" type="xs:string" minOccurs="0"/>
+				<xs:element name="cveBoe" type="xs:string" minOccurs="0"/>
+				<xs:element name="urlBoe" type="xs:string" minOccurs="0"/>
+				<xs:element ref="motiusDevolucio" minOccurs="0"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="motiusDevolucio">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="motiu" maxOccurs="unbounded"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="motiu">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="descripcio" type="xs:string"/>
+				<xs:element name="observacio" type="xs:string" minOccurs="0"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<!-- ======================================================= -->
+	<!-- Anul·lació																		 							-->
+	<!-- ======================================================= -->
+	<xs:element name="peticioAnullacioAnunci">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="idEnviamentBoe" type="xs:string"/>
+				<xs:element name="idBoe" type="xs:string" minOccurs="0"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="respostaAnullacioAnunci">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="resultat"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<!-- ======================================================= -->
+	<!-- Resultat                                                -->
+	<!-- ======================================================= -->
+	<xs:element name="resultat">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="codiResultat" type="xs:string"/>
+				<xs:element name="descripcio" type="xs:string"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>
+

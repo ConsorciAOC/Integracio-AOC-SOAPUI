@@ -25,6 +25,8 @@
 	xmlns:tauler="http://www.aoc.cat/etauler"
 	xmlns:hestia="http://www.aoc.cat/hestia"
 	xmlns:dogc="http://www.aoc.cat/dogc"
+	xmlns:boe="http://www.aoc.cat/boe"
+	xmlns:sctdev="http://www.aocat.net/sct/dev"
 
 		elementFormDefault="qualified" attributeFormDefault="unqualified">
 		
@@ -32,6 +34,9 @@
 		<xs:import namespace="http://www.aoc.cat/etauler" schemaLocation="./ETAULER/dadesEspecifiques.xsd"/>
 		<xs:import namespace="http://www.aoc.cat/hestia" schemaLocation="./HESTIA/DadesEspecifiques.xsd"/>
 		<xs:import namespace="http://www.aoc.cat/dogc"  schemaLocation="./DOGC/dadesEspecifiques.xsd"/>
+		<xs:import namespace="http://www.aoc.cat/boe"  schemaLocation="./BOE/dadesEspecifiques.xsd"/>
+		<xs:import namespace="http://www.aocat.net/sct/dev"  schemaLocation="./SCT_DEV/consultaCredencialsDEVDadesEspecifiques.xsd"/>
+		
 		
 		
 		
@@ -318,6 +323,10 @@
 						<xs:element ref="hestia:PCIConsultaCiutada" minOccurs="0"/>
 						<xs:element ref="dogc:peticioSolicitudPublicacio" minOccurs="0"/>
 						<xs:element ref="dogc:peticioConsultaEstatPublicacio" minOccurs="0"/>
+						<xs:element ref="boe:peticioEnviamentAnunci" minOccurs="0"/>
+						<xs:element ref="boe:peticioConsultaEstatAnunci" minOccurs="0"/>
+						<xs:element ref="boe:peticioAnullacioAnunci" minOccurs="0"/>
+						<xs:element ref="sctdev:PeticioConsultaCredencialsDev" minOccurs="0"/>
 									
 						
 						
