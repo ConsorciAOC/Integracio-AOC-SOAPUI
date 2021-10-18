@@ -4125,6 +4125,505 @@
          </pet:Peticion>\r
       </open:procesa>\r
    </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://www.openuri.org/procesa"/></con:call><con:call id="41219fa1-309a-4230-966f-cbb8885db69c" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>https://serveis3-pre.app.aoc.cat:443/siri-proxy/services/Sincron</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:open="http://www.openuri.org/" xmlns:pet="http://gencat.net/scsp/esquemes/peticion" xmlns:over="http://www.aoc.cat/over" xmlns:eta="http://www.aoc.cat/etauler" xmlns:hes="http://www.aoc.cat/hestia" xmlns:dogc="http://www.aoc.cat/dogc" xmlns:boe="http://www.aoc.cat/boe" xmlns:dev="http://www.aocat.net/sct/dev">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <open:procesa>\r
+         <pet:Peticion>\r
+            <!--You may enter the following 2 items in any order-->\r
+            <pet:Atributos>\r
+               <!--You may enter the following 11 items in any order-->\r
+               <pet:IdPeticion>?</pet:IdPeticion>\r
+               <pet:NumElementos>?</pet:NumElementos>\r
+               <pet:TimeStamp>?</pet:TimeStamp>\r
+               <!--Optional:-->\r
+               <pet:Estado>\r
+                  <!--You may enter the following 4 items in any order-->\r
+                  <!--Optional:-->\r
+                  <pet:CodigoEstado>?</pet:CodigoEstado>\r
+                  <!--Optional:-->\r
+                  <pet:CodigoEstadoSecundario>?</pet:CodigoEstadoSecundario>\r
+                  <!--Optional:-->\r
+                  <pet:LiteralError>?</pet:LiteralError>\r
+                  <!--Optional:-->\r
+                  <pet:TiempoEstimadoRespuesta>?</pet:TiempoEstimadoRespuesta>\r
+               </pet:Estado>\r
+               <pet:CodigoCertificado>?</pet:CodigoCertificado>\r
+               <pet:CodigoProducto>?</pet:CodigoProducto>\r
+               <!--Optional:-->\r
+               <pet:DatosAutorizacion>\r
+                  <!--You may enter the following 3 items in any order-->\r
+                  <pet:IdentificadorSolicitante>?</pet:IdentificadorSolicitante>\r
+                  <pet:NombreSolicitante>?</pet:NombreSolicitante>\r
+                  <pet:Finalidad>?</pet:Finalidad>\r
+               </pet:DatosAutorizacion>\r
+               <!--Optional:-->\r
+               <pet:Emisor>\r
+                  <!--You may enter the following 2 items in any order-->\r
+                  <pet:NifEmisor>?</pet:NifEmisor>\r
+                  <pet:NombreEmisor>?</pet:NombreEmisor>\r
+               </pet:Emisor>\r
+               <!--Optional:-->\r
+               <pet:IdSolicitanteOriginal>?</pet:IdSolicitanteOriginal>\r
+               <!--Optional:-->\r
+               <pet:NomSolicitanteOriginal>?</pet:NomSolicitanteOriginal>\r
+               <!--Optional:-->\r
+               <pet:Funcionario>\r
+                  <!--Optional:-->\r
+                  <pet:NombreCompletoFuncionario>?</pet:NombreCompletoFuncionario>\r
+                  <!--Optional:-->\r
+                  <pet:NifFuncionario>?</pet:NifFuncionario>\r
+                  <!--Optional:-->\r
+                  <pet:EMailFuncionario>?</pet:EMailFuncionario>\r
+                  <!--Optional:-->\r
+                  <pet:CodigoOrganismoFuncionario>?</pet:CodigoOrganismoFuncionario>\r
+                  <!--Optional:-->\r
+                  <pet:CertificadoDigital>cid:60957671574</pet:CertificadoDigital>\r
+               </pet:Funcionario>\r
+            </pet:Atributos>\r
+            <pet:Solicitudes>\r
+               <!--1 or more repetitions:-->\r
+               <pet:SolicitudTransmision>\r
+                  <!--You may enter the following 2 items in any order-->\r
+                  <pet:DatosGenericos>\r
+                     <!--You may enter the following 5 items in any order-->\r
+                     <!--Optional:-->\r
+                     <pet:Emisor>\r
+                        <!--You may enter the following 2 items in any order-->\r
+                        <pet:NifEmisor>?</pet:NifEmisor>\r
+                        <pet:NombreEmisor>?</pet:NombreEmisor>\r
+                     </pet:Emisor>\r
+                     <pet:Solicitante>\r
+                        <!--You may enter the following 5 items in any order-->\r
+                        <pet:IdentificadorSolicitante>?</pet:IdentificadorSolicitante>\r
+                        <pet:NombreSolicitante>?</pet:NombreSolicitante>\r
+                        <pet:Finalidad>?</pet:Finalidad>\r
+                        <pet:Consentimiento>?</pet:Consentimiento>\r
+                        <!--Optional:-->\r
+                        <pet:Funcionario>\r
+                           <!--Optional:-->\r
+                           <pet:NombreCompletoFuncionario>?</pet:NombreCompletoFuncionario>\r
+                           <!--Optional:-->\r
+                           <pet:NifFuncionario>?</pet:NifFuncionario>\r
+                           <!--Optional:-->\r
+                           <pet:EMailFuncionario>?</pet:EMailFuncionario>\r
+                           <!--Optional:-->\r
+                           <pet:CodigoOrganismoFuncionario>?</pet:CodigoOrganismoFuncionario>\r
+                           <!--Optional:-->\r
+                           <pet:CertificadoDigital>cid:517866949522</pet:CertificadoDigital>\r
+                        </pet:Funcionario>\r
+                     </pet:Solicitante>\r
+                     <!--Optional:-->\r
+                     <pet:Titular>\r
+                        <pet:TipoDocumentacion>?</pet:TipoDocumentacion>\r
+                        <pet:Documentacion>?</pet:Documentacion>\r
+                        <!--Optional:-->\r
+                        <pet:NombreCompleto>?</pet:NombreCompleto>\r
+                        <!--Optional:-->\r
+                        <pet:Nombre>?</pet:Nombre>\r
+                        <!--Optional:-->\r
+                        <pet:Apellido1>?</pet:Apellido1>\r
+                        <!--Optional:-->\r
+                        <pet:Apellido2>?</pet:Apellido2>\r
+                     </pet:Titular>\r
+                     <pet:Transmision>\r
+                        <!--You may enter the following 4 items in any order-->\r
+                        <pet:CodigoCertificado>?</pet:CodigoCertificado>\r
+                        <pet:IdSolicitud>?</pet:IdSolicitud>\r
+                        <!--Optional:-->\r
+                        <pet:IdTransmision>?</pet:IdTransmision>\r
+                        <!--Optional:-->\r
+                        <pet:FechaGeneracion>?</pet:FechaGeneracion>\r
+                     </pet:Transmision>\r
+                     <!--Optional:-->\r
+                     <pet:Ficheros>\r
+                        <!--1 or more repetitions:-->\r
+                        <pet:Fichero>\r
+                           <!--Optional:-->\r
+                           <pet:NombreFichero>?</pet:NombreFichero>\r
+                           <!--You have a CHOICE of the next 3 items at this level-->\r
+                           <pet:RutaFichero>?</pet:RutaFichero>\r
+                           <pet:URLDescarga>?</pet:URLDescarga>\r
+                           <pet:Contenido>cid:544959615227</pet:Contenido>\r
+                           <pet:Id>?</pet:Id>\r
+                           <!--Optional:-->\r
+                           <pet:Hash>cid:1257394489921</pet:Hash>\r
+                           <!--Optional:-->\r
+                           <pet:Firma>cid:665460765810</pet:Firma>\r
+                           <!--Optional:-->\r
+                           <pet:Via>?</pet:Via>\r
+                        </pet:Fichero>\r
+                     </pet:Ficheros>\r
+                  </pet:DatosGenericos>\r
+                  <!--Optional:-->\r
+                  <pet:DatosEspecificos>\r
+                     <!--You have a CHOICE of the next 22 items at this level-->\r
+                     <!--Optional:-->\r
+                     <over:peticioIntegracio>\r
+                        <over:peticioFormulariTramit>\r
+                           <over:codiCataleg>?</over:codiCataleg>\r
+                           <over:codiFuncionalServei>?</over:codiFuncionalServei>\r
+                           <over:codiFuncionalTramit>?</over:codiFuncionalTramit>\r
+                           <!--Optional:-->\r
+                           <over:codiInstanciaServei>?</over:codiInstanciaServei>\r
+                           <!--Optional:-->\r
+                           <over:codiInstanciaTramitPredecessor>?</over:codiInstanciaTramitPredecessor>\r
+                           <over:codiEns>?</over:codiEns>\r
+                           <!--Optional:-->\r
+                           <over:codiEnsOrigen>?</over:codiEnsOrigen>\r
+                           <!--Optional:-->\r
+                           <over:codiEnsDesti>?</over:codiEnsDesti>\r
+                           <!--Optional:-->\r
+                           <over:dadesAddicionals>?</over:dadesAddicionals>\r
+                           <!--Optional:-->\r
+                           <over:groupID>?</over:groupID>\r
+                        </over:peticioFormulariTramit>\r
+                        <over:dadesContingut>\r
+                           <over:versio>?</over:versio>\r
+                           <over:formulari>?</over:formulari>\r
+                           <!--Optional:-->\r
+                           <over:aliesNomTramit>?</over:aliesNomTramit>\r
+                           <!--Optional:-->\r
+                           <over:registreOrigen tipusRegistre="?">\r
+                              <over:dataRegistre>?</over:dataRegistre>\r
+                              <over:assentamentRegistre>?</over:assentamentRegistre>\r
+                              <!--Optional:-->\r
+                              <over:evidenciaRegistre>cid:444735652322</over:evidenciaRegistre>\r
+                           </over:registreOrigen>\r
+                           <!--Optional:-->\r
+                           <over:registreDesti tipusRegistre="?">\r
+                              <over:dataRegistre>?</over:dataRegistre>\r
+                              <over:assentamentRegistre>?</over:assentamentRegistre>\r
+                              <!--Optional:-->\r
+                              <over:evidenciaRegistre>cid:1040160318034</over:evidenciaRegistre>\r
+                           </over:registreDesti>\r
+                        </over:dadesContingut>\r
+                     </over:peticioIntegracio>\r
+                     <!--Optional:-->\r
+                     <over:peticioDocumentacioTramit>\r
+                        <!--You have a CHOICE of the next 2 items at this level-->\r
+                        <over:codiInstanciaTramit>?</over:codiInstanciaTramit>\r
+                        <over:numeroAssentament>?</over:numeroAssentament>\r
+                        <!--Optional:-->\r
+                        <over:dadesTramit>?</over:dadesTramit>\r
+                     </over:peticioDocumentacioTramit>\r
+                     <!--Optional:-->\r
+                     <over:peticioConsultaTramits>\r
+                        <over:codiCataleg>?</over:codiCataleg>\r
+                        <over:codiFuncionalServei>?</over:codiFuncionalServei>\r
+                        <!--Optional:-->\r
+                        <over:codiFuncionalTramit>?</over:codiFuncionalTramit>\r
+                        <over:dataInici>?</over:dataInici>\r
+                        <over:dataFi>?</over:dataFi>\r
+                        <!--Optional:-->\r
+                        <over:tipus>?</over:tipus>\r
+                     </over:peticioConsultaTramits>\r
+                     <!--Optional:-->\r
+                     <over:peticioLlistaExpedients>\r
+                        <!--You have a CHOICE of the next 4 items at this level-->\r
+                        <over:cerca>\r
+                           <!--Optional:-->\r
+                           <over:codiEnsPromotor>?</over:codiEnsPromotor>\r
+                           <!--Optional:-->\r
+                           <over:codiFuncionalServei>?</over:codiFuncionalServei>\r
+                           <!--Optional:-->\r
+                           <over:codiFuncionalTramit>?</over:codiFuncionalTramit>\r
+                           <!--Optional:-->\r
+                           <over:codiFuncionalTramitTeResposta>?</over:codiFuncionalTramitTeResposta>\r
+                           <!--Optional:-->\r
+                           <over:codiEnsInteressat>?</over:codiEnsInteressat>\r
+                           <over:dataInici>?</over:dataInici>\r
+                           <over:dataFi>?</over:dataFi>\r
+                        </over:cerca>\r
+                        <over:codiInstanciaTramit>?</over:codiInstanciaTramit>\r
+                        <over:numExpedient>?</over:numExpedient>\r
+                        <over:numRegistre>?</over:numRegistre>\r
+                     </over:peticioLlistaExpedients>\r
+                     <!--Optional:-->\r
+                     <over:peticioConsultaExpedient>\r
+                        <over:codiInstanciaServei>?</over:codiInstanciaServei>\r
+                     </over:peticioConsultaExpedient>\r
+                     <!--Optional:-->\r
+                     <over:peticioLlistaServeis>\r
+                        <over:codiEnsPromotor>?</over:codiEnsPromotor>\r
+                        <!--Optional:-->\r
+                        <over:mostrarInactius>?</over:mostrarInactius>\r
+                     </over:peticioLlistaServeis>\r
+                     <!--Optional:-->\r
+                     <over:peticioLlistaTramits>\r
+                        <over:codiEnsPromotor>?</over:codiEnsPromotor>\r
+                        <over:codiFuncionalServei>?</over:codiFuncionalServei>\r
+                     </over:peticioLlistaTramits>\r
+                     <!--Optional:-->\r
+                     <eta:peticioPublicarEdicte>\r
+                        <eta:edicte>\r
+                           <eta:idEdicte>?</eta:idEdicte>\r
+                           <eta:numExpedient>?</eta:numExpedient>\r
+                           <!--1 to 3 repetitions:-->\r
+                           <eta:informacio>\r
+                              <eta:titol>?</eta:titol>\r
+                              <eta:descripcio>?</eta:descripcio>\r
+                              <eta:idioma>?</eta:idioma>\r
+                           </eta:informacio>\r
+                           <eta:dataIniciPublicacio>?</eta:dataIniciPublicacio>\r
+                           <!--Optional:-->\r
+                           <eta:dataFiPublicacio>?</eta:dataFiPublicacio>\r
+                           <!--Optional:-->\r
+                           <eta:destacat>?</eta:destacat>\r
+                           <eta:diligencia>\r
+                              <eta:idioma>?</eta:idioma>\r
+                              <eta:format>?</eta:format>\r
+                           </eta:diligencia>\r
+                           <!--1 to 3 repetitions:-->\r
+                           <eta:document>\r
+                              <eta:nom>?</eta:nom>\r
+                              <eta:id>?</eta:id>\r
+                              <eta:idioma>?</eta:idioma>\r
+                           </eta:document>\r
+                           <!--Optional:-->\r
+                           <eta:edicteExtern>\r
+                              <!--Optional:-->\r
+                              <eta:codiEnsOrigen>?</eta:codiEnsOrigen>\r
+                              <eta:nomEnsOrigen>?</eta:nomEnsOrigen>\r
+                              <eta:registreEntrada>?</eta:registreEntrada>\r
+                              <eta:dataRecepcio>?</eta:dataRecepcio>\r
+                              <!--Optional:-->\r
+                              <eta:eacat>\r
+                                 <eta:codiCataleg>?</eta:codiCataleg>\r
+                                 <eta:codiInstanciaServei>?</eta:codiInstanciaServei>\r
+                                 <eta:codiInstanciaTramit>?</eta:codiInstanciaTramit>\r
+                                 <eta:codiEns>?</eta:codiEns>\r
+                              </eta:eacat>\r
+                           </eta:edicteExtern>\r
+                           <!--1 to 3 repetitions:-->\r
+                           <eta:classificacio>\r
+                              <!--1 to 3 repetitions:-->\r
+                              <eta:classificacio>\r
+                                 <eta:concepte>?</eta:concepte>\r
+                                 <eta:categoria>?</eta:categoria>\r
+                                 <!--Optional:-->\r
+                                 <eta:subcategoria>?</eta:subcategoria>\r
+                                 <eta:idioma>?</eta:idioma>\r
+                              </eta:classificacio>\r
+                              <eta:tipus>?</eta:tipus>\r
+                           </eta:classificacio>\r
+                           <!--Optional:-->\r
+                           <eta:dadesAddicionals>\r
+                              <!--Optional:-->\r
+                              <eta:paraulesClau>?</eta:paraulesClau>\r
+                              <!--Optional:-->\r
+                              <eta:nifs>?</eta:nifs>\r
+                              <!--Zero or more repetitions:-->\r
+                              <eta:referencia>\r
+                                 <eta:url>?</eta:url>\r
+                                 <!--Optional:-->\r
+                                 <eta:seu>?</eta:seu>\r
+                                 <!--1 to 3 repetitions:-->\r
+                                 <eta:enllac>\r
+                                    <eta:titol>?</eta:titol>\r
+                                    <eta:idioma>?</eta:idioma>\r
+                                 </eta:enllac>\r
+                              </eta:referencia>\r
+                              <!--Zero or more repetitions:-->\r
+                              <eta:adjunt>\r
+                                 <eta:id>?</eta:id>\r
+                                 <!--1 to 3 repetitions:-->\r
+                                 <eta:enllac>\r
+                                    <eta:titol>?</eta:titol>\r
+                                    <eta:idioma>?</eta:idioma>\r
+                                 </eta:enllac>\r
+                              </eta:adjunt>\r
+                           </eta:dadesAddicionals>\r
+                        </eta:edicte>\r
+                     </eta:peticioPublicarEdicte>\r
+                     <!--Optional:-->\r
+                     <eta:peticioCancellarEdicte>\r
+                        <eta:idEdicte>?</eta:idEdicte>\r
+                     </eta:peticioCancellarEdicte>\r
+                     <!--Optional:-->\r
+                     <eta:peticioModificarEdicte>\r
+                        <eta:idEdicte>?</eta:idEdicte>\r
+                        <!--Optional:-->\r
+                        <eta:dataFiPublicacio>?</eta:dataFiPublicacio>\r
+                        <!--Optional:-->\r
+                        <eta:destacat>?</eta:destacat>\r
+                     </eta:peticioModificarEdicte>\r
+                     <!--Optional:-->\r
+                     <eta:peticioDespublicarEdicte>\r
+                        <eta:idEdicte>?</eta:idEdicte>\r
+                     </eta:peticioDespublicarEdicte>\r
+                     <!--Optional:-->\r
+                     <eta:peticioSincronitzarEdictes>?</eta:peticioSincronitzarEdictes>\r
+                     <!--Optional:-->\r
+                     <eta:respostaSincronitzarEdictes>\r
+                        <!--Zero or more repetitions:-->\r
+                        <eta:edicte>\r
+                           <eta:dadesEdicte>\r
+                              <eta:idEdicte>?</eta:idEdicte>\r
+                              <eta:numExpedient>?</eta:numExpedient>\r
+                              <!--1 to 3 repetitions:-->\r
+                              <eta:informacio>\r
+                                 <eta:titol>?</eta:titol>\r
+                                 <eta:descripcio>?</eta:descripcio>\r
+                                 <eta:idioma>?</eta:idioma>\r
+                              </eta:informacio>\r
+                              <eta:dataIniciPublicacio>?</eta:dataIniciPublicacio>\r
+                              <!--Optional:-->\r
+                              <eta:dataFiPublicacio>?</eta:dataFiPublicacio>\r
+                              <!--Optional:-->\r
+                              <eta:destacat>?</eta:destacat>\r
+                              <eta:diligencia>\r
+                                 <eta:idioma>?</eta:idioma>\r
+                                 <eta:format>?</eta:format>\r
+                              </eta:diligencia>\r
+                              <!--1 to 3 repetitions:-->\r
+                              <eta:document>\r
+                                 <eta:nom>?</eta:nom>\r
+                                 <eta:id>?</eta:id>\r
+                                 <eta:idioma>?</eta:idioma>\r
+                              </eta:document>\r
+                              <!--Optional:-->\r
+                              <eta:edicteExtern>\r
+                                 <!--Optional:-->\r
+                                 <eta:codiEnsOrigen>?</eta:codiEnsOrigen>\r
+                                 <eta:nomEnsOrigen>?</eta:nomEnsOrigen>\r
+                                 <eta:registreEntrada>?</eta:registreEntrada>\r
+                                 <eta:dataRecepcio>?</eta:dataRecepcio>\r
+                                 <!--Optional:-->\r
+                                 <eta:eacat>\r
+                                    <eta:codiCataleg>?</eta:codiCataleg>\r
+                                    <eta:codiInstanciaServei>?</eta:codiInstanciaServei>\r
+                                    <eta:codiInstanciaTramit>?</eta:codiInstanciaTramit>\r
+                                    <eta:codiEns>?</eta:codiEns>\r
+                                 </eta:eacat>\r
+                              </eta:edicteExtern>\r
+                              <!--1 to 3 repetitions:-->\r
+                              <eta:classificacio>\r
+                                 <!--1 to 3 repetitions:-->\r
+                                 <eta:classificacio>\r
+                                    <eta:concepte>?</eta:concepte>\r
+                                    <eta:categoria>?</eta:categoria>\r
+                                    <!--Optional:-->\r
+                                    <eta:subcategoria>?</eta:subcategoria>\r
+                                    <eta:idioma>?</eta:idioma>\r
+                                 </eta:classificacio>\r
+                                 <eta:tipus>?</eta:tipus>\r
+                              </eta:classificacio>\r
+                              <!--Optional:-->\r
+                              <eta:dadesAddicionals>\r
+                                 <!--Optional:-->\r
+                                 <eta:paraulesClau>?</eta:paraulesClau>\r
+                                 <!--Optional:-->\r
+                                 <eta:nifs>?</eta:nifs>\r
+                                 <!--Zero or more repetitions:-->\r
+                                 <eta:referencia>\r
+                                    <eta:url>?</eta:url>\r
+                                    <!--Optional:-->\r
+                                    <eta:seu>?</eta:seu>\r
+                                    <!--1 to 3 repetitions:-->\r
+                                    <eta:enllac>\r
+                                       <eta:titol>?</eta:titol>\r
+                                       <eta:idioma>?</eta:idioma>\r
+                                    </eta:enllac>\r
+                                 </eta:referencia>\r
+                                 <!--Zero or more repetitions:-->\r
+                                 <eta:adjunt>\r
+                                    <eta:id>?</eta:id>\r
+                                    <!--1 to 3 repetitions:-->\r
+                                    <eta:enllac>\r
+                                       <eta:titol>?</eta:titol>\r
+                                       <eta:idioma>?</eta:idioma>\r
+                                    </eta:enllac>\r
+                                 </eta:adjunt>\r
+                              </eta:dadesAddicionals>\r
+                           </eta:dadesEdicte>\r
+                           <eta:codiEns>?</eta:codiEns>\r
+                           <eta:operacio>?</eta:operacio>\r
+                           <eta:dataProces>?</eta:dataProces>\r
+                        </eta:edicte>\r
+                        <eta:resultat>\r
+                           <eta:codiResultat>?</eta:codiResultat>\r
+                           <eta:descripcio>?</eta:descripcio>\r
+                        </eta:resultat>\r
+                     </eta:respostaSincronitzarEdictes>\r
+                     <!--Optional:-->\r
+                     <eta:peticioConsultarEstatEdicte>\r
+                        <eta:idEdicte>?</eta:idEdicte>\r
+                     </eta:peticioConsultarEstatEdicte>\r
+                     <!--Optional:-->\r
+                     <hes:DadesEspecifiques>\r
+                        <hes:CodINE>?</hes:CodINE>\r
+                        <!--You have a CHOICE of the next 2 items at this level-->\r
+                        <hes:IdCites>?</hes:IdCites>\r
+                        <hes:DataInici>?</hes:DataInici>\r
+                        <hes:DataFi>?</hes:DataFi>\r
+                        <!--Optional:-->\r
+                        <hes:IdProfessionals>?</hes:IdProfessionals>\r
+                     </hes:DadesEspecifiques>\r
+                     <!--Optional:-->\r
+                     <hes:PCIConsultaCiutada>\r
+                        <hes:codiINE>?</hes:codiINE>\r
+                        <!--You have a CHOICE of the next 3 items at this level-->\r
+                        <!--Optional:-->\r
+                        <hes:idInternCiutada>?</hes:idInternCiutada>\r
+                        <!--Optional:-->\r
+                        <hes:NIF>?</hes:NIF>\r
+                        <!--Optional:-->\r
+                        <hes:CIP>?</hes:CIP>\r
+                     </hes:PCIConsultaCiutada>\r
+                     <!--Optional:-->\r
+                     <dogc:peticioSolicitudPublicacio>\r
+                        <dogc:identificador>?</dogc:identificador>\r
+                        <dogc:ordreInsercio>cid:108079438089</dogc:ordreInsercio>\r
+                        <!--Optional:-->\r
+                        <dogc:registre>\r
+                           <dogc:registreSortida>\r
+                              <dogc:numero>?</dogc:numero>\r
+                              <dogc:data>?</dogc:data>\r
+                           </dogc:registreSortida>\r
+                           <dogc:registreEntrada>\r
+                              <dogc:numero>?</dogc:numero>\r
+                              <dogc:data>?</dogc:data>\r
+                           </dogc:registreEntrada>\r
+                        </dogc:registre>\r
+                     </dogc:peticioSolicitudPublicacio>\r
+                     <!--Optional:-->\r
+                     <dogc:peticioConsultaEstatPublicacio>\r
+                        <dogc:codiSolicitud>?</dogc:codiSolicitud>\r
+                     </dogc:peticioConsultaEstatPublicacio>\r
+                     <!--Optional:-->\r
+                     <boe:peticioEnviamentAnunci>\r
+                        <!--You have a CHOICE of the next 2 items at this level-->\r
+                        <boe:enviament>?</boe:enviament>\r
+                        <boe:id>?</boe:id>\r
+                     </boe:peticioEnviamentAnunci>\r
+                     <!--Optional:-->\r
+                     <boe:peticioConsultaEstatAnunci>\r
+                        <boe:idEnviamentBoe>?</boe:idEnviamentBoe>\r
+                        <!--Optional:-->\r
+                        <boe:idBoe>?</boe:idBoe>\r
+                     </boe:peticioConsultaEstatAnunci>\r
+                     <!--Optional:-->\r
+                     <boe:peticioAnullacioAnunci>\r
+                        <boe:idEnviamentBoe>?</boe:idEnviamentBoe>\r
+                        <!--Optional:-->\r
+                        <boe:idBoe>?</boe:idBoe>\r
+                     </boe:peticioAnullacioAnunci>\r
+                     <!--Optional:-->\r
+                     <dev:PeticioConsultaCredencialsDev>\r
+                        <dev:IdPeticio>?</dev:IdPeticio>\r
+                        <!--1 to 500 repetitions:-->\r
+                        <dev:ConsultaCredencials>\r
+                           <dev:IdSolicitud>?</dev:IdSolicitud>\r
+                           <dev:IdDocument>?</dev:IdDocument>\r
+                        </dev:ConsultaCredencials>\r
+                     </dev:PeticioConsultaCredencialsDev>\r
+                  </pet:DatosEspecificos>\r
+               </pet:SolicitudTransmision>\r
+            </pet:Solicitudes>\r
+         </pet:Peticion>\r
+      </open:procesa>\r
+   </soapenv:Body>\r
 </soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://www.openuri.org/procesa"/></con:call></con:operation></con:interface><con:interface xsi:type="con:WsdlInterface" id="e99414a0-f2d5-4586-aa9d-e901a01af23b" wsaVersion="NONE" name="AsincronSoap" type="wsdl" bindingName="{http://www.openuri.org/}AsincronSoap" soapVersion="1_1" anonymous="optional" definition="https://serveis3-pre.app.aoc.cat/siri-proxy/services/Asincron?wsdl" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache type="TEXT" rootPart="https://serveis3-pre.app.aoc.cat/siri-proxy/services/Asincron?wsdl"><con:part><con:url>https://serveis3-pre.app.aoc.cat/siri-proxy/services/Asincron?wsdl</con:url><con:content><![CDATA[<!--Published by JAX-WS RI at http://jax-ws.dev.java.net. RI's version is Metro/2.2 (branches/2.2-7015; 2012-02-20T20:31:25+0000) JAXWS-RI/2.2.6 JAXWS/2.2 svn-revision#unknown.-->
 <wsdl:definitions targetNamespace="http://www.openuri.org/" xmlns:conv="http://www.openuri.org/2002/04/soap/conversation/" xmlns:cw="http://www.openuri.org/2002/04/wsdl/conversation/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:jms="http://www.openuri.org/2002/04/wsdl/jms/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:s0="http://www.openuri.org/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:xmime="http://www.w3.org/2005/05/xmlmime" xmlns:xs="http://www.w3.org/2001/XMLSchema">
   <wsdl:types>
@@ -5639,7 +6138,7 @@
                      </ns1:Transmision>\r
                   </ns1:DatosGenericos>\r
                   <ns1:DatosEspecificos>\r
-                     <DadesEspecifiques xmlns="http://www.aoc.cat/hestia/">\r
+                     <DadesEspecifiques xmlns="http://www.aoc.cat/hestia">\r
                         <CodINE>9821920002</CodINE>\r
                         <IdCites>841265254,841207329,841455818</IdCites>\r
                      </DadesEspecifiques>\r
@@ -5703,7 +6202,7 @@
                      </ns1:Transmision>\r
                   </ns1:DatosGenericos>\r
                   <ns1:DatosEspecificos>\r
-                     <ns2:PCIConsultaCiutada xmlns:ns2="http://www.aoc.cat/hestia/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">\r
+                     <ns2:PCIConsultaCiutada xmlns:ns2="http://www.aoc.cat/hestia/">\r
                         <ns2:codiINE>9821920002</ns2:codiINE>\r
                         <ns2:NIF>00181584E</ns2:NIF>\r
                      </ns2:PCIConsultaCiutada>\r
@@ -5904,15 +6403,16 @@
                      </Transmision>\r
                      <Ficheros>\r
                         <Fichero>\r
-                           <NombreFichero>BOE_MTOM.xml</NombreFichero>\r
-                           <Contenido>cid:BOE_MTOM.xml</Contenido>\r
-                           <Id>1</Id>\r
+                           <NombreFichero>BOE</NombreFichero>\r
+                           <Contenido>cid:BOE</Contenido>\r
+                           <Id>IDENTIFICADORPROVA</Id>\r
+                           <Via>Entrada</Via>\r
                         </Fichero>\r
                      </Ficheros>\r
                   </DatosGenericos>\r
                   <DatosEspecificos>\r
                      <ns2:peticioEnviamentAnunci xmlns:ns2="http://www.aoc.cat/boe">\r
-                        <ns2:id>1</ns2:id>\r
+                        <ns2:id>IDENTIFICADORPROVA</ns2:id>\r
                      </ns2:peticioEnviamentAnunci>\r
                   </DatosEspecificos>\r
                </SolicitudTransmision>\r
@@ -5920,7 +6420,7 @@
          </Peticion>\r
       </open:procesa>\r
    </soapenv:Body>\r
-</soapenv:Envelope>]]></con:request><con:credentials><con:selectedAuthProfile>No Authorization</con:selectedAuthProfile><con:authType>No Authorization</con:authType></con:credentials><con:attachment><con:name>BOE_MTOM.xml</con:name><con:contentType>text/xml</con:contentType><con:size>15458</con:size><con:contentId>BOE_MTOM.xml</con:contentId><con:part>BOE_MTOM.xml</con:part><con:data>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</con:data><con:id>56a2a33e-ab4b-4c8d-b4e6-266d4a4542ac</con:id></con:attachment><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig action="http://www.openuri.org/procesa" mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:testStep type="request" id="21c559d5-24d2-4175-a3e9-488072ae0c79" name="BOE_CONS - WSS"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>SincronSoap</con:interface><con:operation>procesa</con:operation><con:request name="BOE_CONS - WSS" outgoingWss="CERT_PROVES" incomingWss="" timeout="" sslKeystore="" useWsAddressing="false" useWsReliableMessaging="false" wssPasswordType="" id="b8102efb-d443-4dfc-b817-02e7693fa0e0"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>https://serveis3-pre.app.aoc.cat:443/siri-proxy/services/Sincron</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:open="http://www.openuri.org/" xmlns:pet="http://gencat.net/scsp/esquemes/peticion" xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/">\r
+</soapenv:Envelope>]]></con:request><con:credentials><con:selectedAuthProfile>No Authorization</con:selectedAuthProfile><con:authType>No Authorization</con:authType></con:credentials><con:attachment><con:name>BOE</con:name><con:contentType>application/octet-stream</con:contentType><con:size>9552</con:size><con:contentId>BOE</con:contentId><con:part>BOE</con:part><con:url>C:/Users/cmoralea/Desktop/SOAP millora/Integracio-AOC-SOAPUI/MTOM/BOE</con:url><con:data>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</con:data><con:id>4713d5f1-68e9-4d55-b0db-3f081f33a465</con:id></con:attachment><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig action="http://www.openuri.org/procesa" mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:testStep type="request" id="21c559d5-24d2-4175-a3e9-488072ae0c79" name="BOE_CONS - WSS"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>SincronSoap</con:interface><con:operation>procesa</con:operation><con:request name="BOE_CONS - WSS" outgoingWss="CERT_PROVES" incomingWss="" timeout="" sslKeystore="" useWsAddressing="false" useWsReliableMessaging="false" wssPasswordType="" id="b8102efb-d443-4dfc-b817-02e7693fa0e0"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>https://serveis3-pre.app.aoc.cat:443/siri-proxy/services/Sincron</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:open="http://www.openuri.org/" xmlns:pet="http://gencat.net/scsp/esquemes/peticion" xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/">\r
    <soapenv:Header/>\r
    <soapenv:Body wsu:Id="id-2FCB69B934F938128B162694603391719" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd">\r
       <open:procesa>\r
