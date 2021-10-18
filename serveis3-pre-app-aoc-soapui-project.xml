@@ -5639,7 +5639,7 @@
                      </ns1:Transmision>\r
                   </ns1:DatosGenericos>\r
                   <ns1:DatosEspecificos>\r
-                     <DadesEspecifiques xmlns="http://www.aoc.cat/hestia">\r
+                     <DadesEspecifiques xmlns="http://www.aoc.cat/hestia/">\r
                         <CodINE>9821920002</CodINE>\r
                         <IdCites>841265254,841207329,841455818</IdCites>\r
                      </DadesEspecifiques>\r
@@ -5703,10 +5703,10 @@
                      </ns1:Transmision>\r
                   </ns1:DatosGenericos>\r
                   <ns1:DatosEspecificos>\r
-                     <PCIConsultaCiutada xmlns="http://www.aoc.cat/hestia">\r
-                        <codiINE>9821920002</codiINE>\r
-                        <idInternCiutada>10000412</idInternCiutada>\r
-                     </PCIConsultaCiutada>\r
+                     <ns2:PCIConsultaCiutada xmlns:ns2="http://www.aoc.cat/hestia/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">\r
+                        <ns2:codiINE>9821920002</ns2:codiINE>\r
+                        <ns2:NIF>00181584E</ns2:NIF>\r
+                     </ns2:PCIConsultaCiutada>\r
                   </ns1:DatosEspecificos>\r
                </ns1:SolicitudTransmision>\r
             </ns1:Solicitudes>\r
