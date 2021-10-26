@@ -1,0 +1,273 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<xs:schema xmlns="http://www.aoc.cat/sir" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:nns="xsi:noNamespaceSchemaLocation" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" targetNamespace="http://www.aoc.cat/sir" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<!-- ======================================================= -->
+	<!-- Enviar													 -->
+	<!-- ======================================================= -->
+	<xs:element name="peticioEnviamentAssentament">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="idEnviament" type="xs:string"/>
+				<xs:element name="enviament" type="xs:string"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="respostaEnviamentAssentament">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="resposta" minOccurs="0">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="idEnviamentSIR" type="xs:string"/>
+							<xs:element name="origenRegistreEntrada" type="xs:string"/>
+							<xs:element name="origenRegistreEntradaData" type="xs:string"/>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element ref="resultat"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<!-- ======================================================= -->
+	<!-- Confirmar												 -->
+	<!-- ======================================================= -->
+	<xs:element name="peticioConfirmacioAssentament">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="idEnviamentSIR" type="xs:string"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="respostaConfirmacioAssentament">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="peticioConfirmacioAssentament" minOccurs="0"/>
+				<xs:element name="resposta" minOccurs="0">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="registreEntrada" type="xs:string"/>
+							<xs:element name="registreEntradaData" type="xs:string"/>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element ref="resultat"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<!-- ======================================================= -->
+	<!-- Rebutjar												 -->
+	<!-- ======================================================= -->
+	<xs:element name="peticioRebuigAssentament">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="idEnviamentSIR" type="xs:string"/>
+				<xs:element name="motiu">
+					<xs:simpleType>
+						<xs:restriction base="xs:string">
+							<xs:minLength value="1"/>
+							<xs:maxLength value="80"/>
+						</xs:restriction>
+					</xs:simpleType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="respostaRebuigAssentament">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="peticioRebuigAssentament" minOccurs="0"/>
+				<xs:element ref="resultat"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<!-- ======================================================= -->
+	<!-- Reenviar												 -->
+	<!-- ======================================================= -->
+	<xs:element name="peticioReenviamentAssentament">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="idEnviamentSIR" type="xs:string"/>
+				<xs:element name="oficinaRegistreDesti" type="xs:string"/>
+				<xs:element name="observacions">
+					<xs:simpleType>
+						<xs:restriction base="xs:string">
+							<xs:minLength value="1"/>
+							<xs:maxLength value="80"/>
+						</xs:restriction>
+					</xs:simpleType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="respostaReenviamentAssentament">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="peticioReenviamentAssentament" minOccurs="0"/>
+				<xs:element ref="resultat"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<!-- ======================================================= -->
+	<!-- Consulta											 -->
+	<!-- ======================================================= -->
+	<xs:element name="peticioConsultaAssentament">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="idEnviamentSIR" type="xs:string"/>
+				<xs:element name="tipus" minOccurs="0">
+					<xs:simpleType>
+						<xs:restriction base="xs:string">
+							<xs:enumeration value="ENVIAT"/>
+							<xs:enumeration value="REBUT"/>
+						</xs:restriction>
+					</xs:simpleType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="respostaConsultaAssentament">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="peticioConsultaAssentament" minOccurs="0"/>
+				<xs:element name="resposta" minOccurs="0">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="intercanvi">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element name="idEnviament" type="xs:string"/>
+										<xs:element name="idEnviamentSIR" type="xs:string"/>
+										<xs:element name="oficinaInicial" type="xs:string" minOccurs="0"/>
+										<xs:element name="oficinaOrigen" type="xs:string"/>
+										<xs:element name="oficinaDesti" type="xs:string"/>
+										<xs:element name="origenRegistreEntrada" type="xs:string"/>
+										<xs:element name="origenRegistreEntradaData" type="xs:string"/>
+										<xs:element name="destiRegistreEntrada" type="xs:string" minOccurs="0"/>
+										<xs:element name="destiRegistreEntradaData" type="xs:string" minOccurs="0"/>
+										<xs:element name="registreSortida" type="xs:string"/>
+										<xs:element name="estat">
+											<xs:simpleType>
+												<xs:restriction base="xs:string">
+													<xs:enumeration value="ENVIAT"/>
+													<xs:enumeration value="PENDENT_CONFIRMACIO"/>
+													<xs:enumeration value="CONFIRMAT"/>
+													<xs:enumeration value="REBUTJAT"/>
+													<xs:enumeration value="REENVIAT"/>
+													<xs:enumeration value="ERROR"/>
+												</xs:restriction>
+											</xs:simpleType>
+										</xs:element>
+										<xs:element name="enviament" type="xs:string"/>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+							<xs:element name="apunts">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element name="apunt" minOccurs="0" maxOccurs="unbounded">
+											<xs:complexType>
+												<xs:sequence>
+													<xs:element name="data" type="xs:dateTime"/>
+													<xs:element name="tipus">
+														<xs:simpleType>
+															<xs:restriction base="xs:string">
+																<xs:enumeration value="ENVIAMENT"/>
+																<xs:enumeration value="CONFIRMACIO"/>
+																<xs:enumeration value="REBUIG"/>
+																<xs:enumeration value="REENVIAMENT"/>
+																<xs:enumeration value="ERROR"/>
+															</xs:restriction>
+														</xs:simpleType>
+													</xs:element>
+													<xs:element name="missatge" type="xs:string" minOccurs="0"/>
+													<xs:choice minOccurs="0">
+														<xs:element name="oficinaOrigen" type="xs:string"/>
+														<xs:element name="oficinaDesti" type="xs:string"/>
+													</xs:choice>
+													<xs:element name="oficinaDenominacio" type="xs:string" minOccurs="0"/>
+													<xs:element name="usuari" type="xs:string" minOccurs="0"/>
+												</xs:sequence>
+											</xs:complexType>
+										</xs:element>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+							<xs:element name="annexos">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element name="annex" minOccurs="0" maxOccurs="unbounded">
+											<xs:complexType>
+												<xs:sequence>
+													<xs:element name="nomFitxer" type="xs:string"/>
+													<xs:element name="idFitxerSIR" type="xs:string"/>
+													<xs:element name="guid" type="xs:string"/>
+													<xs:element name="ruta" type="xs:string" minOccurs="0"/>
+												</xs:sequence>
+											</xs:complexType>
+										</xs:element>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element ref="resultat"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<!-- ======================================================= -->
+	<!-- Sincronitzar													 -->
+	<!-- ======================================================= -->
+	<xs:element name="peticioSincronitzacioAssentaments"/>
+	<xs:element name="respostaSincronitzacioAssentaments">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="resposta" minOccurs="0">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="intercanvi" minOccurs="0" maxOccurs="unbounded">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element name="idEnviament" type="xs:string"/>
+										<xs:element name="idEnviamentSIR" type="xs:string"/>
+										<xs:element name="codiEns" type="xs:string"/>
+										<xs:element name="oficinaInicial" type="xs:string"/>
+										<xs:element name="oficinaOrigen" type="xs:string"/>
+										<xs:element name="oficinaDesti" type="xs:string"/>
+										<xs:element name="origenRegistreEntrada" type="xs:string"/>
+										<xs:element name="origenRegistreEntradaData" type="xs:string"/>
+										<xs:element name="destiRegistreEntrada" type="xs:string" minOccurs="0"/>
+										<xs:element name="destiRegistreEntradaData" type="xs:string" minOccurs="0"/>
+										<xs:element name="tipus">
+											<xs:simpleType>
+												<xs:restriction base="xs:string">
+													<xs:enumeration value="PENDENT_CONFIRMACIO"/>
+													<xs:enumeration value="CONFIRMAT"/>
+													<xs:enumeration value="REBUTJAT"/>
+													<xs:enumeration value="ERROR"/>
+													<xs:enumeration value="REBUT"/>
+												</xs:restriction>
+											</xs:simpleType>
+										</xs:element>
+										<xs:element name="data" type="xs:dateTime"/>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element ref="resultat"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<!-- ======================================================= -->
+	<!-- Resultat                                                -->
+	<!-- ======================================================= -->
+	<xs:element name="resultat">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="codiResultat" type="xs:string"/>
+				<xs:element name="descripcio" type="xs:string"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

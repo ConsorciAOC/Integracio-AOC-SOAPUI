@@ -27,6 +27,7 @@
 	xmlns:dogc="http://www.aoc.cat/dogc"
 	xmlns:boe="http://www.aoc.cat/boe"
 	xmlns:sctdev="http://www.aocat.net/sct/dev"
+	xmlns:sir="http://www.aoc.cat/sir"
 
 		elementFormDefault="qualified" attributeFormDefault="unqualified">
 		
@@ -36,6 +37,7 @@
 		<xs:import namespace="http://www.aoc.cat/dogc"  schemaLocation="./DOGC/dadesEspecifiques.xsd"/>
 		<xs:import namespace="http://www.aoc.cat/boe"  schemaLocation="./BOE/dadesEspecifiques.xsd"/>
 		<xs:import namespace="http://www.aocat.net/sct/dev"  schemaLocation="./SCT_DEV/consultaCredencialsDEVDadesEspecifiques.xsd"/>
+		<xs:import namespace="http://www.aoc.cat/sir"  schemaLocation="./SIR2_0/dadesEspecifiques.xsd"/>
 		
 		
 		
@@ -311,6 +313,7 @@
 						<xs:element ref="over:peticioLlistaExpedients" minOccurs="0"/>
 						<xs:element ref="over:peticioConsultaExpedient" minOccurs="0"/>
 						<xs:element ref="over:peticioLlistaServeis" minOccurs="0"/>
+						<xs:element ref="over:peticioExecucioTramit" minOccurs="0"/>
 						<xs:element ref="over:peticioLlistaTramits" minOccurs="0"/>
 						<xs:element ref="tauler:peticioPublicarEdicte" minOccurs="0"/>
 						<xs:element ref="tauler:peticioCancellarEdicte" minOccurs="0"/>
@@ -327,6 +330,12 @@
 						<xs:element ref="boe:peticioConsultaEstatAnunci" minOccurs="0"/>
 						<xs:element ref="boe:peticioAnullacioAnunci" minOccurs="0"/>
 						<xs:element ref="sctdev:PeticioConsultaCredencialsDev" minOccurs="0"/>
+						<xs:element ref="sir:peticioEnviamentAssentament" minOccurs="0"/>
+						<xs:element ref="sir:peticioConfirmacioAssentament" minOccurs="0"/>
+						<xs:element ref="sir:peticioRebuigAssentament" minOccurs="0"/>
+						<xs:element ref="sir:peticioReenviamentAssentament" minOccurs="0"/>
+						<xs:element ref="sir:peticioConsultaAssentament" minOccurs="0"/>
+						<xs:element ref="sir:peticioSincronitzacioAssentaments" minOccurs="0"/>
 									
 						
 						
