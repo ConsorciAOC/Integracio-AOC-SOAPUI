@@ -1,0 +1,832 @@
+<?xml version='1.0' encoding='UTF-8'?><!-- Published by JAX-WS RI at http://jax-ws.dev.java.net. RI's version is Metro/2.2 (branches/2.2-7015; 2012-02-20T20:31:25+0000) JAXWS-RI/2.2.6 JAXWS/2.2 svn-revision#unknown. --><wsdl:definitions xmlns:conv="http://www.openuri.org/2002/04/soap/conversation/" xmlns:cw="http://www.openuri.org/2002/04/wsdl/conversation/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:jms="http://www.openuri.org/2002/04/wsdl/jms/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:s0="http://www.openuri.org/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:xmime="http://www.w3.org/2005/05/xmlmime" targetNamespace="http://www.openuri.org/">
+	<wsdl:types>
+		<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:pet="http://gencat.net/scsp/esquemes/peticion" xmlns:res="http://gencat.net/scsp/esquemes/respuesta" elementFormDefault="qualified" targetNamespace="http://www.openuri.org/">
+			<xs:import namespace="http://gencat.net/scsp/esquemes/peticion"/>
+			<xs:import namespace="http://gencat.net/scsp/esquemes/respuesta"/>
+			<xs:element name="procesa">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element ref="pet:Peticion"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="procesaResponse">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element ref="res:Respuesta"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+		</xs:schema>
+			
+		<xs:schema xmlns="http://gencat.net/scsp/esquemes/peticion" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xmime="http://www.w3.org/2005/05/xmlmime" targetNamespace="http://gencat.net/scsp/esquemes/peticion" 		
+		
+		xmlns:nt="http://www.aocat.net/NT/v3.2"
+	
+
+		elementFormDefault="qualified" attributeFormDefault="unqualified">
+		
+		<xs:import namespace="http://www.aocat.net/NT/v3.2" schemaLocation="./NT/dadesEspecifiques.xsd"/>
+		
+		
+		
+		
+		
+		<xs:element name="Apellido1">
+			<xs:simpleType>
+				<xs:restriction base="xs:string">
+					<xs:maxLength value="40"/>
+				</xs:restriction>
+			</xs:simpleType>
+		</xs:element>
+		<xs:element name="Apellido2">
+			<xs:simpleType>
+				<xs:restriction base="xs:string">
+					<xs:maxLength value="40"/>
+				</xs:restriction>
+			</xs:simpleType>
+		</xs:element>
+		<xs:element name="Atributos">
+			<xs:complexType>
+				<xs:all>
+					<xs:element ref="IdPeticion"/>
+					<xs:element ref="NumElementos"/>
+					<xs:element ref="TimeStamp"/>
+					<xs:element ref="Estado" minOccurs="0"/>
+					<xs:element ref="CodigoCertificado"/>
+					<xs:element ref="CodigoProducto"/>
+					<xs:element ref="DatosAutorizacion" minOccurs="0"/>
+					<xs:element ref="Emisor" minOccurs="0"/>
+					<xs:element ref="IdSolicitanteOriginal" minOccurs="0"/>
+					<xs:element ref="NomSolicitanteOriginal" minOccurs="0"/>
+					<xs:element ref="Funcionario" minOccurs="0"/>
+				</xs:all>
+			</xs:complexType>
+		</xs:element>
+		<xs:element name="CodigoCertificado">
+			<xs:simpleType>
+				<xs:restriction base="xs:string">
+					<xs:maxLength value="64"/>
+				</xs:restriction>
+			</xs:simpleType>
+		</xs:element>
+		<xs:element name="CodigoEstado">
+			<xs:simpleType>
+				<xs:restriction base="xs:string">
+					<xs:maxLength value="4"/>
+				</xs:restriction>
+			</xs:simpleType>
+		</xs:element>
+		<xs:element name="CodigoEstadoSecundario">
+			<xs:simpleType>
+				<xs:restriction base="xs:string">
+					<xs:maxLength value="16"/>
+				</xs:restriction>
+			</xs:simpleType>
+		</xs:element>
+		<xs:element name="Consentimiento">
+			<xs:simpleType>
+				<xs:restriction base="xs:string">
+					<xs:enumeration value="Si"/>
+					<xs:enumeration value="Ley"/>
+				</xs:restriction>
+			</xs:simpleType>
+		</xs:element>
+		<xs:element name="DatosGenericos">
+			<xs:complexType>
+				<xs:all>
+					<xs:element ref="Emisor" minOccurs="0"/>
+					<xs:element ref="Solicitante"/>
+					<xs:element ref="Titular" minOccurs="0"/>
+					<xs:element ref="Transmision"/>
+					<xs:element ref="Ficheros" minOccurs="0"/>
+				</xs:all>
+			</xs:complexType>
+		</xs:element>
+		<xs:element name="Documentacion">
+			<xs:simpleType>
+				<xs:restriction base="xs:string">
+					<xs:maxLength value="40"/>
+				</xs:restriction>
+			</xs:simpleType>
+		</xs:element>
+		<xs:element name="Emisor">
+			<xs:complexType>
+				<xs:all>
+					<xs:element ref="NifEmisor"/>
+					<xs:element ref="NombreEmisor"/>
+				</xs:all>
+			</xs:complexType>
+		</xs:element>
+		<xs:element name="Estado">
+			<xs:complexType>
+				<xs:all>
+					<xs:element ref="CodigoEstado" minOccurs="0"/>
+					<xs:element ref="CodigoEstadoSecundario" minOccurs="0"/>
+					<xs:element ref="LiteralError" minOccurs="0"/>
+					<xs:element ref="TiempoEstimadoRespuesta" minOccurs="0"/>
+				</xs:all>
+			</xs:complexType>
+		</xs:element>
+		<xs:element name="FechaGeneracion">
+			<xs:simpleType>
+				<xs:restriction base="xs:string">
+					<xs:maxLength value="29"/>
+				</xs:restriction>
+			</xs:simpleType>
+		</xs:element>
+		<xs:element name="Finalidad">
+			<xs:simpleType>
+				<xs:restriction base="xs:string">
+					<xs:maxLength value="250"/>
+					<xs:minLength value="1"/>
+				</xs:restriction>
+			</xs:simpleType>
+		</xs:element>
+		<xs:element name="Funcionario">
+			<xs:complexType>
+				<xs:sequence>
+					<xs:element ref="NombreCompletoFuncionario" minOccurs="0"/>
+					<xs:element ref="NifFuncionario" minOccurs="0"/>
+					<xs:element ref="EMailFuncionario" minOccurs="0"/>
+					<xs:element ref="CodigoOrganismoFuncionario" minOccurs="0"/>
+					<xs:element name="CertificadoDigital" type="xs:base64Binary" minOccurs="0"/>
+				</xs:sequence>
+			</xs:complexType>
+		</xs:element>
+		<xs:element name="IdentificadorSolicitante">
+			<xs:simpleType>
+				<xs:restriction base="xs:string">
+					<xs:maxLength value="10"/>
+				</xs:restriction>
+			</xs:simpleType>
+		</xs:element>
+		<xs:element name="IdPeticion">
+			<xs:simpleType>
+				<xs:restriction base="xs:string">
+					<xs:maxLength value="100"/>
+				</xs:restriction>
+			</xs:simpleType>
+		</xs:element>
+		<xs:element name="IdSolicitud">
+			<xs:simpleType>
+				<xs:restriction base="xs:string">
+					<xs:maxLength value="40"/>
+				</xs:restriction>
+			</xs:simpleType>
+		</xs:element>
+		<xs:element name="IdTransmision">
+			<xs:simpleType>
+				<xs:restriction base="xs:string">
+					<xs:maxLength value="26"/>
+				</xs:restriction>
+			</xs:simpleType>
+		</xs:element>
+		<xs:element name="LiteralError">
+			<xs:simpleType>
+				<xs:restriction base="xs:string">
+					<xs:maxLength value="255"/>
+				</xs:restriction>
+			</xs:simpleType>
+		</xs:element>
+		<xs:element name="NifEmisor">
+			<xs:simpleType>
+				<xs:restriction base="xs:string">
+					<xs:maxLength value="10"/>
+				</xs:restriction>
+			</xs:simpleType>
+		</xs:element>
+		<xs:element name="NombreCompletoFuncionario">
+			<xs:simpleType>
+				<xs:restriction base="xs:string">
+					<xs:maxLength value="122"/>
+				</xs:restriction>
+			</xs:simpleType>
+		</xs:element>
+		<xs:element name="NifFuncionario">
+			<xs:simpleType>
+				<xs:restriction base="xs:string">
+					<xs:maxLength value="10"/>
+				</xs:restriction>
+			</xs:simpleType>
+		</xs:element>
+		<xs:element name="EMailFuncionario">
+			<xs:simpleType>
+				<xs:restriction base="xs:string">
+					<xs:maxLength value="122"/>
+				</xs:restriction>
+			</xs:simpleType>
+		</xs:element>
+		<xs:element name="CodigoOrganismoFuncionario">
+			<xs:simpleType>
+				<xs:restriction base="xs:string">
+					<xs:maxLength value="10"/>
+				</xs:restriction>
+			</xs:simpleType>
+		</xs:element>
+		<xs:element name="Nombre">
+			<xs:simpleType>
+				<xs:restriction base="xs:string">
+					<xs:maxLength value="40"/>
+				</xs:restriction>
+			</xs:simpleType>
+		</xs:element>
+		<xs:element name="NombreCompleto">
+			<xs:simpleType>
+				<xs:restriction base="xs:string">
+					<xs:maxLength value="122"/>
+				</xs:restriction>
+			</xs:simpleType>
+		</xs:element>
+		<xs:element name="NombreEmisor">
+			<xs:simpleType>
+				<xs:restriction base="xs:string">
+					<xs:maxLength value="50"/>
+				</xs:restriction>
+			</xs:simpleType>
+		</xs:element>
+		<xs:element name="NombreSolicitante">
+			<xs:simpleType>
+				<xs:restriction base="xs:string">
+					<xs:maxLength value="100"/>
+				</xs:restriction>
+			</xs:simpleType>
+		</xs:element>
+		<xs:element name="NumElementos">
+			<xs:simpleType>
+				<xs:restriction base="xs:int">
+					<xs:totalDigits value="7"/>
+					<xs:minInclusive value="0"/>
+				</xs:restriction>
+			</xs:simpleType>
+		</xs:element>
+		<xs:element name="Peticion">
+			<xs:complexType>
+				<xs:all>
+					<xs:element ref="Atributos"/>
+					<xs:element ref="Solicitudes"/>
+				</xs:all>
+			</xs:complexType>
+		</xs:element>
+		<xs:element name="Solicitante">
+			<xs:complexType>
+				<xs:all>
+					<xs:element ref="IdentificadorSolicitante"/>
+					<xs:element ref="NombreSolicitante"/>
+					<xs:element ref="Finalidad"/>
+					<xs:element ref="Consentimiento"/>
+					<xs:element ref="Funcionario" minOccurs="0"/>
+				</xs:all>
+			</xs:complexType>
+		</xs:element>
+		<xs:element name="Solicitudes">
+			<xs:complexType>
+				<xs:sequence>
+					<xs:element ref="SolicitudTransmision" maxOccurs="unbounded"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="SolicitudTransmision">
+				<xs:complexType>
+					<xs:all>
+						<xs:element ref="DatosGenericos"/>
+						<xs:element ref="DatosEspecificos" minOccurs="0"/>
+					</xs:all>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="DatosEspecificos">
+				<xs:complexType>
+					<xs:choice>
+						<xs:element ref="nt:PeticioProcessarTramesa" minOccurs="0"/>
+						<xs:element ref="nt:PeticioRecuperarReport" minOccurs="0"/>
+						<xs:element ref="nt:PeticioParaulaPas" minOccurs="0"/>
+						<xs:element ref="nt:PeticioEvidencia" minOccurs="0"/>
+						<xs:element ref="nt:PeticioConsulta" minOccurs="0"/>
+						<xs:element ref="nt:PeticioCerca" minOccurs="0"/>
+											
+						
+						
+						</xs:choice>
+				</xs:complexType>
+			</xs:element>
+		<xs:element name="TiempoEstimadoRespuesta">
+			<xs:simpleType>
+				<xs:restriction base="xs:int">
+					<xs:totalDigits value="4"/>
+					<xs:minInclusive value="0"/>
+				</xs:restriction>
+			</xs:simpleType>
+		</xs:element>
+		<xs:element name="TimeStamp">
+			<xs:simpleType>
+				<xs:restriction base="xs:string">
+					<xs:maxLength value="29"/>
+				</xs:restriction>
+			</xs:simpleType>
+		</xs:element>
+		<xs:element name="TipoDocumentacion">
+			<xs:simpleType>
+				<xs:restriction base="xs:string">
+					<xs:enumeration value="CIF"/>
+					<xs:enumeration value="NIF"/>
+					<xs:enumeration value="DNI"/>
+					<xs:enumeration value="Pasaporte"/>
+					<xs:enumeration value="NIE"/>
+				</xs:restriction>
+			</xs:simpleType>
+		</xs:element>
+		<xs:element name="Titular">
+			<xs:complexType>
+				<xs:sequence>
+					<xs:element ref="TipoDocumentacion"/>
+					<xs:element ref="Documentacion"/>
+					<xs:element ref="NombreCompleto" minOccurs="0"/>
+					<xs:element ref="Nombre" minOccurs="0"/>
+					<xs:element ref="Apellido1" minOccurs="0"/>
+					<xs:element ref="Apellido2" minOccurs="0"/>
+				</xs:sequence>
+			</xs:complexType>
+		</xs:element>
+		<xs:element name="Transmision">
+			<xs:complexType>
+				<xs:all>
+					<xs:element ref="CodigoCertificado"/>
+					<xs:element ref="IdSolicitud"/>
+					<xs:element ref="IdTransmision" minOccurs="0"/>
+					<xs:element ref="FechaGeneracion" minOccurs="0"/>
+				</xs:all>
+			</xs:complexType>
+		</xs:element>
+		<xs:element name="DatosAutorizacion">
+			<xs:complexType>
+				<xs:all>
+					<xs:element ref="IdentificadorSolicitante"/>
+					<xs:element ref="NombreSolicitante"/>
+					<xs:element ref="Finalidad"/>
+				</xs:all>
+			</xs:complexType>
+		</xs:element>
+		<xs:element name="CodigoProducto">
+			<xs:simpleType>
+				<xs:restriction base="xs:string"/>
+			</xs:simpleType>
+		</xs:element>
+		<xs:element name="IdSolicitanteOriginal">
+			<xs:simpleType>
+				<xs:restriction base="xs:string">
+					<xs:maxLength value="100"/>
+				</xs:restriction>
+			</xs:simpleType>
+		</xs:element>
+		<xs:element name="NomSolicitanteOriginal">
+			<xs:simpleType>
+				<xs:restriction base="xs:string">
+					<xs:maxLength value="100"/>
+				</xs:restriction>
+			</xs:simpleType>
+		</xs:element>
+		<xs:element name="Ficheros">
+			<xs:complexType>
+				<xs:sequence>
+					<xs:element ref="Fichero" maxOccurs="unbounded"/>
+				</xs:sequence>
+			</xs:complexType>
+		</xs:element>
+		<xs:element name="Fichero">
+			<xs:complexType>
+				<xs:sequence>
+					<xs:element name="NombreFichero" type="xs:string" minOccurs="0"/>
+					<xs:choice>
+						<xs:element name="RutaFichero" type="xs:string"/>
+						<xs:element name="URLDescarga" type="xs:string"/>
+						<xs:element name="Contenido" type="xs:base64Binary" xmime:expectedContentTypes="application/octet-stream"/>
+					</xs:choice>
+					<xs:element ref="Id"/>
+					<xs:element name="Hash" type="xs:base64Binary" minOccurs="0"/>
+					<xs:element name="Firma" type="xs:base64Binary" minOccurs="0"/>
+					<xs:element ref="Via" minOccurs="0"/>
+				</xs:sequence>
+			</xs:complexType>
+		</xs:element>
+		<xs:element name="Id">
+			<xs:simpleType>
+				<xs:restriction base="xs:string">
+					<xs:maxLength value="50"/>
+				</xs:restriction>
+			</xs:simpleType>
+		</xs:element>
+		<xs:element name="Via">
+			<xs:simpleType>
+				<xs:restriction base="xs:string">
+					<xs:enumeration value="Entrada"/>
+					<xs:enumeration value="Salida"/>
+				</xs:restriction>
+			</xs:simpleType>
+		</xs:element>
+	</xs:schema>
+					
+		<xs:schema xmlns="http://gencat.net/scsp/esquemes/respuesta" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xmime="http://www.w3.org/2005/05/xmlmime" targetNamespace="http://gencat.net/scsp/esquemes/respuesta" elementFormDefault="qualified" attributeFormDefault="unqualified">
+			<xs:element name="Apellido1">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:maxLength value="40"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="Apellido2">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:maxLength value="40"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="Atributos">
+				<xs:complexType>
+					<xs:all>
+						<xs:element ref="IdPeticion"/>
+						<xs:element ref="NumElementos"/>
+						<xs:element ref="TimeStamp"/>
+						<xs:element ref="Estado" minOccurs="0"/>
+						<xs:element ref="CodigoCertificado"/>
+						<xs:element ref="CodigoProducto"/>
+						<xs:element ref="Emisor" minOccurs="0"/>
+						<xs:element ref="IdSolicitanteOriginal" minOccurs="0"/>
+						<xs:element ref="NomSolicitanteOriginal" minOccurs="0"/>
+						<xs:element ref="Funcionario" minOccurs="0"/>
+					</xs:all>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="CodigoCertificado">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:maxLength value="64"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="CodigoEstado">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:maxLength value="4"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="CodigoEstadoSecundario">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:maxLength value="16"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="Consentimiento">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:enumeration value="Si"/>
+						<xs:enumeration value="Ley"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="DatosGenericos">
+				<xs:complexType>
+					<xs:all>
+						<xs:element ref="Emisor" minOccurs="0"/>
+						<xs:element ref="Solicitante"/>
+						<xs:element ref="Titular" minOccurs="0"/>
+						<xs:element ref="Transmision"/>
+						<xs:element ref="Ficheros" minOccurs="0"/>
+					</xs:all>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="Documentacion">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:maxLength value="40"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="Emisor">
+				<xs:complexType>
+					<xs:all>
+						<xs:element ref="NifEmisor"/>
+						<xs:element ref="NombreEmisor"/>
+					</xs:all>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="Estado">
+				<xs:complexType>
+					<xs:all>
+						<xs:element ref="CodigoEstado" minOccurs="0"/>
+						<xs:element ref="CodigoEstadoSecundario" minOccurs="0"/>
+						<xs:element ref="LiteralError" minOccurs="0"/>
+						<xs:element ref="TiempoEstimadoRespuesta" minOccurs="0"/>
+					</xs:all>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="FechaGeneracion">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:maxLength value="29"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="Finalidad">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:maxLength value="250"/>
+						<xs:minLength value="1"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="Funcionario">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element ref="NombreCompletoFuncionario" minOccurs="0"/>
+						<xs:element ref="NifFuncionario" minOccurs="0"/>
+						<xs:element ref="EMailFuncionario" minOccurs="0"/>
+						<xs:element ref="CodigoOrganismoFuncionario" minOccurs="0"/>
+						<xs:element name="CertificadoDigital" type="xs:base64Binary" minOccurs="0"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="IdentificadorSolicitante">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:maxLength value="10"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="IdPeticion">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:maxLength value="100"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="IdSolicitud">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:maxLength value="40"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="IdTransmision">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:maxLength value="29"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="LiteralError">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:maxLength value="255"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="NifEmisor">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:maxLength value="10"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="NombreCompletoFuncionario">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:maxLength value="122"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="NifFuncionario">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:maxLength value="10"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="EMailFuncionario">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:maxLength value="122"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="CodigoOrganismoFuncionario">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:maxLength value="10"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="Nombre">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:maxLength value="40"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="NombreCompleto">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:maxLength value="122"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="NombreEmisor">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:maxLength value="50"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="NombreSolicitante">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:maxLength value="100"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="NumElementos">
+				<xs:simpleType>
+					<xs:restriction base="xs:int">
+						<xs:totalDigits value="7"/>
+						<xs:minInclusive value="0"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="Respuesta">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element ref="Atributos"/>
+						<!-- Las transmisiones son opcionales en caso de que la repuesta no este preparada y se devuelva un TER -->
+						<xs:element ref="Transmisiones" minOccurs="0"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="Solicitante">
+				<xs:complexType>
+					<xs:all>
+						<xs:element ref="IdentificadorSolicitante"/>
+						<xs:element ref="NombreSolicitante"/>
+						<xs:element ref="Finalidad"/>
+						<xs:element ref="Consentimiento"/>
+						<xs:element ref="Funcionario" minOccurs="0"/>
+					</xs:all>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="TiempoEstimadoRespuesta">
+				<xs:simpleType>
+					<xs:restriction base="xs:int">
+						<xs:totalDigits value="4"/>
+						<xs:minInclusive value="0"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="TimeStamp">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:maxLength value="29"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="TipoDocumentacion">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:enumeration value="CIF"/>
+						<xs:enumeration value="NIF"/>
+						<xs:enumeration value="DNI"/>
+						<xs:enumeration value="Pasaporte"/>
+						<xs:enumeration value="NIE"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="Titular">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element ref="TipoDocumentacion"/>
+						<xs:element ref="Documentacion"/>
+						<xs:element ref="NombreCompleto" minOccurs="0"/>
+						<xs:element ref="Nombre" minOccurs="0"/>
+						<xs:element ref="Apellido1" minOccurs="0"/>
+						<xs:element ref="Apellido2" minOccurs="0"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="Transmision">
+				<xs:complexType>
+					<xs:all>
+						<xs:element ref="CodigoCertificado"/>
+						<xs:element ref="IdSolicitud"/>
+						<xs:element ref="IdTransmision"/>
+						<xs:element ref="FechaGeneracion"/>
+					</xs:all>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="TransmisionDatos">
+				<xs:complexType>
+					<xs:all>
+						<xs:element ref="DatosGenericos"/>
+						<xs:element name="DatosEspecificos" type="xs:anyType" minOccurs="0"/>
+					</xs:all>
+				</xs:complexType>
+			</xs:element>
+			<!-- 
+		  Las transmisiones son opcionales en caso de devolver en la respuesta un nuevo TER.
+		  
+		  -->
+			<xs:element name="Transmisiones" nillable="false">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element ref="TransmisionDatos" maxOccurs="unbounded"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="CodigoProducto">
+				<xs:simpleType>
+					<xs:restriction base="xs:string"/>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="IdSolicitanteOriginal">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:maxLength value="100"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="NomSolicitanteOriginal">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:maxLength value="100"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="Ficheros">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element ref="Fichero" maxOccurs="unbounded"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="Fichero">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="NombreFichero" type="xs:string" minOccurs="0"/>
+						<xs:choice>
+							<xs:element name="RutaFichero" type="xs:string"/>
+							<xs:element name="URLDescarga" type="xs:string"/>
+							<xs:element name="Contenido" type="xs:base64Binary" xmime:expectedContentTypes="application/octet-stream"/>
+						</xs:choice>
+						<xs:element ref="Id"/>
+						<xs:element name="Hash" type="xs:base64Binary" minOccurs="0"/>
+						<xs:element name="Firma" type="xs:base64Binary" minOccurs="0"/>
+						<xs:element ref="Via" minOccurs="0"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="Id">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:maxLength value="50"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="Via">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:enumeration value="Entrada"/>
+						<xs:enumeration value="Salida"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+		</xs:schema>
+			
+	</wsdl:types>
+	<wsdl:message name="procesaSoapIn">
+		<wsdl:part name="parameters" element="s0:procesa"/>
+	</wsdl:message>
+	<wsdl:message name="procesaSoapOut">
+		<wsdl:part name="parameters" element="s0:procesaResponse"/>
+	</wsdl:message>
+	<wsdl:portType name="SincronSoap">
+		<wsdl:operation name="procesa">
+			<wsdl:input message="s0:procesaSoapIn"/>
+			<wsdl:output message="s0:procesaSoapOut"/>
+		</wsdl:operation>
+	</wsdl:portType>
+	<wsdl:binding name="SincronSoap" type="s0:SincronSoap">
+		<soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+		<wsdl:operation name="procesa">
+			<soap:operation soapAction="http://www.openuri.org/procesa" style="document"/>
+			<wsdl:input>
+				<soap:body use="literal"/>
+			</wsdl:input>
+			<wsdl:output>
+				<soap:body use="literal"/>
+			</wsdl:output>
+		</wsdl:operation>
+	</wsdl:binding>
+	<wsdl:service name="Sincron">
+		<wsdl:port name="SincronSoap" binding="s0:SincronSoap">
+			<soap:address location="https://serveis3-pre.nt.aoc.cat:443/siri-proxy/services/Sincron"/>
+		</wsdl:port>
+	</wsdl:service>
+</wsdl:definitions>
