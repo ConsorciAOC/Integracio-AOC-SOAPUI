@@ -2278,54 +2278,54 @@
                      </Ficheros>\r
                   </DatosGenericos>\r
                   <DatosEspecificos>\r
-                     <p:PeticioProcessarTramesa xmlns:p="http://www.aocat.net/NT/v3.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">\r
-                        <p:Usuari>\r
-                           <p:Rol>EMPLEAT</p:Rol>\r
-                        </p:Usuari>\r
-                        <p:Emissor>\r
-                           <p:CodiOrganisme>9821920002</p:CodiOrganisme>\r
-                           <p:CodiDepartament>9821920002</p:CodiDepartament>\r
-                        </p:Emissor>\r
-                        <p:Tramesa>\r
-                           <p:DadesAvisos>\r
-                              <p:Plantilla>Universitat Autònoma de Barcelona</p:Plantilla>\r
-                           </p:DadesAvisos>\r
-                           <p:DadesOfici>\r
-                              <p:CosNotificacio>sdfasfas</p:CosNotificacio>\r
-                              <p:PeuRecurs>Contra aquesta resolució, que no esgota la via administrativa, les persones interessades poden interposar recurs d'alçada davant la rectora de la UAB, en el termini d'un mes, a comptar des del dia següent a la recepció d'aquesta notificació o, si s'escau, des del dia següent de la seva publicació, de conformitat amb el que disposen els articles 121 i 122 de la Llei 39/2015, d'1 d'octubre, del procediment administratiu comú de les administracions públiques.</p:PeuRecurs>\r
-                           </p:DadesOfici>\r
-                           <p:Documents>\r
-                              <p:Document>\r
-                                 <p:Nom>pdf_exemple.pdf</p:Nom>\r
-                                 <p:IdFicheroPCI>1</p:IdFicheroPCI>\r
-                                 <p:Tipus>Resolució</p:Tipus>\r
-                              </p:Document>\r
-                           </p:Documents>\r
-                           <p:Notificacio>\r
-                              <p:Titol>Prova MTOM v2</p:Titol>\r
-                              <p:Referencia>Prova_Resolució accés a mínors</p:Referencia>\r
-                              <p:TipusObjecte>NOTIFICACIO</p:TipusObjecte>\r
-                              <p:TipusAcces>PPAS</p:TipusAcces>\r
-                              <p:DiesExpiracio>10</p:DiesExpiracio>\r
-                              <p:Destinataris>\r
-                                 <p:Destinatari>\r
-                                    <p:PersonaFisica>\r
-                                       <p:BustiesCorreu>\r
-                                          <p:BustiaCorreu>XXXX@XXXXXX.com</p:BustiaCorreu>\r
-                                       </p:BustiesCorreu>\r
-                                       <p:DocumentIdentificatiu>\r
-                                          <p:NIF>12345678Z</p:NIF>\r
-                                       </p:DocumentIdentificatiu>\r
-                                       <p:Nom>prova</p:Nom>\r
-                                       <p:PrimerCognom>prova</p:PrimerCognom>\r
-                                       <p:SegonCognom>prova</p:SegonCognom>\r
-                                    </p:PersonaFisica>\r
-                                    <p:Idioma>ca</p:Idioma>\r
-                                 </p:Destinatari>\r
-                              </p:Destinataris>\r
-                           </p:Notificacio>\r
-                        </p:Tramesa>\r
-                     </p:PeticioProcessarTramesa>\r
+                     <PeticioProcessarTramesa xmlns="http://www.aocat.net/NT/v3.2" xmlns:xsi="htt //www.w3.org/2001/XMLSchema-instance">\r
+                        <Usuari>\r
+                           <Rol>EMPLEAT</Rol>\r
+                        </Usuari>\r
+                        <Emissor>\r
+                           <CodiOrganisme>9821920002</CodiOrganisme>\r
+                           <CodiDepartament>9821920002</CodiDepartament>\r
+                        </Emissor>\r
+                        <Tramesa>\r
+                           <DadesAvisos>\r
+                              <Plantilla>Universitat Autònoma de Barcelona</Plantilla>\r
+                           </DadesAvisos>\r
+                           <DadesOfici>\r
+                              <CosNotificacio>sdfasfas</CosNotificacio>\r
+                              <PeuRecurs>Contra aquesta resolució, que no esgota la via administrativa, les persones interessades poden interposar recurs d'alçada davant la rectora de la UAB, en el termini d'un mes, a comptar des del dia següent a la recepció d'aquesta notificació o, si s'escau, des del dia següent de la seva publicació, de conformitat amb el que disposen els articles 121 i 122 de la Llei 39/2015, d'1 d'octubre, del procediment administratiu comú de les administracions públiques.</PeuRecurs>\r
+                           </DadesOfici>\r
+                           <Documents>\r
+                              <Document>\r
+                                 <Nom>pdf_exemple.pdf</Nom>\r
+                                 <IdFicheroPCI>1</IdFicheroPCI>\r
+                                 <Tipus>Resolució</Tipus>\r
+                              </Document>\r
+                           </Documents>\r
+                           <Notificacio>\r
+                              <Titol>Prova MTOM v2</Titol>\r
+                              <Referencia>Prova_Resolució accés a mínors</Referencia>\r
+                              <TipusObjecte>NOTIFICACIO</TipusObjecte>\r
+                              <TipusAcces>PPAS</TipusAcces>\r
+                              <DiesExpiracio>10</DiesExpiracio>\r
+                              <Destinataris>\r
+                                 <Destinatari>\r
+                                    <PersonaFisica>\r
+                                       <BustiesCorreu>\r
+                                          <BustiaCorreu>XXXX@XXXXXX.com</BustiaCorreu>\r
+                                       </BustiesCorreu>\r
+                                       <DocumentIdentificatiu>\r
+                                          <NIF>12345678Z</NIF>\r
+                                       </DocumentIdentificatiu>\r
+                                       <Nom>prova</Nom>\r
+                                       <PrimerCognom>prova</PrimerCognom>\r
+                                       <SegonCognom>prova</SegonCognom>\r
+                                    </PersonaFisica>\r
+                                    <Idioma>ca</Idioma>\r
+                                 </Destinatari>\r
+                              </Destinataris>\r
+                           </Notificacio>\r
+                        </Tramesa>\r
+                     </PeticioProcessarTramesa>\r
                   </DatosEspecificos>\r
                </SolicitudTransmision>\r
             </Solicitudes>\r
