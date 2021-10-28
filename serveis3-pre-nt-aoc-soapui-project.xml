@@ -2311,7 +2311,7 @@
                                  <p:Destinatari>\r
                                     <p:PersonaFisica>\r
                                        <p:BustiesCorreu>\r
-                                          <p:BustiaCorreu>cmoralea@everis.com</p:BustiaCorreu>\r
+                                          <p:BustiaCorreu>XXXX@XXXXXX.com</p:BustiaCorreu>\r
                                        </p:BustiesCorreu>\r
                                        <p:DocumentIdentificatiu>\r
                                           <p:NIF>12345678Z</p:NIF>\r
@@ -2479,7 +2479,7 @@
                            <CodiOrganisme>9821920002</CodiOrganisme>\r
                            <CodiDepartament>9821920002</CodiDepartament>\r
                         </Emissor>\r
-                        <IdNotificacio>1354254</IdNotificacio>\r
+                        <IdNotificacio>13542354</IdNotificacio>\r
                      </PeticioConsulta>\r
                   </ns1:DatosEspecificos>\r
                </ns1:SolicitudTransmision>\r
@@ -2552,7 +2552,7 @@
                            <ns6:CodiOrganisme>9821920002</ns6:CodiOrganisme>\r
                            <ns6:CodiDepartament>9821920002</ns6:CodiDepartament>\r
                         </ns6:Emissor>\r
-                        <ns6:IdNotificacio>1354254</ns6:IdNotificacio>\r
+                        <ns6:IdNotificacio>13542454</ns6:IdNotificacio>\r
                         <ns6:TipusEvidencia>PDF</ns6:TipusEvidencia>\r
                      </ns6:PeticioEvidencia>\r
                   </ns1:DatosEspecificos>\r
