@@ -42591,7 +42591,7 @@
                      </ns1:Solicitante>\r
                      <ns1:Titular>\r
                         <ns1:TipoDocumentacion>DNI</ns1:TipoDocumentacion>\r
-                        <ns1:Documentacion>11666841P</ns1:Documentacion>\r
+                        <ns1:Documentacion>10000322Z</ns1:Documentacion>\r
                      </ns1:Titular>\r
                      <ns1:Transmision>\r
                         <ns1:CodigoCertificado>IGAE_INHABILITACIONS</ns1:CodigoCertificado>\r
@@ -42601,7 +42601,7 @@
                   </ns1:DatosGenericos>\r
                   <ns1:DatosEspecificos>\r
                      <peticioConsultaInhabilitacions xmlns="http://www.aoc.cat/igae">\r
-                        <pais>001</pais>\r
+                        <pais>ES</pais>\r
                      </peticioConsultaInhabilitacions>\r
                   </ns1:DatosEspecificos>\r
                </ns1:SolicitudTransmision>\r
@@ -42654,7 +42654,7 @@
                      </ns1:Solicitante>\r
                      <ns1:Titular>\r
                         <ns1:TipoDocumentacion>DNI</ns1:TipoDocumentacion>\r
-                        <ns1:Documentacion>11666841P</ns1:Documentacion>\r
+                        <ns1:Documentacion>10000320N</ns1:Documentacion>\r
                      </ns1:Titular>\r
                      <ns1:Transmision>\r
                         <ns1:CodigoCertificado>IGAE_CONCESSIONS</ns1:CodigoCertificado>\r
@@ -42664,7 +42664,7 @@
                   </ns1:DatosGenericos>\r
                   <ns1:DatosEspecificos>\r
                      <peticioConsultaConcessions xmlns="http://www.aoc.cat/igae">\r
-                        <pais>001</pais>\r
+                        <pais>ES</pais>\r
                      </peticioConsultaConcessions>\r
                   </ns1:DatosEspecificos>\r
                </ns1:SolicitudTransmision>\r
@@ -42717,7 +42717,7 @@
                      </ns1:Solicitante>\r
                      <ns1:Titular>\r
                         <ns1:TipoDocumentacion>DNI</ns1:TipoDocumentacion>\r
-                        <ns1:Documentacion>11666841P</ns1:Documentacion>\r
+                        <ns1:Documentacion>10000322Z</ns1:Documentacion>\r
                      </ns1:Titular>\r
                      <ns1:Transmision>\r
                         <ns1:CodigoCertificado>IGAE_MINIMIS</ns1:CodigoCertificado>\r
@@ -42727,7 +42727,7 @@
                   </ns1:DatosGenericos>\r
                   <ns1:DatosEspecificos>\r
                      <peticioConsultaSubvencionsMinimis xmlns="http://www.aoc.cat/igae">\r
-                        <pais>001</pais>\r
+                        <pais>ES</pais>\r
                      </peticioConsultaSubvencionsMinimis>\r
                   </ns1:DatosEspecificos>\r
                </ns1:SolicitudTransmision>\r
