@@ -54,6 +54,7 @@
 	    xmlns:estrangeria="http://www.aoc.cat/estrangeria/residencia-legal"
 		xmlns:mux="http://net.aocat/MUX2/PeticioRegistre"
 		xmlns:rpc="http://cat.aoc/rpc/peticion"
+		xmlns:igae="http://www.aoc.cat/igae"
 		
 		
 		targetNamespace="http://gencat.net/scsp/esquemes/peticion"  elementFormDefault="qualified" attributeFormDefault="unqualified">
@@ -92,7 +93,8 @@
 			<xs:import namespace="http://www.aoc.cat/antecedents-penals" schemaLocation="./VO/VO - ESTAT/ANT_PENAL/dadesEspecifiques.xsd"/>		
 			<xs:import namespace="http://www.aoc.cat/estrangeria/residencia-legal" schemaLocation="./VO/VO - ESTAT/ESTRANGERIA/dadesEspecifiques.xsd"/>			
 			<xs:import namespace="http://net.aocat/MUX2/PeticioRegistre" schemaLocation="./MUX/PeticioMUX2.xsd"/>	
-			<xs:import namespace="http://cat.aoc/rpc/peticion" schemaLocation="./RPC/dadesEspecifiques.xsd"/>			
+			<xs:import namespace="http://cat.aoc/rpc/peticion" schemaLocation="./RPC/dadesEspecifiques.xsd"/>	
+			<xs:import namespace="http://www.aoc.cat/igae" schemaLocation="./VO/VO - ESTAT/IGAE/dadesEspecifiques.xsd"/>				
 			
 			
 			
@@ -408,6 +410,9 @@
 						<xs:element ref="estrangeria:peticioConsultaDadesResidenciaLegal" minOccurs="0"/>
 						<xs:element ref="mux:PeticioRegistre" minOccurs="0"/>
 						<xs:element ref="rpc:comunicacio" minOccurs="0"/>
+						<xs:element ref="igae:peticioConsultaInhabilitacions" minOccurs="0"/>
+						<xs:element ref="igae:peticioConsultaSubvencionsMinimis" minOccurs="0"/>
+						<xs:element ref="igae:peticioConsultaConcessions" minOccurs="0"/>
 																							
 																	
 
