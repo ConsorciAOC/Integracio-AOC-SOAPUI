@@ -1,0 +1,172 @@
+<?xml version="1.0"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="http://www.aoc.cat/igae" targetNamespace="http://www.aoc.cat/igae" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<!-- ======================================================= -->
+	<!-- Inhabilitacions	                                 	 -->
+	<!-- ======================================================= -->
+	<xs:element name="peticioConsultaInhabilitacions">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:sequence>
+					<xs:element name="idEstranger" type="xs:boolean" minOccurs="0"/>
+					<xs:element name="pais" type="xs:string"/>
+					<xs:element name="dataInici" type="xs:date" minOccurs="0"/>
+					<xs:element name="dataFi" type="xs:date" minOccurs="0"/>
+				</xs:sequence>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="respostaConsultaInhabilitacions">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="peticioConsultaInhabilitacions" minOccurs="0"/>
+				<xs:element ref="dadesIdentificacio" minOccurs="0"/>
+				<xs:element name="inhabilitacions" minOccurs="0">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="inhabilitacio" maxOccurs="unbounded">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element name="organ">
+											<xs:complexType>
+												<xs:sequence>
+													<xs:element name="codi" type="xs:string"/>
+													<xs:element name="descripcio" type="xs:string"/>
+												</xs:sequence>
+											</xs:complexType>
+										</xs:element>
+										<xs:element name="classe">
+											<xs:complexType>
+												<xs:sequence>
+													<xs:element name="codi" type="xs:string"/>
+													<xs:element name="descripcio" type="xs:string"/>
+												</xs:sequence>
+											</xs:complexType>
+										</xs:element>
+										<xs:element name="discriminador" type="xs:string"/>
+										<xs:element name="dataInici" type="xs:date"/>
+										<xs:element name="dataFi" type="xs:date"/>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element ref="resultat"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<!-- ======================================================= -->
+	<!-- Subvencions minimis	                                 	 -->
+	<!-- ======================================================= -->
+	<xs:element name="peticioConsultaSubvencionsMinimis">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:sequence>
+					<xs:element name="idEstranger" type="xs:boolean" minOccurs="0"/>
+					<xs:element name="pais" type="xs:string"/>
+					<xs:element name="dataInici" type="xs:date" minOccurs="0"/>
+					<xs:element name="dataFi" type="xs:date" minOccurs="0"/>
+				</xs:sequence>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="respostaConsultaSubvencionsMinimis">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="peticioConsultaSubvencionsMinimis" minOccurs="0"/>
+				<xs:element ref="dadesIdentificacio" minOccurs="0"/>
+				<xs:element name="dataInici" type="xs:date" minOccurs="0"/>
+				<xs:element name="dataFi" type="xs:date" minOccurs="0"/>
+				<xs:element name="minimis" minOccurs="0">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="numeroSubvencions" type="xs:int"/>
+							<xs:element name="importTotal" type="xs:decimal"/>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element ref="resultat"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<!-- ======================================================= -->
+	<!-- Concesions	                                 	 -->
+	<!-- ======================================================= -->
+	<xs:element name="peticioConsultaConcessions">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:sequence>
+					<xs:element name="idEstranger" type="xs:boolean" minOccurs="0"/>
+					<xs:element name="pais" type="xs:string"/>
+					<xs:element name="dataInici" type="xs:date" minOccurs="0"/>
+					<xs:element name="dataFi" type="xs:date" minOccurs="0"/>
+				</xs:sequence>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="respostaConsultaConcessions">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="peticioConsultaConcessions" minOccurs="0"/>
+				<xs:element ref="dadesIdentificacio" minOccurs="0"/>
+				<xs:element name="dataInici" type="xs:date" minOccurs="0"/>
+				<xs:element name="dataFi" type="xs:date" minOccurs="0"/>
+				<xs:element name="concessions" minOccurs="0">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="concessio" maxOccurs="unbounded">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element name="administracio" type="xs:string"/>
+										<xs:element name="organ">
+											<xs:complexType>
+												<xs:sequence>
+													<xs:element name="codi" type="xs:string"/>
+													<xs:element name="descripcio" type="xs:string"/>
+												</xs:sequence>
+											</xs:complexType>
+										</xs:element>
+										<xs:element name="convocatoria">
+											<xs:complexType>
+												<xs:sequence>
+													<xs:element name="codi" type="xs:string"/>
+													<xs:element name="descripcio" type="xs:string"/>
+													<xs:element name="dataRecepcio" type="xs:date"/>
+												</xs:sequence>
+											</xs:complexType>
+										</xs:element>
+										<xs:element name="tipus" type="xs:string"/>
+										<xs:element name="dataResolucio" type="xs:date"/>
+										<xs:element name="importConcedit" type="xs:decimal"/>
+										<xs:element name="importPagat" type="xs:decimal"/>
+										<xs:element name="importReintegrat" type="xs:decimal"/>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element ref="resultat"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="dadesIdentificacio">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="pais" type="xs:string"/>
+				<xs:element name="nom" type="xs:string" minOccurs="0"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<!-- ======================================================= -->
+	<!-- Resultat                                                -->
+	<!-- ======================================================= -->
+	<xs:element name="resultat">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="codiResultat" type="xs:string"/>
+				<xs:element name="descripcio" type="xs:string"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>
