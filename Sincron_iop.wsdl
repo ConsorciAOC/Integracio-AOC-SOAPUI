@@ -55,6 +55,7 @@
 		xmlns:mux="http://net.aocat/MUX2/PeticioRegistre"
 		xmlns:rpc="http://cat.aoc/rpc/peticion"
 		xmlns:igae="http://www.aoc.cat/igae"
+		xmlns:atmv="http://www.aocat.net/dgt/atmv"
 		
 		
 		targetNamespace="http://gencat.net/scsp/esquemes/peticion"  elementFormDefault="qualified" attributeFormDefault="unqualified">
@@ -94,7 +95,8 @@
 			<xs:import namespace="http://www.aoc.cat/estrangeria/residencia-legal" schemaLocation="./VO/VO - ESTAT/ESTRANGERIA/dadesEspecifiques.xsd"/>			
 			<xs:import namespace="http://net.aocat/MUX2/PeticioRegistre" schemaLocation="./MUX/PeticioMUX2.xsd"/>	
 			<xs:import namespace="http://cat.aoc/rpc/peticion" schemaLocation="./RPC/dadesEspecifiques.xsd"/>	
-			<xs:import namespace="http://www.aoc.cat/igae" schemaLocation="./VO/VO - ESTAT/IGAE/dadesEspecifiques.xsd"/>				
+			<xs:import namespace="http://www.aoc.cat/igae" schemaLocation="./VO/VO - ESTAT/IGAE/dadesEspecifiques.xsd"/>	
+			<xs:import namespace="http://www.aocat.net/dgt/atmv" schemaLocation="./VO/VO - ESTAT/ATMV/dadesEspecifiques.xsd"/>				
 			
 			
 			
@@ -413,6 +415,9 @@
 						<xs:element ref="igae:peticioConsultaInhabilitacions" minOccurs="0"/>
 						<xs:element ref="igae:peticioConsultaSubvencionsMinimis" minOccurs="0"/>
 						<xs:element ref="igae:peticioConsultaConcessions" minOccurs="0"/>
+						<xs:element ref="atmv:peticioAltaImpagament" minOccurs="0"/>
+						<xs:element ref="atmv:peticioConsultaImpagament" minOccurs="0"/>
+						<xs:element ref="atmv:peticioEliminacioImpagament" minOccurs="0"/>
 																							
 																	
 

@@ -1,0 +1,85 @@
+<xsd:schema xmlns="http://www.aocat.net/dgt/atmv" xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.aocat.net/dgt/atmv" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<!-- ======================================================= -->
+	<!-- Alta impagament                                         -->
+	<!-- ======================================================= -->
+	<xsd:element name="peticioAltaImpagament" type="ImpagamentObligatori"/>
+	<xsd:element name="respostaAltaImpagament">
+		<xsd:complexType>
+			<xsd:sequence>
+                <xsd:element ref="peticioAltaImpagament" minOccurs="0"/>
+				<xsd:element ref="resultat"/>
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+	<!-- ======================================================= -->
+	<!-- Consulta impagament                                     -->
+	<!-- ======================================================= -->
+	<xsd:element name="peticioConsultaImpagament" type="ImpagamentOpcional"/>
+	<xsd:element name="respostaConsultaImpagament">
+		<xsd:complexType>
+			<xsd:sequence>
+                <xsd:element ref="peticioConsultaImpagament" minOccurs="0"/>
+				<xsd:element name="impagament" type="ImpagamentResultat" minOccurs="0" maxOccurs="unbounded"/>
+				<xsd:element ref="resultat"/>
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+	<!-- ======================================================= -->
+	<!-- Eliminació impagament                                   -->
+	<!-- ======================================================= -->    
+	<xsd:element name="peticioEliminacioImpagament" type="ImpagamentObligatori"/>
+	<xsd:element name="respostaEliminacioImpagament">
+		<xsd:complexType>
+			<xsd:sequence>
+                <xsd:element ref="peticioEliminacioImpagament" minOccurs="0"/>
+				<xsd:element ref="resultat"/>
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+	<!-- ======================================================= -->
+	<!-- Tipus                                                   -->
+	<!-- ======================================================= -->    
+	<xsd:complexType name="ImpagamentOpcional">
+		<xsd:sequence>
+			<xsd:element name="matricula" type="xsd:string" minOccurs="0"/>
+			<xsd:element name="bastidor" type="xsd:string" minOccurs="0"/>
+			<xsd:element name="idTitular" type="xsd:string" minOccurs="0"/>
+			<xsd:element name="provincia" type="xsd:string" minOccurs="0"/>
+			<xsd:element name="municipi" type="xsd:string" minOccurs="0"/>
+			<xsd:element name="anyImpagament" type="xsd:int" minOccurs="0"/>
+            <xsd:element name="dataAlta" type="xsd:string" minOccurs="0"/> 
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:complexType name="ImpagamentObligatori">
+		<xsd:sequence>
+			<xsd:element name="matricula" type="xsd:string"/>
+			<xsd:element name="bastidor" type="xsd:string" minOccurs="0"/>
+			<xsd:element name="idTitular" type="xsd:string"/>
+			<xsd:element name="provincia" type="xsd:string"/>
+			<xsd:element name="municipi"  type="xsd:string"/>
+			<xsd:element name="anyImpagament" type="xsd:int"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:complexType name="ImpagamentResultat">
+		<xsd:sequence>
+			<xsd:element name="matricula" type="xsd:string" minOccurs="0"/>
+			<xsd:element name="bastidor" type="xsd:string" minOccurs="0"/>
+			<xsd:element name="idTitular" type="xsd:string" minOccurs="0"/>
+			<xsd:element name="provincia" type="xsd:string" minOccurs="0"/>
+			<xsd:element name="municipi" type="xsd:string" minOccurs="0"/>
+			<xsd:element name="anyImpagament" type="xsd:int" minOccurs="0"/>
+			<xsd:element name="dataAlta" type="xsd:string" minOccurs="0"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	<!-- ======================================================= -->
+	<!-- Resultat                                                -->
+	<!-- ======================================================= -->
+	<xsd:element name="resultat">
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element name="codiResultat" type="xsd:string"/>
+				<xsd:element name="descripcio" type="xsd:string"/>
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>    
+</xsd:schema>
