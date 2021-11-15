@@ -5611,7 +5611,7 @@
                         <ns2:enviament><![CDATA[<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <Fichero_Intercambio_SICRES_3>
        <De_Origen_o_Remitente>
-      <Codigo_Entidad_Registral_Origen>O00002741</Codigo_Entidad_Registral_Origen>
+      <Codigo_Entidad_Registral_Origen>O00007955</Codigo_Entidad_Registral_Origen>
       <Decodificacion_Entidad_Registral_Origen>Registro General del Ayuntamiento de Jun</Decodificacion_Entidad_Registral_Origen>
       <Numero_Registro_Entrada>REGAGE21e00000013486</Numero_Registro_Entrada>
       <Fecha_Hora_Entrada>20210211192653</Fecha_Hora_Entrada>
