@@ -5423,7 +5423,7 @@
                <ns1:NumElementos>1</ns1:NumElementos>\r
                <ns1:TimeStamp>2018-07-05 09:28:22.28</ns1:TimeStamp>\r
                <ns1:Estado/>\r
-               <ns1:CodigoCertificado>CONSULTA_CREDENCIALS</ns1:CodigoCertificado>\r
+               <ns1:CodigoCertificado>CONSULTA_CREDENCIALS_LOT</ns1:CodigoCertificado>\r
                <ns1:CodigoProducto>ENOTUM_CREDENCIALS</ns1:CodigoProducto>\r
                <ns1:DatosAutorizacion>\r
                   <ns1:IdentificadorSolicitante>${Properties#IdentificadorSolicitante}</ns1:IdentificadorSolicitante>\r
@@ -5461,7 +5461,7 @@
                         <ns1:Documentacion>00000001R</ns1:Documentacion>\r
                      </ns1:Titular>\r -->
                      <ns1:Transmision>\r
-                        <ns1:CodigoCertificado>CONSULTA_CREDENCIALS</ns1:CodigoCertificado>\r
+                        <ns1:CodigoCertificado>CONSULTA_CREDENCIALS_LOT</ns1:CodigoCertificado>\r
                         <ns1:IdSolicitud>${=(long)(System.currentTimeMillis())}</ns1:IdSolicitud>\r
                         <ns1:IdTransmision>32017</ns1:IdTransmision>\r
                      </ns1:Transmision>\r
@@ -5548,7 +5548,7 @@
          </ns1:Peticion>\r
       </open:procesa>\r
    </soapenv:Body>\r
-</soapenv:Envelope>]]></con:request><con:assertion type="SOAP Response" id="1c7555af-bbba-435a-b18c-e5f8ad74c6e6" name="SOAP Response"/><con:credentials><con:selectedAuthProfile>Basic</con:selectedAuthProfile><con:addedBasicAuthenticationTypes>Basic</con:addedBasicAuthenticationTypes><con:preemptive>true</con:preemptive><con:authType>Preemptive</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://www.openuri.org/procesa"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:testStep type="request" id="afc36873-b304-4062-8ddd-8aafdc019487" name="SIR_ENVIAMENT - MTOM"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>SincronSoap</con:interface><con:operation>procesa</con:operation><con:request name="SIR_ENVIAMENT - MTOM" id="30d66e2b-c1c9-435f-9ad3-d660ba2dc9b9"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting><con:setting id="WsdlSettings@enable-mtom">true</con:setting><con:setting id="com.eviware.soapui.impl.support.AbstractHttpRequest@follow-redirects">true</con:setting><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@force_mtom">false</con:setting><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@enable_inline_files">false</con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>https://serveis3-pre.app.aoc.cat:443/siri-proxy/services/Sincron</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:open="http://www.openuri.org/" xmlns:pet="http://gencat.net/scsp/esquemes/peticion">\r
+</soapenv:Envelope>]]></con:request><con:assertion type="SOAP Response" id="1c7555af-bbba-435a-b18c-e5f8ad74c6e6" name="SOAP Response"/><con:credentials><con:selectedAuthProfile>Basic</con:selectedAuthProfile><con:addedBasicAuthenticationTypes>Basic</con:addedBasicAuthenticationTypes><con:preemptive>true</con:preemptive><con:authType>Preemptive</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://www.openuri.org/procesa"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:testStep type="request" id="afc36873-b304-4062-8ddd-8aafdc019487" name="SIR2_0_ENVIAMENT - MTOM"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>SincronSoap</con:interface><con:operation>procesa</con:operation><con:request name="SIR2_0_ENVIAMENT - MTOM" id="30d66e2b-c1c9-435f-9ad3-d660ba2dc9b9"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting><con:setting id="WsdlSettings@enable-mtom">true</con:setting><con:setting id="com.eviware.soapui.impl.support.AbstractHttpRequest@follow-redirects">true</con:setting><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@force_mtom">false</con:setting><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@enable_inline_files">false</con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>https://serveis3-pre.app.aoc.cat:443/siri-proxy/services/Sincron</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:open="http://www.openuri.org/" xmlns:pet="http://gencat.net/scsp/esquemes/peticion">\r
    <soapenv:Header/>\r
    <soapenv:Body>\r
       <open:procesa>\r
