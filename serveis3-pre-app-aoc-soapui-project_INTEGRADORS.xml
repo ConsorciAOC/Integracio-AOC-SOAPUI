@@ -5084,6 +5084,69 @@
          </ns1:Peticion>\r
       </open:procesa>\r
    </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:assertion type="SOAP Response" id="1c7555af-bbba-435a-b18c-e5f8ad74c6e6" name="SOAP Response"/><con:credentials><con:selectedAuthProfile>Basic</con:selectedAuthProfile><con:addedBasicAuthenticationTypes>Basic</con:addedBasicAuthenticationTypes><con:preemptive>true</con:preemptive><con:authType>Preemptive</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://www.openuri.org/procesa"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:testStep type="request" id="8858ff44-3837-4425-a3ad-1c209ea8a750" name="HESTIA_EXPEDIENT - WSS"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>SincronSoap</con:interface><con:operation>procesa</con:operation><con:request name="HESTIA_EXPEDIENT - WSS" outgoingWss="CERT_PROVES" incomingWss="" timeout="" sslKeystore="" useWsAddressing="false" useWsReliableMessaging="false" wssPasswordType="" id="b8102efb-d443-4dfc-b817-02e7693fa0e0"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>https://serveis3-pre.app.aoc.cat:443/siri-proxy/services/Sincron</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:open="http://www.openuri.org/" xmlns:pet="http://gencat.net/scsp/esquemes/peticion" xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/">\r
+   <soapenv:Header/>\r
+   <soapenv:Body wsu:Id="id-2FCB69B934F938128B162694603391719" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd">\r
+      <open:procesa>\r
+         <ns1:Peticion xmlns:ns1="http://gencat.net/scsp/esquemes/peticion">\r
+            <ns1:Atributos>\r
+               <ns1:IdPeticion>9821920002-HESTIA_EXPEDIENT-${=(long)(System.currentTimeMillis())}</ns1:IdPeticion>\r
+               <ns1:NumElementos>1</ns1:NumElementos>\r
+               <ns1:TimeStamp>2021-11-16T09:28:49</ns1:TimeStamp>\r
+               <ns1:CodigoCertificado>HESTIA_EXPEDIENT</ns1:CodigoCertificado>\r
+               <ns1:CodigoProducto>HESTIA</ns1:CodigoProducto>\r
+               <ns1:DatosAutorizacion>\r
+                  <ns1:IdentificadorSolicitante>${Properties#IdentificadorSolicitante}</ns1:IdentificadorSolicitante>\r
+                  <ns1:NombreSolicitante>Ajuntament</ns1:NombreSolicitante>\r
+                  <ns1:Finalidad>PROVES</ns1:Finalidad>\r
+               </ns1:DatosAutorizacion>\r
+               <ns1:Emisor>\r
+                  <ns1:NifEmisor>Q0801175A</ns1:NifEmisor>\r
+                  <ns1:NombreEmisor>CAOC</ns1:NombreEmisor>\r
+               </ns1:Emisor>\r
+               <ns1:Funcionario>\r
+                  <ns1:NombreCompletoFuncionario>${Properties#NombreCompletoFuncionario}</ns1:NombreCompletoFuncionario>\r
+                  <ns1:NifFuncionario>${Properties#NIFFuncionario}</ns1:NifFuncionario>\r
+               </ns1:Funcionario>\r
+            </ns1:Atributos>\r
+            <ns1:Solicitudes>\r
+               <ns1:SolicitudTransmision>\r
+                  <ns1:DatosGenericos>\r
+                     <ns1:Emisor>\r
+                        <ns1:NifEmisor>Q0801175A</ns1:NifEmisor>\r
+                        <ns1:NombreEmisor>CAOC</ns1:NombreEmisor>\r
+                     </ns1:Emisor>\r
+                     <ns1:Solicitante>\r
+                        <ns1:IdentificadorSolicitante>${Properties#IdentificadorSolicitante}</ns1:IdentificadorSolicitante>\r
+                        <ns1:NombreSolicitante>Ajuntament</ns1:NombreSolicitante>\r
+                        <ns1:Finalidad>PROVES</ns1:Finalidad>\r
+                        <ns1:Consentimiento>Ley</ns1:Consentimiento>\r
+                        <ns1:Funcionario>\r
+                           <ns1:NombreCompletoFuncionario>${Properties#NombreCompletoFuncionario}</ns1:NombreCompletoFuncionario>\r
+                           <ns1:NifFuncionario>${Properties#NIFFuncionario}</ns1:NifFuncionario>\r
+                        </ns1:Funcionario>\r
+                     </ns1:Solicitante>\r
+                     <!--<ns1:Titular>
+                        <ns1:TipoDocumentacion>NIF</ns1:TipoDocumentacion>
+                        <ns1:Documentacion>00000001R</ns1:Documentacion>
+                     </ns1:Titular>-->\r
+                     <ns1:Transmision>\r
+                        <ns1:CodigoCertificado>HESTIA_EXPEDIENT</ns1:CodigoCertificado>\r
+                        <ns1:IdSolicitud>AOC-2018/000376765</ns1:IdSolicitud>\r
+                        <ns1:FechaGeneracion>2018-11-09</ns1:FechaGeneracion>\r
+                     </ns1:Transmision>\r
+                  </ns1:DatosGenericos>\r
+                  <ns1:DatosEspecificos>\r
+                     <DadesEspecifiques xmlns="http://www.aoc.cat/hestia/">\r
+                        <CodINE>9821920002</CodINE>\r
+                        <NumExpedient>EXP2017/00874</NumExpedient>\r
+                     </DadesEspecifiques>\r
+                  </ns1:DatosEspecificos>\r
+               </ns1:SolicitudTransmision>\r
+            </ns1:Solicitudes>\r
+         </ns1:Peticion>\r
+      </open:procesa>\r
+   </soapenv:Body>\r
 </soapenv:Envelope>]]></con:request><con:assertion type="SOAP Response" id="1c7555af-bbba-435a-b18c-e5f8ad74c6e6" name="SOAP Response"/><con:credentials><con:selectedAuthProfile>Basic</con:selectedAuthProfile><con:addedBasicAuthenticationTypes>Basic</con:addedBasicAuthenticationTypes><con:preemptive>true</con:preemptive><con:authType>Preemptive</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://www.openuri.org/procesa"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:testStep type="request" id="34436ef6-12a0-4daa-8df5-1e84ca6fa631" name="DOGC_PUBLICACIO - MTOM"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>SincronSoap</con:interface><con:operation>procesa</con:operation><con:request name="DOGC_PUBLICACIO - MTOM" id="30d66e2b-c1c9-435f-9ad3-d660ba2dc9b9"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting><con:setting id="WsdlSettings@enable-mtom">true</con:setting><con:setting id="com.eviware.soapui.impl.support.AbstractHttpRequest@follow-redirects">true</con:setting><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@force_mtom">false</con:setting><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@enable_inline_files">false</con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>https://serveis3-pre.app.aoc.cat:443/siri-proxy/services/Sincron</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:open="http://www.openuri.org/" xmlns:pet="http://gencat.net/scsp/esquemes/peticion">\r
    <soapenv:Header/>\r
    <soapenv:Body>\r
