@@ -1,0 +1,119 @@
+<?xml version="1.0"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="http://www.aoc.cat/rgc" targetNamespace="http://www.aoc.cat/rgc" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<!-- ======================================================= -->
+	<!-- RGC_CONSULTA                                                                                   -->
+	<!-- ======================================================= -->
+	<xs:element name="peticioConsultaPrestacions">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="documentIdentificador" type="xs:string"/>
+				<xs:element name="tipusDocument" type="tTipusDocument"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:simpleType name="tTipusDocument">
+		<xs:annotation>
+			<xs:documentation>Tipus de document: 00001:Document nacional d'identitat / 00002:Número d'identificació estrangers / 00003:Targeta d'identificació Sanitaria / 00004:Número d'afiliació de la Seguretat Social / 00005:Número d'usuari de la Seguretat Social / 00006:Número d'identificació fiscal / 00007:Número d'identificació fiscal per estrangers sense NIE / 00008:Número d'identificació fiscal per espanyols no residents / 00009:Número d'identificador fiscal per a menors de 14 anys i residents / 00010:Número identificador per comunitaris / 00011:Número dels mossos per a menors / 00012:Passaport / 00013:Provisional / 99999:Desconegut</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="00001"/>
+			<xs:enumeration value="00002"/>
+			<xs:enumeration value="00003"/>
+			<xs:enumeration value="00004"/>
+			<xs:enumeration value="00005"/>
+			<xs:enumeration value="00006"/>
+			<xs:enumeration value="00007"/>
+			<xs:enumeration value="00008"/>
+			<xs:enumeration value="00009"/>
+			<xs:enumeration value="00010"/>
+			<xs:enumeration value="00011"/>
+			<xs:enumeration value="00012"/>
+			<xs:enumeration value="00013"/>
+			<xs:enumeration value="99999"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:element name="respostaConsultaPrestacions">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="peticioConsultaPrestacions" minOccurs="0"/>
+				<xs:element name="resposta" minOccurs="0">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="cobra">
+								<xs:simpleType>
+									<xs:restriction base="xs:string">
+										<xs:enumeration value="COBRA"/>
+										<xs:enumeration value="NO COBRA"/>
+										<xs:enumeration value="SENSE INFORMACIO"/>
+									</xs:restriction>
+								</xs:simpleType>
+							</xs:element>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element ref="resultat"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<!-- ======================================================= -->
+	<!-- RGC_CONSULTA_HISTORIC                                                                    -->
+	<!-- ======================================================= -->
+	<xs:element name="peticioConsultaPrestacionsHistoric">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="documentIdentificador" type="xs:string"/>
+				<xs:element name="tipusDocument" type="tTipusDocument"/>
+				<xs:element name="dataInici" type="xs:date"/>
+				<xs:element name="dataFi" type="xs:date"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="respostaConsultaPrestacionsHistoric">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="peticioConsultaPrestacionsHistoric" minOccurs="0"/>
+				<xs:element name="resposta" minOccurs="0">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="cobra">
+								<xs:simpleType>
+									<xs:restriction base="xs:string">
+										<xs:enumeration value="COBRA"/>
+										<xs:enumeration value="NO COBRA"/>
+										<xs:enumeration value="SENSE INFORMACIO"/>
+									</xs:restriction>
+								</xs:simpleType>
+							</xs:element>
+							<xs:element name="imports" minOccurs="0">
+								<xs:complexType>
+									<xs:sequence>
+											<xs:element name="import" maxOccurs="unbounded">
+												<xs:complexType>
+													<xs:sequence>									
+														<xs:element name="valor" type="xs:decimal"/>
+														<xs:element name="mesAny" type="xs:gYearMonth"/>
+													</xs:sequence>
+												</xs:complexType>
+										</xs:element>
+									</xs:sequence>								
+								</xs:complexType>								
+							</xs:element>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element ref="resultat"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<!-- ======================================================= -->
+	<!-- Resultat                                                                                                  -->
+	<!-- ======================================================= -->
+	<xs:element name="resultat">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="codiResultat" type="xs:string"/>
+				<xs:element name="descripcio" type="xs:string"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

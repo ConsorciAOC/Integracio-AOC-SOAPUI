@@ -56,6 +56,7 @@
 		xmlns:rpc="http://cat.aoc/rpc/peticion"
 		xmlns:igae="http://www.aoc.cat/igae"
 		xmlns:atmv="http://www.aocat.net/dgt/atmv"
+		xmlns:rgc="http://www.aoc.cat/rgc"
 		
 		
 		targetNamespace="http://gencat.net/scsp/esquemes/peticion"  elementFormDefault="qualified" attributeFormDefault="unqualified">
@@ -96,7 +97,8 @@
 			<xs:import namespace="http://net.aocat/MUX2/PeticioRegistre" schemaLocation="./MUX/PeticioMUX2.xsd"/>	
 			<xs:import namespace="http://cat.aoc/rpc/peticion" schemaLocation="./RPC/dadesEspecifiques.xsd"/>	
 			<xs:import namespace="http://www.aoc.cat/igae" schemaLocation="./VO/VO - ESTAT/IGAE/dadesEspecifiques.xsd"/>	
-			<xs:import namespace="http://www.aocat.net/dgt/atmv" schemaLocation="./VO/VO - ESTAT/ATMV/dadesEspecifiques.xsd"/>				
+			<xs:import namespace="http://www.aocat.net/dgt/atmv" schemaLocation="./VO/VO - ESTAT/ATMV/dadesEspecifiques.xsd"/>		
+			<xs:import namespace="http://www.aoc.cat/rgc" schemaLocation="./VO/VO - GENE/RGC/dadesEspecifiques.xsd"/>				
 			
 			
 			
@@ -418,6 +420,8 @@
 						<xs:element ref="atmv:peticioAltaImpagament" minOccurs="0"/>
 						<xs:element ref="atmv:peticioConsultaImpagament" minOccurs="0"/>
 						<xs:element ref="atmv:peticioEliminacioImpagament" minOccurs="0"/>
+						<xs:element ref="rgc:peticioConsultaPrestacions" minOccurs="0"/>
+						<xs:element ref="rgc:peticioConsultaPrestacionsHistoric" minOccurs="0"/>
 																							
 																	
 
