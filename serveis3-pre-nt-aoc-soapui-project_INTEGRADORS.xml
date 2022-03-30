@@ -2561,4 +2561,64 @@
          </ns1:Peticion>\r
       </open:procesa>\r
    </soapenv:Body>\r
-</soapenv:Envelope>]]></con:request><con:assertion type="SOAP Response" id="1c7555af-bbba-435a-b18c-e5f8ad74c6e6" name="SOAP Response"/><con:credentials><con:selectedAuthProfile>Basic</con:selectedAuthProfile><con:addedBasicAuthenticationTypes>Basic</con:addedBasicAuthenticationTypes><con:preemptive>true</con:preemptive><con:authType>Preemptive</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://www.openuri.org/procesa"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:properties/></con:testCase><con:properties/></con:testSuite><con:properties/><con:wssContainer/><con:oAuth2ProfileContainer/><con:oAuth1ProfileContainer/><con:sensitiveInformation/></con:soapui-project>
+</soapenv:Envelope>]]></con:request><con:assertion type="SOAP Response" id="1c7555af-bbba-435a-b18c-e5f8ad74c6e6" name="SOAP Response"/><con:credentials><con:selectedAuthProfile>Basic</con:selectedAuthProfile><con:addedBasicAuthenticationTypes>Basic</con:addedBasicAuthenticationTypes><con:preemptive>true</con:preemptive><con:authType>Preemptive</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://www.openuri.org/procesa"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:properties/></con:testCase><con:testCase id="751fb078-2b4f-4a9a-98a5-c79370ff88b0" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="validacions TestCase" searchProperties="true" disabled="true"><con:settings/><con:testStep type="groovy" name="Validació SSL" id="b38a3ca1-485f-4d25-903a-06fdb26dfcb8"><con:settings/><con:config><script>import com.eviware.soapui.SoapUI
+import com.eviware.soapui.model.settings.Settings;
+import com.eviware.soapui.SoapUISystemProperties;
+import com.eviware.soapui.settings.SSLSettings;
+
+import org.apache.commons.ssl.KeyMaterial;
+
+import javax.net.ssl.SSLEngine;
+import javax.net.ssl.X509ExtendedTrustManager;
+import java.net.Socket;
+
+import java.security.KeyStore;
+import java.security.KeyStoreException;
+import java.security.NoSuchAlgorithmException;
+import java.security.cert.CertificateException;
+import java.security.cert.X509Certificate;
+import java.security.cert.Certificate;
+import java.security.PublicKey;
+import java.security.PrivateKey;
+import java.security.Key;
+
+import java.io.File;
+import java.io.IOException;
+
+/**
+ * @albciff: 0.0.1 version. Checkers per a la revisió dels settings 
+ */
+
+Settings settings = SoapUI.getSettings();
+settings.getString(SSLSettings.KEYSTORE, "")
+String keyStoreUrl = System.getProperty(SoapUISystemProperties.SOAPUI_SSL_KEYSTORE_LOCATION, settings.getString(SSLSettings.KEYSTORE, ""));
+String password = System.getProperty(SoapUISystemProperties.SOAPUI_SSL_KEYSTORE_PASSWORD, settings.getString(SSLSettings.KEYSTORE_PASSWORD, ""));
+
+KeyStore ks = null;
+char[] pwd = password.toCharArray();
+
+log.info "keystore path: $keyStoreUrl"
+
+if (keyStoreUrl.trim().length() > 0) {
+  File f = new File(keyStoreUrl);
+  if (f.exists()) {
+      log.info("El fitxer existeix, provem de carregar-lo com a keystore");
+      try {
+          KeyMaterial km = new KeyMaterial(f, pwd);
+          ks = km.getKeyStore();
+          ks.aliases().each{
+          	log.info "alias: $it"
+          	final Key key = (PrivateKey) ks.getKey(it, pwd);
+          	log.info "clau: $key"
+  			final Certificate cert = ks.getCertificate(it);
+  			log.info "certificat: $cert"
+  			final PublicKey publicKey = cert.getPublicKey();
+  			log.info "clau publica: $publicKey"
+          }
+      } catch (Exception e) {
+          log.error "No s'ha carregar el keystore ${e.getMessage()}"
+      }
+  }else{
+  	log.error "$keyStoreUrl NO EXISTEIX"
+  }
+}</script></con:config></con:testStep><con:properties/></con:testCase><con:properties/></con:testSuite><con:properties/><con:wssContainer/><con:oAuth2ProfileContainer/><con:oAuth1ProfileContainer/><con:sensitiveInformation/></con:soapui-project>
