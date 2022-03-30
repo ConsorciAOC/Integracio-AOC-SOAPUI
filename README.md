@@ -6,7 +6,6 @@ En aquest repositori oferim tres Projectes `SOAPUI` amb peticions en format XML 
 ```diff
 - Important, has d'estar autoritzat per consumir el servei, modalitat i finalitat en la PCI.
 ```
-
 ---
 
 En cas de no estar autoritzat, heu de seguir les passes indicades a la [FAQ][URL1] per tal de que us poguem autoritzar el consum dels serveis.
@@ -36,14 +35,12 @@ El projecte disposa d'un fitxer de propertes que haurem d'omplir amb les dades d
 
 ![properties](capturas/PROPERTIES.png)
 
----
 ```diff
 - Important, si no es modifica el properties, obtindreu un error.
 ```
 
 ## Configuració de claus per fer els consums
 
----
 ***A nivell de PCI hi ha dues vies per autoritzar els consums***
 
 - Presentant un certificat de client autoritzat pel canal [SSL][URL2].
@@ -54,13 +51,9 @@ El projecte disposa d'un fitxer de propertes que haurem d'omplir amb les dades d
 
 [URL3]: https://www.soapui.org/docs/security-testing/ws-security-settings/
 
----
-
 ### Configuració per canal SSL
 
-~~~~
 La configuració per SSL es recomana per peticions amb adjunts `MTOM`, no obstant, es pot fer servir aquest mecanisme per a tots els consums.
-~~~~
 
 En l'apartat de `Preferences` anirem a `SSL Settings` i configurem el magatzem de claus.
 
@@ -89,7 +82,8 @@ Premem el `+` i afegim el certificat de proves i en keystore seleccionem el que 
 ![wsdl](capturas/wss3.png)
 
 ---
-***És importantla seleccionar `use single cert for signing` d'aquesta manera el valor `ValueType="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-x509-token-profile-1.0#X509v3"` necessari perquè les capçaleres `WSS` siguin tractades correctament ***
+
+***És important seleccionar `use single cert for signing` d'aquesta manera el valor `ValueType="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-x509-token-profile-1.0#X509v3"` necessari perquè les capçaleres `WSS` siguin tractades correctament***
 
 ---
 
