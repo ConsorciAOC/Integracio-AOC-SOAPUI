@@ -28,6 +28,7 @@
 	xmlns:boe="http://www.aoc.cat/boe"
 	xmlns:sctdev="http://www.aocat.net/sct/dev"
 	xmlns:sir="http://www.aoc.cat/sir"
+	xmlns:representa="http://www.aoc.cat/representa/v2"
 
 		elementFormDefault="qualified" attributeFormDefault="unqualified">
 		
@@ -38,6 +39,7 @@
 		<xs:import namespace="http://www.aoc.cat/boe"  schemaLocation="./BOE/dadesEspecifiques.xsd"/>
 		<xs:import namespace="http://www.aocat.net/sct/dev"  schemaLocation="./SCT_DEV/consultaCredencialsDEVDadesEspecifiques.xsd"/>
 		<xs:import namespace="http://www.aoc.cat/sir"  schemaLocation="./SIR2_0/dadesEspecifiques.xsd"/>
+		<xs:import namespace="http://www.aoc.cat/representa/v2" schemaLocation="./REPRESENTA/dadesEspecifiques.xsd"/>
 		
 		
 		
@@ -336,10 +338,18 @@
 						<xs:element ref="sir:peticioReenviamentAssentament" minOccurs="0"/>
 						<xs:element ref="sir:peticioConsultaAssentament" minOccurs="0"/>
 						<xs:element ref="sir:peticioSincronitzacioAssentaments" minOccurs="0"/>
-									
-						
-						
-						
+						<xs:element ref="representa:consultarRepresentacio" minOccurs="0"/>
+						<xs:element ref="representa:processarRepresentacio" minOccurs="0"/>
+						<xs:element ref="representa:consultarRepresentacions" minOccurs="0"/>
+						<xs:element ref="representa:consultarRepresentacionsPersona" minOccurs="0"/>
+						<xs:element ref="representa:consultarRepresentacionsPersonaPoderdant" minOccurs="0"/>
+						<xs:element ref="representa:consultarRepresentacionsPersonaRepresentant" minOccurs="0"/>
+						<xs:element ref="representa:validarRepresentacio" minOccurs="0"/>
+						<xs:element ref="representa:consultarCataleg" minOccurs="0"/>
+						<xs:element ref="representa:consultarFamilia" minOccurs="0"/>
+						<xs:element ref="representa:consultarFamilies" minOccurs="0"/>
+						<xs:element ref="representa:consultarTramits" minOccurs="0"/>
+						<xs:element ref="representa:consultarAdministracio" minOccurs="0"/>
 						</xs:choice>
 				</xs:complexType>
 			</xs:element>
