@@ -57,6 +57,7 @@
 		xmlns:igae="http://www.aoc.cat/igae"
 		xmlns:atmv="http://www.aocat.net/dgt/atmv"
 		xmlns:rgc="http://www.aoc.cat/rgc"
+		xmlns:rpe="http://www.aoc.cat/rpe"
 		
 		
 		targetNamespace="http://gencat.net/scsp/esquemes/peticion"  elementFormDefault="qualified" attributeFormDefault="unqualified">
@@ -99,7 +100,7 @@
 			<xs:import namespace="http://www.aoc.cat/igae" schemaLocation="./VO/VO - ESTAT/IGAE/dadesEspecifiques.xsd"/>	
 			<xs:import namespace="http://www.aocat.net/dgt/atmv" schemaLocation="./VO/VO - ESTAT/ATMV/dadesEspecifiques.xsd"/>		
 			<xs:import namespace="http://www.aoc.cat/rgc" schemaLocation="./VO/VO - GENE/RGC/dadesEspecifiques.xsd"/>				
-			
+			<xs:import namespace="http://www.aoc.cat/rgc" schemaLocation="./VO/VO - GENE/RPE/dadesEspecifiques.xsd"/>
 			
 			
 				<xs:element name="Apellido1">
@@ -422,6 +423,8 @@
 						<xs:element ref="atmv:peticioEliminacioImpagament" minOccurs="0"/>
 						<xs:element ref="rgc:peticioConsultaPrestacions" minOccurs="0"/>
 						<xs:element ref="rgc:peticioConsultaPrestacionsHistoric" minOccurs="0"/>
+						<xs:element ref="rpe:peticioConsultaParellesEstables" minOccurs="0"/>
+						<xs:element ref="rpe:peticioVerificacioParellesEstables" minOccurs="0"/>
 																							
 																	
 

@@ -1,0 +1,86 @@
+<?xml version="1.0"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="http://www.aoc.cat/rpe" targetNamespace="http://www.aoc.cat/rpe" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<!-- ======================================================= -->
+	<!-- RPE_CONSULTA                                            -->
+	<!-- ======================================================= -->
+	<xs:element name="peticioConsultaParellesEstables">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="data" type="xs:date"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="respostaConsultaParellesEstables">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="peticioConsultaParellesEstables" minOccurs="0"/>
+				<xs:element name="resposta" minOccurs="0">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="dataInscripcio" type="xs:string" minOccurs="0"/>
+							<xs:element name="dataExtincio" type="xs:string" minOccurs="0"/>
+							<xs:element name="estat">
+								<xs:simpleType>
+									<xs:restriction base="xs:string">
+										<xs:enumeration value="Inscrit"/>
+										<xs:enumeration value="No inscrit"/>
+									</xs:restriction>
+								</xs:simpleType>
+							</xs:element>
+							<xs:element name="membre1" type="xs:string" minOccurs="0"/>
+							<xs:element name="membre2" type="xs:string" minOccurs="0"/>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element ref="resultat"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<!-- ======================================================= -->
+	<!-- RPE_VERIFICACIO                                            -->
+	<!-- ======================================================= -->
+	<xs:element name="peticioVerificacioParellesEstables">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="document1" type="xs:string"/>
+				<xs:element name="document2" type="xs:string" minOccurs="0"/>
+				<xs:element name="data" type="xs:date" minOccurs="0"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="respostaVerificacioParellesEstables">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="peticioVerificacioParellesEstables" minOccurs="0"/>
+				<xs:element name="resposta" minOccurs="0">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="dataInscripcio" type="xs:string" minOccurs="0"/>
+							<xs:element name="dataExtincio" type="xs:string" minOccurs="0"/>
+							<xs:element name="estat">
+								<xs:simpleType>
+									<xs:restriction base="xs:string">
+										<xs:enumeration value="Inscrit"/>
+										<xs:enumeration value="No inscrit"/>
+									</xs:restriction>
+								</xs:simpleType>
+							</xs:element>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element ref="resultat"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<!-- ======================================================= -->
+	<!-- Resultat                                                -->
+	<!-- ======================================================= -->
+	<xs:element name="resultat">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="codiResultat" type="xs:string"/>
+				<xs:element name="descripcio" type="xs:string"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>
