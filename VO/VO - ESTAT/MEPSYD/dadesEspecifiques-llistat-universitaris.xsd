@@ -1,0 +1,303 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns="http://www.aoc.cat/titulacions" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.aoc.cat/titulacions" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:element name="peticioLlistatTitolsUniversitaris">
+		<xs:complexType>
+			<xs:all>
+				<xs:element ref="localitatNaixement" minOccurs="0"/>
+				<xs:element ref="dataNaixement"/>
+				<xs:element ref="codiProvincia" minOccurs="0"/>
+				<xs:element ref="codiUniversitat" minOccurs="0"/>
+				<xs:element ref="numeroTitol" minOccurs="0"/>
+			</xs:all>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="respostaLlistatTitolsUniversitaris">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="peticioLlistatTitolsUniversitaris" minOccurs="0"/>
+				<xs:element ref="llistaTitulars" minOccurs="0"/>
+				<xs:element ref="resultat"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<!-- ======================================================= -->
+	<!-- Resultat                                               													 -->
+	<!-- ======================================================= -->
+	<xs:element name="resultat">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="codiResultat" type="xs:string"/>
+				<xs:element name="descripcio" type="xs:string"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="llocNaixement">
+		<xs:complexType>
+			<xs:all>
+				<xs:element ref="pais" minOccurs="0"/>
+				<xs:element ref="codiProvincia" minOccurs="0"/>
+				<xs:element ref="provincia" minOccurs="0"/>
+				<xs:element ref="municipi" minOccurs="0"/>
+				<xs:element ref="localitat" minOccurs="0"/>
+			</xs:all>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="documentacio">
+		<xs:simpleType>
+			<xs:restriction base="xs:string">
+				<xs:maxLength value="14"/>
+				<xs:whiteSpace value="collapse"/>
+			</xs:restriction>
+		</xs:simpleType>
+	</xs:element>
+	<xs:element name="nom">
+		<xs:simpleType>
+			<xs:restriction base="xs:string">
+				<xs:maxLength value="40"/>
+			</xs:restriction>
+		</xs:simpleType>
+	</xs:element>
+	<xs:element name="cognom1">
+		<xs:simpleType>
+			<xs:restriction base="xs:string">
+				<xs:maxLength value="40"/>
+			</xs:restriction>
+		</xs:simpleType>
+	</xs:element>
+	<xs:element name="cognom2">
+		<xs:simpleType>
+			<xs:restriction base="xs:string">
+				<xs:maxLength value="40"/>
+			</xs:restriction>
+		</xs:simpleType>
+	</xs:element>
+	<xs:element name="pais">
+		<xs:simpleType>
+			<xs:restriction base="xs:string">
+				<xs:maxLength value="40"/>
+			</xs:restriction>
+		</xs:simpleType>
+	</xs:element>
+	<xs:element name="codiProvincia">
+		<xs:simpleType>
+			<xs:restriction base="xs:string">
+				<xs:maxLength value="2"/>
+				<xs:minLength value="2"/>
+			</xs:restriction>
+		</xs:simpleType>
+	</xs:element>
+	<xs:element name="provincia">
+		<xs:simpleType>
+			<xs:restriction base="xs:string">
+				<xs:maxLength value="30"/>
+			</xs:restriction>
+		</xs:simpleType>
+	</xs:element>
+	<xs:element name="municipi">
+		<xs:simpleType>
+			<xs:restriction base="xs:string">
+				<xs:maxLength value="50"/>
+			</xs:restriction>
+		</xs:simpleType>
+	</xs:element>
+	<xs:element name="localitat">
+		<xs:simpleType>
+			<xs:restriction base="xs:string">
+				<xs:maxLength value="50"/>
+			</xs:restriction>
+		</xs:simpleType>
+	</xs:element>
+	<xs:element name="localitatNaixement">
+		<xs:simpleType>
+			<xs:restriction base="xs:string">
+				<xs:maxLength value="50"/>
+			</xs:restriction>
+		</xs:simpleType>
+	</xs:element>
+	<xs:element name="dataNaixement" type="data"/>
+	<!-- Lista Titulos -->
+	<xs:element name="llistaTitols">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="dadesTitulacio" maxOccurs="unbounded"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<!-- Lista Titulares -->
+	<xs:element name="llistaTitulars">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="titular" maxOccurs="unbounded"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<!-- Lista Titulares -->
+	<xs:element name="titular">
+		<xs:complexType>
+			<xs:all>
+				<xs:element name="dadesTitular">
+					<xs:complexType>
+						<xs:all>
+							<xs:element ref="documentacio" minOccurs="0"/>
+							<xs:element ref="nom" minOccurs="0"/>
+							<xs:element ref="cognom1" minOccurs="0"/>
+							<xs:element ref="cognom2" minOccurs="0"/>
+							<xs:element ref="llocNaixement" minOccurs="0"/>
+							<xs:element ref="dataNaixement" minOccurs="0"/>
+						</xs:all>
+					</xs:complexType>
+				</xs:element>
+				<xs:element ref="llistaTitols"/>
+			</xs:all>
+		</xs:complexType>
+	</xs:element>
+	<!-- Datos Titulacion -->
+	<xs:element name="dadesTitulacio">
+		<xs:complexType>
+			<xs:all>
+				<xs:element ref="dadesCentre" minOccurs="0"/>
+				<xs:element name="dadesTitol">
+					<xs:complexType>
+						<xs:all>
+							<xs:element ref="codiTitulacio" minOccurs="0"/>
+							<xs:element ref="titulacio" minOccurs="0"/>
+							<xs:element ref="codiTipusTitol" minOccurs="0"/>
+							<xs:element ref="tipusTitol" minOccurs="0"/>
+							<xs:element ref="dataFinalitzacio" minOccurs="0"/>
+							<xs:element ref="dataExpedicio" minOccurs="0"/>
+							<xs:element ref="codiPaisExpedicio" minOccurs="0"/>
+							<xs:element ref="paisExpedicio" minOccurs="0"/>
+							<xs:element ref="numeroTitol" minOccurs="0"/>
+							<xs:element ref="registreUniversitari" minOccurs="0"/>
+						</xs:all>
+					</xs:complexType>
+				</xs:element>
+			</xs:all>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="codiTitulacio">
+		<xs:simpleType>
+			<xs:restriction base="xs:string">
+				<xs:maxLength value="11"/>
+			</xs:restriction>
+		</xs:simpleType>
+	</xs:element>
+	<xs:element name="titulacio">
+		<xs:simpleType>
+			<xs:restriction base="xs:string">
+				<xs:maxLength value="1000"/>
+			</xs:restriction>
+		</xs:simpleType>
+	</xs:element>
+	<xs:element name="codiTipusTitol">
+		<xs:simpleType>
+			<xs:restriction base="xs:string">
+				<xs:maxLength value="4"/>
+			</xs:restriction>
+		</xs:simpleType>
+	</xs:element>
+	<xs:element name="tipusTitol">
+		<xs:simpleType>
+			<xs:restriction base="xs:string">
+				<xs:maxLength value="50"/>
+			</xs:restriction>
+		</xs:simpleType>
+	</xs:element>
+	<!-- Datos Centro -->
+	<xs:element name="dadesCentre">
+		<xs:complexType>
+			<xs:all>
+				<xs:element ref="codiUniversitat" minOccurs="0"/>
+				<xs:element ref="universitat" minOccurs="0"/>
+				<xs:element ref="codiCentre" minOccurs="0"/>
+				<xs:element ref="centre" minOccurs="0"/>
+				<xs:element ref="codiProvincia" minOccurs="0"/>
+				<xs:element ref="provincia" minOccurs="0"/>
+			</xs:all>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="codiUniversitat">
+		<xs:simpleType>
+			<xs:restriction base="xs:string">
+				<xs:maxLength value="4"/>
+			</xs:restriction>
+		</xs:simpleType>
+	</xs:element>
+	<xs:element name="universitat">
+		<xs:simpleType>
+			<xs:restriction base="xs:string">
+				<xs:maxLength value="100"/>
+			</xs:restriction>
+		</xs:simpleType>
+	</xs:element>
+	<xs:element name="centre">
+		<xs:simpleType>
+			<xs:restriction base="xs:string">
+				<xs:maxLength value="200"/>
+			</xs:restriction>
+		</xs:simpleType>
+	</xs:element>
+	<xs:element name="codiCentre">
+		<xs:simpleType>
+			<xs:restriction base="xs:string">
+				<xs:maxLength value="10"/>
+			</xs:restriction>
+		</xs:simpleType>
+	</xs:element>
+	<xs:element name="nomCarrera">
+		<xs:simpleType>
+			<xs:restriction base="xs:string">
+				<xs:maxLength value="100"/>
+			</xs:restriction>
+		</xs:simpleType>
+	</xs:element>
+	<xs:element name="dataFinalitzacio">
+		<xs:simpleType>
+			<xs:restriction base="xs:string">
+				<xs:maxLength value="10"/>
+			</xs:restriction>
+		</xs:simpleType>
+	</xs:element>
+	<xs:element name="dataExpedicio">
+		<xs:simpleType>
+			<xs:restriction base="xs:string">
+				<xs:maxLength value="10"/>
+			</xs:restriction>
+		</xs:simpleType>
+	</xs:element>
+	<xs:element name="paisExpedicio">
+		<xs:simpleType>
+			<xs:restriction base="xs:string">
+				<xs:maxLength value="40"/>
+			</xs:restriction>
+		</xs:simpleType>
+	</xs:element>
+	<xs:element name="codiPaisExpedicio">
+		<xs:simpleType>
+			<xs:restriction base="xs:string">
+				<xs:maxLength value="3"/>
+			</xs:restriction>
+		</xs:simpleType>
+	</xs:element>
+	<xs:element name="numeroTitol">
+		<xs:simpleType>
+			<xs:restriction base="xs:string">
+				<xs:maxLength value="15"/>
+			</xs:restriction>
+		</xs:simpleType>
+	</xs:element>
+	<xs:element name="registreUniversitari">
+		<xs:simpleType>
+			<xs:restriction base="xs:string">
+				<xs:maxLength value="15"/>
+			</xs:restriction>
+		</xs:simpleType>
+	</xs:element>
+	<xs:simpleType name="data">
+		<xs:restriction base="xs:string">
+			<xs:minLength value="10"/>
+			<xs:maxLength value="10"/>
+			<xs:pattern value="([0][1-9]|[1,2][0-9]|[3][0,1])/([0][1-9]|[1][0-2])/[1-2][0-9]{3}"/>
+		</xs:restriction>
+	</xs:simpleType>
+</xs:schema>

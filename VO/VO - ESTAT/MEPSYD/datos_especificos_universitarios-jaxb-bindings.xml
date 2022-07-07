@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<bindings xmlns="http://java.sun.com/xml/ns/jaxb" xmlns:xsd="http://www.w3.org/2001/XMLSchema"  version="2.1">
+ <bindings schemaLocation="datos_especificos_universitarios.xsd"  node="/xsd:schema[@targetNamespace='http://intermediacion.redsara.es/scsp/esquemas/datosespecificos']">
+    <schemaBindings>
+      <package name="cat.aoc.titulacions.uniEspecificos"/>
+    </schemaBindings>
+  </bindings>  
+</bindings>
