@@ -1410,6 +1410,14 @@
 	</xs:complexType>
 	<xs:complexType name="fitxer">
 		<xs:sequence>
+			<xs:element minOccurs="0" name="refFitxerPCI">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:minLength value="1"/>
+						<xs:maxLength value="50"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
 			<xs:element minOccurs="0" name="idDocumentExtern">
 				<xs:simpleType>
 					<xs:restriction base="xs:string">
