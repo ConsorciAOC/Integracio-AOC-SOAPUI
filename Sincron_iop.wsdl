@@ -59,6 +59,7 @@
 		xmlns:rgc="http://www.aoc.cat/rgc"
 		xmlns:rpe="http://www.aoc.cat/rpe"
 		xmlns:mepsyd="http://www.aocat.net/mepsyd"
+		xmlns:notaris="http://www.aoc.cat/poders-notarials"
 		
 		
 		targetNamespace="http://gencat.net/scsp/esquemes/peticion"  elementFormDefault="qualified" attributeFormDefault="unqualified">
@@ -103,6 +104,7 @@
 			<xs:import namespace="http://www.aoc.cat/rgc" schemaLocation="./VO/VO - GENE/RGC/dadesEspecifiques.xsd"/>				
 			<xs:import namespace="http://www.aoc.cat/rgc" schemaLocation="./VO/VO - GENE/RPE/dadesEspecifiques.xsd"/>
 			<xs:import namespace="http://www.aocat.net/mepsyd" schemaLocation="./VO/VO - ESTAT/MEPSYD/dadesEspecifiques.xsd"/>	
+			<xs:import namespace="http://www.aoc.cat/poders-notarials" schemaLocation="./VO/VO - ESTAT/NOTARIS/dadesEspecifiques.xsd"/>	
 			
 			
 				<xs:element name="Apellido1">
@@ -428,8 +430,11 @@
 						<xs:element ref="rpe:peticioConsultaParellesEstables" minOccurs="0"/>
 						<xs:element ref="rpe:peticioVerificacioParellesEstables" minOccurs="0"/>
 						<xs:element ref="mepsyd:titolsUniversitaris" minOccurs="0"/>
-						<xs:element ref="mepsyd:titolsNoUniversitaris" minOccurs="0"/>
-																							
+						<xs:element ref="mepsyd:titolsNoUniversitaris" minOccurs="0"/>						
+						<xs:element ref="notaris:peticioConsultaSubsistenciaAdministradors" minOccurs="0"/>
+						<xs:element ref="notaris:peticioConsultaSubsistenciaPoders" minOccurs="0"/>
+						<xs:element ref="notaris:peticioConsultaNotaris" minOccurs="0"/>
+						<xs:element ref="notaris:peticioConsultaCopiaSimple" minOccurs="0"/>																							
 																	
 
 					</xs:choice>
