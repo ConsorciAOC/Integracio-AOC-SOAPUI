@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<bindings xmlns="http://java.sun.com/xml/ns/jaxb" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:namespace="http://jaxb2-commons.dev.java.net/namespace-prefix" version="2.1">
+ <bindings schemaLocation="dadesEspecifiques-titols-condicio-becat.xsd" node="/xsd:schema[@targetNamespace='http://www.aoc.cat/titulacions']">
+    <schemaBindings>
+       <package name="cat.aoc.titulacions.condicioBecat"/>
+    </schemaBindings>
+	<bindings>
+		<namespace:prefix name="aoc"/>
+	</bindings>	
+  </bindings>  
+</bindings>
+

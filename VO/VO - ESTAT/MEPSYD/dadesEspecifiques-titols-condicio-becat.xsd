@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns="http://www.aoc.cat/titulacions" xmlns:xs="http://www.w3.org/2001/XMLSchema" 
+targetNamespace="http://www.aoc.cat/titulacions" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	
+	<!-- ======================================================= -->
+	<!-- Condicion Becado		                                -->
+	<!-- ======================================================= -->	
+	<xs:element name="peticioTitolsCondicioBecat">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="curs"/>			
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="respostaTitolsCondicioBecat">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="beques" minOccurs="0"/>				
+				<xs:element ref="resultat"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="beques">
+		<xs:complexType>		
+			<xs:sequence>				
+				<xs:element ref="beca"  maxOccurs="unbounded"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	
+	<!-- ======================================================= -->
+	<!-- Resultat                                                -->
+	<!-- ======================================================= -->
+	<xs:element name="resultat">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="codiResultat" type="xs:string"/>
+				<xs:element name="descripcio" type="xs:string"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>	
+	
+	<!-- Beca -->
+	<xs:element name="beca">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="convocatoria" />
+				<xs:element ref="ajudes" />
+				<xs:element ref="certificats" minOccurs="0"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<!--Convocatoria-->
+	<xs:element name="convocatoria">
+		<xs:complexType>
+			<xs:all>
+				<xs:element ref="curs"/>
+				<xs:element ref="codiConvocatoria"/>
+				<xs:element ref="descripcio"/>
+				<xs:element ref="codiNivellEducatiu"/>
+				<xs:element ref="descripcioNivellEducatiu"/>
+				<xs:element ref="estudiSuperior"  minOccurs="0"/>
+			</xs:all>
+		</xs:complexType>
+	</xs:element>
+	<!-- "Ajudes" -->
+	<xs:element name="ajudes">
+		<xs:complexType>	
+			<xs:sequence>
+				<xs:element ref="ajuda" maxOccurs="unbounded"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<!-- Ajuda -->
+	<xs:element name="ajuda">
+		<xs:complexType>
+			<xs:all>
+				<xs:element ref="codiAjuda"/>
+				<xs:element ref="descripcioAjuda"/>				
+			</xs:all>
+		</xs:complexType>
+	</xs:element>
+	
+	<!-- Certificats -->
+	<xs:element name="certificats">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="urlCertificat" maxOccurs="unbounded"/>								
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>	
+	
+	
+	<xs:simpleType name="data">
+		<xs:restriction base="xs:gYear">			
+			<xs:minInclusive value="2004"/>			
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:element name="curs">
+		<xs:simpleType>
+			<xs:restriction base="xs:string">
+				<xs:minLength value="4"/>
+				<xs:maxLength value="4"/>
+			</xs:restriction>
+		</xs:simpleType>
+	</xs:element>
+	<xs:element name="codiConvocatoria">
+		<xs:simpleType>
+			<xs:restriction base="xs:string">
+				<xs:maxLength value="3"/>
+			</xs:restriction>
+		</xs:simpleType>
+	</xs:element>
+	<xs:element name="descripcio">
+		<xs:simpleType>
+			<xs:restriction base="xs:string">
+				<xs:maxLength value="100"/>
+			</xs:restriction>
+		</xs:simpleType>
+	</xs:element>
+	
+	<xs:element name="codiNivellEducatiu">
+		<xs:simpleType>
+			<xs:restriction base="xs:string">
+				<xs:maxLength value="2"/>
+			</xs:restriction>
+		</xs:simpleType>
+	</xs:element>
+	<xs:element name="descripcioNivellEducatiu">
+		<xs:simpleType>
+			<xs:restriction base="xs:string">
+				<xs:maxLength value="100"/>
+			</xs:restriction>
+		</xs:simpleType>
+	</xs:element>
+	<xs:element name="estudiSuperior">
+		<xs:simpleType>
+			<xs:restriction base="xs:string">
+				<xs:maxLength value="1"/>
+			</xs:restriction>
+		</xs:simpleType>
+	</xs:element>
+	<xs:element name="codiAjuda">
+		<xs:simpleType>
+			<xs:restriction base="xs:string">
+				<xs:maxLength value="4"/>
+			</xs:restriction>
+		</xs:simpleType>
+	</xs:element>
+	<xs:element name="descripcioAjuda">
+		<xs:simpleType>
+			<xs:restriction base="xs:string">
+				<xs:maxLength value="100"/>
+			</xs:restriction>
+		</xs:simpleType>
+	</xs:element>
+	<xs:element name="urlCertificat">
+		<xs:simpleType>
+			<xs:restriction base="xs:string">
+				<xs:maxLength value="150"/>
+			</xs:restriction>
+		</xs:simpleType>
+	</xs:element>
+</xs:schema>
