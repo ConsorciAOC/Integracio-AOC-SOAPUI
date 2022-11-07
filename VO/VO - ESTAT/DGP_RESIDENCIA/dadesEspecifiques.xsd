@@ -1,0 +1,149 @@
+<?xml version="1.0"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="http://www.aoc.cat/dgp-historic-residencia" targetNamespace="http://www.aoc.cat/dgp-historic-residencia" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:element name="peticioConsultaHistoricResidencia">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:choice>
+					<xs:element name="numeroSuport" minOccurs="0">
+						<xs:simpleType>
+							<xs:restriction base="xs:string">
+								<xs:pattern value="[E|C]\d{8}"/>
+							</xs:restriction>
+						</xs:simpleType>
+					</xs:element>
+					<xs:element name="anyNaixement" minOccurs="0">
+						<xs:simpleType>
+							<xs:restriction base="xs:gYear">
+								<xs:minInclusive value="1900"/>
+							</xs:restriction>
+						</xs:simpleType>
+					</xs:element>
+				</xs:choice>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="respostaConsultaHistoricResidencia">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="peticioConsultaHistoricResidencia" minOccurs="0"/>
+				<xs:element name="resposta" minOccurs="0">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="titular" minOccurs="0">
+								<xs:complexType>
+									<xs:all>
+										<xs:element name="NIE">
+											<xs:simpleType>
+												<xs:restriction base="xs:string">
+													<xs:pattern value="[XYZ]\d{7}[A-Z]"/>
+												</xs:restriction>
+											</xs:simpleType>
+										</xs:element>
+										<xs:element name="nom" type="xs:string"/>
+										<xs:element name="cognoms" type="xs:string"/>
+										<xs:element name="dataNaixement">
+											<xs:annotation>
+												<xs:documentation>Format: YYYY-MM-DD / YYYY-MM / YYYY</xs:documentation>
+											</xs:annotation>
+											<xs:simpleType>
+												<xs:restriction base="xs:string">
+													<xs:pattern value="\d{4}-\d{2}-\d{2}|\d{4}-\d{2}|\d{4}"/>
+												</xs:restriction>
+											</xs:simpleType>
+										</xs:element>
+										<xs:element name="codiPaisNaixement">
+											<xs:simpleType>
+												<xs:restriction base="xs:string">
+													<xs:pattern value="\d{3}"/>
+												</xs:restriction>
+											</xs:simpleType>
+										</xs:element>
+										<xs:element name="paisNaixement" type="xs:string"/>
+										<xs:element name="codiNacionalitat">
+											<xs:simpleType>
+												<xs:restriction base="xs:string">
+													<xs:pattern value="\d{3}"/>
+												</xs:restriction>
+											</xs:simpleType>
+										</xs:element>
+										<xs:element name="nacionalitat" type="xs:string"/>
+										<xs:element name="llocNaixement" type="xs:string"/>
+										<xs:element name="nomPare" type="xs:string" minOccurs="0"/>
+										<xs:element name="nomMare" type="xs:string" minOccurs="0"/>
+									</xs:all>
+								</xs:complexType>
+							</xs:element>
+							<xs:element name="residencies" minOccurs="0">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element ref="residencia" maxOccurs="unbounded"/>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+							<xs:element name="DNINacionalitzat" minOccurs="0">
+								<xs:simpleType>
+									<xs:restriction base="xs:string">
+										<xs:pattern value="\d{8}[A-Z]"/>
+									</xs:restriction>
+								</xs:simpleType>
+							</xs:element>
+							<xs:element name="NIEUltimSuport" minOccurs="0">
+								<xs:simpleType>
+									<xs:restriction base="xs:string">
+										<xs:pattern value="[XYZ]\d{7}[A-Z]"/>
+									</xs:restriction>
+								</xs:simpleType>
+							</xs:element>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element ref="resultat"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="residencia">
+		<xs:complexType>
+			<xs:all>
+				<xs:element name="tipusTramit">
+					<xs:complexType>
+						<xs:all>
+							<xs:element name="codi">
+								<xs:simpleType>
+									<xs:restriction base="xs:string">
+										<xs:minLength value="1"/>
+										<xs:maxLength value="10"/>
+										<xs:whiteSpace value="collapse"/>
+									</xs:restriction>
+								</xs:simpleType>
+							</xs:element>
+							<xs:element name="literal">
+								<xs:simpleType>
+									<xs:restriction base="xs:string">
+										<xs:minLength value="1"/>
+										<xs:maxLength value="75"/>
+										<xs:whiteSpace value="collapse"/>
+									</xs:restriction>
+								</xs:simpleType>
+							</xs:element>
+						</xs:all>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="dataSollicitud" type="xs:date" minOccurs="0"/>
+				<xs:element name="dataConcessio" type="xs:date" minOccurs="0"/>
+				<xs:element name="dataDenegacio" type="xs:date" minOccurs="0"/>
+				<xs:element name="dataValidesa" type="xs:date" minOccurs="0"/>
+			</xs:all>
+		</xs:complexType>
+	</xs:element>
+	<!-- ======================================================= -->
+	<!-- Resultat                                                -->
+	<!-- ======================================================= -->
+	<xs:element name="resultat">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="codiResultat" type="xs:string"/>
+				<xs:element name="descripcio" type="xs:string"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

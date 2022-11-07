@@ -60,6 +60,7 @@
 		xmlns:rpe="http://www.aoc.cat/rpe"
 		xmlns:mepsyd="http://www.aocat.net/mepsyd"
 		xmlns:notaris="http://www.aoc.cat/poders-notarials"
+		xmlns:dgp_residencia="http://www.aoc.cat/dgp-historic-residencia"
 		
 		
 		targetNamespace="http://gencat.net/scsp/esquemes/peticion"  elementFormDefault="qualified" attributeFormDefault="unqualified">
@@ -105,6 +106,7 @@
 			<xs:import namespace="http://www.aoc.cat/rgc" schemaLocation="./VO/VO - GENE/RPE/dadesEspecifiques.xsd"/>
 			<xs:import namespace="http://www.aocat.net/mepsyd" schemaLocation="./VO/VO - ESTAT/MEPSYD/dadesEspecifiques.xsd"/>	
 			<xs:import namespace="http://www.aoc.cat/poders-notarials" schemaLocation="./VO/VO - ESTAT/NOTARIS/dadesEspecifiques.xsd"/>	
+			<xs:import namespace="http://www.aoc.cat/dgp-historic-residencia" schemaLocation="./VO/VO - ESTAT/DGP_RESIDENCIA/dadesEspecifiques.xsd"/>	
 			
 			
 				<xs:element name="Apellido1">
@@ -434,8 +436,9 @@
 						<xs:element ref="notaris:peticioConsultaSubsistenciaAdministradors" minOccurs="0"/>
 						<xs:element ref="notaris:peticioConsultaSubsistenciaPoders" minOccurs="0"/>
 						<xs:element ref="notaris:peticioConsultaNotaris" minOccurs="0"/>
-						<xs:element ref="notaris:peticioConsultaCopiaSimple" minOccurs="0"/>																							
-																	
+						<xs:element ref="notaris:peticioConsultaCopiaSimple" minOccurs="0"/>	
+						<xs:element ref="dgp_residencia:peticioConsultaHistoricResidencia" minOccurs="0"/>	
+
 
 					</xs:choice>
 				</xs:complexType>
