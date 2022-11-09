@@ -10,7 +10,7 @@ En aquest repositori oferim tres Projectes `SOAPUI` amb peticions en format XML 
 
 En cas de no estar autoritzat, heu de seguir les passes indicades a la [FAQ][URL1] per tal de que us poguem autoritzar el consum dels serveis.
 
-[URL1]: https://www.aoc.cat/knowledge-base/quines-dades-necessita-consorci-aoc-me-integrar-servei/
+[URL1]: https://suport-integradors.aoc.cat/hc/ca/articles/4416407051665-Quines-dades-necessita-el-Consorci-AOC-per-integrar-me-amb-el-servei-
 
 Per qualsevol altre dubte o aclariment, podeu obrir tiquet a través del següent [formulari][URLFORM].
 
