@@ -30,6 +30,7 @@
 	xmlns:sir="http://www.aoc.cat/sir"
 	xmlns:representa="http://www.aoc.cat/representa/v2"
 	xmlns:desal="http://www.aoc.cat/desal"
+	xmlns:sifecat="http://www.aocat.net/eacat"
 
 		elementFormDefault="qualified" attributeFormDefault="unqualified">
 		
@@ -42,6 +43,7 @@
 		<xs:import namespace="http://www.aoc.cat/sir"  schemaLocation="./SIR2_0/dadesEspecifiques.xsd"/>
 		<xs:import namespace="http://www.aoc.cat/representa/v2" schemaLocation="./REPRESENTA/dadesEspecifiques.xsd"/>
 		<xs:import namespace="http://www.aoc.cat/desal" schemaLocation="./DESAL/serveiscomuns-desal.xsd"/>
+		<xs:import namespace="http://www.aocat.net/eacat" schemaLocation="./SIFECAT/dadesEspecifiques.xsd"/>
 		
 			
 		
@@ -353,7 +355,13 @@
 						<xs:element ref="representa:consultarFamilies" minOccurs="0"/>
 						<xs:element ref="representa:consultarTramits" minOccurs="0"/>
 						<xs:element ref="representa:consultarAdministracio" minOccurs="0"/>
-						<xs:element ref="desal:peticioCarregaExpedient" minOccurs="0"/>
+						<xs:element ref="desal:peticioCarregaExpedient" minOccurs="0"/>	
+						<xs:element ref="sifecat:peticioConsultaUsuari" minOccurs="0"/>
+						<xs:element ref="sifecat:peticioConsultaServei" minOccurs="0"/>
+						<xs:element ref="sifecat:peticioConsultaEns" minOccurs="0"/>
+						<xs:element ref="sifecat:peticioConsultaTipusEns" minOccurs="0"/>
+						<xs:element ref="sifecat:peticioConsultaFuncionariHabilitat" minOccurs="0"/>
+						
 						
 						</xs:choice>
 				</xs:complexType>

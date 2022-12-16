@@ -1,0 +1,308 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns="http://www.aocat.net/eacat" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.aocat.net/eacat" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<!-- ======================================================= -->
+	<!-- Consulta usuari                                                                                      -->
+	<!-- ======================================================= -->
+	<xs:element name="peticioConsultaUsuari">
+		<xs:complexType>
+			<xs:sequence>
+				 <xs:element name="nif">
+        			<xs:simpleType>
+          				<xs:restriction base="xs:string">
+          		  			<xs:maxLength value="9"/>
+          				</xs:restriction>
+        			</xs:simpleType>
+      			</xs:element>
+ 				 <xs:element name="codiEns" minOccurs="0">
+        			<xs:simpleType>
+          				<xs:restriction base="xs:string">
+          		  			<xs:maxLength value="10"/>
+          				</xs:restriction>
+        			</xs:simpleType>
+      			</xs:element>     
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="respostaConsultaUsuari">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="peticioConsultaUsuari" minOccurs="0"/>
+				<xs:element name="resposta" minOccurs="0">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element ref="usuari" minOccurs="0" maxOccurs="unbounded"/>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element ref="resultat"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="usuari">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="codiEns" type="xs:string"/>
+				<xs:element name="nif" type="xs:string"/>
+				<xs:element name="tipus" type="xs:string"/>
+				<xs:element name="nom" type="xs:string" minOccurs="0"/>
+				<xs:element name="dataAlta" type="xs:date" minOccurs="0"/>
+				<xs:element name="email" type="xs:string" minOccurs="0"/>
+				<xs:element name="tractament" type="xs:string" minOccurs="0"/>
+				<xs:element name="perfil" type="xs:string" minOccurs="0"/>
+				<xs:element name="dataModificacio" type="xs:date" minOccurs="0"/>
+				<xs:element name="telefon" type="xs:string" minOccurs="0"/>
+				<xs:element ref="ens"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<!-- ======================================================= -->
+	<!-- Consulta servei                                                                                         -->
+	<!-- ======================================================= -->
+	<xs:element name="peticioConsultaServei">
+		<xs:complexType>
+			<xs:sequence>
+				 <xs:element name="servei">
+        			<xs:simpleType>
+          				<xs:restriction base="xs:string">
+          		  			<xs:maxLength value="15"/>
+          				</xs:restriction>
+        			</xs:simpleType>
+      			</xs:element>
+				 <xs:element name="nif" minOccurs="0">
+        			<xs:simpleType>
+          				<xs:restriction base="xs:string">
+          		  			<xs:maxLength value="9"/>
+          				</xs:restriction>
+        			</xs:simpleType>
+      			</xs:element>
+				 <xs:element name="codiEns" minOccurs="0">
+        			<xs:simpleType>
+          				<xs:restriction base="xs:string">
+          		  			<xs:maxLength value="10"/>
+          				</xs:restriction>
+        			</xs:simpleType>
+      			</xs:element>      			      						
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="respostaConsultaServei">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="peticioConsultaServei" minOccurs="0"/>
+				<xs:element name="resposta" minOccurs="0">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element ref="servei" minOccurs="0" maxOccurs="unbounded"/>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>				
+				<xs:element ref="resultat"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="servei">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="nif" type="xs:string"/>
+				<xs:element name="nom" type="xs:string" minOccurs="0"/>
+				<xs:element name="perfil" type="xs:string" minOccurs="0"/>
+				<xs:element name="codiEns" type="xs:string"/>
+				<xs:element name="nomEns" type="xs:string"/>
+				<xs:element name="idTipusEns" type="xs:string"/>
+				<xs:element name="nomTipusEns" type="xs:string"/>
+				<xs:element name="servei" type="xs:string"/>
+				<xs:element name="rol" type="xs:string"/>
+				<xs:element name="descripcio" type="xs:string" minOccurs="0"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<!-- ======================================================= -->
+	<!-- Consulta ens                                                                                            -->
+	<!-- ======================================================= -->
+	<xs:element name="peticioConsultaEns">
+		<xs:complexType> 
+			<xs:sequence>
+				 <xs:element name="codiEns" minOccurs="0">
+        			<xs:simpleType>
+          				<xs:restriction base="xs:string">
+          		  			<xs:maxLength value="10"/>
+          				</xs:restriction>
+        			</xs:simpleType>
+      			</xs:element>
+				 <xs:element name="idTipusEns" minOccurs="0">
+        			<xs:simpleType>
+          				<xs:restriction base="xs:string">
+          		  			<xs:maxLength value="2"/>
+          				</xs:restriction>
+        			</xs:simpleType>
+      			</xs:element>
+				 <xs:element name="nom" minOccurs="0">
+        			<xs:simpleType>
+          				<xs:restriction base="xs:string">
+          		  			<xs:maxLength value="90"/>
+          				</xs:restriction>
+        			</xs:simpleType>
+      			</xs:element>    
+				 <xs:element name="cif" minOccurs="0">
+        			<xs:simpleType>
+          				<xs:restriction base="xs:string">
+          		  			<xs:maxLength value="9"/>
+          				</xs:restriction>
+        			</xs:simpleType>
+      			</xs:element>  
+				 <xs:element name="nomMunicipi" minOccurs="0">
+        			<xs:simpleType>
+          				<xs:restriction base="xs:string">
+          		  			<xs:maxLength value="45"/>
+          				</xs:restriction>
+        			</xs:simpleType>
+      			</xs:element>   
+				 <xs:element name="nomProvincia" minOccurs="0">
+        			<xs:simpleType>
+          				<xs:restriction base="xs:string">
+          		  			<xs:maxLength value="45"/>
+          				</xs:restriction>
+        			</xs:simpleType>
+      			</xs:element>   
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="respostaConsultaEns">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="peticioConsultaEns" minOccurs="0"/>
+				<xs:element name="resposta" minOccurs="0">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element ref="ens" minOccurs="0" maxOccurs="unbounded"/>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>				
+				<xs:element ref="resultat"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="ens">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="codiEns" type="xs:string"/>
+				<xs:element name="nom" type="xs:string"/>
+				<xs:element name="idTipusEns" type="xs:string"/>
+				<xs:element name="nomTipusEns" type="xs:string"/>
+				<xs:element name="cif" type="xs:string" minOccurs="0"/>
+				<xs:element name="adreca" type="xs:string" minOccurs="0"/>
+				<xs:element name="codiPostal" type="xs:string" minOccurs="0"/>
+				<xs:element name="codiMunicipi" type="xs:string" minOccurs="0"/>
+				<xs:element name="nomMunicipi" type="xs:string" minOccurs="0"/>
+				<xs:element name="codiComarca" type="xs:string" minOccurs="0"/>
+				<xs:element name="nomComarca" type="xs:string" minOccurs="0"/>
+				<xs:element name="codiProvincia" type="xs:string" minOccurs="0"/>
+				<xs:element name="nomProvincia" type="xs:string" minOccurs="0"/>
+				<xs:element name="codiDelegacio" type="xs:string" minOccurs="0"/>
+				<xs:element name="nomDelegacio" type="xs:string" minOccurs="0"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<!-- ======================================================= -->
+	<!-- Consulta Tipus Ens                                                                                      -->
+	<!-- ======================================================= -->
+	<xs:element name="peticioConsultaTipusEns">
+		<xs:complexType>
+			<xs:sequence>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="respostaConsultaTipusEns">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="peticioConsultaTipusEns" minOccurs="0"/>
+				<xs:element name="resposta" minOccurs="0">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element ref="tipusEns" minOccurs="0" maxOccurs="unbounded"/>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element ref="resultat"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="tipusEns">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="idTipusEns" type="xs:string"/>
+				<xs:element name="nomTipusEns" type="xs:string"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<!-- ======================================================= -->
+	<!-- Consulta Funcionari Habilitat							 -->
+	<!-- ======================================================= -->
+	<xs:element name="peticioConsultaFuncionariHabilitat">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="codiEns" minOccurs="0">
+					<xs:simpleType>
+						<xs:restriction base="xs:string">
+							<xs:maxLength value="10"/>
+						</xs:restriction>
+					</xs:simpleType>
+				</xs:element>
+				<xs:element name="nif" minOccurs="0">
+					<xs:simpleType>
+						<xs:restriction base="xs:string">
+							<xs:maxLength value="9"/>
+						</xs:restriction>
+					</xs:simpleType>
+				</xs:element>
+				<xs:element name="dataAltaInici" type="xs:date" minOccurs="0"></xs:element>
+				<xs:element name="dataAltaFi" type="xs:date" minOccurs="0"></xs:element>
+				<xs:element name="assistirInteressats" type="xs:boolean" minOccurs="0"></xs:element>
+				<xs:element name="expCopiesAutentiques" type="xs:boolean" minOccurs="0"></xs:element>
+				<xs:element name="donatsBaixa" type="xs:boolean" minOccurs="0"></xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="respostaConsultaFuncionariHabilitat">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="peticioConsultaFuncionariHabilitat" minOccurs="0"/>
+				<xs:element name="resposta" minOccurs="0">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element ref="funcionariHabilitat" minOccurs="0" maxOccurs="unbounded"/>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element ref="resultat"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="funcionariHabilitat">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="nom" type="xs:string"/>
+				<xs:element name="nif" type="xs:string"/>
+				<xs:element name="tipus" type="xs:string"/>
+				<xs:element name="nomEns" type="xs:string"/>
+				<xs:element name="codiEns" type="xs:string"/>
+				<xs:element name="dataAlta" type="xs:date"/>
+				<xs:element name="dataBaixa" type="xs:date"/>
+				<xs:element name="assistirInteressats" type="xs:boolean"/>
+				<xs:element name="expCopiesAutentiques" type="xs:boolean"/>
+				<xs:element name="unitatAdministrativa" type="xs:string"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<!-- ======================================================= -->
+	<!-- Resultat                                                                                                  -->
+	<!-- ======================================================= -->
+	<xs:element name="resultat">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="codiResultat" type="xs:string"/>
+				<xs:element name="descripcio" type="xs:string"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>
