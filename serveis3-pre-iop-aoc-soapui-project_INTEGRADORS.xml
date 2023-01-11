@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:soapui-project id="523a6f6d-9b62-4ed0-854d-86b95cdf8915" activeEnvironment="Default" name="serveis3-pre.iop.aoc" resourceRoot="" soapui-version="5.7.0" abortOnError="false" runType="SEQUENTIAL" xmlns:con="http://eviware.com/soapui/config"><con:settings/><con:interface xsi:type="con:WsdlInterface" id="9a5a52bf-55e1-481f-a091-747f93712472" wsaVersion="NONE" name="SincronSoap" type="wsdl" bindingName="{http://www.openuri.org/}SincronSoap" soapVersion="1_1" anonymous="optional" definition="file:/C:/Users/cmoralea/Desktop/GitHub/SOAP%20millora/Integracio-AOC-SOAPUI/Sincron_iop.wsdl" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache type="TEXT" rootPart="file:/C:/Users/cmoralea/Desktop/GitHub/SOAP%20millora/Integracio-AOC-SOAPUI/Sincron_iop.wsdl"><con:part><con:url>file:/C:/Users/cmoralea/Desktop/GitHub/SOAP%20millora/Integracio-AOC-SOAPUI/Sincron_iop.wsdl</con:url><con:content><![CDATA[<!--Published by JAX-WS RI at http://jax-ws.dev.java.net. RI's version is Metro/2.2 (branches/2.2-7015; 2012-02-20T20:31:25+0000) JAXWS-RI/2.2.6 JAXWS/2.2 svn-revision#unknown.-->
+<con:soapui-project id="523a6f6d-9b62-4ed0-854d-86b95cdf8915" activeEnvironment="Default" name="serveis3-pre.iop.aoc" resourceRoot="" soapui-version="5.7.0" abortOnError="false" runType="SEQUENTIAL" xmlns:con="http://eviware.com/soapui/config"><con:settings/><con:interface xsi:type="con:WsdlInterface" id="9a5a52bf-55e1-481f-a091-747f93712472" wsaVersion="NONE" name="SincronSoap" type="wsdl" bindingName="{http://www.openuri.org/}SincronSoap" soapVersion="1_1" anonymous="optional" definition="file:/C:/Users/CristianMorales/Documents/GitHub/Integracio-AOC-SOAPUI/Sincron_iop.wsdl" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache type="TEXT" rootPart="file:/C:/Users/CristianMorales/Documents/GitHub/Integracio-AOC-SOAPUI/Sincron_iop.wsdl"><con:part><con:url>file:/C:/Users/CristianMorales/Documents/GitHub/Integracio-AOC-SOAPUI/Sincron_iop.wsdl</con:url><con:content><![CDATA[<!--Published by JAX-WS RI at http://jax-ws.dev.java.net. RI's version is Metro/2.2 (branches/2.2-7015; 2012-02-20T20:31:25+0000) JAXWS-RI/2.2.6 JAXWS/2.2 svn-revision#unknown.-->
 <wsdl:definitions targetNamespace="http://www.openuri.org/" xmlns:conv="http://www.openuri.org/2002/04/soap/conversation/" xmlns:cw="http://www.openuri.org/2002/04/wsdl/conversation/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:jms="http://www.openuri.org/2002/04/wsdl/jms/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:s0="http://www.openuri.org/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:xmime="http://www.w3.org/2005/05/xmlmime">
   <wsdl:types>
     <xs:schema elementFormDefault="qualified" targetNamespace="http://www.openuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:pet="http://gencat.net/scsp/esquemes/peticion" xmlns:res="http://gencat.net/scsp/esquemes/respuesta">
@@ -911,7 +911,7 @@
       <soap:address location="http://serveis3-pre.iop.aoc.cat:80/siri-proxy/services/Sincron"/>
     </wsdl:port>
   </wsdl:service>
-</wsdl:definitions>]]></con:content><con:type>http://schemas.xmlsoap.org/wsdl/</con:type></con:part><con:part><con:url>file:\C:\Users\cmoralea\Desktop\GitHub\SOAP%20millora\Integracio-AOC-SOAPUI\VO\VO - ESTAT\INEM\dadesEspecifiques.xsd</con:url><con:content><![CDATA[<xs:schema targetNamespace="http://www.aocat.net/inem" elementFormDefault="qualified" attributeFormDefault="unqualified" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="http://www.aocat.net/inem" xmlns:map="http://www.map.es/scsp/esquemas/datosespecificos">
+</wsdl:definitions>]]></con:content><con:type>http://schemas.xmlsoap.org/wsdl/</con:type></con:part><con:part><con:url>file:\C:\Users\CristianMorales\Documents\GitHub\Integracio-AOC-SOAPUI\VO\VO - ESTAT\INEM\dadesEspecifiques.xsd</con:url><con:content><![CDATA[<xs:schema targetNamespace="http://www.aocat.net/inem" elementFormDefault="qualified" attributeFormDefault="unqualified" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="http://www.aocat.net/inem" xmlns:map="http://www.map.es/scsp/esquemas/datosespecificos">
   <xs:import namespace="http://www.map.es/scsp/esquemas/datosespecificos" schemaLocation="datos-especificos.xsd"/>
   <!--=======================================================-->
   <!--Verificació dades atur-->
@@ -964,7 +964,7 @@
       </xs:sequence>
     </xs:complexType>
   </xs:element>
-</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>file:\C:\Users\cmoralea\Desktop\GitHub\SOAP%20millora\Integracio-AOC-SOAPUI\VO\VO - ESTAT\INEM\datos-especificos.xsd</con:url><con:content><![CDATA[<xs:schema targetNamespace="http://www.map.es/scsp/esquemas/datosespecificos" elementFormDefault="qualified" attributeFormDefault="unqualified" xmlns="http://www.map.es/scsp/esquemas/datosespecificos" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>file:\C:\Users\CristianMorales\Documents\GitHub\Integracio-AOC-SOAPUI\VO\VO - ESTAT\INEM\datos-especificos.xsd</con:url><con:content><![CDATA[<xs:schema targetNamespace="http://www.map.es/scsp/esquemas/datosespecificos" elementFormDefault="qualified" attributeFormDefault="unqualified" xmlns="http://www.map.es/scsp/esquemas/datosespecificos" xmlns:xs="http://www.w3.org/2001/XMLSchema">
   <xs:element name="DatosEspecificos" type="DatosEspecificos"/>
   <xs:complexType name="DatosEspecificos">
     <xs:all>
@@ -1347,7 +1347,7 @@
 			</xs:restriction>
 		</xs:simpleType>
 	</xs:element>-->
-</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>file:\C:\Users\cmoralea\Desktop\GitHub\SOAP%20millora\Integracio-AOC-SOAPUI\VO\VO - GENE\TFN\dadesEspecifiques.xsd</con:url><con:content><![CDATA[<xs:schema targetNamespace="http://www.aoc.cat/tfn" elementFormDefault="qualified" attributeFormDefault="unqualified" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="http://www.aoc.cat/tfn">
+</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>file:\C:\Users\CristianMorales\Documents\GitHub\Integracio-AOC-SOAPUI\VO\VO - GENE\TFN\dadesEspecifiques.xsd</con:url><con:content><![CDATA[<xs:schema targetNamespace="http://www.aoc.cat/tfn" elementFormDefault="qualified" attributeFormDefault="unqualified" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="http://www.aoc.cat/tfn">
   <xs:element name="resultat">
     <xs:complexType>
       <xs:sequence>
@@ -1526,7 +1526,7 @@
       </xs:sequence>
     </xs:complexType>
   </xs:element>
-</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>file:\C:\Users\cmoralea\Desktop\GitHub\SOAP%20millora\Integracio-AOC-SOAPUI\PSCP\pscp-schema-servei.xsd</con:url><con:content><![CDATA[<xsd:schema targetNamespace="http://webservices.pscp.economia.gencat.capgemini.com" elementFormDefault="qualified" attributeFormDefault="qualified" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://webservices.pscp.economia.gencat.capgemini.com" xmlns:ns3="http://entity.webservices.pscp.economia.gencat.capgemini.com" xmlns:ns2="http://exceptions.model.pscp.economia.gencat.cat">
+</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>file:\C:\Users\CristianMorales\Documents\GitHub\Integracio-AOC-SOAPUI\PSCP\pscp-schema-servei.xsd</con:url><con:content><![CDATA[<xsd:schema targetNamespace="http://webservices.pscp.economia.gencat.capgemini.com" elementFormDefault="qualified" attributeFormDefault="qualified" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://webservices.pscp.economia.gencat.capgemini.com" xmlns:ns3="http://entity.webservices.pscp.economia.gencat.capgemini.com" xmlns:ns2="http://exceptions.model.pscp.economia.gencat.cat">
   <xsd:import namespace="http://entity.webservices.pscp.economia.gencat.capgemini.com" schemaLocation="pscp-schema-missatgeria.xsd"/>
   <xsd:import namespace="http://exceptions.model.pscp.economia.gencat.cat" schemaLocation="pscp-schema-excepcio.xsd"/>
   <xsd:element name="cancelTendering">
@@ -1577,7 +1577,7 @@
       </xsd:sequence>
     </xsd:complexType>
   </xsd:element>
-</xsd:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>file:\C:\Users\cmoralea\Desktop\GitHub\SOAP%20millora\Integracio-AOC-SOAPUI\PSCP\pscp-schema-missatgeria.xsd</con:url><con:content><![CDATA[<xsd:schema targetNamespace="http://entity.webservices.pscp.economia.gencat.capgemini.com" elementFormDefault="qualified" attributeFormDefault="qualified" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:ns1="http://entity.webservices.pscp.economia.gencat.capgemini.com" xmlns:ns2="http://webservices.pscp.economia.gencat.capgemini.com">
+</xsd:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>file:\C:\Users\CristianMorales\Documents\GitHub\Integracio-AOC-SOAPUI\PSCP\pscp-schema-missatgeria.xsd</con:url><con:content><![CDATA[<xsd:schema targetNamespace="http://entity.webservices.pscp.economia.gencat.capgemini.com" elementFormDefault="qualified" attributeFormDefault="qualified" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:ns1="http://entity.webservices.pscp.economia.gencat.capgemini.com" xmlns:ns2="http://webservices.pscp.economia.gencat.capgemini.com">
   <xsd:import namespace="http://webservices.pscp.economia.gencat.capgemini.com" schemaLocation="pscp-schema-servei.xsd"/>
   <xsd:complexType name="WSCancellationNotice">
     <xsd:sequence>
@@ -1870,14 +1870,14 @@
       <xsd:element minOccurs="0" name="technicalEvaluationCriteriaTypeCode" nillable="true" type="xsd:string"/>
     </xsd:sequence>
   </xsd:complexType>
-</xsd:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>file:\C:\Users\cmoralea\Desktop\GitHub\SOAP%20millora\Integracio-AOC-SOAPUI\PSCP\pscp-schema-excepcio.xsd</con:url><con:content><![CDATA[<xsd:schema targetNamespace="http://exceptions.model.pscp.economia.gencat.cat" elementFormDefault="qualified" attributeFormDefault="qualified" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:ns1="http://exceptions.model.pscp.economia.gencat.cat">
+</xsd:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>file:\C:\Users\CristianMorales\Documents\GitHub\Integracio-AOC-SOAPUI\PSCP\pscp-schema-excepcio.xsd</con:url><con:content><![CDATA[<xsd:schema targetNamespace="http://exceptions.model.pscp.economia.gencat.cat" elementFormDefault="qualified" attributeFormDefault="qualified" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:ns1="http://exceptions.model.pscp.economia.gencat.cat">
   <xsd:complexType name="PscpWSBusinessFaultDetail">
     <xsd:sequence>
       <xsd:element name="errorCode" type="xsd:string" nillable="true" minOccurs="0"/>
       <xsd:element name="exceptionDetails" type="xsd:string" nillable="true" minOccurs="0"/>
     </xsd:sequence>
   </xsd:complexType>
-</xsd:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>file:\C:\Users\cmoralea\Desktop\GitHub\SOAP%20millora\Integracio-AOC-SOAPUI\VO\VO - GENE\IDESCAT\dadesEspecifiquesHistoric.xsd</con:url><con:content><![CDATA[<xsd:schema targetNamespace="http://www.aocat.net/padro" elementFormDefault="qualified" attributeFormDefault="unqualified" version="1.0" xmlns="http://www.aocat.net/padro" xmlns:volante="http://www.red.es/padron" xmlns:ine="http://www.map.es/scsp/esquemas/datosespecificos" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+</xsd:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>file:\C:\Users\CristianMorales\Documents\GitHub\Integracio-AOC-SOAPUI\VO\VO - GENE\IDESCAT\dadesEspecifiquesHistoric.xsd</con:url><con:content><![CDATA[<xsd:schema targetNamespace="http://www.aocat.net/padro" elementFormDefault="qualified" attributeFormDefault="unqualified" version="1.0" xmlns="http://www.aocat.net/padro" xmlns:volante="http://www.red.es/padron" xmlns:ine="http://www.map.es/scsp/esquemas/datosespecificos" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <xsd:import namespace="http://www.red.es/padron" schemaLocation="VolanteEmpadronamiento.xsd"/>
   <xsd:element name="peticionDatosTitularHistorico">
     <xsd:complexType>
@@ -1976,10 +1976,10 @@
       </xsd:sequence>
     </xsd:complexType>
   </xsd:element>
-</xsd:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>file:\C:\Users\cmoralea\Desktop\GitHub\SOAP%20millora\Integracio-AOC-SOAPUI\VO\VO - GENE\IDESCAT\VolanteEmpadronamiento.xsd</con:url><con:content>&lt;xs:schema targetNamespace="http://www.red.es/padron" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="http://www.red.es/padron">&#13;
+</xsd:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>file:\C:\Users\CristianMorales\Documents\GitHub\Integracio-AOC-SOAPUI\VO\VO - GENE\IDESCAT\VolanteEmpadronamiento.xsd</con:url><con:content>&lt;xs:schema targetNamespace="http://www.red.es/padron" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="http://www.red.es/padron">&#13;
   &lt;xs:element name="VolanteEmpadronamiento" type="xs:anyType"/>&#13;
   &lt;xs:element name="DireccionEmpadronamiento" type="xs:anyType"/>&#13;
-&lt;/xs:schema></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>file:\C:\Users\cmoralea\Desktop\GitHub\SOAP%20millora\Integracio-AOC-SOAPUI\VO\VO - GENE\TFM\dadesEspecifiques.xsd</con:url><con:content><![CDATA[<xs:schema targetNamespace="http://www.aoc.cat/tfm" elementFormDefault="qualified" attributeFormDefault="unqualified" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="http://www.aoc.cat/tfm">
+&lt;/xs:schema></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>file:\C:\Users\CristianMorales\Documents\GitHub\Integracio-AOC-SOAPUI\VO\VO - GENE\TFM\dadesEspecifiques.xsd</con:url><con:content><![CDATA[<xs:schema targetNamespace="http://www.aoc.cat/tfm" elementFormDefault="qualified" attributeFormDefault="unqualified" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="http://www.aoc.cat/tfm">
   <xs:element name="resultat">
     <xs:complexType>
       <xs:sequence>
@@ -2156,7 +2156,7 @@
       </xs:sequence>
     </xs:complexType>
   </xs:element>
-</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>file:\C:\Users\cmoralea\Desktop\GitHub\SOAP%20millora\Integracio-AOC-SOAPUI\VO\VO - GENE\GRAU_DISC\dadesEspecifiques.xsd</con:url><con:content><![CDATA[<xs:schema targetNamespace="http://www.aocat.net/discapacitat" elementFormDefault="qualified" attributeFormDefault="unqualified" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="http://www.aocat.net/discapacitat">
+</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>file:\C:\Users\CristianMorales\Documents\GitHub\Integracio-AOC-SOAPUI\VO\VO - GENE\GRAU_DISC\dadesEspecifiques.xsd</con:url><con:content><![CDATA[<xs:schema targetNamespace="http://www.aocat.net/discapacitat" elementFormDefault="qualified" attributeFormDefault="unqualified" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="http://www.aocat.net/discapacitat">
   <!--=======================================================-->
   <!--Consulta simple-->
   <!--=======================================================-->
@@ -2236,7 +2236,7 @@
       </xs:sequence>
     </xs:complexType>
   </xs:element>
-</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>file:\C:\Users\cmoralea\Desktop\GitHub\SOAP%20millora\Integracio-AOC-SOAPUI\VO\VO - GENE\SOC\dadesEspecifiquesPICA.xsd</con:url><con:content><![CDATA[<xsd:schema targetNamespace="http://gencat.net/scsp/esquemes/SOC" elementFormDefault="qualified" attributeFormDefault="unqualified" xmlns="http://gencat.net/scsp/esquemes/SOC" xmlns:ns1="http://gencat.net/scsp/esquemes/PicaError" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>file:\C:\Users\CristianMorales\Documents\GitHub\Integracio-AOC-SOAPUI\VO\VO - GENE\SOC\dadesEspecifiquesPICA.xsd</con:url><con:content><![CDATA[<xsd:schema targetNamespace="http://gencat.net/scsp/esquemes/SOC" elementFormDefault="qualified" attributeFormDefault="unqualified" xmlns="http://gencat.net/scsp/esquemes/SOC" xmlns:ns1="http://gencat.net/scsp/esquemes/PicaError" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <xsd:import namespace="http://gencat.net/scsp/esquemes/PicaError" schemaLocation="PicaError.xsd"/>
   <xsd:element name="CertificatRequest">
     <xsd:complexType>
@@ -2821,7 +2821,7 @@
       </xsd:sequence>
     </xsd:complexType>
   </xsd:element>
-</xsd:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>file:\C:\Users\cmoralea\Desktop\GitHub\SOAP%20millora\Integracio-AOC-SOAPUI\VO\VO - GENE\SOC\PicaError.xsd</con:url><con:content><![CDATA[<!--edited with XMLSpy v2005 rel. 3 U (http://www.altova.com) by  ()-->
+</xsd:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>file:\C:\Users\CristianMorales\Documents\GitHub\Integracio-AOC-SOAPUI\VO\VO - GENE\SOC\PicaError.xsd</con:url><con:content><![CDATA[<!--edited with XMLSpy v2005 rel. 3 U (http://www.altova.com) by  ()-->
 <xs:schema targetNamespace="http://gencat.net/scsp/esquemes/PicaError" elementFormDefault="qualified" attributeFormDefault="unqualified" xmlns="http://gencat.net/scsp/esquemes/PicaError" xmlns:xs="http://www.w3.org/2001/XMLSchema">
   <xs:element name="PICAError">
     <xs:complexType>
@@ -2833,7 +2833,7 @@
       </xs:sequence>
     </xs:complexType>
   </xs:element>
-</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>file:\C:\Users\cmoralea\Desktop\GitHub\SOAP%20millora\Integracio-AOC-SOAPUI\VO\VO - GENE\RCA\dadesEspecifiques.xsd</con:url><con:content><![CDATA[<xs:schema targetNamespace="http://www.aocat.net/rca" elementFormDefault="qualified" attributeFormDefault="unqualified" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="http://www.aocat.net/rca">
+</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>file:\C:\Users\CristianMorales\Documents\GitHub\Integracio-AOC-SOAPUI\VO\VO - GENE\RCA\dadesEspecifiques.xsd</con:url><con:content><![CDATA[<xs:schema targetNamespace="http://www.aocat.net/rca" elementFormDefault="qualified" attributeFormDefault="unqualified" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="http://www.aocat.net/rca">
   <!--=======================================================-->
   <!--RCA_CONSULTA-->
   <!--=======================================================-->
@@ -2963,7 +2963,7 @@
       </xs:sequence>
     </xs:complexType>
   </xs:element>
-</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>file:\C:\Users\cmoralea\Desktop\GitHub\SOAP%20millora\Integracio-AOC-SOAPUI\VO\VO - GENE\REG_ENT\dadesEspecifiques.xsd</con:url><con:content><![CDATA[<!--edited with XMLSpy v2008 rel. 2 sp2 (http://www.altova.com) by Sergio Figueras (Consorci Administració Oberta de Catalunya)-->
+</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>file:\C:\Users\CristianMorales\Documents\GitHub\Integracio-AOC-SOAPUI\VO\VO - GENE\REG_ENT\dadesEspecifiques.xsd</con:url><con:content><![CDATA[<!--edited with XMLSpy v2008 rel. 2 sp2 (http://www.altova.com) by Sergio Figueras (Consorci Administració Oberta de Catalunya)-->
 <xs:schema targetNamespace="http://www.aoc.cat/regentitats" elementFormDefault="qualified" attributeFormDefault="unqualified" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="http://www.aoc.cat/regentitats">
   <xs:element name="peticioDadesConsulta">
     <xs:complexType>
@@ -3472,7 +3472,7 @@
       </xs:sequence>
     </xs:complexType>
   </xs:element>
-</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>file:\C:\Users\cmoralea\Desktop\GitHub\SOAP%20millora\Integracio-AOC-SOAPUI\VO\VO - LOCAL\dadesEspecifiques.xsd</con:url><con:content><![CDATA[<xsd:schema targetNamespace="http://www.aocat.net/padro" elementFormDefault="qualified" attributeFormDefault="unqualified" version="1.0" xmlns="http://www.aocat.net/padro" xmlns:volante="http://www.red.es/padron" xmlns:ine="http://www.map.es/scsp/esquemas/datosespecificos" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>file:\C:\Users\CristianMorales\Documents\GitHub\Integracio-AOC-SOAPUI\VO\VO - LOCAL\dadesEspecifiques.xsd</con:url><con:content><![CDATA[<xsd:schema targetNamespace="http://www.aocat.net/padro" elementFormDefault="qualified" attributeFormDefault="unqualified" version="1.0" xmlns="http://www.aocat.net/padro" xmlns:volante="http://www.red.es/padron" xmlns:ine="http://www.map.es/scsp/esquemas/datosespecificos" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <xsd:import namespace="http://www.red.es/padron" schemaLocation="VolanteEmpadronamiento.xsd"/>
   <xsd:import namespace="http://www.map.es/scsp/esquemas/datosespecificos" schemaLocation="datos-especificos-ine.xsd"/>
   <xsd:element name="peticionResidente">
@@ -3837,10 +3837,10 @@
       </xsd:sequence>
     </xsd:complexType>
   </xsd:element>
-</xsd:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>file:\C:\Users\cmoralea\Desktop\GitHub\SOAP%20millora\Integracio-AOC-SOAPUI\VO\VO - LOCAL\VolanteEmpadronamiento.xsd</con:url><con:content>&lt;xs:schema targetNamespace="http://www.red.es/padron" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="http://www.red.es/padron">&#13;
+</xsd:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>file:\C:\Users\CristianMorales\Documents\GitHub\Integracio-AOC-SOAPUI\VO\VO - LOCAL\VolanteEmpadronamiento.xsd</con:url><con:content>&lt;xs:schema targetNamespace="http://www.red.es/padron" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="http://www.red.es/padron">&#13;
   &lt;xs:element name="VolanteEmpadronamiento" type="xs:anyType"/>&#13;
   &lt;xs:element name="DireccionEmpadronamiento" type="xs:anyType"/>&#13;
-&lt;/xs:schema></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>file:\C:\Users\cmoralea\Desktop\GitHub\SOAP%20millora\Integracio-AOC-SOAPUI\VO\VO - LOCAL\datos-especificos-ine.xsd</con:url><con:content><![CDATA[<xs:schema targetNamespace="http://www.map.es/scsp/esquemas/datosespecificos" elementFormDefault="qualified" attributeFormDefault="unqualified" xmlns="http://www.map.es/scsp/esquemas/datosespecificos" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+&lt;/xs:schema></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>file:\C:\Users\CristianMorales\Documents\GitHub\Integracio-AOC-SOAPUI\VO\VO - LOCAL\datos-especificos-ine.xsd</con:url><con:content><![CDATA[<xs:schema targetNamespace="http://www.map.es/scsp/esquemas/datosespecificos" elementFormDefault="qualified" attributeFormDefault="unqualified" xmlns="http://www.map.es/scsp/esquemas/datosespecificos" xmlns:xs="http://www.w3.org/2001/XMLSchema">
   <xs:element name="DatosEspecificos">
     <xs:complexType>
       <xs:all>
@@ -4280,7 +4280,7 @@
       </xs:restriction>
     </xs:simpleType>
   </xs:element>
-</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>file:\C:\Users\cmoralea\Desktop\GitHub\SOAP%20millora\Integracio-AOC-SOAPUI\VO\VO - DCOC_CORPME\PROP\dadesEspecifiques.xsd</con:url><con:content><![CDATA[<xsd:schema targetNamespace="http://www.aocat.net/registradors" elementFormDefault="qualified" attributeFormDefault="unqualified" version="1.0" xmlns="http://www.aocat.net/registradors" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>file:\C:\Users\CristianMorales\Documents\GitHub\Integracio-AOC-SOAPUI\VO\VO - DCOC_CORPME\PROP\dadesEspecifiques.xsd</con:url><con:content><![CDATA[<xsd:schema targetNamespace="http://www.aocat.net/registradors" elementFormDefault="qualified" attributeFormDefault="unqualified" version="1.0" xmlns="http://www.aocat.net/registradors" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <xsd:element name="peticionNotaSimpleRegistroPropiedad">
     <xsd:complexType>
       <xsd:sequence>
@@ -4392,7 +4392,7 @@
       </xsd:sequence>
     </xsd:complexType>
   </xsd:element>
-</xsd:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>file:\C:\Users\cmoralea\Desktop\GitHub\SOAP%20millora\Integracio-AOC-SOAPUI\VO\VO - DCOC_CORPME\MERC\dadesEspecifiques.xsd</con:url><con:content><![CDATA[<xsd:schema targetNamespace="http://www.aocat.net/registradors" elementFormDefault="qualified" attributeFormDefault="unqualified" version="1.0" xmlns="http://www.aocat.net/registradors" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+</xsd:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>file:\C:\Users\CristianMorales\Documents\GitHub\Integracio-AOC-SOAPUI\VO\VO - DCOC_CORPME\MERC\dadesEspecifiques.xsd</con:url><con:content><![CDATA[<xsd:schema targetNamespace="http://www.aocat.net/registradors" elementFormDefault="qualified" attributeFormDefault="unqualified" version="1.0" xmlns="http://www.aocat.net/registradors" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <xsd:element name="peticionHonorariosInformacionGeneralMercantil">
     <xsd:complexType>
       <xsd:sequence>
@@ -4440,7 +4440,7 @@
       <xsd:element name="libros" type="xsd:string" minOccurs="0"/>
     </xsd:sequence>
   </xsd:complexType>
-</xsd:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>file:\C:\Users\cmoralea\Desktop\GitHub\SOAP%20millora\Integracio-AOC-SOAPUI\VO\VO - DCOC_CORPME\DCOC\DCOC-peticiov2.xsd</con:url><con:content><![CDATA[<xs:schema targetNamespace="http://aoc.net/dcoc/v2/peticio" elementFormDefault="qualified" attributeFormDefault="unqualified" xmlns:pet="http://aoc.net/dcoc/v2/peticio" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+</xsd:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>file:\C:\Users\CristianMorales\Documents\GitHub\Integracio-AOC-SOAPUI\VO\VO - DCOC_CORPME\DCOC\DCOC-peticiov2.xsd</con:url><con:content><![CDATA[<xs:schema targetNamespace="http://aoc.net/dcoc/v2/peticio" elementFormDefault="qualified" attributeFormDefault="unqualified" xmlns:pet="http://aoc.net/dcoc/v2/peticio" xmlns:xs="http://www.w3.org/2001/XMLSchema">
   <xs:element name="peticioDCOC">
     <xs:annotation>
       <xs:documentation>Peticio</xs:documentation>
@@ -4455,7 +4455,7 @@
       </xs:sequence>
     </xs:complexType>
   </xs:element>
-</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>file:\C:\Users\cmoralea\Desktop\GitHub\SOAP%20millora\Integracio-AOC-SOAPUI\VO\VO - ESTAT\AEAT\dadesEspecifiques-AEATPPE.xsd</con:url><con:content><![CDATA[<xs:schema targetNamespace="http://www.aocat.net/aeat/irpf" elementFormDefault="qualified" attributeFormDefault="unqualified" xmlns="http://www.aocat.net/aeat/irpf" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:aeat="http://intermediacion.redsara.es/scsp/esquemas/datosespecificos">
+</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>file:\C:\Users\CristianMorales\Documents\GitHub\Integracio-AOC-SOAPUI\VO\VO - ESTAT\AEAT\dadesEspecifiques-AEATPPE.xsd</con:url><con:content><![CDATA[<xs:schema targetNamespace="http://www.aocat.net/aeat/irpf" elementFormDefault="qualified" attributeFormDefault="unqualified" xmlns="http://www.aocat.net/aeat/irpf" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:aeat="http://intermediacion.redsara.es/scsp/esquemas/datosespecificos">
   <xs:import namespace="http://intermediacion.redsara.es/scsp/esquemas/datosespecificos" schemaLocation="ADWSPPE_respuesta.xsd"/>
   <xs:element name="respostaConsultaPPE">
     <xs:complexType>
@@ -4483,7 +4483,7 @@
       </xs:sequence>
     </xs:complexType>
   </xs:element>
-</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>file:\C:\Users\cmoralea\Desktop\GitHub\SOAP%20millora\Integracio-AOC-SOAPUI\VO\VO - ESTAT\AEAT\ADWSPPE_respuesta.xsd</con:url><con:content><![CDATA[<!--edited with XMLSpy v2009 sp1 (http://www.altova.com) by PC Corporativo (AGENCIA TRIBUTARIA)-->
+</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>file:\C:\Users\CristianMorales\Documents\GitHub\Integracio-AOC-SOAPUI\VO\VO - ESTAT\AEAT\ADWSPPE_respuesta.xsd</con:url><con:content><![CDATA[<!--edited with XMLSpy v2009 sp1 (http://www.altova.com) by PC Corporativo (AGENCIA TRIBUTARIA)-->
 <xs:schema targetNamespace="http://intermediacion.redsara.es/scsp/esquemas/datosespecificos" elementFormDefault="qualified" attributeFormDefault="unqualified" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="http://intermediacion.redsara.es/scsp/esquemas/datosespecificos">
   <xs:element name="DatosEspecificos">
     <xs:complexType>
@@ -4655,7 +4655,7 @@
       </xs:choice>
     </xs:complexType>
   </xs:element>
-</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>file:\C:\Users\cmoralea\Desktop\GitHub\SOAP%20millora\Integracio-AOC-SOAPUI\VO\VO - ESTAT\AEAT\dadesEspecifiques-AEATIAE.xsd</con:url><con:content><![CDATA[<xs:schema targetNamespace="http://www.aoc.cat/aeat/iae" elementFormDefault="qualified" attributeFormDefault="unqualified" xmlns="http://www.aoc.cat/aeat/iae" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:aeat="http://intermediacion.redsara.es/scsp/esquemas/datosespecificos">
+</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>file:\C:\Users\CristianMorales\Documents\GitHub\Integracio-AOC-SOAPUI\VO\VO - ESTAT\AEAT\dadesEspecifiques-AEATIAE.xsd</con:url><con:content><![CDATA[<xs:schema targetNamespace="http://www.aoc.cat/aeat/iae" elementFormDefault="qualified" attributeFormDefault="unqualified" xmlns="http://www.aoc.cat/aeat/iae" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:aeat="http://intermediacion.redsara.es/scsp/esquemas/datosespecificos">
   <xs:import namespace="http://intermediacion.redsara.es/scsp/esquemas/datosespecificos" schemaLocation="ADWSIAE_respuesta.xsd"/>
   <xs:element name="peticioConsultaIAE">
     <xs:complexType>
@@ -4683,7 +4683,7 @@
       </xs:sequence>
     </xs:complexType>
   </xs:element>
-</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>file:\C:\Users\cmoralea\Desktop\GitHub\SOAP%20millora\Integracio-AOC-SOAPUI\VO\VO - ESTAT\AEAT\ADWSIAE_respuesta.xsd</con:url><con:content><![CDATA[<xs:schema targetNamespace="http://intermediacion.redsara.es/scsp/esquemas/datosespecificos" elementFormDefault="qualified" attributeFormDefault="unqualified" xmlns="http://intermediacion.redsara.es/scsp/esquemas/datosespecificos" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>file:\C:\Users\CristianMorales\Documents\GitHub\Integracio-AOC-SOAPUI\VO\VO - ESTAT\AEAT\ADWSIAE_respuesta.xsd</con:url><con:content><![CDATA[<xs:schema targetNamespace="http://intermediacion.redsara.es/scsp/esquemas/datosespecificos" elementFormDefault="qualified" attributeFormDefault="unqualified" xmlns="http://intermediacion.redsara.es/scsp/esquemas/datosespecificos" xmlns:xs="http://www.w3.org/2001/XMLSchema">
   <xs:element name="DatosEspecificos">
     <xs:complexType>
       <xs:choice>
@@ -4873,7 +4873,7 @@
       </xs:restriction>
     </xs:simpleType>
   </xs:element>
-</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>file:\C:\Users\cmoralea\Desktop\GitHub\SOAP%20millora\Integracio-AOC-SOAPUI\VO\VO - ESTAT\AEAT\dadesEspecifiques-ADWSIRPF-202X.xsd</con:url><con:content><![CDATA[<xs:schema targetNamespace="http://www.aocat.net/aeat/irpf" elementFormDefault="qualified" attributeFormDefault="unqualified" xmlns="http://www.aocat.net/aeat/irpf" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:aeat="http://intermediacion.redsara.es/scsp/esquemas/datosespecificos">
+</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>file:\C:\Users\CristianMorales\Documents\GitHub\Integracio-AOC-SOAPUI\VO\VO - ESTAT\AEAT\dadesEspecifiques-ADWSIRPF-202X.xsd</con:url><con:content><![CDATA[<xs:schema targetNamespace="http://www.aocat.net/aeat/irpf" elementFormDefault="qualified" attributeFormDefault="unqualified" xmlns="http://www.aocat.net/aeat/irpf" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:aeat="http://intermediacion.redsara.es/scsp/esquemas/datosespecificos">
   <xs:import namespace="http://intermediacion.redsara.es/scsp/esquemas/datosespecificos" schemaLocation="schema_JAV3_ADWSIRPFXML_datos-especificos.xsd"/>
   <xs:element name="respostaConsultaIRPF">
     <xs:complexType>
@@ -4901,7 +4901,7 @@
       </xs:sequence>
     </xs:complexType>
   </xs:element>
-</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>file:\C:\Users\cmoralea\Desktop\GitHub\SOAP%20millora\Integracio-AOC-SOAPUI\VO\VO - ESTAT\AEAT\schema_JAV3_ADWSIRPFXML_datos-especificos.xsd</con:url><con:content><![CDATA[<!--editado con XMLSpy v2019 sp1 (x64) (http://www.altova.com) por MRI0194R (Agencia Estatal de Administracion Tributaria ((AEAT)))-->
+</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>file:\C:\Users\CristianMorales\Documents\GitHub\Integracio-AOC-SOAPUI\VO\VO - ESTAT\AEAT\schema_JAV3_ADWSIRPFXML_datos-especificos.xsd</con:url><con:content><![CDATA[<!--editado con XMLSpy v2019 sp1 (x64) (http://www.altova.com) por MRI0194R (Agencia Estatal de Administracion Tributaria ((AEAT)))-->
 <xs:schema targetNamespace="http://intermediacion.redsara.es/scsp/esquemas/datosespecificos" elementFormDefault="qualified" attributeFormDefault="unqualified" xmlns="http://intermediacion.redsara.es/scsp/esquemas/datosespecificos" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:r2020="http://intermediacion.redsara.es/scsp/esquemas/datosespecificos/renta2020" xmlns:r2021="http://intermediacion.redsara.es/scsp/esquemas/datosespecificos/renta2021">
   <!--xs:import namespace="http://intermediacion.redsara.es/scsp/esquemas/datosespecificos/renta2020" schemaLocation="schema_JAV3_ADWSIRPF_datos-especificos_renta2020.xsd"/-->
   <xs:import namespace="http://intermediacion.redsara.es/scsp/esquemas/datosespecificos/renta2020" schemaLocation="schema_JAV3_ADWSIRPFXML_datos-especificos_renta2020.xsd"/>
@@ -5558,7 +5558,7 @@
       <xs:attribute name="Id" type="xs:string" use="optional"/>
     </xs:complexType>
   </xs:element>
-</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>file:\C:\Users\cmoralea\Desktop\GitHub\SOAP%20millora\Integracio-AOC-SOAPUI\VO\VO - ESTAT\AEAT\schema_JAV3_ADWSIRPFXML_datos-especificos_renta2020.xsd</con:url><con:content><![CDATA[<xs:schema targetNamespace="http://intermediacion.redsara.es/scsp/esquemas/datosespecificos/renta2020" elementFormDefault="qualified" attributeFormDefault="unqualified" xmlns="http://intermediacion.redsara.es/scsp/esquemas/datosespecificos/renta2020" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>file:\C:\Users\CristianMorales\Documents\GitHub\Integracio-AOC-SOAPUI\VO\VO - ESTAT\AEAT\schema_JAV3_ADWSIRPFXML_datos-especificos_renta2020.xsd</con:url><con:content><![CDATA[<xs:schema targetNamespace="http://intermediacion.redsara.es/scsp/esquemas/datosespecificos/renta2020" elementFormDefault="qualified" attributeFormDefault="unqualified" xmlns="http://intermediacion.redsara.es/scsp/esquemas/datosespecificos/renta2020" xmlns:xs="http://www.w3.org/2001/XMLSchema">
   <!--Tipos básicos RENTA-->
   <xs:simpleType name="tipo_VersionXSD">
     <xs:restriction base="xs:string">
@@ -13628,7 +13628,7 @@
       <xs:attribute name="versionxsd" type="tipo_VersionXSD"/>
     </xs:complexType>
   </xs:element>
-</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>file:\C:\Users\cmoralea\Desktop\GitHub\SOAP%20millora\Integracio-AOC-SOAPUI\VO\VO - ESTAT\AEAT\schema_JAV3_ADWSIRPFXML_datos-especificos_renta2021.xsd</con:url><con:content><![CDATA[<xs:schema targetNamespace="http://intermediacion.redsara.es/scsp/esquemas/datosespecificos/renta2021" elementFormDefault="qualified" attributeFormDefault="unqualified" xmlns="http://intermediacion.redsara.es/scsp/esquemas/datosespecificos/renta2021" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>file:\C:\Users\CristianMorales\Documents\GitHub\Integracio-AOC-SOAPUI\VO\VO - ESTAT\AEAT\schema_JAV3_ADWSIRPFXML_datos-especificos_renta2021.xsd</con:url><con:content><![CDATA[<xs:schema targetNamespace="http://intermediacion.redsara.es/scsp/esquemas/datosespecificos/renta2021" elementFormDefault="qualified" attributeFormDefault="unqualified" xmlns="http://intermediacion.redsara.es/scsp/esquemas/datosespecificos/renta2021" xmlns:xs="http://www.w3.org/2001/XMLSchema">
   <!--Tipos básicos RENTA-->
   <xs:simpleType name="tipo_VersionXSD">
     <xs:restriction base="xs:string">
@@ -18377,7 +18377,7 @@
       <xs:attribute name="versionxsd" type="tipo_VersionXSD"/>
     </xs:complexType>
   </xs:element>
-</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>file:\C:\Users\cmoralea\Desktop\GitHub\SOAP%20millora\Integracio-AOC-SOAPUI\VO\VO - ESTAT\AEAT\dadesEspecifiques-ADWSIRPF.xsd</con:url><con:content><![CDATA[<xs:schema targetNamespace="http://www.aocat.net/aeat/irpf" elementFormDefault="qualified" attributeFormDefault="unqualified" xmlns="http://www.aocat.net/aeat/irpf" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:aeat="http://intermediacion.redsara.es/scsp/esquemas/datosespecificos">
+</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>file:\C:\Users\CristianMorales\Documents\GitHub\Integracio-AOC-SOAPUI\VO\VO - ESTAT\AEAT\dadesEspecifiques-ADWSIRPF.xsd</con:url><con:content><![CDATA[<xs:schema targetNamespace="http://www.aocat.net/aeat/irpf" elementFormDefault="qualified" attributeFormDefault="unqualified" xmlns="http://www.aocat.net/aeat/irpf" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:aeat="http://intermediacion.redsara.es/scsp/esquemas/datosespecificos">
   <xs:import namespace="http://intermediacion.redsara.es/scsp/esquemas/datosespecificos" schemaLocation="ADWSIRPF_respuesta.xsd"/>
   <xs:element name="respostaConsultaIRPF">
     <xs:complexType>
@@ -18405,7 +18405,7 @@
       </xs:sequence>
     </xs:complexType>
   </xs:element>
-</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>file:\C:\Users\cmoralea\Desktop\GitHub\SOAP%20millora\Integracio-AOC-SOAPUI\VO\VO - ESTAT\AEAT\ADWSIRPF_respuesta.xsd</con:url><con:content><![CDATA[<xs:schema targetNamespace="http://intermediacion.redsara.es/scsp/esquemas/datosespecificos" elementFormDefault="qualified" attributeFormDefault="unqualified" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="http://intermediacion.redsara.es/scsp/esquemas/datosespecificos">
+</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>file:\C:\Users\CristianMorales\Documents\GitHub\Integracio-AOC-SOAPUI\VO\VO - ESTAT\AEAT\ADWSIRPF_respuesta.xsd</con:url><con:content><![CDATA[<xs:schema targetNamespace="http://intermediacion.redsara.es/scsp/esquemas/datosespecificos" elementFormDefault="qualified" attributeFormDefault="unqualified" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="http://intermediacion.redsara.es/scsp/esquemas/datosespecificos">
   <xs:element name="DatosEspecificos">
     <xs:complexType>
       <xs:choice>
@@ -19031,7 +19031,7 @@
       </xs:choice>
     </xs:complexType>
   </xs:element>
-</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>file:\C:\Users\cmoralea\Desktop\GitHub\SOAP%20millora\Integracio-AOC-SOAPUI\VO\VO - ESTAT\TGSS\datos-especificos-Q2827003ATGSS006.xsd</con:url><con:content><![CDATA[<!--edited with XMLSPY v2004 rel. 2 U (http://www.xmlspy.com) by xmlspy (xmlspy)-->
+</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>file:\C:\Users\CristianMorales\Documents\GitHub\Integracio-AOC-SOAPUI\VO\VO - ESTAT\TGSS\datos-especificos-Q2827003ATGSS006.xsd</con:url><con:content><![CDATA[<!--edited with XMLSPY v2004 rel. 2 U (http://www.xmlspy.com) by xmlspy (xmlspy)-->
 <xs:schema targetNamespace="http://www.tgss.es/altafecha/esquemas/afiliacion/datosespecificos" elementFormDefault="qualified" attributeFormDefault="unqualified" xmlns="http://www.tgss.es/altafecha/esquemas/afiliacion/datosespecificos" xmlns:xs="http://www.w3.org/2001/XMLSchema">
   <xs:element name="DatosEspecificos" type="DatosEspecificos"/>
   <xs:complexType name="DatosEspecificos">
@@ -19080,7 +19080,7 @@
       <!--edited with XMLSPY v2004 rel. 2 U (http://www.xmlspy.com) by xmlspy (xmlspy)-->
     </xs:all>
   </xs:complexType>
-</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>file:\C:\Users\cmoralea\Desktop\GitHub\SOAP%20millora\Integracio-AOC-SOAPUI\VO\VO - ESTAT\TGSS\datos-especificos-Q2827003ATGSS008.xsd</con:url><con:content><![CDATA[<!--edited with XMLSpy v2008 rel. 2 sp1 (http://www.altova.com) by AppsPortables (Aplicaciones Portables)-->
+</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>file:\C:\Users\CristianMorales\Documents\GitHub\Integracio-AOC-SOAPUI\VO\VO - ESTAT\TGSS\datos-especificos-Q2827003ATGSS008.xsd</con:url><con:content><![CDATA[<!--edited with XMLSpy v2008 rel. 2 sp1 (http://www.altova.com) by AppsPortables (Aplicaciones Portables)-->
 <!--edited with XMLSPY v2004 rel. 2 U (http://www.xmlspy.com) by xmlspy (xmlspy)-->
 <xs:schema targetNamespace="http://www.tgss.es/actividadagraria/esquemas/afiliacion/datosespecificos" elementFormDefault="qualified" attributeFormDefault="unqualified" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="http://www.tgss.es/actividadagraria/esquemas/afiliacion/datosespecificos">
   <xs:element name="DatosEspecificos" type="DatosEspecificos"/>
@@ -19231,7 +19231,7 @@
       <!--edited with XMLSPY v2004 rel. 2 U (http://www.xmlspy.com) by xmlspy (xmlspy)-->
     </xs:all>
   </xs:complexType>
-</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>file:\C:\Users\cmoralea\Desktop\GitHub\SOAP%20millora\Integracio-AOC-SOAPUI\VO\VO - ESTAT\TGSS_VIDA_LAB\dadesEspecifiques.xsd</con:url><con:content><![CDATA[<xs:schema targetNamespace="http://www.aoc.cat/tgss" elementFormDefault="qualified" attributeFormDefault="unqualified" xmlns="http://www.aoc.cat/tgss" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>file:\C:\Users\CristianMorales\Documents\GitHub\Integracio-AOC-SOAPUI\VO\VO - ESTAT\TGSS_VIDA_LAB\dadesEspecifiques.xsd</con:url><con:content><![CDATA[<xs:schema targetNamespace="http://www.aoc.cat/tgss" elementFormDefault="qualified" attributeFormDefault="unqualified" xmlns="http://www.aoc.cat/tgss" xmlns:xs="http://www.w3.org/2001/XMLSchema">
   <xs:element name="peticioConsultaVidaLaboral">
     <xs:complexType>
       <xs:sequence>
@@ -19437,7 +19437,7 @@
   <!--=======================================================-->
   <!--Tipus-->
   <!--=======================================================-->
-</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>file:\C:\Users\cmoralea\Desktop\GitHub\SOAP%20millora\Integracio-AOC-SOAPUI\VO\VO - ESTAT\DGP\dadesEspecifiques.xsd</con:url><con:content><![CDATA[<xs:schema targetNamespace="http://www.aoc.cat/dgp/identitat" elementFormDefault="qualified" attributeFormDefault="unqualified" xmlns="http://www.aoc.cat/dgp/identitat" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>file:\C:\Users\CristianMorales\Documents\GitHub\Integracio-AOC-SOAPUI\VO\VO - ESTAT\DGP\dadesEspecifiques.xsd</con:url><con:content><![CDATA[<xs:schema targetNamespace="http://www.aoc.cat/dgp/identitat" elementFormDefault="qualified" attributeFormDefault="unqualified" xmlns="http://www.aoc.cat/dgp/identitat" xmlns:xs="http://www.w3.org/2001/XMLSchema">
   <!--=======================================================-->
   <!--Consulta dades identitat-->
   <!--=======================================================-->
@@ -19644,7 +19644,7 @@
       <xs:element ref="pais" minOccurs="0"/>
     </xs:all>
   </xs:complexType>
-</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>file:\C:\Users\cmoralea\Desktop\GitHub\SOAP%20millora\Integracio-AOC-SOAPUI\VO\VO - ESTAT\DGT\dadesEspecifiques-DGT_DADES_VEHICLE.xsd</con:url><con:content><![CDATA[<xs:schema targetNamespace="http://www.aoc.cat/dgt" elementFormDefault="qualified" attributeFormDefault="unqualified" xmlns="http://www.aoc.cat/dgt" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:dgt="http://intermediacion.redsara.es/scsp/esquemas/datosespecificos">
+</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>file:\C:\Users\CristianMorales\Documents\GitHub\Integracio-AOC-SOAPUI\VO\VO - ESTAT\DGT\dadesEspecifiques-DGT_DADES_VEHICLE.xsd</con:url><con:content><![CDATA[<xs:schema targetNamespace="http://www.aoc.cat/dgt" elementFormDefault="qualified" attributeFormDefault="unqualified" xmlns="http://www.aoc.cat/dgt" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:dgt="http://intermediacion.redsara.es/scsp/esquemas/datosespecificos">
   <xs:import namespace="http://intermediacion.redsara.es/scsp/esquemas/datosespecificos" schemaLocation="datos-especificos-SVDDGTVEHICULODATOSWS01.xsd"/>
   <!--=======================================================-->
   <!--Consulta vehicles-->
@@ -19686,7 +19686,7 @@
       </xs:sequence>
     </xs:complexType>
   </xs:element>
-</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>file:\C:\Users\cmoralea\Desktop\GitHub\SOAP%20millora\Integracio-AOC-SOAPUI\VO\VO - ESTAT\DGT\datos-especificos-SVDDGTVEHICULODATOSWS01.xsd</con:url><con:content><![CDATA[<xs:schema targetNamespace="http://intermediacion.redsara.es/scsp/esquemas/datosespecificos" elementFormDefault="qualified" attributeFormDefault="unqualified" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="http://intermediacion.redsara.es/scsp/esquemas/datosespecificos">
+</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>file:\C:\Users\CristianMorales\Documents\GitHub\Integracio-AOC-SOAPUI\VO\VO - ESTAT\DGT\datos-especificos-SVDDGTVEHICULODATOSWS01.xsd</con:url><con:content><![CDATA[<xs:schema targetNamespace="http://intermediacion.redsara.es/scsp/esquemas/datosespecificos" elementFormDefault="qualified" attributeFormDefault="unqualified" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="http://intermediacion.redsara.es/scsp/esquemas/datosespecificos">
   <xs:element name="DatosEspecificos">
     <xs:complexType>
       <xs:choice>
@@ -21023,7 +21023,7 @@
       </xs:sequence>
     </xs:complexType>
   </xs:element>
-</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>file:\C:\Users\cmoralea\Desktop\GitHub\SOAP%20millora\Integracio-AOC-SOAPUI\VO\VO - ESTAT\DGT\dadesEspecifiques-DGT_DADES_VEHICLE_SANCIONS.xsd</con:url><con:content><![CDATA[<xs:schema targetNamespace="http://www.aoc.cat/dgt" elementFormDefault="qualified" attributeFormDefault="unqualified" xmlns="http://www.aoc.cat/dgt" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:dgt="http://intermediacion.redsara.es/scsp/esquemas/datosespecificos">
+</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>file:\C:\Users\CristianMorales\Documents\GitHub\Integracio-AOC-SOAPUI\VO\VO - ESTAT\DGT\dadesEspecifiques-DGT_DADES_VEHICLE_SANCIONS.xsd</con:url><con:content><![CDATA[<xs:schema targetNamespace="http://www.aoc.cat/dgt" elementFormDefault="qualified" attributeFormDefault="unqualified" xmlns="http://www.aoc.cat/dgt" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:dgt="http://intermediacion.redsara.es/scsp/esquemas/datosespecificos">
   <xs:import namespace="http://intermediacion.redsara.es/scsp/esquemas/datosespecificos" schemaLocation="datos-especificos-SVDDGTVEHICULOSANCWS01.xsd"/>
   <!--=======================================================-->
   <!--Consulta vehicles-->
@@ -21065,7 +21065,7 @@
       </xs:sequence>
     </xs:complexType>
   </xs:element>
-</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>file:\C:\Users\cmoralea\Desktop\GitHub\SOAP%20millora\Integracio-AOC-SOAPUI\VO\VO - ESTAT\DGT\datos-especificos-SVDDGTVEHICULOSANCWS01.xsd</con:url><con:content><![CDATA[<xs:schema targetNamespace="http://intermediacion.redsara.es/scsp/esquemas/datosespecificos" elementFormDefault="qualified" attributeFormDefault="unqualified" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="http://intermediacion.redsara.es/scsp/esquemas/datosespecificos">
+</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>file:\C:\Users\CristianMorales\Documents\GitHub\Integracio-AOC-SOAPUI\VO\VO - ESTAT\DGT\datos-especificos-SVDDGTVEHICULOSANCWS01.xsd</con:url><con:content><![CDATA[<xs:schema targetNamespace="http://intermediacion.redsara.es/scsp/esquemas/datosespecificos" elementFormDefault="qualified" attributeFormDefault="unqualified" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="http://intermediacion.redsara.es/scsp/esquemas/datosespecificos">
   <xs:element name="DatosEspecificos">
     <xs:complexType>
       <xs:choice>
@@ -22218,7 +22218,7 @@
       </xs:sequence>
     </xs:complexType>
   </xs:element>
-</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>file:\C:\Users\cmoralea\Desktop\GitHub\SOAP%20millora\Integracio-AOC-SOAPUI\VO\VO - ESTAT\DGT\dadesEspecifiques-DGT_PERMISOS_CONDUCTOR.xsd</con:url><con:content><![CDATA[<xs:schema targetNamespace="http://www.aoc.cat/dgt" elementFormDefault="qualified" attributeFormDefault="unqualified" xmlns="http://www.aoc.cat/dgt" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:dgt="http://intermediacion.redsara.es/scsp/esquemas/datosespecificos">
+</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>file:\C:\Users\CristianMorales\Documents\GitHub\Integracio-AOC-SOAPUI\VO\VO - ESTAT\DGT\dadesEspecifiques-DGT_PERMISOS_CONDUCTOR.xsd</con:url><con:content><![CDATA[<xs:schema targetNamespace="http://www.aoc.cat/dgt" elementFormDefault="qualified" attributeFormDefault="unqualified" xmlns="http://www.aoc.cat/dgt" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:dgt="http://intermediacion.redsara.es/scsp/esquemas/datosespecificos">
   <xs:import namespace="http://intermediacion.redsara.es/scsp/esquemas/datosespecificos" schemaLocation="datos-especificos-SVDDGTCONDUCTORPERMISOWS01.xsd"/>
   <!--=======================================================-->
   <!--Permisos conductor-->
@@ -22249,7 +22249,7 @@
       </xs:sequence>
     </xs:complexType>
   </xs:element>
-</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>file:\C:\Users\cmoralea\Desktop\GitHub\SOAP%20millora\Integracio-AOC-SOAPUI\VO\VO - ESTAT\DGT\datos-especificos-SVDDGTCONDUCTORPERMISOWS01.xsd</con:url><con:content><![CDATA[<xs:schema targetNamespace="http://intermediacion.redsara.es/scsp/esquemas/datosespecificos" elementFormDefault="qualified" attributeFormDefault="unqualified" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="http://intermediacion.redsara.es/scsp/esquemas/datosespecificos">
+</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>file:\C:\Users\CristianMorales\Documents\GitHub\Integracio-AOC-SOAPUI\VO\VO - ESTAT\DGT\datos-especificos-SVDDGTCONDUCTORPERMISOWS01.xsd</con:url><con:content><![CDATA[<xs:schema targetNamespace="http://intermediacion.redsara.es/scsp/esquemas/datosespecificos" elementFormDefault="qualified" attributeFormDefault="unqualified" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="http://intermediacion.redsara.es/scsp/esquemas/datosespecificos">
   <xs:element name="DatosEspecificos">
     <xs:complexType>
       <xs:all>
@@ -22437,7 +22437,7 @@
       </xs:sequence>
     </xs:complexType>
   </xs:element>
-</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>file:\C:\Users\cmoralea\Desktop\GitHub\SOAP%20millora\Integracio-AOC-SOAPUI\VO\VO - ESTAT\DGT\dadesEspecifiques-DGT_SANCIONS_CONDUCTOR.xsd</con:url><con:content><![CDATA[<xs:schema targetNamespace="http://www.aoc.cat/dgt" elementFormDefault="qualified" attributeFormDefault="unqualified" xmlns="http://www.aoc.cat/dgt" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:dgt="http://intermediacion.redsara.es/scsp/esquemas/datosespecificos">
+</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>file:\C:\Users\CristianMorales\Documents\GitHub\Integracio-AOC-SOAPUI\VO\VO - ESTAT\DGT\dadesEspecifiques-DGT_SANCIONS_CONDUCTOR.xsd</con:url><con:content><![CDATA[<xs:schema targetNamespace="http://www.aoc.cat/dgt" elementFormDefault="qualified" attributeFormDefault="unqualified" xmlns="http://www.aoc.cat/dgt" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:dgt="http://intermediacion.redsara.es/scsp/esquemas/datosespecificos">
   <xs:import namespace="http://intermediacion.redsara.es/scsp/esquemas/datosespecificos" schemaLocation="datos-especificos-SVDDGTCONDUCTORSANCWS01.xsd"/>
   <!--=======================================================-->
   <!--Sancions conductor-->
@@ -22468,7 +22468,7 @@
       </xs:sequence>
     </xs:complexType>
   </xs:element>
-</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>file:\C:\Users\cmoralea\Desktop\GitHub\SOAP%20millora\Integracio-AOC-SOAPUI\VO\VO - ESTAT\DGT\datos-especificos-SVDDGTCONDUCTORSANCWS01.xsd</con:url><con:content><![CDATA[<xs:schema targetNamespace="http://intermediacion.redsara.es/scsp/esquemas/datosespecificos" elementFormDefault="qualified" attributeFormDefault="unqualified" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="http://intermediacion.redsara.es/scsp/esquemas/datosespecificos">
+</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>file:\C:\Users\CristianMorales\Documents\GitHub\Integracio-AOC-SOAPUI\VO\VO - ESTAT\DGT\datos-especificos-SVDDGTCONDUCTORSANCWS01.xsd</con:url><con:content><![CDATA[<xs:schema targetNamespace="http://intermediacion.redsara.es/scsp/esquemas/datosespecificos" elementFormDefault="qualified" attributeFormDefault="unqualified" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="http://intermediacion.redsara.es/scsp/esquemas/datosespecificos">
   <xs:element name="DatosEspecificos">
     <xs:complexType>
       <xs:all>
@@ -23069,7 +23069,7 @@
       </xs:sequence>
     </xs:complexType>
   </xs:element>
-</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>file:\C:\Users\cmoralea\Desktop\GitHub\SOAP%20millora\Integracio-AOC-SOAPUI\VO\VO - ESTAT\DGT\dadesEspecifiques-DGT_TITULAR_VIA.xsd</con:url><con:content><![CDATA[<xs:schema targetNamespace="http://www.aoc.cat/dgt" elementFormDefault="qualified" attributeFormDefault="unqualified" xmlns="http://www.aoc.cat/dgt" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:dgt="http://intermediacion.redsara.es/scsp/esquemas/datosespecificos">
+</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>file:\C:\Users\CristianMorales\Documents\GitHub\Integracio-AOC-SOAPUI\VO\VO - ESTAT\DGT\dadesEspecifiques-DGT_TITULAR_VIA.xsd</con:url><con:content><![CDATA[<xs:schema targetNamespace="http://www.aoc.cat/dgt" elementFormDefault="qualified" attributeFormDefault="unqualified" xmlns="http://www.aoc.cat/dgt" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:dgt="http://intermediacion.redsara.es/scsp/esquemas/datosespecificos">
   <xs:import namespace="http://intermediacion.redsara.es/scsp/esquemas/datosespecificos" schemaLocation="datos-especificos-SVDDGTVEHICULODANOSVIAWS01.xsd"/>
   <!--=======================================================-->
   <!--Consulta titular via-->
@@ -23114,7 +23114,7 @@
       </xs:sequence>
     </xs:complexType>
   </xs:element>
-</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>file:\C:\Users\cmoralea\Desktop\GitHub\SOAP%20millora\Integracio-AOC-SOAPUI\VO\VO - ESTAT\DGT\datos-especificos-SVDDGTVEHICULODANOSVIAWS01.xsd</con:url><con:content><![CDATA[<xs:schema targetNamespace="http://intermediacion.redsara.es/scsp/esquemas/datosespecificos" elementFormDefault="qualified" attributeFormDefault="unqualified" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="http://intermediacion.redsara.es/scsp/esquemas/datosespecificos">
+</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>file:\C:\Users\CristianMorales\Documents\GitHub\Integracio-AOC-SOAPUI\VO\VO - ESTAT\DGT\datos-especificos-SVDDGTVEHICULODANOSVIAWS01.xsd</con:url><con:content><![CDATA[<xs:schema targetNamespace="http://intermediacion.redsara.es/scsp/esquemas/datosespecificos" elementFormDefault="qualified" attributeFormDefault="unqualified" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="http://intermediacion.redsara.es/scsp/esquemas/datosespecificos">
   <xs:element name="DatosEspecificos">
     <xs:complexType>
       <xs:choice>
@@ -23629,7 +23629,7 @@
       </xs:sequence>
     </xs:complexType>
   </xs:element>
-</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>file:\C:\Users\cmoralea\Desktop\GitHub\SOAP%20millora\Integracio-AOC-SOAPUI\VO\VO - ESTAT\DGT\dadesEspecifiques-DGT_VEHICLES_CONDUCTOR.xsd</con:url><con:content><![CDATA[<xs:schema targetNamespace="http://www.aoc.cat/dgt" elementFormDefault="qualified" attributeFormDefault="unqualified" xmlns="http://www.aoc.cat/dgt" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:dgt="http://intermediacion.redsara.es/scsp/esquemas/datosespecificos">
+</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>file:\C:\Users\CristianMorales\Documents\GitHub\Integracio-AOC-SOAPUI\VO\VO - ESTAT\DGT\dadesEspecifiques-DGT_VEHICLES_CONDUCTOR.xsd</con:url><con:content><![CDATA[<xs:schema targetNamespace="http://www.aoc.cat/dgt" elementFormDefault="qualified" attributeFormDefault="unqualified" xmlns="http://www.aoc.cat/dgt" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:dgt="http://intermediacion.redsara.es/scsp/esquemas/datosespecificos">
   <xs:import namespace="http://intermediacion.redsara.es/scsp/esquemas/datosespecificos" schemaLocation="datos-especificos-SVDDGTVEHICULOHISTWS01.xsd"/>
   <!--=======================================================-->
   <!--Vehicles conductor-->
@@ -23660,7 +23660,7 @@
       </xs:sequence>
     </xs:complexType>
   </xs:element>
-</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>file:\C:\Users\cmoralea\Desktop\GitHub\SOAP%20millora\Integracio-AOC-SOAPUI\VO\VO - ESTAT\DGT\datos-especificos-SVDDGTVEHICULOHISTWS01.xsd</con:url><con:content><![CDATA[<xs:schema targetNamespace="http://intermediacion.redsara.es/scsp/esquemas/datosespecificos" elementFormDefault="qualified" attributeFormDefault="unqualified" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="http://intermediacion.redsara.es/scsp/esquemas/datosespecificos">
+</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>file:\C:\Users\CristianMorales\Documents\GitHub\Integracio-AOC-SOAPUI\VO\VO - ESTAT\DGT\datos-especificos-SVDDGTVEHICULOHISTWS01.xsd</con:url><con:content><![CDATA[<xs:schema targetNamespace="http://intermediacion.redsara.es/scsp/esquemas/datosespecificos" elementFormDefault="qualified" attributeFormDefault="unqualified" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="http://intermediacion.redsara.es/scsp/esquemas/datosespecificos">
   <xs:element name="DatosEspecificos">
     <xs:complexType>
       <xs:all>
@@ -23770,7 +23770,7 @@
       </xs:sequence>
     </xs:complexType>
   </xs:element>
-</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>file:\C:\Users\cmoralea\Desktop\GitHub\SOAP%20millora\Integracio-AOC-SOAPUI\VO\VO - ESTAT\CADASTRE\dadesEspecifiques-CERTIFICACIO_TITULARITAT.xsd</con:url><con:content><![CDATA[<xs:schema targetNamespace="http://www.aocat.net/cadastre" elementFormDefault="qualified" attributeFormDefault="unqualified" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="http://www.aocat.net/cadastre" xmlns:map="http://www.map.es/scsp/esquemas/datosespecificos">
+</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>file:\C:\Users\CristianMorales\Documents\GitHub\Integracio-AOC-SOAPUI\VO\VO - ESTAT\CADASTRE\dadesEspecifiques-CERTIFICACIO_TITULARITAT.xsd</con:url><con:content><![CDATA[<xs:schema targetNamespace="http://www.aocat.net/cadastre" elementFormDefault="qualified" attributeFormDefault="unqualified" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="http://www.aocat.net/cadastre" xmlns:map="http://www.map.es/scsp/esquemas/datosespecificos">
   <xs:import namespace="http://www.map.es/scsp/esquemas/datosespecificos" schemaLocation="datos-especificos-CertificacionTitularidad.xsd"/>
   <!--=======================================================-->
   <!--CertificacionTitular-->
@@ -23802,7 +23802,7 @@
       </xs:sequence>
     </xs:complexType>
   </xs:element>
-</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>file:\C:\Users\cmoralea\Desktop\GitHub\SOAP%20millora\Integracio-AOC-SOAPUI\VO\VO - ESTAT\CADASTRE\datos-especificos-CertificacionTitularidad.xsd</con:url><con:content><![CDATA[<xs:schema targetNamespace="http://www.map.es/scsp/esquemas/datosespecificos" elementFormDefault="qualified" attributeFormDefault="unqualified" xmlns="http://www.map.es/scsp/esquemas/datosespecificos" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>file:\C:\Users\CristianMorales\Documents\GitHub\Integracio-AOC-SOAPUI\VO\VO - ESTAT\CADASTRE\datos-especificos-CertificacionTitularidad.xsd</con:url><con:content><![CDATA[<xs:schema targetNamespace="http://www.map.es/scsp/esquemas/datosespecificos" elementFormDefault="qualified" attributeFormDefault="unqualified" xmlns="http://www.map.es/scsp/esquemas/datosespecificos" xmlns:xs="http://www.w3.org/2001/XMLSchema">
   <xs:element name="DatosEspecificos" type="DatosEspecificos"/>
   <xs:complexType name="DatosEspecificos">
     <xs:all>
@@ -23952,7 +23952,7 @@
   <!--CAOC-->
   <xs:element name="DatosEntrada" type="DatosEntrada"/>
   <xs:element name="DatosSalida" type="DatosSalida"/>
-</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>file:\C:\Users\cmoralea\Desktop\GitHub\SOAP%20millora\Integracio-AOC-SOAPUI\VO\VO - ESTAT\CADASTRE\dadesEspecifiques-DADES_CADASTRALS.xsd</con:url><con:content><![CDATA[<xs:schema targetNamespace="http://www.aocat.net/cadastre" elementFormDefault="qualified" attributeFormDefault="unqualified" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="http://www.aocat.net/cadastre" xmlns:map="http://www.map.es/scsp/esquemas/datosespecificos">
+</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>file:\C:\Users\CristianMorales\Documents\GitHub\Integracio-AOC-SOAPUI\VO\VO - ESTAT\CADASTRE\dadesEspecifiques-DADES_CADASTRALS.xsd</con:url><con:content><![CDATA[<xs:schema targetNamespace="http://www.aocat.net/cadastre" elementFormDefault="qualified" attributeFormDefault="unqualified" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="http://www.aocat.net/cadastre" xmlns:map="http://www.map.es/scsp/esquemas/datosespecificos">
   <xs:import namespace="http://www.map.es/scsp/esquemas/datosespecificos" schemaLocation="datos-especificos-ConsultaDatos.xsd"/>
   <!--=======================================================-->
   <!--ConsultaDatos-->
@@ -23984,7 +23984,7 @@
       </xs:sequence>
     </xs:complexType>
   </xs:element>
-</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>file:\C:\Users\cmoralea\Desktop\GitHub\SOAP%20millora\Integracio-AOC-SOAPUI\VO\VO - ESTAT\CADASTRE\datos-especificos-ConsultaDatos.xsd</con:url><con:content><![CDATA[<xs:schema targetNamespace="http://www.map.es/scsp/esquemas/datosespecificos" elementFormDefault="qualified" attributeFormDefault="unqualified" xmlns="http://www.map.es/scsp/esquemas/datosespecificos" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>file:\C:\Users\CristianMorales\Documents\GitHub\Integracio-AOC-SOAPUI\VO\VO - ESTAT\CADASTRE\datos-especificos-ConsultaDatos.xsd</con:url><con:content><![CDATA[<xs:schema targetNamespace="http://www.map.es/scsp/esquemas/datosespecificos" elementFormDefault="qualified" attributeFormDefault="unqualified" xmlns="http://www.map.es/scsp/esquemas/datosespecificos" xmlns:xs="http://www.w3.org/2001/XMLSchema">
   <xs:element name="DatosEspecificos" type="DatosEspecificos"/>
   <xs:complexType name="DatosEspecificos">
     <xs:all>
@@ -28140,7 +28140,7 @@
   <!--CAOC-->
   <xs:element name="DatosEntrada" type="DatosEntrada"/>
   <xs:element name="listaBienesInmuebles" type="listaBienesInmuebles"/>
-</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>file:\C:\Users\cmoralea\Desktop\GitHub\SOAP%20millora\Integracio-AOC-SOAPUI\VO\VO - ESTAT\CADASTRE\dadesEspecifiques-DESCRIPTIVA_GRAFICA.xsd</con:url><con:content><![CDATA[<xs:schema targetNamespace="http://www.aocat.net/cadastre" elementFormDefault="qualified" attributeFormDefault="unqualified" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="http://www.aocat.net/cadastre" xmlns:map="http://www.map.es/scsp/esquemas/datosespecificos">
+</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>file:\C:\Users\CristianMorales\Documents\GitHub\Integracio-AOC-SOAPUI\VO\VO - ESTAT\CADASTRE\dadesEspecifiques-DESCRIPTIVA_GRAFICA.xsd</con:url><con:content><![CDATA[<xs:schema targetNamespace="http://www.aocat.net/cadastre" elementFormDefault="qualified" attributeFormDefault="unqualified" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="http://www.aocat.net/cadastre" xmlns:map="http://www.map.es/scsp/esquemas/datosespecificos">
   <xs:import namespace="http://www.map.es/scsp/esquemas/datosespecificos" schemaLocation="datos-especificos-ObtenerDescriptivaYGrafica.xsd"/>
   <!--=======================================================-->
   <!--DescriptivaYGrafica-->
@@ -28172,7 +28172,7 @@
       </xs:sequence>
     </xs:complexType>
   </xs:element>
-</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>file:\C:\Users\cmoralea\Desktop\GitHub\SOAP%20millora\Integracio-AOC-SOAPUI\VO\VO - ESTAT\CADASTRE\datos-especificos-ObtenerDescriptivaYGrafica.xsd</con:url><con:content><![CDATA[<xs:schema targetNamespace="http://www.map.es/scsp/esquemas/datosespecificos" elementFormDefault="qualified" attributeFormDefault="unqualified" xmlns="http://www.map.es/scsp/esquemas/datosespecificos" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>file:\C:\Users\CristianMorales\Documents\GitHub\Integracio-AOC-SOAPUI\VO\VO - ESTAT\CADASTRE\datos-especificos-ObtenerDescriptivaYGrafica.xsd</con:url><con:content><![CDATA[<xs:schema targetNamespace="http://www.map.es/scsp/esquemas/datosespecificos" elementFormDefault="qualified" attributeFormDefault="unqualified" xmlns="http://www.map.es/scsp/esquemas/datosespecificos" xmlns:xs="http://www.w3.org/2001/XMLSchema">
   <xs:element name="DatosEspecificos" type="DatosEspecificos"/>
   <xs:complexType name="DatosEspecificos">
     <xs:all>
@@ -28374,7 +28374,7 @@
   <!--CAOC-->
   <xs:element name="DatosEntrada" type="DatosEntrada"/>
   <xs:element name="DatosSalida" type="DatosSalida"/>
-</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>file:\C:\Users\cmoralea\Desktop\GitHub\SOAP%20millora\Integracio-AOC-SOAPUI\VO\VO - ESTAT\INSS\dadesEspecifiques-PRESTACIONS_HISTORIC.xsd</con:url><con:content><![CDATA[<xs:schema targetNamespace="http://www.aoc.cat/inss" elementFormDefault="qualified" attributeFormDefault="unqualified" xmlns="http://www.aoc.cat/inss" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:inss="http://intermediacion.redsara.es/scsp/esquemas/datosespecificos">
+</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>file:\C:\Users\CristianMorales\Documents\GitHub\Integracio-AOC-SOAPUI\VO\VO - ESTAT\INSS\dadesEspecifiques-PRESTACIONS_HISTORIC.xsd</con:url><con:content><![CDATA[<xs:schema targetNamespace="http://www.aoc.cat/inss" elementFormDefault="qualified" attributeFormDefault="unqualified" xmlns="http://www.aoc.cat/inss" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:inss="http://intermediacion.redsara.es/scsp/esquemas/datosespecificos">
   <xs:import namespace="http://intermediacion.redsara.es/scsp/esquemas/datosespecificos" schemaLocation="datos-especificos-historico.xsd"/>
   <!--=======================================================-->
   <!--PRESTACIONS_HISTORIC-->
@@ -28415,7 +28415,7 @@
       </xs:sequence>
     </xs:complexType>
   </xs:element>
-</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>file:\C:\Users\cmoralea\Desktop\GitHub\SOAP%20millora\Integracio-AOC-SOAPUI\VO\VO - ESTAT\INSS\datos-especificos-historico.xsd</con:url><con:content><![CDATA[<xs:schema targetNamespace="http://intermediacion.redsara.es/scsp/esquemas/datosespecificos" elementFormDefault="qualified" attributeFormDefault="unqualified" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="http://intermediacion.redsara.es/scsp/esquemas/datosespecificos">
+</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>file:\C:\Users\CristianMorales\Documents\GitHub\Integracio-AOC-SOAPUI\VO\VO - ESTAT\INSS\datos-especificos-historico.xsd</con:url><con:content><![CDATA[<xs:schema targetNamespace="http://intermediacion.redsara.es/scsp/esquemas/datosespecificos" elementFormDefault="qualified" attributeFormDefault="unqualified" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="http://intermediacion.redsara.es/scsp/esquemas/datosespecificos">
   <xs:element name="DatosEspecificos" type="DatosEspecificos"/>
   <xs:complexType name="DatosEspecificos">
     <xs:choice>
@@ -28610,7 +28610,7 @@
   </xs:element>
   <xs:element name="CodigoEstadoSecundario" type="xs:string" nillable="true"/>
   <xs:element name="LiteralError" type="xs:string" nillable="true"/>
-</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>file:\C:\Users\cmoralea\Desktop\GitHub\SOAP%20millora\Integracio-AOC-SOAPUI\VO\VO - ESTAT\REG_CIVIL\dadesEspecifiques.xsd</con:url><con:content><![CDATA[<xs:schema targetNamespace="http://www.aoc.cat/registre-civil" elementFormDefault="qualified" attributeFormDefault="unqualified" xmlns="http://www.aoc.cat/registre-civil" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>file:\C:\Users\CristianMorales\Documents\GitHub\Integracio-AOC-SOAPUI\VO\VO - ESTAT\REG_CIVIL\dadesEspecifiques.xsd</con:url><con:content><![CDATA[<xs:schema targetNamespace="http://www.aoc.cat/registre-civil" elementFormDefault="qualified" attributeFormDefault="unqualified" xmlns="http://www.aoc.cat/registre-civil" xmlns:xs="http://www.w3.org/2001/XMLSchema">
   <xs:element name="peticioConsultaRegistreCivil">
     <xs:complexType>
       <xs:sequence>
@@ -28773,7 +28773,7 @@
       <xs:enumeration value="D"/>
     </xs:restriction>
   </xs:simpleType>
-</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>file:\C:\Users\cmoralea\Desktop\GitHub\SOAP%20millora\Integracio-AOC-SOAPUI\VO\VO - ESTAT\ANT_PENAL\dadesEspecifiques.xsd</con:url><con:content><![CDATA[<xs:schema targetNamespace="http://www.aoc.cat/antecedents-penals" elementFormDefault="qualified" attributeFormDefault="unqualified" xmlns="http://www.aoc.cat/antecedents-penals" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>file:\C:\Users\CristianMorales\Documents\GitHub\Integracio-AOC-SOAPUI\VO\VO - ESTAT\ANT_PENAL\dadesEspecifiques.xsd</con:url><con:content><![CDATA[<xs:schema targetNamespace="http://www.aoc.cat/antecedents-penals" elementFormDefault="qualified" attributeFormDefault="unqualified" xmlns="http://www.aoc.cat/antecedents-penals" xmlns:xs="http://www.w3.org/2001/XMLSchema">
   <xs:complexType name="tAntecedentsPenals">
     <xs:choice>
       <xs:group ref="filiacio"/>
@@ -28952,7 +28952,7 @@
       </xs:sequence>
     </xs:complexType>
   </xs:element>
-</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>file:\C:\Users\cmoralea\Desktop\GitHub\SOAP%20millora\Integracio-AOC-SOAPUI\VO\VO - ESTAT\ESTRANGERIA\dadesEspecifiques.xsd</con:url><con:content><![CDATA[<xs:schema targetNamespace="http://www.aoc.cat/estrangeria/residencia-legal" elementFormDefault="qualified" attributeFormDefault="unqualified" xmlns="http://www.aoc.cat/estrangeria/residencia-legal" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:est="http://intermediacion.redsara.es/scsp/esquemas/datosespecificos">
+</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>file:\C:\Users\CristianMorales\Documents\GitHub\Integracio-AOC-SOAPUI\VO\VO - ESTAT\ESTRANGERIA\dadesEspecifiques.xsd</con:url><con:content><![CDATA[<xs:schema targetNamespace="http://www.aoc.cat/estrangeria/residencia-legal" elementFormDefault="qualified" attributeFormDefault="unqualified" xmlns="http://www.aoc.cat/estrangeria/residencia-legal" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:est="http://intermediacion.redsara.es/scsp/esquemas/datosespecificos">
   <xs:import namespace="http://intermediacion.redsara.es/scsp/esquemas/datosespecificos" schemaLocation="datos-especificos.xsd"/>
   <!--=======================================================-->
   <!--PeticioConsultaDadesResidenciaLegal-->
@@ -28999,7 +28999,7 @@
       </xs:sequence>
     </xs:complexType>
   </xs:element>
-</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>file:\C:\Users\cmoralea\Desktop\GitHub\SOAP%20millora\Integracio-AOC-SOAPUI\VO\VO - ESTAT\ESTRANGERIA\datos-especificos.xsd</con:url><con:content><![CDATA[<xs:schema targetNamespace="http://intermediacion.redsara.es/scsp/esquemas/datosespecificos" elementFormDefault="qualified" attributeFormDefault="unqualified" xmlns="http://intermediacion.redsara.es/scsp/esquemas/datosespecificos" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>file:\C:\Users\CristianMorales\Documents\GitHub\Integracio-AOC-SOAPUI\VO\VO - ESTAT\ESTRANGERIA\datos-especificos.xsd</con:url><con:content><![CDATA[<xs:schema targetNamespace="http://intermediacion.redsara.es/scsp/esquemas/datosespecificos" elementFormDefault="qualified" attributeFormDefault="unqualified" xmlns="http://intermediacion.redsara.es/scsp/esquemas/datosespecificos" xmlns:xs="http://www.w3.org/2001/XMLSchema">
   <xs:element name="DatosEspecificos" type="DatosEspecificos"/>
   <xs:complexType name="DatosEspecificos">
     <xs:choice>
@@ -29104,7 +29104,7 @@
       </xs:all>
     </xs:complexType>
   </xs:element>
-</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>file:\C:\Users\cmoralea\Desktop\GitHub\SOAP%20millora\Integracio-AOC-SOAPUI\MUX\PeticioMUX2.xsd</con:url><con:content><![CDATA[<xs:schema targetNamespace="http://net.aocat/MUX2/PeticioRegistre" elementFormDefault="qualified" attributeFormDefault="unqualified" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:pet="http://net.aocat/MUX2/PeticioRegistre">
+</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>file:\C:\Users\CristianMorales\Documents\GitHub\Integracio-AOC-SOAPUI\MUX\PeticioMUX2.xsd</con:url><con:content><![CDATA[<xs:schema targetNamespace="http://net.aocat/MUX2/PeticioRegistre" elementFormDefault="qualified" attributeFormDefault="unqualified" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:pet="http://net.aocat/MUX2/PeticioRegistre">
   <xs:element name="PeticioRegistre">
     <xs:complexType>
       <xs:choice>
@@ -29761,7 +29761,7 @@
       <xs:element name="NumeroAssentamentSortida" type="xs:string"/>
     </xs:choice>
   </xs:complexType>
-</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>file:\C:\Users\cmoralea\Desktop\GitHub\SOAP%20millora\Integracio-AOC-SOAPUI\RPC\dadesEspecifiques.xsd</con:url><con:content><![CDATA[<xs:schema elementFormDefault="qualified" targetNamespace="http://cat.aoc/rpc/peticion" version="1.0" xmlns:ns1="http://schemas.xmlsoap.org/soap/http" xmlns:pet="http://cat.aoc/rpc/peticion" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tns="http://cat.aoc/rpc/peticion" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>file:\C:\Users\CristianMorales\Documents\GitHub\Integracio-AOC-SOAPUI\RPC\dadesEspecifiques.xsd</con:url><con:content><![CDATA[<xs:schema elementFormDefault="qualified" targetNamespace="http://cat.aoc/rpc/peticion" version="1.0" xmlns:ns1="http://schemas.xmlsoap.org/soap/http" xmlns:pet="http://cat.aoc/rpc/peticion" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tns="http://cat.aoc/rpc/peticion" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <xs:element name="comunicacio" type="tns:comunicacio"/>
   <xs:complexType name="comunicacio">
     <xs:sequence>
@@ -31298,7 +31298,7 @@
       <xs:element name="idModificacioLot" type="tns:idModificacioLot"/>
     </xs:sequence>
   </xs:complexType>
-</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>file:\C:\Users\cmoralea\Desktop\GitHub\SOAP%20millora\Integracio-AOC-SOAPUI\VO\VO - ESTAT\IGAE\dadesEspecifiques.xsd</con:url><con:content><![CDATA[<xs:schema targetNamespace="http://www.aoc.cat/igae" elementFormDefault="qualified" attributeFormDefault="unqualified" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="http://www.aoc.cat/igae">
+</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>file:\C:\Users\CristianMorales\Documents\GitHub\Integracio-AOC-SOAPUI\VO\VO - ESTAT\IGAE\dadesEspecifiques.xsd</con:url><con:content><![CDATA[<xs:schema targetNamespace="http://www.aoc.cat/igae" elementFormDefault="qualified" attributeFormDefault="unqualified" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="http://www.aoc.cat/igae">
   <!--=======================================================-->
   <!--Inhabilitacions-->
   <!--=======================================================-->
@@ -31468,7 +31468,7 @@
       </xs:sequence>
     </xs:complexType>
   </xs:element>
-</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>file:\C:\Users\cmoralea\Desktop\GitHub\SOAP%20millora\Integracio-AOC-SOAPUI\VO\VO - ESTAT\ATMV\dadesEspecifiques.xsd</con:url><con:content><![CDATA[<xsd:schema targetNamespace="http://www.aocat.net/dgt/atmv" elementFormDefault="qualified" attributeFormDefault="unqualified" xmlns="http://www.aocat.net/dgt/atmv" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>file:\C:\Users\CristianMorales\Documents\GitHub\Integracio-AOC-SOAPUI\VO\VO - ESTAT\ATMV\dadesEspecifiques.xsd</con:url><con:content><![CDATA[<xsd:schema targetNamespace="http://www.aocat.net/dgt/atmv" elementFormDefault="qualified" attributeFormDefault="unqualified" xmlns="http://www.aocat.net/dgt/atmv" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <!--=======================================================-->
   <!--Alta impagament-->
   <!--=======================================================-->
@@ -31552,7 +31552,7 @@
       </xsd:sequence>
     </xsd:complexType>
   </xsd:element>
-</xsd:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>file:\C:\Users\cmoralea\Desktop\GitHub\SOAP%20millora\Integracio-AOC-SOAPUI\VO\VO - GENE\RGC\dadesEspecifiques.xsd</con:url><con:content><![CDATA[<xs:schema targetNamespace="http://www.aoc.cat/rgc" elementFormDefault="qualified" attributeFormDefault="unqualified" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="http://www.aoc.cat/rgc">
+</xsd:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>file:\C:\Users\CristianMorales\Documents\GitHub\Integracio-AOC-SOAPUI\VO\VO - GENE\RGC\dadesEspecifiques.xsd</con:url><con:content><![CDATA[<xs:schema targetNamespace="http://www.aoc.cat/rgc" elementFormDefault="qualified" attributeFormDefault="unqualified" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="http://www.aoc.cat/rgc">
   <!--=======================================================-->
   <!--RGC_CONSULTA-->
   <!--=======================================================-->
@@ -31669,7 +31669,7 @@
       </xs:sequence>
     </xs:complexType>
   </xs:element>
-</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>file:\C:\Users\cmoralea\Desktop\GitHub\SOAP%20millora\Integracio-AOC-SOAPUI\VO\VO - GENE\RPE\dadesEspecifiques.xsd</con:url><con:content><![CDATA[<xs:schema targetNamespace="http://www.aoc.cat/rpe" elementFormDefault="qualified" attributeFormDefault="unqualified" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="http://www.aoc.cat/rpe">
+</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>file:\C:\Users\CristianMorales\Documents\GitHub\Integracio-AOC-SOAPUI\VO\VO - GENE\RPE\dadesEspecifiques.xsd</con:url><con:content><![CDATA[<xs:schema targetNamespace="http://www.aoc.cat/rpe" elementFormDefault="qualified" attributeFormDefault="unqualified" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="http://www.aoc.cat/rpe">
   <!--=======================================================-->
   <!--RPE_CONSULTA-->
   <!--=======================================================-->
@@ -31753,7 +31753,7 @@
       </xs:sequence>
     </xs:complexType>
   </xs:element>
-</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>file:\C:\Users\cmoralea\Desktop\GitHub\SOAP%20millora\Integracio-AOC-SOAPUI\VO\VO - ESTAT\MEPSYD\dadesEspecifiques.xsd</con:url><con:content><![CDATA[<xs:schema targetNamespace="http://www.aocat.net/mepsyd" elementFormDefault="qualified" attributeFormDefault="unqualified" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="http://www.aocat.net/mepsyd" xmlns:map="http://www.map.es/scsp/esquemas/datosespecificos">
+</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>file:\C:\Users\CristianMorales\Documents\GitHub\Integracio-AOC-SOAPUI\VO\VO - ESTAT\MEPSYD\dadesEspecifiques.xsd</con:url><con:content><![CDATA[<xs:schema targetNamespace="http://www.aocat.net/mepsyd" elementFormDefault="qualified" attributeFormDefault="unqualified" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="http://www.aocat.net/mepsyd" xmlns:map="http://www.map.es/scsp/esquemas/datosespecificos">
   <xs:import namespace="http://www.map.es/scsp/esquemas/datosespecificos" schemaLocation="datos-especificos-adaptat.xsd"/>
   <!--=======================================================-->
   <!--Titols universitaris-->
@@ -31804,7 +31804,7 @@
       </xs:sequence>
     </xs:complexType>
   </xs:element>
-</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>file:\C:\Users\cmoralea\Desktop\GitHub\SOAP%20millora\Integracio-AOC-SOAPUI\VO\VO - ESTAT\MEPSYD\datos-especificos-adaptat.xsd</con:url><con:content><![CDATA[<!--===================================================================================================-->
+</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>file:\C:\Users\CristianMorales\Documents\GitHub\Integracio-AOC-SOAPUI\VO\VO - ESTAT\MEPSYD\datos-especificos-adaptat.xsd</con:url><con:content><![CDATA[<!--===================================================================================================-->
 <!--CAOC / implementació BEA: ha estat necessari escapçar les dades específiques del servei del MAP-->
 <!--deixant únicament els elements comuns de més alt nivell de les dues consultes ja que la missatgeria-->
 <!--de les consultes, tot i ser diferents, compartien namespace i noms d'elements ==> col·lisió-->
@@ -31851,7 +31851,7 @@
   </xs:element>
   <xs:element name="DatosTitular" type="xs:anyType"/>
   <xs:element name="ListaTitulos" type="xs:anyType"/>
-</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>file:\C:\Users\cmoralea\Desktop\GitHub\SOAP%20millora\Integracio-AOC-SOAPUI\VO\VO - ESTAT\NOTARIS\dadesEspecifiques.xsd</con:url><con:content><![CDATA[<xs:schema targetNamespace="http://www.aoc.cat/poders-notarials" elementFormDefault="qualified" attributeFormDefault="unqualified" xmlns="http://www.aoc.cat/poders-notarials" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>file:\C:\Users\CristianMorales\Documents\GitHub\Integracio-AOC-SOAPUI\VO\VO - ESTAT\NOTARIS\dadesEspecifiques.xsd</con:url><con:content><![CDATA[<xs:schema targetNamespace="http://www.aoc.cat/poders-notarials" elementFormDefault="qualified" attributeFormDefault="unqualified" xmlns="http://www.aoc.cat/poders-notarials" xmlns:xs="http://www.w3.org/2001/XMLSchema">
   <xs:element name="peticioConsultaSubsistenciaAdministradors">
     <xs:complexType>
       <xs:sequence>
@@ -32387,7 +32387,7 @@
       <xs:pattern value=""/>
     </xs:restriction>
   </xs:simpleType>
-</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>file:\C:\Users\cmoralea\Desktop\GitHub\SOAP%20millora\Integracio-AOC-SOAPUI\VO\VO - ESTAT\DGP_RESIDENCIA\dadesEspecifiques.xsd</con:url><con:content><![CDATA[<xs:schema targetNamespace="http://www.aoc.cat/dgp-historic-residencia" elementFormDefault="qualified" attributeFormDefault="unqualified" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="http://www.aoc.cat/dgp-historic-residencia">
+</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>file:\C:\Users\CristianMorales\Documents\GitHub\Integracio-AOC-SOAPUI\VO\VO - ESTAT\DGP_RESIDENCIA\dadesEspecifiques.xsd</con:url><con:content><![CDATA[<xs:schema targetNamespace="http://www.aoc.cat/dgp-historic-residencia" elementFormDefault="qualified" attributeFormDefault="unqualified" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="http://www.aoc.cat/dgp-historic-residencia">
   <xs:element name="peticioConsultaHistoricResidencia">
     <xs:complexType>
       <xs:sequence>
