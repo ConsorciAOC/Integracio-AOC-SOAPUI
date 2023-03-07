@@ -7409,14 +7409,14 @@
 <Fichero_Intercambio_SICRES_3>
        <De_Origen_o_Remitente>
       <Codigo_Entidad_Registral_Origen>O00015791</Codigo_Entidad_Registral_Origen>
-      <Decodificacion_Entidad_Registral_Origen>Registro General del Ayuntamiento de Jun</Decodificacion_Entidad_Registral_Origen>
+      <Decodificacion_Entidad_Registral_Origen>Registro del Departamento de Agricultura, Ganadería, Pesca, Alimentación y Medi</Decodificacion_Entidad_Registral_Origen>
       <Numero_Registro_Entrada>REGAGE21e00000013486</Numero_Registro_Entrada>
       <Fecha_Hora_Entrada>20210211192653</Fecha_Hora_Entrada>
       <Codigo_Unidad_Tramitacion_Origen>A09018933</Codigo_Unidad_Tramitacion_Origen>
       <Decodificacion_Unidad_Tramitacion_Origen>Ayuntamiento de Catarroja</Decodificacion_Unidad_Tramitacion_Origen>
    </De_Origen_o_Remitente>
    <De_Destino>
-      <Codigo_Entidad_Registral_Destino>O00007955</Codigo_Entidad_Registral_Destino>
+      <Codigo_Entidad_Registral_Destino>O00002721</Codigo_Entidad_Registral_Destino>
       <Decodificacion_Entidad_Registral_Destino>Consorcio Administración Abierta de Cataluña (CAOC)</Decodificacion_Entidad_Registral_Destino>
       <Codigo_Unidad_Tramitacion_Destino>LA1000323</Codigo_Unidad_Tramitacion_Destino>
       <Decodificacion_Unidad_Tramitacion_Destino>Consorcio Administración Abierta de Cataluña</Decodificacion_Unidad_Tramitacion_Destino>
@@ -7449,8 +7449,8 @@
         <Documentacion_Fisica>3</Documentacion_Fisica>
         <Observaciones_Apunte></Observaciones_Apunte>
         <Indicador_Prueba>0</Indicador_Prueba>
-        <Codigo_Entidad_Registral_Inicio>O00012929</Codigo_Entidad_Registral_Inicio>
-        <Decodificacion_Entidad_Registral_Inicio>Registro General del Ayuntamiento del Barbera del Valles</Decodificacion_Entidad_Registral_Inicio>
+        <Codigo_Entidad_Registral_Inicio>O00015791</Codigo_Entidad_Registral_Inicio>
+        <Decodificacion_Entidad_Registral_Inicio>Registro del Departamento de Agricultura, Ganadería, Pesca, Alimentación y Medi</Decodificacion_Entidad_Registral_Inicio>
     </De_Internos_Control>
     <De_Formulario_Generico>
         <Expone>PRUEBA</Expone>
