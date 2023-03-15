@@ -346,16 +346,19 @@
 				</xs:complexType>
 			</xs:element>
 			<xs:element name="Solicitante">
-				<xs:complexType>
-					<xs:all>
-						<xs:element ref="IdentificadorSolicitante"/>
-						<xs:element ref="NombreSolicitante"/>
-						<xs:element ref="Finalidad"/>
-						<xs:element ref="Consentimiento"/>
-						<xs:element ref="Funcionario" minOccurs="0"/>
-					</xs:all>
-				</xs:complexType>
-			</xs:element>
+		<xs:complexType>
+			<xs:all>
+				<xs:element ref="IdentificadorSolicitante"/>
+				<xs:element ref="NombreSolicitante"/>
+				<xs:choice>
+					<xs:element ref="Finalidad"/>
+					<xs:element ref="Procedimiento"/>
+				</xs:choice>
+				<xs:element ref="Consentimiento"/>
+				<xs:element ref="Funcionario" minOccurs="0"/>
+			</xs:all>
+		</xs:complexType>
+	</xs:element>
 			<xs:element name="Solicitudes">
 				<xs:complexType>
 					<xs:sequence>
