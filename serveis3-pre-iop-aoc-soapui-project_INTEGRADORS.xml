@@ -175,6 +175,14 @@
           </xs:restriction>
         </xs:simpleType>
       </xs:element>
+      <xs:element name="Procedimiento">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:maxLength value="20"/>
+            <xs:minLength value="3"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
       <xs:element name="Funcionario">
         <xs:complexType>
           <xs:sequence>
@@ -302,13 +310,16 @@
       </xs:element>
       <xs:element name="Solicitante">
         <xs:complexType>
-          <xs:all>
+          <xs:sequence>
             <xs:element ref="IdentificadorSolicitante"/>
             <xs:element ref="NombreSolicitante"/>
-            <xs:element ref="Finalidad"/>
+            <xs:choice>
+              <xs:element ref="Finalidad"/>
+              <xs:element ref="Procedimiento"/>
+            </xs:choice>
             <xs:element ref="Consentimiento"/>
             <xs:element ref="Funcionario" minOccurs="0"/>
-          </xs:all>
+          </xs:sequence>
         </xs:complexType>
       </xs:element>
       <xs:element name="Solicitudes">
@@ -622,6 +633,14 @@
           </xs:restriction>
         </xs:simpleType>
       </xs:element>
+      <xs:element name="Procedimiento">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:maxLength value="20"/>
+            <xs:minLength value="3"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
       <xs:element name="Funcionario">
         <xs:complexType>
           <xs:sequence>
@@ -750,13 +769,16 @@
       </xs:element>
       <xs:element name="Solicitante">
         <xs:complexType>
-          <xs:all>
+          <xs:sequence>
             <xs:element ref="IdentificadorSolicitante"/>
             <xs:element ref="NombreSolicitante"/>
-            <xs:element ref="Finalidad"/>
+            <xs:choice>
+              <xs:element ref="Finalidad"/>
+              <xs:element ref="Procedimiento"/>
+            </xs:choice>
             <xs:element ref="Consentimiento"/>
             <xs:element ref="Funcionario" minOccurs="0"/>
-          </xs:all>
+          </xs:sequence>
         </xs:complexType>
       </xs:element>
       <xs:element name="TiempoEstimadoRespuesta">
@@ -32534,7 +32556,7 @@
       </xs:sequence>
     </xs:complexType>
   </xs:element>
-</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part></con:definitionCache><con:endpoints><con:endpoint>http://serveis3-pre.iop.aoc.cat:80/siri-proxy/services/Sincron</con:endpoint><con:endpoint>https://serveis3-pre.iop.aoc.cat:443/siri-proxy/services/Sincron</con:endpoint></con:endpoints><con:operation id="0e1b6498-d8a1-4efa-8ebe-81577bd3f48c" isOneWay="false" action="http://www.openuri.org/procesa" name="procesa" bindingOperationName="procesa" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="db8288b4-9c66-4a26-ac3e-9dfbd2d2813e" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://serveis3-pre.iop.aoc.cat:80/siri-proxy/services/Sincron</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:open="http://www.openuri.org/" xmlns:pet="http://gencat.net/scsp/esquemes/peticion" xmlns:inem="http://www.aocat.net/inem" xmlns:dat="http://www.map.es/scsp/esquemas/datosespecificos" xmlns:web="http://webservices.pscp.economia.gencat.capgemini.com" xmlns:ent="http://entity.webservices.pscp.economia.gencat.capgemini.com" xmlns:tfn="http://www.aoc.cat/tfn" xmlns:pad="http://www.aocat.net/padro" xmlns:tfm="http://www.aoc.cat/tfm" xmlns:dis="http://www.aocat.net/discapacitat" xmlns:soc="http://gencat.net/scsp/esquemes/SOC" xmlns:rca="http://www.aocat.net/rca" xmlns:reg="http://www.aoc.cat/regentitats" xmlns:reg1="http://www.aocat.net/registradors" xmlns:pet1="http://aoc.net/dcoc/v2/peticio" xmlns:irpf="http://www.aocat.net/aeat/irpf" xmlns:dat1="http://intermediacion.redsara.es/scsp/esquemas/datosespecificos" xmlns:iae="http://www.aoc.cat/aeat/iae" xmlns:dat2="http://www.tgss.es/altafecha/esquemas/afiliacion/datosespecificos" xmlns:dat3="http://www.tgss.es/actividadagraria/esquemas/afiliacion/datosespecificos" xmlns:tgss="http://www.aoc.cat/tgss" xmlns:iden="http://www.aoc.cat/dgp/identitat" xmlns:dgt="http://www.aoc.cat/dgt" xmlns:cad="http://www.aocat.net/cadastre" xmlns:inss="http://www.aoc.cat/inss" xmlns:reg2="http://www.aoc.cat/registre-civil" xmlns:ant="http://www.aoc.cat/antecedents-penals" xmlns:res="http://www.aoc.cat/estrangeria/residencia-legal" xmlns:pet2="http://net.aocat/MUX2/PeticioRegistre" xmlns:pet3="http://cat.aoc/rpc/peticion" xmlns:igae="http://www.aoc.cat/igae" xmlns:atmv="http://www.aocat.net/dgt/atmv" xmlns:rgc="http://www.aoc.cat/rgc" xmlns:rpe="http://www.aoc.cat/rpe">\r
+</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part></con:definitionCache><con:endpoints><con:endpoint>http://serveis3-pre.iop.aoc.cat:80/siri-proxy/services/Sincron</con:endpoint><con:endpoint>https://serveis3-pre.app.aoc.cat:443/siri-proxy/services/Sincron</con:endpoint><con:endpoint>https://serveis3-pre.iop.aoc.cat:443/siri-proxy/services/Sincron</con:endpoint></con:endpoints><con:operation id="0e1b6498-d8a1-4efa-8ebe-81577bd3f48c" isOneWay="false" action="http://www.openuri.org/procesa" name="procesa" bindingOperationName="procesa" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="db8288b4-9c66-4a26-ac3e-9dfbd2d2813e" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://serveis3-pre.iop.aoc.cat:80/siri-proxy/services/Sincron</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:open="http://www.openuri.org/" xmlns:pet="http://gencat.net/scsp/esquemes/peticion" xmlns:inem="http://www.aocat.net/inem" xmlns:dat="http://www.map.es/scsp/esquemas/datosespecificos" xmlns:web="http://webservices.pscp.economia.gencat.capgemini.com" xmlns:ent="http://entity.webservices.pscp.economia.gencat.capgemini.com" xmlns:tfn="http://www.aoc.cat/tfn" xmlns:pad="http://www.aocat.net/padro" xmlns:tfm="http://www.aoc.cat/tfm" xmlns:dis="http://www.aocat.net/discapacitat" xmlns:soc="http://gencat.net/scsp/esquemes/SOC" xmlns:rca="http://www.aocat.net/rca" xmlns:reg="http://www.aoc.cat/regentitats" xmlns:reg1="http://www.aocat.net/registradors" xmlns:pet1="http://aoc.net/dcoc/v2/peticio" xmlns:irpf="http://www.aocat.net/aeat/irpf" xmlns:dat1="http://intermediacion.redsara.es/scsp/esquemas/datosespecificos" xmlns:iae="http://www.aoc.cat/aeat/iae" xmlns:dat2="http://www.tgss.es/altafecha/esquemas/afiliacion/datosespecificos" xmlns:dat3="http://www.tgss.es/actividadagraria/esquemas/afiliacion/datosespecificos" xmlns:tgss="http://www.aoc.cat/tgss" xmlns:iden="http://www.aoc.cat/dgp/identitat" xmlns:dgt="http://www.aoc.cat/dgt" xmlns:cad="http://www.aocat.net/cadastre" xmlns:inss="http://www.aoc.cat/inss" xmlns:reg2="http://www.aoc.cat/registre-civil" xmlns:ant="http://www.aoc.cat/antecedents-penals" xmlns:res="http://www.aoc.cat/estrangeria/residencia-legal" xmlns:pet2="http://net.aocat/MUX2/PeticioRegistre" xmlns:pet3="http://cat.aoc/rpc/peticion" xmlns:igae="http://www.aoc.cat/igae" xmlns:atmv="http://www.aocat.net/dgt/atmv" xmlns:rgc="http://www.aoc.cat/rgc" xmlns:rpe="http://www.aoc.cat/rpe">\r
    <soapenv:Header/>\r
    <soapenv:Body>\r
       <open:procesa>\r

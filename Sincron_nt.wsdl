@@ -143,6 +143,14 @@
 				</xs:restriction>
 			</xs:simpleType>
 		</xs:element>
+		<xs:element name="Procedimiento">
+		<xs:simpleType>
+			<xs:restriction base="xs:string">
+				<xs:maxLength value="20"/>
+				<xs:minLength value="3"/>
+			</xs:restriction>
+		</xs:simpleType>
+	</xs:element>
 		<xs:element name="Funcionario">
 			<xs:complexType>
 				<xs:sequence>
@@ -269,16 +277,19 @@
 			</xs:complexType>
 		</xs:element>
 		<xs:element name="Solicitante">
-			<xs:complexType>
-				<xs:all>
-					<xs:element ref="IdentificadorSolicitante"/>
-					<xs:element ref="NombreSolicitante"/>
-					<xs:element ref="Finalidad"/>
-					<xs:element ref="Consentimiento"/>
-					<xs:element ref="Funcionario" minOccurs="0"/>
-				</xs:all>
-			</xs:complexType>
-		</xs:element>
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element ref="IdentificadorSolicitante"/>
+						<xs:element ref="NombreSolicitante"/>
+						<xs:choice>
+							<xs:element ref="Finalidad"/>
+							<xs:element ref="Procedimiento"/>
+						</xs:choice>
+						<xs:element ref="Consentimiento"/>
+						<xs:element ref="Funcionario" minOccurs="0"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
 		<xs:element name="Solicitudes">
 			<xs:complexType>
 				<xs:sequence>
@@ -536,6 +547,14 @@
 					</xs:restriction>
 				</xs:simpleType>
 			</xs:element>
+			<xs:element name="Procedimiento">
+		<xs:simpleType>
+			<xs:restriction base="xs:string">
+				<xs:maxLength value="20"/>
+				<xs:minLength value="3"/>
+			</xs:restriction>
+		</xs:simpleType>
+	</xs:element>
 			<xs:element name="Funcionario">
 				<xs:complexType>
 					<xs:sequence>
@@ -664,13 +683,16 @@
 			</xs:element>
 			<xs:element name="Solicitante">
 				<xs:complexType>
-					<xs:all>
+					<xs:sequence>
 						<xs:element ref="IdentificadorSolicitante"/>
 						<xs:element ref="NombreSolicitante"/>
-						<xs:element ref="Finalidad"/>
+						<xs:choice>
+							<xs:element ref="Finalidad"/>
+							<xs:element ref="Procedimiento"/>
+						</xs:choice>
 						<xs:element ref="Consentimiento"/>
 						<xs:element ref="Funcionario" minOccurs="0"/>
-					</xs:all>
+					</xs:sequence>
 				</xs:complexType>
 			</xs:element>
 			<xs:element name="TiempoEstimadoRespuesta">

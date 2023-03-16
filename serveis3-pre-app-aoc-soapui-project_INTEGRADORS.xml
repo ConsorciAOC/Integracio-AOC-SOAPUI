@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:soapui-project id="62524b3b-1bec-4bdd-8744-82dce5a95602" activeEnvironment="Default" name="serveis3-pre.app.aoc" resourceRoot="" soapui-version="5.7.0" abortOnError="false" runType="SEQUENTIAL" xmlns:con="http://eviware.com/soapui/config"><con:settings/><con:interface xsi:type="con:WsdlInterface" id="ead85afb-eec7-4f89-bc9a-570c5e46721d" wsaVersion="NONE" name="SincronSoap" type="wsdl" bindingName="{http://www.openuri.org/}SincronSoap" soapVersion="1_1" anonymous="optional" definition="file:/C:/Users/cmoralea/Desktop/GitHub/SOAP%20millora/Integracio-AOC-SOAPUI/Sincron_app.wsdl" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache type="TEXT" rootPart="file:/C:/Users/cmoralea/Desktop/GitHub/SOAP%20millora/Integracio-AOC-SOAPUI/Sincron_app.wsdl"><con:part><con:url>file:/C:/Users/cmoralea/Desktop/GitHub/SOAP%20millora/Integracio-AOC-SOAPUI/Sincron_app.wsdl</con:url><con:content><![CDATA[<!--Published by JAX-WS RI at http://jax-ws.dev.java.net. RI's version is Metro/2.2 (branches/2.2-7015; 2012-02-20T20:31:25+0000) JAXWS-RI/2.2.6 JAXWS/2.2 svn-revision#unknown.-->
+<con:soapui-project id="62524b3b-1bec-4bdd-8744-82dce5a95602" activeEnvironment="Default" name="serveis3-pre.app.aoc" resourceRoot="" soapui-version="5.7.0" abortOnError="false" runType="SEQUENTIAL" xmlns:con="http://eviware.com/soapui/config"><con:settings/><con:interface xsi:type="con:WsdlInterface" id="ead85afb-eec7-4f89-bc9a-570c5e46721d" wsaVersion="NONE" name="SincronSoap" type="wsdl" bindingName="{http://www.openuri.org/}SincronSoap" soapVersion="1_1" anonymous="optional" definition="file:/C:/Users/CristianMorales/Documents/GitHub/Integracio-AOC-SOAPUI/Sincron_app.wsdl" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache type="TEXT" rootPart="file:/C:/Users/CristianMorales/Documents/GitHub/Integracio-AOC-SOAPUI/Sincron_app.wsdl"><con:part><con:url>file:/C:/Users/CristianMorales/Documents/GitHub/Integracio-AOC-SOAPUI/Sincron_app.wsdl</con:url><con:content><![CDATA[<!--Published by JAX-WS RI at http://jax-ws.dev.java.net. RI's version is Metro/2.2 (branches/2.2-7015; 2012-02-20T20:31:25+0000) JAXWS-RI/2.2.6 JAXWS/2.2 svn-revision#unknown.-->
 <wsdl:definitions targetNamespace="http://www.openuri.org/" xmlns:conv="http://www.openuri.org/2002/04/soap/conversation/" xmlns:cw="http://www.openuri.org/2002/04/wsdl/conversation/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:jms="http://www.openuri.org/2002/04/wsdl/jms/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:s0="http://www.openuri.org/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:xmime="http://www.w3.org/2005/05/xmlmime">
   <wsdl:types>
     <xs:schema elementFormDefault="qualified" targetNamespace="http://www.openuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:pet="http://gencat.net/scsp/esquemes/peticion" xmlns:res="http://gencat.net/scsp/esquemes/respuesta">
@@ -20,7 +20,7 @@
         </xs:complexType>
       </xs:element>
     </xs:schema>
-    <xs:schema targetNamespace="http://gencat.net/scsp/esquemes/peticion" elementFormDefault="qualified" attributeFormDefault="unqualified" xmlns="http://gencat.net/scsp/esquemes/peticion" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:over="http://www.aoc.cat/over" xmlns:tauler="http://www.aoc.cat/etauler" xmlns:hestia="http://www.aoc.cat/hestia/" xmlns:dogc="http://www.aoc.cat/dogc" xmlns:boe="http://www.aoc.cat/boe" xmlns:sctdev="http://www.aocat.net/sct/dev" xmlns:sir="http://www.aoc.cat/sir" xmlns:representa="http://www.aoc.cat/representa/v2" xmlns:desal="http://www.aoc.cat/desal" xmlns:sifecat="http://www.aocat.net/eacat">
+    <xs:schema targetNamespace="http://gencat.net/scsp/esquemes/peticion" elementFormDefault="qualified" attributeFormDefault="unqualified" xmlns="http://gencat.net/scsp/esquemes/peticion" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:over="http://www.aoc.cat/over" xmlns:tauler="http://www.aoc.cat/etauler" xmlns:hestia="http://www.aoc.cat/hestia/" xmlns:dogc="http://www.aoc.cat/dogc" xmlns:boe="http://www.aoc.cat/boe" xmlns:sctdev="http://www.aocat.net/sct/dev" xmlns:sir="http://www.aoc.cat/sir" xmlns:representa="http://www.aoc.cat/representa/v2" xmlns:sifecat="http://www.aocat.net/eacat">
       <xs:import namespace="http://www.aoc.cat/over" schemaLocation="./OVER/dadesEspecifiques.xsd"/>
       <xs:import namespace="http://www.aoc.cat/etauler" schemaLocation="./ETAULER/dadesEspecifiques.xsd"/>
       <xs:import namespace="http://www.aoc.cat/hestia/" schemaLocation="./HESTIA/DadesEspecifiques.xsd"/>
@@ -29,7 +29,6 @@
       <xs:import namespace="http://www.aocat.net/sct/dev" schemaLocation="./SCT_DEV/consultaCredencialsDEVDadesEspecifiques.xsd"/>
       <xs:import namespace="http://www.aoc.cat/sir" schemaLocation="./SIR2_0/dadesEspecifiques.xsd"/>
       <xs:import namespace="http://www.aoc.cat/representa/v2" schemaLocation="./REPRESENTA/dadesEspecifiques.xsd"/>
-      <xs:import namespace="http://www.aoc.cat/desal" schemaLocation="./DESAL/serveiscomuns-desal.xsd"/>
       <xs:import namespace="http://www.aocat.net/eacat" schemaLocation="./SIFECAT/dadesEspecifiques.xsd"/>
       <xs:element name="Apellido1">
         <xs:simpleType>
@@ -139,6 +138,14 @@
           <xs:restriction base="xs:string">
             <xs:maxLength value="250"/>
             <xs:minLength value="1"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element name="Procedimiento">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:maxLength value="20"/>
+            <xs:minLength value="3"/>
           </xs:restriction>
         </xs:simpleType>
       </xs:element>
@@ -269,13 +276,16 @@
       </xs:element>
       <xs:element name="Solicitante">
         <xs:complexType>
-          <xs:all>
+          <xs:sequence>
             <xs:element ref="IdentificadorSolicitante"/>
             <xs:element ref="NombreSolicitante"/>
-            <xs:element ref="Finalidad"/>
+            <xs:choice>
+              <xs:element ref="Finalidad"/>
+              <xs:element ref="Procedimiento"/>
+            </xs:choice>
             <xs:element ref="Consentimiento"/>
             <xs:element ref="Funcionario" minOccurs="0"/>
-          </xs:all>
+          </xs:sequence>
         </xs:complexType>
       </xs:element>
       <xs:element name="Solicitudes">
@@ -337,7 +347,6 @@
             <xs:element ref="representa:consultarFamilies" minOccurs="0"/>
             <xs:element ref="representa:consultarTramits" minOccurs="0"/>
             <xs:element ref="representa:consultarAdministracio" minOccurs="0"/>
-            <xs:element ref="desal:peticioCarregaExpedient" minOccurs="0"/>
             <xs:element ref="sifecat:peticioConsultaUsuari" minOccurs="0"/>
             <xs:element ref="sifecat:peticioConsultaServei" minOccurs="0"/>
             <xs:element ref="sifecat:peticioConsultaEns" minOccurs="0"/>
@@ -572,6 +581,14 @@
           </xs:restriction>
         </xs:simpleType>
       </xs:element>
+      <xs:element name="Procedimiento">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:maxLength value="20"/>
+            <xs:minLength value="3"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
       <xs:element name="Funcionario">
         <xs:complexType>
           <xs:sequence>
@@ -700,13 +717,16 @@
       </xs:element>
       <xs:element name="Solicitante">
         <xs:complexType>
-          <xs:all>
+          <xs:sequence>
             <xs:element ref="IdentificadorSolicitante"/>
             <xs:element ref="NombreSolicitante"/>
-            <xs:element ref="Finalidad"/>
+            <xs:choice>
+              <xs:element ref="Finalidad"/>
+              <xs:element ref="Procedimiento"/>
+            </xs:choice>
             <xs:element ref="Consentimiento"/>
             <xs:element ref="Funcionario" minOccurs="0"/>
-          </xs:all>
+          </xs:sequence>
         </xs:complexType>
       </xs:element>
       <xs:element name="TiempoEstimadoRespuesta">
@@ -861,7 +881,7 @@
       <soap:address location="https://serveis3-pre.app.aoc.cat:443/siri-proxy/services/Sincron"/>
     </wsdl:port>
   </wsdl:service>
-</wsdl:definitions>]]></con:content><con:type>http://schemas.xmlsoap.org/wsdl/</con:type></con:part><con:part><con:url>file:\C:\Users\cmoralea\Desktop\GitHub\SOAP%20millora\Integracio-AOC-SOAPUI\OVER\dadesEspecifiques.xsd</con:url><con:content><![CDATA[<xs:schema targetNamespace="http://www.aoc.cat/over" elementFormDefault="qualified" attributeFormDefault="unqualified" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="http://www.aoc.cat/over">
+</wsdl:definitions>]]></con:content><con:type>http://schemas.xmlsoap.org/wsdl/</con:type></con:part><con:part><con:url>file:\C:\Users\CristianMorales\Documents\GitHub\Integracio-AOC-SOAPUI\OVER\dadesEspecifiques.xsd</con:url><con:content><![CDATA[<xs:schema targetNamespace="http://www.aoc.cat/over" elementFormDefault="qualified" attributeFormDefault="unqualified" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="http://www.aoc.cat/over">
   <!--=======================================================-->
   <!--FORMULARI-->
   <!--=======================================================-->
@@ -1468,7 +1488,7 @@
       </xs:sequence>
     </xs:complexType>
   </xs:element>
-</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>file:\C:\Users\cmoralea\Desktop\GitHub\SOAP%20millora\Integracio-AOC-SOAPUI\ETAULER\dadesEspecifiques.xsd</con:url><con:content><![CDATA[<!--edited with XMLSpy v2008 rel. 2 sp2 (http://www.altova.com) by Consorci Administració Oberta de Catalunya-->
+</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>file:\C:\Users\CristianMorales\Documents\GitHub\Integracio-AOC-SOAPUI\ETAULER\dadesEspecifiques.xsd</con:url><con:content><![CDATA[<!--edited with XMLSpy v2008 rel. 2 sp2 (http://www.altova.com) by Consorci Administració Oberta de Catalunya-->
 <xsd:schema targetNamespace="http://www.aoc.cat/etauler" elementFormDefault="qualified" attributeFormDefault="unqualified" xmlns="http://www.aoc.cat/etauler" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <!--=======================================================-->
   <!--Publicar edicte-->
@@ -1892,7 +1912,7 @@
       <xsd:enumeration value="oc"/>
     </xsd:restriction>
   </xsd:simpleType>
-</xsd:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>file:\C:\Users\cmoralea\Desktop\GitHub\SOAP%20millora\Integracio-AOC-SOAPUI\HESTIA\DadesEspecifiques.xsd</con:url><con:content><![CDATA[<xs:schema targetNamespace="http://www.aoc.cat/hestia/" elementFormDefault="qualified" attributeFormDefault="unqualified" xmlns="http://www.aoc.cat/hestia" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+</xsd:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>file:\C:\Users\CristianMorales\Documents\GitHub\Integracio-AOC-SOAPUI\HESTIA\DadesEspecifiques.xsd</con:url><con:content><![CDATA[<xs:schema targetNamespace="http://www.aoc.cat/hestia/" elementFormDefault="qualified" attributeFormDefault="unqualified" xmlns="http://www.aoc.cat/hestia" xmlns:xs="http://www.w3.org/2001/XMLSchema">
   <!--=======================================================-->
   <!--DadesEspecifiques-->
   <!--=======================================================-->
@@ -1965,7 +1985,7 @@
       </xs:sequence>
     </xs:complexType>
   </xs:element>
-</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>file:\C:\Users\cmoralea\Desktop\GitHub\SOAP%20millora\Integracio-AOC-SOAPUI\DOGC\dadesEspecifiques.xsd</con:url><con:content><![CDATA[<xs:schema targetNamespace="http://www.aoc.cat/dogc" elementFormDefault="qualified" attributeFormDefault="unqualified" xmlns="http://www.aoc.cat/dogc" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>file:\C:\Users\CristianMorales\Documents\GitHub\Integracio-AOC-SOAPUI\DOGC\dadesEspecifiques.xsd</con:url><con:content><![CDATA[<xs:schema targetNamespace="http://www.aoc.cat/dogc" elementFormDefault="qualified" attributeFormDefault="unqualified" xmlns="http://www.aoc.cat/dogc" xmlns:xs="http://www.w3.org/2001/XMLSchema">
   <!--=======================================================-->
   <!--Solicitud publicacio-->
   <!--=======================================================-->
@@ -2502,7 +2522,7 @@
       </xs:sequence>
     </xs:complexType>
   </xs:element>
-</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>file:\C:\Users\cmoralea\Desktop\GitHub\SOAP%20millora\Integracio-AOC-SOAPUI\BOE\dadesEspecifiques.xsd</con:url><con:content><![CDATA[<xs:schema targetNamespace="http://www.aoc.cat/boe" elementFormDefault="qualified" attributeFormDefault="unqualified" xmlns="http://www.aoc.cat/boe" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:nns="xsi:noNamespaceSchemaLocation" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>file:\C:\Users\CristianMorales\Documents\GitHub\Integracio-AOC-SOAPUI\BOE\dadesEspecifiques.xsd</con:url><con:content><![CDATA[<xs:schema targetNamespace="http://www.aoc.cat/boe" elementFormDefault="qualified" attributeFormDefault="unqualified" xmlns="http://www.aoc.cat/boe" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:nns="xsi:noNamespaceSchemaLocation" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <!--=======================================================-->
   <!--Enviar-->
   <!--=======================================================-->
@@ -2652,7 +2672,7 @@
       </xs:sequence>
     </xs:complexType>
   </xs:element>
-</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>file:\C:\Users\cmoralea\Desktop\GitHub\SOAP%20millora\Integracio-AOC-SOAPUI\SCT_DEV\consultaCredencialsDEVDadesEspecifiques.xsd</con:url><con:content><![CDATA[<!--edited with XMLSpy v2008 rel. 2 sp2 (http://www.altova.com) by Sergio Figueras (Consorci Administració Oberta de Catalunya)-->
+</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>file:\C:\Users\CristianMorales\Documents\GitHub\Integracio-AOC-SOAPUI\SCT_DEV\consultaCredencialsDEVDadesEspecifiques.xsd</con:url><con:content><![CDATA[<!--edited with XMLSpy v2008 rel. 2 sp2 (http://www.altova.com) by Sergio Figueras (Consorci Administració Oberta de Catalunya)-->
 <xs:schema targetNamespace="http://www.aocat.net/sct/dev" elementFormDefault="qualified" attributeFormDefault="unqualified" xmlns="http://www.aocat.net/sct/dev" xmlns:xs="http://www.w3.org/2001/XMLSchema">
   <!--=======================================================-->
   <!--Peticio de consulta de publicacions-->
@@ -2707,7 +2727,7 @@
       </xs:sequence>
     </xs:complexType>
   </xs:element>
-</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>file:\C:\Users\cmoralea\Desktop\GitHub\SOAP%20millora\Integracio-AOC-SOAPUI\SIR2_0\dadesEspecifiques.xsd</con:url><con:content><![CDATA[<xs:schema targetNamespace="http://www.aoc.cat/sir" elementFormDefault="qualified" attributeFormDefault="unqualified" xmlns="http://www.aoc.cat/sir" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:nns="xsi:noNamespaceSchemaLocation" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>file:\C:\Users\CristianMorales\Documents\GitHub\Integracio-AOC-SOAPUI\SIR2_0\dadesEspecifiques.xsd</con:url><con:content><![CDATA[<xs:schema targetNamespace="http://www.aoc.cat/sir" elementFormDefault="qualified" attributeFormDefault="unqualified" xmlns="http://www.aoc.cat/sir" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:nns="xsi:noNamespaceSchemaLocation" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <!--=======================================================-->
   <!--Enviar-->
   <!--=======================================================-->
@@ -2978,7 +2998,7 @@
       </xs:sequence>
     </xs:complexType>
   </xs:element>
-</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>file:\C:\Users\cmoralea\Desktop\GitHub\SOAP%20millora\Integracio-AOC-SOAPUI\REPRESENTA\dadesEspecifiques.xsd</con:url><con:content><![CDATA[<xs:schema targetNamespace="http://www.aoc.cat/representa/v2" elementFormDefault="qualified" attributeFormDefault="unqualified" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xmime="http://www.w3.org/2005/05/xmlmime" xmlns="http://www.aoc.cat/representa/v2">
+</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>file:\C:\Users\CristianMorales\Documents\GitHub\Integracio-AOC-SOAPUI\REPRESENTA\dadesEspecifiques.xsd</con:url><con:content><![CDATA[<xs:schema targetNamespace="http://www.aoc.cat/representa/v2" elementFormDefault="qualified" attributeFormDefault="unqualified" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xmime="http://www.w3.org/2005/05/xmlmime" xmlns="http://www.aoc.cat/representa/v2">
   <xs:element name="processarRepresentacio">
     <xs:complexType>
       <xs:sequence>
@@ -3662,580 +3682,7 @@
       <xs:pattern value=".*[^\s].*"/>
     </xs:restriction>
   </xs:simpleType>
-</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>file:\C:\Users\cmoralea\Desktop\GitHub\SOAP%20millora\Integracio-AOC-SOAPUI\DESAL\serveiscomuns-desal.xsd</con:url><con:content><![CDATA[<xs:schema targetNamespace="http://www.aoc.cat/desal" elementFormDefault="qualified" attributeFormDefault="unqualified" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="http://www.aoc.cat/desal" xmlns:desal="http://www.aoc.cat/desal">
-  <xs:import namespace="http://www.aoc.cat/desal" schemaLocation="metadades-desal.xsd"/>
-  <!--Carrega document-->
-  <xs:element name="peticioCarregaDocument">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:choice>
-          <xs:element name="ruta" type="xs:string"/>
-          <xs:element name="contingut" type="xs:base64Binary"/>
-        </xs:choice>
-        <xs:element ref="desal:expedient"/>
-        <xs:element ref="desal:document"/>
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="respostaCarregaDocument">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element ref="peticioCarregaDocument" minOccurs="0"/>
-        <xs:element name="resposta" minOccurs="0">
-          <xs:complexType>
-            <xs:sequence>
-              <xs:element ref="desal:uuid" minOccurs="0"/>
-              <xs:element ref="desal:url" minOccurs="0"/>
-            </xs:sequence>
-          </xs:complexType>
-        </xs:element>
-        <xs:element ref="resultat"/>
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <!--Descarrega document-->
-  <xs:element name="peticioDescarregaDocument">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:choice>
-          <xs:element ref="desal:uuid"/>
-          <xs:element ref="desal:csv"/>
-        </xs:choice>
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="respostaDescarregaDocument">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element ref="peticioDescarregaDocument" minOccurs="0"/>
-        <xs:element name="resposta" minOccurs="0">
-          <xs:complexType>
-            <xs:sequence>
-              <xs:element ref="desal:dadesExpedient"/>
-            </xs:sequence>
-          </xs:complexType>
-        </xs:element>
-        <xs:element ref="resultat"/>
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <!--Carrega expedient-->
-  <xs:element name="peticioCarregaExpedient">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element ref="desal:expedient"/>
-        <xs:element ref="desal:expedientDocuments" minOccurs="0"/>
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="respostaCarregaExpedient">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element ref="peticioCarregaExpedient" minOccurs="0"/>
-        <xs:element name="resposta" minOccurs="0">
-          <xs:complexType>
-            <xs:sequence>
-              <xs:element name="respostaDocument" minOccurs="1" maxOccurs="unbounded">
-                <xs:complexType>
-                  <xs:sequence>
-                    <xs:element name="idDocument" type="xs:string"/>
-                    <xs:element ref="desal:uuid" minOccurs="0"/>
-                    <xs:element ref="desal:url" minOccurs="0"/>
-                  </xs:sequence>
-                </xs:complexType>
-              </xs:element>
-            </xs:sequence>
-          </xs:complexType>
-        </xs:element>
-        <xs:element ref="resultat"/>
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <!--Descarrega expedient-->
-  <xs:element name="peticioDescarregaExpedient">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:choice>
-          <xs:element name="numExpedient" type="xs:string"/>
-          <xs:element name="numRegistreEntrada" type="xs:string"/>
-          <xs:element name="numRegistreSortida" type="xs:string"/>
-        </xs:choice>
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="respostaDescarregaExpedient">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element ref="peticioDescarregaExpedient" minOccurs="0"/>
-        <xs:element name="resposta" minOccurs="0">
-          <xs:complexType>
-            <xs:sequence>
-              <xs:element ref="desal:dadesExpedient" maxOccurs="unbounded"/>
-            </xs:sequence>
-          </xs:complexType>
-        </xs:element>
-        <xs:element ref="resultat"/>
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <!--Comuns-->
-  <xs:element name="resultat">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element name="codiResultat" type="xs:string"/>
-        <xs:element name="descripcio" type="xs:string"/>
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>file:\C:\Users\cmoralea\Desktop\GitHub\SOAP%20millora\Integracio-AOC-SOAPUI\DESAL\metadades-desal.xsd</con:url><con:content><![CDATA[<xs:schema targetNamespace="http://www.aoc.cat/desal" elementFormDefault="qualified" attributeFormDefault="unqualified" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="http://www.aoc.cat/desal">
-  <!--expedient-->
-  <xs:element name="expedient">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element name="numExpedient">
-          <xs:simpleType>
-            <xs:restriction base="xs:string"></xs:restriction>
-          </xs:simpleType>
-        </xs:element>
-        <xs:element name="pathExpedient">
-          <xs:simpleType>
-            <xs:restriction base="xs:string">
-              <xs:maxLength value="1000"/>
-            </xs:restriction>
-          </xs:simpleType>
-        </xs:element>
-        <xs:element name="titolExpedient">
-          <xs:simpleType>
-            <xs:restriction base="xs:string"></xs:restriction>
-          </xs:simpleType>
-        </xs:element>
-        <xs:element ref="sensibilitatDadesLOPD" minOccurs="0"/>
-        <xs:element name="unitatProductora" minOccurs="0">
-          <xs:simpleType>
-            <xs:restriction base="xs:string">
-              <xs:maxLength value="500"/>
-            </xs:restriction>
-          </xs:simpleType>
-        </xs:element>
-        <xs:element ref="descripcio" minOccurs="0"/>
-        <xs:element ref="suport" minOccurs="0"/>
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <!--document-->
-  <xs:element name="document">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element name="nomDocument">
-          <xs:simpleType>
-            <xs:restriction base="xs:string"></xs:restriction>
-          </xs:simpleType>
-        </xs:element>
-        <xs:element name="titolDocument">
-          <xs:simpleType>
-            <xs:restriction base="xs:string"></xs:restriction>
-          </xs:simpleType>
-        </xs:element>
-        <xs:element name="origenDocument" default="Administracio">
-          <xs:simpleType>
-            <xs:restriction base="xs:string">
-              <xs:enumeration value="Ciutada"/>
-              <xs:enumeration value="Administracio"/>
-            </xs:restriction>
-          </xs:simpleType>
-        </xs:element>
-        <xs:element name="tipusDocument" minOccurs="0">
-          <xs:simpleType>
-            <xs:restriction base="xs:string">
-              <xs:enumeration value="Acta"/>
-              <xs:enumeration value="Acord"/>
-              <xs:enumeration value="Acreditacio"/>
-              <xs:enumeration value="Albara"/>
-              <xs:enumeration value="Allegacio"/>
-              <xs:enumeration value="Atestat"/>
-              <xs:enumeration value="Burofax"/>
-              <xs:enumeration value="Carta"/>
-              <xs:enumeration value="Cataleg"/>
-              <xs:enumeration value="Certificat"/>
-              <xs:enumeration value="Circular"/>
-              <xs:enumeration value="Citacio"/>
-              <xs:enumeration value="Comunicat"/>
-              <xs:enumeration value="Conveni"/>
-              <xs:enumeration value="Convocatoria"/>
-              <xs:enumeration value="Denuncia"/>
-              <xs:enumeration value="Diligencia"/>
-              <xs:enumeration value="DocumentAdministratiu"/>
-              <xs:enumeration value="Enquesta"/>
-              <xs:enumeration value="Estadistica"/>
-              <xs:enumeration value="Estudi"/>
-              <xs:enumeration value="Extracte"/>
-              <xs:enumeration value="Factura"/>
-              <xs:enumeration value="Fax"/>
-              <xs:enumeration value="Fitxa"/>
-              <xs:enumeration value="Fotografia"/>
-              <xs:enumeration value="Informe"/>
-              <xs:enumeration value="Instruccio"/>
-              <xs:enumeration value="Inventari"/>
-              <xs:enumeration value="Invitacio"/>
-              <xs:enumeration value="Llista"/>
-              <xs:enumeration value="Nomenament"/>
-              <xs:enumeration value="Notificacio"/>
-              <xs:enumeration value="Ofici"/>
-              <xs:enumeration value="Pacte"/>
-              <xs:enumeration value="Pla"/>
-              <xs:enumeration value="Pressupost"/>
-              <xs:enumeration value="Programa"/>
-              <xs:enumeration value="Projecte"/>
-              <xs:enumeration value="Queixa"/>
-              <xs:enumeration value="Rebut"/>
-              <xs:enumeration value="Reclamacio"/>
-              <xs:enumeration value="Recurs"/>
-              <xs:enumeration value="Registre"/>
-              <xs:enumeration value="Reglament"/>
-              <xs:enumeration value="Requeriment"/>
-              <xs:enumeration value="Resolucio"/>
-              <xs:enumeration value="RetallDePremsa"/>
-              <xs:enumeration value="Saluda"/>
-              <xs:enumeration value="Sollicitud"/>
-              <xs:enumeration value="Telegrama"/>
-            </xs:restriction>
-          </xs:simpleType>
-        </xs:element>
-        <xs:element name="classificacioSeguretatAcces" minOccurs="0">
-          <xs:simpleType>
-            <xs:restriction base="xs:string">
-              <xs:enumeration value="AccesPublic"/>
-              <xs:enumeration value="AccesRestringit"/>
-            </xs:restriction>
-          </xs:simpleType>
-        </xs:element>
-        <xs:element name="documentEssencial" minOccurs="0">
-          <xs:simpleType>
-            <xs:restriction base="xs:string">
-              <xs:enumeration value="Si"/>
-              <xs:enumeration value="No"/>
-            </xs:restriction>
-          </xs:simpleType>
-        </xs:element>
-        <xs:element name="nivellClassificacioEvidencial" minOccurs="0">
-          <xs:simpleType>
-            <xs:restriction base="xs:string">
-              <xs:enumeration value="SenseEvidencia"/>
-              <xs:enumeration value="EvidenciaEntitat"/>
-              <xs:enumeration value="EvidenciaOrigenDades"/>
-              <xs:enumeration value="EvidenciaAutenticitat"/>
-              <xs:enumeration value="EvidenciaSignaturaElectronica"/>
-              <xs:enumeration value="EvidenciaCompletaSignaturaElectronica"/>
-              <xs:enumeration value="EvidenciaLlargaDuradaSignaturaElectronica"/>
-            </xs:restriction>
-          </xs:simpleType>
-        </xs:element>
-        <xs:element name="nivellClassificacioSeguretat" minOccurs="0">
-          <xs:simpleType>
-            <xs:restriction base="xs:string">
-              <xs:enumeration value="NoClassificat"/>
-              <xs:enumeration value="Classificat"/>
-              <xs:enumeration value="Confidencial"/>
-              <xs:enumeration value="Reservat"/>
-              <xs:enumeration value="Secret"/>
-            </xs:restriction>
-          </xs:simpleType>
-        </xs:element>
-        <xs:element ref="sensibilitatDadesLOPD" minOccurs="0"/>
-        <xs:element name="dataCreacio" type="xs:dateTime" minOccurs="0"/>
-        <xs:element name="estatElaboracio" default="Original" minOccurs="0">
-          <xs:simpleType>
-            <xs:restriction base="xs:string">
-              <xs:enumeration value="Original"/>
-              <xs:enumeration value="CopiaAutenticaCanviFormat"/>
-              <xs:enumeration value="CopiaAutenticaDocumentPaper"/>
-              <xs:enumeration value="CopiaParcialAutentica"/>
-              <xs:enumeration value="Altres"/>
-            </xs:restriction>
-          </xs:simpleType>
-        </xs:element>
-        <xs:element ref="descripcio" minOccurs="0"/>
-        <xs:element name="descriptors" minOccurs="0">
-          <xs:simpleType>
-            <xs:restriction base="xs:string">
-              <xs:maxLength value="500"/>
-            </xs:restriction>
-          </xs:simpleType>
-        </xs:element>
-        <xs:element name="autor" minOccurs="0">
-          <xs:simpleType>
-            <xs:restriction base="xs:string">
-              <xs:maxLength value="250"/>
-            </xs:restriction>
-          </xs:simpleType>
-        </xs:element>
-        <xs:element name="numRegistreEntrada" minOccurs="0">
-          <xs:simpleType>
-            <xs:restriction base="xs:string">
-              <xs:maxLength value="100"/>
-            </xs:restriction>
-          </xs:simpleType>
-        </xs:element>
-        <xs:element name="numRegistreSortida" minOccurs="0">
-          <xs:simpleType>
-            <xs:restriction base="xs:string">
-              <xs:maxLength value="100"/>
-            </xs:restriction>
-          </xs:simpleType>
-        </xs:element>
-        <xs:element name="producte" minOccurs="0">
-          <xs:simpleType>
-            <xs:restriction base="xs:string">
-              <xs:maxLength value="250"/>
-            </xs:restriction>
-          </xs:simpleType>
-        </xs:element>
-        <xs:element name="finalitat" minOccurs="0">
-          <xs:simpleType>
-            <xs:restriction base="xs:string">
-              <xs:maxLength value="250"/>
-            </xs:restriction>
-          </xs:simpleType>
-        </xs:element>
-        <xs:element ref="csv" minOccurs="0"/>
-        <xs:element name="tipusSignatura" minOccurs="0">
-          <xs:simpleType>
-            <xs:restriction base="xs:string">
-              <xs:enumeration value="CSV"/>
-              <xs:enumeration value="XAdESInternallyDetached"/>
-              <xs:enumeration value="XAdESEnveloped"/>
-              <xs:enumeration value="CAdESDetached"/>
-              <xs:enumeration value="CAdESAttached"/>
-              <xs:enumeration value="PAdES"/>
-            </xs:restriction>
-          </xs:simpleType>
-        </xs:element>
-        <xs:element ref="suport" minOccurs="0"/>
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <!--Comuns-->
-  <xs:element name="uuid" type="xs:string"/>
-  <xs:element name="csv">
-    <xs:simpleType>
-      <xs:restriction base="xs:string">
-        <xs:maxLength value="100"/>
-      </xs:restriction>
-    </xs:simpleType>
-  </xs:element>
-  <xs:element name="url" type="xs:anyURI"/>
-  <xs:element name="sensibilitatDadesLOPD">
-    <xs:simpleType>
-      <xs:restriction base="xs:string">
-        <xs:enumeration value="NivellBaix"/>
-        <xs:enumeration value="NivellMig"/>
-        <xs:enumeration value="NivellAlt"/>
-      </xs:restriction>
-    </xs:simpleType>
-  </xs:element>
-  <xs:element name="descripcio">
-    <xs:simpleType>
-      <xs:restriction base="xs:string">
-        <xs:maxLength value="500"/>
-      </xs:restriction>
-    </xs:simpleType>
-  </xs:element>
-  <xs:element name="suport">
-    <xs:simpleType>
-      <xs:restriction base="xs:string">
-        <xs:enumeration value="Electronic"/>
-        <xs:enumeration value="Hibrid"/>
-        <xs:enumeration value="Paper"/>
-      </xs:restriction>
-    </xs:simpleType>
-  </xs:element>
-  <!--documents continguts a un expedient-->
-  <xs:element name="expedientDocuments">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element name="expedientDocument" minOccurs="1" maxOccurs="unbounded">
-          <xs:complexType>
-            <xs:sequence>
-              <xs:choice>
-                <xs:element name="ruta" type="xs:string"/>
-                <xs:element name="contingut" type="xs:base64Binary"/>
-              </xs:choice>
-              <xs:element name="idDocument" type="xs:string"/>
-              <xs:element ref="document"/>
-            </xs:sequence>
-          </xs:complexType>
-        </xs:element>
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <!--resposta descarrega document-->
-  <xs:element name="dadesDocument">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element name="contingut" type="xs:base64Binary" minOccurs="0"/>
-        <xs:element ref="uuid"/>
-        <xs:element name="url" type="xs:string"/>
-        <xs:element ref="document"/>
-        <xs:element name="nivellDescripcio" type="xs:string" minOccurs="0"/>
-        <xs:element name="dataCaptura" type="xs:dateTime" minOccurs="0"/>
-        <xs:element name="numeroDocument" type="xs:string" minOccurs="0"/>
-        <xs:element name="codiReferencia" type="xs:string" minOccurs="0"/>
-        <xs:element name="nomProductor" type="xs:string" minOccurs="0"/>
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <!--resposta descarrega expedient-->
-  <xs:element name="dadesExpedient">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element ref="uuid"/>
-        <xs:element name="numExpedient" type="xs:string"/>
-        <xs:element name="pathExpedient" type="xs:string"/>
-        <xs:element name="unitatProductora" type="xs:string"/>
-        <xs:element name="titolExpedient" type="xs:string" minOccurs="0"/>
-        <xs:element name="codiReferencia" type="xs:string" minOccurs="0"/>
-        <xs:element name="estat" type="xs:string" minOccurs="0"/>
-        <xs:element name="dataObertura" type="xs:string" minOccurs="0"/>
-        <xs:element name="dataTancament" type="xs:string" minOccurs="0"/>
-        <xs:element name="idPia" type="xs:string" minOccurs="0"/>
-        <xs:element name="urlPia" type="xs:string" minOccurs="0"/>
-        <xs:element ref="dadesDocument" minOccurs="0" maxOccurs="unbounded"/>
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <!--Modalitats PCI-->
-  <xs:element name="peticioCarregaDocument">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element ref="expedient"/>
-        <xs:element ref="document"/>
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="respostaCarregaDocument">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element ref="peticioCarregaDocument" minOccurs="0"/>
-        <xs:element name="resposta" minOccurs="0">
-          <xs:complexType>
-            <xs:sequence>
-              <xs:element ref="uuid" minOccurs="0"/>
-              <xs:element ref="url" minOccurs="0"/>
-            </xs:sequence>
-          </xs:complexType>
-        </xs:element>
-        <xs:element ref="resultat"/>
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <!--Descarrega document-->
-  <xs:element name="peticioDescarregaDocument">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:choice>
-          <xs:element ref="uuid"/>
-          <xs:element ref="csv"/>
-        </xs:choice>
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="respostaDescarregaDocument">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element ref="peticioDescarregaDocument" minOccurs="0"/>
-        <xs:element name="resposta" minOccurs="0">
-          <xs:complexType>
-            <xs:sequence>
-              <xs:element ref="dadesExpedient"/>
-            </xs:sequence>
-          </xs:complexType>
-        </xs:element>
-        <xs:element ref="resultat"/>
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <!--Carrega expedient-->
-  <xs:element name="peticioCarregaExpedient">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element ref="expedient"/>
-        <xs:element name="expedientDocuments" minOccurs="0">
-          <xs:complexType>
-            <xs:sequence>
-              <xs:element name="expedientDocument" maxOccurs="unbounded">
-                <xs:complexType>
-                  <xs:sequence>
-                    <xs:element name="idDocument" type="xs:string"/>
-                    <xs:element ref="document"/>
-                  </xs:sequence>
-                </xs:complexType>
-              </xs:element>
-            </xs:sequence>
-          </xs:complexType>
-        </xs:element>
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="respostaCarregaExpedient">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element ref="peticioCarregaExpedient" minOccurs="0"/>
-        <xs:element name="resposta" minOccurs="0">
-          <xs:complexType>
-            <xs:sequence>
-              <xs:element name="respostaDocument" maxOccurs="unbounded">
-                <xs:complexType>
-                  <xs:sequence>
-                    <xs:element name="idDocument" type="xs:string"/>
-                    <xs:element ref="uuid" minOccurs="0"/>
-                    <xs:element ref="url" minOccurs="0"/>
-                  </xs:sequence>
-                </xs:complexType>
-              </xs:element>
-            </xs:sequence>
-          </xs:complexType>
-        </xs:element>
-        <xs:element ref="resultat"/>
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <!--Descarrega expedient-->
-  <xs:element name="peticioDescarregaExpedient">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:choice>
-          <xs:element name="numExpedient" type="xs:string"/>
-          <xs:element name="numRegistreEntrada" type="xs:string"/>
-          <xs:element name="numRegistreSortida" type="xs:string"/>
-        </xs:choice>
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="respostaDescarregaExpedient">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element ref="peticioDescarregaExpedient" minOccurs="0"/>
-        <xs:element name="resposta" minOccurs="0">
-          <xs:complexType>
-            <xs:sequence>
-              <xs:element ref="dadesExpedient" maxOccurs="unbounded"/>
-            </xs:sequence>
-          </xs:complexType>
-        </xs:element>
-        <xs:element ref="resultat"/>
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <!--Comuns-->
-  <xs:element name="resultat">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element name="codiResultat" type="xs:string"/>
-        <xs:element ref="descripcio"/>
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>file:\C:\Users\cmoralea\Desktop\GitHub\SOAP%20millora\Integracio-AOC-SOAPUI\SIFECAT\dadesEspecifiques.xsd</con:url><con:content><![CDATA[<xs:schema targetNamespace="http://www.aocat.net/eacat" elementFormDefault="qualified" attributeFormDefault="unqualified" xmlns="http://www.aocat.net/eacat" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>file:\C:\Users\CristianMorales\Documents\GitHub\Integracio-AOC-SOAPUI\SIFECAT\dadesEspecifiques.xsd</con:url><con:content><![CDATA[<xs:schema targetNamespace="http://www.aocat.net/eacat" elementFormDefault="qualified" attributeFormDefault="unqualified" xmlns="http://www.aocat.net/eacat" xmlns:xs="http://www.w3.org/2001/XMLSchema">
   <!--=======================================================-->
   <!--Consulta usuari-->
   <!--=======================================================-->
