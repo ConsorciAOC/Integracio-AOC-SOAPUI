@@ -1,0 +1,60 @@
+<?xml version="1.0"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="http://www.aoc.cat/sct/denuncies" xmlns:sct-norma="http://www.gencat.cat/transit/denuncies/normativesPDAResposta" xmlns:sct-rang-pet="http://www.gencat.cat/transit/denuncies/rangPDA" xmlns:sct-rang-res="http://www.gencat.cat/transit/denuncies/rangPDAResposta" xmlns:sct-rem="http://www.gencat.cat/transit/denuncies" targetNamespace="http://www.aoc.cat/sct/denuncies" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:import namespace="http://www.gencat.cat/transit/denuncies" schemaLocation="RemesaRespostaPDA.xsd"/>
+	<xs:import namespace="http://www.gencat.cat/transit/denuncies/rangPDA" schemaLocation="RangPDA.xsd"/>
+	<xs:import namespace="http://www.gencat.cat/transit/denuncies/rangPDAResposta" schemaLocation="RangPDAResposta.xsd"/>
+	<xs:import namespace="http://www.gencat.cat/transit/denuncies/normativesPDAResposta" schemaLocation="NormativesPDAResposta.xsd"/>
+	<!-- ======================================================= -->
+	<!-- Enviament remesa                             					                                     -->
+	<!-- ======================================================= -->
+	<xs:element name="respostaEnviamentRemesa">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="sct-rem:DADES" minOccurs="0"/>
+				<!-- evidència: només per remeses enviades des d'EACAT -->
+				<xs:element name="evidencia" type="xs:base64Binary" minOccurs="0"/>
+				<xs:element ref="resultat"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<!-- ======================================================= -->
+	<!-- Rang de butlletes                             					                                     -->
+	<!-- ======================================================= -->
+	<xs:element name="peticioObtencioRangButlletes">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="sct-rang-pet:NUM_BUTLLETES_SOLICITADES"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="respostaObtencioRangButlletes">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="sct-rang-res:SORTIDA" minOccurs="0"/>
+				<xs:element ref="resultat"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<!-- ======================================================= -->
+	<!-- Catàleg normatives                             					                                     -->
+	<!-- ======================================================= -->
+	<xs:element name="respostaConsultaCatalegNormatives">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="sct-norma:NORMATIVES" minOccurs="0"/>
+				<xs:element ref="resultat"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<!-- ======================================================= -->
+	<!-- Resultat                                                                                                  -->
+	<!-- ======================================================= -->
+	<xs:element name="resultat">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="codiResultat" type="xs:string"/>
+				<xs:element name="descripcio" type="xs:string"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

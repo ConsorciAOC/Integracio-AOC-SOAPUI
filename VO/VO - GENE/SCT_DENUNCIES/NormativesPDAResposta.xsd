@@ -1,0 +1,145 @@
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="http://www.gencat.cat/transit/denuncies/normativesPDAResposta" targetNamespace="http://www.gencat.cat/transit/denuncies/normativesPDAResposta" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:element name="PETICIO_SORTIDA">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="ENTRADA">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="ID_SOLICITANT">
+								<xs:simpleType>
+									<xs:restriction base="xs:string">
+										<xs:maxLength value="5"/>
+									</xs:restriction>
+								</xs:simpleType>
+							</xs:element>
+							<xs:element name="ID_PETICIO">
+								<xs:simpleType>
+									<xs:restriction base="xs:string">
+										<xs:maxLength value="13"/>
+									</xs:restriction>
+								</xs:simpleType>
+							</xs:element>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="SORTIDA">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="RESULTAT">
+								<xs:simpleType>
+									<xs:restriction base="xs:string">
+										<xs:maxLength value="2"/>
+									</xs:restriction>
+								</xs:simpleType>
+							</xs:element>
+							<xs:element ref="NORMATIVES" minOccurs="0"/>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="NORMATIVES">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="NORMATIVA" maxOccurs="9999">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="CODI_NL">
+								<xs:simpleType>
+									<xs:restriction base="xs:string">
+										<xs:maxLength value="1"/>
+									</xs:restriction>
+								</xs:simpleType>
+							</xs:element>
+							<xs:element name="ARTICLE">
+								<xs:simpleType>
+									<xs:restriction base="xs:string">
+										<xs:maxLength value="4"/>
+									</xs:restriction>
+								</xs:simpleType>
+							</xs:element>
+							<xs:element name="SUBARTICLE">
+								<xs:simpleType>
+									<xs:restriction base="xs:string">
+										<xs:maxLength value="4"/>
+									</xs:restriction>
+								</xs:simpleType>
+							</xs:element>
+							<xs:element name="OPCIO">
+								<xs:simpleType>
+									<xs:restriction base="xs:string">
+										<xs:maxLength value="4"/>
+									</xs:restriction>
+								</xs:simpleType>
+							</xs:element>
+							<xs:element name="GRAVETAT">
+								<xs:simpleType>
+									<xs:annotation>
+										<xs:documentation>
+																G: GREU
+																L: LLEU
+																M: MOLT GREU
+																V: 62.2 LSV
+																W: 67.4 LSV
+																</xs:documentation>
+									</xs:annotation>
+									<xs:restriction base="xs:string">
+										<xs:enumeration value="G"/>
+										<xs:enumeration value="L"/>
+										<xs:enumeration value="M"/>
+										<xs:enumeration value="V"/>
+										<xs:enumeration value="W"/>
+									</xs:restriction>
+								</xs:simpleType>
+							</xs:element>
+							<xs:element name="DESC_BREU">
+								<xs:simpleType>
+									<xs:restriction base="xs:string">
+										<xs:maxLength value="50"/>
+									</xs:restriction>
+								</xs:simpleType>
+							</xs:element>
+							<xs:element name="FET_DENUNCIAT">
+								<xs:simpleType>
+									<xs:restriction base="xs:string">
+										<xs:maxLength value="290"/>
+									</xs:restriction>
+								</xs:simpleType>
+							</xs:element>
+							<xs:element name="HECHO_DENUNCIADO">
+								<xs:simpleType>
+									<xs:restriction base="xs:string">
+										<xs:maxLength value="290"/>
+									</xs:restriction>
+								</xs:simpleType>
+							</xs:element>
+							<xs:element name="FET_DENUNCIAT_ARANES">
+								<xs:simpleType>
+									<xs:restriction base="xs:string">
+										<xs:maxLength value="290"/>
+									</xs:restriction>
+								</xs:simpleType>
+							</xs:element>
+							<xs:element name="IMPORT_NOMINAL">
+								<xs:simpleType>
+									<xs:restriction base="xs:string">
+										<xs:pattern value="\d{12}"/>
+									</xs:restriction>
+								</xs:simpleType>
+							</xs:element>
+							<xs:element name="PUNTS">
+								<xs:simpleType>
+									<xs:restriction base="xs:int">
+										<xs:minInclusive value="0"/>
+										<xs:maxInclusive value="99"/>
+									</xs:restriction>
+								</xs:simpleType>
+							</xs:element>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

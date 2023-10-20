@@ -1,0 +1,28 @@
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="http://www.gencat.cat/transit/denuncies/normativesPDA" targetNamespace="http://www.gencat.cat/transit/denuncies/normativesPDA" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:element name="PETICIO_ENTRADA">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="ENTRADA">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="ID_SOLICITANT">
+								<xs:simpleType>
+									<xs:restriction base="xs:string">
+										<xs:maxLength value="5"/>
+									</xs:restriction>
+								</xs:simpleType>
+							</xs:element>
+							<xs:element name="ID_PETICIO">
+								<xs:simpleType>
+									<xs:restriction base="xs:string">
+										<xs:maxLength value="13"/>
+									</xs:restriction>
+								</xs:simpleType>
+							</xs:element>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

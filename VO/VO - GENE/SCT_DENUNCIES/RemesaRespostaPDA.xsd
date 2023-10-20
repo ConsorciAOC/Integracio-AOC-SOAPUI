@@ -1,0 +1,145 @@
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="http://www.gencat.cat/transit/denuncies" targetNamespace="http://www.gencat.cat/transit/denuncies" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:element name="DADES">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="CAPCALERA">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="FITXER_PDA">
+								<xs:simpleType>
+									<xs:restriction base="xs:string">
+										<xs:maxLength value="50"/>
+									</xs:restriction>
+								</xs:simpleType>
+							</xs:element>
+							<xs:element name="NUM_BUTLLETES">
+								<xs:simpleType>
+									<xs:restriction base="xs:int">
+										<xs:totalDigits value="4"/>
+									</xs:restriction>
+								</xs:simpleType>
+							</xs:element>
+							<xs:element name="CODI_INCIDENCIA" minOccurs="0">
+								<xs:simpleType>
+									<xs:restriction base="xs:string">
+										<xs:maxLength value="6"/>
+									</xs:restriction>
+								</xs:simpleType>
+							</xs:element>
+							<xs:element name="DESCRIPCIO_INCIDENCIA" minOccurs="0">
+								<xs:simpleType>
+									<xs:restriction base="xs:string">
+										<xs:maxLength value="200"/>
+									</xs:restriction>
+								</xs:simpleType>
+							</xs:element>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="BUTLLETES" minOccurs="0">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="BUTLLETA" maxOccurs="9999">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element name="ID_BUTLLETA">
+											<xs:simpleType>
+												<xs:restriction base="xs:string">
+													<xs:maxLength value="13"/>
+												</xs:restriction>
+											</xs:simpleType>
+										</xs:element>
+										<xs:element name="SERVEI_TERRIT">
+											<xs:simpleType>
+												<xs:annotation>
+													<xs:documentation>
+													08: Barcelona
+													17: Girona
+													25: Lleida
+													43: Tarragona
+													</xs:documentation>
+												</xs:annotation>
+												<xs:restriction base="xs:string">
+													<xs:enumeration value="08"/>
+													<xs:enumeration value="17"/>
+													<xs:enumeration value="25"/>
+													<xs:enumeration value="43"/>
+												</xs:restriction>
+											</xs:simpleType>
+										</xs:element>
+										<xs:element name="NUM_EXPEDIENT">
+											<xs:simpleType>
+												<xs:restriction base="xs:int">
+													<xs:totalDigits value="7"/>
+												</xs:restriction>
+											</xs:simpleType>
+										</xs:element>
+										<xs:element name="RESULTAT">
+											<xs:simpleType>
+												<xs:annotation>
+													<xs:documentation>
+													0: ok
+													1: no crític
+													2: crític
+													</xs:documentation>
+												</xs:annotation>
+												<xs:restriction base="xs:string">
+													<xs:enumeration value="0"/>
+													<xs:enumeration value="1"/>
+													<xs:enumeration value="2"/>
+												</xs:restriction>
+											</xs:simpleType>
+										</xs:element>
+										<xs:element name="DATA_LIMIT" minOccurs="0">
+											<xs:simpleType>
+												<xs:restriction base="AAAAMMDD"/>
+											</xs:simpleType>
+										</xs:element>
+										<xs:element name="INCIDENCIES" minOccurs="0">
+											<xs:complexType>
+												<xs:sequence>
+													<xs:element name="INCIDENCIA" maxOccurs="9999">
+														<xs:complexType>
+															<xs:sequence>
+																<xs:element name="CODI_INCIDENCIA">
+																	<xs:simpleType>
+																		<xs:restriction base="xs:string">
+																			<xs:maxLength value="6"/>
+																		</xs:restriction>
+																	</xs:simpleType>
+																</xs:element>
+																<xs:element name="DESCRIPCIO_INCIDENCIA">
+																	<xs:simpleType>
+																		<xs:restriction base="xs:string">
+																			<xs:maxLength value="50"/>
+																		</xs:restriction>
+																	</xs:simpleType>
+																</xs:element>
+																<xs:element name="INFORMACIO_ADDICIONAL">
+																	<xs:simpleType>
+																		<xs:restriction base="xs:string">
+																			<xs:maxLength value="50"/>
+																		</xs:restriction>
+																	</xs:simpleType>
+																</xs:element>
+															</xs:sequence>
+														</xs:complexType>
+													</xs:element>
+												</xs:sequence>
+											</xs:complexType>
+										</xs:element>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:simpleType name="AAAAMMDD">
+		<xs:restriction base="xs:string">
+			<xs:pattern value="\d{4}(0[1-9]|1[012])(0[1-9]|[12][0-9]|3[01])"/>
+		</xs:restriction>
+	</xs:simpleType>
+</xs:schema>

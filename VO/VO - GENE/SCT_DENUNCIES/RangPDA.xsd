@@ -1,0 +1,38 @@
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="http://www.gencat.cat/transit/denuncies/rangPDA" targetNamespace="http://www.gencat.cat/transit/denuncies/rangPDA" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:element name="PETICIO_ENTRADA">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="ENTRADA"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="ENTRADA">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="ID_SOLICITANT">
+					<xs:simpleType>
+						<xs:restriction base="xs:string">
+							<xs:maxLength value="5"/>
+						</xs:restriction>
+					</xs:simpleType>
+				</xs:element>
+				<xs:element name="ID_PETICIO">
+					<xs:simpleType>
+						<xs:restriction base="xs:string">
+							<xs:maxLength value="13"/>
+						</xs:restriction>
+					</xs:simpleType>
+				</xs:element>
+				<xs:element ref="NUM_BUTLLETES_SOLICITADES"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="NUM_BUTLLETES_SOLICITADES">
+		<xs:simpleType>
+			<xs:restriction base="xs:int">
+				<xs:minInclusive value="0"/>
+				<xs:maxInclusive value="9999"/>
+			</xs:restriction>
+		</xs:simpleType>
+	</xs:element>
+</xs:schema>

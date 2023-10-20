@@ -1,0 +1,110 @@
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="http://www.gencat.cat/transit/denuncies/rangPDAResposta" targetNamespace="http://www.gencat.cat/transit/denuncies/rangPDAResposta" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:element name="PETICIO_SORTIDA">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="ENTRADA">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="ID_SOLICITANT">
+								<xs:simpleType>
+									<xs:restriction base="xs:string">
+										<xs:maxLength value="5"/>
+									</xs:restriction>
+								</xs:simpleType>
+							</xs:element>
+							<xs:element name="ID_PETICIO">
+								<xs:simpleType>
+									<xs:restriction base="xs:string">
+										<xs:maxLength value="13"/>
+									</xs:restriction>
+								</xs:simpleType>
+							</xs:element>
+							<xs:element name="NUM_BUTLLETES_SOLICITADES">
+								<xs:simpleType>
+									<xs:restriction base="xs:int">
+										<xs:minInclusive value="0"/>
+										<xs:maxInclusive value="9999"/>
+									</xs:restriction>
+								</xs:simpleType>
+							</xs:element>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element ref="SORTIDA"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="SORTIDA">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="RESULTAT">
+					<xs:simpleType>
+						<xs:restriction base="xs:string">
+							<xs:maxLength value="2"/>
+						</xs:restriction>
+					</xs:simpleType>
+				</xs:element>
+				<xs:element name="NUM_BUTLLETES_LLIURADES">
+					<xs:simpleType>
+						<xs:restriction base="xs:int">
+							<xs:minInclusive value="0"/>
+							<xs:maxInclusive value="9999"/>
+						</xs:restriction>
+					</xs:simpleType>
+				</xs:element>
+				<xs:element name="RANGS" minOccurs="0">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="RANG" maxOccurs="99">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element name="ID_RANG">
+											<xs:simpleType>
+												<xs:restriction base="xs:int">
+													<xs:minInclusive value="0"/>
+													<xs:maxInclusive value="99"/>
+												</xs:restriction>
+											</xs:simpleType>
+										</xs:element>
+										<xs:element name="SERVEI_TERRIT">
+											<xs:simpleType>
+												<xs:annotation>
+													<xs:documentation>
+														08: Barcelona
+														17: Girona
+														25: Lleida
+														43: Tarragona
+													</xs:documentation>
+												</xs:annotation>
+												<xs:restriction base="xs:string">
+													<xs:enumeration value="08"/>
+													<xs:enumeration value="17"/>
+													<xs:enumeration value="25"/>
+													<xs:enumeration value="43"/>
+												</xs:restriction>
+											</xs:simpleType>
+										</xs:element>
+										<xs:element name="TALONARI_INICIAL">
+											<xs:simpleType>
+												<xs:restriction base="xs:int">
+													<xs:totalDigits value="8"/>
+												</xs:restriction>
+											</xs:simpleType>
+										</xs:element>
+										<xs:element name="TALONARI_FINAL">
+											<xs:simpleType>
+												<xs:restriction base="xs:int">
+													<xs:totalDigits value="8"/>
+												</xs:restriction>
+											</xs:simpleType>
+										</xs:element>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>
