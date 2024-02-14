@@ -58257,7 +58257,7 @@
                   <ns1:DatosEspecificos>\r
                      <dat:peticioConsultaCopiaSimple xmlns:dat="http://www.aoc.cat/poders-notarials" xmlns:m="http://www.openuri.org/" xmlns:ns1="http://pica.gencat.net/PICAPCIGeneric/schemes/PICAPCIGenericRequest" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">\r
                         <dat:apoderament>\r
-                           <dat:csv>202102183d1b4858789a487e</dat:csv>\r
+                           <dat:csv>2023032710be50e6526f8fe4</dat:csv>\r
                         </dat:apoderament>\r
                      </dat:peticioConsultaCopiaSimple>\r
                   </ns1:DatosEspecificos>\r
