@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns="http://intermediacion.redsara.es/scsp/esquemas/datosespecificos" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://intermediacion.redsara.es/scsp/esquemas/datosespecificos" elementFormDefault="qualified">
+	<xs:element name="DatosEspecificos">
+		<xs:complexType>
+			<xs:choice>
+				<xs:element ref="Consulta">
+					<xs:annotation>
+						<xs:documentation>Solo en el mensaje PETICION</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+				<xs:element ref="Retorno">
+					<xs:annotation>
+						<xs:documentation>Solo en el mensaje RESPUESTA</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+			</xs:choice>
+			<xs:attribute name="Id" type="xs:string" use="optional"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="Consulta">
+		<xs:complexType>
+			<xs:all>
+				<xs:element ref="NPIE" minOccurs="0"/>
+				<xs:element ref="NumeroAfiliacion" minOccurs="0"/>
+			</xs:all>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="Retorno">
+		<xs:complexType>
+			<xs:all>
+				<xs:element ref="Estado"/>
+				<xs:element ref="IdCertificado" minOccurs="0"/>
+				<xs:element ref="Certificado" minOccurs="0"/>
+			</xs:all>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="Estado">
+		<xs:complexType>
+			<xs:all>
+				<xs:element ref="CodigoEstado"/>
+				<xs:element ref="LiteralError"/>
+			</xs:all>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="CodigoEstado">
+		<xs:simpleType>
+			<xs:restriction base="xs:string">
+				<xs:maxLength value="4"/>
+			</xs:restriction>
+		</xs:simpleType>
+	</xs:element>
+	<xs:element name="LiteralError">
+		<xs:simpleType>
+			<xs:restriction base="xs:string">
+				<xs:maxLength value="255"/>
+			</xs:restriction>
+		</xs:simpleType>
+	</xs:element>
+	<xs:element name="Ejercicio">
+		<xs:annotation>
+			<xs:documentation>Formato: AAAA</xs:documentation>
+		</xs:annotation>
+		<xs:simpleType>
+			<xs:restriction base="xs:string">
+				<xs:minLength value="4"/>
+				<xs:maxLength value="4"/>
+			</xs:restriction>
+		</xs:simpleType>
+	</xs:element>
+	<xs:element name="Exento">
+		<xs:annotation>
+			<xs:documentation>Formato: S o N</xs:documentation>
+		</xs:annotation>
+		<xs:simpleType>
+			<xs:restriction base="xs:string">
+				<xs:enumeration value="S"/>
+				<xs:enumeration value="N"/>
+			</xs:restriction>
+		</xs:simpleType>
+	</xs:element>
+	<xs:element name="NumeroAfiliacion">
+		<xs:annotation>
+			<xs:documentation>Número de afiliación a MUFACE.</xs:documentation>
+		</xs:annotation>
+		<xs:simpleType>
+			<xs:restriction base="xs:string">
+				<xs:minLength value="11"/>
+				<xs:maxLength value="11"/>
+			</xs:restriction>
+		</xs:simpleType>
+	</xs:element>
+	<xs:element name="NPIE">
+		<xs:annotation>
+			<xs:documentation>Número Personal de Identificación para Extranjeros. Formato: igual que el NIE pero con la primera letra K, L o M</xs:documentation>
+		</xs:annotation>
+		<xs:simpleType>
+			<xs:restriction base="xs:string">
+				<xs:minLength value="1"/>
+				<xs:maxLength value="10"/>
+			</xs:restriction>
+		</xs:simpleType>
+	</xs:element>
+	<xs:element name="IdCertificado">
+		<xs:annotation>
+			<xs:documentation>Identificador del certificado expedido. Código alfanumérico de 15 caracteres</xs:documentation>
+		</xs:annotation>
+		<xs:simpleType>
+			<xs:restriction base="xs:string">
+				<xs:minLength value="15"/>
+				<xs:maxLength value="15"/>
+			</xs:restriction>
+		</xs:simpleType>
+	</xs:element>
+	<xs:element name="Certificado">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="FechaExpedicion" type="xs:date"/>
+				<xs:element name="Persona" minOccurs="0">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="Afiliacion" type="xs:string" minOccurs="0"/>
+							<xs:element name="Documento" type="xs:string" minOccurs="0"/>
+							<xs:element name="TipoDocumento" type="xs:string" minOccurs="0"/>
+							<xs:element name="Nombre" type="xs:string" minOccurs="0"/>
+							<xs:element name="Apellido1" type="xs:string" minOccurs="0"/>
+							<xs:element name="Apellido2" type="xs:string" minOccurs="0"/>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="DatosCertificado" minOccurs="0">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="Codigo" type="xs:string" minOccurs="0"/>
+							<xs:element name="FechaAltaMuface" type="xs:string" minOccurs="0"/>
+							<xs:element name="Beneficiarios" type="ArrayOfCertificadoDatosCertificadoBeneficiario" minOccurs="0"/>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+			<xs:attribute name="tipo" type="xs:string"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:complexType name="ArrayOfCertificadoDatosCertificadoBeneficiario">
+		<xs:sequence>
+			<xs:element name="Beneficiario" minOccurs="0" maxOccurs="unbounded">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="Orden" type="xs:string" minOccurs="0"/>
+						<xs:element name="Documento" type="xs:string" minOccurs="0"/>
+						<xs:element name="TipoDocumento" type="xs:string" minOccurs="0"/>
+						<xs:element name="Nombre" type="xs:string" minOccurs="0"/>
+						<xs:element name="Apellido1" type="xs:string" minOccurs="0"/>
+						<xs:element name="Apellido2" type="xs:string" minOccurs="0"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

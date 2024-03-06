@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<xs:schema xmlns="http://www.aoc.cat/dgt" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:dgt="http://intermediacion.redsara.es/scsp/esquemas/datosespecificos" targetNamespace="http://www.aoc.cat/dgt" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:import namespace="http://intermediacion.redsara.es/scsp/esquemas/datosespecificos" schemaLocation="datos-especificos-SVDDGTEUCARISWS01.xsd"/>
+	<!-- ======================================================= -->
+	<!-- Consulta vehicles Eucaris																			 -->
+	<!-- ======================================================= -->
+	<xs:element name="peticioConsultaVehicleEucaris">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="matricula" type="xs:string"/>
+				<xs:element name="procedencia" type="tProcedencia"/>
+				<xs:element name="delicte">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="tipus" type="tTipusDelicte"/>
+							<xs:element name="dataHora" type="xs:dateTime"/>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="respostaConsultaVehicleEucaris">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="peticioConsultaVehicleEucaris" minOccurs="0"/>
+				<xs:element name="resposta" minOccurs="0">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:choice>
+								<xs:element ref="dgt:Titulares"/>
+								<xs:element ref="dgt:MensajesInformativos"/>
+							</xs:choice>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element ref="resultat"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:simpleType name="tProcedencia">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="A"/>
+			<xs:enumeration value="B"/>
+			<xs:enumeration value="BG"/>
+			<xs:enumeration value="CH"/>
+			<xs:enumeration value="CY"/>
+			<xs:enumeration value="CZ"/>
+			<xs:enumeration value="D"/>
+			<xs:enumeration value="DK"/>
+			<xs:enumeration value="E"/>
+			<xs:enumeration value="EST"/>
+			<xs:enumeration value="F"/>
+			<xs:enumeration value="F2"/>
+			<xs:enumeration value="FIN"/>
+			<xs:enumeration value="FL"/>
+			<xs:enumeration value="GB"/>
+			<xs:enumeration value="GBA"/>
+			<xs:enumeration value="GBG"/>
+			<xs:enumeration value="GBJ"/>
+			<xs:enumeration value="GBM"/>
+			<xs:enumeration value="GBZ"/>
+			<xs:enumeration value="GR"/>
+			<xs:enumeration value="H"/>
+			<xs:enumeration value="I"/>
+			<xs:enumeration value="IRL"/>
+			<xs:enumeration value="IS"/>
+			<xs:enumeration value="L"/>
+			<xs:enumeration value="L2"/>
+			<xs:enumeration value="LT"/>
+			<xs:enumeration value="LV"/>
+			<xs:enumeration value="M"/>
+			<xs:enumeration value="N"/>
+			<xs:enumeration value="NA"/>
+			<xs:enumeration value="NL"/>
+			<xs:enumeration value="P"/>
+			<xs:enumeration value="PL"/>
+			<xs:enumeration value="RO"/>
+			<xs:enumeration value="S"/>
+			<xs:enumeration value="SK"/>
+			<xs:enumeration value="SLO"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="tTipusDelicte">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="1"/>
+			<xs:enumeration value="2"/>
+			<xs:enumeration value="3"/>
+			<xs:enumeration value="4"/>
+			<xs:enumeration value="5"/>
+			<xs:enumeration value="10"/>
+			<xs:enumeration value="11"/>
+			<xs:enumeration value="12"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<!-- ======================================================= -->
+	<!-- Resultat                                                -->
+	<!-- ======================================================= -->
+	<xs:element name="resultat">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="codiResultat" type="xs:string"/>
+				<xs:element name="descripcio" type="xs:string"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

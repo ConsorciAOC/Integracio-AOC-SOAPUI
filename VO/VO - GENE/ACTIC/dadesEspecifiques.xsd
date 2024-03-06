@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="http://www.aoc.cat/actic" targetNamespace="http://www.aoc.cat/actic" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:element name="resultat">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="codiResultat" type="xs:string"/>
+				<xs:element name="descripcio" type="xs:string"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<!-- ===================================================================== -->
+	<!-- ACTIC_CERTIFICAT                                                                                                              -->
+	<!-- ===================================================================== -->
+	<xs:element name="peticioConsultaCertificat">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="paisEmissor" type="xs:string" minOccurs="0"/>
+				<xs:element name="data" type="xs:string" minOccurs="0"/>
+				<xs:choice>
+					<xs:element name="tipus">
+						<xs:simpleType>
+							<xs:restriction base="xs:string">
+								<xs:enumeration value="ALT"/>
+								<xs:enumeration value="ULT"/>
+								<xs:enumeration value="EXP"/>
+							</xs:restriction>
+						</xs:simpleType>
+					</xs:element>
+					<xs:element name="nivell">
+						<xs:simpleType>
+							<xs:restriction base="xs:string">
+								<xs:enumeration value="1"/>
+								<xs:enumeration value="2"/>
+								<xs:enumeration value="3"/>
+							</xs:restriction>
+						</xs:simpleType>
+					</xs:element>
+				</xs:choice>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="dadesPersonals">
+		<xs:complexType>
+			<xs:all>
+				<xs:element name="tipusDocumentacio" type="xs:string"/>
+				<xs:element name="documentacio" type="xs:string"/>
+				<xs:element name="paisEmissor" type="xs:string" minOccurs="0"/>
+				<xs:element name="nom" type="xs:string"/>
+				<xs:element name="primerCognom" type="xs:string"/>
+				<xs:element name="segonCognom" type="xs:string" minOccurs="0"/>
+				<xs:element name="sexe" type="xs:string"/>
+				<xs:element name="dataNaixement" type="xs:string"/>
+			</xs:all>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="certificat">
+		<xs:complexType>
+			<xs:all>
+				<xs:element name="nivell" type="xs:string"/>
+				<xs:element name="iniciVersio" type="xs:string"/>
+				<xs:element name="versio" type="xs:string"/>
+				<xs:element name="dataAcreditacio" type="xs:string"/>
+				<xs:element name="competencies">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element ref="competencia" minOccurs="0" maxOccurs="unbounded"/>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+			</xs:all>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="competencia">
+		<xs:complexType>
+			<xs:all>
+				<xs:element name="identificador" type="xs:string"/>
+				<xs:element name="data" type="xs:string"/>
+			</xs:all>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="respostaConsultaCertificat">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="peticioConsultaCertificat" minOccurs="0"/>
+				<xs:element name="resposta" minOccurs="0">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="dataConsulta" type="xs:string"/>
+							<xs:element ref="dadesPersonals"/>
+							<xs:element name="certificats">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element ref="certificat" minOccurs="0" maxOccurs="unbounded"/>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element ref="resultat"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

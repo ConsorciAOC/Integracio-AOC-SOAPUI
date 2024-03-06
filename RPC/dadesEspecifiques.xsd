@@ -92,7 +92,7 @@
 				<xs:simpleType>
 					<xs:restriction base="xs:string">
 						<xs:minLength value="1"/>
-						<xs:maxLength value="8"/>
+						<xs:maxLength value="20"/>
 					</xs:restriction>
 				</xs:simpleType>
 			</xs:element>
@@ -144,6 +144,7 @@
 				</xs:simpleType>
 			</xs:element>
 			<xs:element name="plurianual" type="xs:boolean"/>
+			<xs:element minOccurs="0" name="plurianualsobrevingut" type="xs:boolean"/>
 			<xs:element minOccurs="0" name="modalitat">
 				<xs:simpleType>
 					<xs:restriction base="xs:string">
@@ -181,7 +182,15 @@
 					</xs:restriction>
 				</xs:simpleType>
 			</xs:element>
-			<xs:element name="procedimentAdjudicacio">
+			<xs:element minOccurs="0" name="procedimentAdjudicacio">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:minLength value="1"/>
+						<xs:maxLength value="2"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element minOccurs="0" name="motiuAdjudicacioDirecteNoMenor">
 				<xs:simpleType>
 					<xs:restriction base="xs:string">
 						<xs:minLength value="1"/>
@@ -283,10 +292,12 @@
 			<xs:element minOccurs="0" name="responsableContracte" type="xs:boolean"/>
 			<xs:element minOccurs="0" name="preuUnitari" type="xs:boolean"/>
 			<xs:element minOccurs="0" name="clausulesSocials" type="xs:boolean"/>
-			<xs:element name="dadesClausulesSocials" type="tns:dadesClausulesSocials" minOccurs="0"/>
+			<xs:element minOccurs="0" name="dadesClausulesSocials" type="tns:dadesClausulesSocials"/>
 			<xs:element minOccurs="0" name="clausulesAmbientals" type="xs:boolean"/>
 			<xs:element minOccurs="0" name="clausulesArbitratge" type="xs:boolean"/>
 			<xs:element minOccurs="0" name="clausulesRDI" type="xs:boolean"/>
+			<xs:element minOccurs="0" name="clausulaEtica" type="xs:boolean"/>
+			<xs:element minOccurs="0" name="clausulaLinguistica" type="xs:boolean"/>
 			<xs:element minOccurs="0" name="contracteComplementari" type="xs:boolean"/>
 			<xs:element minOccurs="0" name="classificacioEmpresarial" type="xs:boolean"/>
 			<xs:element minOccurs="0" name="modalitatDeterminacioPreus">
@@ -328,12 +339,13 @@
 						<xs:maxLength value="2"/>
 					</xs:restriction>
 				</xs:simpleType>
-			</xs:element>			
+			</xs:element>
+			<xs:element name="metodologiaBim" type="xs:boolean"/>
 		</xs:sequence>
 	</xs:complexType>
 	<xs:complexType name="dadesClausulesSocials">
 		<xs:sequence>
-			<xs:element name="codi" type="xs:string" maxOccurs="unbounded"/>
+			<xs:element maxOccurs="unbounded" minOccurs="1" name="codi" type="xs:string"/>
 		</xs:sequence>
 	</xs:complexType>
 	<xs:complexType name="lots">
@@ -446,7 +458,7 @@
 					</xs:restriction>
 				</xs:simpleType>
 			</xs:element>
-			<xs:element name="importSubvencioAdministracioPER" minOccurs="0">
+			<xs:element minOccurs="0" name="importSubvencioAdministracioPER">
 				<xs:simpleType>
 					<xs:restriction base="xs:decimal">
 						<xs:totalDigits value="4"/>
@@ -506,14 +518,14 @@
 					</xs:restriction>
 				</xs:simpleType>
 			</xs:element>
-			<xs:element name="mesosTermini">
+			<xs:element minOccurs="0" name="mesosTermini">
 				<xs:simpleType>
 					<xs:restriction base="xs:int">
 						<xs:totalDigits value="3"/>
 					</xs:restriction>
 				</xs:simpleType>
 			</xs:element>
-			<xs:element name="diesTermini">
+			<xs:element minOccurs="0" name="diesTermini">
 				<xs:simpleType>
 					<xs:restriction base="xs:int">
 						<xs:totalDigits value="3"/>
@@ -552,7 +564,7 @@
 					</xs:restriction>
 				</xs:simpleType>
 			</xs:element>
-			<xs:element name="previstaRevisioPreus" type="xs:boolean" minOccurs="0"/>
+			<xs:element minOccurs="0" name="previstaRevisioPreus" type="xs:boolean"/>
 			<xs:element name="lotDesert" type="xs:boolean"/>
 			<xs:element minOccurs="0" name="tipusProducte">
 				<xs:simpleType>
@@ -564,6 +576,7 @@
 			</xs:element>
 			<xs:element minOccurs="0" name="obraPublica" type="xs:boolean"/>
 			<xs:element minOccurs="0" name="dataInici" type="xs:date"/>
+			<xs:element minOccurs="0" name="dataFiPrevista" type="xs:date"/>
 			<xs:element name="estudiDictamen" type="xs:boolean"/>
 			<xs:element minOccurs="0" name="partidaPressupostaria">
 				<xs:simpleType>
@@ -629,7 +642,7 @@
 				</xs:simpleType>
 			</xs:element>
 			<xs:element minOccurs="0" name="garantiaProvisional" type="xs:boolean"/>
-			<xs:element name="garantiaProvisionalImport" minOccurs="0">
+			<xs:element minOccurs="0" name="garantiaProvisionalImport">
 				<xs:simpleType>
 					<xs:restriction base="xs:decimal">
 						<xs:totalDigits value="15"/>
@@ -646,7 +659,7 @@
 				</xs:simpleType>
 			</xs:element>
 			<xs:element minOccurs="0" name="garantiaDefinitiva" type="xs:boolean"/>
-			<xs:element name="garantiaDefinitivaImport" minOccurs="0">
+			<xs:element minOccurs="0" name="garantiaDefinitivaImport">
 				<xs:simpleType>
 					<xs:restriction base="xs:decimal">
 						<xs:totalDigits value="15"/>
@@ -663,7 +676,7 @@
 				</xs:simpleType>
 			</xs:element>
 			<xs:element minOccurs="0" name="garantiaComplementaria" type="xs:boolean"/>
-			<xs:element name="garantiaComplementariaImport" minOccurs="0">
+			<xs:element minOccurs="0" name="garantiaComplementariaImport">
 				<xs:simpleType>
 					<xs:restriction base="xs:decimal">
 						<xs:totalDigits value="15"/>
@@ -680,7 +693,7 @@
 				</xs:simpleType>
 			</xs:element>
 			<xs:element minOccurs="0" name="garantiaGlobal" type="xs:boolean"/>
-			<xs:element name="garantiaGlobalImport" minOccurs="0">
+			<xs:element minOccurs="0" name="garantiaGlobalImport">
 				<xs:simpleType>
 					<xs:restriction base="xs:decimal">
 						<xs:totalDigits value="15"/>
@@ -725,7 +738,7 @@
 				<xs:simpleType>
 					<xs:restriction base="xs:string">
 						<xs:minLength value="1"/>
-						<xs:maxLength value="15"/>
+						<xs:maxLength value="30"/>
 					</xs:restriction>
 				</xs:simpleType>
 			</xs:element>
@@ -734,6 +747,13 @@
 					<xs:restriction base="xs:string">
 						<xs:minLength value="1"/>
 						<xs:maxLength value="700"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element minOccurs="0" name="classeEmpresa">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:length value="1"/>
 					</xs:restriction>
 				</xs:simpleType>
 			</xs:element>
@@ -766,7 +786,7 @@
 				<xs:simpleType>
 					<xs:restriction base="xs:string">
 						<xs:minLength value="1"/>
-						<xs:maxLength value="15"/>
+						<xs:maxLength value="30"/>
 					</xs:restriction>
 				</xs:simpleType>
 			</xs:element>
@@ -779,6 +799,13 @@
 				</xs:simpleType>
 			</xs:element>
 			<xs:element name="empreses" type="tns:empresesWS"/>
+			<xs:element minOccurs="0" name="classeEmpresa">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:length value="1"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
 			<xs:element minOccurs="0" name="pais">
 				<xs:simpleType>
 					<xs:restriction base="xs:string">
@@ -878,7 +905,7 @@
 					</xs:restriction>
 				</xs:simpleType>
 			</xs:element>
-			<xs:element name="importComplimentIVA">
+			<xs:element minOccurs="0" name="importComplimentIVA">
 				<xs:simpleType>
 					<xs:restriction base="xs:decimal">
 						<xs:totalDigits value="13"/>
@@ -905,7 +932,7 @@
 					</xs:restriction>
 				</xs:simpleType>
 			</xs:element>
-			<xs:element name="importLiquidacioIVA">
+			<xs:element minOccurs="0" name="importLiquidacioIVA">
 				<xs:simpleType>
 					<xs:restriction base="xs:decimal">
 						<xs:totalDigits value="13"/>
@@ -995,7 +1022,7 @@
 	</xs:complexType>
 	<xs:complexType name="dadesProrroga">
 		<xs:sequence>
-			<xs:element name="expedient" minOccurs="0">
+			<xs:element minOccurs="0" name="expedient">
 				<xs:simpleType>
 					<xs:restriction base="xs:string">
 						<xs:minLength value="1"/>
@@ -1004,7 +1031,7 @@
 				</xs:simpleType>
 			</xs:element>
 			<xs:element minOccurs="0" name="dataFormalitzacio" type="xs:date"/>
-			<xs:element name="anualitatsProrroga" type="xs:boolean"/>
+			<xs:element minOccurs="0" name="anualitatsProrroga" type="xs:boolean"/>
 			<xs:element minOccurs="0" name="dataAcord" type="xs:date"/>
 			<xs:element minOccurs="0" name="importAdjudicacio">
 				<xs:simpleType>
@@ -1100,7 +1127,8 @@
 	</xs:complexType>
 	<xs:complexType name="dadesModificacioProrroga">
 		<xs:sequence>
-			<xs:element name="tipusModificacio" type="xs:string"/>
+			<xs:element minOccurs="0" name="tipusModificacio" type="xs:string"/>
+			<xs:element minOccurs="0" name="dadesTipusModificacio" type="tns:dadesTipusModificacio"/>
 			<xs:element minOccurs="0" name="importModificacio" type="xs:decimal"/>
 			<xs:element minOccurs="0" name="importModificacioIVA" type="xs:decimal"/>
 			<xs:element name="modificacioSuperior" type="xs:boolean"/>
@@ -1108,7 +1136,7 @@
 			<xs:element minOccurs="0" name="anysTermini" type="xs:int"/>
 			<xs:element minOccurs="0" name="mesosTermini" type="xs:int"/>
 			<xs:element minOccurs="0" name="diesTermini" type="xs:int"/>
-			<xs:element name="expedient" minOccurs="0">
+			<xs:element minOccurs="0" name="expedient">
 				<xs:simpleType>
 					<xs:restriction base="xs:string">
 						<xs:minLength value="1"/>
@@ -1174,7 +1202,7 @@
 	</xs:complexType>
 	<xs:complexType name="dadesCessio">
 		<xs:sequence>
-			<xs:element minOccurs="0" name="dataAprovacio" type="xs:date"/>
+			<xs:element name="dataAprovacio" type="xs:date"/>
 			<xs:element minOccurs="0" name="dataInici" type="xs:date"/>
 			<xs:element minOccurs="0" name="importRestant">
 				<xs:simpleType>
@@ -1410,14 +1438,6 @@
 	</xs:complexType>
 	<xs:complexType name="fitxer">
 		<xs:sequence>
-			<xs:element minOccurs="0" name="refFitxerPCI">
-				<xs:simpleType>
-					<xs:restriction base="xs:string">
-						<xs:minLength value="1"/>
-						<xs:maxLength value="50"/>
-					</xs:restriction>
-				</xs:simpleType>
-			</xs:element>
 			<xs:element minOccurs="0" name="idDocumentExtern">
 				<xs:simpleType>
 					<xs:restriction base="xs:string">
@@ -1434,6 +1454,14 @@
 					</xs:restriction>
 				</xs:simpleType>
 			</xs:element>
+            <xs:element minOccurs="0" name="refFitxerPCI">
+              <xs:simpleType>
+                <xs:restriction base="xs:string">
+                  <xs:minLength value="1"/>
+                  <xs:maxLength value="20"/>
+                </xs:restriction>
+              </xs:simpleType>
+            </xs:element>
 			<xs:element minOccurs="0" name="contingut" ns1:expectedContentTypes="application/octet-stream" type="xs:base64Binary" xmlns:ns1="http://www.w3.org/2005/05/xmlmime"/>
 		</xs:sequence>
 	</xs:complexType>
@@ -1453,7 +1481,8 @@
 	</xs:complexType>
 	<xs:complexType name="dadesModificacioLot">
 		<xs:sequence>
-			<xs:element name="tipusModificacio" type="xs:string"/>
+			<xs:element minOccurs="0" name="tipusModificacio" type="xs:string"/>
+			<xs:element minOccurs="0" name="dadesTipusModificacio" type="tns:dadesTipusModificacio"/>
 			<xs:element minOccurs="0" name="importModificacio" type="xs:decimal"/>
 			<xs:element minOccurs="0" name="importModificacioIVA" type="xs:decimal"/>
 			<xs:element name="modificacioSuperior" type="xs:boolean"/>
@@ -1461,7 +1490,7 @@
 			<xs:element minOccurs="0" name="anysTermini" type="xs:int"/>
 			<xs:element minOccurs="0" name="mesosTermini" type="xs:int"/>
 			<xs:element minOccurs="0" name="diesTermini" type="xs:int"/>
-			<xs:element name="expedient" minOccurs="0">
+			<xs:element minOccurs="0" name="expedient">
 				<xs:simpleType>
 					<xs:restriction base="xs:string">
 						<xs:minLength value="1"/>
@@ -1472,6 +1501,11 @@
 			<xs:element name="causaModificacio" type="xs:string"/>
 		</xs:sequence>
 	</xs:complexType>
+	<xs:complexType name="dadesTipusModificacio">
+		<xs:sequence>
+			<xs:element maxOccurs="unbounded" minOccurs="1" name="codi" type="xs:string"/>
+		</xs:sequence>
+	</xs:complexType>			
 	<xs:complexType name="modificacionsAnualitatLot">
 		<xs:sequence>
 			<xs:element maxOccurs="unbounded" name="modificacioAnualitatLot" type="tns:modificacioAnualitatLot"/>
