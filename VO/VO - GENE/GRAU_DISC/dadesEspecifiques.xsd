@@ -49,14 +49,14 @@
 	<xs:element name="respostaConsultaDiscapacitatTotal">
 		<xs:complexType>
 			<xs:sequence>
-				<xs:element ref="dadesPersona" minOccurs="0"/>			
+				<xs:element ref="dadesPersona" minOccurs="0"/>
 				<xs:element name="resposta" type="tRespostaTotal" minOccurs="0"/>
 				<xs:element ref="resultat"/>
 			</xs:sequence>
 		</xs:complexType>
 	</xs:element>
 	<xs:complexType name="tRespostaTotal">
-		<xs:all>
+		<xs:sequence>
 			<xs:element name="reconeixement" type="xs:string"/>
 			<xs:element name="grauDiscapacitat" type="xs:decimal" minOccurs="0"/>
 			<xs:element name="dataEfecte" type="xs:string" minOccurs="0"/>
@@ -66,7 +66,46 @@
 			<xs:element name="validesa" type="xs:string" minOccurs="0"/>
 			<xs:element name="dataVenciment" type="xs:string" minOccurs="0"/>
 			<xs:element name="missatge" type="xs:string" minOccurs="0"/>
-		</xs:all>
+		</xs:sequence>
+	</xs:complexType>
+	<!-- ======================================================= -->
+	<!-- Consulta ampliada                               					                                 -->
+	<!-- ======================================================= -->
+	<xs:element name="peticioConsultaDiscapacitatAmpliada">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="dadesPersona" minOccurs="0"/>
+				<xs:element name="consentiment" type="xs:boolean"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="respostaConsultaDiscapacitatAmpliada">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="peticioConsultaDiscapacitatAmpliada" minOccurs="0"/>
+				<xs:element name="resposta" type="tRespostaAmpliada" minOccurs="0"/>
+				<xs:element ref="resultat"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:complexType name="tRespostaAmpliada">
+		<xs:complexContent>
+			<xs:extension base="tRespostaTotal">
+				<xs:sequence>
+					<xs:element name="identificador" type="xs:string" minOccurs="0"/>
+					<xs:element name="nom" type="xs:string" minOccurs="0"/>
+					<xs:element name="cognoms" type="xs:string" minOccurs="0"/>
+					<xs:element name="dataNaixement" type="xs:string" minOccurs="0"/>
+					<xs:element name="consentiment" type="xs:string" minOccurs="0"/>
+					<xs:element name="fisica" type="xs:string" minOccurs="0"/>
+					<xs:element name="psiquica" type="xs:string" minOccurs="0"/>
+					<xs:element name="sensorial" type="xs:string" minOccurs="0"/>
+					<xs:element name="intelectual" type="xs:string" minOccurs="0"/>
+					<xs:element name="malaltiaMental" type="xs:string" minOccurs="0"/>
+					<xs:element name="reialDecret" type="xs:string" minOccurs="0"/>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
 	</xs:complexType>
 	<!-- ======================================================= -->
 	<!-- Resultat                                                                                                  -->
