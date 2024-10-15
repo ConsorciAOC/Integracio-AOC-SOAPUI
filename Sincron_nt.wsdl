@@ -79,6 +79,7 @@
 					<xs:restriction base="xs:string">
 						<xs:enumeration value="Si"/>
 						<xs:enumeration value="Ley"/>
+						<xs:enumeration value="NoOpo"/>
 					</xs:restriction>
 				</xs:simpleType>
 			</xs:element>

@@ -79,6 +79,7 @@
           <xs:restriction base="xs:string">
             <xs:enumeration value="Si"/>
             <xs:enumeration value="Ley"/>
+            <xs:enumeration value="NoOpo"/>
           </xs:restriction>
         </xs:simpleType>
       </xs:element>
@@ -2302,7 +2303,855 @@
          </pet:Peticion>\r
       </open:procesa>\r
    </soapenv:Body>\r
-</soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://www.openuri.org/procesa"/><con:wsrmConfig version="1.2"/></con:call></con:operation></con:interface><con:testSuite id="81efedd5-37fa-4ca2-9655-5155a86ba137" name="SincronSoap TestSuite"><con:settings/><con:runType>SEQUENTIAL</con:runType><con:testCase id="32f96ec7-31c9-42ae-987e-ceb8dd6b796a" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="procesa TestCase" searchProperties="true"><con:settings/><con:testStep type="properties" name="Properties" id="e6287cea-ca3f-45a1-a27e-f8062f44a5d4"><con:settings/><con:config xsi:type="con:PropertiesStep" saveFirst="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:properties><con:property><con:name>NombreCompletoFuncionario</con:name><con:value>PROVA PROVA PROVA</con:value></con:property><con:property><con:name>NIFFuncionario</con:name><con:value>12345678Z</con:value></con:property><con:property><con:name>IdentificadorSolicitante</con:name><con:value>9821920002</con:value></con:property></con:properties></con:config></con:testStep><con:testStep type="request" id="0eaa2446-f41d-4792-a3c4-5465d0124fc3" name="NT_PROCESAR_TRAMESA - MTOM"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>SincronSoap</con:interface><con:operation>procesa</con:operation><con:request name="NT_PROCESAR_TRAMESA - MTOM" id="30d66e2b-c1c9-435f-9ad3-d660ba2dc9b9"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting><con:setting id="WsdlSettings@enable-mtom">true</con:setting><con:setting id="com.eviware.soapui.impl.support.AbstractHttpRequest@follow-redirects">true</con:setting><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@force_mtom">false</con:setting><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@enable_inline_files">false</con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>https://serveis3-pre.nt.aoc.cat:443/siri-proxy/services/Sincron</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:open="http://www.openuri.org/" xmlns:pet="http://gencat.net/scsp/esquemes/peticion">\r
+</soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://www.openuri.org/procesa"/><con:wsrmConfig version="1.2"/></con:call><con:call id="52cf0158-a81f-4a4c-be72-2aabfddc537a" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>https://serveis3-pre.nt.aoc.cat:443/siri-proxy/services/Sincron</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:open="http://www.openuri.org/" xmlns:pet="http://gencat.net/scsp/esquemes/peticion" xmlns:v4="http://www.aocat.net/NT/v4.0">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <open:procesa>\r
+         <pet:Peticion>\r
+            <!--You may enter the following 2 items in any order-->\r
+            <pet:Atributos>\r
+               <!--You may enter the following 11 items in any order-->\r
+               <pet:IdPeticion>?</pet:IdPeticion>\r
+               <pet:NumElementos>?</pet:NumElementos>\r
+               <pet:TimeStamp>?</pet:TimeStamp>\r
+               <!--Optional:-->\r
+               <pet:Estado>\r
+                  <!--You may enter the following 4 items in any order-->\r
+                  <!--Optional:-->\r
+                  <pet:CodigoEstado>?</pet:CodigoEstado>\r
+                  <!--Optional:-->\r
+                  <pet:CodigoEstadoSecundario>?</pet:CodigoEstadoSecundario>\r
+                  <!--Optional:-->\r
+                  <pet:LiteralError>?</pet:LiteralError>\r
+                  <!--Optional:-->\r
+                  <pet:TiempoEstimadoRespuesta>?</pet:TiempoEstimadoRespuesta>\r
+               </pet:Estado>\r
+               <pet:CodigoCertificado>?</pet:CodigoCertificado>\r
+               <pet:CodigoProducto>?</pet:CodigoProducto>\r
+               <!--Optional:-->\r
+               <pet:DatosAutorizacion>\r
+                  <!--You may enter the following 3 items in any order-->\r
+                  <pet:IdentificadorSolicitante>?</pet:IdentificadorSolicitante>\r
+                  <pet:NombreSolicitante>?</pet:NombreSolicitante>\r
+                  <pet:Finalidad>?</pet:Finalidad>\r
+               </pet:DatosAutorizacion>\r
+               <!--Optional:-->\r
+               <pet:Emisor>\r
+                  <!--You may enter the following 2 items in any order-->\r
+                  <pet:NifEmisor>?</pet:NifEmisor>\r
+                  <pet:NombreEmisor>?</pet:NombreEmisor>\r
+               </pet:Emisor>\r
+               <!--Optional:-->\r
+               <pet:IdSolicitanteOriginal>?</pet:IdSolicitanteOriginal>\r
+               <!--Optional:-->\r
+               <pet:NomSolicitanteOriginal>?</pet:NomSolicitanteOriginal>\r
+               <!--Optional:-->\r
+               <pet:Funcionario>\r
+                  <!--Optional:-->\r
+                  <pet:NombreCompletoFuncionario>?</pet:NombreCompletoFuncionario>\r
+                  <!--Optional:-->\r
+                  <pet:NifFuncionario>?</pet:NifFuncionario>\r
+                  <!--Optional:-->\r
+                  <pet:EMailFuncionario>?</pet:EMailFuncionario>\r
+                  <!--Optional:-->\r
+                  <pet:CodigoOrganismoFuncionario>?</pet:CodigoOrganismoFuncionario>\r
+                  <!--Optional:-->\r
+                  <pet:CertificadoDigital>cid:288921461002</pet:CertificadoDigital>\r
+               </pet:Funcionario>\r
+            </pet:Atributos>\r
+            <pet:Solicitudes>\r
+               <!--1 or more repetitions:-->\r
+               <pet:SolicitudTransmision>\r
+                  <!--You may enter the following 2 items in any order-->\r
+                  <pet:DatosGenericos>\r
+                     <!--You may enter the following 5 items in any order-->\r
+                     <!--Optional:-->\r
+                     <pet:Emisor>\r
+                        <!--You may enter the following 2 items in any order-->\r
+                        <pet:NifEmisor>?</pet:NifEmisor>\r
+                        <pet:NombreEmisor>?</pet:NombreEmisor>\r
+                     </pet:Emisor>\r
+                     <pet:Solicitante>\r
+                        <pet:IdentificadorSolicitante>?</pet:IdentificadorSolicitante>\r
+                        <pet:NombreSolicitante>?</pet:NombreSolicitante>\r
+                        <!--You have a CHOICE of the next 2 items at this level-->\r
+                        <pet:Finalidad>?</pet:Finalidad>\r
+                        <pet:Procedimiento>?</pet:Procedimiento>\r
+                        <pet:Consentimiento>?</pet:Consentimiento>\r
+                        <!--Optional:-->\r
+                        <pet:Funcionario>\r
+                           <!--Optional:-->\r
+                           <pet:NombreCompletoFuncionario>?</pet:NombreCompletoFuncionario>\r
+                           <!--Optional:-->\r
+                           <pet:NifFuncionario>?</pet:NifFuncionario>\r
+                           <!--Optional:-->\r
+                           <pet:EMailFuncionario>?</pet:EMailFuncionario>\r
+                           <!--Optional:-->\r
+                           <pet:CodigoOrganismoFuncionario>?</pet:CodigoOrganismoFuncionario>\r
+                           <!--Optional:-->\r
+                           <pet:CertificadoDigital>cid:1153819370002</pet:CertificadoDigital>\r
+                        </pet:Funcionario>\r
+                     </pet:Solicitante>\r
+                     <!--Optional:-->\r
+                     <pet:Titular>\r
+                        <pet:TipoDocumentacion>?</pet:TipoDocumentacion>\r
+                        <pet:Documentacion>?</pet:Documentacion>\r
+                        <!--Optional:-->\r
+                        <pet:NombreCompleto>?</pet:NombreCompleto>\r
+                        <!--Optional:-->\r
+                        <pet:Nombre>?</pet:Nombre>\r
+                        <!--Optional:-->\r
+                        <pet:Apellido1>?</pet:Apellido1>\r
+                        <!--Optional:-->\r
+                        <pet:Apellido2>?</pet:Apellido2>\r
+                     </pet:Titular>\r
+                     <pet:Transmision>\r
+                        <!--You may enter the following 4 items in any order-->\r
+                        <pet:CodigoCertificado>?</pet:CodigoCertificado>\r
+                        <pet:IdSolicitud>?</pet:IdSolicitud>\r
+                        <!--Optional:-->\r
+                        <pet:IdTransmision>?</pet:IdTransmision>\r
+                        <!--Optional:-->\r
+                        <pet:FechaGeneracion>?</pet:FechaGeneracion>\r
+                     </pet:Transmision>\r
+                     <!--Optional:-->\r
+                     <pet:Ficheros>\r
+                        <!--1 or more repetitions:-->\r
+                        <pet:Fichero>\r
+                           <!--Optional:-->\r
+                           <pet:NombreFichero>?</pet:NombreFichero>\r
+                           <!--You have a CHOICE of the next 3 items at this level-->\r
+                           <pet:RutaFichero>?</pet:RutaFichero>\r
+                           <pet:URLDescarga>?</pet:URLDescarga>\r
+                           <pet:Contenido>cid:1341746279968</pet:Contenido>\r
+                           <pet:Id>?</pet:Id>\r
+                           <!--Optional:-->\r
+                           <pet:Hash>cid:127939904165</pet:Hash>\r
+                           <!--Optional:-->\r
+                           <pet:Firma>cid:1411322715900</pet:Firma>\r
+                           <!--Optional:-->\r
+                           <pet:Via>?</pet:Via>\r
+                        </pet:Fichero>\r
+                     </pet:Ficheros>\r
+                  </pet:DatosGenericos>\r
+                  <!--Optional:-->\r
+                  <pet:DatosEspecificos>\r
+                     <!--You have a CHOICE of the next 6 items at this level-->\r
+                     <!--Optional:-->\r
+                     <v4:PeticioProcessarTramesa>\r
+                        <!--Optional:-->\r
+                        <v4:BackOffice>?</v4:BackOffice>\r
+                        <v4:Usuari>\r
+                           <!--You have a CHOICE of the next 4 items at this level-->\r
+                           <v4:Empleat>\r
+                              <v4:CodiOrganisme>?</v4:CodiOrganisme>\r
+                              <v4:CodiDepartament>?</v4:CodiDepartament>\r
+                           </v4:Empleat>\r
+                           <v4:Ciutada>\r
+                              <!--You have a CHOICE of the next 2 items at this level-->\r
+                              <v4:VALIdAccessToken>?</v4:VALIdAccessToken>\r
+                              <v4:IdParaulaPas>?</v4:IdParaulaPas>\r
+                              <v4:ParaulaPas>?</v4:ParaulaPas>\r
+                           </v4:Ciutada>\r
+                           <v4:Representant>\r
+                              <v4:VALIdAccessToken>?</v4:VALIdAccessToken>\r
+                              <v4:Interessat>\r
+                                 <!--You have a CHOICE of the next 2 items at this level-->\r
+                                 <v4:PersonaFisica>\r
+                                    <!--You have a CHOICE of the next 3 items at this level-->\r
+                                    <v4:NIF>?</v4:NIF>\r
+                                    <v4:Passaport Pais="?">?</v4:Passaport>\r
+                                    <v4:IDC Pais="?">?</v4:IDC>\r
+                                 </v4:PersonaFisica>\r
+                                 <v4:PersonaJuridica>\r
+                                    <!--You have a CHOICE of the next 2 items at this level-->\r
+                                    <v4:CIF>?</v4:CIF>\r
+                                    <v4:VAT Pais="?">?</v4:VAT>\r
+                                 </v4:PersonaJuridica>\r
+                              </v4:Interessat>\r
+                           </v4:Representant>\r
+                           <v4:FuncionariHabilitat>\r
+                              <v4:VALIdAccessToken>?</v4:VALIdAccessToken>\r
+                              <v4:Interessat>\r
+                                 <!--You have a CHOICE of the next 2 items at this level-->\r
+                                 <v4:PersonaFisica>\r
+                                    <!--You have a CHOICE of the next 3 items at this level-->\r
+                                    <v4:NIF>?</v4:NIF>\r
+                                    <v4:Passaport Pais="?">?</v4:Passaport>\r
+                                    <v4:IDC Pais="?">?</v4:IDC>\r
+                                 </v4:PersonaFisica>\r
+                                 <v4:PersonaJuridica>\r
+                                    <!--You have a CHOICE of the next 2 items at this level-->\r
+                                    <v4:CIF>?</v4:CIF>\r
+                                    <v4:VAT Pais="?">?</v4:VAT>\r
+                                 </v4:PersonaJuridica>\r
+                              </v4:Interessat>\r
+                           </v4:FuncionariHabilitat>\r
+                        </v4:Usuari>\r
+                        <v4:Tramesa>\r
+                           <!--Optional:-->\r
+                           <v4:DadesAvisos>\r
+                              <!--Optional:-->\r
+                              <v4:DiesAvisos>\r
+                                 <!--Zero or more repetitions:-->\r
+                                 <v4:DiaAvis>?</v4:DiaAvis>\r
+                              </v4:DiesAvisos>\r
+                           </v4:DadesAvisos>\r
+                           <v4:DadesOfici>\r
+                              <v4:CosNotificacio>?</v4:CosNotificacio>\r
+                              <!--Optional:-->\r
+                              <v4:PeuRecurs>?</v4:PeuRecurs>\r
+                              <!--Optional:-->\r
+                              <v4:OficinaRegistre>?</v4:OficinaRegistre>\r
+                              <!--Optional:-->\r
+                              <v4:UnitatOrganitzativa>?</v4:UnitatOrganitzativa>\r
+                           </v4:DadesOfici>\r
+                           <v4:Documents>\r
+                              <v4:Resolucio>\r
+                                 <v4:Nom>?</v4:Nom>\r
+                                 <!--Optional:-->\r
+                                 <v4:Hash Algoritme="?">cid:1057029663297</v4:Hash>\r
+                                 <!--Optional:-->\r
+                                 <v4:Mida>?</v4:Mida>\r
+                                 <!--Optional:-->\r
+                                 <v4:UUID>?</v4:UUID>\r
+                                 <!--You have a CHOICE of the next 6 items at this level-->\r
+                                 <v4:Dades>cid:1386984765873</v4:Dades>\r
+                                 <v4:URLDescarrega>?</v4:URLDescarrega>\r
+                                 <v4:Ruta>?</v4:Ruta>\r
+                                 <v4:UUIDFitxer>?</v4:UUIDFitxer>\r
+                                 <v4:UUIDDocument>?</v4:UUIDDocument>\r
+                                 <v4:IdFicheroPCI>?</v4:IdFicheroPCI>\r
+                              </v4:Resolucio>\r
+                              <!--0 to 4 repetitions:-->\r
+                              <v4:Annex>\r
+                                 <v4:Nom>?</v4:Nom>\r
+                                 <!--Optional:-->\r
+                                 <v4:Hash Algoritme="?">cid:1027482250894</v4:Hash>\r
+                                 <!--Optional:-->\r
+                                 <v4:Mida>?</v4:Mida>\r
+                                 <!--Optional:-->\r
+                                 <v4:UUID>?</v4:UUID>\r
+                                 <!--You have a CHOICE of the next 6 items at this level-->\r
+                                 <v4:Dades>cid:435557930923</v4:Dades>\r
+                                 <v4:URLDescarrega>?</v4:URLDescarrega>\r
+                                 <v4:Ruta>?</v4:Ruta>\r
+                                 <v4:UUIDFitxer>?</v4:UUIDFitxer>\r
+                                 <v4:UUIDDocument>?</v4:UUIDDocument>\r
+                                 <v4:IdFicheroPCI>?</v4:IdFicheroPCI>\r
+                              </v4:Annex>\r
+                           </v4:Documents>\r
+                           <!--1 or more repetitions:-->\r
+                           <v4:Notificacio>\r
+                              <v4:Titol>?</v4:Titol>\r
+                              <v4:Referencia>?</v4:Referencia>\r
+                              <!--Optional:-->\r
+                              <v4:IdNotificacioEmissor>?</v4:IdNotificacioEmissor>\r
+                              <!--You have a CHOICE of the next 2 items at this level-->\r
+                              <v4:DadesRegistre>\r
+                                 <v4:NumeroRegistre>?</v4:NumeroRegistre>\r
+                                 <v4:DataRegistre>?</v4:DataRegistre>\r
+                              </v4:DadesRegistre>\r
+                              <v4:SenseRegistre>?</v4:SenseRegistre>\r
+                              <v4:TipusObjecte>?</v4:TipusObjecte>\r
+                              <v4:TipusAcces>?</v4:TipusAcces>\r
+                              <!--Optional:-->\r
+                              <v4:DiesExpiracio>?</v4:DiesExpiracio>\r
+                              <!--Optional:-->\r
+                              <v4:Etiquetes>\r
+                                 <!--1 or more repetitions:-->\r
+                                 <v4:Etiqueta Idioma="?">?</v4:Etiqueta>\r
+                              </v4:Etiquetes>\r
+                              <!--Optional:-->\r
+                              <v4:Idioma>?</v4:Idioma>\r
+                              <!--Optional:-->\r
+                              <v4:Canal>?</v4:Canal>\r
+                              <!--Optional:-->\r
+                              <v4:ProcedimentSIA>?</v4:ProcedimentSIA>\r
+                              <!--Optional:-->\r
+                              <v4:ProcedimentQuadreClassificacio>?</v4:ProcedimentQuadreClassificacio>\r
+                              <!--Optional:-->\r
+                              <v4:Expedient>?</v4:Expedient>\r
+                              <!--Optional:-->\r
+                              <v4:Tramit>?</v4:Tramit>\r
+                              <!--Optional:-->\r
+                              <v4:NumeroCas>?</v4:NumeroCas>\r
+                              <v4:Destinataris>\r
+                                 <!--1 to 100 repetitions:-->\r
+                                 <v4:Destinatari>\r
+                                    <!--You have a CHOICE of the next 2 items at this level-->\r
+                                    <v4:PersonaFisica>\r
+                                       <!--Optional:-->\r
+                                       <v4:BustiesCorreu>\r
+                                          <!--1 or more repetitions:-->\r
+                                          <v4:BustiaCorreu>?</v4:BustiaCorreu>\r
+                                       </v4:BustiesCorreu>\r
+                                       <!--Optional:-->\r
+                                       <v4:Telefons>\r
+                                          <!--1 or more repetitions:-->\r
+                                          <v4:Telefon>?</v4:Telefon>\r
+                                       </v4:Telefons>\r
+                                       <!--Optional:-->\r
+                                       <v4:PersonesAvis>\r
+                                          <!--1 or more repetitions:-->\r
+                                          <v4:PersonaAvis>\r
+                                             <v4:NomComplet>?</v4:NomComplet>\r
+                                             <!--Optional:-->\r
+                                             <v4:BustiaCorreu>?</v4:BustiaCorreu>\r
+                                             <!--Optional:-->\r
+                                             <v4:Telefon>?</v4:Telefon>\r
+                                          </v4:PersonaAvis>\r
+                                       </v4:PersonesAvis>\r
+                                       <v4:DocumentIdentificatiu>\r
+                                          <!--You have a CHOICE of the next 3 items at this level-->\r
+                                          <v4:NIF>?</v4:NIF>\r
+                                          <v4:Passaport Pais="?">?</v4:Passaport>\r
+                                          <v4:IDC Pais="?">?</v4:IDC>\r
+                                       </v4:DocumentIdentificatiu>\r
+                                       <v4:Nom>?</v4:Nom>\r
+                                       <!--Optional:-->\r
+                                       <v4:NomSentit>?</v4:NomSentit>\r
+                                       <v4:PrimerCognom>?</v4:PrimerCognom>\r
+                                       <!--Optional:-->\r
+                                       <v4:SegonCognom>?</v4:SegonCognom>\r
+                                    </v4:PersonaFisica>\r
+                                    <v4:PersonaJuridica>\r
+                                       <!--Optional:-->\r
+                                       <v4:BustiesCorreu>\r
+                                          <!--1 or more repetitions:-->\r
+                                          <v4:BustiaCorreu>?</v4:BustiaCorreu>\r
+                                       </v4:BustiesCorreu>\r
+                                       <!--Optional:-->\r
+                                       <v4:Telefons>\r
+                                          <!--1 or more repetitions:-->\r
+                                          <v4:Telefon>?</v4:Telefon>\r
+                                       </v4:Telefons>\r
+                                       <!--Optional:-->\r
+                                       <v4:PersonesAvis>\r
+                                          <!--1 or more repetitions:-->\r
+                                          <v4:PersonaAvis>\r
+                                             <v4:NomComplet>?</v4:NomComplet>\r
+                                             <!--Optional:-->\r
+                                             <v4:BustiaCorreu>?</v4:BustiaCorreu>\r
+                                             <!--Optional:-->\r
+                                             <v4:Telefon>?</v4:Telefon>\r
+                                          </v4:PersonaAvis>\r
+                                       </v4:PersonesAvis>\r
+                                       <v4:DocumentIdentificatiu>\r
+                                          <!--You have a CHOICE of the next 2 items at this level-->\r
+                                          <v4:CIF>?</v4:CIF>\r
+                                          <v4:VAT Pais="?">?</v4:VAT>\r
+                                       </v4:DocumentIdentificatiu>\r
+                                       <v4:RaoSocial>?</v4:RaoSocial>\r
+                                       <!--Optional:-->\r
+                                       <v4:PersonaVinculada>\r
+                                          <v4:DocumentIdentificatiu>\r
+                                             <!--You have a CHOICE of the next 3 items at this level-->\r
+                                             <v4:NIF>?</v4:NIF>\r
+                                             <v4:Passaport Pais="?">?</v4:Passaport>\r
+                                             <v4:IDC Pais="?">?</v4:IDC>\r
+                                          </v4:DocumentIdentificatiu>\r
+                                          <v4:Nom>?</v4:Nom>\r
+                                          <!--Optional:-->\r
+                                          <v4:NomSentit>?</v4:NomSentit>\r
+                                          <v4:PrimerCognom>?</v4:PrimerCognom>\r
+                                          <!--Optional:-->\r
+                                          <v4:SegonCognom>?</v4:SegonCognom>\r
+                                       </v4:PersonaVinculada>\r
+                                    </v4:PersonaJuridica>\r
+                                    <!--Optional:-->\r
+                                    <v4:Titular>?</v4:Titular>\r
+                                    <!--Optional:-->\r
+                                    <v4:Idioma>?</v4:Idioma>\r
+                                    <!--Optional:-->\r
+                                    <v4:Obligat>?</v4:Obligat>\r
+                                 </v4:Destinatari>\r
+                              </v4:Destinataris>\r
+                           </v4:Notificacio>\r
+                        </v4:Tramesa>\r
+                     </v4:PeticioProcessarTramesa>\r
+                     <!--Optional:-->\r
+                     <v4:PeticioRecuperarReport>\r
+                        <!--Optional:-->\r
+                        <v4:BackOffice>?</v4:BackOffice>\r
+                        <v4:Usuari>\r
+                           <!--You have a CHOICE of the next 4 items at this level-->\r
+                           <v4:Empleat>\r
+                              <v4:CodiOrganisme>?</v4:CodiOrganisme>\r
+                              <v4:CodiDepartament>?</v4:CodiDepartament>\r
+                           </v4:Empleat>\r
+                           <v4:Ciutada>\r
+                              <!--You have a CHOICE of the next 2 items at this level-->\r
+                              <v4:VALIdAccessToken>?</v4:VALIdAccessToken>\r
+                              <v4:IdParaulaPas>?</v4:IdParaulaPas>\r
+                              <v4:ParaulaPas>?</v4:ParaulaPas>\r
+                           </v4:Ciutada>\r
+                           <v4:Representant>\r
+                              <v4:VALIdAccessToken>?</v4:VALIdAccessToken>\r
+                              <v4:Interessat>\r
+                                 <!--You have a CHOICE of the next 2 items at this level-->\r
+                                 <v4:PersonaFisica>\r
+                                    <!--You have a CHOICE of the next 3 items at this level-->\r
+                                    <v4:NIF>?</v4:NIF>\r
+                                    <v4:Passaport Pais="?">?</v4:Passaport>\r
+                                    <v4:IDC Pais="?">?</v4:IDC>\r
+                                 </v4:PersonaFisica>\r
+                                 <v4:PersonaJuridica>\r
+                                    <!--You have a CHOICE of the next 2 items at this level-->\r
+                                    <v4:CIF>?</v4:CIF>\r
+                                    <v4:VAT Pais="?">?</v4:VAT>\r
+                                 </v4:PersonaJuridica>\r
+                              </v4:Interessat>\r
+                           </v4:Representant>\r
+                           <v4:FuncionariHabilitat>\r
+                              <v4:VALIdAccessToken>?</v4:VALIdAccessToken>\r
+                              <v4:Interessat>\r
+                                 <!--You have a CHOICE of the next 2 items at this level-->\r
+                                 <v4:PersonaFisica>\r
+                                    <!--You have a CHOICE of the next 3 items at this level-->\r
+                                    <v4:NIF>?</v4:NIF>\r
+                                    <v4:Passaport Pais="?">?</v4:Passaport>\r
+                                    <v4:IDC Pais="?">?</v4:IDC>\r
+                                 </v4:PersonaFisica>\r
+                                 <v4:PersonaJuridica>\r
+                                    <!--You have a CHOICE of the next 2 items at this level-->\r
+                                    <v4:CIF>?</v4:CIF>\r
+                                    <v4:VAT Pais="?">?</v4:VAT>\r
+                                 </v4:PersonaJuridica>\r
+                              </v4:Interessat>\r
+                           </v4:FuncionariHabilitat>\r
+                        </v4:Usuari>\r
+                        <!--You have a CHOICE of the next 2 items at this level-->\r
+                        <v4:IdNotificacio>?</v4:IdNotificacio>\r
+                        <v4:DataReport>?</v4:DataReport>\r
+                     </v4:PeticioRecuperarReport>\r
+                     <!--Optional:-->\r
+                     <v4:PeticioParaulaPas>\r
+                        <!--Optional:-->\r
+                        <v4:BackOffice>?</v4:BackOffice>\r
+                        <v4:Usuari>\r
+                           <!--You have a CHOICE of the next 4 items at this level-->\r
+                           <v4:Empleat>\r
+                              <v4:CodiOrganisme>?</v4:CodiOrganisme>\r
+                              <v4:CodiDepartament>?</v4:CodiDepartament>\r
+                           </v4:Empleat>\r
+                           <v4:Ciutada>\r
+                              <!--You have a CHOICE of the next 2 items at this level-->\r
+                              <v4:VALIdAccessToken>?</v4:VALIdAccessToken>\r
+                              <v4:IdParaulaPas>?</v4:IdParaulaPas>\r
+                              <v4:ParaulaPas>?</v4:ParaulaPas>\r
+                           </v4:Ciutada>\r
+                           <v4:Representant>\r
+                              <v4:VALIdAccessToken>?</v4:VALIdAccessToken>\r
+                              <v4:Interessat>\r
+                                 <!--You have a CHOICE of the next 2 items at this level-->\r
+                                 <v4:PersonaFisica>\r
+                                    <!--You have a CHOICE of the next 3 items at this level-->\r
+                                    <v4:NIF>?</v4:NIF>\r
+                                    <v4:Passaport Pais="?">?</v4:Passaport>\r
+                                    <v4:IDC Pais="?">?</v4:IDC>\r
+                                 </v4:PersonaFisica>\r
+                                 <v4:PersonaJuridica>\r
+                                    <!--You have a CHOICE of the next 2 items at this level-->\r
+                                    <v4:CIF>?</v4:CIF>\r
+                                    <v4:VAT Pais="?">?</v4:VAT>\r
+                                 </v4:PersonaJuridica>\r
+                              </v4:Interessat>\r
+                           </v4:Representant>\r
+                           <v4:FuncionariHabilitat>\r
+                              <v4:VALIdAccessToken>?</v4:VALIdAccessToken>\r
+                              <v4:Interessat>\r
+                                 <!--You have a CHOICE of the next 2 items at this level-->\r
+                                 <v4:PersonaFisica>\r
+                                    <!--You have a CHOICE of the next 3 items at this level-->\r
+                                    <v4:NIF>?</v4:NIF>\r
+                                    <v4:Passaport Pais="?">?</v4:Passaport>\r
+                                    <v4:IDC Pais="?">?</v4:IDC>\r
+                                 </v4:PersonaFisica>\r
+                                 <v4:PersonaJuridica>\r
+                                    <!--You have a CHOICE of the next 2 items at this level-->\r
+                                    <v4:CIF>?</v4:CIF>\r
+                                    <v4:VAT Pais="?">?</v4:VAT>\r
+                                 </v4:PersonaJuridica>\r
+                              </v4:Interessat>\r
+                           </v4:FuncionariHabilitat>\r
+                        </v4:Usuari>\r
+                        <v4:IdNotificacio>?</v4:IdNotificacio>\r
+                        <!--You have a CHOICE of the next 2 items at this level-->\r
+                        <v4:DocumentIdentificatiuPersonaFisica>\r
+                           <!--You have a CHOICE of the next 3 items at this level-->\r
+                           <v4:NIF>?</v4:NIF>\r
+                           <v4:Passaport Pais="?">?</v4:Passaport>\r
+                           <v4:IDC Pais="?">?</v4:IDC>\r
+                        </v4:DocumentIdentificatiuPersonaFisica>\r
+                        <v4:DocumentIdentificatiuPersonaJuridica>\r
+                           <!--You have a CHOICE of the next 2 items at this level-->\r
+                           <v4:CIF>?</v4:CIF>\r
+                           <v4:VAT Pais="?">?</v4:VAT>\r
+                        </v4:DocumentIdentificatiuPersonaJuridica>\r
+                        <v4:DadesEnviament>\r
+                           <!--You have a CHOICE of the next 2 items at this level-->\r
+                           <v4:BustiaCorreu>?</v4:BustiaCorreu>\r
+                           <v4:Telefon>?</v4:Telefon>\r
+                        </v4:DadesEnviament>\r
+                     </v4:PeticioParaulaPas>\r
+                     <!--Optional:-->\r
+                     <v4:PeticioEvidencia>\r
+                        <!--Optional:-->\r
+                        <v4:BackOffice>?</v4:BackOffice>\r
+                        <v4:Usuari>\r
+                           <!--You have a CHOICE of the next 4 items at this level-->\r
+                           <v4:Empleat>\r
+                              <v4:CodiOrganisme>?</v4:CodiOrganisme>\r
+                              <v4:CodiDepartament>?</v4:CodiDepartament>\r
+                           </v4:Empleat>\r
+                           <v4:Ciutada>\r
+                              <!--You have a CHOICE of the next 2 items at this level-->\r
+                              <v4:VALIdAccessToken>?</v4:VALIdAccessToken>\r
+                              <v4:IdParaulaPas>?</v4:IdParaulaPas>\r
+                              <v4:ParaulaPas>?</v4:ParaulaPas>\r
+                           </v4:Ciutada>\r
+                           <v4:Representant>\r
+                              <v4:VALIdAccessToken>?</v4:VALIdAccessToken>\r
+                              <v4:Interessat>\r
+                                 <!--You have a CHOICE of the next 2 items at this level-->\r
+                                 <v4:PersonaFisica>\r
+                                    <!--You have a CHOICE of the next 3 items at this level-->\r
+                                    <v4:NIF>?</v4:NIF>\r
+                                    <v4:Passaport Pais="?">?</v4:Passaport>\r
+                                    <v4:IDC Pais="?">?</v4:IDC>\r
+                                 </v4:PersonaFisica>\r
+                                 <v4:PersonaJuridica>\r
+                                    <!--You have a CHOICE of the next 2 items at this level-->\r
+                                    <v4:CIF>?</v4:CIF>\r
+                                    <v4:VAT Pais="?">?</v4:VAT>\r
+                                 </v4:PersonaJuridica>\r
+                              </v4:Interessat>\r
+                           </v4:Representant>\r
+                           <v4:FuncionariHabilitat>\r
+                              <v4:VALIdAccessToken>?</v4:VALIdAccessToken>\r
+                              <v4:Interessat>\r
+                                 <!--You have a CHOICE of the next 2 items at this level-->\r
+                                 <v4:PersonaFisica>\r
+                                    <!--You have a CHOICE of the next 3 items at this level-->\r
+                                    <v4:NIF>?</v4:NIF>\r
+                                    <v4:Passaport Pais="?">?</v4:Passaport>\r
+                                    <v4:IDC Pais="?">?</v4:IDC>\r
+                                 </v4:PersonaFisica>\r
+                                 <v4:PersonaJuridica>\r
+                                    <!--You have a CHOICE of the next 2 items at this level-->\r
+                                    <v4:CIF>?</v4:CIF>\r
+                                    <v4:VAT Pais="?">?</v4:VAT>\r
+                                 </v4:PersonaJuridica>\r
+                              </v4:Interessat>\r
+                           </v4:FuncionariHabilitat>\r
+                        </v4:Usuari>\r
+                        <v4:IdNotificacio>?</v4:IdNotificacio>\r
+                        <v4:TipusEvidencia>?</v4:TipusEvidencia>\r
+                        <!--Optional:-->\r
+                        <v4:IdiomaEvidenciaPDF>?</v4:IdiomaEvidenciaPDF>\r
+                     </v4:PeticioEvidencia>\r
+                     <!--Optional:-->\r
+                     <v4:PeticioConsulta>\r
+                        <!--Optional:-->\r
+                        <v4:BackOffice>?</v4:BackOffice>\r
+                        <v4:Usuari>\r
+                           <!--You have a CHOICE of the next 4 items at this level-->\r
+                           <v4:Empleat>\r
+                              <v4:CodiOrganisme>?</v4:CodiOrganisme>\r
+                              <v4:CodiDepartament>?</v4:CodiDepartament>\r
+                           </v4:Empleat>\r
+                           <v4:Ciutada>\r
+                              <!--You have a CHOICE of the next 2 items at this level-->\r
+                              <v4:VALIdAccessToken>?</v4:VALIdAccessToken>\r
+                              <v4:IdParaulaPas>?</v4:IdParaulaPas>\r
+                              <v4:ParaulaPas>?</v4:ParaulaPas>\r
+                           </v4:Ciutada>\r
+                           <v4:Representant>\r
+                              <v4:VALIdAccessToken>?</v4:VALIdAccessToken>\r
+                              <v4:Interessat>\r
+                                 <!--You have a CHOICE of the next 2 items at this level-->\r
+                                 <v4:PersonaFisica>\r
+                                    <!--You have a CHOICE of the next 3 items at this level-->\r
+                                    <v4:NIF>?</v4:NIF>\r
+                                    <v4:Passaport Pais="?">?</v4:Passaport>\r
+                                    <v4:IDC Pais="?">?</v4:IDC>\r
+                                 </v4:PersonaFisica>\r
+                                 <v4:PersonaJuridica>\r
+                                    <!--You have a CHOICE of the next 2 items at this level-->\r
+                                    <v4:CIF>?</v4:CIF>\r
+                                    <v4:VAT Pais="?">?</v4:VAT>\r
+                                 </v4:PersonaJuridica>\r
+                              </v4:Interessat>\r
+                           </v4:Representant>\r
+                           <v4:FuncionariHabilitat>\r
+                              <v4:VALIdAccessToken>?</v4:VALIdAccessToken>\r
+                              <v4:Interessat>\r
+                                 <!--You have a CHOICE of the next 2 items at this level-->\r
+                                 <v4:PersonaFisica>\r
+                                    <!--You have a CHOICE of the next 3 items at this level-->\r
+                                    <v4:NIF>?</v4:NIF>\r
+                                    <v4:Passaport Pais="?">?</v4:Passaport>\r
+                                    <v4:IDC Pais="?">?</v4:IDC>\r
+                                 </v4:PersonaFisica>\r
+                                 <v4:PersonaJuridica>\r
+                                    <!--You have a CHOICE of the next 2 items at this level-->\r
+                                    <v4:CIF>?</v4:CIF>\r
+                                    <v4:VAT Pais="?">?</v4:VAT>\r
+                                 </v4:PersonaJuridica>\r
+                              </v4:Interessat>\r
+                           </v4:FuncionariHabilitat>\r
+                        </v4:Usuari>\r
+                        <v4:IdNotificacio>?</v4:IdNotificacio>\r
+                        <!--Optional:-->\r
+                        <v4:IncloureDadesOfici>false</v4:IncloureDadesOfici>\r
+                        <!--Optional:-->\r
+                        <v4:IncloureDocuments>false</v4:IncloureDocuments>\r
+                        <!--Optional:-->\r
+                        <v4:IncloureDestinataris>false</v4:IncloureDestinataris>\r
+                        <!--Optional:-->\r
+                        <v4:IncloureDadesSignador>false</v4:IncloureDadesSignador>\r
+                     </v4:PeticioConsulta>\r
+                     <!--Optional:-->\r
+                     <v4:PeticioCerca>\r
+                        <!--Optional:-->\r
+                        <v4:BackOffice>?</v4:BackOffice>\r
+                        <v4:Usuari>\r
+                           <!--You have a CHOICE of the next 4 items at this level-->\r
+                           <v4:Empleat>\r
+                              <v4:CodiOrganisme>?</v4:CodiOrganisme>\r
+                              <v4:CodiDepartament>?</v4:CodiDepartament>\r
+                           </v4:Empleat>\r
+                           <v4:Ciutada>\r
+                              <!--You have a CHOICE of the next 2 items at this level-->\r
+                              <v4:VALIdAccessToken>?</v4:VALIdAccessToken>\r
+                              <v4:IdParaulaPas>?</v4:IdParaulaPas>\r
+                              <v4:ParaulaPas>?</v4:ParaulaPas>\r
+                           </v4:Ciutada>\r
+                           <v4:Representant>\r
+                              <v4:VALIdAccessToken>?</v4:VALIdAccessToken>\r
+                              <v4:Interessat>\r
+                                 <!--You have a CHOICE of the next 2 items at this level-->\r
+                                 <v4:PersonaFisica>\r
+                                    <!--You have a CHOICE of the next 3 items at this level-->\r
+                                    <v4:NIF>?</v4:NIF>\r
+                                    <v4:Passaport Pais="?">?</v4:Passaport>\r
+                                    <v4:IDC Pais="?">?</v4:IDC>\r
+                                 </v4:PersonaFisica>\r
+                                 <v4:PersonaJuridica>\r
+                                    <!--You have a CHOICE of the next 2 items at this level-->\r
+                                    <v4:CIF>?</v4:CIF>\r
+                                    <v4:VAT Pais="?">?</v4:VAT>\r
+                                 </v4:PersonaJuridica>\r
+                              </v4:Interessat>\r
+                           </v4:Representant>\r
+                           <v4:FuncionariHabilitat>\r
+                              <v4:VALIdAccessToken>?</v4:VALIdAccessToken>\r
+                              <v4:Interessat>\r
+                                 <!--You have a CHOICE of the next 2 items at this level-->\r
+                                 <v4:PersonaFisica>\r
+                                    <!--You have a CHOICE of the next 3 items at this level-->\r
+                                    <v4:NIF>?</v4:NIF>\r
+                                    <v4:Passaport Pais="?">?</v4:Passaport>\r
+                                    <v4:IDC Pais="?">?</v4:IDC>\r
+                                 </v4:PersonaFisica>\r
+                                 <v4:PersonaJuridica>\r
+                                    <!--You have a CHOICE of the next 2 items at this level-->\r
+                                    <v4:CIF>?</v4:CIF>\r
+                                    <v4:VAT Pais="?">?</v4:VAT>\r
+                                 </v4:PersonaJuridica>\r
+                              </v4:Interessat>\r
+                           </v4:FuncionariHabilitat>\r
+                        </v4:Usuari>\r
+                        <v4:DadesCerca>\r
+                           <!--Optional:-->\r
+                           <v4:CriterisEntitat>\r
+                              <!--Optional:-->\r
+                              <v4:CodiOrganisme>?</v4:CodiOrganisme>\r
+                              <!--Optional:-->\r
+                              <v4:CodiDepartament>?</v4:CodiDepartament>\r
+                              <!--Optional:-->\r
+                              <v4:BackOffice>?</v4:BackOffice>\r
+                           </v4:CriterisEntitat>\r
+                           <!--Optional:-->\r
+                           <v4:CriterisDestinatari>\r
+                              <!--You have a CHOICE of the next 3 items at this level-->\r
+                              <v4:Persona>\r
+                                 <!--Optional:-->\r
+                                 <v4:BustiesCorreu>\r
+                                    <!--1 or more repetitions:-->\r
+                                    <v4:BustiaCorreu>?</v4:BustiaCorreu>\r
+                                 </v4:BustiesCorreu>\r
+                                 <!--Optional:-->\r
+                                 <v4:Telefons>\r
+                                    <!--1 or more repetitions:-->\r
+                                    <v4:Telefon>?</v4:Telefon>\r
+                                 </v4:Telefons>\r
+                              </v4:Persona>\r
+                              <v4:PersonaFisica>\r
+                                 <!--Optional:-->\r
+                                 <v4:BustiesCorreu>\r
+                                    <!--1 or more repetitions:-->\r
+                                    <v4:BustiaCorreu>?</v4:BustiaCorreu>\r
+                                 </v4:BustiesCorreu>\r
+                                 <!--Optional:-->\r
+                                 <v4:Telefons>\r
+                                    <!--1 or more repetitions:-->\r
+                                    <v4:Telefon>?</v4:Telefon>\r
+                                 </v4:Telefons>\r
+                                 <!--Optional:-->\r
+                                 <v4:DocumentIdentificatiu>\r
+                                    <!--You have a CHOICE of the next 3 items at this level-->\r
+                                    <v4:NIF>?</v4:NIF>\r
+                                    <v4:Passaport Pais="?">?</v4:Passaport>\r
+                                    <v4:IDC Pais="?">?</v4:IDC>\r
+                                 </v4:DocumentIdentificatiu>\r
+                                 <!--Optional:-->\r
+                                 <v4:Nom>?</v4:Nom>\r
+                                 <!--Optional:-->\r
+                                 <v4:NomSentit>?</v4:NomSentit>\r
+                                 <!--Optional:-->\r
+                                 <v4:PrimerCognom>?</v4:PrimerCognom>\r
+                                 <!--Optional:-->\r
+                                 <v4:SegonCognom>?</v4:SegonCognom>\r
+                              </v4:PersonaFisica>\r
+                              <v4:PersonaJuridica>\r
+                                 <!--Optional:-->\r
+                                 <v4:BustiesCorreu>\r
+                                    <!--1 or more repetitions:-->\r
+                                    <v4:BustiaCorreu>?</v4:BustiaCorreu>\r
+                                 </v4:BustiesCorreu>\r
+                                 <!--Optional:-->\r
+                                 <v4:Telefons>\r
+                                    <!--1 or more repetitions:-->\r
+                                    <v4:Telefon>?</v4:Telefon>\r
+                                 </v4:Telefons>\r
+                                 <!--Optional:-->\r
+                                 <v4:DocumentIdentificatiu>\r
+                                    <!--You have a CHOICE of the next 2 items at this level-->\r
+                                    <v4:CIF>?</v4:CIF>\r
+                                    <v4:VAT Pais="?">?</v4:VAT>\r
+                                 </v4:DocumentIdentificatiu>\r
+                                 <!--Optional:-->\r
+                                 <v4:RaoSocial>?</v4:RaoSocial>\r
+                                 <!--Optional:-->\r
+                                 <v4:PersonaVinculada>\r
+                                    <!--Optional:-->\r
+                                    <v4:DocumentIdentificatiu>\r
+                                       <!--You have a CHOICE of the next 3 items at this level-->\r
+                                       <v4:NIF>?</v4:NIF>\r
+                                       <v4:Passaport Pais="?">?</v4:Passaport>\r
+                                       <v4:IDC Pais="?">?</v4:IDC>\r
+                                    </v4:DocumentIdentificatiu>\r
+                                    <!--Optional:-->\r
+                                    <v4:Nom>?</v4:Nom>\r
+                                    <!--Optional:-->\r
+                                    <v4:NomSentit>?</v4:NomSentit>\r
+                                    <!--Optional:-->\r
+                                    <v4:PrimerCognom>?</v4:PrimerCognom>\r
+                                    <!--Optional:-->\r
+                                    <v4:SegonCognom>?</v4:SegonCognom>\r
+                                 </v4:PersonaVinculada>\r
+                              </v4:PersonaJuridica>\r
+                              <!--Optional:-->\r
+                              <v4:CanviCanal>false</v4:CanviCanal>\r
+                              <!--Optional:-->\r
+                              <v4:Obligat>?</v4:Obligat>\r
+                           </v4:CriterisDestinatari>\r
+                           <!--Optional:-->\r
+                           <v4:CriterisNotificacio>\r
+                              <!--Optional:-->\r
+                              <v4:Titol>?</v4:Titol>\r
+                              <!--Optional:-->\r
+                              <v4:IdNotificacio>\r
+                                 <v4:ValorInferior>?</v4:ValorInferior>\r
+                                 <v4:ValorSuperior>?</v4:ValorSuperior>\r
+                              </v4:IdNotificacio>\r
+                              <!--Optional:-->\r
+                              <v4:Referencia>\r
+                                 <!--You have a CHOICE of the next 2 items at this level-->\r
+                                 <v4:ValorInferior>?</v4:ValorInferior>\r
+                                 <v4:ValorSuperior>?</v4:ValorSuperior>\r
+                                 <v4:ValorAbsolut>?</v4:ValorAbsolut>\r
+                              </v4:Referencia>\r
+                              <!--Optional:-->\r
+                              <v4:NumeroRegistre>\r
+                                 <!--You have a CHOICE of the next 2 items at this level-->\r
+                                 <v4:ValorInferior>?</v4:ValorInferior>\r
+                                 <v4:ValorSuperior>?</v4:ValorSuperior>\r
+                                 <v4:ValorAbsolut>?</v4:ValorAbsolut>\r
+                              </v4:NumeroRegistre>\r
+                              <!--Optional:-->\r
+                              <v4:Estat>?</v4:Estat>\r
+                              <!--Optional:-->\r
+                              <v4:TipusAcces>?</v4:TipusAcces>\r
+                              <!--Optional:-->\r
+                              <v4:Etiquetes>\r
+                                 <!--1 or more repetitions:-->\r
+                                 <v4:Etiqueta Idioma="?">?</v4:Etiqueta>\r
+                              </v4:Etiquetes>\r
+                              <!--Optional:-->\r
+                              <v4:TipusObjecte>?</v4:TipusObjecte>\r
+                              <!--Optional:-->\r
+                              <v4:Canal>?</v4:Canal>\r
+                              <!--Optional:-->\r
+                              <v4:Consultada>?</v4:Consultada>\r
+                              <!--Optional:-->\r
+                              <v4:ProcedimentSIA>?</v4:ProcedimentSIA>\r
+                              <!--Optional:-->\r
+                              <v4:ProcedimentQuadreClassificacio>?</v4:ProcedimentQuadreClassificacio>\r
+                              <!--Optional:-->\r
+                              <v4:Expedient>?</v4:Expedient>\r
+                              <!--Optional:-->\r
+                              <v4:Tramit>?</v4:Tramit>\r
+                              <!--Optional:-->\r
+                              <v4:NumeroCas>?</v4:NumeroCas>\r
+                           </v4:CriterisNotificacio>\r
+                           <!--Optional:-->\r
+                           <v4:CriterisData>\r
+                              <!--Optional:-->\r
+                              <v4:DataCreacio>\r
+                                 <v4:DataInferior>?</v4:DataInferior>\r
+                                 <v4:DataSuperior>?</v4:DataSuperior>\r
+                              </v4:DataCreacio>\r
+                              <!--Optional:-->\r
+                              <v4:DataRegistre>\r
+                                 <v4:DataInferior>?</v4:DataInferior>\r
+                                 <v4:DataSuperior>?</v4:DataSuperior>\r
+                              </v4:DataRegistre>\r
+                              <!--Optional:-->\r
+                              <v4:DataPublicacio>\r
+                                 <v4:DataInferior>?</v4:DataInferior>\r
+                                 <v4:DataSuperior>?</v4:DataSuperior>\r
+                              </v4:DataPublicacio>\r
+                              <!--Optional:-->\r
+                              <v4:DataAcceptacioRebuig>\r
+                                 <v4:DataInferior>?</v4:DataInferior>\r
+                                 <v4:DataSuperior>?</v4:DataSuperior>\r
+                              </v4:DataAcceptacioRebuig>\r
+                              <!--Optional:-->\r
+                              <v4:DataExpiracio>\r
+                                 <v4:DataInferior>?</v4:DataInferior>\r
+                                 <v4:DataSuperior>?</v4:DataSuperior>\r
+                              </v4:DataExpiracio>\r
+                           </v4:CriterisData>\r
+                           <v4:Paginacio>\r
+                              <v4:NumeroPagina>?</v4:NumeroPagina>\r
+                              <v4:ResultatsPerPagina>?</v4:ResultatsPerPagina>\r
+                              <!--Optional:-->\r
+                              <v4:CampOrdenacio>?</v4:CampOrdenacio>\r
+                              <!--Optional:-->\r
+                              <v4:SentitOrdenacio>?</v4:SentitOrdenacio>\r
+                           </v4:Paginacio>\r
+                        </v4:DadesCerca>\r
+                     </v4:PeticioCerca>\r
+                  </pet:DatosEspecificos>\r
+               </pet:SolicitudTransmision>\r
+            </pet:Solicitudes>\r
+         </pet:Peticion>\r
+      </open:procesa>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://www.openuri.org/procesa"/></con:call></con:operation></con:interface><con:testSuite id="81efedd5-37fa-4ca2-9655-5155a86ba137" name="SincronSoap TestSuite"><con:settings/><con:runType>SEQUENTIAL</con:runType><con:testCase id="32f96ec7-31c9-42ae-987e-ceb8dd6b796a" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="procesa TestCase" searchProperties="true"><con:settings/><con:testStep type="properties" name="Properties" id="e6287cea-ca3f-45a1-a27e-f8062f44a5d4"><con:settings/><con:config xsi:type="con:PropertiesStep" saveFirst="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:properties><con:property><con:name>NombreCompletoFuncionario</con:name><con:value>PROVA PROVA PROVA</con:value></con:property><con:property><con:name>NIFFuncionario</con:name><con:value>12345678Z</con:value></con:property><con:property><con:name>IdentificadorSolicitante</con:name><con:value>9821920002</con:value></con:property></con:properties></con:config></con:testStep><con:testStep type="request" id="0eaa2446-f41d-4792-a3c4-5465d0124fc3" name="NT_PROCESAR_TRAMESA - MTOM"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>SincronSoap</con:interface><con:operation>procesa</con:operation><con:request name="NT_PROCESAR_TRAMESA - MTOM" id="30d66e2b-c1c9-435f-9ad3-d660ba2dc9b9"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting><con:setting id="WsdlSettings@enable-mtom">true</con:setting><con:setting id="com.eviware.soapui.impl.support.AbstractHttpRequest@follow-redirects">true</con:setting><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@force_mtom">false</con:setting><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@enable_inline_files">false</con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>https://serveis3-pre.nt.aoc.cat:443/siri-proxy/services/Sincron</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:open="http://www.openuri.org/" xmlns:pet="http://gencat.net/scsp/esquemes/peticion">\r
    <soapenv:Header/>\r
    <soapenv:Body>\r
       <open:procesa>\r
