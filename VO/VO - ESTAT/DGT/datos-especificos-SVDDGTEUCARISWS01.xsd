@@ -332,6 +332,13 @@
 			</xs:sequence>
 		</xs:complexType>
 	</xs:element>
+	<xs:element name="NombreImprimible">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="Descripciones" type="Descripciones" maxOccurs="unbounded"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
 	<xs:element name="DireccionImprimible">
 		<xs:complexType>
 			<xs:sequence>
@@ -369,7 +376,7 @@
 					<xs:element ref="InformacionEmpresa"/>
 				</xs:choice>
 				<xs:element ref="Direccion" minOccurs="0"/>
-				<xs:element ref="TitularImprimible" minOccurs="0"/>
+				<xs:element ref="NombreImprimible" minOccurs="0"/>
 				<xs:element ref="DireccionImprimible" minOccurs="0"/>
 			</xs:sequence>
 		</xs:complexType>
@@ -585,7 +592,6 @@
 			<xs:enumeration value="DK"/>
 			<xs:enumeration value="E"/>
 			<xs:enumeration value="EST"/>
-			<xs:enumeration value="F"/>
 			<xs:enumeration value="F2"/>
 			<xs:enumeration value="FIN"/>
 			<xs:enumeration value="FL"/>

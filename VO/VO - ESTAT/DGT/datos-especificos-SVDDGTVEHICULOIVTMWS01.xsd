@@ -23,7 +23,7 @@
 			<xs:sequence>
 				<xs:element ref="Estado"/>
 				<xs:element ref="Consulta"/>
-				<xs:element ref="DatosVehiculo" minOccurs="0" maxOccurs="1"/>
+				<xs:element ref="DatosVehiculo" minOccurs="0"/>
 			</xs:sequence>
 		</xs:complexType>
 	</xs:element>
@@ -92,6 +92,7 @@
 				<xs:element ref="DatosITVs" minOccurs="0"/>
 				<xs:element ref="DatosSeguros" minOccurs="0"/>
 				<xs:element ref="DatosResponsables" minOccurs="0"/>
+				<xs:element ref="DatosTitular" minOccurs="0"/>
 			</xs:all>
 		</xs:complexType>
 	</xs:element>
@@ -103,6 +104,7 @@
 				<xs:element name="DomicilioFiscalVehiculo" type="Domicilio" minOccurs="0"/>
 				<xs:element ref="Titular" minOccurs="0"/>
 				<xs:element ref="Indicadores" minOccurs="0"/>
+				<xs:element ref="ListaCotitulares" minOccurs="0"/>
 			</xs:all>
 		</xs:complexType>
 	</xs:element>
@@ -280,7 +282,7 @@
 		<xs:simpleType>
 			<xs:restriction base="xs:string">
 				<xs:minLength value="1"/>
-				<xs:maxLength value="3"/>
+				<xs:maxLength value="10"/>
 				<xs:whiteSpace value="collapse"/>
 			</xs:restriction>
 		</xs:simpleType>
@@ -292,7 +294,7 @@
 		<xs:simpleType>
 			<xs:restriction base="xs:string">
 				<xs:minLength value="1"/>
-				<xs:maxLength value="2"/>
+				<xs:maxLength value="10"/>
 				<xs:whiteSpace value="collapse"/>
 			</xs:restriction>
 		</xs:simpleType>
@@ -340,7 +342,7 @@
 		<xs:simpleType>
 			<xs:restriction base="xs:string">
 				<xs:minLength value="1"/>
-				<xs:maxLength value="4"/>
+				<xs:maxLength value="10"/>
 				<xs:whiteSpace value="collapse"/>
 			</xs:restriction>
 		</xs:simpleType>
@@ -363,7 +365,7 @@
 		</xs:annotation>
 		<xs:simpleType>
 			<xs:restriction base="xs:string">
-				<xs:pattern value="\d{5}"/>
+				<xs:pattern value="\d{1,10}"/>
 			</xs:restriction>
 		</xs:simpleType>
 	</xs:element>
@@ -374,7 +376,7 @@
 		<xs:simpleType>
 			<xs:restriction base="xs:string">
 				<xs:minLength value="1"/>
-				<xs:maxLength value="2"/>
+				<xs:maxLength value="10"/>
 				<xs:whiteSpace value="collapse"/>
 			</xs:restriction>
 		</xs:simpleType>
@@ -395,7 +397,7 @@
 		</xs:annotation>
 		<xs:simpleType>
 			<xs:restriction base="xs:string">
-				<xs:pattern value="\d{1}"/>
+				<xs:pattern value="\d{1,2}"/>
 			</xs:restriction>
 		</xs:simpleType>
 	</xs:element>
@@ -437,6 +439,56 @@
 				<xs:element ref="Masas" minOccurs="0"/>
 				<xs:element ref="Plazas" minOccurs="0"/>
 				<xs:element ref="NivelEmisiones" minOccurs="0"/>
+				<xs:element ref="CO2" minOccurs="0"/>
+				<xs:element ref="CategoriaElectrica" minOccurs="0"/>
+				<xs:element ref="Propulsion" minOccurs="0"/>
+				<xs:element ref="TipoAlimentacion" minOccurs="0"/>
+			</xs:all>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="CO2">
+		<xs:annotation>
+			<xs:documentation>Emisiones de CO2</xs:documentation>
+		</xs:annotation>
+		<xs:simpleType>
+			<xs:restriction base="xs:string">
+				<xs:minLength value="1"/>
+				<xs:maxLength value="10"/>
+				<xs:whiteSpace value="collapse"/>
+			</xs:restriction>
+		</xs:simpleType>
+	</xs:element>
+	<xs:element name="CategoriaElectrica">
+		<xs:annotation>
+			<xs:documentation>Categoría eléctrica del vehículo</xs:documentation>
+		</xs:annotation>
+		<xs:simpleType>
+			<xs:restriction base="xs:string">
+				<xs:minLength value="1"/>
+				<xs:maxLength value="10"/>
+				<xs:whiteSpace value="collapse"/>
+			</xs:restriction>
+		</xs:simpleType>
+	</xs:element>
+	<xs:element name="Propulsion">
+		<xs:annotation>
+			<xs:documentation>Sistema de propulsion del vehículo.</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:all>
+				<xs:element ref="Codigo" minOccurs="0"/>
+				<xs:element ref="Descripcion" minOccurs="0"/>
+			</xs:all>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="TipoAlimentacion">
+		<xs:annotation>
+			<xs:documentation>Sistema de alimentación del vehículo.</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:all>
+				<xs:element ref="Codigo" minOccurs="0"/>
+				<xs:element ref="Descripcion" minOccurs="0"/>
 			</xs:all>
 		</xs:complexType>
 	</xs:element>
@@ -1361,6 +1413,31 @@
 			</xs:all>
 		</xs:complexType>
 	</xs:element>
+	<xs:element name="ListaCotitulares">
+		<xs:annotation>
+			<xs:documentation>Lista de coticulares del vehículo.</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="Cotitular" maxOccurs="unbounded"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="Cotitular">
+		<xs:annotation>
+			<xs:documentation>Contiene los datos relativos a cada uno de los cotitulares del vehículo</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:all>
+				<xs:element ref="Documentacion" minOccurs="0"/>
+				<xs:element ref="Filiacion" minOccurs="0">
+					<xs:annotation>
+						<xs:documentation>Nombre y apellidos del poseedor.</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+			</xs:all>
+		</xs:complexType>
+	</xs:element>
 	<xs:element name="Filiacion">
 		<xs:simpleType>
 			<xs:restriction base="xs:string">
@@ -1388,4 +1465,25 @@
 			</xs:restriction>
 		</xs:simpleType>
 	</xs:element>
+	<!-- Bloc afegit a missatgeria MINHAP per retornar les dades del titular -->
+	<xs:element name="DatosTitular">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="TipoDocumentacion">
+					<xs:simpleType>
+						<xs:restriction base="xs:string">
+							<xs:enumeration value="DNI"/>
+							<xs:enumeration value="NIF"/>
+							<xs:enumeration value="NIE"/>
+						</xs:restriction>
+					</xs:simpleType>
+				</xs:element>
+				<xs:element name="Documentacion" type="xs:string" minOccurs="0"/>
+				<xs:element name="NombreCompleto" type="xs:string" minOccurs="0"/>
+				<xs:element name="Nombre" type="xs:string" minOccurs="0"/>
+				<xs:element name="Apellido1" type="xs:string" minOccurs="0"/>
+				<xs:element name="Apellido2" type="xs:string" minOccurs="0"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>	
 </xs:schema>

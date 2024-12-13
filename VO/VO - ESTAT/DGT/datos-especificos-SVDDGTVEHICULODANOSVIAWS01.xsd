@@ -62,7 +62,7 @@
 		<xs:simpleType>
 			<xs:restriction base="xs:string">
 				<xs:minLength value="1"/>
-				<xs:maxLength value="17"/>
+				<xs:maxLength value="25"/>
 				<xs:whiteSpace value="collapse"/>
 			</xs:restriction>
 		</xs:simpleType>
@@ -204,7 +204,9 @@
 		</xs:annotation>
 		<xs:simpleType>
 			<xs:restriction base="xs:string">
-				<xs:pattern value="\d{1,4}"/>
+				<xs:minLength value="1"/>
+				<xs:maxLength value="10"/>
+				<xs:whiteSpace value="collapse"/>
 			</xs:restriction>
 		</xs:simpleType>
 	</xs:element>
@@ -214,7 +216,9 @@
 		</xs:annotation>
 		<xs:simpleType>
 			<xs:restriction base="xs:string">
-				<xs:maxLength value="3"/>
+				<xs:minLength value="1"/>
+				<xs:maxLength value="10"/>
+				<xs:whiteSpace value="collapse"/>
 			</xs:restriction>
 		</xs:simpleType>
 	</xs:element>
@@ -224,7 +228,9 @@
 		</xs:annotation>
 		<xs:simpleType>
 			<xs:restriction base="xs:string">
-				<xs:maxLength value="2"/>
+				<xs:minLength value="1"/>
+				<xs:maxLength value="10"/>
+				<xs:whiteSpace value="collapse"/>
 			</xs:restriction>
 		</xs:simpleType>
 	</xs:element>
@@ -235,7 +241,7 @@
 		<xs:simpleType>
 			<xs:restriction base="xs:string">
 				<xs:minLength value="1"/>
-				<xs:maxLength value="3"/>
+				<xs:maxLength value="4"/>
 				<xs:whiteSpace value="collapse"/>
 			</xs:restriction>
 		</xs:simpleType>
@@ -248,6 +254,7 @@
 			<xs:restriction base="xs:string">
 				<xs:minLength value="1"/>
 				<xs:maxLength value="5"/>
+				<xs:whiteSpace value="collapse"/>
 			</xs:restriction>
 		</xs:simpleType>
 	</xs:element>
@@ -270,7 +277,7 @@
 		<xs:simpleType>
 			<xs:restriction base="xs:string">
 				<xs:minLength value="1"/>
-				<xs:maxLength value="4"/>
+				<xs:maxLength value="10"/>
 				<xs:whiteSpace value="collapse"/>
 			</xs:restriction>
 		</xs:simpleType>
@@ -293,7 +300,7 @@
 		</xs:annotation>
 		<xs:simpleType>
 			<xs:restriction base="xs:int">
-				<xs:pattern value="\d{5}"/>
+				<xs:pattern value="\d{1,10}"/>
 			</xs:restriction>
 		</xs:simpleType>
 	</xs:element>
@@ -304,7 +311,7 @@
 		<xs:simpleType>
 			<xs:restriction base="xs:string">
 				<xs:minLength value="1"/>
-				<xs:maxLength value="2"/>
+				<xs:maxLength value="10"/>
 				<xs:whiteSpace value="collapse"/>
 			</xs:restriction>
 		</xs:simpleType>
@@ -325,7 +332,7 @@
 		</xs:annotation>
 		<xs:simpleType>
 			<xs:restriction base="xs:string">
-				<xs:pattern value="\d{1}"/>
+				<xs:pattern value="\d{1,2}"/>
 			</xs:restriction>
 		</xs:simpleType>
 	</xs:element>
@@ -512,6 +519,6 @@
 				<xs:element name="Apellido1" type="xs:string" minOccurs="0"/>
 				<xs:element name="Apellido2" type="xs:string" minOccurs="0"/>
 			</xs:sequence>
-		</xs:complexType>
-	</xs:element>
+		</xs:complexType>	
+	</xs:element>	
 </xs:schema>

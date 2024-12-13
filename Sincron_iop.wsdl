@@ -51,6 +51,7 @@
 			<xs:import namespace="http://www.aoc.cat/dgt" schemaLocation="./VO/VO - ESTAT/DGT/dadesEspecifiques-DGT_SANCIONS_CONDUCTOR.xsd"/>
 			<xs:import namespace="http://www.aoc.cat/dgt" schemaLocation="./VO/VO - ESTAT/DGT/dadesEspecifiques-DGT_TITULAR_VIA.xsd"/>
 			<xs:import namespace="http://www.aoc.cat/dgt" schemaLocation="./VO/VO - ESTAT/DGT/dadesEspecifiques-DGT_VEHICLES_CONDUCTOR.xsd"/>
+			<xs:import namespace="http://www.aoc.cat/dgt" schemaLocation="./VO/VO - ESTAT/DGT/dadesEspecifiques-DGT_VERIFICACIO_TITULAR.xsd"/>
 			<xs:import namespace="http://www.aocat.net/cadastre" schemaLocation="./VO/VO - ESTAT/CADASTRE/dadesEspecifiques-CERTIFICACIO_TITULARITAT.xsd"/>
 			<xs:import namespace="http://www.aocat.net/cadastre" schemaLocation="./VO/VO - ESTAT/CADASTRE/dadesEspecifiques-DADES_CADASTRALS.xsd"/>
 			<xs:import namespace="http://www.aocat.net/cadastre" schemaLocation="./VO/VO - ESTAT/CADASTRE/dadesEspecifiques-DESCRIPTIVA_GRAFICA.xsd"/>
@@ -389,6 +390,7 @@
 						<xs:element ref="dgt:peticioConsultaDistintiuMediambiental" minOccurs="0"/>
 						<xs:element ref="dgt:peticioConsultaVehicleEucaris" minOccurs="0"/>										
 						<xs:element ref="dgt:peticioConsultaTitularVia" minOccurs="0"/>
+						<xs:element ref="dgt:peticioVerificacioTitular" minOccurs="0"/>
 						<xs:element ref="cad:peticioCertificacioTitular" minOccurs="0"/>
 						<xs:element ref="cad:peticioConsultaDades" minOccurs="0"/>
 						<xs:element ref="cad:peticioDescriptivaIGrafica" minOccurs="0"/>
