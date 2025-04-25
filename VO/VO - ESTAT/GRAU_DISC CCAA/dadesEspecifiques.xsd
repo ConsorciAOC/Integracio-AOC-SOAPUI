@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns="http://www.aoc.cat/discapacitat/ccaa" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.aoc.cat/discapacitat/ccaa" elementFormDefault="qualified">
+	<xs:element name="peticioConsultaDadesDiscapacitat">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="ccaa" type="tCcaa"/>
+				<xs:element name="codiProvincia" type="tCodiProvincia" minOccurs="0"/>
+				<xs:element name="dataConsulta" type="xs:date" minOccurs="0"/>
+				<xs:element name="dataNaixement" type="xs:date" minOccurs="0"/>
+				<xs:element name="expedient" type="tExpedient" minOccurs="0"/>
+				<xs:element name="consentimentTipusDiscapacitat" type="tResultat"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="respostaConsultaDadesDiscapacitat">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="peticioConsultaDadesDiscapacitat" minOccurs="0"/>
+				<xs:element name="resposta" minOccurs="0">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="reialDecret" minOccurs="0">
+								<xs:annotation>
+									<xs:documentation>
+									1- Real Decreto 1971/1999, de 23 de diciembre, de procedimiento para el reconocimiento, declaración y calificación del grado de minusvalía.
+									2- Real Decreto 888/2022, de 18 de octubre, por el que se establece el procedimiento para el reconocimiento, declaración y calificación del grado de discapacidad.
+									</xs:documentation>
+								</xs:annotation>
+								<xs:simpleType>
+									<xs:restriction base="xs:string">
+										<xs:enumeration value="1"/>
+										<xs:enumeration value="2"/>
+									</xs:restriction>
+								</xs:simpleType>
+							</xs:element>
+							<xs:element name="dataNaixement" type="xs:date" minOccurs="0"/>
+							<xs:element name="certificat">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element name="ccaa" type="tCcaa"/>
+										<xs:element name="codiProvincia" type="tCodiProvincia" minOccurs="0"/>
+										<xs:element name="expedient" type="tExpedient" minOccurs="0"/>
+										<xs:element name="grauDiscapacitat">
+											<xs:simpleType>
+												<xs:restriction base="xs:int">
+													<xs:totalDigits value="3"/>
+													<xs:minInclusive value="0"/>
+													<xs:maxInclusive value="100"/>
+												</xs:restriction>
+											</xs:simpleType>
+										</xs:element>
+										<xs:element name="tipusDiscapacitat" minOccurs="0" maxOccurs="3">
+											<xs:simpleType>
+												<xs:restriction base="xs:string">
+													<xs:enumeration value="FISICA"/>
+													<xs:enumeration value="PSIQUICA"/>
+													<xs:enumeration value="MENTAL"/>
+													<xs:enumeration value="SENSORIAL"/>
+													<xs:enumeration value="INTELECTUAL"/>
+												</xs:restriction>
+											</xs:simpleType>
+										</xs:element>
+										<xs:element name="mobilitatReduida">
+											<xs:complexType>
+												<xs:sequence>
+													<xs:element name="mobilitatReduidaReconeguda" type="tResultat"/>
+													<xs:element name="dataEfectes" type="xs:date" minOccurs="0"/>
+												</xs:sequence>
+											</xs:complexType>
+										</xs:element>
+										<xs:element name="terceraPersona" minOccurs="0">
+											<xs:complexType>
+												<xs:sequence>
+													<xs:element name="terceraPersonaReconeguda" type="tResultat"/>
+													<xs:element name="dataEfectes" type="xs:date" minOccurs="0"/>
+												</xs:sequence>
+											</xs:complexType>
+										</xs:element>
+										<xs:element name="dataEfectes" type="xs:date"/>
+										<xs:element name="dataRevisio" type="xs:date" minOccurs="0"/>
+										<xs:element name="validesaPermanent" type="tResultat"/>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element ref="resultat"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:simpleType name="tCcaa">
+		<xs:annotation>
+			<xs:documentation>
+			01 - ANDALUCÍA
+			02 - ARAGÓN
+			03 - PRINCIPADO DE ASTURIAS
+			04 - ISLAS BALEARES
+			05 - CANARIAS
+			06 - CANTABRIA
+			07 - CASTILLA y LEÓN
+			08 - CASTILLA-LA MANCHA
+			09 - CATALUNYA
+			10 - COMUNIDAD VALENCIANA
+			11 - EXTREMADURA
+			12 - GALICIA
+			13 - MADRID
+			14 - REGIÓN DE MURCIA
+			15 - NAVARRA
+			16 - PAÍS VASCO
+			17 - LA RIOJA
+			18 - CIUDAD DE CEUTA
+			19 - CIUDAD DE MELILLA			
+			</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="01"/>
+			<xs:enumeration value="02"/>
+			<xs:enumeration value="03"/>
+			<xs:enumeration value="04"/>
+			<xs:enumeration value="05"/>
+			<xs:enumeration value="06"/>
+			<xs:enumeration value="07"/>
+			<xs:enumeration value="08"/>
+			<xs:enumeration value="10"/>
+			<xs:enumeration value="11"/>
+			<xs:enumeration value="12"/>
+			<xs:enumeration value="13"/>
+			<xs:enumeration value="14"/>
+			<xs:enumeration value="15"/>
+			<xs:enumeration value="16"/>
+			<xs:enumeration value="17"/>
+			<xs:enumeration value="18"/>
+			<xs:enumeration value="19"/>
+			<!-- xs:enumeration value="09"/> -->
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="tCodiProvincia">
+		<xs:restriction base="xs:string">
+			<xs:minLength value="2"/>
+			<xs:maxLength value="2"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="tExpedient">
+		<xs:restriction base="xs:string">
+			<xs:minLength value="1"/>
+			<xs:maxLength value="65"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="tResultat">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="S"/>
+			<xs:enumeration value="N"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<!-- ======================================================= -->
+	<!-- Resultat                                                -->
+	<!-- ======================================================= -->
+	<xs:element name="resultat">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="codiResultat" type="xs:string"/>
+				<xs:element name="descripcio" type="xs:string"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

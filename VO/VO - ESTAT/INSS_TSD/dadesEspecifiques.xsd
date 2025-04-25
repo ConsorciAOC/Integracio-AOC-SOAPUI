@@ -1,0 +1,186 @@
+<?xml version="1.0"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="http://www.aoc.cat/inss/tsd" targetNamespace="http://www.aoc.cat/inss/tsd" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<!-- ======================================================= -->
+	<!-- TSD_INTEGRANTS	                                 	 	 -->
+	<!-- ======================================================= -->
+	<xs:element name="respostaConsultaIntegrants">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="resposta" minOccurs="0"/>
+				<xs:element ref="resultat"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<!-- ======================================================= -->
+	<!-- TSD_PRESTACIONS										 -->
+	<!-- ======================================================= -->
+	<xs:element name="respostaConsultaPrestacions">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="resposta" minOccurs="0"/>
+				<xs:element ref="resultat"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="resposta">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="persona" maxOccurs="unbounded"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="persona">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="document" type="xs:string" minOccurs="0"/>
+				<xs:element name="tipusDocument" type="xs:string" minOccurs="0"/>
+				<xs:element name="codiDuplicitat" type="xs:string" minOccurs="0"/>
+				<xs:element name="cognom1" type="xs:string" minOccurs="0"/>
+				<xs:element name="cognom2" type="xs:string" minOccurs="0"/>
+				<xs:element name="nom" type="xs:string" minOccurs="0"/>
+				<xs:element name="estatCivil" type="xs:string" minOccurs="0"/>
+				<xs:element name="nacionalitat" type="xs:string" minOccurs="0"/>
+				<xs:element name="sexe" type="xs:string" minOccurs="0"/>
+				<xs:element name="codiResposta" type="xs:string" minOccurs="0"/>
+				<xs:element name="literalResposta" type="xs:string" minOccurs="0"/>
+				<xs:element name="domiciliEstranger" minOccurs="0">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="adreca1" type="xs:string" minOccurs="0"/>
+							<xs:element name="adreca2" type="xs:string" minOccurs="0"/>
+							<xs:element name="localitat" type="xs:string" minOccurs="0"/>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="residenciaNacional" minOccurs="0">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="codiPais" type="xs:string" minOccurs="0"/>
+							<xs:element ref="domicili" minOccurs="0"/>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="dataNaixement" type="xs:string" minOccurs="0"/>
+				<xs:element name="dadesProtegides" type="xs:string" minOccurs="0"/>
+				<xs:element name="telefonMobil" type="xs:string" minOccurs="0"/>
+				<!-- prestacions -->
+				<xs:element name="prestacions" minOccurs="0">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element ref="prestacio" maxOccurs="unbounded"/>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="historicActuacions" minOccurs="0">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element ref="actuacio" maxOccurs="unbounded"/>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<!-- integrants -->
+				<xs:element name="integrants" minOccurs="0">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element ref="integrant" maxOccurs="unbounded"/>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="domicili">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="bloc" type="xs:string" minOccurs="0"/>
+				<xs:element name="codiMunicipi" type="xs:string" minOccurs="0"/>
+				<xs:element name="codiPostal" type="xs:string" minOccurs="0"/>
+				<xs:element name="codiProvincia" type="xs:string" minOccurs="0"/>
+				<xs:element name="codiVia" type="xs:string" minOccurs="0"/>
+				<xs:element name="escala" type="xs:string" minOccurs="0"/>
+				<xs:element name="municipi" type="xs:string" minOccurs="0"/>
+				<xs:element name="nomVia" type="xs:string" minOccurs="0"/>
+				<xs:element name="numeroVia" type="xs:string" minOccurs="0"/>
+				<xs:element name="pis" type="xs:string" minOccurs="0"/>
+				<xs:element name="porta" type="xs:string" minOccurs="0"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="prestacio">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="clauPrestacio" type="xs:string" minOccurs="0"/>
+				<xs:element name="clauPropiaEntitat" type="xs:string" minOccurs="0"/>
+				<xs:element name="codiSituacioActual" type="xs:string" minOccurs="0"/>
+				<xs:element name="dataAltaInicialPrestacio" type="xs:string" minOccurs="0"/>
+				<xs:element name="dataSituacio" type="xs:string" minOccurs="0"/>
+				<xs:element name="clauEntitatGestora" type="xs:string" minOccurs="0"/>
+				<xs:element name="codiComplement" type="xs:string" minOccurs="0"/>
+				<xs:element name="codiImportPrestacio" type="xs:string" minOccurs="0"/>
+				<xs:element name="codiTipusPagamentPrestacio" type="xs:string" minOccurs="0"/>
+				<xs:element ref="dadesIntegrant" minOccurs="0"/>
+				<xs:element name="importPrestacio" type="xs:string" minOccurs="0"/>
+				<xs:element name="nomEntitatGestora" type="xs:string" minOccurs="0"/>
+				<xs:element name="subtipusPrestacio" type="xs:string" minOccurs="0"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="dadesIntegrant">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="codiUnitatConvivencia" type="xs:string" minOccurs="0"/>
+				<xs:element name="estatPerceptor" type="xs:string" minOccurs="0"/>
+				<xs:element name="dataAltaInicialTitularBeneficiari" type="xs:string" minOccurs="0"/>
+				<xs:element name="perceptor" type="xs:string" minOccurs="0"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="actuacio">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="clauPropiaEntidad" type="xs:string" minOccurs="0"/>
+				<xs:element name="codiActuacio" type="xs:string" minOccurs="0"/>
+				<xs:element name="codiSituacioActual" type="xs:string" minOccurs="0"/>
+				<xs:element name="codiUnitatConvivencia" type="xs:string" minOccurs="0"/>
+				<xs:element name="estatBeneficiari" type="xs:string" minOccurs="0"/>
+				<xs:element name="dataSituacio" type="xs:string" minOccurs="0"/>
+				<xs:element name="importPrestacio" type="xs:string" minOccurs="0"/>
+				<xs:element name="perceptor" type="xs:string" minOccurs="0"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="integrant">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="document" type="xs:string" minOccurs="0"/>
+				<xs:element name="tipusDocument" type="xs:string" minOccurs="0"/>
+				<xs:element name="codiDuplicitat" type="xs:string" minOccurs="0"/>
+				<xs:element name="cognom1" type="xs:string" minOccurs="0"/>
+				<xs:element name="cognom2" type="xs:string" minOccurs="0"/>
+				<xs:element name="nom" type="xs:string" minOccurs="0"/>
+				<xs:element name="clauPropiaEntitat" type="xs:string" minOccurs="0"/>
+				<xs:element name="estatCivil" type="xs:string" minOccurs="0"/>
+				<xs:element name="nacionalitat" type="xs:string" minOccurs="0"/>
+				<xs:element name="sexe" type="xs:string" minOccurs="0"/>
+				<xs:element name="codiResposta" type="xs:string" minOccurs="0"/>
+				<xs:element name="estatPerceptor" type="xs:string" minOccurs="0"/>
+				<xs:element name="dataAltaTitularBeneficiari" type="xs:string" minOccurs="0"/>
+				<xs:element name="dataNaixement" type="xs:string" minOccurs="0"/>
+				<xs:element name="indicadorDadesProtegides" type="xs:string" minOccurs="0"/>
+				<xs:element name="perceptor" type="xs:string" minOccurs="0"/>
+				<xs:element name="telefonMobil" type="xs:string" minOccurs="0"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<!-- ======================================================= -->
+	<!-- Resultat                                                -->
+	<!-- ======================================================= -->
+	<xs:element name="resultat">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="codiResultat" type="xs:string"/>
+				<xs:element name="descripcio" type="xs:string"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

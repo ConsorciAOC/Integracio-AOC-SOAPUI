@@ -20,10 +20,9 @@
         </xs:complexType>
       </xs:element>
     </xs:schema>
-    <xs:schema targetNamespace="http://gencat.net/scsp/esquemes/peticion" elementFormDefault="qualified" attributeFormDefault="unqualified" xmlns="http://gencat.net/scsp/esquemes/peticion" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:inem="http://www.aocat.net/inem" xmlns:pscp="http://webservices.pscp.economia.gencat.capgemini.com" xmlns:tfn="http://www.aoc.cat/tfn" xmlns:tfm="http://www.aoc.cat/tfm" xmlns:idescat="http://www.aocat.net/padro" xmlns:grau="http://www.aocat.net/discapacitat" xmlns:soc="http://gencat.net/scsp/esquemes/SOC" xmlns:rca="http://www.aocat.net/rca" xmlns:reg="http://www.aoc.cat/regentitats" xmlns:padro="http://www.aocat.net/padro" xmlns:merc="http://www.aocat.net/registradors" xmlns:prop="http://www.aocat.net/registradors" xmlns:dcoc="http://aoc.net/dcoc/v2/peticio" xmlns:ppe="http://www.aocat.net/aeat/irpf" xmlns:iae="http://www.aoc.cat/aeat/iae" xmlns:dicireg="http://www.aoc.cat/registre-civil/dicireg" xmlns:irpf20="http://www.aocat.net/aeat/irpf" xmlns:irpf="http://www.aocat.net/aeat/irpf" xmlns:tgss_alta_fecha="http://www.tgss.es/altafecha/esquemas/afiliacion/datosespecificos" xmlns:tgss_agra="http://www.tgss.es/actividadagraria/esquemas/afiliacion/datosespecificos" xmlns:tgss_lab="http://www.aoc.cat/tgss" xmlns:dgp="http://www.aoc.cat/dgp/identitat" xmlns:dgp_res_legal="http://www.aoc.cat/dgp-residencia-legal" xmlns:sct_denuncies="http://www.aoc.cat/sct/denuncies" xmlns:dgt="http://www.aoc.cat/dgt" xmlns:cad="http://www.aocat.net/cadastre" xmlns:inss="http://www.aoc.cat/inss" xmlns:reg_civ="http://www.aoc.cat/registre-civil" xmlns:ant_pen="http://www.aoc.cat/antecedents-penals" xmlns:mux="http://net.aocat/MUX2/PeticioRegistre" xmlns:rpc="http://cat.aoc/rpc/peticion" xmlns:igae="http://www.aoc.cat/igae" xmlns:atmv="http://www.aocat.net/dgt/atmv" xmlns:rgc="http://www.aoc.cat/rgc" xmlns:rpe="http://www.aoc.cat/rpe" xmlns:mepsyd="http://www.aocat.net/mepsyd" xmlns:notaris="http://www.aoc.cat/poders-notarials" xmlns:dgp_residencia="http://www.aoc.cat/dgp-historic-residencia" xmlns:actic="http://www.aoc.cat/actic" xmlns:muface="http://www.aoc.cat/muface">
+    <xs:schema targetNamespace="http://gencat.net/scsp/esquemes/peticion" elementFormDefault="qualified" attributeFormDefault="unqualified" xmlns="http://gencat.net/scsp/esquemes/peticion" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:grauccaa="http://www.aoc.cat/discapacitat/ccaa" xmlns:inem="http://www.aocat.net/inem" xmlns:pscp="http://webservices.pscp.economia.gencat.capgemini.com" xmlns:tfn="http://www.aoc.cat/tfn" xmlns:tfm="http://www.aoc.cat/tfm" xmlns:idescat="http://www.aocat.net/padro" xmlns:grau="http://www.aocat.net/discapacitat" xmlns:soc="http://gencat.net/scsp/esquemes/SOC" xmlns:rca="http://www.aocat.net/rca" xmlns:reg="http://www.aoc.cat/regentitats" xmlns:padro="http://www.aocat.net/padro" xmlns:merc="http://www.aocat.net/registradors" xmlns:prop="http://www.aocat.net/registradors" xmlns:dcoc="http://aoc.net/dcoc/v2/peticio" xmlns:ppe="http://www.aocat.net/aeat/irpf" xmlns:iae="http://www.aoc.cat/aeat/iae" xmlns:dicireg="http://www.aoc.cat/registre-civil/dicireg" xmlns:irpf20="http://www.aocat.net/aeat/irpf" xmlns:irpf="http://www.aocat.net/aeat/irpf" xmlns:tgss_alta_fecha="http://www.tgss.es/altafecha/esquemas/afiliacion/datosespecificos" xmlns:tgss_agra="http://www.tgss.es/actividadagraria/esquemas/afiliacion/datosespecificos" xmlns:tgss_lab="http://www.aoc.cat/tgss" xmlns:dgp="http://www.aoc.cat/dgp/identitat" xmlns:dgp_res_legal="http://www.aoc.cat/dgp-residencia-legal" xmlns:sct_denuncies="http://www.aoc.cat/sct/denuncies" xmlns:dgt="http://www.aoc.cat/dgt" xmlns:cad="http://www.aocat.net/cadastre" xmlns:tsd="http://www.aoc.cat/inss/tsd" xmlns:reg_civ="http://www.aoc.cat/registre-civil" xmlns:ant_pen="http://www.aoc.cat/antecedents-penals" xmlns:mux="http://net.aocat/MUX2/PeticioRegistre" xmlns:rpc="http://cat.aoc/rpc/peticion" xmlns:igae="http://www.aoc.cat/igae" xmlns:atmv="http://www.aocat.net/dgt/atmv" xmlns:rgc="http://www.aoc.cat/rgc" xmlns:rpe="http://www.aoc.cat/rpe" xmlns:mepsyd="http://www.aocat.net/mepsyd" xmlns:notaris="http://www.aoc.cat/poders-notarials" xmlns:dgp_residencia="http://www.aoc.cat/dgp-historic-residencia" xmlns:actic="http://www.aoc.cat/actic" xmlns:muface="http://www.aoc.cat/muface">
       <xs:import namespace="http://www.aocat.net/inem" schemaLocation="./VO/VO - ESTAT/INEM/dadesEspecifiques.xsd"/>
       <xs:import namespace="http://www.aoc.cat/tfn" schemaLocation="./VO/VO - GENE/TFN/dadesEspecifiques.xsd"/>
-      <xs:import namespace="http://webservices.pscp.economia.gencat.capgemini.com" schemaLocation="./PSCP/pscp-schema-servei.xsd"/>
       <xs:import namespace="http://www.aocat.net/padro" schemaLocation="./VO/VO - GENE/IDESCAT/dadesEspecifiquesHistoric.xsd"/>
       <xs:import namespace="http://www.aoc.cat/tfm" schemaLocation="./VO/VO - GENE/TFM/dadesEspecifiques.xsd"/>
       <xs:import namespace="http://www.aocat.net/discapacitat" schemaLocation="./VO/VO - GENE/GRAU_DISC/dadesEspecifiques.xsd"/>
@@ -55,7 +54,7 @@
       <xs:import namespace="http://www.aocat.net/cadastre" schemaLocation="./VO/VO - ESTAT/CADASTRE/dadesEspecifiques-CERTIFICACIO_TITULARITAT.xsd"/>
       <xs:import namespace="http://www.aocat.net/cadastre" schemaLocation="./VO/VO - ESTAT/CADASTRE/dadesEspecifiques-DADES_CADASTRALS.xsd"/>
       <xs:import namespace="http://www.aocat.net/cadastre" schemaLocation="./VO/VO - ESTAT/CADASTRE/dadesEspecifiques-DESCRIPTIVA_GRAFICA.xsd"/>
-      <xs:import namespace="http://www.aoc.cat/inss" schemaLocation="./VO/VO - ESTAT/INSS/dadesEspecifiques-PRESTACIONS_HISTORIC.xsd"/>
+      <xs:import namespace="http://www.aoc.cat/inss/tsd" schemaLocation="./VO/VO - ESTAT/INSS_TSD/dadesEspecifiques.xsd"/>
       <xs:import namespace="http://www.aoc.cat/registre-civil" schemaLocation="./VO/VO - ESTAT/REG_CIVIL/dadesEspecifiques.xsd"/>
       <xs:import namespace="http://www.aoc.cat/antecedents-penals" schemaLocation="./VO/VO - ESTAT/ANT_PENAL/dadesEspecifiques.xsd"/>
       <xs:import namespace="http://net.aocat/MUX2/PeticioRegistre" schemaLocation="./MUX/PeticioMUX2.xsd"/>
@@ -72,6 +71,7 @@
       <xs:import namespace="http://www.aoc.cat/dgp-residencia-legal" schemaLocation="./VO/VO - ESTAT/DGP_RESIDENCIA_LEGAL/dadesEspecifiques.xsd"/>
       <xs:import namespace="http://www.aoc.cat/actic" schemaLocation="./VO/VO - GENE/ACTIC/dadesEspecifiques.xsd"/>
       <xs:import namespace="http://www.aoc.cat/muface" schemaLocation="./VO/VO - ESTAT/MUFACE/dadesEspecifiques-MUFACE_AFILIACIO.xsd"/>
+      <xs:import namespace="http://www.aoc.cat/discapacitat/ccaa" schemaLocation="./VO/VO - ESTAT/GRAU_DISC CCAA/dadesEspecifiques.xsd"/>
       <xs:element name="Apellido1">
         <xs:simpleType>
           <xs:restriction base="xs:string">
@@ -350,9 +350,6 @@
         <xs:complexType>
           <xs:choice>
             <xs:element ref="inem:peticioVerificacioImportsPeriode" minOccurs="0"/>
-            <xs:element ref="pscp:publishContractNotice" minOccurs="0"/>
-            <xs:element ref="pscp:cancelTendering" minOccurs="0"/>
-            <xs:element ref="pscp:publishContractAwardNotice" minOccurs="0"/>
             <xs:element ref="tfn:peticioConsultaVigencia" minOccurs="0"/>
             <xs:element ref="tfn:peticioDadesCompletes" minOccurs="0"/>
             <xs:element ref="tfn:peticioDadesCompletesDiscapacitats" minOccurs="0"/>
@@ -362,6 +359,7 @@
             <xs:element ref="tfm:peticioDadesCompletes" minOccurs="0"/>
             <xs:element ref="grau:peticioConsultaDiscapacitatSimple" minOccurs="0"/>
             <xs:element ref="grau:peticioConsultaDiscapacitatTotal" minOccurs="0"/>
+            <xs:element ref="grauccaa:peticioConsultaDadesDiscapacitat" minOccurs="0"/>
             <xs:element ref="soc:CertificatRequest" minOccurs="0"/>
             <xs:element ref="rca:peticioConsultaAssegurat" minOccurs="0"/>
             <xs:element ref="rca:peticioVerificacioAssegurat" minOccurs="0"/>
@@ -393,7 +391,6 @@
             <xs:element ref="cad:peticioCertificacioTitular" minOccurs="0"/>
             <xs:element ref="cad:peticioConsultaDades" minOccurs="0"/>
             <xs:element ref="cad:peticioDescriptivaIGrafica" minOccurs="0"/>
-            <xs:element ref="inss:peticioConsultaPrestacionsHistoric" minOccurs="0"/>
             <xs:element ref="reg_civ:peticioConsultaRegistreCivil" minOccurs="0"/>
             <xs:element ref="ant_pen:peticioInexistenciaAntecedentsPenals" minOccurs="0"/>
             <xs:element ref="ant_pen:peticioInexistenciaAntecedentsPenalsDelictesSexuals" minOccurs="0"/>
@@ -1567,358 +1564,7 @@
       </xs:sequence>
     </xs:complexType>
   </xs:element>
-</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>file:\C:\Users\CristianMorales\Documents\GitHub\Integracio-AOC-SOAPUI\PSCP\pscp-schema-servei.xsd</con:url><con:content><![CDATA[<xsd:schema targetNamespace="http://webservices.pscp.economia.gencat.capgemini.com" elementFormDefault="qualified" attributeFormDefault="qualified" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://webservices.pscp.economia.gencat.capgemini.com" xmlns:ns3="http://entity.webservices.pscp.economia.gencat.capgemini.com" xmlns:ns2="http://exceptions.model.pscp.economia.gencat.cat">
-  <xsd:import namespace="http://entity.webservices.pscp.economia.gencat.capgemini.com" schemaLocation="pscp-schema-missatgeria.xsd"/>
-  <xsd:import namespace="http://exceptions.model.pscp.economia.gencat.cat" schemaLocation="pscp-schema-excepcio.xsd"/>
-  <xsd:element name="cancelTendering">
-    <xsd:complexType>
-      <xsd:sequence>
-        <xsd:element maxOccurs="1" minOccurs="1" name="in0" type="ns3:WSCancellationNotice" nillable="true"/>
-      </xsd:sequence>
-    </xsd:complexType>
-  </xsd:element>
-  <xsd:complexType name="ArrayOfString">
-    <xsd:sequence>
-      <xsd:element maxOccurs="unbounded" minOccurs="0" name="string" nillable="true" type="xsd:string"/>
-    </xsd:sequence>
-  </xsd:complexType>
-  <xsd:element name="cancelTenderingResponse">
-    <xsd:complexType>
-      <xsd:sequence>
-        <xsd:element maxOccurs="1" minOccurs="1" name="out" type="ns3:WSResult" nillable="true"/>
-      </xsd:sequence>
-    </xsd:complexType>
-  </xsd:element>
-  <xsd:element name="PscpBusinessException" type="ns2:PscpWSBusinessFaultDetail"/>
-  <xsd:element name="publishContractAwardNotice">
-    <xsd:complexType>
-      <xsd:sequence>
-        <xsd:element maxOccurs="1" minOccurs="1" name="in0" type="ns3:WSContractAward" nillable="true"/>
-      </xsd:sequence>
-    </xsd:complexType>
-  </xsd:element>
-  <xsd:element name="publishContractAwardNoticeResponse">
-    <xsd:complexType>
-      <xsd:sequence>
-        <xsd:element maxOccurs="1" minOccurs="1" name="out" type="ns3:WSResult" nillable="true"/>
-      </xsd:sequence>
-    </xsd:complexType>
-  </xsd:element>
-  <xsd:element name="publishContractNotice">
-    <xsd:complexType>
-      <xsd:sequence>
-        <xsd:element maxOccurs="1" minOccurs="1" name="in0" type="ns3:WSContractNotice" nillable="true"/>
-      </xsd:sequence>
-    </xsd:complexType>
-  </xsd:element>
-  <xsd:element name="publishContractNoticeResponse">
-    <xsd:complexType>
-      <xsd:sequence>
-        <xsd:element maxOccurs="1" minOccurs="1" name="out" type="ns3:WSResult" nillable="true"/>
-      </xsd:sequence>
-    </xsd:complexType>
-  </xsd:element>
-</xsd:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>file:\C:\Users\CristianMorales\Documents\GitHub\Integracio-AOC-SOAPUI\PSCP\pscp-schema-missatgeria.xsd</con:url><con:content><![CDATA[<xsd:schema targetNamespace="http://entity.webservices.pscp.economia.gencat.capgemini.com" elementFormDefault="qualified" attributeFormDefault="qualified" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:ns1="http://entity.webservices.pscp.economia.gencat.capgemini.com" xmlns:ns2="http://webservices.pscp.economia.gencat.capgemini.com">
-  <xsd:import namespace="http://webservices.pscp.economia.gencat.capgemini.com" schemaLocation="pscp-schema-servei.xsd"/>
-  <xsd:complexType name="WSCancellationNotice">
-    <xsd:sequence>
-      <xsd:element minOccurs="0" name="WSDocumentReference" nillable="true" type="ns1:ArrayOfWSDocumentReference"/>
-      <xsd:element minOccurs="0" name="WSTenderResult" nillable="true" type="ns1:WSTenderResult"/>
-      <xsd:element minOccurs="0" name="codiBE" nillable="true" type="xsd:string"/>
-      <xsd:element minOccurs="0" name="contractingAuthorityPartySacId" nillable="true" type="xsd:string"/>
-      <xsd:element minOccurs="0" name="contractingUnitCode" nillable="true" type="xsd:string"/>
-      <xsd:element minOccurs="0" name="diligenceId" nillable="true" type="xsd:string"/>
-      <xsd:element minOccurs="0" name="finalPlatformDate" type="xsd:dateTime"/>
-      <xsd:element minOccurs="0" name="fundingProgramCode" nillable="true" type="xsd:string"/>
-      <xsd:element minOccurs="0" name="fundingProgramCodeDescription" nillable="true" type="xsd:string"/>
-      <xsd:element minOccurs="0" name="issueDate" type="xsd:dateTime"/>
-      <xsd:element minOccurs="0" name="publisherId" nillable="true" type="xsd:string"/>
-      <xsd:element minOccurs="0" name="reservaSocial" nillable="true" type="xsd:boolean"/>
-    </xsd:sequence>
-  </xsd:complexType>
-  <xsd:complexType name="WSTenderResult">
-    <xsd:sequence>
-      <xsd:element minOccurs="0" name="awardDate" type="xsd:dateTime"/>
-      <xsd:element minOccurs="0" name="awardDescription" nillable="true" type="xsd:string"/>
-      <xsd:element minOccurs="0" name="awardPriceAmount" type="xsd:double"/>
-      <xsd:element minOccurs="0" name="contractFormalizationPeriod" nillable="true" type="xsd:string"/>
-      <xsd:element minOccurs="0" name="formalizationDate" type="xsd:dateTime"/>
-      <xsd:element minOccurs="0" name="procuringProjectDescription" nillable="true" type="xsd:string"/>
-      <xsd:element minOccurs="0" name="procuringProjectID" nillable="true" type="xsd:string"/>
-      <xsd:element minOccurs="0" name="purchasedInnovation" nillable="true" type="xsd:int"/>
-      <xsd:element minOccurs="0" name="receivedTenderQuantity" nillable="true" type="xsd:long"/>
-      <xsd:element minOccurs="0" name="resultCode" nillable="true" type="xsd:string"/>
-      <xsd:element minOccurs="0" name="taxExclusiveAwardPriceAmount" type="xsd:double"/>
-      <xsd:element minOccurs="0" name="winnerParties" nillable="true" type="ns1:ArrayOfWSWinnerParty"/>
-      <xsd:element minOccurs="0" name="winnerPartyCountryCode" nillable="true" type="xsd:string"/>
-      <xsd:element minOccurs="0" name="winnerPartyIdentification" nillable="true" type="xsd:string"/>
-      <xsd:element minOccurs="0" name="winnerPartyIdentificationType" nillable="true" type="xsd:string"/>
-      <xsd:element minOccurs="0" name="winnerPartyName" nillable="true" type="xsd:string"/>
-    </xsd:sequence>
-  </xsd:complexType>
-  <xsd:complexType name="ArrayOfWSDocumentReference">
-    <xsd:sequence>
-      <xsd:element maxOccurs="unbounded" minOccurs="0" name="WSDocumentReference" nillable="true" type="ns1:WSDocumentReference"/>
-    </xsd:sequence>
-  </xsd:complexType>
-  <xsd:complexType name="WSDocumentReference">
-    <xsd:sequence>
-      <xsd:element minOccurs="0" name="annotation" nillable="true" type="xsd:string"/>
-      <xsd:element minOccurs="0" name="docReferencePublicationDate" type="xsd:dateTime"/>
-      <xsd:element minOccurs="0" name="fileData" nillable="true" type="xsd:base64Binary"/>
-      <xsd:element minOccurs="0" name="fileName" nillable="true" type="xsd:string"/>
-      <xsd:element minOccurs="0" name="fileURI" nillable="true" type="xsd:string"/>
-      <xsd:element minOccurs="0" name="referenceSubType" type="xsd:long"/>
-      <xsd:element minOccurs="0" name="type" type="xsd:long"/>
-    </xsd:sequence>
-  </xsd:complexType>
-  <xsd:complexType name="ArrayOfWSWinnerParty">
-    <xsd:sequence>
-      <xsd:element maxOccurs="unbounded" minOccurs="0" name="WSWinnerParty" nillable="true" type="ns1:WSWinnerParty"/>
-    </xsd:sequence>
-  </xsd:complexType>
-  <xsd:complexType name="WSWinnerParty">
-    <xsd:sequence>
-      <xsd:element minOccurs="0" name="countryCode" nillable="true" type="xsd:string"/>
-      <xsd:element minOccurs="0" name="electronicMail" nillable="true" type="xsd:string"/>
-      <xsd:element minOccurs="0" name="identificationType" nillable="true" type="xsd:string"/>
-      <xsd:element minOccurs="0" name="identifier" nillable="true" type="xsd:string"/>
-      <xsd:element minOccurs="0" name="name" nillable="true" type="xsd:string"/>
-      <xsd:element minOccurs="0" name="priceAmount" type="xsd:double"/>
-      <xsd:element minOccurs="0" name="taxExclusivePriceAmount" type="xsd:double"/>
-    </xsd:sequence>
-  </xsd:complexType>
-  <xsd:complexType name="WSResult">
-    <xsd:sequence>
-      <xsd:element minOccurs="0" name="documentId" nillable="true" type="xsd:string"/>
-      <xsd:element minOccurs="0" name="documentURL" nillable="true" type="xsd:string"/>
-      <xsd:element minOccurs="0" name="m_WSWarningResult" nillable="true" type="ns2:ArrayOfString"/>
-    </xsd:sequence>
-  </xsd:complexType>
-  <xsd:complexType name="WSContractAward">
-    <xsd:sequence>
-      <xsd:element minOccurs="0" name="WSDocumentReference" nillable="true" type="ns1:ArrayOfWSDocumentReference"/>
-      <xsd:element minOccurs="0" name="WSProcuringProject" nillable="true" type="ns1:WSProcuringProject"/>
-      <xsd:element minOccurs="0" name="WSTenderResult" nillable="true" type="ns1:ArrayOfWSTenderResult"/>
-      <xsd:element minOccurs="0" name="WSTenderingProcess" nillable="true" type="ns1:WSTenderingProcess"/>
-      <xsd:element minOccurs="0" name="amendmentDescription" nillable="true" type="xsd:string"/>
-      <xsd:element minOccurs="0" name="amendmentDescription_ca_ES" nillable="true" type="xsd:string"/>
-      <xsd:element minOccurs="0" name="amendmentDescription_en_GB" nillable="true" type="xsd:string"/>
-      <xsd:element minOccurs="0" name="amendmentDescription_es_ES" nillable="true" type="xsd:string"/>
-      <xsd:element minOccurs="0" name="amendmentDescription_oc_ES" nillable="true" type="xsd:string"/>
-      <xsd:element minOccurs="0" name="codiBE" nillable="true" type="xsd:string"/>
-      <xsd:element minOccurs="0" name="contractingAuthorityPartySacId" nillable="true" type="xsd:string"/>
-      <xsd:element minOccurs="0" name="contractingUnitCode" nillable="true" type="xsd:string"/>
-      <xsd:element minOccurs="0" name="digitalEnvelope" type="xsd:boolean"/>
-      <xsd:element minOccurs="0" name="diligenceId" nillable="true" type="xsd:string"/>
-      <xsd:element minOccurs="0" name="electronicDelivery" type="xsd:boolean"/>
-      <xsd:element minOccurs="0" name="emailOffers" nillable="true" type="xsd:string"/>
-      <xsd:element minOccurs="0" name="finalPlatformDate" type="xsd:dateTime"/>
-      <xsd:element minOccurs="0" name="fundingProgramCode" nillable="true" type="xsd:string"/>
-      <xsd:element minOccurs="0" name="fundingProgramCodeDescription" nillable="true" type="xsd:string"/>
-      <xsd:element minOccurs="0" name="issueDate" type="xsd:dateTime"/>
-      <xsd:element minOccurs="0" name="lotCount" type="xsd:int"/>
-      <xsd:element minOccurs="0" name="m_WSInvitedCompanies" nillable="true" type="ns1:ArrayOfWSParty"/>
-      <xsd:element minOccurs="0" name="publishOnlyInPSCP" type="xsd:boolean"/>
-      <xsd:element minOccurs="0" name="publisherId" nillable="true" type="xsd:string"/>
-      <xsd:element minOccurs="0" name="reservaSocial" nillable="true" type="xsd:boolean"/>
-      <xsd:element minOccurs="0" name="restricted" type="xsd:boolean"/>
-    </xsd:sequence>
-  </xsd:complexType>
-  <xsd:complexType name="ArrayOfWSParty">
-    <xsd:sequence>
-      <xsd:element maxOccurs="unbounded" minOccurs="0" name="WSParty" nillable="true" type="ns1:WSParty"/>
-    </xsd:sequence>
-  </xsd:complexType>
-  <xsd:complexType name="WSParty">
-    <xsd:sequence>
-      <xsd:element minOccurs="0" name="countryCode" nillable="true" type="xsd:string"/>
-      <xsd:element minOccurs="0" name="electronicMail" nillable="true" type="xsd:string"/>
-      <xsd:element minOccurs="0" name="identificationType" nillable="true" type="xsd:string"/>
-      <xsd:element minOccurs="0" name="identifier" nillable="true" type="xsd:string"/>
-      <xsd:element minOccurs="0" name="name" nillable="true" type="xsd:string"/>
-    </xsd:sequence>
-  </xsd:complexType>
-  <xsd:complexType name="WSTenderingProcess">
-    <xsd:sequence>
-      <xsd:element minOccurs="0" name="auctionConstraintIndicator" type="xsd:int"/>
-      <xsd:element minOccurs="0" name="awardingTypeCode" nillable="true" type="xsd:string"/>
-      <xsd:element minOccurs="0" name="description" nillable="true" type="xsd:string"/>
-      <xsd:element minOccurs="0" name="diligenceTypeCode" nillable="true" type="xsd:string"/>
-      <xsd:element minOccurs="0" name="efficientManagement" type="xsd:int"/>
-      <xsd:element minOccurs="0" name="feeValueAmount" type="xsd:double"/>
-      <xsd:element minOccurs="0" name="openingTenderEvents" nillable="true" type="ns1:ArrayOfWSOpeningTenderEvent"/>
-      <xsd:element minOccurs="0" name="openingTendersEventOcurrenceDate" type="xsd:dateTime"/>
-      <xsd:element minOccurs="0" name="openingTendersEventOcurrenceDescription" nillable="true" type="xsd:string"/>
-      <xsd:element minOccurs="0" name="openingTendersEventOcurrenceLocation" nillable="true" type="xsd:string"/>
-      <xsd:element minOccurs="0" name="tendersReceptionPeriodEndDate" type="xsd:dateTime"/>
-      <xsd:element minOccurs="0" name="typeCode" nillable="true" type="xsd:string"/>
-    </xsd:sequence>
-  </xsd:complexType>
-  <xsd:complexType name="ArrayOfWSOpeningTenderEvent">
-    <xsd:sequence>
-      <xsd:element maxOccurs="unbounded" minOccurs="0" name="WSOpeningTenderEvent" nillable="true" type="ns1:WSOpeningTenderEvent"/>
-    </xsd:sequence>
-  </xsd:complexType>
-  <xsd:complexType name="WSOpeningTenderEvent">
-    <xsd:sequence>
-      <xsd:element minOccurs="0" name="ocurrenceDate" type="xsd:dateTime"/>
-      <xsd:element minOccurs="0" name="ocurrenceDescription" nillable="true" type="xsd:string"/>
-      <xsd:element minOccurs="0" name="ocurrenceLocation" nillable="true" type="xsd:string"/>
-    </xsd:sequence>
-  </xsd:complexType>
-  <xsd:complexType name="ArrayOfWSTenderResult">
-    <xsd:sequence>
-      <xsd:element maxOccurs="unbounded" minOccurs="0" name="WSTenderResult" nillable="true" type="ns1:WSTenderResult"/>
-    </xsd:sequence>
-  </xsd:complexType>
-  <xsd:complexType name="WSProcuringProject">
-    <xsd:sequence>
-      <xsd:element minOccurs="0" name="WSClassificationCategory" nillable="true" type="ns1:ArrayOfWSClassificationCategory"/>
-      <xsd:element minOccurs="0" name="WSSubProcuringProject" nillable="true" type="ns1:ArrayOfWSSubProcuringProject"/>
-      <xsd:element minOccurs="0" name="actualizationLocation" nillable="true" type="xsd:string"/>
-      <xsd:element minOccurs="0" name="actualizationLocationType" type="xsd:int"/>
-      <xsd:element minOccurs="0" name="classificationCategories" nillable="true" type="ns1:ArrayOfWSClassificationCategory"/>
-      <xsd:element minOccurs="0" name="contractExtensionOptionsDescription" nillable="true" type="xsd:string"/>
-      <xsd:element minOccurs="0" name="contractName" nillable="true" type="xsd:string"/>
-      <xsd:element minOccurs="0" name="contractingSystemTypeCode" nillable="true" type="xsd:string"/>
-      <xsd:element minOccurs="0" name="description" nillable="true" type="xsd:string"/>
-      <xsd:element minOccurs="0" name="differentTaxes" type="xsd:boolean"/>
-      <xsd:element minOccurs="0" name="estimateValueAmount" type="xsd:double"/>
-      <xsd:element minOccurs="0" name="id" nillable="true" type="xsd:string"/>
-      <xsd:element minOccurs="0" name="netBudgetAmount" type="xsd:double"/>
-      <xsd:element minOccurs="0" name="plannedPeriodDurationMeasure" type="xsd:int"/>
-      <xsd:element minOccurs="0" name="plannedPeriodEndDate" type="xsd:dateTime"/>
-      <xsd:element minOccurs="0" name="plannedPeriodStartDate" type="xsd:dateTime"/>
-      <xsd:element minOccurs="0" name="subProcuringProjects" nillable="true" type="ns1:ArrayOfWSSubProcuringProject"/>
-      <xsd:element minOccurs="0" name="subTypeCode" nillable="true" type="xsd:string"/>
-      <xsd:element minOccurs="0" name="totalBudgetAmount" type="xsd:double"/>
-      <xsd:element minOccurs="0" name="totalTaxAmount" type="xsd:double"/>
-      <xsd:element minOccurs="0" name="typeCode" nillable="true" type="xsd:string"/>
-      <xsd:element minOccurs="0" name="variantsConstraintIndicator" type="xsd:int"/>
-    </xsd:sequence>
-  </xsd:complexType>
-  <xsd:complexType name="ArrayOfWSSubProcuringProject">
-    <xsd:sequence>
-      <xsd:element maxOccurs="unbounded" minOccurs="0" name="WSSubProcuringProject" nillable="true" type="ns1:WSSubProcuringProject"/>
-    </xsd:sequence>
-  </xsd:complexType>
-  <xsd:complexType name="WSSubProcuringProject">
-    <xsd:sequence>
-      <xsd:element minOccurs="0" name="WSClassificationCategory" nillable="true" type="ns1:ArrayOfWSClassificationCategory"/>
-      <xsd:element minOccurs="0" name="actualizationLocation" nillable="true" type="xsd:string"/>
-      <xsd:element minOccurs="0" name="actualizationLocationType" type="xsd:int"/>
-      <xsd:element minOccurs="0" name="classificationCategories" nillable="true" type="ns1:ArrayOfWSClassificationCategory"/>
-      <xsd:element minOccurs="0" name="description" nillable="true" type="xsd:string"/>
-      <xsd:element minOccurs="0" name="id" nillable="true" type="xsd:string"/>
-      <xsd:element minOccurs="0" name="netBudgetAmount" type="xsd:double"/>
-      <xsd:element minOccurs="0" name="plannedPeriodDurationMeasure" type="xsd:int"/>
-      <xsd:element minOccurs="0" name="plannedPeriodEndDate" type="xsd:dateTime"/>
-      <xsd:element minOccurs="0" name="plannedPeriodStartDate" type="xsd:dateTime"/>
-      <xsd:element minOccurs="0" name="totalBudgetAmount" type="xsd:double"/>
-      <xsd:element minOccurs="0" name="totalTaxAmount" type="xsd:double"/>
-    </xsd:sequence>
-  </xsd:complexType>
-  <xsd:complexType name="ArrayOfWSClassificationCategory">
-    <xsd:sequence>
-      <xsd:element maxOccurs="unbounded" minOccurs="0" name="WSClassificationCategory" nillable="true" type="ns1:WSClassificationCategory"/>
-    </xsd:sequence>
-  </xsd:complexType>
-  <xsd:complexType name="WSClassificationCategory">
-    <xsd:sequence>
-      <xsd:element minOccurs="0" name="codeValue" nillable="true" type="xsd:string"/>
-      <xsd:element minOccurs="0" name="name" nillable="true" type="xsd:string"/>
-    </xsd:sequence>
-  </xsd:complexType>
-  <xsd:complexType name="WSContractNotice">
-    <xsd:sequence>
-      <xsd:element minOccurs="0" name="WSDocumentReference" nillable="true" type="ns1:ArrayOfWSDocumentReference"/>
-      <xsd:element minOccurs="0" name="WSProcuringProject" nillable="true" type="ns1:WSProcuringProject"/>
-      <xsd:element minOccurs="0" name="WSTenderingProcess" nillable="true" type="ns1:WSTenderingProcess"/>
-      <xsd:element minOccurs="0" name="WSTenderingTerms" nillable="true" type="ns1:WSTenderingTerms"/>
-      <xsd:element minOccurs="0" name="amendmentDescription" nillable="true" type="xsd:string"/>
-      <xsd:element minOccurs="0" name="amendmentDescription_ca_ES" nillable="true" type="xsd:string"/>
-      <xsd:element minOccurs="0" name="amendmentDescription_en_GB" nillable="true" type="xsd:string"/>
-      <xsd:element minOccurs="0" name="amendmentDescription_es_ES" nillable="true" type="xsd:string"/>
-      <xsd:element minOccurs="0" name="amendmentDescription_oc_ES" nillable="true" type="xsd:string"/>
-      <xsd:element minOccurs="0" name="codiBE" nillable="true" type="xsd:string"/>
-      <xsd:element minOccurs="0" name="contractingAuthorityPartySacId" nillable="true" type="xsd:string"/>
-      <xsd:element minOccurs="0" name="contractingUnitCode" nillable="true" type="xsd:string"/>
-      <xsd:element minOccurs="0" name="digitalEnvelope" type="xsd:boolean"/>
-      <xsd:element minOccurs="0" name="diligenceId" nillable="true" type="xsd:string"/>
-      <xsd:element minOccurs="0" name="electronicDelivery" type="xsd:boolean"/>
-      <xsd:element minOccurs="0" name="emailOffers" nillable="true" type="xsd:string"/>
-      <xsd:element minOccurs="0" name="finalPlatformDate" type="xsd:dateTime"/>
-      <xsd:element minOccurs="0" name="fundingProgramCode" nillable="true" type="xsd:string"/>
-      <xsd:element minOccurs="0" name="fundingProgramCodeDescription" nillable="true" type="xsd:string"/>
-      <xsd:element minOccurs="0" name="issueDate" type="xsd:dateTime"/>
-      <xsd:element minOccurs="0" name="lotCount" type="xsd:int"/>
-      <xsd:element minOccurs="0" name="m_WSInvitedCompanies" nillable="true" type="ns1:ArrayOfWSParty"/>
-      <xsd:element minOccurs="0" name="publishOnlyInPSCP" type="xsd:boolean"/>
-      <xsd:element minOccurs="0" name="publisherId" nillable="true" type="xsd:string"/>
-      <xsd:element minOccurs="0" name="reservaSocial" nillable="true" type="xsd:boolean"/>
-      <xsd:element minOccurs="0" name="restricted" type="xsd:boolean"/>
-    </xsd:sequence>
-  </xsd:complexType>
-  <xsd:complexType name="WSTenderingTerms">
-    <xsd:sequence>
-      <xsd:element minOccurs="0" name="WSAwardingCriteria" nillable="true" type="ns1:ArrayOfWSAwardingCriteria"/>
-      <xsd:element minOccurs="0" name="WSRequiredClassification" nillable="true" type="ns1:WSRequiredClassification"/>
-      <xsd:element minOccurs="0" name="additionalInformation" nillable="true" type="xsd:string"/>
-      <xsd:element minOccurs="0" name="businessProfileClassificationCategory" nillable="true" type="xsd:string"/>
-      <xsd:element minOccurs="0" name="fundingProgramCode" nillable="true" type="xsd:string"/>
-      <xsd:element minOccurs="0" name="handicappedWorkersInidcator" type="xsd:int"/>
-      <xsd:element minOccurs="0" name="limitationDescription" nillable="true" type="xsd:string"/>
-      <xsd:element minOccurs="0" name="maximumOperatorQuantity" type="xsd:int"/>
-      <xsd:element minOccurs="0" name="minimumOperatorQuantity" type="xsd:long"/>
-      <xsd:element minOccurs="0" name="protectedJobIndicator" type="xsd:int"/>
-      <xsd:element minOccurs="0" name="requiredClassification" nillable="true" type="ns1:WSRequiredClassification"/>
-      <xsd:element minOccurs="0" name="requiredClassifications" nillable="true" type="ns1:ArrayOfWSRequiredClassification"/>
-      <xsd:element minOccurs="0" name="requiredGuarantee" type="xsd:int"/>
-    </xsd:sequence>
-  </xsd:complexType>
-  <xsd:complexType name="ArrayOfWSAwardingCriteria">
-    <xsd:sequence>
-      <xsd:element maxOccurs="unbounded" minOccurs="0" name="WSAwardingCriteria" nillable="true" type="ns1:WSAwardingCriteria"/>
-    </xsd:sequence>
-  </xsd:complexType>
-  <xsd:complexType name="WSAwardingCriteria">
-    <xsd:sequence>
-      <xsd:element minOccurs="0" name="description" nillable="true" type="xsd:string"/>
-      <xsd:element minOccurs="0" name="weightNumeric" type="xsd:double"/>
-    </xsd:sequence>
-  </xsd:complexType>
-  <xsd:complexType name="ArrayOfWSRequiredClassification">
-    <xsd:sequence>
-      <xsd:element maxOccurs="unbounded" minOccurs="0" name="WSRequiredClassification" nillable="true" type="ns1:WSRequiredClassification"/>
-    </xsd:sequence>
-  </xsd:complexType>
-  <xsd:complexType name="WSRequiredClassification">
-    <xsd:sequence>
-      <xsd:element minOccurs="0" name="codeValue" nillable="true" type="xsd:string"/>
-      <xsd:element minOccurs="0" name="financialEvaluationCriteriaDescription" nillable="true" type="xsd:string"/>
-      <xsd:element minOccurs="0" name="financialEvaluationCriteriaExpressionFormula" nillable="true" type="xsd:string"/>
-      <xsd:element minOccurs="0" name="financialEvaluationCriteriaObservation" nillable="true" type="xsd:string"/>
-      <xsd:element minOccurs="0" name="financialEvaluationCriteriaPeriode" nillable="true" type="xsd:string"/>
-      <xsd:element minOccurs="0" name="financialEvaluationCriteriaThresholdQuantity" type="xsd:double"/>
-      <xsd:element minOccurs="0" name="financialEvaluationCriteriaTypeCode" nillable="true" type="xsd:string"/>
-      <xsd:element minOccurs="0" name="name" nillable="true" type="xsd:string"/>
-      <xsd:element minOccurs="0" name="technicalEvaluationCriteriaDescription" nillable="true" type="xsd:string"/>
-      <xsd:element minOccurs="0" name="technicalEvaluationCriteriaExpressionFormula" nillable="true" type="xsd:string"/>
-      <xsd:element minOccurs="0" name="technicalEvaluationCriteriaObservation" nillable="true" type="xsd:string"/>
-      <xsd:element minOccurs="0" name="technicalEvaluationCriteriaPeriode" nillable="true" type="xsd:string"/>
-      <xsd:element minOccurs="0" name="technicalEvaluationCriteriaThresholdQuantity" type="xsd:double"/>
-      <xsd:element minOccurs="0" name="technicalEvaluationCriteriaTypeCode" nillable="true" type="xsd:string"/>
-    </xsd:sequence>
-  </xsd:complexType>
-</xsd:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>file:\C:\Users\CristianMorales\Documents\GitHub\Integracio-AOC-SOAPUI\PSCP\pscp-schema-excepcio.xsd</con:url><con:content><![CDATA[<xsd:schema targetNamespace="http://exceptions.model.pscp.economia.gencat.cat" elementFormDefault="qualified" attributeFormDefault="qualified" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:ns1="http://exceptions.model.pscp.economia.gencat.cat">
-  <xsd:complexType name="PscpWSBusinessFaultDetail">
-    <xsd:sequence>
-      <xsd:element name="errorCode" type="xsd:string" nillable="true" minOccurs="0"/>
-      <xsd:element name="exceptionDetails" type="xsd:string" nillable="true" minOccurs="0"/>
-    </xsd:sequence>
-  </xsd:complexType>
-</xsd:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>file:\C:\Users\CristianMorales\Documents\GitHub\Integracio-AOC-SOAPUI\VO\VO - GENE\IDESCAT\dadesEspecifiquesHistoric.xsd</con:url><con:content><![CDATA[<xsd:schema targetNamespace="http://www.aocat.net/padro" elementFormDefault="qualified" attributeFormDefault="unqualified" version="1.0" xmlns="http://www.aocat.net/padro" xmlns:volante="http://www.red.es/padron" xmlns:ine="http://www.map.es/scsp/esquemas/datosespecificos" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>file:\C:\Users\CristianMorales\Documents\GitHub\Integracio-AOC-SOAPUI\VO\VO - GENE\IDESCAT\dadesEspecifiquesHistoric.xsd</con:url><con:content><![CDATA[<xsd:schema targetNamespace="http://www.aocat.net/padro" elementFormDefault="qualified" attributeFormDefault="unqualified" version="1.0" xmlns="http://www.aocat.net/padro" xmlns:volante="http://www.red.es/padron" xmlns:ine="http://www.map.es/scsp/esquemas/datosespecificos" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <xsd:import namespace="http://www.red.es/padron" schemaLocation="VolanteEmpadronamiento.xsd"/>
   <xsd:element name="peticionDatosTitularHistorico">
     <xsd:complexType>
@@ -31975,33 +31621,176 @@
   <!--CAOC-->
   <xs:element name="DatosEntrada" type="DatosEntrada"/>
   <xs:element name="DatosSalida" type="DatosSalida"/>
-</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>file:\C:\Users\CristianMorales\Documents\GitHub\Integracio-AOC-SOAPUI\VO\VO - ESTAT\INSS\dadesEspecifiques-PRESTACIONS_HISTORIC.xsd</con:url><con:content><![CDATA[<xs:schema targetNamespace="http://www.aoc.cat/inss" elementFormDefault="qualified" attributeFormDefault="unqualified" xmlns="http://www.aoc.cat/inss" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:inss="http://intermediacion.redsara.es/scsp/esquemas/datosespecificos">
-  <xs:import namespace="http://intermediacion.redsara.es/scsp/esquemas/datosespecificos" schemaLocation="datos-especificos-historico.xsd"/>
+</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>file:\C:\Users\CristianMorales\Documents\GitHub\Integracio-AOC-SOAPUI\VO\VO - ESTAT\INSS_TSD\dadesEspecifiques.xsd</con:url><con:content><![CDATA[<xs:schema targetNamespace="http://www.aoc.cat/inss/tsd" elementFormDefault="qualified" attributeFormDefault="unqualified" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="http://www.aoc.cat/inss/tsd">
   <!--=======================================================-->
-  <!--PRESTACIONS_HISTORIC-->
+  <!--TSD_INTEGRANTS-->
   <!--=======================================================-->
-  <xs:element name="peticioConsultaPrestacionsHistoric">
+  <xs:element name="respostaConsultaIntegrants">
     <xs:complexType>
       <xs:sequence>
-        <xs:element name="dataInici" type="xs:date"/>
-        <xs:element name="dataFi" type="xs:date"/>
+        <xs:element ref="resposta" minOccurs="0"/>
+        <xs:element ref="resultat"/>
       </xs:sequence>
     </xs:complexType>
   </xs:element>
-  <xs:element name="respostaConsultaPrestacionsHistoric">
+  <!--=======================================================-->
+  <!--TSD_PRESTACIONS-->
+  <!--=======================================================-->
+  <xs:element name="respostaConsultaPrestacions">
     <xs:complexType>
       <xs:sequence>
-        <xs:element ref="peticioConsultaPrestacionsHistoric" minOccurs="0"/>
-        <xs:element name="resposta" minOccurs="0">
+        <xs:element ref="resposta" minOccurs="0"/>
+        <xs:element ref="resultat"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="resposta">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="persona" maxOccurs="unbounded"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="persona">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="document" type="xs:string" minOccurs="0"/>
+        <xs:element name="tipusDocument" type="xs:string" minOccurs="0"/>
+        <xs:element name="codiDuplicitat" type="xs:string" minOccurs="0"/>
+        <xs:element name="cognom1" type="xs:string" minOccurs="0"/>
+        <xs:element name="cognom2" type="xs:string" minOccurs="0"/>
+        <xs:element name="nom" type="xs:string" minOccurs="0"/>
+        <xs:element name="estatCivil" type="xs:string" minOccurs="0"/>
+        <xs:element name="nacionalitat" type="xs:string" minOccurs="0"/>
+        <xs:element name="sexe" type="xs:string" minOccurs="0"/>
+        <xs:element name="codiResposta" type="xs:string" minOccurs="0"/>
+        <xs:element name="literalResposta" type="xs:string" minOccurs="0"/>
+        <xs:element name="domiciliEstranger" minOccurs="0">
           <xs:complexType>
             <xs:sequence>
-              <xs:element ref="inss:DocumentoIdentificativoUnivoco" minOccurs="0"/>
-              <xs:element ref="inss:NumeroPrestacionesEncontradas" minOccurs="0"/>
-              <xs:element ref="inss:Prestacion" minOccurs="0" maxOccurs="unbounded"/>
+              <xs:element name="adreca1" type="xs:string" minOccurs="0"/>
+              <xs:element name="adreca2" type="xs:string" minOccurs="0"/>
+              <xs:element name="localitat" type="xs:string" minOccurs="0"/>
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element ref="resultat"/>
+        <xs:element name="residenciaNacional" minOccurs="0">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="codiPais" type="xs:string" minOccurs="0"/>
+              <xs:element ref="domicili" minOccurs="0"/>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="dataNaixement" type="xs:string" minOccurs="0"/>
+        <xs:element name="dadesProtegides" type="xs:string" minOccurs="0"/>
+        <xs:element name="telefonMobil" type="xs:string" minOccurs="0"/>
+        <!--prestacions-->
+        <xs:element name="prestacions" minOccurs="0">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element ref="prestacio" maxOccurs="unbounded"/>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="historicActuacions" minOccurs="0">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element ref="actuacio" maxOccurs="unbounded"/>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <!--integrants-->
+        <xs:element name="integrants" minOccurs="0">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element ref="integrant" maxOccurs="unbounded"/>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="domicili">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="bloc" type="xs:string" minOccurs="0"/>
+        <xs:element name="codiMunicipi" type="xs:string" minOccurs="0"/>
+        <xs:element name="codiPostal" type="xs:string" minOccurs="0"/>
+        <xs:element name="codiProvincia" type="xs:string" minOccurs="0"/>
+        <xs:element name="codiVia" type="xs:string" minOccurs="0"/>
+        <xs:element name="escala" type="xs:string" minOccurs="0"/>
+        <xs:element name="municipi" type="xs:string" minOccurs="0"/>
+        <xs:element name="nomVia" type="xs:string" minOccurs="0"/>
+        <xs:element name="numeroVia" type="xs:string" minOccurs="0"/>
+        <xs:element name="pis" type="xs:string" minOccurs="0"/>
+        <xs:element name="porta" type="xs:string" minOccurs="0"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="prestacio">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="clauPrestacio" type="xs:string" minOccurs="0"/>
+        <xs:element name="clauPropiaEntitat" type="xs:string" minOccurs="0"/>
+        <xs:element name="codiSituacioActual" type="xs:string" minOccurs="0"/>
+        <xs:element name="dataAltaInicialPrestacio" type="xs:string" minOccurs="0"/>
+        <xs:element name="dataSituacio" type="xs:string" minOccurs="0"/>
+        <xs:element name="clauEntitatGestora" type="xs:string" minOccurs="0"/>
+        <xs:element name="codiComplement" type="xs:string" minOccurs="0"/>
+        <xs:element name="codiImportPrestacio" type="xs:string" minOccurs="0"/>
+        <xs:element name="codiTipusPagamentPrestacio" type="xs:string" minOccurs="0"/>
+        <xs:element ref="dadesIntegrant" minOccurs="0"/>
+        <xs:element name="importPrestacio" type="xs:string" minOccurs="0"/>
+        <xs:element name="nomEntitatGestora" type="xs:string" minOccurs="0"/>
+        <xs:element name="subtipusPrestacio" type="xs:string" minOccurs="0"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="dadesIntegrant">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="codiUnitatConvivencia" type="xs:string" minOccurs="0"/>
+        <xs:element name="estatPerceptor" type="xs:string" minOccurs="0"/>
+        <xs:element name="dataAltaInicialTitularBeneficiari" type="xs:string" minOccurs="0"/>
+        <xs:element name="perceptor" type="xs:string" minOccurs="0"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="actuacio">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="clauPropiaEntidad" type="xs:string" minOccurs="0"/>
+        <xs:element name="codiActuacio" type="xs:string" minOccurs="0"/>
+        <xs:element name="codiSituacioActual" type="xs:string" minOccurs="0"/>
+        <xs:element name="codiUnitatConvivencia" type="xs:string" minOccurs="0"/>
+        <xs:element name="estatBeneficiari" type="xs:string" minOccurs="0"/>
+        <xs:element name="dataSituacio" type="xs:string" minOccurs="0"/>
+        <xs:element name="importPrestacio" type="xs:string" minOccurs="0"/>
+        <xs:element name="perceptor" type="xs:string" minOccurs="0"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="integrant">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="document" type="xs:string" minOccurs="0"/>
+        <xs:element name="tipusDocument" type="xs:string" minOccurs="0"/>
+        <xs:element name="codiDuplicitat" type="xs:string" minOccurs="0"/>
+        <xs:element name="cognom1" type="xs:string" minOccurs="0"/>
+        <xs:element name="cognom2" type="xs:string" minOccurs="0"/>
+        <xs:element name="nom" type="xs:string" minOccurs="0"/>
+        <xs:element name="clauPropiaEntitat" type="xs:string" minOccurs="0"/>
+        <xs:element name="estatCivil" type="xs:string" minOccurs="0"/>
+        <xs:element name="nacionalitat" type="xs:string" minOccurs="0"/>
+        <xs:element name="sexe" type="xs:string" minOccurs="0"/>
+        <xs:element name="codiResposta" type="xs:string" minOccurs="0"/>
+        <xs:element name="estatPerceptor" type="xs:string" minOccurs="0"/>
+        <xs:element name="dataAltaTitularBeneficiari" type="xs:string" minOccurs="0"/>
+        <xs:element name="dataNaixement" type="xs:string" minOccurs="0"/>
+        <xs:element name="indicadorDadesProtegides" type="xs:string" minOccurs="0"/>
+        <xs:element name="perceptor" type="xs:string" minOccurs="0"/>
+        <xs:element name="telefonMobil" type="xs:string" minOccurs="0"/>
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -32016,201 +31805,6 @@
       </xs:sequence>
     </xs:complexType>
   </xs:element>
-</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>file:\C:\Users\CristianMorales\Documents\GitHub\Integracio-AOC-SOAPUI\VO\VO - ESTAT\INSS\datos-especificos-historico.xsd</con:url><con:content><![CDATA[<xs:schema targetNamespace="http://intermediacion.redsara.es/scsp/esquemas/datosespecificos" elementFormDefault="qualified" attributeFormDefault="unqualified" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="http://intermediacion.redsara.es/scsp/esquemas/datosespecificos">
-  <xs:element name="DatosEspecificos" type="DatosEspecificos"/>
-  <xs:complexType name="DatosEspecificos">
-    <xs:choice>
-      <xs:element ref="Consulta"/>
-      <xs:element ref="Retorno"/>
-    </xs:choice>
-    <xs:attribute name="Id" type="xs:string" use="optional"/>
-  </xs:complexType>
-  <xs:element name="Consulta">
-    <xs:complexType>
-      <xs:all>
-        <xs:element ref="FechaDesde"/>
-        <xs:element ref="FechaHasta"/>
-      </xs:all>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="Retorno">
-    <xs:complexType>
-      <xs:all>
-        <xs:element ref="Estado"/>
-        <xs:element ref="FechaConsulta" minOccurs="0"/>
-        <xs:element ref="DocumentoIdentificativoUnivoco" minOccurs="0"/>
-        <xs:element ref="NumeroPrestacionesEncontradas" minOccurs="0"/>
-        <xs:element ref="prestaciones" minOccurs="0"/>
-      </xs:all>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="Estado">
-    <xs:complexType>
-      <xs:all>
-        <xs:element ref="CodigoEstado"/>
-        <xs:element ref="CodigoEstadoSecundario" minOccurs="0"/>
-        <xs:element ref="LiteralError"/>
-      </xs:all>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="FechaDesde" nillable="true">
-    <xs:simpleType>
-      <xs:restriction base="xs:date"/>
-    </xs:simpleType>
-  </xs:element>
-  <xs:element name="FechaHasta" nillable="true">
-    <xs:simpleType>
-      <xs:restriction base="xs:date"/>
-    </xs:simpleType>
-  </xs:element>
-  <xs:element name="FechaConsulta" type="xs:date" nillable="true"/>
-  <xs:element name="DocumentoIdentificativoUnivoco" nillable="true">
-    <xs:simpleType>
-      <xs:restriction base="xs:string">
-        <xs:enumeration value="S"/>
-        <xs:enumeration value="N"/>
-      </xs:restriction>
-    </xs:simpleType>
-  </xs:element>
-  <xs:element name="NumeroPrestacionesEncontradas" nillable="true">
-    <xs:simpleType>
-      <xs:restriction base="xs:integer">
-        <xs:maxExclusive value="99"/>
-      </xs:restriction>
-    </xs:simpleType>
-  </xs:element>
-  <xs:element name="prestaciones">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element ref="Prestacion" maxOccurs="35"/>
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="Prestacion">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element ref="CodigoPrestacion"/>
-        <xs:element ref="LiteralPrestacion"/>
-        <xs:element ref="TipoPrestacion"/>
-        <xs:element ref="CodigoEntidad"/>
-        <xs:element ref="LiteralEntidad"/>
-        <xs:element ref="ImporteBruto"/>
-        <xs:element ref="ImporteLiquido"/>
-        <xs:element ref="FechadeEfectos" minOccurs="0"/>
-        <xs:element ref="FechaFin"/>
-        <xs:element ref="FechaHechoCausante"/>
-        <xs:element ref="BaseReguladora"/>
-        <xs:element ref="TipodePago"/>
-        <xs:element ref="Pagos" minOccurs="0"/>
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="CodigoPrestacion" nillable="true">
-    <xs:simpleType>
-      <xs:restriction base="xs:string">
-        <xs:maxLength value="2"/>
-      </xs:restriction>
-    </xs:simpleType>
-  </xs:element>
-  <xs:element name="LiteralPrestacion" nillable="true">
-    <xs:simpleType>
-      <xs:restriction base="xs:string">
-        <xs:maxLength value="40"/>
-      </xs:restriction>
-    </xs:simpleType>
-  </xs:element>
-  <xs:element name="TipoPrestacion" nillable="true">
-    <xs:simpleType>
-      <xs:restriction base="xs:string">
-        <xs:maxLength value="40"/>
-      </xs:restriction>
-    </xs:simpleType>
-  </xs:element>
-  <xs:element name="CodigoEntidad" nillable="true">
-    <xs:simpleType>
-      <xs:restriction base="xs:string">
-        <xs:maxLength value="3"/>
-      </xs:restriction>
-    </xs:simpleType>
-  </xs:element>
-  <xs:element name="LiteralEntidad" nillable="true">
-    <xs:simpleType>
-      <xs:restriction base="xs:string">
-        <xs:maxLength value="40"/>
-      </xs:restriction>
-    </xs:simpleType>
-  </xs:element>
-  <xs:element name="ImporteBruto" nillable="true">
-    <xs:simpleType>
-      <xs:restriction base="xs:integer">
-        <xs:maxExclusive value="9999999"/>
-      </xs:restriction>
-    </xs:simpleType>
-  </xs:element>
-  <xs:element name="ImporteLiquido" nillable="true">
-    <xs:simpleType>
-      <xs:restriction base="xs:integer">
-        <xs:maxExclusive value="9999999"/>
-      </xs:restriction>
-    </xs:simpleType>
-  </xs:element>
-  <xs:element name="FechadeEfectos" type="xs:date" nillable="true"/>
-  <xs:element name="FechaFin" type="xs:date" nillable="true"/>
-  <xs:element name="FechaHechoCausante" type="xs:date" nillable="true"/>
-  <xs:element name="BaseReguladora" nillable="true">
-    <xs:simpleType>
-      <xs:restriction base="xs:integer">
-        <xs:maxExclusive value="9999999"/>
-      </xs:restriction>
-    </xs:simpleType>
-  </xs:element>
-  <xs:element name="TipodePago" nillable="true">
-    <xs:simpleType>
-      <xs:restriction base="xs:integer">
-        <xs:maxExclusive value="9"/>
-      </xs:restriction>
-    </xs:simpleType>
-  </xs:element>
-  <xs:element name="Pagos" nillable="true">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element ref="Pago" minOccurs="0" maxOccurs="24"/>
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="Pago">
-    <xs:complexType>
-      <xs:all>
-        <xs:element ref="Periododelpago" minOccurs="0"/>
-        <xs:element ref="ImporteBrutoenelmes" minOccurs="0"/>
-        <xs:element ref="ImporteLiquidoenelmes" minOccurs="0"/>
-      </xs:all>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="Periododelpago" type="xs:date" nillable="true"/>
-  <xs:element name="ImporteBrutoenelmes" nillable="true">
-    <xs:simpleType>
-      <xs:restriction base="xs:integer">
-        <xs:maxExclusive value="9999999"/>
-      </xs:restriction>
-    </xs:simpleType>
-  </xs:element>
-  <xs:element name="ImporteLiquidoenelmes" nillable="true">
-    <xs:simpleType>
-      <xs:restriction base="xs:integer">
-        <xs:maxExclusive value="9999999"/>
-      </xs:restriction>
-    </xs:simpleType>
-  </xs:element>
-  <xs:element name="CodigoEstado" nillable="true">
-    <xs:simpleType>
-      <xs:restriction base="xs:string">
-        <xs:length value="4"/>
-      </xs:restriction>
-    </xs:simpleType>
-  </xs:element>
-  <xs:element name="CodigoEstadoSecundario" type="xs:string" nillable="true"/>
-  <xs:element name="LiteralError" type="xs:string" nillable="true"/>
 </xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>file:\C:\Users\CristianMorales\Documents\GitHub\Integracio-AOC-SOAPUI\VO\VO - ESTAT\REG_CIVIL\dadesEspecifiques.xsd</con:url><con:content><![CDATA[<xs:schema targetNamespace="http://www.aoc.cat/registre-civil" elementFormDefault="qualified" attributeFormDefault="unqualified" xmlns="http://www.aoc.cat/registre-civil" xmlns:xs="http://www.w3.org/2001/XMLSchema">
   <xs:element name="peticioConsultaRegistreCivil">
     <xs:complexType>
@@ -37633,6 +37227,167 @@
       </xs:element>
     </xs:sequence>
   </xs:complexType>
+</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>file:\C:\Users\CristianMorales\Documents\GitHub\Integracio-AOC-SOAPUI\VO\VO - ESTAT\GRAU_DISC CCAA\dadesEspecifiques.xsd</con:url><con:content><![CDATA[<xs:schema targetNamespace="http://www.aoc.cat/discapacitat/ccaa" elementFormDefault="qualified" xmlns="http://www.aoc.cat/discapacitat/ccaa" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="peticioConsultaDadesDiscapacitat">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="ccaa" type="tCcaa"/>
+        <xs:element name="codiProvincia" type="tCodiProvincia" minOccurs="0"/>
+        <xs:element name="dataConsulta" type="xs:date" minOccurs="0"/>
+        <xs:element name="dataNaixement" type="xs:date" minOccurs="0"/>
+        <xs:element name="expedient" type="tExpedient" minOccurs="0"/>
+        <xs:element name="consentimentTipusDiscapacitat" type="tResultat"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="respostaConsultaDadesDiscapacitat">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="peticioConsultaDadesDiscapacitat" minOccurs="0"/>
+        <xs:element name="resposta" minOccurs="0">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="reialDecret" minOccurs="0">
+                <xs:annotation>
+                  <xs:documentation>1- Real Decreto 1971/1999, de 23 de diciembre, de procedimiento para el reconocimiento, declaración y calificación del grado de minusvalía.
+									2- Real Decreto 888/2022, de 18 de octubre, por el que se establece el procedimiento para el reconocimiento, declaración y calificación del grado de discapacidad.</xs:documentation>
+                </xs:annotation>
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:enumeration value="1"/>
+                    <xs:enumeration value="2"/>
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="dataNaixement" type="xs:date" minOccurs="0"/>
+              <xs:element name="certificat">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="ccaa" type="tCcaa"/>
+                    <xs:element name="codiProvincia" type="tCodiProvincia" minOccurs="0"/>
+                    <xs:element name="expedient" type="tExpedient" minOccurs="0"/>
+                    <xs:element name="grauDiscapacitat">
+                      <xs:simpleType>
+                        <xs:restriction base="xs:int">
+                          <xs:totalDigits value="3"/>
+                          <xs:minInclusive value="0"/>
+                          <xs:maxInclusive value="100"/>
+                        </xs:restriction>
+                      </xs:simpleType>
+                    </xs:element>
+                    <xs:element name="tipusDiscapacitat" minOccurs="0" maxOccurs="3">
+                      <xs:simpleType>
+                        <xs:restriction base="xs:string">
+                          <xs:enumeration value="FISICA"/>
+                          <xs:enumeration value="PSIQUICA"/>
+                          <xs:enumeration value="MENTAL"/>
+                          <xs:enumeration value="SENSORIAL"/>
+                          <xs:enumeration value="INTELECTUAL"/>
+                        </xs:restriction>
+                      </xs:simpleType>
+                    </xs:element>
+                    <xs:element name="mobilitatReduida">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element name="mobilitatReduidaReconeguda" type="tResultat"/>
+                          <xs:element name="dataEfectes" type="xs:date" minOccurs="0"/>
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:element name="terceraPersona" minOccurs="0">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element name="terceraPersonaReconeguda" type="tResultat"/>
+                          <xs:element name="dataEfectes" type="xs:date" minOccurs="0"/>
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:element name="dataEfectes" type="xs:date"/>
+                    <xs:element name="dataRevisio" type="xs:date" minOccurs="0"/>
+                    <xs:element name="validesaPermanent" type="tResultat"/>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element ref="resultat"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:simpleType name="tCcaa">
+    <xs:annotation>
+      <xs:documentation>01 - ANDALUCÍA
+			02 - ARAGÓN
+			03 - PRINCIPADO DE ASTURIAS
+			04 - ISLAS BALEARES
+			05 - CANARIAS
+			06 - CANTABRIA
+			07 - CASTILLA y LEÓN
+			08 - CASTILLA-LA MANCHA
+			09 - CATALUNYA
+			10 - COMUNIDAD VALENCIANA
+			11 - EXTREMADURA
+			12 - GALICIA
+			13 - MADRID
+			14 - REGIÓN DE MURCIA
+			15 - NAVARRA
+			16 - PAÍS VASCO
+			17 - LA RIOJA
+			18 - CIUDAD DE CEUTA
+			19 - CIUDAD DE MELILLA</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="01"/>
+      <xs:enumeration value="02"/>
+      <xs:enumeration value="03"/>
+      <xs:enumeration value="04"/>
+      <xs:enumeration value="05"/>
+      <xs:enumeration value="06"/>
+      <xs:enumeration value="07"/>
+      <xs:enumeration value="08"/>
+      <xs:enumeration value="10"/>
+      <xs:enumeration value="11"/>
+      <xs:enumeration value="12"/>
+      <xs:enumeration value="13"/>
+      <xs:enumeration value="14"/>
+      <xs:enumeration value="15"/>
+      <xs:enumeration value="16"/>
+      <xs:enumeration value="17"/>
+      <xs:enumeration value="18"/>
+      <xs:enumeration value="19"/>
+      <!--xs:enumeration value="09"/>-->
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="tCodiProvincia">
+    <xs:restriction base="xs:string">
+      <xs:minLength value="2"/>
+      <xs:maxLength value="2"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="tExpedient">
+    <xs:restriction base="xs:string">
+      <xs:minLength value="1"/>
+      <xs:maxLength value="65"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="tResultat">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="S"/>
+      <xs:enumeration value="N"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <!--=======================================================-->
+  <!--Resultat-->
+  <!--=======================================================-->
+  <xs:element name="resultat">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="codiResultat" type="xs:string"/>
+        <xs:element name="descripcio" type="xs:string"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
 </xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part></con:definitionCache><con:endpoints><con:endpoint>http://serveis3-pre.iop.aoc.cat:80/siri-proxy/services/Sincron</con:endpoint><con:endpoint>https://serveis3-pre.app.aoc.cat:443/siri-proxy/services/Sincron</con:endpoint><con:endpoint>https://serveis3-pre.iop.aoc.cat:443/siri-proxy/services/Sincron</con:endpoint></con:endpoints><con:operation id="0e1b6498-d8a1-4efa-8ebe-81577bd3f48c" isOneWay="false" action="http://www.openuri.org/procesa" name="procesa" bindingOperationName="procesa" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/></con:operation></con:interface><con:interface xsi:type="con:WsdlInterface" id="d2a4e61c-1023-4d2f-954b-bcfcd6a2a521" wsaVersion="NONE" name="AsincronSoap" type="wsdl" bindingName="{http://www.openuri.org/}AsincronSoap" soapVersion="1_1" anonymous="optional" definition="https://serveis3-pre.iop.aoc.cat/siri-proxy/services/Asincron?wsdl" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache type="TEXT" rootPart="https://serveis3-pre.iop.aoc.cat/siri-proxy/services/Asincron?wsdl"><con:part><con:url>https://serveis3-pre.iop.aoc.cat/siri-proxy/services/Asincron?wsdl</con:url><con:content><![CDATA[<!--Published by JAX-WS RI at http://jax-ws.dev.java.net. RI's version is Metro/2.2 (branches/2.2-7015; 2012-02-20T20:31:25+0000) JAXWS-RI/2.2.6 JAXWS/2.2 svn-revision#unknown.-->
 <wsdl:definitions targetNamespace="http://www.openuri.org/" xmlns:conv="http://www.openuri.org/2002/04/soap/conversation/" xmlns:cw="http://www.openuri.org/2002/04/wsdl/conversation/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:jms="http://www.openuri.org/2002/04/wsdl/jms/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:s0="http://www.openuri.org/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:xmime="http://www.w3.org/2005/05/xmlmime" xmlns:xs="http://www.w3.org/2001/XMLSchema">
   <wsdl:types>
@@ -39586,7 +39341,7 @@
          </pet:Peticion>\r
       </open:procesa>\r
    </soapenv:Body>\r
-</soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:attachment><con:name>SCT-REMESA_TSYSTEMS.xml</con:name><con:contentType>application/xml</con:contentType><con:size>523785</con:size><con:contentId>remesa</con:contentId><con:part>remesa</con:part><con:url>C:/Users/CristianMorales/Desktop/CAOC/10 - Serveis/VO/SCT_DENUNCIES/SCT_PDA/SCT_DENUNCIES/docs/proves/SCT-REMESA_TSYSTEMS.xml</con:url><con:data>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BVIFUgVSBVIFUgVSBVIFUgVSBVIFUgVSBVIFUgVSBVIFUgVSBVIFUgVSBVIFUgVSBVIFUgVSBVIFUsXvJ1XUPsQvlSpqn5EqRKQKpAqkCqQKpAqkCqQKpAqkCqQKpAqkCqQKpAqkCqQKpAqkCqQKpAqkCqQKpAqkCqQKpAqkCqQKpAqkCqQKpAqkCqQKpAqkCqQKpAqkCqQKpAqkCqQKpAqkCqQKpAqkCqQKpAqkCqQKpAqkCqQKpAqkCqQKpAqkCqQKpAqkCqQKpIrfT6qof8hfKlXUPyNVyEgVSBVIFUgVSBVIFUgVSBVIFUgVSBVIFUgVSBVIFUgVSBVIFUgVSBVIFUgVSBVIFUgVSBVIFUgVSBVIFUgVSBVIFUgVSBVIFUgVSBVIFUgVSBVIFUgVSBVIFUgVSBVIFUgVSBVIFUgVSBVIFUgVSBVIFUgVSBVIFUgVSBVIFUgVSBW/n1Shf6hfKlXon5EqVKQKpAqkCqQKpAqkCqQKpAqkCqQKpAqkCqQKpAqkCqQKpAqkCqQKpAqkCqQKpAqkCqQKpAqkCqQKpAqkCqQKpAqkCqQKpAqkCqQKpAqkCqQKpAqkCqQKpAqkCqQKpAqkCqQKpAqkCqQKpAqkCqQKpAqkCqQKpAqkCqQKpAqkCqQKpIrfTaoQBeGj9oVShfj+nvZ/lipqSBVIFUgVSBVIFUgVSBVIFUgVSBVIFUgVSBVIFUgVSBVIFUgVSBVIFUgVSBVIFUgVSBVIFUgVSBVIFUgVSBVIFUgVSBVIFUgVSBVIFUgVSBVIFUgVSBVIFUgVSBVIFUgVSBVIFUgVSBVIFUgVSBVIFUgVSBVIFUgVSBVIFUgVSBVIFb+fVCF+6F8qVYifkSp0pAqkCqQKpAqkCqQKpAqkCqQKpAqkCqQKpAqkCqQKpAqkCqQKpAqkCqQKpAqkCqQKpAqkCqQKpAqkCqQKpAqkCqQKpAqkCqQKpAqkCqQKpAqkCqQKpAqkCqQKpAqkCqQKpAqkCqQKpAqkCqQKpAqkCqQKpAqkCqQKpAqkCqQKpAqkit9PqpA+hC+VKqTPSBUCUgVSBVIFUgVSBVIFUgVSBVIFUgVSBVIFUgVSBVIFUgVSBVIFUgVSBVIFUgVSBVIFUgVSBVIFUgVSBVIFUgVSBVIFUgVSBVIFUgVSBVIFUgVSBVIFUgVSBVIFUgVSBVIFUgVSBVIF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u7Rd2u6vtF3xQ/zStit+pu2KtF3aLm2Xtkvbpe3Sdmm7tF3aLm2Xtkvbpe3Sdmm7tF3aLm2Xtkvbpe3Sdmm7tF3aLm2Xtkvb/ZW2K33IX9p2pc+0XZm2S9ul7dJ2abu0XdoubZe2S9ul7dJ2abu0XdoubZe2S9ul7dJ2abu0XdoubZe2S9ul7dJ2abu/0nblD/VL2678mbar0nZpu7Rd2i5tl7ZL26Xt0nZpu7Rd2i5tl7ZL26Xt0nZpu7Rd2i5tl7ZL26Xt0nZpu7Rd2i5t91farvJR+9K2q3ym7dZou7Rd2i5tl7ZL26Xt0nZpu7Rd2i5tl7ZL26Xt0nZpu7Rd2i5tl7ZL26Xt0nZpu7Rd2i5tl7b7K21X/dC/tO2qn2m7Om2Xtkvbpe3Sdmm7tF3aLm2Xtkvbpe3Sdmm7tF3aLm2Xtkvbpe3Sdmm7tF3aLm2Xtkvbpe3Sdn+l7WpfbDJrmMy0XdoubZe2S9ul7dJ2abu0XdoubZe2S9ul7dJ2abu0XdoubZe2S9ul7dJ2abu0XdoubZe2++Vtt/bFJnMNk5m2S9ul7dJ2abu0XdoubZe2S9ul7dJ2abu0XdoubZe2S9ul7dJ2abu0XdoubZe2S9ul7dJ2v7zt1r/YZK5jMtN2abu0XdoubZe2S9ul7dJ2abu0XdoubZe2S9ul7dJ2abu0XdoubZe2S9ul7dJ2abu0Xdrul7dd/UP40rarf6btCrRd2i5tl7ZL26Xt0nZpu7Rd2i5tl7ZL26Xt0nZpu7Rd2i5tl7ZL26Xt0nZpu7Rd2i5tl7ZL2/2FtisJH9JXtt13Of3PbVei7dJ2abu0XdoubZe2S9ul7dJ2abu0XdoubZe2S9ul7dJ2abu0XdoubZe2S9ul7dJ2abu0Xdrur7Rd8UP50rYrfqbtKrRd2i5tl7ZL26Xt0nZpu7Rd2i5tl7ZL26Xt0nZpu7Rd2i5tl7ZL26Xt0nZpu7Rd2i5tl7ZL2/2Vtit9aF/adqXPtF2Ntkvbpe3Sdmm7tF3aLm2Xtkvbpe3Sdmm7tF3aLm2Xtkvbpe3Sdmm7tF3aLm2Xtkvbpe3Sdmm7v9J25Y/6l7Zd+TNtt07bpe3Sdmm7tF3aLm2Xtkvbpe3Sdmm7tF3aLm2Xtkvbpe3Sdmm7tF3aLm2Xtkvbpe3Sdmm7///a7p//Mt//Vfv+/9hW+dt/AVBLBwiKlEePKFsAAAn+BwBQSwECFAAUAAgICABLX0NaipRHjyhbAAAJ/gcAFwAAAAAAAAAAAAAAAAAAAAAAU0NULVJFTUVTQV9UU1lTVEVNUy54bWxQSwUGAAAAAAEAAQBFAAAAbVsAAAAA</con:data><con:id>181ebd11-27b8-4129-a658-a5003258602d</con:id></con:attachment><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig action="http://www.openuri.org/procesa" mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:testStep type="request" id="1e899551-8c7c-4458-be82-8ae6e43046fa" name="VO - ACTIC - WSS"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>SincronSoap</con:interface><con:operation>procesa</con:operation><con:request name="VO - ACTIC - WSS" outgoingWss="CERT_PROVES" incomingWss="" timeout="" sslKeystore="" useWsAddressing="false" useWsReliableMessaging="false" wssPasswordType="" id="b8102efb-d443-4dfc-b817-02e7693fa0e0"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>https://serveis3-pre.iop.aoc.cat:443/siri-proxy/services/Sincron</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:open="http://www.openuri.org/" xmlns:pet="http://gencat.net/scsp/esquemes/peticion" xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/">\r
+</soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:attachment><con:name>SCT-REMESA_TSYSTEMS.xml</con:name><con:contentType>application/xml</con:contentType><con:size>523785</con:size><con:contentId>remesa</con:contentId><con:part>remesa</con:part><con:data>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BVIFUgVSBVIFUgVSBVIFUgVSBVIFUgVSBVIFUgVSBVIFUgVSBVIFUgVSBVIFUgVSBVIFUgVSBVIFUsXvJ1XUPsQvlSpqn5EqRKQKpAqkCqQKpAqkCqQKpAqkCqQKpAqkCqQKpAqkCqQKpAqkCqQKpAqkCqQKpAqkCqQKpAqkCqQKpAqkCqQKpAqkCqQKpAqkCqQKpAqkCqQKpAqkCqQKpAqkCqQKpAqkCqQKpAqkCqQKpAqkCqQKpAqkCqQKpAqkCqQKpAqkCqQKpIrfT6qof8hfKlXUPyNVyEgVSBVIFUgVSBVIFUgVSBVIFUgVSBVIFUgVSBVIFUgVSBVIFUgVSBVIFUgVSBVIFUgVSBVIFUgVSBVIFUgVSBVIFUgVSBVIFUgVSBVIFUgVSBVIFUgVSBVIFUgVSBVIFUgVSBVIFUgVSBVIFUgVSBVIFUgVSBVIFUgVSBVIFUgVSBW/n1Shf6hfKlXon5EqVKQKpAqkCqQKpAqkCqQKpAqkCqQKpAqkCqQKpAqkCqQKpAqkCqQKpAqkCqQKpAqkCqQKpAqkCqQKpAqkCqQKpAqkCqQKpAqkCqQKpAqkCqQKpAqkCqQKpAqkCqQKpAqkCqQKpAqkCqQKpAqkCqQKpAqkCqQKpAqkCqQKpAqkCqQKpIrfTaoQBeGj9oVShfj+nvZ/lipqSBVIFUgVSBVIFUgVSBVIFUgVSBVIFUgVSBVIFUgVSBVIFUgVSBVIFUgVSBVIFUgVSBVIFUgVSBVIFUgVSBVIFUgVSBVIFUgVSBVIFUgVSBVIFUgVSBVIFUgVSBVIFUgVSBVIFUgVSBVIFUgVSBVIFUgVSBVIFUgVSBVIFUgVSBVIFb+fVCF+6F8qVYifkSp0pAqkCqQKpAqkCqQKpAqkCqQKpAqkCqQKpAqkCqQKpAqkCqQKpAqkCqQKpAqkCqQKpAqkCqQKpAqkCqQKpAqkCqQKpAqkCqQKpAqkCqQKpAqkCqQKpAqkCqQKpAqkCqQKpAqkCqQKpAqkCqQKpAqkCqQKpAqkCqQKpAqkCqQKpAqkit9PqpA+hC+VKqTPSBUCUgVSBVIFUgVSBVIFUgVSBVIFUgVSBVIFUgVSBVIFUgVSBVIFUgVSBVIFUgVSBVIFUgVSBVIFUgVSBVIFUgVSBVIFUgVSBVIFUgVSBVIFUgVSBVIFUgVSBVIFUgVSBVIFUgVSBVIF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u7Rd2u6vtF3xQ/zStit+pu2KtF3aLm2Xtkvbpe3Sdmm7tF3aLm2Xtkvbpe3Sdmm7tF3aLm2Xtkvbpe3Sdmm7tF3aLm2Xtkvb/ZW2K33IX9p2pc+0XZm2S9ul7dJ2abu0XdoubZe2S9ul7dJ2abu0XdoubZe2S9ul7dJ2abu0XdoubZe2S9ul7dJ2abu/0nblD/VL2678mbar0nZpu7Rd2i5tl7ZL26Xt0nZpu7Rd2i5tl7ZL26Xt0nZpu7Rd2i5tl7ZL26Xt0nZpu7Rd2i5t91farvJR+9K2q3ym7dZou7Rd2i5tl7ZL26Xt0nZpu7Rd2i5tl7ZL26Xt0nZpu7Rd2i5tl7ZL26Xt0nZpu7Rd2i5tl7b7K21X/dC/tO2qn2m7Om2Xtkvbpe3Sdmm7tF3aLm2Xtkvbpe3Sdmm7tF3aLm2Xtkvbpe3Sdmm7tF3aLm2Xtkvbpe3Sdn+l7WpfbDJrmMy0XdoubZe2S9ul7dJ2abu0XdoubZe2S9ul7dJ2abu0XdoubZe2S9ul7dJ2abu0XdoubZe2++Vtt/bFJnMNk5m2S9ul7dJ2abu0XdoubZe2S9ul7dJ2abu0XdoubZe2S9ul7dJ2abu0XdoubZe2S9ul7dJ2v7zt1r/YZK5jMtN2abu0XdoubZe2S9ul7dJ2abu0XdoubZe2S9ul7dJ2abu0XdoubZe2S9ul7dJ2abu0Xdrul7dd/UP40rarf6btCrRd2i5tl7ZL26Xt0nZpu7Rd2i5tl7ZL26Xt0nZpu7Rd2i5tl7ZL26Xt0nZpu7Rd2i5tl7ZL2/2FtisJH9JXtt13Of3PbVei7dJ2abu0XdoubZe2S9ul7dJ2abu0XdoubZe2S9ul7dJ2abu0XdoubZe2S9ul7dJ2abu0Xdrur7Rd8UP50rYrfqbtKrRd2i5tl7ZL26Xt0nZpu7Rd2i5tl7ZL26Xt0nZpu7Rd2i5tl7ZL26Xt0nZpu7Rd2i5tl7ZL2/2Vtit9aF/adqXPtF2Ntkvbpe3Sdmm7tF3aLm2Xtkvbpe3Sdmm7tF3aLm2Xtkvbpe3Sdmm7tF3aLm2Xtkvbpe3Sdmm7v9J25Y/6l7Zd+TNtt07bpe3Sdmm7tF3aLm2Xtkvbpe3Sdmm7tF3aLm2Xtkvbpe3Sdmm7tF3aLm2Xtkvbpe3Sdmm7///a7p//Mt//Vfv+/9hW+dt/AVBLBwiKlEePKFsAAAn+BwBQSwECFAAUAAgICABLX0NaipRHjyhbAAAJ/gcAFwAAAAAAAAAAAAAAAAAAAAAAU0NULVJFTUVTQV9UU1lTVEVNUy54bWxQSwUGAAAAAAEAAQBFAAAAbVsAAAAA</con:data><con:id>181ebd11-27b8-4129-a658-a5003258602d</con:id></con:attachment><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig action="http://www.openuri.org/procesa" mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:testStep type="request" id="1e899551-8c7c-4458-be82-8ae6e43046fa" name="VO - ACTIC - WSS"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>SincronSoap</con:interface><con:operation>procesa</con:operation><con:request name="VO - ACTIC - WSS" outgoingWss="CERT_PROVES" incomingWss="" timeout="" sslKeystore="" useWsAddressing="false" useWsReliableMessaging="false" wssPasswordType="" id="b8102efb-d443-4dfc-b817-02e7693fa0e0"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>https://serveis3-pre.iop.aoc.cat:443/siri-proxy/services/Sincron</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:open="http://www.openuri.org/" xmlns:pet="http://gencat.net/scsp/esquemes/peticion" xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/">\r
    <soapenv:Header/>\r
    <soapenv:Body wsu:Id="id-2FCB69B934F938128B162694603391719" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd">\r
       <open:procesa>\r
@@ -40931,6 +40686,70 @@
          </ns1:Peticion>\r
       </open:procesa>\r
    </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:assertion type="SOAP Response" id="1c7555af-bbba-435a-b18c-e5f8ad74c6e6" name="SOAP Response"/><con:credentials><con:selectedAuthProfile>Basic</con:selectedAuthProfile><con:addedBasicAuthenticationTypes>Basic</con:addedBasicAuthenticationTypes><con:preemptive>true</con:preemptive><con:authType>Preemptive</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://www.openuri.org/procesa"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:testStep type="request" id="d41e5bf4-6745-4089-9936-73ab8c974b55" name="VO - GRAU_DISC_CCAA - WSS"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>SincronSoap</con:interface><con:operation>procesa</con:operation><con:request name="VO - GRAU_DISC_CCAA - WSS" outgoingWss="CERT_PROVES" incomingWss="" timeout="" sslKeystore="" useWsAddressing="false" useWsReliableMessaging="false" wssPasswordType="" id="b8102efb-d443-4dfc-b817-02e7693fa0e0"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>https://serveis3-pre.iop.aoc.cat:443/siri-proxy/services/Sincron</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:open="http://www.openuri.org/" xmlns:pet="http://gencat.net/scsp/esquemes/peticion" xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/">\r
+   <soapenv:Header/>\r
+   <soapenv:Body wsu:Id="id-2FCB69B934F938128B162694603391719" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd">\r
+      <open:procesa>\r
+         <ns1:Peticion xmlns:ns1="http://gencat.net/scsp/esquemes/peticion">\r
+            <ns1:Atributos>\r
+               <ns1:IdPeticion>9821920002-GRAU_DISCAPACITAT_CCAA_115399_${=(long)(System.currentTimeMillis())}</ns1:IdPeticion>\r
+               <ns1:NumElementos>1</ns1:NumElementos>\r
+               <ns1:TimeStamp>2018-07-05 09:28:22.28</ns1:TimeStamp>\r
+               <ns1:Estado/>\r
+               <ns1:CodigoCertificado>GRAU_DISCAPACITAT_CCAA_RD8882022</ns1:CodigoCertificado>\r
+               <ns1:CodigoProducto>GRAU_DISCAPACITAT_CCAA</ns1:CodigoProducto>\r
+               <ns1:DatosAutorizacion>\r
+                  <ns1:IdentificadorSolicitante>${Properties#IdentificadorSolicitante}</ns1:IdentificadorSolicitante>\r
+                  <ns1:NombreSolicitante>Ajuntament</ns1:NombreSolicitante>\r
+                  <ns1:Finalidad>9821920002_PROVES</ns1:Finalidad>\r
+               </ns1:DatosAutorizacion>\r
+               <ns1:Emisor>\r
+                  <ns1:NifEmisor>Q0801175A</ns1:NifEmisor>\r
+                  <ns1:NombreEmisor>CAOC</ns1:NombreEmisor>\r
+               </ns1:Emisor>\r
+               <ns1:Funcionario>\r
+                  <ns1:NombreCompletoFuncionario>${Properties#NombreCompletoFuncionario}</ns1:NombreCompletoFuncionario>\r
+                  <ns1:NifFuncionario>${Properties#NIFFuncionario}</ns1:NifFuncionario>\r
+               </ns1:Funcionario>\r
+            </ns1:Atributos>\r
+            <ns1:Solicitudes>\r
+               <ns1:SolicitudTransmision>\r
+                  <ns1:DatosGenericos>\r
+                     <ns1:Emisor>\r
+                        <ns1:NifEmisor>Q0801175A</ns1:NifEmisor>\r
+                        <ns1:NombreEmisor>CAOC</ns1:NombreEmisor>\r
+                     </ns1:Emisor>\r
+                     <ns1:Solicitante>\r
+                        <ns1:IdentificadorSolicitante>${Properties#IdentificadorSolicitante}</ns1:IdentificadorSolicitante>\r
+                        <ns1:NombreSolicitante>Ajuntament</ns1:NombreSolicitante>\r
+                        <ns1:Finalidad>9821920002_PROVES</ns1:Finalidad>\r
+                        <ns1:Consentimiento>Ley</ns1:Consentimiento>\r
+                        <ns1:Funcionario>\r
+                           <ns1:NombreCompletoFuncionario>${Properties#NombreCompletoFuncionario}</ns1:NombreCompletoFuncionario>\r
+                           <ns1:NifFuncionario>${Properties#NIFFuncionario}</ns1:NifFuncionario>\r
+                        </ns1:Funcionario>\r
+                     </ns1:Solicitante>\r
+                     <ns1:Titular>\r
+                        <ns1:TipoDocumentacion>DNI</ns1:TipoDocumentacion>\r
+                        <ns1:Documentacion>54777957F</ns1:Documentacion>\r
+                     </ns1:Titular>\r
+                     <ns1:Transmision>\r
+                        <ns1:CodigoCertificado>GRAU_DISCAPACITAT_CCAA_RD8882022</ns1:CodigoCertificado>\r
+                        <ns1:IdSolicitud>${=(long)(System.currentTimeMillis())}</ns1:IdSolicitud>\r
+                        <ns1:IdTransmision>32017</ns1:IdTransmision>\r
+                     </ns1:Transmision>\r
+                  </ns1:DatosGenericos>\r
+                  <ns1:DatosEspecificos>\r
+                     <ns3:peticioConsultaDadesDiscapacitat xmlns="http://www.aoc.cat/discapacitat/ccaa" xmlns:ns3="http://www.aoc.cat/discapacitat/ccaa" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">\r
+                        <ns3:ccaa>10</ns3:ccaa>\r
+                        <ns3:consentimentTipusDiscapacitat>S</ns3:consentimentTipusDiscapacitat>\r
+                     </ns3:peticioConsultaDadesDiscapacitat>\r
+                  </ns1:DatosEspecificos>\r
+               </ns1:SolicitudTransmision>\r
+            </ns1:Solicitudes>\r
+         </ns1:Peticion>\r
+      </open:procesa>\r
+   </soapenv:Body>\r
 </soapenv:Envelope>]]></con:request><con:assertion type="SOAP Response" id="1c7555af-bbba-435a-b18c-e5f8ad74c6e6" name="SOAP Response"/><con:credentials><con:selectedAuthProfile>Basic</con:selectedAuthProfile><con:addedBasicAuthenticationTypes>Basic</con:addedBasicAuthenticationTypes><con:preemptive>true</con:preemptive><con:authType>Preemptive</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://www.openuri.org/procesa"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:testStep type="request" id="88fc1e6d-37b9-47e3-916a-80afd2fd13a0" name="VO - CADASTRE - WSS"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>SincronSoap</con:interface><con:operation>procesa</con:operation><con:request name="VO - CADASTRE - WSS" outgoingWss="CERT_PROVES" incomingWss="" timeout="" sslKeystore="" useWsAddressing="false" useWsReliableMessaging="false" wssPasswordType="" id="b8102efb-d443-4dfc-b817-02e7693fa0e0"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>https://serveis3-pre.iop.aoc.cat:443/siri-proxy/services/Sincron</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:open="http://www.openuri.org/" xmlns:pet="http://gencat.net/scsp/esquemes/peticion" xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/">\r
    <soapenv:Header/>\r
    <soapenv:Body wsu:Id="id-2FCB69B934F938128B162694603391719" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd">\r
@@ -41056,73 +40875,6 @@
                         <ns1:IdTransmision>32017</ns1:IdTransmision>\r
                      </ns1:Transmision>\r
                   </ns1:DatosGenericos>\r
-               </ns1:SolicitudTransmision>\r
-            </ns1:Solicitudes>\r
-         </ns1:Peticion>\r
-      </open:procesa>\r
-   </soapenv:Body>\r
-</soapenv:Envelope>]]></con:request><con:assertion type="SOAP Response" id="1c7555af-bbba-435a-b18c-e5f8ad74c6e6" name="SOAP Response"/><con:credentials><con:selectedAuthProfile>Basic</con:selectedAuthProfile><con:addedBasicAuthenticationTypes>Basic</con:addedBasicAuthenticationTypes><con:preemptive>true</con:preemptive><con:authType>Preemptive</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://www.openuri.org/procesa"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:testStep type="request" id="339a42fc-38d9-414c-8102-6edad7d2f0b5" name="VO - INS_HIST - WSS"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>SincronSoap</con:interface><con:operation>procesa</con:operation><con:request name="VO - INS_HIST - WSS" outgoingWss="CERT_PROVES" incomingWss="" timeout="" sslKeystore="" useWsAddressing="false" useWsReliableMessaging="false" wssPasswordType="" id="b8102efb-d443-4dfc-b817-02e7693fa0e0"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>https://serveis3-pre.iop.aoc.cat:443/siri-proxy/services/Sincron</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:open="http://www.openuri.org/" xmlns:pet="http://gencat.net/scsp/esquemes/peticion" xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/">\r
-   <soapenv:Header/>\r
-   <soapenv:Body wsu:Id="id-2FCB69B934F938128B162694603391719" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd">\r
-      <open:procesa>\r
-         <ns1:Peticion xmlns:ns1="http://gencat.net/scsp/esquemes/peticion">\r
-            <ns1:Atributos>\r
-               <ns1:IdPeticion>9821920002-PRESTACIONS_HISTORIC_${=(long)(System.currentTimeMillis())}</ns1:IdPeticion>\r
-               <ns1:NumElementos>1</ns1:NumElementos>\r
-               <ns1:TimeStamp>2018-07-05 09:28:22.28</ns1:TimeStamp>\r
-               <ns1:Estado/>\r
-               <ns1:CodigoCertificado>PRESTACIONS_HISTORIC</ns1:CodigoCertificado>\r
-               <ns1:CodigoProducto>PRESTACIONS_SOCIALS</ns1:CodigoProducto>\r
-               <ns1:DatosAutorizacion>\r
-                  <ns1:IdentificadorSolicitante>${Properties#IdentificadorSolicitante}</ns1:IdentificadorSolicitante>\r
-                  <ns1:NombreSolicitante>Ajuntament</ns1:NombreSolicitante>\r
-                  <ns1:Finalidad>PROVES</ns1:Finalidad>\r
-               </ns1:DatosAutorizacion>\r
-               <ns1:Emisor>\r
-                  <ns1:NifEmisor>Q0801175A</ns1:NifEmisor>\r
-                  <ns1:NombreEmisor>CAOC</ns1:NombreEmisor>\r
-               </ns1:Emisor>\r
-               <ns1:Funcionario>\r
-                  <ns1:NombreCompletoFuncionario>${Properties#NombreCompletoFuncionario}</ns1:NombreCompletoFuncionario>\r
-                  <ns1:NifFuncionario>${Properties#NIFFuncionario}</ns1:NifFuncionario>\r
-               </ns1:Funcionario>\r
-            </ns1:Atributos>\r
-            <ns1:Solicitudes>\r
-               <ns1:SolicitudTransmision>\r
-                  <ns1:DatosGenericos>\r
-                     <ns1:Emisor>\r
-                        <ns1:NifEmisor>Q0801175A</ns1:NifEmisor>\r
-                        <ns1:NombreEmisor>CAOC</ns1:NombreEmisor>\r
-                     </ns1:Emisor>\r
-                     <ns1:Solicitante>\r
-                        <ns1:IdentificadorSolicitante>${Properties#IdentificadorSolicitante}</ns1:IdentificadorSolicitante>\r
-                        <ns1:NombreSolicitante>Ajuntament</ns1:NombreSolicitante>\r
-                        <ns1:Finalidad>PROVES</ns1:Finalidad>\r
-                        <ns1:Consentimiento>Ley</ns1:Consentimiento>\r
-                        <ns1:Funcionario>\r
-                           <ns1:NombreCompletoFuncionario>${Properties#NombreCompletoFuncionario}</ns1:NombreCompletoFuncionario>\r
-                           <ns1:NifFuncionario>${Properties#NIFFuncionario}</ns1:NifFuncionario>\r
-                        </ns1:Funcionario>\r
-                     </ns1:Solicitante>\r
-                     <ns1:Titular>\r
-                        <ns1:TipoDocumentacion>DNI</ns1:TipoDocumentacion>\r
-                        <ns1:Documentacion>84030977V</ns1:Documentacion>\r
-                        <ns1:Nombre>MARTIN</ns1:Nombre>\r
-                        <ns1:Apellido1>ROLDAN</ns1:Apellido1>\r
-                        <ns1:Apellido2>ROLDAN</ns1:Apellido2>\r
-                     </ns1:Titular>\r
-                     <ns1:Transmision>\r
-                        <ns1:CodigoCertificado>PRESTACIONS_HISTORIC</ns1:CodigoCertificado>\r
-                        <ns1:IdSolicitud>${=(long)(System.currentTimeMillis())}</ns1:IdSolicitud>\r
-                        <ns1:IdTransmision>32017</ns1:IdTransmision>\r
-                     </ns1:Transmision>\r
-                  </ns1:DatosGenericos>\r
-                  <ns1:DatosEspecificos>\r
-                     <ns3:peticioConsultaPrestacionsHistoric xmlns="http://www.aoc.cat/inss" xmlns:ns3="http://www.aoc.cat/inss" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">\r
-                        <ns3:dataInici>2021-01-01</ns3:dataInici>\r
-                        <ns3:dataFi>2021-12-31</ns3:dataFi>\r
-                     </ns3:peticioConsultaPrestacionsHistoric>\r
-                  </ns1:DatosEspecificos>\r
                </ns1:SolicitudTransmision>\r
             </ns1:Solicitudes>\r
          </ns1:Peticion>\r
@@ -41933,6 +41685,122 @@
                      </peticioConsultaDadesAfiliacio>\r
                   </ns1:DatosEspecificos>\r
                </ns1:SolicitudTransmision>\r
+            </ns1:Solicitudes>\r
+         </ns1:Peticion>\r
+      </open:procesa>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:assertion type="SOAP Response" id="1c7555af-bbba-435a-b18c-e5f8ad74c6e6" name="SOAP Response"/><con:credentials><con:selectedAuthProfile>Basic</con:selectedAuthProfile><con:addedBasicAuthenticationTypes>Basic</con:addedBasicAuthenticationTypes><con:preemptive>true</con:preemptive><con:authType>Preemptive</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://www.openuri.org/procesa"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:testStep type="request" id="8e052c4f-96f2-4546-bb84-d6dbc9e4c4b9" name="VO - INSS_TSD_PRESTACIONS - WSS"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>SincronSoap</con:interface><con:operation>procesa</con:operation><con:request name="VO - INSS_TSD_PRESTACIONS - WSS" outgoingWss="CERT_PROVES" incomingWss="" timeout="" sslKeystore="" useWsAddressing="false" useWsReliableMessaging="false" wssPasswordType="" id="b8102efb-d443-4dfc-b817-02e7693fa0e0"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>https://serveis3-pre.iop.aoc.cat:443/siri-proxy/services/Sincron</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:open="http://www.openuri.org/" xmlns:pet="http://gencat.net/scsp/esquemes/peticion" xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/">\r
+   <soapenv:Header/>\r
+   <soapenv:Body wsu:Id="id-2FCB69B934F938128B162694603391719" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd">\r
+      <open:procesa>\r
+         <ns1:Peticion xmlns:ns1="http://gencat.net/scsp/esquemes/peticion">\r
+            <ns1:Atributos>\r
+               <ns1:IdPeticion>9821920002-TSD_PRESTACIONS_${=(long)(System.currentTimeMillis())}</ns1:IdPeticion>\r
+               <ns1:NumElementos>1</ns1:NumElementos>\r
+               <ns1:TimeStamp>2018-07-05 09:28:22.28</ns1:TimeStamp>\r
+               <ns1:Estado/>\r
+               <ns1:CodigoCertificado>TSD_PRESTACIONS</ns1:CodigoCertificado>\r
+               <ns1:CodigoProducto>PRESTACIONS_SOCIALS</ns1:CodigoProducto>\r
+               <ns1:DatosAutorizacion>\r
+                  <ns1:IdentificadorSolicitante>${Properties#IdentificadorSolicitante}</ns1:IdentificadorSolicitante>\r
+                  <ns1:NombreSolicitante>Ajuntament</ns1:NombreSolicitante>\r
+                  <ns1:Finalidad>9821920002_PROVES</ns1:Finalidad>\r
+               </ns1:DatosAutorizacion>\r
+               <ns1:Emisor>\r
+                  <ns1:NifEmisor>Q0801175A</ns1:NifEmisor>\r
+                  <ns1:NombreEmisor>CAOC</ns1:NombreEmisor>\r
+               </ns1:Emisor>\r
+               <ns1:Funcionario>\r
+                  <ns1:NombreCompletoFuncionario>${Properties#NombreCompletoFuncionario}</ns1:NombreCompletoFuncionario>\r
+                  <ns1:NifFuncionario>${Properties#NIFFuncionario}</ns1:NifFuncionario>\r
+               </ns1:Funcionario>\r
+            </ns1:Atributos>\r
+            <ns1:Solicitudes>\r
+               <ns1:SolicitudTransmision>\r
+                  <ns1:DatosGenericos>\r
+                     <ns1:Emisor>\r
+                        <ns1:NifEmisor>Q0801175A</ns1:NifEmisor>\r
+                        <ns1:NombreEmisor>CAOC</ns1:NombreEmisor>\r
+                     </ns1:Emisor>\r
+                     <ns1:Solicitante>\r
+                        <ns1:IdentificadorSolicitante>${Properties#IdentificadorSolicitante}</ns1:IdentificadorSolicitante>\r
+                        <ns1:NombreSolicitante>Ajuntament</ns1:NombreSolicitante>\r
+                        <ns1:Finalidad>9821920002_PROVES</ns1:Finalidad>\r
+                        <ns1:Consentimiento>Ley</ns1:Consentimiento>\r
+                        <ns1:Funcionario>\r
+                           <ns1:NombreCompletoFuncionario>${Properties#NombreCompletoFuncionario}</ns1:NombreCompletoFuncionario>\r
+                           <ns1:NifFuncionario>${Properties#NIFFuncionario}</ns1:NifFuncionario>\r
+                        </ns1:Funcionario>\r
+                     </ns1:Solicitante>\r
+                     <ns1:Titular>\r
+                        <ns1:TipoDocumentacion>NIF</ns1:TipoDocumentacion>\r
+                        <ns1:Documentacion>27474528Q</ns1:Documentacion>\r
+                     </ns1:Titular>\r
+                     <ns1:Transmision>\r
+                        <ns1:CodigoCertificado>TSD_PRESTACIONS</ns1:CodigoCertificado>\r
+                        <ns1:IdSolicitud>${=(long)(System.currentTimeMillis())}</ns1:IdSolicitud>\r
+                        <ns1:IdTransmision>32017</ns1:IdTransmision>\r
+                     </ns1:Transmision>\r
+                  </ns1:DatosGenericos>\r
+                </ns1:SolicitudTransmision>\r
+            </ns1:Solicitudes>\r
+         </ns1:Peticion>\r
+      </open:procesa>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:assertion type="SOAP Response" id="1c7555af-bbba-435a-b18c-e5f8ad74c6e6" name="SOAP Response"/><con:credentials><con:selectedAuthProfile>Basic</con:selectedAuthProfile><con:addedBasicAuthenticationTypes>Basic</con:addedBasicAuthenticationTypes><con:preemptive>true</con:preemptive><con:authType>Preemptive</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://www.openuri.org/procesa"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:testStep type="request" id="ce0731a8-a260-43ee-baf3-a7f4f32c6c06" name="VO - INSS_ TSD_INTEGRANTS - WSS"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>SincronSoap</con:interface><con:operation>procesa</con:operation><con:request name="VO - INSS_ TSD_INTEGRANTS - WSS" outgoingWss="CERT_PROVES" incomingWss="" timeout="" sslKeystore="" useWsAddressing="false" useWsReliableMessaging="false" wssPasswordType="" id="b8102efb-d443-4dfc-b817-02e7693fa0e0"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>https://serveis3-pre.iop.aoc.cat:443/siri-proxy/services/Sincron</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:open="http://www.openuri.org/" xmlns:pet="http://gencat.net/scsp/esquemes/peticion" xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/">\r
+   <soapenv:Header/>\r
+   <soapenv:Body wsu:Id="id-2FCB69B934F938128B162694603391719" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd">\r
+      <open:procesa>\r
+         <ns1:Peticion xmlns:ns1="http://gencat.net/scsp/esquemes/peticion">\r
+            <ns1:Atributos>\r
+               <ns1:IdPeticion>9821920002-TSD_INTEGRANTS_${=(long)(System.currentTimeMillis())}</ns1:IdPeticion>\r
+               <ns1:NumElementos>1</ns1:NumElementos>\r
+               <ns1:TimeStamp>2018-07-05 09:28:22.28</ns1:TimeStamp>\r
+               <ns1:Estado/>\r
+               <ns1:CodigoCertificado>TSD_INTEGRANTS</ns1:CodigoCertificado>\r
+               <ns1:CodigoProducto>PRESTACIONS_SOCIALS</ns1:CodigoProducto>\r
+               <ns1:DatosAutorizacion>\r
+                  <ns1:IdentificadorSolicitante>${Properties#IdentificadorSolicitante}</ns1:IdentificadorSolicitante>\r
+                  <ns1:NombreSolicitante>Ajuntament</ns1:NombreSolicitante>\r
+                  <ns1:Finalidad>9821920002_PROVES</ns1:Finalidad>\r
+               </ns1:DatosAutorizacion>\r
+               <ns1:Emisor>\r
+                  <ns1:NifEmisor>Q0801175A</ns1:NifEmisor>\r
+                  <ns1:NombreEmisor>CAOC</ns1:NombreEmisor>\r
+               </ns1:Emisor>\r
+               <ns1:Funcionario>\r
+                  <ns1:NombreCompletoFuncionario>${Properties#NombreCompletoFuncionario}</ns1:NombreCompletoFuncionario>\r
+                  <ns1:NifFuncionario>${Properties#NIFFuncionario}</ns1:NifFuncionario>\r
+               </ns1:Funcionario>\r
+            </ns1:Atributos>\r
+            <ns1:Solicitudes>\r
+               <ns1:SolicitudTransmision>\r
+                  <ns1:DatosGenericos>\r
+                     <ns1:Emisor>\r
+                        <ns1:NifEmisor>Q0801175A</ns1:NifEmisor>\r
+                        <ns1:NombreEmisor>CAOC</ns1:NombreEmisor>\r
+                     </ns1:Emisor>\r
+                     <ns1:Solicitante>\r
+                        <ns1:IdentificadorSolicitante>${Properties#IdentificadorSolicitante}</ns1:IdentificadorSolicitante>\r
+                        <ns1:NombreSolicitante>Ajuntament</ns1:NombreSolicitante>\r
+                        <ns1:Finalidad>9821920002_PROVES</ns1:Finalidad>\r
+                        <ns1:Consentimiento>Ley</ns1:Consentimiento>\r
+                        <ns1:Funcionario>\r
+                           <ns1:NombreCompletoFuncionario>${Properties#NombreCompletoFuncionario}</ns1:NombreCompletoFuncionario>\r
+                           <ns1:NifFuncionario>${Properties#NIFFuncionario}</ns1:NifFuncionario>\r
+                        </ns1:Funcionario>\r
+                     </ns1:Solicitante>\r
+                     <ns1:Titular>\r
+                        <ns1:TipoDocumentacion>NIF</ns1:TipoDocumentacion>\r
+                        <ns1:Documentacion>46350400H</ns1:Documentacion>\r
+                     </ns1:Titular>\r
+                     <ns1:Transmision>\r
+                        <ns1:CodigoCertificado>TSD_INTEGRANTS</ns1:CodigoCertificado>\r
+                        <ns1:IdSolicitud>${=(long)(System.currentTimeMillis())}</ns1:IdSolicitud>\r
+                        <ns1:IdTransmision>32017</ns1:IdTransmision>\r
+                     </ns1:Transmision>\r
+                  </ns1:DatosGenericos>\r
+                </ns1:SolicitudTransmision>\r
             </ns1:Solicitudes>\r
          </ns1:Peticion>\r
       </open:procesa>\r

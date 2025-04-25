@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:ns1="http://exceptions.model.pscp.economia.gencat.cat" targetNamespace="http://exceptions.model.pscp.economia.gencat.cat" elementFormDefault="qualified" attributeFormDefault="qualified">
-	<xsd:complexType name="PscpWSBusinessFaultDetail">
-		<xsd:sequence>
-			<xsd:element name="errorCode" type="xsd:string" nillable="true" minOccurs="0"/>
-			<xsd:element name="exceptionDetails" type="xsd:string" nillable="true" minOccurs="0"/>
-		</xsd:sequence>
-	</xsd:complexType>
-</xsd:schema>
