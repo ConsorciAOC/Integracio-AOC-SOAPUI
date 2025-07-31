@@ -1,10 +1,17 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <xs:schema xmlns="http://www.aoc.cat/antecedents-penals" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.aoc.cat/antecedents-penals" elementFormDefault="qualified" attributeFormDefault="unqualified">
 	<xs:complexType name="tAntecedentsPenals">
-		<xs:choice>
-			<xs:group ref="filiacio"/>
-			<xs:group ref="documentacio"/>
-		</xs:choice>
+		<xs:sequence>
+				<xs:choice>
+					<xs:group ref="filiacio"/>
+					<xs:group ref="documentacio"/>
+				</xs:choice>
+			<xs:element ref="representant" minOccurs="0"/>
+			<xs:element ref="segonaNacionalitat" minOccurs="0"/>
+			<xs:element name="postilla" type="xs:boolean" minOccurs="0"/>
+			<xs:element name="paisPostilla" type="ISO3166_3" minOccurs="0"/>
+			<xs:element name="prescindirInternacional" type="xs:boolean" minOccurs="0"/>				
+		</xs:sequence>
 	</xs:complexType>
 	<xs:group name="filiacio">
 		<xs:sequence>
@@ -22,15 +29,12 @@
 					</xs:sequence>
 				</xs:complexType>
 			</xs:element>
-			<xs:element ref="correu" minOccurs="0"/>
-			<xs:element ref="telefon" minOccurs="0"/>
 		</xs:sequence>
 	</xs:group>
 	<xs:group name="documentacio">
 		<xs:sequence>
 			<xs:element ref="anyNaixement" minOccurs="0"/>
-			<xs:element ref="correu" minOccurs="0"/>
-			<xs:element ref="telefon" minOccurs="0"/>
+			<xs:element ref="numeroSuport" minOccurs="0"/>
 		</xs:sequence>
 	</xs:group>
 	<xs:element name="peticioInexistenciaAntecedentsPenals" type="tAntecedentsPenals"/>
@@ -77,9 +81,9 @@
 			</xs:restriction>
 		</xs:simpleType>
 	</xs:element>
-	<xs:element name="nomPare" type="Nom"/>
-	<xs:element name="nomMare" type="Nom"/>
-	<xs:simpleType name="Nom">
+	<xs:element name="nomPare" type="tNom"/>
+	<xs:element name="nomMare" type="tNom"/>
+	<xs:simpleType name="tNom">
 		<xs:restriction base="xs:string">
 			<xs:whiteSpace value="collapse"/>
 			<xs:minLength value="1"/>
@@ -119,23 +123,6 @@
 			</xs:restriction>
 		</xs:simpleType>
 	</xs:element>
-	<xs:element name="correu">
-		<xs:simpleType>
-			<xs:restriction base="xs:string">
-				<xs:whiteSpace value="collapse"/>
-				<xs:minLength value="1"/>
-				<xs:maxLength value="100"/>
-			</xs:restriction>
-		</xs:simpleType>
-	</xs:element>
-	<xs:element name="telefon">
-		<xs:simpleType>
-			<xs:restriction base="xs:string">
-				<xs:whiteSpace value="collapse"/>
-				<xs:pattern value="(\+)?[0-9]{1,14}"/>
-			</xs:restriction>
-		</xs:simpleType>
-	</xs:element>
 	<xs:element name="anyNaixement">
 		<xs:simpleType>
 			<xs:restriction base="xs:int">
@@ -144,10 +131,69 @@
 			</xs:restriction>
 		</xs:simpleType>
 	</xs:element>
+	<xs:element name="numeroSuport">
+		<xs:simpleType>
+			<xs:restriction base="xs:string">
+				<xs:length value="9"/>
+				<xs:whiteSpace value="collapse"/>
+			</xs:restriction>
+		</xs:simpleType>
+	</xs:element>
+	<xs:element name="documentacio">
+		<xs:simpleType>
+			<xs:restriction base="xs:string">
+				<xs:minLength value="1"/>
+				<xs:maxLength value="14"/>
+				<xs:whiteSpace value="collapse"/>
+			</xs:restriction>
+		</xs:simpleType>
+	</xs:element>
+	<xs:element name="representant">
+		<xs:complexType>
+			<xs:all>
+				<xs:element name="denominacio" minOccurs="0">
+					<xs:simpleType>
+						<xs:restriction base="xs:string">
+							<xs:minLength value="1"/>
+							<xs:maxLength value="100"/>
+							<xs:whiteSpace value="collapse"/>
+						</xs:restriction>
+					</xs:simpleType>
+				</xs:element>
+				<xs:element name="tipusDocumentacio" minOccurs="0">
+					<xs:simpleType>
+						<xs:restriction base="xs:string">
+							<xs:enumeration value="NIF"/>
+							<xs:enumeration value="NIE"/>
+							<xs:enumeration value="Pasaporte"/>
+						</xs:restriction>
+					</xs:simpleType>
+				</xs:element>
+				<xs:element ref="documentacio" minOccurs="0"/>
+			</xs:all>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="segonaNacionalitat">
+		<xs:complexType>
+			<xs:all>
+				<xs:element name="tipusDocumentacio" minOccurs="0">
+					<xs:simpleType>
+						<xs:restriction base="xs:string">
+							<xs:enumeration value="DNI"/>
+							<xs:enumeration value="NIE"/>
+							<xs:enumeration value="Pasaporte"/>
+						</xs:restriction>
+					</xs:simpleType>
+				</xs:element>
+				<xs:element ref="documentacio" minOccurs="0"/>
+				<xs:element name="nacionalitat" type="ISO3166_3" minOccurs="0"/>
+			</xs:all>
+		</xs:complexType>
+	</xs:element>
 	<xs:element name="resposta">
 		<xs:complexType>
 			<xs:sequence>
-				<xs:element name="csv">
+				<xs:element name="csv" minOccurs="0">
 					<xs:simpleType>
 						<xs:restriction base="xs:string">
 							<xs:whiteSpace value="collapse"/>
@@ -156,11 +202,20 @@
 						</xs:restriction>
 					</xs:simpleType>
 				</xs:element>
-				<xs:element name="url">
+				<xs:element name="url" minOccurs="0">
 					<xs:simpleType>
 						<xs:restriction base="xs:string">
 							<xs:whiteSpace value="collapse"/>
 							<xs:minLength value="1"/>
+						</xs:restriction>
+					</xs:simpleType>
+				</xs:element>
+				<xs:element name="csvPostillat" minOccurs="0">
+					<xs:simpleType>
+						<xs:restriction base="xs:string">
+							<xs:whiteSpace value="collapse"/>
+							<xs:minLength value="1"/>
+							<xs:maxLength value="22"/>
 						</xs:restriction>
 					</xs:simpleType>
 				</xs:element>
