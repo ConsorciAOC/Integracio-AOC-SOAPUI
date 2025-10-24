@@ -56,13 +56,12 @@
 		</xs:complexType>
 	</xs:element>
 	<!-- ======================================================= -->
-	<!-- Subvencions minimis	                                 	 -->
+	<!-- Subvencions minimis	                                 -->
 	<!-- ======================================================= -->
 	<xs:element name="peticioConsultaSubvencionsMinimis">
 		<xs:complexType>
 			<xs:sequence>
 				<xs:sequence>
-					<xs:element name="idEstranger" type="xs:boolean" minOccurs="0"/>
 					<xs:element name="pais" type="xs:string"/>
 					<xs:element name="dataInici" type="xs:date" minOccurs="0"/>
 					<xs:element name="dataFi" type="xs:date" minOccurs="0"/>
@@ -85,18 +84,156 @@
 						</xs:sequence>
 					</xs:complexType>
 				</xs:element>
+				<!-- dades ampliades-->
+				<xs:element name="agregats" minOccurs="0">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="reglaments">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element ref="reglament" maxOccurs="unbounded"/>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="reglamentsMinimis" minOccurs="0">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="reglamentDetall" maxOccurs="unbounded">
+								<xs:complexType>
+									<xs:all>
+										<xs:element name="identificador" type="xs:string"/>
+										<xs:element name="descripcio" type="xs:string"/>
+										<xs:element name="concessions" minOccurs="0">
+											<xs:complexType>
+												<xs:sequence>
+													<xs:element name="concessio" type="TConcessio" maxOccurs="unbounded"/>
+												</xs:sequence>
+											</xs:complexType>
+										</xs:element>
+										<xs:element name="importAcumulatNacionalAgricola" type="xs:decimal" minOccurs="0"/>
+										<xs:element name="importAcumulatNacionalPesca3A" type="xs:decimal" minOccurs="0"/>
+										<xs:element name="importeAcumulatNacionalPesca3EF" type="xs:decimal" minOccurs="0"/>
+									</xs:all>
+								</xs:complexType>
+							</xs:element>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
 				<xs:element ref="resultat"/>
 			</xs:sequence>
 		</xs:complexType>
 	</xs:element>
+	<xs:element name="reglament">
+		<xs:complexType>
+			<xs:all>
+				<xs:element name="identificador" type="xs:string"/>
+				<xs:element name="descripcio" type="xs:string"/>
+				<xs:element name="importAcumulat" type="xs:decimal"/>
+			</xs:all>
+		</xs:complexType>
+	</xs:element>
+	<xs:complexType name="TConcessio">
+		<xs:sequence>
+			<xs:element name="codi" type="xs:string"/>
+			<xs:element name="discriminador" type="xs:string"/>
+			<xs:element ref="atorgant"/>
+			<xs:element ref="convocatoria"/>
+			<xs:element ref="beneficiari"/>
+			<xs:element name="dataConcessio" type="xs:date"/>
+			<xs:element name="dataRegistre" type="xs:date"/>
+			<xs:element name="instrumentAjuda" type="xs:string"/>
+			<xs:element name="importConcedit" type="xs:decimal"/>
+			<xs:element name="ajudaEquivalent" type="xs:decimal"/>
+			<xs:element name="regio" type="xs:string"/>
+			<xs:element ref="reintegraments" minOccurs="0"/>
+			<xs:element ref="devolucions" minOccurs="0"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:element name="atorgant">
+		<xs:complexType>
+			<xs:all>
+				<xs:element name="administracio" type="xs:string"/>
+				<xs:element name="departament" type="xs:string" minOccurs="0"/>
+				<xs:element name="organ" type="xs:string"/>
+				<xs:element name="dir3" type="xs:string"/>
+			</xs:all>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="convocatoria">
+		<xs:complexType>
+			<xs:all>
+				<xs:element name="codi" type="xs:string"/>
+				<xs:element name="descripcio" type="xs:string"/>
+				<xs:element name="autoritzacio" minOccurs="0">
+					<xs:complexType>
+						<xs:all>
+							<xs:element name="identificador" type="xs:string"/>
+							<xs:element name="descripcio" type="xs:string"/>
+						</xs:all>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="reglament" minOccurs="0">
+					<xs:complexType>
+						<xs:all>
+							<xs:element name="identificador" type="xs:string"/>
+							<xs:element name="descripcio" type="xs:string"/>
+						</xs:all>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="MRR" type="xs:string"/>
+				<xs:element name="codiSA" type="xs:string" minOccurs="0"/>
+			</xs:all>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="beneficiari">
+		<xs:complexType>
+			<xs:all>
+				<xs:element name="pais" type="xs:string"/>
+				<xs:element name="identificador" type="xs:string"/>
+				<xs:element name="nom" type="xs:string"/>
+				<xs:element name="tipus" type="xs:string" minOccurs="0"/>
+				<xs:element name="sectors" minOccurs="0">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="sector" type="xs:string" maxOccurs="unbounded"/>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+			</xs:all>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="reintegraments">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="reintegrament" type="TReintegrament" maxOccurs="unbounded"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="devolucions">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="devolucio" type="TReintegrament" maxOccurs="unbounded"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:complexType name="TReintegrament">
+		<xs:all>
+			<xs:element name="discriminador" type="xs:string"/>
+			<xs:element name="data" type="xs:date"/>
+			<xs:element name="importPrincipal" type="xs:decimal"/>
+			<xs:element name="importInteressos" type="xs:decimal"/>
+		</xs:all>
+	</xs:complexType>
 	<!-- ======================================================= -->
-	<!-- Concesions	                                 	 -->
+	<!-- Concessions	                                 	 -->
 	<!-- ======================================================= -->
 	<xs:element name="peticioConsultaConcessions">
 		<xs:complexType>
 			<xs:sequence>
 				<xs:sequence>
-					<xs:element name="idEstranger" type="xs:boolean" minOccurs="0"/>
 					<xs:element name="pais" type="xs:string"/>
 					<xs:element name="dataInici" type="xs:date" minOccurs="0"/>
 					<xs:element name="dataFi" type="xs:date" minOccurs="0"/>
@@ -114,35 +251,7 @@
 				<xs:element name="concessions" minOccurs="0">
 					<xs:complexType>
 						<xs:sequence>
-							<xs:element name="concessio" maxOccurs="unbounded">
-								<xs:complexType>
-									<xs:sequence>
-										<xs:element name="administracio" type="xs:string"/>
-										<xs:element name="organ">
-											<xs:complexType>
-												<xs:sequence>
-													<xs:element name="codi" type="xs:string"/>
-													<xs:element name="descripcio" type="xs:string"/>
-												</xs:sequence>
-											</xs:complexType>
-										</xs:element>
-										<xs:element name="convocatoria">
-											<xs:complexType>
-												<xs:sequence>
-													<xs:element name="codi" type="xs:string"/>
-													<xs:element name="descripcio" type="xs:string"/>
-													<xs:element name="dataRecepcio" type="xs:date"/>
-												</xs:sequence>
-											</xs:complexType>
-										</xs:element>
-										<xs:element name="tipus" type="xs:string"/>
-										<xs:element name="dataResolucio" type="xs:date"/>
-										<xs:element name="importConcedit" type="xs:decimal"/>
-										<xs:element name="importPagat" type="xs:decimal"/>
-										<xs:element name="importReintegrat" type="xs:decimal"/>
-									</xs:sequence>
-								</xs:complexType>
-							</xs:element>
+							<xs:element name="concessio" type="TConcessioConcessions" maxOccurs="unbounded"/>
 						</xs:sequence>
 					</xs:complexType>
 				</xs:element>
@@ -150,6 +259,25 @@
 			</xs:sequence>
 		</xs:complexType>
 	</xs:element>
+	<xs:complexType name="TConcessioConcessions">
+		<xs:complexContent>
+			<xs:extension base="TConcessio">
+				<xs:sequence>
+					<xs:element name="projecte" minOccurs="0">
+						<xs:complexType>
+							<xs:all>
+								<xs:element name="codi" type="xs:string"/>
+								<xs:element name="descripcio" type="xs:string"/>
+							</xs:all>
+						</xs:complexType>
+					</xs:element>
+					<xs:element name="cost" type="xs:decimal" minOccurs="0"/>
+					<xs:element name="dataExecucioInici" type="xs:date" minOccurs="0"/>
+					<xs:element name="dataExecucioFi" type="xs:date" minOccurs="0"/>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
 	<xs:element name="dadesIdentificacio">
 		<xs:complexType>
 			<xs:sequence>
@@ -158,6 +286,56 @@
 			</xs:sequence>
 		</xs:complexType>
 	</xs:element>
+	<!-- ======================================================= -->
+	<!-- Ajudes Estat			                                 -->
+	<!-- ======================================================= -->
+	<xs:element name="peticioConsultaAjudesEstat">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:sequence>
+					<xs:element name="pais" type="xs:string"/>
+					<xs:element name="dataInici" type="xs:date" minOccurs="0"/>
+					<xs:element name="dataFi" type="xs:date" minOccurs="0"/>
+				</xs:sequence>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="respostaConsultaAjudesEstat">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="peticioConsultaAjudesEstat" minOccurs="0"/>
+				<xs:element ref="dadesIdentificacio" minOccurs="0"/>
+				<xs:element name="dataInici" type="xs:date" minOccurs="0"/>
+				<xs:element name="dataFi" type="xs:date" minOccurs="0"/>
+				<xs:element name="concessions" minOccurs="0">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="concessio" type="TConcessioAjudes" maxOccurs="unbounded"/>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element ref="resultat"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:complexType name="TConcessioAjudes">
+		<xs:complexContent>
+			<xs:extension base="TConcessio">
+				<xs:sequence>
+					<xs:element name="objectiu" minOccurs="0">
+						<xs:complexType>
+							<xs:all>
+								<xs:element name="codi" type="xs:string"/>
+								<xs:element name="descripcio" type="xs:string"/>
+							</xs:all>
+						</xs:complexType>
+					</xs:element>
+					<xs:element name="entitat" type="xs:string" minOccurs="0"/>
+					<xs:element name="intermediari" type="xs:string" minOccurs="0"/>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
 	<!-- ======================================================= -->
 	<!-- Resultat                                                -->
 	<!-- ======================================================= -->
