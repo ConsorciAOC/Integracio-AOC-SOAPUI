@@ -126,6 +126,11 @@
 												<xs:documentation>Valor 0 / 1</xs:documentation>
 											</xs:annotation>
 										</xs:element>
+										<xs:element name="indefinit" type="xs:string">
+											<xs:annotation>
+												<xs:documentation>Valor 0 / 1</xs:documentation>
+											</xs:annotation>
+										</xs:element>										
 										<xs:choice>
 											<xs:element name="personaFisica">
 												<xs:complexType>
@@ -133,6 +138,7 @@
 														<xs:element name="nom" type="xs:string"/>
 														<xs:element name="primerCognom" type="xs:string"/>
 														<xs:element name="segonCognom" type="xs:string" minOccurs="0"/>
+														<xs:element name="NIF" type="xs:string"/>
 													</xs:sequence>
 												</xs:complexType>
 											</xs:element>
@@ -240,11 +246,6 @@
 								<xs:complexType>
 									<xs:sequence>
 										<xs:element name="vigenciaCarrec" type="xs:string"/>
-										<xs:element name="organsCaducats" type="xs:string">
-											<xs:annotation>
-												<xs:documentation>Valor 0 / 1</xs:documentation>
-											</xs:annotation>
-										</xs:element>
 									</xs:sequence>
 								</xs:complexType>
 							</xs:element>
