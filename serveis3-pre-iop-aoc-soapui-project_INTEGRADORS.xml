@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:soapui-project id="523a6f6d-9b62-4ed0-854d-86b95cdf8915" activeEnvironment="Default" name="serveis3-pre.iop.aoc" resourceRoot="" soapui-version="5.7.2" abortOnError="false" runType="SEQUENTIAL" xmlns:con="http://eviware.com/soapui/config"><con:settings/><con:interface xsi:type="con:WsdlInterface" id="9a5a52bf-55e1-481f-a091-747f93712472" wsaVersion="NONE" name="SincronSoap" type="wsdl" bindingName="{http://www.openuri.org/}SincronSoap" soapVersion="1_1" anonymous="optional" definition="file:/C:/Users/CristianMorales/One%20Drive/OneDrive%20-%20Consorci%20Administració%20Oberta%20de%20Catalunya/Documents/GitHub/Integracio-AOC-SOAPUI/Sincron_iop.wsdl" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache type="TEXT" rootPart="file:/C:/Users/CristianMorales/One%20Drive/OneDrive%20-%20Consorci%20Administració%20Oberta%20de%20Catalunya/Documents/GitHub/Integracio-AOC-SOAPUI/Sincron_iop.wsdl"><con:part><con:url>file:/C:/Users/CristianMorales/One%20Drive/OneDrive%20-%20Consorci%20Administració%20Oberta%20de%20Catalunya/Documents/GitHub/Integracio-AOC-SOAPUI/Sincron_iop.wsdl</con:url><con:content><![CDATA[<!--Published by JAX-WS RI at http://jax-ws.dev.java.net. RI's version is Metro/2.2 (branches/2.2-7015; 2012-02-20T20:31:25+0000) JAXWS-RI/2.2.6 JAXWS/2.2 svn-revision#unknown.-->
+<con:soapui-project id="523a6f6d-9b62-4ed0-854d-86b95cdf8915" activeEnvironment="Default" name="serveis3-pre.iop.aoc" resourceRoot="" soapui-version="5.9.1" abortOnError="false" runType="SEQUENTIAL" xmlns:con="http://eviware.com/soapui/config"><con:settings/><con:interface xsi:type="con:WsdlInterface" id="9a5a52bf-55e1-481f-a091-747f93712472" wsaVersion="NONE" name="SincronSoap" type="wsdl" bindingName="{http://www.openuri.org/}SincronSoap" soapVersion="1_1" anonymous="optional" definition="file:/C:/Users/CristianMorales/One%20Drive/OneDrive%20-%20Consorci%20Administració%20Oberta%20de%20Catalunya/Documents/GitHub/Integracio-AOC-SOAPUI/Sincron_iop.wsdl" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache type="TEXT" rootPart="file:/C:/Users/CristianMorales/One%20Drive/OneDrive%20-%20Consorci%20Administració%20Oberta%20de%20Catalunya/Documents/GitHub/Integracio-AOC-SOAPUI/Sincron_iop.wsdl"><con:part><con:url>file:/C:/Users/CristianMorales/One%20Drive/OneDrive%20-%20Consorci%20Administració%20Oberta%20de%20Catalunya/Documents/GitHub/Integracio-AOC-SOAPUI/Sincron_iop.wsdl</con:url><con:content><![CDATA[<!--Published by JAX-WS RI at http://jax-ws.dev.java.net. RI's version is Metro/2.2 (branches/2.2-7015; 2012-02-20T20:31:25+0000) JAXWS-RI/2.2.6 JAXWS/2.2 svn-revision#unknown.-->
 <wsdl:definitions targetNamespace="http://www.openuri.org/" xmlns:conv="http://www.openuri.org/2002/04/soap/conversation/" xmlns:cw="http://www.openuri.org/2002/04/wsdl/conversation/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:jms="http://www.openuri.org/2002/04/wsdl/jms/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:s0="http://www.openuri.org/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:xmime="http://www.w3.org/2005/05/xmlmime">
   <wsdl:types>
     <xs:schema elementFormDefault="qualified" targetNamespace="http://www.openuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:pet="http://gencat.net/scsp/esquemes/peticion" xmlns:res="http://gencat.net/scsp/esquemes/respuesta">
@@ -2816,6 +2816,11 @@
                         <xs:documentation>Valor 0 / 1</xs:documentation>
                       </xs:annotation>
                     </xs:element>
+                    <xs:element name="indefinit" type="xs:string">
+                      <xs:annotation>
+                        <xs:documentation>Valor 0 / 1</xs:documentation>
+                      </xs:annotation>
+                    </xs:element>
                     <xs:choice>
                       <xs:element name="personaFisica">
                         <xs:complexType>
@@ -2823,6 +2828,7 @@
                             <xs:element name="nom" type="xs:string"/>
                             <xs:element name="primerCognom" type="xs:string"/>
                             <xs:element name="segonCognom" type="xs:string" minOccurs="0"/>
+                            <xs:element name="NIF" type="xs:string"/>
                           </xs:sequence>
                         </xs:complexType>
                       </xs:element>
@@ -2930,11 +2936,6 @@
                 <xs:complexType>
                   <xs:sequence>
                     <xs:element name="vigenciaCarrec" type="xs:string"/>
-                    <xs:element name="organsCaducats" type="xs:string">
-                      <xs:annotation>
-                        <xs:documentation>Valor 0 / 1</xs:documentation>
-                      </xs:annotation>
-                    </xs:element>
                   </xs:sequence>
                 </xs:complexType>
               </xs:element>
