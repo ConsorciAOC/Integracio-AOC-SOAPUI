@@ -1,0 +1,375 @@
+<?xml version="1.0"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="http://www.aoc.cat/reli" targetNamespace="http://www.aoc.cat/reli" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<!-- ======================================================= -->
+	<!-- RELI_CONSULTA_EMPRESA																	-->
+	<!-- ======================================================= -->
+	<xs:element name="peticioConsultaEmpresa">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="dataInformacioRegistral" type="xs:date"/>
+				<xs:element name="dades">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="certificatEmpresa" type="xs:boolean" default="false"/>
+							<xs:element name="dadesEmpresa" type="xs:boolean" default="false"/>
+							<xs:element name="obligacionsTributaries" type="xs:boolean" default="false"/>
+							<xs:element name="solvenciaTecnicaEconomica" type="xs:boolean" default="false"/>
+							<xs:element name="prohibicions" type="xs:boolean" default="false"/>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="respostaConsultaEmpresa">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="peticioConsultaEmpresa" minOccurs="0"/>
+				<xs:element ref="resposta" minOccurs="0"/>
+				<xs:element ref="resultat"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="resposta">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="nifEmpresa" type="xs:string" minOccurs="0"/>
+				<xs:element name="dataInformacioRegistral" type="xs:date" minOccurs="0"/>
+				<!-- BLOCS -->
+				<xs:element name="certificatEmpresa" type="Document" minOccurs="0"/>
+				<xs:element name="fitxaEmpresaHistoric" type="Document" minOccurs="0"/>
+				<xs:element name="dadesEmpresa" type="DadesEmpresa" minOccurs="0"/>
+				<xs:element name="obligacionsTributaries" type="DadesObligacionsTributaries" minOccurs="0"/>
+				<xs:element name="solvenciaTecnicaEconomica" type="DadesSolvenciaTecnicaEconomica" minOccurs="0"/>
+				<xs:element name="prohibicions" type="Prohibicio" minOccurs="0" maxOccurs="unbounded"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:complexType name="DadesObligacionsTributaries">
+		<xs:sequence>
+			<xs:element name="tributs" type="Tribut" minOccurs="0" maxOccurs="unbounded"/>
+			<xs:element name="epigrafsIae" type="EpigrafIae" minOccurs="0" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="DadesSolvenciaTecnicaEconomica">
+		<xs:sequence>
+			<xs:element name="certificacionsAcreditatives" type="CertificacioAcreditativa" minOccurs="0" maxOccurs="unbounded"/>
+			<xs:element name="documentsHabilitadors" type="DocumentHabilitador" minOccurs="0" maxOccurs="unbounded"/>
+			<xs:element name="classificacio" type="DadesClassificacio" minOccurs="0"/>
+			<xs:element name="assegurances" type="Asseguranca" minOccurs="0" maxOccurs="unbounded"/>
+			<xs:element name="comptesAnuals" type="CompteAnual" minOccurs="0" maxOccurs="unbounded"/>
+			<xs:element name="experiencies" type="ContracteExecutat" minOccurs="0" maxOccurs="unbounded"/>
+			<xs:element name="personal" type="DadesPersonal" minOccurs="0"/>
+		</xs:sequence>
+	</xs:complexType>
+	<!-- DADES -->
+	<!--    DADES EMPRESA-->
+	<xs:complexType name="DadesEmpresa">
+		<xs:sequence>
+			<xs:element name="nifempresa" type="xs:string" minOccurs="0"/>
+			<xs:element name="tipusDocument" type="TipusDocumentType"/>
+			<xs:element name="tipusPersona" type="TipusPersonaType"/>
+			<xs:element name="nomRao" type="xs:string"/>
+			<xs:element name="cognoms" type="xs:string" minOccurs="0"/>
+			<xs:element name="nomComercial" type="xs:string" minOccurs="0"/>
+			<xs:element name="formaJuridica" type="xs:string" minOccurs="0"/>
+			<xs:element name="dataInscripcioPrimeraSolicitud" type="xs:dateTime" minOccurs="0"/>
+			<xs:element name="dataInscripcio" type="xs:date" minOccurs="0"/>
+			<xs:element name="tipusVia" type="xs:string" minOccurs="0"/>
+			<xs:element name="adreca" type="xs:string" minOccurs="0"/>
+			<xs:element name="numero" type="xs:string" minOccurs="0"/>
+			<xs:element name="bloc" type="xs:string" minOccurs="0"/>
+			<xs:element name="escala" type="xs:string" minOccurs="0"/>
+			<xs:element name="planta" type="xs:string" minOccurs="0"/>
+			<xs:element name="porta" type="xs:string" minOccurs="0"/>
+			<xs:element name="km" type="xs:string" minOccurs="0"/>
+			<xs:element name="pais" type="Localitzacio"/>
+			<xs:element name="provincia" type="Localitzacio" minOccurs="0"/>
+			<xs:element name="municipi" type="Localitzacio" minOccurs="0"/>
+			<xs:element name="municipiEstranger" type="xs:string" minOccurs="0"/>
+			<xs:element name="codiPostal" type="xs:string" minOccurs="0"/>
+			<xs:element name="telefon" type="xs:string" minOccurs="0"/>
+			<xs:element name="mobil" type="xs:string" minOccurs="0"/>
+			<xs:element name="correuElectronicNotificacio" type="xs:string"/>
+			<xs:element name="tipusEntitatSocial" type="TipusEntitatSocialType" minOccurs="0"/>
+			<xs:element name="grupEmpresarial" type="xs:boolean" default="false"/>
+			<xs:element name="nomGrupEmpresatial" type="xs:string" minOccurs="0"/>
+			<xs:element name="pime" type="xs:boolean" default="false"/>
+			<xs:element name="representants" type="Representant" minOccurs="0" maxOccurs="unbounded"/>
+			<xs:element name="objecteSocial" type="Document" minOccurs="0"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="Localitzacio">
+		<xs:sequence>
+			<xs:element name="codi" type="xs:string"/>
+			<xs:element name="descripcio" type="xs:string"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:simpleType name="TipusDocumentType">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="NIF"/>
+			<xs:enumeration value="NIE"/>
+			<xs:enumeration value="VIES"/>
+			<xs:enumeration value="DUNS"/>
+			<xs:enumeration value="UTE"/>
+			<xs:enumeration value="ALTRES"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="TipusPersonaType">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="FISICA"/>
+			<xs:enumeration value="JURIDICA"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="TipusEntitatSocialType">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="NO_TERCER_SECTOR"/>
+			<xs:enumeration value="CET"/>
+			<xs:enumeration value="EMPRESA_INSERCIO"/>
+			<xs:enumeration value="CETIS"/>
+			<xs:enumeration value="ALTRES"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<!--    DADES EMPRESA - REPRESENTANT-->
+	<!--    DADES EMPRESA - REPRESENTANT FACULTATS-->
+	<xs:complexType name="Representant">
+		<xs:sequence>
+			<xs:element name="tipusDocument" type="TipusDocumentType" minOccurs="0"/>
+			<xs:element name="numeroDocument" type="xs:string"/>
+			<xs:element name="nom" type="xs:string"/>
+			<xs:element name="cognoms" type="xs:string" minOccurs="0"/>
+			<xs:element name="tipusApoderament" type="TipusApoderamentType"/>
+			<xs:element name="dataVencimentDocument" type="xs:date" minOccurs="0"/>
+			<xs:element name="facultats" type="Facultat" minOccurs="0" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="Facultat">
+		<xs:sequence>
+			<xs:element name="tipusFacultat" type="TipusFacultatType"/>
+			<xs:element name="tipusMancomunament" type="TipusMancomunamentType" minOccurs="0"/>
+			<xs:element name="protocol" type="xs:string"/>
+			<xs:element name="importLimit" type="xs:double" minOccurs="0"/>
+			<xs:element name="licitar" type="xs:boolean" default="false"/>
+			<xs:element name="signar" type="xs:boolean" default="false"/>
+			<xs:element name="credits" type="xs:boolean" default="false"/>
+			<xs:element name="cobrar" type="xs:boolean" default="false"/>
+			<xs:element name="garanties" type="xs:boolean" default="false"/>
+			<xs:element name="dataEscriptura" type="xs:date" minOccurs="0"/>
+			<xs:element name="duradaEscriptura" type="xs:integer" minOccurs="0"/>
+			<xs:element name="vigenciaIndefinida" type="xs:boolean"/>
+			<xs:element name="representants" type="RepresentantFacultat" minOccurs="0" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="RepresentantFacultat">
+		<xs:sequence>
+			<xs:element name="nif" type="xs:string"/>
+			<xs:element name="nom" type="xs:string"/>
+			<xs:element name="cognoms" type="xs:string"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:simpleType name="TipusFacultatType">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="MANCOMUNAT"/>
+			<xs:enumeration value="SOLIDARI"/>
+			<xs:enumeration value="UNIC_INDIVIDUAL"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="TipusApoderamentType">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="ADMINISTRADOR_MANCOMUNAT"/>
+			<xs:enumeration value="ADMINISTRADOR_SOLIDARI"/>
+			<xs:enumeration value="ADMINISTRADOR_UNIC"/>
+			<xs:enumeration value="APODERAT_MANCOMUNAT"/>
+			<xs:enumeration value="APODERAT_SOLIDARI"/>
+			<xs:enumeration value="PERSONA_AUTORITZADA"/>
+			<xs:enumeration value="REPRESENTANT_LEGAL_ADMINISTRADOR"/>
+			<xs:enumeration value="REPRESENTANT"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="TipusMancomunamentType">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="QUALSEVOL_MANCOMUNAT_SIGNA"/>
+			<xs:enumeration value="TOTS_MANCOMUNATS_SIGNEN"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<!--    OBLIGACIONS TRIBUTARIES - IAE-->
+	<xs:complexType name="EpigrafIae">
+		<xs:sequence>
+			<xs:element name="codi" type="xs:string"/>
+			<xs:element name="tipusEpigraf" type="xs:string"/>
+			<xs:element name="dataAlta" type="xs:date" minOccurs="0"/>
+			<xs:element name="tipusPagament" type="TipusPagamentType" minOccurs="0"/>
+			<xs:element name="dataUltimPagament" type="xs:date" minOccurs="0"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:simpleType name="TipusPagamentType">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="ANUAL"/>
+			<xs:enumeration value="EXEMPT"/>
+			<xs:enumeration value="SEMESTRAL_1_FRACCIO"/>
+			<xs:enumeration value="SEMESTRAL_2_FRACCIO"/>
+			<xs:enumeration value="TRIMESTRAL_1_FRACCIO"/>
+			<xs:enumeration value="TRIMESTRAL_2_FRACCIO"/>
+			<xs:enumeration value="TRIMESTRAL_3_FRACCIO"/>
+			<xs:enumeration value="TRIMESTRAL_4_FRACCIO"/>
+			<xs:enumeration value="ALTRES"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="TipusPagamentCodisType">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="A"/>
+			<xs:enumeration value="E"/>
+			<xs:enumeration value="S"/>
+			<xs:enumeration value="R"/>
+			<xs:enumeration value="T"/>
+			<xs:enumeration value="U"/>
+			<xs:enumeration value="V"/>
+			<xs:enumeration value="W"/>
+			<xs:enumeration value="Z"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<!--    OBLIGACIONS TRIBUTARIES - TRIBUTS-->
+	<xs:complexType name="Tribut">
+		<xs:sequence>
+			<xs:element name="tipus" type="TipusTributType" minOccurs="0"/>
+			<xs:element name="correntPagament" type="xs:boolean" default="false"/>
+			<xs:element name="dataCertificat" type="xs:date" minOccurs="0"/>
+			<xs:element name="dataCaducitat" type="xs:date" minOccurs="0"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:simpleType name="TipusTributType">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="TGSS"/>
+			<xs:enumeration value="AEAT"/>
+			<xs:enumeration value="ATC"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<!--    SOLVENCIA TECNICA I ECONOMICA-->
+	<!--    SOLVENCIA TECNICA I ECONOMICA - DOCUMENTS HABILITADORS-->
+	<xs:complexType name="DocumentHabilitador">
+		<xs:sequence>
+			<xs:element name="tipus" type="xs:string" minOccurs="0"/>
+			<xs:element name="altres" type="xs:string" minOccurs="0"/>
+			<xs:element name="dataInici" type="xs:date" minOccurs="0"/>
+			<xs:element name="dataFinal" type="xs:date" minOccurs="0"/>
+			<xs:element name="vigenciaIndefinida" type="xs:boolean"/>
+		</xs:sequence>
+	</xs:complexType>
+	<!--    SOLVENCIA TECNICA I ECONOMICA - CERTIFICACIONS ACREDITATIVES-->
+	<xs:complexType name="CertificacioAcreditativa">
+		<xs:sequence>
+			<xs:element name="codi" type="xs:string" minOccurs="0"/>
+			<xs:element name="tipus" type="xs:string" minOccurs="0"/>
+			<xs:element name="altres" type="xs:string" minOccurs="0"/>
+			<xs:element name="dataInici" type="xs:date" minOccurs="0"/>
+			<xs:element name="dataFinal" type="xs:date" minOccurs="0"/>
+			<xs:element name="vigenciaIndefinida" type="xs:boolean"/>
+		</xs:sequence>
+	</xs:complexType>
+	<!--    SOLVENCIA TECNICA I ECONOMICA - CLASSIFICACIONS-->
+	<xs:complexType name="DadesClassificacio">
+		<xs:sequence>
+			<xs:element name="suspesa" type="xs:boolean" default="false"/>
+			<xs:element name="classificacions" type="Classificacio" minOccurs="0" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="Classificacio">
+		<xs:sequence>
+			<xs:element name="grup" type="xs:string"/>
+			<xs:element name="subgrup" type="xs:string" minOccurs="0"/>
+			<xs:element name="categoria" type="xs:string"/>
+			<xs:element name="dataAtorgament" type="xs:date"/>
+		</xs:sequence>
+	</xs:complexType>
+	<!--    SOLVENCIA TECNICA I ECONOMICA - ASSEGURANÇA-->
+	<xs:complexType name="Asseguranca">
+		<xs:sequence>
+			<xs:element name="entitatAsseguradora" type="xs:string"/>
+			<xs:element name="capitalSubscrit" type="xs:double"/>
+			<xs:element name="dataIniciPolissa" type="xs:date"/>
+			<xs:element name="dataFiPolissa" type="xs:date"/>
+		</xs:sequence>
+	</xs:complexType>
+	<!--    SOLVENCIA TECNICA I ECONOMICA - COMPTES ANUALS-->
+	<xs:complexType name="CompteAnual">
+		<xs:sequence>
+			<xs:element name="exercici" type="xs:integer"/>
+			<xs:element name="xifraNegocisGlobal" type="xs:double"/>
+			<xs:element name="capitalSocial" type="xs:double" minOccurs="0"/>
+			<xs:element name="patrimoniNet" type="xs:double" minOccurs="0"/>
+		</xs:sequence>
+	</xs:complexType>
+	<!--    SOLVENCIA TECNICA I ECONOMICA - EXPERIÈNCIA-->
+	<xs:complexType name="ContracteExecutat">
+		<xs:sequence>
+			<xs:element name="entitatContractant" type="xs:string"/>
+			<xs:element name="denominacio" type="xs:string"/>
+			<xs:element name="tipusActivitatContracte" type="TipusActivitatContracteType"/>
+			<xs:element name="importContracte" type="xs:double"/>
+			<xs:element name="contracteExecutatAnys" type="ContracteExecutatAny" minOccurs="0" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:simpleType name="TipusActivitatContracteType">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="OBRES"/>
+			<xs:enumeration value="SERVEIS"/>
+			<xs:enumeration value="SUBMINISTRAMENTS"/>
+			<xs:enumeration value="CONSULTORIA_ASSISTENCIA"/>
+			<xs:enumeration value="CONCESSIO_SERVEIS"/>
+			<xs:enumeration value="CONCESSIO_OBRA_PUBLICA"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:complexType name="ContracteExecutatAny">
+		<xs:sequence>
+			<xs:element name="exercici" type="xs:integer"/>
+			<xs:element name="exerciciImport" type="xs:double"/>
+		</xs:sequence>
+	</xs:complexType>
+	<!--    SOLVENCIA TECNICA I ECONOMICA - PERSONAL-->
+	<xs:complexType name="DadesPersonal">
+		<xs:sequence>
+			<xs:element name="personalDiscapacitatEnPlantilla" type="xs:boolean"/>
+			<xs:element name="nombrePersonalEnPlantilla" type="xs:boolean"/>
+			<xs:element name="plaIgualtat" type="xs:boolean"/>
+			<xs:element name="valorMitjaTreballadorsTrienniPrevi" type="xs:double" minOccurs="0"/>
+			<xs:element name="personalTecnic" type="PersonalTecnic" minOccurs="0" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="PersonalTecnic">
+		<xs:sequence>
+			<xs:element name="nomComplet" type="xs:string"/>
+			<xs:element name="experiencia" type="xs:string"/>
+			<xs:element name="titulacio" type="xs:string"/>
+		</xs:sequence>
+	</xs:complexType>
+	<!--    PROHIBICIONS - PROHIBICIONS-->
+	<xs:complexType name="Prohibicio">
+		<xs:sequence>
+			<xs:element name="ambit" type="xs:string"/>
+			<xs:element name="dataResolucio" type="xs:date"/>
+			<xs:element name="dataIniciEfecte" type="xs:date"/>
+			<xs:element name="dataAixecament" type="xs:date"/>
+			<xs:element name="causaLegal" type="xs:string"/>
+		</xs:sequence>
+	</xs:complexType>
+	<!--    CERTIFICAT SIGNAT-->
+	<xs:complexType name="Document">
+		<xs:sequence>
+			<xs:element name="nom" type="xs:string"/>
+			<xs:element name="tipus" type="xs:string"/>
+			<xs:element name="dataAdjuncio" type="xs:date"/>
+			<xs:element name="contingut" type="xs:base64Binary"/>
+		</xs:sequence>
+	</xs:complexType>
+	<!-- ======================================================= -->
+	<!-- Resultat                                                													-->
+	<!-- ======================================================= -->
+	<xs:element name="resultat">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="codiResultat" type="xs:string"/>
+				<xs:element name="descripcio" type="xs:string"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>
