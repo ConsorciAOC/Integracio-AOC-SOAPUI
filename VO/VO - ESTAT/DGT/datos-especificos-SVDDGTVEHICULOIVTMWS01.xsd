@@ -23,7 +23,7 @@
 			<xs:sequence>
 				<xs:element ref="Estado"/>
 				<xs:element ref="Consulta"/>
-				<xs:element ref="DatosVehiculo" minOccurs="0"/>
+				<xs:element ref="DatosVehiculo" minOccurs="0" maxOccurs="1"/>
 			</xs:sequence>
 		</xs:complexType>
 	</xs:element>
@@ -237,32 +237,86 @@
 			</xs:element>
 		</xs:all>
 	</xs:complexType>
+	<xs:element name="Titular">
+		<xs:complexType>
+			<xs:all>
+				<xs:element name="DomicilioNotificacion" type="Domicilio" minOccurs="1"/>
+			</xs:all>
+		</xs:complexType>
+	</xs:element>
 	<xs:complexType name="Domicilio">
-		<xs:all>
-			<xs:element ref="TipoVia" minOccurs="0"/>
-			<xs:element ref="NombreVia" minOccurs="0"/>
-			<xs:element ref="NumeroVia" minOccurs="0"/>
-			<xs:element ref="Portal" minOccurs="0"/>
-			<xs:element ref="Bloque" minOccurs="0"/>
-			<xs:element ref="Escalera" minOccurs="0"/>
-			<xs:element ref="Planta" minOccurs="0"/>
-			<xs:element ref="Puerta" minOccurs="0"/>
-			<xs:element ref="Kilometro" minOccurs="0"/>
-			<xs:element ref="Hectometro" minOccurs="0"/>
-			<xs:element ref="Provincia" minOccurs="0"/>
-			<xs:element name="Municipio" minOccurs="0">
-				<xs:simpleType>
-					<xs:restriction base="xs:string">
-						<xs:minLength value="1"/>
-						<xs:maxLength value="50"/>
-						<xs:whiteSpace value="collapse"/>
-					</xs:restriction>
-				</xs:simpleType>
-			</xs:element>
-			<xs:element ref="Localidad" minOccurs="0"/>
-			<xs:element ref="CodigoPostal" minOccurs="0"/>
-		</xs:all>
+		<xs:choice>
+			<xs:element ref="DomicilioINE" minOccurs="1"/>
+			<xs:element ref="DomicilioDGT" minOccurs="1"/>
+		</xs:choice>
 	</xs:complexType>
+	<xs:element name="DomicilioDGT">
+		<xs:annotation>
+			<xs:documentation>Domicilio del titular del vehículo consultado en DGT</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:all>
+				<xs:element ref="NombreVia" minOccurs="0"/>
+				<xs:element ref="Provincia" minOccurs="0">
+					<xs:annotation>
+						<xs:documentation>Provincia de la residencia del titular del vehículo consultado en DGT</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+				<xs:element name="Municipio" minOccurs="0">
+					<xs:annotation>
+						<xs:documentation>Municipio de la residencia del titular del vehículo consultado en DGT</xs:documentation>
+					</xs:annotation>
+					<xs:simpleType>
+						<xs:restriction base="xs:string">
+							<xs:minLength value="1"/>
+							<xs:maxLength value="50"/>
+							<xs:whiteSpace value="collapse"/>
+						</xs:restriction>
+					</xs:simpleType>
+				</xs:element>
+				<xs:element ref="Localidad" minOccurs="0"/>
+				<xs:element ref="CodigoPostal" minOccurs="0"/>
+			</xs:all>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="DomicilioINE">
+		<xs:annotation>
+			<xs:documentation>Domicilio del titular del vehículo consultado en INE</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:all>
+				<xs:element ref="TipoVia" minOccurs="0"/>
+				<xs:element ref="NombreVia" minOccurs="0"/>
+				<xs:element ref="NumeroVia" minOccurs="0"/>
+				<xs:element ref="Portal" minOccurs="0"/>
+				<xs:element ref="Bloque" minOccurs="0"/>
+				<xs:element ref="Escalera" minOccurs="0"/>
+				<xs:element ref="Planta" minOccurs="0"/>
+				<xs:element ref="Puerta" minOccurs="0"/>
+				<xs:element ref="Kilometro" minOccurs="0"/>
+				<xs:element ref="Hectometro" minOccurs="0"/>
+				<xs:element ref="Provincia" minOccurs="0">
+					<xs:annotation>
+						<xs:documentation>Provincia de la residencia del titular del vehículo consultado en INE</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+				<xs:element name="Municipio" minOccurs="0">
+					<xs:annotation>
+						<xs:documentation>Municipio de la residencia del titular del vehículo consultado en INE</xs:documentation>
+					</xs:annotation>
+					<xs:simpleType>
+						<xs:restriction base="xs:string">
+							<xs:minLength value="1"/>
+							<xs:maxLength value="50"/>
+							<xs:whiteSpace value="collapse"/>
+						</xs:restriction>
+					</xs:simpleType>
+				</xs:element>
+				<xs:element ref="Localidad" minOccurs="0"/>
+				<xs:element ref="CodigoPostal" minOccurs="0"/>
+			</xs:all>
+		</xs:complexType>
+	</xs:element>
 	<xs:element name="NumeroVia">
 		<xs:annotation>
 			<xs:documentation>Número de vía de la residencia del titular del vehículo consultado</xs:documentation>
@@ -319,7 +373,7 @@
 			<xs:restriction base="xs:string">
 				<xs:minLength value="1"/>
 				<xs:maxLength value="5"/>
-				<xs:pattern value="[a-zA-ZñÑ\.]{1,5}"/>
+				<xs:whiteSpace value="collapse"/>
 			</xs:restriction>
 		</xs:simpleType>
 	</xs:element>
@@ -410,6 +464,7 @@
 				<xs:element name="Embargo" type="Indicador" minOccurs="0"/>
 				<xs:element name="Posesion" type="Indicador" minOccurs="0"/>
 				<xs:element name="Sustraccion" type="Indicador" minOccurs="0"/>
+				<xs:element name="LimitacionDisposicion" type="Indicador" minOccurs="0"/>
 			</xs:all>
 		</xs:complexType>
 	</xs:element>
@@ -419,16 +474,6 @@
 			<xs:enumeration value="N"/>
 		</xs:restriction>
 	</xs:simpleType>
-	<xs:element name="Titular">
-		<xs:annotation>
-			<xs:documentation>Datos del titular del vehículo consultado</xs:documentation>
-		</xs:annotation>
-		<xs:complexType>
-			<xs:all>
-				<xs:element name="DomicilioNotificaciones" type="Domicilio" minOccurs="0"/>
-			</xs:all>
-		</xs:complexType>
-	</xs:element>
 	<xs:element name="DatosTecnicos">
 		<xs:annotation>
 			<xs:documentation>Datos técnicos del vehículo consultado</xs:documentation>

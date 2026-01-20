@@ -125,7 +125,7 @@
 				<xs:element ref="DatosAdministrativos" minOccurs="0"/>
 				<xs:element ref="DatosITVs" minOccurs="0"/>
 				<xs:element ref="ListaSeguros" minOccurs="0"/>
-				<xs:element ref="DatosTitular" minOccurs="0"/>
+				<xs:element ref="DatosTitular" minOccurs="0"/>				
 			</xs:all>
 		</xs:complexType>
 	</xs:element>
@@ -136,6 +136,7 @@
 		<xs:complexType>
 			<xs:all>
 				<xs:element ref="DescripcionVehiculo" minOccurs="0"/>
+				<xs:element name="DomicilioFiscalVehiculo" type="Domicilio" minOccurs="0"/>
 				<xs:element ref="Matriculacion" minOccurs="0"/>
 				<xs:element ref="Titular" minOccurs="0"/>
 				<xs:element ref="FechaCaducidadITV" minOccurs="0"/>
@@ -285,6 +286,19 @@
 			</xs:all>
 		</xs:complexType>
 	</xs:element>
+	<xs:element name="Titular">
+		<xs:complexType>
+			<xs:all>
+				<xs:element name="DomicilioNotificacion" type="Domicilio"/>
+			</xs:all>
+		</xs:complexType>
+	</xs:element>
+	<xs:complexType name="Domicilio">
+		<xs:choice>
+			<xs:element ref="DomicilioINE"/>
+			<xs:element ref="DomicilioDGT"/>
+		</xs:choice>
+	</xs:complexType>
 	<xs:element name="DomicilioDGT">
 		<xs:annotation>
 			<xs:documentation>Domicilio del titular del vehículo consultado en DGT</xs:documentation>
@@ -408,7 +422,7 @@
 			<xs:restriction base="xs:string">
 				<xs:minLength value="1"/>
 				<xs:maxLength value="5"/>
-				<xs:pattern value="[a-zA-ZñÑ\.]{1,5}"/>
+				<xs:whiteSpace value="collapse"/>
 			</xs:restriction>
 		</xs:simpleType>
 	</xs:element>
@@ -508,17 +522,6 @@
 		<xs:simpleType>
 			<xs:restriction base="xs:date"/>
 		</xs:simpleType>
-	</xs:element>
-	<xs:element name="Titular">
-		<xs:annotation>
-			<xs:documentation>Datos del titular del vehículo consultado</xs:documentation>
-		</xs:annotation>
-		<xs:complexType>
-			<xs:all>
-				<xs:element ref="DomicilioDGT" minOccurs="0"/>
-				<xs:element ref="DomicilioINE" minOccurs="0"/>
-			</xs:all>
-		</xs:complexType>
 	</xs:element>
 	<xs:element name="DatosTecnicos">
 		<xs:annotation>

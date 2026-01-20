@@ -49,6 +49,7 @@
 			<xs:enumeration value="DK"/>
 			<xs:enumeration value="E"/>
 			<xs:enumeration value="EST"/>
+			<xs:enumeration value="F"/>
 			<xs:enumeration value="F2"/>
 			<xs:enumeration value="FIN"/>
 			<xs:enumeration value="FL"/>

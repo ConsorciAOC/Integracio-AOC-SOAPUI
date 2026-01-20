@@ -1,9 +1,17 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <xs:schema xmlns="http://www.aoc.cat/aeat/obligacions" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:aeat="http://intermediacion.redsara.es/scsp/esquemas/datosespecificos" targetNamespace="http://www.aoc.cat/aeat/obligacions" elementFormDefault="qualified" attributeFormDefault="unqualified">
 	<xs:import namespace="http://intermediacion.redsara.es/scsp/esquemas/datosespecificos" schemaLocation="JAV3_ECOT_respuesta.xsd"/>
+	<xs:element name="peticioConsultaObligacionsTributaries">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="dataPassada" type="xs:date"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
 	<xs:element name="respostaConsultaObligacionsTributaries">
 		<xs:complexType>
 			<xs:sequence>
+				<xs:element ref="peticioConsultaObligacionsTributaries" minOccurs="0"/>
 				<xs:element ref="aeat:DatosEspecificos" minOccurs="0"/>
 				<xs:element ref="resultat"/>
 			</xs:sequence>

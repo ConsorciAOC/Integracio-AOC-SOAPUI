@@ -118,14 +118,11 @@
 		</xs:complexType>
 	</xs:element>
 	<xs:element name="DomicilioNotificacionTitular">
-		<xs:annotation>
-			<xs:documentation>Domicilio de notificación del titular del vehículo para la remisión de sanciones</xs:documentation>
-		</xs:annotation>
 		<xs:complexType>
-			<xs:all>
-				<xs:element ref="DomicilioDGT" minOccurs="0"/>
-				<xs:element ref="DomicilioINE" minOccurs="0"/>
-			</xs:all>
+			<xs:choice>
+				<xs:element ref="DomicilioINE"/>
+				<xs:element ref="DomicilioDGT"/>
+			</xs:choice>
 		</xs:complexType>
 	</xs:element>
 	<xs:element name="Codigo">
@@ -253,7 +250,7 @@
 		<xs:simpleType>
 			<xs:restriction base="xs:string">
 				<xs:minLength value="1"/>
-				<xs:maxLength value="5"/>
+				<xs:maxLength value="50"/>
 				<xs:whiteSpace value="collapse"/>
 			</xs:restriction>
 		</xs:simpleType>
@@ -519,6 +516,6 @@
 				<xs:element name="Apellido1" type="xs:string" minOccurs="0"/>
 				<xs:element name="Apellido2" type="xs:string" minOccurs="0"/>
 			</xs:sequence>
-		</xs:complexType>	
-	</xs:element>	
+		</xs:complexType>
+	</xs:element>
 </xs:schema>
