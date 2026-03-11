@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="http://www.aoc.cat/csuc" targetNamespace="http://www.aoc.cat/csuc" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:element name="resultat">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="codiResultat" type="xs:string"/>
+				<xs:element name="descripcio" type="xs:string"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<!-- ===================================================================== -->
+	<!-- CAMINS_ESTAT_MATRICULA                                                                                              -->
+	<!-- ===================================================================== -->
+	<xs:element name="peticioConsultaEstatPagamentMatricula">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="dataNaixement" type="xs:date"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="respostaConsultaEstatPagamentMatricula">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="peticioConsultaEstatPagamentMatricula" minOccurs="0"/>
+				<xs:element name="resposta" minOccurs="0">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="resum">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element name="universitatsConsultades" type="xs:int"/>
+										<xs:element name="universitatsInscrit" type="xs:int"/>
+										<xs:element name="universitatsNoInscrit" type="xs:int"/>
+										<xs:element name="universitatsError" type="xs:int"/>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+							<xs:element name="universitat" maxOccurs="unbounded">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element name="idUniversitat" type="xs:string"/>
+										<xs:element name="nomUniversitat" type="xs:string"/>
+										<xs:element name="codiEstat">
+											<xs:simpleType>
+												<xs:restriction base="xs:int">
+													<xs:enumeration value="1"/>
+													<xs:enumeration value="2"/>
+													<xs:enumeration value="3"/>
+												</xs:restriction>
+											</xs:simpleType>
+										</xs:element>
+										<xs:element name="darreraMatricula" type="xs:string" minOccurs="0"/>
+										<xs:element name="correntPagament" minOccurs="0">
+											<xs:simpleType>
+												<xs:restriction base="xs:string">
+													<xs:enumeration value="SI"/>
+													<xs:enumeration value="NO"/>
+												</xs:restriction>
+											</xs:simpleType>
+										</xs:element>
+										<xs:element name="descripcioEstat" type="xs:string" minOccurs="0"/>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element ref="resultat"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

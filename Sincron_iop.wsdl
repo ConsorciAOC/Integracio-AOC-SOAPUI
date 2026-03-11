@@ -20,7 +20,7 @@
 				</xs:complexType>
 			</xs:element>
 		</xs:schema>
-		<xs:schema xmlns="http://gencat.net/scsp/esquemes/peticion" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xmime="http://www.w3.org/2005/05/xmlmime" xmlns:grauccaa="http://www.aoc.cat/discapacitat/ccaa" xmlns:inem="http://www.aocat.net/inem" xmlns:pscp="http://webservices.pscp.economia.gencat.capgemini.com" xmlns:tfn="http://www.aoc.cat/tfn" xmlns:tfm="http://www.aoc.cat/tfm" xmlns:idescat="http://www.aocat.net/padro" xmlns:grau="http://www.aocat.net/discapacitat" xmlns:soc="http://gencat.net/scsp/esquemes/SOC" xmlns:rca="http://www.aocat.net/rca" xmlns:reg="http://www.aoc.cat/regentitats" xmlns:padro="http://www.aocat.net/padro" xmlns:merc="http://www.aocat.net/registradors" xmlns:prop="http://www.aocat.net/registradors" xmlns:dcoc="http://aoc.net/dcoc/v2/peticio" xmlns:ppe="http://www.aocat.net/aeat/irpf" xmlns:iae="http://www.aoc.cat/aeat/iae" xmlns:reli="http://www.aoc.cat/reli" xmlns:dicireg="http://www.aoc.cat/registre-civil/dicireg" xmlns:irpf20="http://www.aocat.net/aeat/irpf" xmlns:irpf="http://www.aocat.net/aeat/irpf" xmlns:tgss_alta_fecha="http://www.tgss.es/altafecha/esquemas/afiliacion/datosespecificos" xmlns:tgss_agra="http://www.tgss.es/actividadagraria/esquemas/afiliacion/datosespecificos" xmlns:tgss_lab="http://www.aoc.cat/tgss" xmlns:dgp="http://www.aoc.cat/dgp/identitat" xmlns:dgp_res_legal="http://www.aoc.cat/dgp-residencia-legal"  xmlns:sct_denuncies="http://www.aoc.cat/sct/denuncies" xmlns:dgt="http://www.aoc.cat/dgt" xmlns:cad="http://www.aocat.net/cadastre" xmlns:tsd="http://www.aoc.cat/inss/tsd" xmlns:reg_civ="http://www.aoc.cat/registre-civil" xmlns:ant_pen="http://www.aoc.cat/antecedents-penals" xmlns:mux="http://net.aocat/MUX2/PeticioRegistre" xmlns:rpc="http://cat.aoc/rpc/peticion" xmlns:igae="http://www.aoc.cat/igae" xmlns:atmv="http://www.aocat.net/dgt/atmv" xmlns:rgc="http://www.aoc.cat/rgc" xmlns:rpe="http://www.aoc.cat/rpe" xmlns:mepsyd="http://www.aocat.net/mepsyd" xmlns:notaris="http://www.aoc.cat/poders-notarials" xmlns:dgp_residencia="http://www.aoc.cat/dgp-historic-residencia" xmlns:actic="http://www.aoc.cat/actic" xmlns:muface="http://www.aoc.cat/muface" targetNamespace="http://gencat.net/scsp/esquemes/peticion" elementFormDefault="qualified" attributeFormDefault="unqualified">
+		<xs:schema xmlns="http://gencat.net/scsp/esquemes/peticion" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xmime="http://www.w3.org/2005/05/xmlmime" xmlns:grauccaa="http://www.aoc.cat/discapacitat/ccaa" xmlns:inem="http://www.aocat.net/inem" xmlns:pscp="http://webservices.pscp.economia.gencat.capgemini.com" xmlns:tfn="http://www.aoc.cat/tfn" xmlns:tfm="http://www.aoc.cat/tfm" xmlns:idescat="http://www.aocat.net/padro" xmlns:grau="http://www.aocat.net/discapacitat" xmlns:soc="http://gencat.net/scsp/esquemes/SOC" xmlns:ecot="http://www.aoc.cat/aeat/obligacions" xmlns:rca="http://www.aocat.net/rca" xmlns:reg="http://www.aoc.cat/regentitats" xmlns:padro="http://www.aocat.net/padro" xmlns:merc="http://www.aocat.net/registradors" xmlns:prop="http://www.aocat.net/registradors" xmlns:dcoc="http://aoc.net/dcoc/v2/peticio" xmlns:ppe="http://www.aocat.net/aeat/irpf" xmlns:iae="http://www.aoc.cat/aeat/iae" xmlns:reli="http://www.aoc.cat/reli" xmlns:dicireg="http://www.aoc.cat/registre-civil/dicireg" xmlns:irpf20="http://www.aocat.net/aeat/irpf" xmlns:irpf="http://www.aocat.net/aeat/irpf" xmlns:tgss_alta_fecha="http://www.tgss.es/altafecha/esquemas/afiliacion/datosespecificos" xmlns:tgss_agra="http://www.tgss.es/actividadagraria/esquemas/afiliacion/datosespecificos" xmlns:tgss_lab="http://www.aoc.cat/tgss" xmlns:dgp="http://www.aoc.cat/dgp/identitat" xmlns:dgp_res_legal="http://www.aoc.cat/dgp-residencia-legal"  xmlns:sct_denuncies="http://www.aoc.cat/sct/denuncies" xmlns:dgt="http://www.aoc.cat/dgt" xmlns:cad="http://www.aocat.net/cadastre" xmlns:tsd="http://www.aoc.cat/inss/tsd" xmlns:reg_civ="http://www.aoc.cat/registre-civil" xmlns:ant_pen="http://www.aoc.cat/antecedents-penals" xmlns:mux="http://net.aocat/MUX2/PeticioRegistre" xmlns:rpc="http://cat.aoc/rpc/peticion" xmlns:igae="http://www.aoc.cat/igae" xmlns:atmv="http://www.aocat.net/dgt/atmv" xmlns:rgc="http://www.aoc.cat/rgc" xmlns:rpe="http://www.aoc.cat/rpe" xmlns:mepsyd="http://www.aocat.net/mepsyd" xmlns:notaris="http://www.aoc.cat/poders-notarials" xmlns:dgp_residencia="http://www.aoc.cat/dgp-historic-residencia" xmlns:actic="http://www.aoc.cat/actic" xmlns:csuc="http://www.aoc.cat/csuc"  xmlns:muface="http://www.aoc.cat/muface" targetNamespace="http://gencat.net/scsp/esquemes/peticion" elementFormDefault="qualified" attributeFormDefault="unqualified">
 			<xs:import namespace="http://www.aocat.net/inem" schemaLocation="./VO/VO - ESTAT/INEM/dadesEspecifiques.xsd"/>
 			<xs:import namespace="http://www.aoc.cat/tfn" schemaLocation="./VO/VO - GENE/TFN/dadesEspecifiques.xsd"/>
 			<xs:import namespace="http://www.aocat.net/padro" schemaLocation="./VO/VO - GENE/IDESCAT/dadesEspecifiquesHistoric.xsd"/>
@@ -51,6 +51,8 @@
 			<xs:import namespace="http://www.aoc.cat/dgt" schemaLocation="./VO/VO - ESTAT/DGT/dadesEspecifiques-DGT_TITULAR_VIA.xsd"/>
 			<xs:import namespace="http://www.aoc.cat/dgt" schemaLocation="./VO/VO - ESTAT/DGT/dadesEspecifiques-DGT_VEHICLES_CONDUCTOR.xsd"/>
 			<xs:import namespace="http://www.aoc.cat/dgt" schemaLocation="./VO/VO - ESTAT/DGT/dadesEspecifiques-DGT_VERIFICACIO_TITULAR.xsd"/>
+			<xs:import namespace="http://www.aoc.cat/dgt" schemaLocation="./VO/VO - ESTAT/DGT/dadesEspecifiques-DGT_HISTORIAL_DOMICILIS_PROPIETARI.xsd"/>
+			<xs:import namespace="http://www.aoc.cat/dgt" schemaLocation="./VO/VO - ESTAT/DGT/dadesEspecifiques-DGT_HISTORIAL_DOMICILIS_VEHICLE.xsd"/>
 			<xs:import namespace="http://www.aocat.net/cadastre" schemaLocation="./VO/VO - ESTAT/CADASTRE/dadesEspecifiques-CERTIFICACIO_TITULARITAT.xsd"/>
 			<xs:import namespace="http://www.aocat.net/cadastre" schemaLocation="./VO/VO - ESTAT/CADASTRE/dadesEspecifiques-DADES_CADASTRALS.xsd"/>
 			<xs:import namespace="http://www.aocat.net/cadastre" schemaLocation="./VO/VO - ESTAT/CADASTRE/dadesEspecifiques-DESCRIPTIVA_GRAFICA.xsd"/>
@@ -73,6 +75,9 @@
 			<xs:import namespace="http://www.aoc.cat/muface" schemaLocation="./VO/VO - ESTAT/MUFACE/dadesEspecifiques-MUFACE_AFILIACIO.xsd"/>
 			<xs:import namespace="http://www.aoc.cat/discapacitat/ccaa" schemaLocation="./VO/VO - ESTAT/GRAU_DISC CCAA/dadesEspecifiques.xsd"/>
 			<xs:import namespace="http://www.aoc.cat/reli" schemaLocation="./VO/VO - GENE/RELI/dadesEspecifiques.xsd"/>
+			<xs:import namespace="http://www.aoc.cat/csuc" schemaLocation="./VO/VO - GENE/CAMINS/dadesEspecifiques.xsd"/>
+			<xs:import namespace="http://www.aoc.cat/bd-seu" schemaLocation="./VO/VO - GENE/BDSEU/dadesEspecifiques.xsd"/>
+			<xs:import namespace="http://www.aoc.cat/aeat/obligacions" schemaLocation="./VO/VO - ESTAT/AEAT/dadesEspecifiques-ECOT10x.xsd"/>
 			<xs:element name="Apellido1">
 				<xs:simpleType>
 					<xs:restriction base="xs:string">
@@ -389,6 +394,8 @@
 						<xs:element ref="dgt:peticioConsultaVehicleEucaris" minOccurs="0"/>										
 						<xs:element ref="dgt:peticioConsultaTitularVia" minOccurs="0"/>
 						<xs:element ref="dgt:peticioVerificacioTitular" minOccurs="0"/>
+						<xs:element ref="dgt:peticioHistorialDomicilisPropietari" minOccurs="0"/>
+						<xs:element ref="dgt:peticioHistorialDomicilisVehicle" minOccurs="0"/>
 						<xs:element ref="cad:peticioCertificacioTitular" minOccurs="0"/>
 						<xs:element ref="cad:peticioConsultaDades" minOccurs="0"/>
 						<xs:element ref="cad:peticioDescriptivaIGrafica" minOccurs="0"/>
@@ -422,6 +429,8 @@
 						<xs:element ref="actic:peticioConsultaCertificat" minOccurs="0"/>	
 						<xs:element ref="muface:peticioConsultaDadesAfiliacio" minOccurs="0"/>
 						<xs:element ref="reli:peticioConsultaEmpresa" minOccurs="0"/>
+						<xs:element ref="csuc:peticioConsultaEstatPagamentMatricula" minOccurs="0"/>
+						<xs:element ref="ecot:peticioConsultaObligacionsTributaries" minOccurs="0"/>
 					</xs:choice>
 				</xs:complexType>
 			</xs:element>

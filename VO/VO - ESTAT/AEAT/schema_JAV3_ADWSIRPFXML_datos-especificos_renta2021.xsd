@@ -1106,6 +1106,7 @@
 			<xs:element name="DeduccionAutonomica" type="tipo_DeduccionAutonomica" minOccurs="0" maxOccurs="2"/>
 		</xs:sequence>
 		<xs:attribute name="titular" type="tipo_Titular" use="required"/>
+		<xs:attribute name="nif" type="tipo_Nif" use="required"/>
 	</xs:complexType>
 	<xs:complexType name="tipo_Resultados">
 		<xs:sequence>

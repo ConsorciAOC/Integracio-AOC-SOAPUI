@@ -1,8 +1,11 @@
 <!-- editado con XMLSpy v2019 sp1 (x64) (http://www.altova.com) por MRI0194R (Agencia Estatal de Administracion Tributaria ((AEAT))) -->
-<xs:schema xmlns="http://intermediacion.redsara.es/scsp/esquemas/datosespecificos" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:r2020="http://intermediacion.redsara.es/scsp/esquemas/datosespecificos/renta2020" xmlns:r2021="http://intermediacion.redsara.es/scsp/esquemas/datosespecificos/renta2021" targetNamespace="http://intermediacion.redsara.es/scsp/esquemas/datosespecificos" elementFormDefault="qualified" attributeFormDefault="unqualified">
+<xs:schema xmlns="http://intermediacion.redsara.es/scsp/esquemas/datosespecificos" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:r2020="http://intermediacion.redsara.es/scsp/esquemas/datosespecificos/renta2020" xmlns:r2021="http://intermediacion.redsara.es/scsp/esquemas/datosespecificos/renta2021" xmlns:r2022="http://intermediacion.redsara.es/scsp/esquemas/datosespecificos/renta2022" xmlns:r2023="http://intermediacion.redsara.es/scsp/esquemas/datosespecificos/renta2023" xmlns:r2024="http://intermediacion.redsara.es/scsp/esquemas/datosespecificos/renta2024" targetNamespace="http://intermediacion.redsara.es/scsp/esquemas/datosespecificos" elementFormDefault="qualified" attributeFormDefault="unqualified">
 	<!--xs:import namespace="http://intermediacion.redsara.es/scsp/esquemas/datosespecificos/renta2020" schemaLocation="schema_JAV3_ADWSIRPF_datos-especificos_renta2020.xsd"/-->
 	<xs:import namespace="http://intermediacion.redsara.es/scsp/esquemas/datosespecificos/renta2020" schemaLocation="schema_JAV3_ADWSIRPFXML_datos-especificos_renta2020.xsd"/>
 	<xs:import namespace="http://intermediacion.redsara.es/scsp/esquemas/datosespecificos/renta2021" schemaLocation="schema_JAV3_ADWSIRPFXML_datos-especificos_renta2021.xsd"/>
+	<xs:import namespace="http://intermediacion.redsara.es/scsp/esquemas/datosespecificos/renta2022" schemaLocation="schema_JAV3_ADWSIRPFXML_datos-especificos_renta2022.xsd"/>
+	<xs:import namespace="http://intermediacion.redsara.es/scsp/esquemas/datosespecificos/renta2023" schemaLocation="schema_JAV3_ADWSIRPFXML_datos-especificos_renta2023.xsd"/>
+	<xs:import namespace="http://intermediacion.redsara.es/scsp/esquemas/datosespecificos/renta2024" schemaLocation="schema_JAV3_ADWSIRPFXML_datos-especificos_renta2024.xsd"/>
 	<xs:simpleType name="tipo_ImpNegativo">
 		<xs:restriction base="xs:decimal">
 			<xs:minInclusive value="-9999999999999.99"/>
@@ -648,6 +651,9 @@
 					<xs:choice minOccurs="0">
 						<xs:element ref="r2020:Declaracion"/>
 						<xs:element ref="r2021:Declaracion"/>
+						<xs:element ref="r2022:Declaracion"/>
+						<xs:element ref="r2023:Declaracion"/>
+						<xs:element ref="r2024:Declaracion"/>
 					</xs:choice>
 					<xs:element name="NivelRentaDeclaracion" type="tipo_ImpNegativo" minOccurs="0"/>
 				</xs:sequence>

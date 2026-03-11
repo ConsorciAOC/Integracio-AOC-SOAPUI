@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="http://intermediacion.redsara.es/scsp/esquemas/datosespecificos" targetNamespace="http://intermediacion.redsara.es/scsp/esquemas/datosespecificos" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:element name="DatosEspecificos">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="Referencia">
+					<xs:simpleType>
+						<xs:restriction base="xs:string">
+							<xs:maxLength value="11"/>
+							<xs:minLength value="0"/>
+						</xs:restriction>
+					</xs:simpleType>
+				</xs:element>
+				<xs:element name="FechaProceso">
+					<xs:simpleType>
+						<xs:restriction base="xs:string">
+							<xs:maxLength value="10"/>
+							<xs:minLength value="0"/>
+						</xs:restriction>
+					</xs:simpleType>
+				</xs:element>
+				<xs:element name="NombreCompleto" type="xs:string"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

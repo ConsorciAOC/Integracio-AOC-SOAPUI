@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns="http://www.aoc.cat/bd-seu" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.aoc.cat/bd-seu" elementFormDefault="qualified">
+	<xs:element name="respostaConsultaDadesContacte">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="resposta" minOccurs="0">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="tipusDocument" type="xs:string"/>
+							<xs:element name="document" type="xs:string"/>
+							<xs:element name="nom" type="xs:string"/>
+							<xs:element name="primerCognom" type="xs:string"/>
+							<xs:element name="segonCognom" type="xs:string" minOccurs="0"/>
+							<xs:element name="idioma" minOccurs="0">
+								<xs:simpleType>
+									<xs:restriction base="xs:string">
+										<xs:enumeration value="ca"/>
+										<xs:enumeration value="es"/>
+									</xs:restriction>
+								</xs:simpleType>
+							</xs:element>
+							<xs:element ref="telefon" minOccurs="0"/>
+							<xs:element name="email" type="xs:string" minOccurs="0"/>
+							<!-- només en consulta ampliada -->
+							<xs:element ref="adreca" minOccurs="0"/>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element ref="resultat"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="telefon">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="tipus">
+					<xs:simpleType>
+						<xs:restriction base="xs:string">
+							<xs:enumeration value="fix"/>
+							<xs:enumeration value="mobil"/>
+							<xs:enumeration value="fax"/>
+						</xs:restriction>
+					</xs:simpleType>
+				</xs:element>
+				<xs:element name="prefix" type="xs:string"/>
+				<xs:element name="numero" type="xs:string"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="adreca">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="pais" minOccurs="0" type="xs:integer"/>
+				<xs:element name="estatEUA" minOccurs="0" type="xs:integer"/>
+				<xs:element name="provincia" minOccurs="0" type="xs:string"/>
+				<xs:element name="comarca" minOccurs="0" type="xs:string"/>
+				<xs:element name="municipi" minOccurs="0" type="xs:string"/>
+				<xs:element name="localitat" minOccurs="0" type="xs:string"/>
+				<xs:element name="tipusVia" minOccurs="0" type="xs:string"/>
+				<xs:element name="nomVia" minOccurs="0" type="xs:string"/>
+				<xs:element name="numero" minOccurs="0" type="xs:string"/>
+				<xs:element name="bloc" minOccurs="0" type="xs:string"/>
+				<xs:element name="escala" minOccurs="0" type="xs:string"/>
+				<xs:element name="pis" minOccurs="0" type="xs:string"/>
+				<xs:element name="porta" minOccurs="0" type="xs:string"/>
+				<xs:element name="codiPostal" minOccurs="0" type="xs:string"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>	
+	<!-- ======================================================= -->
+	<!-- Resultat                                               													 -->
+	<!-- ======================================================= -->
+	<xs:element name="resultat">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="codiResultat" type="xs:string"/>
+				<xs:element name="descripcio" type="xs:string"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>
