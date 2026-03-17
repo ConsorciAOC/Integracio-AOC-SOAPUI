@@ -1,0 +1,96 @@
+<?xml version="1.0"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="http://www.aoc.cat/certificat-catala" targetNamespace="http://www.aoc.cat/certificat-catala" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<!-- ======================================================= -->
+	<!-- CERTIFICAT_CATALA_CONSULTA									 -->
+	<!-- ======================================================= -->
+	<xs:element name="peticioConsultaCertificat">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="email" type="xs:string"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="respostaConsultaCertificat">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="peticioConsultaCertificat" minOccurs="0"/>
+				<xs:element name="resposta" minOccurs="0">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element ref="certificat" minOccurs="0" maxOccurs="unbounded"/>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element ref="resultat"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="certificat">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="nom" type="xs:string"/>
+				<xs:element name="primerCognom" type="xs:string"/>
+				<xs:element name="segonCognom" type="xs:string" minOccurs="0"/>
+				<xs:element name="tipusDocument" type="xs:string" minOccurs="0"/>
+				<xs:element name="document" type="xs:string" minOccurs="0"/>
+				<xs:element name="email" type="xs:string" minOccurs="0"/>
+				<xs:element name="dataExpedicio" type="xs:string"/>
+				<xs:element name="codiNivell" type="xs:string"/>
+				<xs:element name="denominacioNivell" type="xs:string"/>
+				<xs:element name="origen" type="xs:string"/>
+				<xs:element name="organismeCertificador" type="xs:string"/>
+				<xs:element name="codiDiploma" type="xs:string"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<!-- ======================================================= -->
+	<!-- CERTIFICAT_CATALA_VERIFICACIO									 -->
+	<!-- ======================================================= -->
+	<xs:element name="peticioVerificacioCertificat">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="codiNivell">
+					<xs:simpleType>
+						<xs:restriction base="xs:string">
+							<xs:enumeration value="A1"/>
+							<xs:enumeration value="A2"/>
+							<xs:enumeration value="B1"/>
+							<xs:enumeration value="B2"/>
+							<xs:enumeration value="C1"/>
+							<xs:enumeration value="C2"/>
+						</xs:restriction>
+					</xs:simpleType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="respostaVerificacioCertificat">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="peticioVerificacioCertificat" minOccurs="0"/>
+				<xs:element name="resposta" minOccurs="0">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="resultat" type="xs:string"/>
+							<xs:element name="origen" type="xs:string" minOccurs="0"/>
+							<xs:element name="organismeCertificador" type="xs:string" minOccurs="0"/>
+							<xs:element name="dataExpedicio" type="xs:string" minOccurs="0"/>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element ref="resultat"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<!-- ======================================================= -->
+	<!-- Resultat                                                -->
+	<!-- ======================================================= -->
+	<xs:element name="resultat">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="codiResultat" type="xs:string"/>
+				<xs:element name="descripcio" type="xs:string"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

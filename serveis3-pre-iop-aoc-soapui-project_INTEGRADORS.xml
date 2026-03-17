@@ -20,7 +20,7 @@
         </xs:complexType>
       </xs:element>
     </xs:schema>
-    <xs:schema targetNamespace="http://gencat.net/scsp/esquemes/peticion" elementFormDefault="qualified" attributeFormDefault="unqualified" xmlns="http://gencat.net/scsp/esquemes/peticion" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:grauccaa="http://www.aoc.cat/discapacitat/ccaa" xmlns:inem="http://www.aocat.net/inem" xmlns:pscp="http://webservices.pscp.economia.gencat.capgemini.com" xmlns:tfn="http://www.aoc.cat/tfn" xmlns:tfm="http://www.aoc.cat/tfm" xmlns:idescat="http://www.aocat.net/padro" xmlns:grau="http://www.aocat.net/discapacitat" xmlns:soc="http://gencat.net/scsp/esquemes/SOC" xmlns:ecot="http://www.aoc.cat/aeat/obligacions" xmlns:rca="http://www.aocat.net/rca" xmlns:reg="http://www.aoc.cat/regentitats" xmlns:padro="http://www.aocat.net/padro" xmlns:merc="http://www.aocat.net/registradors" xmlns:prop="http://www.aocat.net/registradors" xmlns:dcoc="http://aoc.net/dcoc/v2/peticio" xmlns:ppe="http://www.aocat.net/aeat/irpf" xmlns:iae="http://www.aoc.cat/aeat/iae" xmlns:reli="http://www.aoc.cat/reli" xmlns:dicireg="http://www.aoc.cat/registre-civil/dicireg" xmlns:irpf20="http://www.aocat.net/aeat/irpf" xmlns:irpf="http://www.aocat.net/aeat/irpf" xmlns:tgss_alta_fecha="http://www.tgss.es/altafecha/esquemas/afiliacion/datosespecificos" xmlns:tgss_agra="http://www.tgss.es/actividadagraria/esquemas/afiliacion/datosespecificos" xmlns:tgss_lab="http://www.aoc.cat/tgss" xmlns:dgp="http://www.aoc.cat/dgp/identitat" xmlns:dgp_res_legal="http://www.aoc.cat/dgp-residencia-legal" xmlns:sct_denuncies="http://www.aoc.cat/sct/denuncies" xmlns:dgt="http://www.aoc.cat/dgt" xmlns:cad="http://www.aocat.net/cadastre" xmlns:tsd="http://www.aoc.cat/inss/tsd" xmlns:reg_civ="http://www.aoc.cat/registre-civil" xmlns:ant_pen="http://www.aoc.cat/antecedents-penals" xmlns:mux="http://net.aocat/MUX2/PeticioRegistre" xmlns:rpc="http://cat.aoc/rpc/peticion" xmlns:igae="http://www.aoc.cat/igae" xmlns:atmv="http://www.aocat.net/dgt/atmv" xmlns:rgc="http://www.aoc.cat/rgc" xmlns:rpe="http://www.aoc.cat/rpe" xmlns:mepsyd="http://www.aocat.net/mepsyd" xmlns:notaris="http://www.aoc.cat/poders-notarials" xmlns:dgp_residencia="http://www.aoc.cat/dgp-historic-residencia" xmlns:actic="http://www.aoc.cat/actic" xmlns:csuc="http://www.aoc.cat/csuc" xmlns:muface="http://www.aoc.cat/muface">
+    <xs:schema targetNamespace="http://gencat.net/scsp/esquemes/peticion" elementFormDefault="qualified" attributeFormDefault="unqualified" xmlns="http://gencat.net/scsp/esquemes/peticion" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:grauccaa="http://www.aoc.cat/discapacitat/ccaa" xmlns:nivellc="http://www.aoc.cat/certificat-catala" xmlns:inem="http://www.aocat.net/inem" xmlns:pscp="http://webservices.pscp.economia.gencat.capgemini.com" xmlns:tfn="http://www.aoc.cat/tfn" xmlns:tfm="http://www.aoc.cat/tfm" xmlns:idescat="http://www.aocat.net/padro" xmlns:grau="http://www.aocat.net/discapacitat" xmlns:soc="http://gencat.net/scsp/esquemes/SOC" xmlns:ecot="http://www.aoc.cat/aeat/obligacions" xmlns:rca="http://www.aocat.net/rca" xmlns:reg="http://www.aoc.cat/regentitats" xmlns:padro="http://www.aocat.net/padro" xmlns:merc="http://www.aocat.net/registradors" xmlns:prop="http://www.aocat.net/registradors" xmlns:dcoc="http://aoc.net/dcoc/v2/peticio" xmlns:ppe="http://www.aocat.net/aeat/irpf" xmlns:iae="http://www.aoc.cat/aeat/iae" xmlns:reli="http://www.aoc.cat/reli" xmlns:dicireg="http://www.aoc.cat/registre-civil/dicireg" xmlns:irpf20="http://www.aocat.net/aeat/irpf" xmlns:irpf="http://www.aocat.net/aeat/irpf" xmlns:tgss_alta_fecha="http://www.tgss.es/altafecha/esquemas/afiliacion/datosespecificos" xmlns:tgss_agra="http://www.tgss.es/actividadagraria/esquemas/afiliacion/datosespecificos" xmlns:tgss_lab="http://www.aoc.cat/tgss" xmlns:dgp="http://www.aoc.cat/dgp/identitat" xmlns:dgp_res_legal="http://www.aoc.cat/dgp-residencia-legal" xmlns:sct_denuncies="http://www.aoc.cat/sct/denuncies" xmlns:dgt="http://www.aoc.cat/dgt" xmlns:cad="http://www.aocat.net/cadastre" xmlns:tsd="http://www.aoc.cat/inss/tsd" xmlns:reg_civ="http://www.aoc.cat/registre-civil" xmlns:ant_pen="http://www.aoc.cat/antecedents-penals" xmlns:mux="http://net.aocat/MUX2/PeticioRegistre" xmlns:rpc="http://cat.aoc/rpc/peticion" xmlns:igae="http://www.aoc.cat/igae" xmlns:atmv="http://www.aocat.net/dgt/atmv" xmlns:rgc="http://www.aoc.cat/rgc" xmlns:rpe="http://www.aoc.cat/rpe" xmlns:mepsyd="http://www.aocat.net/mepsyd" xmlns:notaris="http://www.aoc.cat/poders-notarials" xmlns:dgp_residencia="http://www.aoc.cat/dgp-historic-residencia" xmlns:actic="http://www.aoc.cat/actic" xmlns:csuc="http://www.aoc.cat/csuc" xmlns:muface="http://www.aoc.cat/muface">
       <xs:import namespace="http://www.aocat.net/inem" schemaLocation="./VO/VO - ESTAT/INEM/dadesEspecifiques.xsd"/>
       <xs:import namespace="http://www.aoc.cat/tfn" schemaLocation="./VO/VO - GENE/TFN/dadesEspecifiques.xsd"/>
       <xs:import namespace="http://www.aocat.net/padro" schemaLocation="./VO/VO - GENE/IDESCAT/dadesEspecifiquesHistoric.xsd"/>
@@ -51,6 +51,8 @@
       <xs:import namespace="http://www.aoc.cat/dgt" schemaLocation="./VO/VO - ESTAT/DGT/dadesEspecifiques-DGT_TITULAR_VIA.xsd"/>
       <xs:import namespace="http://www.aoc.cat/dgt" schemaLocation="./VO/VO - ESTAT/DGT/dadesEspecifiques-DGT_VEHICLES_CONDUCTOR.xsd"/>
       <xs:import namespace="http://www.aoc.cat/dgt" schemaLocation="./VO/VO - ESTAT/DGT/dadesEspecifiques-DGT_VERIFICACIO_TITULAR.xsd"/>
+      <xs:import namespace="http://www.aoc.cat/dgt" schemaLocation="./VO/VO - ESTAT/DGT/dadesEspecifiques-DGT_HISTORIAL_DOMICILIS_PROPIETARI.xsd"/>
+      <xs:import namespace="http://www.aoc.cat/dgt" schemaLocation="./VO/VO - ESTAT/DGT/dadesEspecifiques-DGT_HISTORIAL_DOMICILIS_VEHICLE.xsd"/>
       <xs:import namespace="http://www.aocat.net/cadastre" schemaLocation="./VO/VO - ESTAT/CADASTRE/dadesEspecifiques-CERTIFICACIO_TITULARITAT.xsd"/>
       <xs:import namespace="http://www.aocat.net/cadastre" schemaLocation="./VO/VO - ESTAT/CADASTRE/dadesEspecifiques-DADES_CADASTRALS.xsd"/>
       <xs:import namespace="http://www.aocat.net/cadastre" schemaLocation="./VO/VO - ESTAT/CADASTRE/dadesEspecifiques-DESCRIPTIVA_GRAFICA.xsd"/>
@@ -76,6 +78,7 @@
       <xs:import namespace="http://www.aoc.cat/csuc" schemaLocation="./VO/VO - GENE/CAMINS/dadesEspecifiques.xsd"/>
       <xs:import namespace="http://www.aoc.cat/bd-seu" schemaLocation="./VO/VO - GENE/BDSEU/dadesEspecifiques.xsd"/>
       <xs:import namespace="http://www.aoc.cat/aeat/obligacions" schemaLocation="./VO/VO - ESTAT/AEAT/dadesEspecifiques-ECOT10x.xsd"/>
+      <xs:import namespace="http://www.aoc.cat/certificat-catala" schemaLocation="./VO/VO - GENE/NIVELL_C/dadesEspecifiques.xsd"/>
       <xs:element name="Apellido1">
         <xs:simpleType>
           <xs:restriction base="xs:string">
@@ -392,6 +395,8 @@
             <xs:element ref="dgt:peticioConsultaVehicleEucaris" minOccurs="0"/>
             <xs:element ref="dgt:peticioConsultaTitularVia" minOccurs="0"/>
             <xs:element ref="dgt:peticioVerificacioTitular" minOccurs="0"/>
+            <xs:element ref="dgt:peticioHistorialDomicilisPropietari" minOccurs="0"/>
+            <xs:element ref="dgt:peticioHistorialDomicilisVehicle" minOccurs="0"/>
             <xs:element ref="cad:peticioCertificacioTitular" minOccurs="0"/>
             <xs:element ref="cad:peticioConsultaDades" minOccurs="0"/>
             <xs:element ref="cad:peticioDescriptivaIGrafica" minOccurs="0"/>
@@ -427,6 +432,8 @@
             <xs:element ref="reli:peticioConsultaEmpresa" minOccurs="0"/>
             <xs:element ref="csuc:peticioConsultaEstatPagamentMatricula" minOccurs="0"/>
             <xs:element ref="ecot:peticioConsultaObligacionsTributaries" minOccurs="0"/>
+            <xs:element ref="nivellc:peticioConsultaCertificat" minOccurs="0"/>
+            <xs:element ref="nivellc:peticioVerificacioCertificat" minOccurs="0"/>
           </xs:choice>
         </xs:complexType>
       </xs:element>
@@ -41701,6 +41708,422 @@ estimación objetiva-->
       </xs:restriction>
     </xs:simpleType>
   </xs:element>
+</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>file:\C:\Users\CristianMorales\One%20Drive\OneDrive%20-%20Consorci%20Administració%20Oberta%20de%20Catalunya\Documents\GitHub\Integracio-AOC-SOAPUI\VO\VO - ESTAT\DGT\dadesEspecifiques-DGT_HISTORIAL_DOMICILIS_PROPIETARI.xsd</con:url><con:content><![CDATA[<xs:schema targetNamespace="http://www.aoc.cat/dgt" elementFormDefault="qualified" attributeFormDefault="unqualified" xmlns="http://www.aoc.cat/dgt" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:dgt="http://intermediacion.redsara.es/scsp/esquemas/datosespecificos">
+  <xs:import namespace="http://intermediacion.redsara.es/scsp/esquemas/datosespecificos" schemaLocation="datos-especificos-SVDDGTHISTORIALDOMICILIOPROPIETARIOWS01.xsd"/>
+  <!--=======================================================-->
+  <!--Historial domicilis propietari-->
+  <!--=======================================================-->
+  <xs:element name="peticioHistorialDomicilisPropietari">
+    <xs:complexType>
+      <xs:all>
+        <xs:element name="dataInici" type="xs:date"/>
+        <xs:element name="dataFi" type="xs:date"/>
+      </xs:all>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="respostaHistorialDomicilisPropietari">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="peticioHistorialDomicilisPropietari" minOccurs="0"/>
+        <xs:element name="resposta" minOccurs="0">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element ref="dgt:DatosPropietario"/>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element ref="resultat"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <!--=======================================================-->
+  <!--Resultat-->
+  <!--=======================================================-->
+  <xs:element name="resultat">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="codiResultat" type="xs:string"/>
+        <xs:element name="descripcio" type="xs:string"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>file:\C:\Users\CristianMorales\One%20Drive\OneDrive%20-%20Consorci%20Administració%20Oberta%20de%20Catalunya\Documents\GitHub\Integracio-AOC-SOAPUI\VO\VO - ESTAT\DGT\datos-especificos-SVDDGTHISTORIALDOMICILIOPROPIETARIOWS01.xsd</con:url><con:content><![CDATA[<xs:schema targetNamespace="http://intermediacion.redsara.es/scsp/esquemas/datosespecificos" elementFormDefault="qualified" attributeFormDefault="unqualified" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="http://intermediacion.redsara.es/scsp/esquemas/datosespecificos">
+  <xs:element name="DatosEspecificos">
+    <xs:complexType>
+      <xs:choice>
+        <xs:element ref="Consulta"/>
+        <xs:element ref="Retorno"/>
+      </xs:choice>
+      <xs:attribute name="Id" type="xs:string" use="optional"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Consulta">
+    <xs:complexType>
+      <xs:all>
+        <xs:element name="FechaDesde" type="Fecha"/>
+        <xs:element name="FechaHasta" type="Fecha"/>
+      </xs:all>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Retorno">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="Estado"/>
+        <xs:element ref="Consulta"/>
+        <xs:element ref="DatosPropietario" minOccurs="0" maxOccurs="1"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Estado">
+    <xs:complexType>
+      <xs:all>
+        <xs:element name="CodigoEstado">
+          <xs:simpleType>
+            <xs:restriction base="xs:string">
+              <xs:minLength value="1"/>
+              <xs:maxLength value="4"/>
+            </xs:restriction>
+          </xs:simpleType>
+        </xs:element>
+        <xs:element name="CodigoEstadoSecundario" minOccurs="0">
+          <xs:simpleType>
+            <xs:restriction base="xs:string">
+              <xs:minLength value="1"/>
+              <xs:maxLength value="10"/>
+            </xs:restriction>
+          </xs:simpleType>
+        </xs:element>
+        <xs:element name="Literal">
+          <xs:simpleType>
+            <xs:restriction base="xs:string">
+              <xs:minLength value="1"/>
+              <xs:maxLength value="1024"/>
+            </xs:restriction>
+          </xs:simpleType>
+        </xs:element>
+      </xs:all>
+    </xs:complexType>
+  </xs:element>
+  <!--Datos vehículo-->
+  <xs:element name="DatosPropietario">
+    <xs:complexType>
+      <xs:all>
+        <xs:element name="RegistrosEncontrados" type="Registros"/>
+        <xs:element name="RegistrosDevueltos" type="Registros"/>
+        <xs:element ref="Domicilios" minOccurs="0"/>
+      </xs:all>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Domicilios">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="Domicilio" minOccurs="1" maxOccurs="unbounded"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Domicilio">
+    <xs:complexType>
+      <xs:all>
+        <xs:element name="Provincia" type="CodigoProvincia"/>
+        <xs:element ref="Municipio"/>
+        <xs:element ref="Poblacion" minOccurs="0"/>
+        <xs:element ref="Direccion"/>
+        <xs:element ref="CodigoPostal"/>
+        <xs:element name="FechaDesde" type="Fecha"/>
+        <xs:element name="FechaHasta" type="Fecha" minOccurs="0"/>
+      </xs:all>
+    </xs:complexType>
+  </xs:element>
+  <xs:simpleType name="Registros">
+    <xs:restriction base="xs:int">
+      <xs:minInclusive value="0"/>
+      <xs:maxInclusive value="999999"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="Municipio">
+    <xs:complexType>
+      <xs:all>
+        <xs:element name="Codigo" type="CodigoMunicipio"/>
+        <xs:element name="Nombre" type="NombreMunicipio"/>
+      </xs:all>
+    </xs:complexType>
+  </xs:element>
+  <xs:simpleType name="CodigoProvincia">
+    <xs:restriction base="xs:string">
+      <xs:pattern value="\d{2}"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="NombreMunicipio">
+    <xs:restriction base="xs:string">
+      <xs:minLength value="1"/>
+      <xs:maxLength value="70"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="CodigoMunicipio">
+    <xs:restriction base="xs:string">
+      <xs:pattern value="\d{5}"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="Poblacion">
+    <xs:simpleType>
+      <xs:restriction base="xs:string">
+        <xs:minLength value="1"/>
+        <xs:maxLength value="70"/>
+      </xs:restriction>
+    </xs:simpleType>
+  </xs:element>
+  <xs:element name="Direccion">
+    <xs:simpleType>
+      <xs:restriction base="xs:string">
+        <xs:minLength value="1"/>
+        <xs:maxLength value="255"/>
+      </xs:restriction>
+    </xs:simpleType>
+  </xs:element>
+  <xs:element name="CodigoPostal">
+    <xs:simpleType>
+      <xs:restriction base="xs:string">
+        <xs:pattern value="\d{5}"/>
+      </xs:restriction>
+    </xs:simpleType>
+  </xs:element>
+  <xs:simpleType name="Fecha">
+    <xs:restriction base="xs:date"/>
+  </xs:simpleType>
+</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>file:\C:\Users\CristianMorales\One%20Drive\OneDrive%20-%20Consorci%20Administració%20Oberta%20de%20Catalunya\Documents\GitHub\Integracio-AOC-SOAPUI\VO\VO - ESTAT\DGT\dadesEspecifiques-DGT_HISTORIAL_DOMICILIS_VEHICLE.xsd</con:url><con:content><![CDATA[<xs:schema targetNamespace="http://www.aoc.cat/dgt" elementFormDefault="qualified" attributeFormDefault="unqualified" xmlns="http://www.aoc.cat/dgt" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:dgt="http://intermediacion.redsara.es/scsp/esquemas/datosespecificos">
+  <xs:import namespace="http://intermediacion.redsara.es/scsp/esquemas/datosespecificos" schemaLocation="datos-especificos-SVDDGTHISTORIALDOMICILIOVEHICULOWS01.xsd"/>
+  <!--=======================================================-->
+  <!--Historial domicilis vehicles-->
+  <!--=======================================================-->
+  <xs:element name="peticioHistorialDomicilisVehicle">
+    <xs:complexType>
+      <xs:all>
+        <xs:element name="matricula" type="xs:string"/>
+        <xs:element name="dataInici" type="xs:date"/>
+        <xs:element name="dataFi" type="xs:date"/>
+      </xs:all>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="respostaHistorialDomicilisVehicle">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="peticioHistorialDomicilisVehicle" minOccurs="0"/>
+        <xs:element name="resposta" minOccurs="0">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element ref="dgt:DatosVehiculo"/>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element ref="resultat"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <!--=======================================================-->
+  <!--Resultat-->
+  <!--=======================================================-->
+  <xs:element name="resultat">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="codiResultat" type="xs:string"/>
+        <xs:element name="descripcio" type="xs:string"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>file:\C:\Users\CristianMorales\One%20Drive\OneDrive%20-%20Consorci%20Administració%20Oberta%20de%20Catalunya\Documents\GitHub\Integracio-AOC-SOAPUI\VO\VO - ESTAT\DGT\datos-especificos-SVDDGTHISTORIALDOMICILIOVEHICULOWS01.xsd</con:url><con:content><![CDATA[<xs:schema targetNamespace="http://intermediacion.redsara.es/scsp/esquemas/datosespecificos" elementFormDefault="qualified" attributeFormDefault="unqualified" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="http://intermediacion.redsara.es/scsp/esquemas/datosespecificos">
+  <xs:element name="DatosEspecificos">
+    <xs:complexType>
+      <xs:choice>
+        <xs:element ref="Consulta"/>
+        <xs:element ref="Retorno"/>
+      </xs:choice>
+      <xs:attribute name="Id" type="xs:string" use="optional"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Consulta">
+    <xs:complexType>
+      <xs:all>
+        <xs:element name="Matricula" type="Matricula"/>
+        <xs:element name="FechaDesde" type="Fecha"/>
+        <xs:element name="FechaHasta" type="Fecha"/>
+      </xs:all>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Retorno">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="Estado"/>
+        <xs:element ref="Consulta"/>
+        <xs:element ref="DatosVehiculo" minOccurs="0" maxOccurs="1"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:simpleType name="Matricula">
+    <xs:restriction base="xs:string">
+      <xs:minLength value="1"/>
+      <xs:maxLength value="9"/>
+      <xs:whiteSpace value="collapse"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="Estado">
+    <xs:complexType>
+      <xs:all>
+        <xs:element name="CodigoEstado">
+          <xs:simpleType>
+            <xs:restriction base="xs:string">
+              <xs:minLength value="1"/>
+              <xs:maxLength value="4"/>
+            </xs:restriction>
+          </xs:simpleType>
+        </xs:element>
+        <xs:element name="CodigoEstadoSecundario" minOccurs="0">
+          <xs:simpleType>
+            <xs:restriction base="xs:string">
+              <xs:minLength value="1"/>
+              <xs:maxLength value="10"/>
+            </xs:restriction>
+          </xs:simpleType>
+        </xs:element>
+        <xs:element name="Literal">
+          <xs:simpleType>
+            <xs:restriction base="xs:string">
+              <xs:minLength value="1"/>
+              <xs:maxLength value="1024"/>
+            </xs:restriction>
+          </xs:simpleType>
+        </xs:element>
+      </xs:all>
+    </xs:complexType>
+  </xs:element>
+  <!--Datos vehículo-->
+  <xs:element name="DatosVehiculo">
+    <xs:complexType>
+      <xs:all>
+        <xs:element ref="Marca" minOccurs="0"/>
+        <xs:element ref="Modelo" minOccurs="0"/>
+        <xs:element name="RegistrosEncontrados" type="Registros"/>
+        <xs:element name="RegistrosDevueltos" type="Registros"/>
+        <xs:element ref="Domicilios" minOccurs="0"/>
+        <xs:element ref="Observaciones" minOccurs="0"/>
+      </xs:all>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Marca">
+    <xs:simpleType>
+      <xs:restriction base="xs:string">
+        <xs:minLength value="1"/>
+        <xs:maxLength value="255"/>
+        <xs:whiteSpace value="collapse"/>
+      </xs:restriction>
+    </xs:simpleType>
+  </xs:element>
+  <xs:element name="Modelo">
+    <xs:simpleType>
+      <xs:restriction base="xs:string">
+        <xs:minLength value="1"/>
+        <xs:maxLength value="50"/>
+        <xs:whiteSpace value="collapse"/>
+      </xs:restriction>
+    </xs:simpleType>
+  </xs:element>
+  <xs:element name="Domicilios">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="Domicilio" minOccurs="1" maxOccurs="unbounded"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Domicilio">
+    <xs:complexType>
+      <xs:all>
+        <xs:element ref="Provincia"/>
+        <xs:element ref="Municipio"/>
+        <xs:element ref="Poblacion" minOccurs="0"/>
+        <xs:element ref="Direccion"/>
+        <xs:element ref="CodigoPostal"/>
+        <xs:element name="FechaDesde" type="Fecha"/>
+        <xs:element name="FechaHasta" type="Fecha" minOccurs="0"/>
+      </xs:all>
+    </xs:complexType>
+  </xs:element>
+  <xs:simpleType name="Registros">
+    <xs:restriction base="xs:int">
+      <xs:minInclusive value="0"/>
+      <xs:maxInclusive value="999999"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="Provincia">
+    <xs:complexType>
+      <xs:all>
+        <xs:element name="Codigo" type="CodigoProvincia"/>
+        <xs:element name="Nombre" type="NombreProvincia"/>
+      </xs:all>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Municipio">
+    <xs:complexType>
+      <xs:all>
+        <xs:element name="Codigo" type="CodigoMunicipio"/>
+        <xs:element name="Nombre" type="NombreMunicipio"/>
+      </xs:all>
+    </xs:complexType>
+  </xs:element>
+  <xs:simpleType name="CodigoProvincia">
+    <xs:restriction base="xs:string">
+      <xs:pattern value="\d{2}"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="NombreProvincia">
+    <xs:restriction base="xs:string">
+      <xs:minLength value="1"/>
+      <xs:maxLength value="70"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="NombreMunicipio">
+    <xs:restriction base="xs:string">
+      <xs:minLength value="1"/>
+      <xs:maxLength value="70"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="CodigoMunicipio">
+    <xs:restriction base="xs:string">
+      <xs:pattern value="\d{5}"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="Poblacion">
+    <xs:simpleType>
+      <xs:restriction base="xs:string">
+        <xs:minLength value="1"/>
+        <xs:maxLength value="70"/>
+      </xs:restriction>
+    </xs:simpleType>
+  </xs:element>
+  <xs:element name="Direccion">
+    <xs:simpleType>
+      <xs:restriction base="xs:string">
+        <xs:minLength value="1"/>
+        <xs:maxLength value="255"/>
+      </xs:restriction>
+    </xs:simpleType>
+  </xs:element>
+  <xs:element name="CodigoPostal">
+    <xs:simpleType>
+      <xs:restriction base="xs:string">
+        <xs:pattern value="\d{5}"/>
+      </xs:restriction>
+    </xs:simpleType>
+  </xs:element>
+  <xs:simpleType name="Fecha">
+    <xs:restriction base="xs:date"/>
+  </xs:simpleType>
+  <xs:element name="Observaciones">
+    <xs:simpleType>
+      <xs:restriction base="xs:string">
+        <xs:minLength value="1"/>
+        <xs:maxLength value="1024"/>
+      </xs:restriction>
+    </xs:simpleType>
+  </xs:element>
 </xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>file:\C:\Users\CristianMorales\One%20Drive\OneDrive%20-%20Consorci%20Administració%20Oberta%20de%20Catalunya\Documents\GitHub\Integracio-AOC-SOAPUI\VO\VO - ESTAT\CADASTRE\dadesEspecifiques-CERTIFICACIO_TITULARITAT.xsd</con:url><con:content><![CDATA[<xs:schema targetNamespace="http://www.aocat.net/cadastre" elementFormDefault="qualified" attributeFormDefault="unqualified" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="http://www.aocat.net/cadastre" xmlns:map="http://www.map.es/scsp/esquemas/datosespecificos">
   <xs:import namespace="http://www.map.es/scsp/esquemas/datosespecificos" schemaLocation="datos-especificos-CertificacionTitularidad.xsd"/>
   <!--=======================================================-->
@@ -53058,6 +53481,100 @@ estimación objetiva-->
       </xs:sequence>
     </xs:complexType>
   </xs:element>
+</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>file:\C:\Users\CristianMorales\One%20Drive\OneDrive%20-%20Consorci%20Administració%20Oberta%20de%20Catalunya\Documents\GitHub\Integracio-AOC-SOAPUI\VO\VO - GENE\NIVELL_C\dadesEspecifiques.xsd</con:url><con:content><![CDATA[<xs:schema targetNamespace="http://www.aoc.cat/certificat-catala" elementFormDefault="qualified" attributeFormDefault="unqualified" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="http://www.aoc.cat/certificat-catala">
+  <!--=======================================================-->
+  <!--CERTIFICAT_CATALA_CONSULTA-->
+  <!--=======================================================-->
+  <xs:element name="peticioConsultaCertificat">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="email" type="xs:string"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="respostaConsultaCertificat">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="peticioConsultaCertificat" minOccurs="0"/>
+        <xs:element name="resposta" minOccurs="0">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element ref="certificat" minOccurs="0" maxOccurs="unbounded"/>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element ref="resultat"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="certificat">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="nom" type="xs:string"/>
+        <xs:element name="primerCognom" type="xs:string"/>
+        <xs:element name="segonCognom" type="xs:string" minOccurs="0"/>
+        <xs:element name="tipusDocument" type="xs:string" minOccurs="0"/>
+        <xs:element name="document" type="xs:string" minOccurs="0"/>
+        <xs:element name="email" type="xs:string" minOccurs="0"/>
+        <xs:element name="dataExpedicio" type="xs:string"/>
+        <xs:element name="codiNivell" type="xs:string"/>
+        <xs:element name="denominacioNivell" type="xs:string"/>
+        <xs:element name="origen" type="xs:string"/>
+        <xs:element name="organismeCertificador" type="xs:string"/>
+        <xs:element name="codiDiploma" type="xs:string"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <!--=======================================================-->
+  <!--CERTIFICAT_CATALA_VERIFICACIO-->
+  <!--=======================================================-->
+  <xs:element name="peticioVerificacioCertificat">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="codiNivell">
+          <xs:simpleType>
+            <xs:restriction base="xs:string">
+              <xs:enumeration value="A1"/>
+              <xs:enumeration value="A2"/>
+              <xs:enumeration value="B1"/>
+              <xs:enumeration value="B2"/>
+              <xs:enumeration value="C1"/>
+              <xs:enumeration value="C2"/>
+            </xs:restriction>
+          </xs:simpleType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="respostaVerificacioCertificat">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="peticioVerificacioCertificat" minOccurs="0"/>
+        <xs:element name="resposta" minOccurs="0">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="resultat" type="xs:string"/>
+              <xs:element name="origen" type="xs:string" minOccurs="0"/>
+              <xs:element name="organismeCertificador" type="xs:string" minOccurs="0"/>
+              <xs:element name="dataExpedicio" type="xs:string" minOccurs="0"/>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element ref="resultat"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <!--=======================================================-->
+  <!--Resultat-->
+  <!--=======================================================-->
+  <xs:element name="resultat">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="codiResultat" type="xs:string"/>
+        <xs:element name="descripcio" type="xs:string"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
 </xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part></con:definitionCache><con:endpoints><con:endpoint>http://serveis3-pre.iop.aoc.cat:80/siri-proxy/services/Sincron</con:endpoint><con:endpoint>https://serveis3-pre.app.aoc.cat:443/siri-proxy/services/Sincron</con:endpoint><con:endpoint>https://serveis3-pre.iop.aoc.cat:443/siri-proxy/services/Sincron</con:endpoint></con:endpoints><con:operation id="0e1b6498-d8a1-4efa-8ebe-81577bd3f48c" isOneWay="false" action="http://www.openuri.org/procesa" name="procesa" bindingOperationName="procesa" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/></con:operation></con:interface><con:interface xsi:type="con:WsdlInterface" id="d2a4e61c-1023-4d2f-954b-bcfcd6a2a521" wsaVersion="NONE" name="AsincronSoap" type="wsdl" bindingName="{http://www.openuri.org/}AsincronSoap" soapVersion="1_1" anonymous="optional" definition="https://serveis3-pre.iop.aoc.cat/siri-proxy/services/Asincron?wsdl" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache type="TEXT" rootPart="https://serveis3-pre.iop.aoc.cat/siri-proxy/services/Asincron?wsdl"><con:part><con:url>https://serveis3-pre.iop.aoc.cat/siri-proxy/services/Asincron?wsdl</con:url><con:content><![CDATA[<!--Published by JAX-WS RI at http://jax-ws.dev.java.net. RI's version is Metro/2.2 (branches/2.2-7015; 2012-02-20T20:31:25+0000) JAXWS-RI/2.2.6 JAXWS/2.2 svn-revision#unknown.-->
 <wsdl:definitions targetNamespace="http://www.openuri.org/" xmlns:conv="http://www.openuri.org/2002/04/soap/conversation/" xmlns:cw="http://www.openuri.org/2002/04/wsdl/conversation/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:jms="http://www.openuri.org/2002/04/wsdl/jms/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:s0="http://www.openuri.org/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:xmime="http://www.w3.org/2005/05/xmlmime" xmlns:xs="http://www.w3.org/2001/XMLSchema">
   <wsdl:types>
@@ -55267,6 +55784,132 @@ estimación objetiva-->
          </ns1:Peticion>\r
       </open:procesa>\r
    </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:assertion type="SOAP Response" id="1c7555af-bbba-435a-b18c-e5f8ad74c6e6" name="SOAP Response"/><con:credentials><con:selectedAuthProfile>Basic</con:selectedAuthProfile><con:addedBasicAuthenticationTypes>Basic</con:addedBasicAuthenticationTypes><con:preemptive>true</con:preemptive><con:authType>Preemptive</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://www.openuri.org/procesa"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:testStep type="request" id="b6307135-8fe5-4316-a673-87caaa0b70ab" name="VO - CERTIFICAT_CATALA_CONSULTA - WSS"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>SincronSoap</con:interface><con:operation>procesa</con:operation><con:request name="VO - CERTIFICAT_CATALA_CONSULTA - WSS" outgoingWss="CERT_PROVES" incomingWss="" timeout="" sslKeystore="" useWsAddressing="false" useWsReliableMessaging="false" wssPasswordType="" id="b8102efb-d443-4dfc-b817-02e7693fa0e0"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>https://serveis3-pre.iop.aoc.cat:443/siri-proxy/services/Sincron</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:open="http://www.openuri.org/" xmlns:pet="http://gencat.net/scsp/esquemes/peticion" xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/">\r
+   <soapenv:Header/>\r
+   <soapenv:Body wsu:Id="id-2FCB69B934F938128B162694603391719" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd">\r
+      <open:procesa>\r
+         <ns1:Peticion xmlns:ns1="http://gencat.net/scsp/esquemes/peticion">\r
+            <ns1:Atributos>\r
+               <ns1:IdPeticion>9821920002-NIVELLC_CONSULTA-${=(long)(System.currentTimeMillis())}</ns1:IdPeticion>\r
+               <ns1:NumElementos>1</ns1:NumElementos>\r
+               <ns1:TimeStamp>2018-07-05 09:28:22.28</ns1:TimeStamp>\r
+               <ns1:Estado/>\r
+               <ns1:CodigoCertificado>CERTIFICAT_CATALA_CONSULTA</ns1:CodigoCertificado>\r
+               <ns1:CodigoProducto>CERTIFICAT_CATALA</ns1:CodigoProducto>\r
+               <ns1:DatosAutorizacion>\r
+                  <ns1:IdentificadorSolicitante>${Properties#IdentificadorSolicitante}</ns1:IdentificadorSolicitante>\r
+                  <ns1:NombreSolicitante>Ajuntament</ns1:NombreSolicitante>\r
+                  <ns1:Finalidad>PROVES</ns1:Finalidad>\r
+               </ns1:DatosAutorizacion>\r
+               <ns1:Emisor>\r
+                  <ns1:NifEmisor>Q0801175A</ns1:NifEmisor>\r
+                  <ns1:NombreEmisor>CAOC</ns1:NombreEmisor>\r
+               </ns1:Emisor>\r
+               <ns1:Funcionario>\r
+                  <ns1:NombreCompletoFuncionario>${Properties#NombreCompletoFuncionario}</ns1:NombreCompletoFuncionario>\r
+                  <ns1:NifFuncionario>${Properties#NIFFuncionario}</ns1:NifFuncionario>\r
+               </ns1:Funcionario>\r
+            </ns1:Atributos>\r
+            <ns1:Solicitudes>\r
+               <ns1:SolicitudTransmision>\r
+                  <ns1:DatosGenericos>\r
+                     <ns1:Emisor>\r
+                        <ns1:NifEmisor>Q0801175A</ns1:NifEmisor>\r
+                        <ns1:NombreEmisor>CAOC</ns1:NombreEmisor>\r
+                     </ns1:Emisor>\r
+                     <ns1:Solicitante>\r
+                        <ns1:IdentificadorSolicitante>${Properties#IdentificadorSolicitante}</ns1:IdentificadorSolicitante>\r
+                        <ns1:NombreSolicitante>Ajuntament</ns1:NombreSolicitante>\r
+                        <ns1:Finalidad>PROVES</ns1:Finalidad>\r
+                        <ns1:Consentimiento>Ley</ns1:Consentimiento>\r
+                        <ns1:Funcionario>\r
+                           <ns1:NombreCompletoFuncionario>${Properties#NombreCompletoFuncionario}</ns1:NombreCompletoFuncionario>\r
+                           <ns1:NifFuncionario>${Properties#NIFFuncionario}</ns1:NifFuncionario>\r
+                        </ns1:Funcionario>\r
+                     </ns1:Solicitante>\r
+                     <ns1:Titular>\r
+                        <ns1:TipoDocumentacion>NIF</ns1:TipoDocumentacion>\r
+                        <ns1:Documentacion>18826130D</ns1:Documentacion>\r
+                     </ns1:Titular>\r
+                     <ns1:Transmision>\r
+                        <ns1:CodigoCertificado>CERTIFICAT_CATALA_CONSULTA</ns1:CodigoCertificado>\r
+                        <ns1:IdSolicitud>${=(long)(System.currentTimeMillis())}</ns1:IdSolicitud>\r
+                        <ns1:IdTransmision>EXPEDIENT</ns1:IdTransmision>\r
+                     </ns1:Transmision>\r
+                  </ns1:DatosGenericos>\r
+                  <ns1:DatosEspecificos>\r
+                     <peticioConsultaCertificat xmlns="http://www.aoc.cat/certificat-catala">\r
+                        <email>Joanna.marti@example.com</email>\r
+                     </peticioConsultaCertificat>\r
+                  </ns1:DatosEspecificos>\r
+               </ns1:SolicitudTransmision>\r
+            </ns1:Solicitudes>\r
+         </ns1:Peticion>\r
+      </open:procesa>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:assertion type="SOAP Response" id="1c7555af-bbba-435a-b18c-e5f8ad74c6e6" name="SOAP Response"/><con:credentials><con:selectedAuthProfile>Basic</con:selectedAuthProfile><con:addedBasicAuthenticationTypes>Basic</con:addedBasicAuthenticationTypes><con:preemptive>true</con:preemptive><con:authType>Preemptive</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://www.openuri.org/procesa"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:testStep type="request" id="f2cce8c9-9b97-4ba3-99e0-48a742e36281" name="VO - CERTIFICAT_CATALA_VERIFICACIO - WSS"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>SincronSoap</con:interface><con:operation>procesa</con:operation><con:request name="VO - CERTIFICAT_CATALA_VERIFICACIO - WSS" outgoingWss="CERT_PROVES" incomingWss="" timeout="" sslKeystore="" useWsAddressing="false" useWsReliableMessaging="false" wssPasswordType="" id="b8102efb-d443-4dfc-b817-02e7693fa0e0"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>https://serveis3-pre.iop.aoc.cat:443/siri-proxy/services/Sincron</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:open="http://www.openuri.org/" xmlns:pet="http://gencat.net/scsp/esquemes/peticion" xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/">\r
+   <soapenv:Header/>\r
+   <soapenv:Body wsu:Id="id-2FCB69B934F938128B162694603391719" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd">\r
+      <open:procesa>\r
+         <ns1:Peticion xmlns:ns1="http://gencat.net/scsp/esquemes/peticion">\r
+            <ns1:Atributos>\r
+               <ns1:IdPeticion>9821920002-NIVELLC_VERIFICACIO-${=(long)(System.currentTimeMillis())}</ns1:IdPeticion>\r
+               <ns1:NumElementos>1</ns1:NumElementos>\r
+               <ns1:TimeStamp>2018-07-05 09:28:22.28</ns1:TimeStamp>\r
+               <ns1:Estado/>\r
+               <ns1:CodigoCertificado>CERTIFICAT_CATALA_VERIFICACIO</ns1:CodigoCertificado>\r
+               <ns1:CodigoProducto>CERTIFICAT_CATALA</ns1:CodigoProducto>\r
+               <ns1:DatosAutorizacion>\r
+                  <ns1:IdentificadorSolicitante>${Properties#IdentificadorSolicitante}</ns1:IdentificadorSolicitante>\r
+                  <ns1:NombreSolicitante>Ajuntament</ns1:NombreSolicitante>\r
+                  <ns1:Finalidad>PROVES</ns1:Finalidad>\r
+               </ns1:DatosAutorizacion>\r
+               <ns1:Emisor>\r
+                  <ns1:NifEmisor>Q0801175A</ns1:NifEmisor>\r
+                  <ns1:NombreEmisor>CAOC</ns1:NombreEmisor>\r
+               </ns1:Emisor>\r
+               <ns1:Funcionario>\r
+                  <ns1:NombreCompletoFuncionario>${Properties#NombreCompletoFuncionario}</ns1:NombreCompletoFuncionario>\r
+                  <ns1:NifFuncionario>${Properties#NIFFuncionario}</ns1:NifFuncionario>\r
+               </ns1:Funcionario>\r
+            </ns1:Atributos>\r
+            <ns1:Solicitudes>\r
+               <ns1:SolicitudTransmision>\r
+                  <ns1:DatosGenericos>\r
+                     <ns1:Emisor>\r
+                        <ns1:NifEmisor>Q0801175A</ns1:NifEmisor>\r
+                        <ns1:NombreEmisor>CAOC</ns1:NombreEmisor>\r
+                     </ns1:Emisor>\r
+                     <ns1:Solicitante>\r
+                        <ns1:IdentificadorSolicitante>${Properties#IdentificadorSolicitante}</ns1:IdentificadorSolicitante>\r
+                        <ns1:NombreSolicitante>Ajuntament</ns1:NombreSolicitante>\r
+                        <ns1:Finalidad>PROVES</ns1:Finalidad>\r
+                        <ns1:Consentimiento>Ley</ns1:Consentimiento>\r
+                        <ns1:Funcionario>\r
+                           <ns1:NombreCompletoFuncionario>${Properties#NombreCompletoFuncionario}</ns1:NombreCompletoFuncionario>\r
+                           <ns1:NifFuncionario>${Properties#NIFFuncionario}</ns1:NifFuncionario>\r
+                        </ns1:Funcionario>\r
+                     </ns1:Solicitante>\r
+                     <ns1:Titular>\r
+                        <ns1:TipoDocumentacion>NIF</ns1:TipoDocumentacion>\r
+                        <ns1:Documentacion>06684225B</ns1:Documentacion>\r
+                     </ns1:Titular>\r
+                     <ns1:Transmision>\r
+                        <ns1:CodigoCertificado>CERTIFICAT_CATALA_VERIFICACIO</ns1:CodigoCertificado>\r
+                        <ns1:IdSolicitud>${=(long)(System.currentTimeMillis())}</ns1:IdSolicitud>\r
+                        <ns1:IdTransmision>EXPEDIENT</ns1:IdTransmision>\r
+                     </ns1:Transmision>\r
+                  </ns1:DatosGenericos>\r
+                  <ns1:DatosEspecificos>\r
+                     <peticioVerificacioCertificat xmlns="http://www.aoc.cat/certificat-catala">\r
+                        <codiNivell>B2</codiNivell>\r
+                     </peticioVerificacioCertificat>\r
+                  </ns1:DatosEspecificos>\r
+               </ns1:SolicitudTransmision>\r
+            </ns1:Solicitudes>\r
+         </ns1:Peticion>\r
+      </open:procesa>\r
+   </soapenv:Body>\r
 </soapenv:Envelope>]]></con:request><con:assertion type="SOAP Response" id="1c7555af-bbba-435a-b18c-e5f8ad74c6e6" name="SOAP Response"/><con:credentials><con:selectedAuthProfile>Basic</con:selectedAuthProfile><con:addedBasicAuthenticationTypes>Basic</con:addedBasicAuthenticationTypes><con:preemptive>true</con:preemptive><con:authType>Preemptive</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://www.openuri.org/procesa"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:properties/></con:testCase><con:testCase id="71d7833a-119a-446b-a312-fb3957e42176" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="VO - Estat" searchProperties="true"><con:settings/><con:testStep type="properties" name="Properties" id="fa7241dd-a279-4027-a5e8-1c6cd6cbe913"><con:settings/><con:config xsi:type="con:PropertiesStep" saveFirst="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:properties><con:property><con:name>NombreCompletoFuncionario</con:name><con:value>PROVA PROVA PROVA</con:value></con:property><con:property><con:name>NIFFuncionario</con:name><con:value>12345678Z</con:value></con:property><con:property><con:name>IdentificadorSolicitante</con:name><con:value>9821920002</con:value></con:property></con:properties></con:config></con:testStep><con:testStep type="request" id="bdf8eb4f-f19b-4374-9b77-ec23eeb9b27b" name="VO - INEM - WSS 1"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>SincronSoap</con:interface><con:operation>procesa</con:operation><con:request name="VO - INEM - WSS 1" outgoingWss="CERT_PROVES" incomingWss="" timeout="" sslKeystore="" useWsAddressing="false" useWsReliableMessaging="false" wssPasswordType="" id="b8102efb-d443-4dfc-b817-02e7693fa0e0"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>https://serveis3-pre.iop.aoc.cat:443/siri-proxy/services/Sincron</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:open="http://www.openuri.org/" xmlns:pet="http://gencat.net/scsp/esquemes/peticion" xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/">\r
    <soapenv:Header/>\r
    <soapenv:Body wsu:Id="id-2FCB69B934F938128B162694603391719" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd">\r
@@ -56676,6 +57319,132 @@ estimación objetiva-->
                      <ns1:peticioVerificacioTitular xmlns:ns1="http://www.aoc.cat/dgt" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">\r
                         <ns1:matricula>AB1234D</ns1:matricula>\r
                      </ns1:peticioVerificacioTitular>\r
+                  </ns1:DatosEspecificos>\r
+               </ns1:SolicitudTransmision>\r
+            </ns1:Solicitudes>\r
+         </ns1:Peticion>\r
+      </open:procesa>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:assertion type="SOAP Response" id="1c7555af-bbba-435a-b18c-e5f8ad74c6e6" name="SOAP Response"/><con:credentials><con:selectedAuthProfile>Basic</con:selectedAuthProfile><con:addedBasicAuthenticationTypes>Basic</con:addedBasicAuthenticationTypes><con:preemptive>true</con:preemptive><con:authType>Preemptive</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://www.openuri.org/procesa"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:testStep type="request" id="3a36b61a-ad5d-4de3-8493-c31686a7f346" name="VO -  DGT_HISTORIAL_DOMICILIS_VEHICLE - WSS"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>SincronSoap</con:interface><con:operation>procesa</con:operation><con:request name="VO -  DGT_HISTORIAL_DOMICILIS_VEHICLE - WSS" outgoingWss="CERT_PROVES" incomingWss="" timeout="" sslKeystore="" useWsAddressing="false" useWsReliableMessaging="false" wssPasswordType="" id="b8102efb-d443-4dfc-b817-02e7693fa0e0"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>https://serveis3-pre.iop.aoc.cat:443/siri-proxy/services/Sincron</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:open="http://www.openuri.org/" xmlns:pet="http://gencat.net/scsp/esquemes/peticion" xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/">\r
+   <soapenv:Header/>\r
+   <soapenv:Body wsu:Id="id-2FCB69B934F938128B162694603391719" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd">\r
+      <open:procesa>\r
+         <ns1:Peticion xmlns:ns1="http://gencat.net/scsp/esquemes/peticion">\r
+            <ns1:Atributos>\r
+               <ns1:IdPeticion>9821920002-DGT_${=(long)(System.currentTimeMillis())}</ns1:IdPeticion>\r
+               <ns1:NumElementos>1</ns1:NumElementos>\r
+               <ns1:TimeStamp>2018-07-05 09:28:22.28</ns1:TimeStamp>\r
+               <ns1:Estado/>\r
+               <ns1:CodigoCertificado>DGT_HISTORIAL_DOMICILIS_VEHICLE</ns1:CodigoCertificado>\r
+               <ns1:CodigoProducto>DGT</ns1:CodigoProducto>\r
+               <ns1:DatosAutorizacion>\r
+                  <ns1:IdentificadorSolicitante>${Properties#IdentificadorSolicitante}</ns1:IdentificadorSolicitante>\r
+                  <ns1:NombreSolicitante>Ajuntament</ns1:NombreSolicitante>\r
+                  <ns1:Finalidad>9821920002_PROVES</ns1:Finalidad>\r
+               </ns1:DatosAutorizacion>\r
+               <ns1:Emisor>\r
+                  <ns1:NifEmisor>Q0801175A</ns1:NifEmisor>\r
+                  <ns1:NombreEmisor>CAOC</ns1:NombreEmisor>\r
+               </ns1:Emisor>\r
+               <ns1:Funcionario>\r
+                  <ns1:NombreCompletoFuncionario>${Properties#NombreCompletoFuncionario}</ns1:NombreCompletoFuncionario>\r
+                  <ns1:NifFuncionario>${Properties#NIFFuncionario}</ns1:NifFuncionario>\r
+               </ns1:Funcionario>\r
+            </ns1:Atributos>\r
+            <ns1:Solicitudes>\r
+               <ns1:SolicitudTransmision>\r
+                  <ns1:DatosGenericos>\r
+                     <ns1:Emisor>\r
+                        <ns1:NifEmisor>Q0801175A</ns1:NifEmisor>\r
+                        <ns1:NombreEmisor>CAOC</ns1:NombreEmisor>\r
+                     </ns1:Emisor>\r
+                     <ns1:Solicitante>\r
+                        <ns1:IdentificadorSolicitante>${Properties#IdentificadorSolicitante}</ns1:IdentificadorSolicitante>\r
+                        <ns1:NombreSolicitante>Ajuntament</ns1:NombreSolicitante>\r
+                        <ns1:Finalidad>9821920002_PROVES</ns1:Finalidad>\r
+                        <ns1:Consentimiento>Ley</ns1:Consentimiento>\r
+                        <ns1:Funcionario>\r
+                           <ns1:NombreCompletoFuncionario>${Properties#NombreCompletoFuncionario}</ns1:NombreCompletoFuncionario>\r
+                           <ns1:NifFuncionario>${Properties#NIFFuncionario}</ns1:NifFuncionario>\r
+                        </ns1:Funcionario>\r
+                     </ns1:Solicitante>\r
+                     <ns1:Transmision>\r
+                        <ns1:CodigoCertificado>DGT_HISTORIAL_DOMICILIS_VEHICLE</ns1:CodigoCertificado>\r
+                        <ns1:IdSolicitud>${=(long)(System.currentTimeMillis())}</ns1:IdSolicitud>\r
+                        <ns1:IdTransmision>32017</ns1:IdTransmision>\r
+                     </ns1:Transmision>\r
+                  </ns1:DatosGenericos>\r
+                  <ns1:DatosEspecificos>\r
+                     <ns1:peticioHistorialDomicilisVehicle xmlns:ns1="http://www.aoc.cat/dgt" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">\r
+                        <ns1:matricula>AB1234D</ns1:matricula>\r
+                        <ns1:dataInici>2024-05-01</ns1:dataInici>\r
+                        <ns1:dataFi>2025-05-01</ns1:dataFi>\r
+                     </ns1:peticioHistorialDomicilisVehicle>\r
+                  </ns1:DatosEspecificos>\r
+               </ns1:SolicitudTransmision>\r
+            </ns1:Solicitudes>\r
+         </ns1:Peticion>\r
+      </open:procesa>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:assertion type="SOAP Response" id="1c7555af-bbba-435a-b18c-e5f8ad74c6e6" name="SOAP Response"/><con:credentials><con:selectedAuthProfile>Basic</con:selectedAuthProfile><con:addedBasicAuthenticationTypes>Basic</con:addedBasicAuthenticationTypes><con:preemptive>true</con:preemptive><con:authType>Preemptive</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://www.openuri.org/procesa"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:testStep type="request" id="52e37e14-a962-4240-b7ca-e3e8ed2bddbc" name="VO - DGT_HISTORIAL_DOMICILIS_PROPIETARI - WSS"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>SincronSoap</con:interface><con:operation>procesa</con:operation><con:request name="VO - DGT_HISTORIAL_DOMICILIS_PROPIETARI - WSS" outgoingWss="CERT_PROVES" incomingWss="" timeout="" sslKeystore="" useWsAddressing="false" useWsReliableMessaging="false" wssPasswordType="" id="b8102efb-d443-4dfc-b817-02e7693fa0e0"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>https://serveis3-pre.iop.aoc.cat:443/siri-proxy/services/Sincron</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:open="http://www.openuri.org/" xmlns:pet="http://gencat.net/scsp/esquemes/peticion" xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/">\r
+   <soapenv:Header/>\r
+   <soapenv:Body wsu:Id="id-2FCB69B934F938128B162694603391719" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd">\r
+      <open:procesa>\r
+         <ns1:Peticion xmlns:ns1="http://gencat.net/scsp/esquemes/peticion">\r
+            <ns1:Atributos>\r
+               <ns1:IdPeticion>9821920002-DGT_${=(long)(System.currentTimeMillis())}</ns1:IdPeticion>\r
+               <ns1:NumElementos>1</ns1:NumElementos>\r
+               <ns1:TimeStamp>2018-07-05 09:28:22.28</ns1:TimeStamp>\r
+               <ns1:Estado/>\r
+               <ns1:CodigoCertificado>DGT_HISTORIAL_DOMICILIS_PROPIETARI</ns1:CodigoCertificado>\r
+               <ns1:CodigoProducto>DGT</ns1:CodigoProducto>\r
+               <ns1:DatosAutorizacion>\r
+                  <ns1:IdentificadorSolicitante>${Properties#IdentificadorSolicitante}</ns1:IdentificadorSolicitante>\r
+                  <ns1:NombreSolicitante>Ajuntament</ns1:NombreSolicitante>\r
+                  <ns1:Finalidad>9821920002_PROVES</ns1:Finalidad>\r
+               </ns1:DatosAutorizacion>\r
+               <ns1:Emisor>\r
+                  <ns1:NifEmisor>Q0801175A</ns1:NifEmisor>\r
+                  <ns1:NombreEmisor>CAOC</ns1:NombreEmisor>\r
+               </ns1:Emisor>\r
+               <ns1:Funcionario>\r
+                  <ns1:NombreCompletoFuncionario>${Properties#NombreCompletoFuncionario}</ns1:NombreCompletoFuncionario>\r
+                  <ns1:NifFuncionario>${Properties#NIFFuncionario}</ns1:NifFuncionario>\r
+               </ns1:Funcionario>\r
+            </ns1:Atributos>\r
+            <ns1:Solicitudes>\r
+               <ns1:SolicitudTransmision>\r
+                  <ns1:DatosGenericos>\r
+                     <ns1:Emisor>\r
+                        <ns1:NifEmisor>Q0801175A</ns1:NifEmisor>\r
+                        <ns1:NombreEmisor>CAOC</ns1:NombreEmisor>\r
+                     </ns1:Emisor>\r
+                     <ns1:Solicitante>\r
+                        <ns1:IdentificadorSolicitante>${Properties#IdentificadorSolicitante}</ns1:IdentificadorSolicitante>\r
+                        <ns1:NombreSolicitante>Ajuntament</ns1:NombreSolicitante>\r
+                        <ns1:Finalidad>9821920002_PROVES</ns1:Finalidad>\r
+                        <ns1:Consentimiento>Ley</ns1:Consentimiento>\r
+                        <ns1:Funcionario>\r
+                           <ns1:NombreCompletoFuncionario>${Properties#NombreCompletoFuncionario}</ns1:NombreCompletoFuncionario>\r
+                           <ns1:NifFuncionario>${Properties#NIFFuncionario}</ns1:NifFuncionario>\r
+                        </ns1:Funcionario>\r
+                     </ns1:Solicitante>\r
+                     <ns1:Titular>
+                        <ns1:TipoDocumentacion>NIF</ns1:TipoDocumentacion>
+                        <ns1:Documentacion>10000322Z</ns1:Documentacion>
+                        <ns1:Apellido1>BLANCO</ns1:Apellido1>
+                     </ns1:Titular>
+                     <ns1:Transmision>\r
+                        <ns1:CodigoCertificado>DGT_HISTORIAL_DOMICILIS_PROPIETARI</ns1:CodigoCertificado>\r
+                        <ns1:IdSolicitud>${=(long)(System.currentTimeMillis())}</ns1:IdSolicitud>\r
+                        <ns1:IdTransmision>32017</ns1:IdTransmision>\r
+                     </ns1:Transmision>\r
+                  </ns1:DatosGenericos>\r
+                  <ns1:DatosEspecificos>\r
+                     <ns1:peticioHistorialDomicilisPropietari xmlns:ns1="http://www.aoc.cat/dgt" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">\r
+                        <ns1:dataInici>2021-05-01</ns1:dataInici>\r
+                        <ns1:dataFi>2022-05-01</ns1:dataFi>
+                     </ns1:peticioHistorialDomicilisPropietari>\r
                   </ns1:DatosEspecificos>\r
                </ns1:SolicitudTransmision>\r
             </ns1:Solicitudes>\r
