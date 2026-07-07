@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:soapui-project id="523a6f6d-9b62-4ed0-854d-86b95cdf8915" activeEnvironment="Default" name="serveis3-pre.iop.aoc" resourceRoot="" soapui-version="5.9.1" abortOnError="false" runType="SEQUENTIAL" xmlns:con="http://eviware.com/soapui/config"><con:settings/><con:interface xsi:type="con:WsdlInterface" id="9a5a52bf-55e1-481f-a091-747f93712472" wsaVersion="NONE" name="SincronSoap" type="wsdl" bindingName="{http://www.openuri.org/}SincronSoap" soapVersion="1_1" anonymous="optional" definition="file:/C:/Users/CristianMorales/One%20Drive/OneDrive%20-%20Consorci%20Administració%20Oberta%20de%20Catalunya/Documents/GitHub/Integracio-AOC-SOAPUI/Sincron_iop.wsdl" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache type="TEXT" rootPart="file:/C:/Users/CristianMorales/One%20Drive/OneDrive%20-%20Consorci%20Administració%20Oberta%20de%20Catalunya/Documents/GitHub/Integracio-AOC-SOAPUI/Sincron_iop.wsdl"><con:part><con:url>file:/C:/Users/CristianMorales/One%20Drive/OneDrive%20-%20Consorci%20Administració%20Oberta%20de%20Catalunya/Documents/GitHub/Integracio-AOC-SOAPUI/Sincron_iop.wsdl</con:url><con:content><![CDATA[<!--Published by JAX-WS RI at http://jax-ws.dev.java.net. RI's version is Metro/2.2 (branches/2.2-7015; 2012-02-20T20:31:25+0000) JAXWS-RI/2.2.6 JAXWS/2.2 svn-revision#unknown.-->
+<con:soapui-project id="523a6f6d-9b62-4ed0-854d-86b95cdf8915" activeEnvironment="Default" name="serveis3-pre.iop.aoc" resourceRoot="" soapui-version="5.10.0" abortOnError="false" runType="SEQUENTIAL" xmlns:con="http://eviware.com/soapui/config"><con:settings/><con:interface xsi:type="con:WsdlInterface" id="9a5a52bf-55e1-481f-a091-747f93712472" wsaVersion="NONE" name="SincronSoap" type="wsdl" bindingName="{http://www.openuri.org/}SincronSoap" soapVersion="1_1" anonymous="optional" definition="file:/C:/Users/CristianMorales/One%20Drive/OneDrive%20-%20Consorci%20Administració%20Oberta%20de%20Catalunya/Documents/GitHub/Integracio-AOC-SOAPUI/Sincron_iop.wsdl" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache type="TEXT" rootPart="file:/C:/Users/CristianMorales/One%20Drive/OneDrive%20-%20Consorci%20Administració%20Oberta%20de%20Catalunya/Documents/GitHub/Integracio-AOC-SOAPUI/Sincron_iop.wsdl"><con:part><con:url>file:/C:/Users/CristianMorales/One%20Drive/OneDrive%20-%20Consorci%20Administració%20Oberta%20de%20Catalunya/Documents/GitHub/Integracio-AOC-SOAPUI/Sincron_iop.wsdl</con:url><con:content><![CDATA[<!--Published by JAX-WS RI at http://jax-ws.dev.java.net. RI's version is Metro/2.2 (branches/2.2-7015; 2012-02-20T20:31:25+0000) JAXWS-RI/2.2.6 JAXWS/2.2 svn-revision#unknown.-->
 <wsdl:definitions targetNamespace="http://www.openuri.org/" xmlns:conv="http://www.openuri.org/2002/04/soap/conversation/" xmlns:cw="http://www.openuri.org/2002/04/wsdl/conversation/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:jms="http://www.openuri.org/2002/04/wsdl/jms/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:s0="http://www.openuri.org/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:xmime="http://www.w3.org/2005/05/xmlmime">
   <wsdl:types>
     <xs:schema elementFormDefault="qualified" targetNamespace="http://www.openuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:pet="http://gencat.net/scsp/esquemes/peticion" xmlns:res="http://gencat.net/scsp/esquemes/respuesta">
@@ -20,7 +20,7 @@
         </xs:complexType>
       </xs:element>
     </xs:schema>
-    <xs:schema targetNamespace="http://gencat.net/scsp/esquemes/peticion" elementFormDefault="qualified" attributeFormDefault="unqualified" xmlns="http://gencat.net/scsp/esquemes/peticion" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:grauccaa="http://www.aoc.cat/discapacitat/ccaa" xmlns:nivellc="http://www.aoc.cat/certificat-catala" xmlns:inem="http://www.aocat.net/inem" xmlns:pscp="http://webservices.pscp.economia.gencat.capgemini.com" xmlns:tfn="http://www.aoc.cat/tfn" xmlns:tfm="http://www.aoc.cat/tfm" xmlns:idescat="http://www.aocat.net/padro" xmlns:grau="http://www.aocat.net/discapacitat" xmlns:soc="http://gencat.net/scsp/esquemes/SOC" xmlns:ecot="http://www.aoc.cat/aeat/obligacions" xmlns:rca="http://www.aocat.net/rca" xmlns:reg="http://www.aoc.cat/regentitats" xmlns:padro="http://www.aocat.net/padro" xmlns:merc="http://www.aocat.net/registradors" xmlns:prop="http://www.aocat.net/registradors" xmlns:dcoc="http://aoc.net/dcoc/v2/peticio" xmlns:ppe="http://www.aocat.net/aeat/irpf" xmlns:iae="http://www.aoc.cat/aeat/iae" xmlns:reli="http://www.aoc.cat/reli" xmlns:dicireg="http://www.aoc.cat/registre-civil/dicireg" xmlns:irpf20="http://www.aocat.net/aeat/irpf" xmlns:irpf="http://www.aocat.net/aeat/irpf" xmlns:tgss_alta_fecha="http://www.tgss.es/altafecha/esquemas/afiliacion/datosespecificos" xmlns:tgss_agra="http://www.tgss.es/actividadagraria/esquemas/afiliacion/datosespecificos" xmlns:tgss_lab="http://www.aoc.cat/tgss" xmlns:dgp="http://www.aoc.cat/dgp/identitat" xmlns:dgp_res_legal="http://www.aoc.cat/dgp-residencia-legal" xmlns:sct_denuncies="http://www.aoc.cat/sct/denuncies" xmlns:dgt="http://www.aoc.cat/dgt" xmlns:cad="http://www.aocat.net/cadastre" xmlns:tsd="http://www.aoc.cat/inss/tsd" xmlns:reg_civ="http://www.aoc.cat/registre-civil" xmlns:ant_pen="http://www.aoc.cat/antecedents-penals" xmlns:mux="http://net.aocat/MUX2/PeticioRegistre" xmlns:rpc="http://cat.aoc/rpc/peticion" xmlns:igae="http://www.aoc.cat/igae" xmlns:atmv="http://www.aocat.net/dgt/atmv" xmlns:rgc="http://www.aoc.cat/rgc" xmlns:rpe="http://www.aoc.cat/rpe" xmlns:mepsyd="http://www.aocat.net/mepsyd" xmlns:notaris="http://www.aoc.cat/poders-notarials" xmlns:dgp_residencia="http://www.aoc.cat/dgp-historic-residencia" xmlns:actic="http://www.aoc.cat/actic" xmlns:csuc="http://www.aoc.cat/csuc" xmlns:muface="http://www.aoc.cat/muface">
+    <xs:schema targetNamespace="http://gencat.net/scsp/esquemes/peticion" elementFormDefault="qualified" attributeFormDefault="unqualified" xmlns="http://gencat.net/scsp/esquemes/peticion" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:grauccaa="http://www.aoc.cat/discapacitat/ccaa" xmlns:nivellc="http://www.aoc.cat/certificat-catala" xmlns:inem="http://www.aocat.net/inem" xmlns:rjcu="http://www.aoc.cat/titulacions/rjcu" xmlns:pscp="http://webservices.pscp.economia.gencat.capgemini.com" xmlns:tfn="http://www.aoc.cat/tfn" xmlns:tfm="http://www.aoc.cat/tfm" xmlns:idescat="http://www.aocat.net/padro" xmlns:grau="http://www.aocat.net/discapacitat" xmlns:soc="http://gencat.net/scsp/esquemes/SOC" xmlns:ecot="http://www.aoc.cat/aeat/obligacions" xmlns:rca="http://www.aocat.net/rca" xmlns:reg="http://www.aoc.cat/regentitats" xmlns:padro="http://www.aocat.net/padro" xmlns:merc="http://www.aocat.net/registradors" xmlns:prop="http://www.aocat.net/registradors" xmlns:dcoc="http://aoc.net/dcoc/v2/peticio" xmlns:ppe="http://www.aocat.net/aeat/irpf" xmlns:iae="http://www.aoc.cat/aeat/iae" xmlns:reli="http://www.aoc.cat/reli" xmlns:dicireg="http://www.aoc.cat/registre-civil/dicireg" xmlns:irpf20="http://www.aocat.net/aeat/irpf" xmlns:irpf="http://www.aocat.net/aeat/irpf" xmlns:tgss_alta_fecha="http://www.tgss.es/altafecha/esquemas/afiliacion/datosespecificos" xmlns:tgss_agra="http://www.tgss.es/actividadagraria/esquemas/afiliacion/datosespecificos" xmlns:tgss_lab="http://www.aoc.cat/tgss" xmlns:dgp="http://www.aoc.cat/dgp/identitat" xmlns:dgp_res_legal="http://www.aoc.cat/dgp-residencia-legal" xmlns:sct_denuncies="http://www.aoc.cat/sct/denuncies" xmlns:dgt="http://www.aoc.cat/dgt" xmlns:cad="http://www.aocat.net/cadastre" xmlns:tsd="http://www.aoc.cat/inss/tsd" xmlns:reg_civ="http://www.aoc.cat/registre-civil" xmlns:ant_pen="http://www.aoc.cat/antecedents-penals" xmlns:mux="http://net.aocat/MUX2/PeticioRegistre" xmlns:rpc="http://cat.aoc/rpc/peticion" xmlns:igae="http://www.aoc.cat/igae" xmlns:atmv="http://www.aocat.net/dgt/atmv" xmlns:rgc="http://www.aoc.cat/rgc" xmlns:rpe="http://www.aoc.cat/rpe" xmlns:mepsyd="http://www.aocat.net/mepsyd" xmlns:notaris="http://www.aoc.cat/poders-notarials" xmlns:dgp_residencia="http://www.aoc.cat/dgp-historic-residencia" xmlns:actic="http://www.aoc.cat/actic" xmlns:csuc="http://www.aoc.cat/csuc" xmlns:muface="http://www.aoc.cat/muface">
       <xs:import namespace="http://www.aocat.net/inem" schemaLocation="./VO/VO - ESTAT/INEM/dadesEspecifiques.xsd"/>
       <xs:import namespace="http://www.aoc.cat/tfn" schemaLocation="./VO/VO - GENE/TFN/dadesEspecifiques.xsd"/>
       <xs:import namespace="http://www.aocat.net/padro" schemaLocation="./VO/VO - GENE/IDESCAT/dadesEspecifiquesHistoric.xsd"/>
@@ -79,6 +79,7 @@
       <xs:import namespace="http://www.aoc.cat/bd-seu" schemaLocation="./VO/VO - GENE/BDSEU/dadesEspecifiques.xsd"/>
       <xs:import namespace="http://www.aoc.cat/aeat/obligacions" schemaLocation="./VO/VO - ESTAT/AEAT/dadesEspecifiques-ECOT10x.xsd"/>
       <xs:import namespace="http://www.aoc.cat/certificat-catala" schemaLocation="./VO/VO - GENE/NIVELL_C/dadesEspecifiques.xsd"/>
+      <xs:import namespace="http://www.aoc.cat/aeat/obligacions" schemaLocation="./VO/VO - ESTAT/TITULACIONS_RJCU/dadesEspecifiques.xsd"/>
       <xs:element name="Apellido1">
         <xs:simpleType>
           <xs:restriction base="xs:string">
@@ -434,6 +435,10 @@
             <xs:element ref="ecot:peticioConsultaObligacionsTributaries" minOccurs="0"/>
             <xs:element ref="nivellc:peticioConsultaCertificat" minOccurs="0"/>
             <xs:element ref="nivellc:peticioVerificacioCertificat" minOccurs="0"/>
+            <xs:element ref="rjcu:peticioConsultaCentresUniversitaris" minOccurs="0"/>
+            <xs:element ref="rjcu:peticioConsultaUniversitats" minOccurs="0"/>
+            <xs:element ref="rjcu:peticioConsultaTitolsUniversitaris" minOccurs="0"/>
+            <xs:element ref="rjcu:peticioConsultaTitolUniversitariDetall" minOccurs="0"/>
           </xs:choice>
         </xs:complexType>
       </xs:element>
@@ -53575,6 +53580,1235 @@ estimación objetiva-->
       </xs:sequence>
     </xs:complexType>
   </xs:element>
+</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>file:\C:\Users\CristianMorales\One%20Drive\OneDrive%20-%20Consorci%20Administració%20Oberta%20de%20Catalunya\Documents\GitHub\Integracio-AOC-SOAPUI\VO\VO - ESTAT\TITULACIONS_RJCU\dadesEspecifiques.xsd</con:url><con:content><![CDATA[<xs:schema targetNamespace="http://www.aoc.cat/titulacions/rjcu" elementFormDefault="qualified" attributeFormDefault="unqualified" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="http://www.aoc.cat/titulacions/rjcu">
+  <!--=======================================================-->
+  <!--RJCU_CENTRES-->
+  <!--=======================================================-->
+  <xs:element name="peticioConsultaCentresUniversitaris">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:sequence>
+          <xs:element ref="codiUniversitat"/>
+          <xs:element ref="codiCentre" minOccurs="0"/>
+          <xs:element name="dataInici" type="xs:date" minOccurs="0"/>
+        </xs:sequence>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="respostaConsultaCentresUniversitaris">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="peticioConsultaCentresUniversitaris" minOccurs="0"/>
+        <xs:element name="resposta" minOccurs="0">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="centres">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="centre" type="tCentre" maxOccurs="unbounded"/>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element ref="resultat"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <!--=======================================================-->
+  <!--RJCU_UNIVERSITATS-->
+  <!--=======================================================-->
+  <xs:element name="peticioConsultaUniversitats">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:sequence>
+          <xs:element name="dataInici" type="xs:date"/>
+        </xs:sequence>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="respostaConsultaUniversitats">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="peticioConsultaUniversitats" minOccurs="0"/>
+        <xs:element name="resposta" minOccurs="0">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="universitats">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element ref="universitat" maxOccurs="unbounded"/>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element ref="resultat"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <!--=======================================================-->
+  <!--RJCU_TITOLS-->
+  <!--=======================================================-->
+  <xs:element name="peticioConsultaTitolsUniversitaris">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:sequence>
+          <xs:element ref="codiComunitatAutonoma"/>
+          <xs:element ref="codiUniversitat" minOccurs="0"/>
+          <xs:element ref="codiCentre" minOccurs="0"/>
+        </xs:sequence>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="respostaConsultaTitolsUniversitaris">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="peticioConsultaTitolsUniversitaris" minOccurs="0"/>
+        <xs:element name="resposta" minOccurs="0">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="titols">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="titol" type="tTitol" maxOccurs="unbounded"/>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element ref="resultat"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <!--=======================================================-->
+  <!--RJCU_TITOL_DETALL-->
+  <!--=======================================================-->
+  <xs:element name="peticioConsultaTitolUniversitariDetall">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:sequence>
+          <xs:element ref="codiUniversitat"/>
+          <xs:element ref="codiEstudi"/>
+        </xs:sequence>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="respostaConsultaTitolUniversitariDetall">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="peticioConsultaTitolUniversitariDetall" minOccurs="0"/>
+        <xs:element name="resposta" minOccurs="0">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="titol" type="tTitolDetall"/>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element ref="resultat"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="tCentreBase">
+    <xs:sequence>
+      <xs:element ref="codiCentre"/>
+      <xs:element ref="nomCentre"/>
+      <xs:element ref="acronim" minOccurs="0"/>
+      <xs:element ref="tipus"/>
+      <xs:element ref="situacio"/>
+      <xs:element ref="naturalesa"/>
+      <xs:element ref="adreca" minOccurs="0"/>
+      <xs:element ref="codiPostal" minOccurs="0"/>
+      <xs:element ref="codiComunitatAutonoma"/>
+      <xs:element ref="codiProvincia"/>
+      <xs:element ref="provincia"/>
+      <xs:element ref="codiLocalitat"/>
+      <xs:element ref="localitat"/>
+      <xs:element ref="codiUniversitat"/>
+      <xs:element ref="nomUniversitat"/>
+      <xs:element ref="telefon" minOccurs="0"/>
+      <xs:element ref="fax" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="tCentre">
+    <xs:complexContent>
+      <xs:extension base="tCentreBase">
+        <xs:sequence>
+          <xs:element ref="acreditacions" minOccurs="0"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="tCentreDetall">
+    <xs:complexContent>
+      <xs:extension base="tCentreBase">
+        <xs:sequence>
+          <xs:element ref="tipusEnsenyamentPresencial"/>
+          <xs:element ref="tipusEnsenyamentSemipresencial"/>
+          <xs:element ref="tipusEnsenyamentVirtual" minOccurs="0"/>
+          <xs:element ref="placesPrimerAny" minOccurs="0"/>
+          <xs:element ref="placesSegonAny" minOccurs="0"/>
+          <xs:element ref="placesTercerAny" minOccurs="0"/>
+          <xs:element ref="placesQuartAny" minOccurs="0"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="universitat">
+    <xs:complexType>
+      <xs:all>
+        <xs:element ref="codiUniversitat"/>
+        <xs:element ref="nomUniversitat"/>
+        <xs:element ref="nomCurt"/>
+        <xs:element ref="acronim" minOccurs="0"/>
+        <xs:element ref="NIF" minOccurs="0"/>
+        <xs:element ref="tipusUniversitat"/>
+        <xs:element ref="naturalesa"/>
+        <xs:element ref="situacio"/>
+        <xs:element ref="codiPais"/>
+        <xs:element ref="codiComunitatAutonoma"/>
+        <xs:element ref="codiProvincia" minOccurs="0"/>
+        <xs:element ref="provincia" minOccurs="0"/>
+        <xs:element ref="codiMunicipi" minOccurs="0"/>
+        <xs:element ref="codiLocalitat" minOccurs="0"/>
+        <xs:element ref="localitat" minOccurs="0"/>
+        <xs:element ref="adreca" minOccurs="0"/>
+        <xs:element ref="codiPostal" minOccurs="0"/>
+        <xs:element ref="telefon" minOccurs="0"/>
+        <xs:element ref="telefonSecundari" minOccurs="0"/>
+        <xs:element ref="fax" minOccurs="0"/>
+        <xs:element ref="email" minOccurs="0"/>
+        <xs:element ref="urlWeb" minOccurs="0"/>
+        <xs:element ref="pertanyEsglesia" minOccurs="0"/>
+        <xs:element ref="codiErasmus" minOccurs="0"/>
+        <xs:element ref="animLucre" minOccurs="0"/>
+        <xs:element name="dataVigor" type="xs:date" minOccurs="0"/>
+      </xs:all>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="tTitolBase">
+    <xs:sequence>
+      <xs:element ref="acreditat"/>
+      <xs:element ref="tipusAcreditacio" minOccurs="0"/>
+      <xs:element name="dataResolucioAcreditacio" type="xs:date" minOccurs="0"/>
+      <xs:element ref="codiComunitatAutonoma"/>
+      <xs:element ref="comunitatAutonoma"/>
+      <xs:element ref="codiNaturalesa"/>
+      <xs:element name="naturalesa">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:minLength value="1"/>
+            <xs:maxLength value="40"/>
+            <xs:whiteSpace value="collapse"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element ref="codiEntitat"/>
+      <xs:element ref="entitat"/>
+      <xs:element ref="rol"/>
+      <xs:element ref="codiConjunt"/>
+      <xs:element ref="conjunt"/>
+      <xs:element name="codiEstat">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:enumeration value="P"/>
+            <xs:enumeration value="AJ"/>
+            <xs:enumeration value="ACA"/>
+            <xs:enumeration value="ACM"/>
+            <xs:enumeration value="PAC"/>
+            <xs:enumeration value="V"/>
+            <xs:enumeration value="SP"/>
+            <xs:enumeration value="A"/>
+            <xs:enumeration value="AI"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element name="estat">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:minLength value="1"/>
+            <xs:maxLength value="35"/>
+            <xs:whiteSpace value="collapse"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element name="dataEstat" type="xs:date" minOccurs="0"/>
+      <xs:element ref="codiEstudi"/>
+      <xs:element ref="estudi"/>
+      <xs:element ref="codiBranca" minOccurs="0"/>
+      <xs:element ref="branca" minOccurs="0"/>
+      <xs:element ref="codiTipusEstudi"/>
+      <xs:element ref="tipusEstudi" minOccurs="0"/>
+      <xs:element ref="denominacioCurta"/>
+      <xs:element ref="codiSituacio"/>
+      <xs:element name="situacio">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:enumeration value="ALTA"/>
+            <xs:enumeration value="BAJA"/>
+            <xs:enumeration value="EXTINGUIDA"/>
+            <xs:enumeration value="A EXTINGUIR"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element ref="codiTramitacio"/>
+      <xs:element ref="nivellMeces" minOccurs="0"/>
+      <xs:element ref="habilita" minOccurs="0"/>
+      <xs:element ref="codiProfessioRegulada" minOccurs="0"/>
+      <xs:element ref="professioRegulada" minOccurs="0"/>
+      <xs:element ref="credits" minOccurs="0"/>
+      <xs:element name="dataVerificacio" type="xs:date" minOccurs="0"/>
+      <xs:element name="dataConsellMinistres" type="xs:date" minOccurs="0"/>
+      <xs:element name="dataAutoritzacio" type="xs:date" minOccurs="0"/>
+      <xs:element ref="codiIsced1" minOccurs="0"/>
+      <xs:element ref="isced1" minOccurs="0"/>
+      <xs:element ref="codiIsced2" minOccurs="0"/>
+      <xs:element ref="isced2" minOccurs="0"/>
+      <xs:element ref="BOE" minOccurs="0"/>
+      <xs:element ref="pla" minOccurs="0"/>
+      <xs:element ref="titulacioErasmus" minOccurs="0"/>
+      <xs:element ref="consorci" minOccurs="0"/>
+      <xs:element ref="condicioAccesTitolProfessional" minOccurs="0"/>
+      <xs:element ref="codiTitolProfessionalVinculat" minOccurs="0"/>
+      <xs:element ref="titolProfessionalVinculat" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="tTitol">
+    <xs:complexContent>
+      <xs:extension base="tTitolBase">
+        <xs:sequence>
+          <xs:element ref="codiCentre"/>
+          <xs:element name="centre">
+            <xs:simpleType>
+              <xs:restriction base="xs:string">
+                <xs:minLength value="1"/>
+                <xs:maxLength value="250"/>
+                <xs:whiteSpace value="collapse"/>
+              </xs:restriction>
+            </xs:simpleType>
+          </xs:element>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="tTitolDetall">
+    <xs:complexContent>
+      <xs:extension base="tTitolBase">
+        <xs:sequence>
+          <xs:element name="dataPublicacio" type="xs:date" minOccurs="0"/>
+          <xs:element name="centres">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element name="centre" type="tCentreDetall" maxOccurs="unbounded"/>
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+          <xs:element ref="acreditacions" minOccurs="0"/>
+          <xs:element ref="competencies" minOccurs="0"/>
+          <xs:element ref="especialitats" minOccurs="0"/>
+          <xs:element ref="ensenyamentsExtingir" minOccurs="0"/>
+          <xs:element ref="mencions" minOccurs="0"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="codiCentre">
+    <xs:simpleType>
+      <xs:restriction base="xs:string">
+        <xs:whiteSpace value="collapse"/>
+        <xs:pattern value="\d{8}"/>
+      </xs:restriction>
+    </xs:simpleType>
+  </xs:element>
+  <xs:element name="nomCentre">
+    <xs:simpleType>
+      <xs:restriction base="xs:string">
+        <xs:minLength value="1"/>
+        <xs:maxLength value="250"/>
+        <xs:whiteSpace value="collapse"/>
+      </xs:restriction>
+    </xs:simpleType>
+  </xs:element>
+  <xs:element name="acronim">
+    <xs:simpleType>
+      <xs:restriction base="xs:string">
+        <xs:minLength value="1"/>
+        <xs:maxLength value="10"/>
+        <xs:whiteSpace value="collapse"/>
+      </xs:restriction>
+    </xs:simpleType>
+  </xs:element>
+  <xs:element name="tipus">
+    <xs:simpleType>
+      <xs:restriction base="xs:string">
+        <xs:enumeration value="1"/>
+        <xs:enumeration value="2"/>
+        <xs:enumeration value="3"/>
+        <xs:enumeration value="4"/>
+        <xs:enumeration value="5"/>
+        <xs:enumeration value="6"/>
+      </xs:restriction>
+    </xs:simpleType>
+  </xs:element>
+  <xs:element name="situacio">
+    <xs:simpleType>
+      <xs:restriction base="xs:string">
+        <xs:enumeration value="A"/>
+        <xs:enumeration value="B"/>
+        <xs:enumeration value="N"/>
+        <xs:enumeration value="T"/>
+        <xs:enumeration value="P"/>
+        <xs:enumeration value="S"/>
+      </xs:restriction>
+    </xs:simpleType>
+  </xs:element>
+  <xs:element name="naturalesa">
+    <xs:simpleType>
+      <xs:restriction base="xs:string">
+        <xs:enumeration value="1"/>
+        <xs:enumeration value="2"/>
+        <xs:enumeration value="3"/>
+      </xs:restriction>
+    </xs:simpleType>
+  </xs:element>
+  <xs:element name="adreca">
+    <xs:simpleType>
+      <xs:restriction base="xs:string">
+        <xs:minLength value="1"/>
+        <xs:maxLength value="100"/>
+        <xs:whiteSpace value="collapse"/>
+      </xs:restriction>
+    </xs:simpleType>
+  </xs:element>
+  <xs:element name="codiComunitatAutonoma">
+    <xs:simpleType>
+      <xs:restriction base="xs:string">
+        <xs:enumeration value="01"/>
+        <xs:enumeration value="02"/>
+        <xs:enumeration value="03"/>
+        <xs:enumeration value="04"/>
+        <xs:enumeration value="05"/>
+        <xs:enumeration value="06"/>
+        <xs:enumeration value="07"/>
+        <xs:enumeration value="08"/>
+        <xs:enumeration value="09"/>
+        <xs:enumeration value="10"/>
+        <xs:enumeration value="11"/>
+        <xs:enumeration value="12"/>
+        <xs:enumeration value="13"/>
+        <xs:enumeration value="14"/>
+        <xs:enumeration value="15"/>
+        <xs:enumeration value="16"/>
+        <xs:enumeration value="17"/>
+        <xs:enumeration value="18"/>
+        <xs:enumeration value="19"/>
+        <xs:enumeration value="60"/>
+      </xs:restriction>
+    </xs:simpleType>
+  </xs:element>
+  <xs:element name="comunitatAutonoma">
+    <xs:simpleType>
+      <xs:restriction base="xs:string">
+        <xs:minLength value="1"/>
+        <xs:maxLength value="50"/>
+        <xs:whiteSpace value="collapse"/>
+      </xs:restriction>
+    </xs:simpleType>
+  </xs:element>
+  <xs:element name="codiProvincia">
+    <xs:simpleType>
+      <xs:restriction base="xs:string">
+        <xs:pattern value="\d{2}"/>
+      </xs:restriction>
+    </xs:simpleType>
+  </xs:element>
+  <xs:element name="provincia">
+    <xs:simpleType>
+      <xs:restriction base="xs:string">
+        <xs:minLength value="1"/>
+        <xs:maxLength value="25"/>
+        <xs:whiteSpace value="collapse"/>
+      </xs:restriction>
+    </xs:simpleType>
+  </xs:element>
+  <xs:element name="codiLocalitat">
+    <xs:simpleType>
+      <xs:restriction base="xs:string">
+        <xs:pattern value="\d{9}"/>
+      </xs:restriction>
+    </xs:simpleType>
+  </xs:element>
+  <xs:element name="localitat">
+    <xs:simpleType>
+      <xs:restriction base="xs:string">
+        <xs:minLength value="1"/>
+        <xs:maxLength value="70"/>
+        <xs:whiteSpace value="collapse"/>
+      </xs:restriction>
+    </xs:simpleType>
+  </xs:element>
+  <xs:element name="codiUniversitat">
+    <xs:simpleType>
+      <xs:restriction base="xs:string">
+        <xs:pattern value="\d{3}"/>
+      </xs:restriction>
+    </xs:simpleType>
+  </xs:element>
+  <xs:element name="nomUniversitat">
+    <xs:simpleType>
+      <xs:restriction base="xs:string">
+        <xs:minLength value="1"/>
+        <xs:maxLength value="75"/>
+        <xs:whiteSpace value="collapse"/>
+      </xs:restriction>
+    </xs:simpleType>
+  </xs:element>
+  <xs:element name="acreditacions">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="acreditacio" maxOccurs="unbounded"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="acreditacio">
+    <xs:complexType>
+      <xs:all>
+        <xs:element ref="codiEstat" minOccurs="0"/>
+        <xs:element ref="descripcioEstat" minOccurs="0"/>
+        <xs:element name="dataRegistre" type="xs:date" minOccurs="0"/>
+        <xs:element name="dataResolucio" type="xs:date" minOccurs="0"/>
+        <xs:element ref="tipusAcreditacio" minOccurs="0"/>
+      </xs:all>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="codiEstat">
+    <xs:simpleType>
+      <xs:restriction base="xs:string">
+        <xs:minLength value="1"/>
+        <xs:maxLength value="5"/>
+        <xs:whiteSpace value="collapse"/>
+      </xs:restriction>
+    </xs:simpleType>
+  </xs:element>
+  <xs:element name="descripcioEstat">
+    <xs:simpleType>
+      <xs:restriction base="xs:string">
+        <xs:minLength value="1"/>
+        <xs:maxLength value="50"/>
+        <xs:whiteSpace value="collapse"/>
+      </xs:restriction>
+    </xs:simpleType>
+  </xs:element>
+  <xs:element name="nomCurt">
+    <xs:simpleType>
+      <xs:restriction base="xs:string">
+        <xs:minLength value="1"/>
+        <xs:maxLength value="50"/>
+        <xs:whiteSpace value="collapse"/>
+      </xs:restriction>
+    </xs:simpleType>
+  </xs:element>
+  <xs:element name="NIF">
+    <xs:simpleType>
+      <xs:restriction base="xs:string">
+        <xs:length value="9"/>
+        <xs:whiteSpace value="collapse"/>
+      </xs:restriction>
+    </xs:simpleType>
+  </xs:element>
+  <xs:element name="tipusUniversitat">
+    <xs:simpleType>
+      <xs:restriction base="xs:string">
+        <xs:enumeration value="U000"/>
+        <xs:enumeration value="U001"/>
+        <xs:enumeration value="U002"/>
+        <xs:enumeration value="U003"/>
+        <xs:enumeration value="U004"/>
+      </xs:restriction>
+    </xs:simpleType>
+  </xs:element>
+  <xs:element name="codiPais">
+    <xs:simpleType>
+      <xs:restriction base="xs:string">
+        <xs:pattern value="\d{3}"/>
+      </xs:restriction>
+    </xs:simpleType>
+  </xs:element>
+  <xs:element name="codiMunicipi">
+    <xs:simpleType>
+      <xs:restriction base="xs:string">
+        <xs:minLength value="1"/>
+        <xs:maxLength value="50"/>
+        <xs:whiteSpace value="collapse"/>
+      </xs:restriction>
+    </xs:simpleType>
+  </xs:element>
+  <xs:element name="telefon">
+    <xs:simpleType>
+      <xs:restriction base="xs:string">
+        <xs:minLength value="1"/>
+        <xs:maxLength value="25"/>
+      </xs:restriction>
+    </xs:simpleType>
+  </xs:element>
+  <xs:element name="telefonSecundari">
+    <xs:simpleType>
+      <xs:restriction base="xs:string">
+        <xs:minLength value="1"/>
+        <xs:maxLength value="25"/>
+      </xs:restriction>
+    </xs:simpleType>
+  </xs:element>
+  <xs:element name="email">
+    <xs:simpleType>
+      <xs:restriction base="xs:string">
+        <xs:minLength value="1"/>
+        <xs:maxLength value="50"/>
+      </xs:restriction>
+    </xs:simpleType>
+  </xs:element>
+  <xs:element name="fax">
+    <xs:simpleType>
+      <xs:restriction base="xs:string">
+        <xs:minLength value="1"/>
+        <xs:maxLength value="25"/>
+      </xs:restriction>
+    </xs:simpleType>
+  </xs:element>
+  <xs:element name="urlWeb">
+    <xs:simpleType>
+      <xs:restriction base="xs:string">
+        <xs:minLength value="1"/>
+        <xs:maxLength value="75"/>
+      </xs:restriction>
+    </xs:simpleType>
+  </xs:element>
+  <xs:element name="codiPostal">
+    <xs:simpleType>
+      <xs:restriction base="xs:int">
+        <xs:pattern value="\d{5}"/>
+      </xs:restriction>
+    </xs:simpleType>
+  </xs:element>
+  <xs:element name="pertanyEsglesia">
+    <xs:simpleType>
+      <xs:restriction base="xs:string">
+        <xs:enumeration value="S"/>
+        <xs:enumeration value="N"/>
+      </xs:restriction>
+    </xs:simpleType>
+  </xs:element>
+  <xs:element name="codiErasmus">
+    <xs:simpleType>
+      <xs:restriction base="xs:string">
+        <xs:minLength value="1"/>
+        <xs:maxLength value="15"/>
+      </xs:restriction>
+    </xs:simpleType>
+  </xs:element>
+  <xs:element name="animLucre">
+    <xs:simpleType>
+      <xs:restriction base="xs:string">
+        <xs:enumeration value="S"/>
+        <xs:enumeration value="N"/>
+      </xs:restriction>
+    </xs:simpleType>
+  </xs:element>
+  <xs:element name="codiEntitat">
+    <xs:simpleType>
+      <xs:restriction base="xs:string">
+        <xs:whiteSpace value="collapse"/>
+        <xs:pattern value="\d{3}"/>
+      </xs:restriction>
+    </xs:simpleType>
+  </xs:element>
+  <xs:element name="entitat">
+    <xs:simpleType>
+      <xs:restriction base="xs:string">
+        <xs:minLength value="1"/>
+        <xs:maxLength value="60"/>
+        <xs:whiteSpace value="collapse"/>
+      </xs:restriction>
+    </xs:simpleType>
+  </xs:element>
+  <xs:element name="acreditat">
+    <xs:simpleType>
+      <xs:restriction base="xs:string">
+        <xs:enumeration value="S"/>
+        <xs:enumeration value="N"/>
+      </xs:restriction>
+    </xs:simpleType>
+  </xs:element>
+  <xs:element name="tipusAcreditacio">
+    <xs:simpleType>
+      <xs:restriction base="xs:string">
+        <xs:enumeration value="T"/>
+        <xs:enumeration value="I"/>
+      </xs:restriction>
+    </xs:simpleType>
+  </xs:element>
+  <xs:element name="codiNaturalesa">
+    <xs:simpleType>
+      <xs:restriction base="xs:int">
+        <xs:enumeration value="1"/>
+        <xs:enumeration value="2"/>
+      </xs:restriction>
+    </xs:simpleType>
+  </xs:element>
+  <xs:element name="rol">
+    <xs:simpleType>
+      <xs:restriction base="xs:string">
+        <xs:enumeration value="Coordinador"/>
+        <xs:enumeration value="Coordinadora"/>
+        <xs:enumeration value="Participante"/>
+      </xs:restriction>
+    </xs:simpleType>
+  </xs:element>
+  <xs:element name="nivellMeces">
+    <xs:simpleType>
+      <xs:restriction base="xs:int">
+        <xs:enumeration value="2"/>
+        <xs:enumeration value="3"/>
+        <xs:enumeration value="4"/>
+      </xs:restriction>
+    </xs:simpleType>
+  </xs:element>
+  <xs:element name="codiConjunt">
+    <xs:simpleType>
+      <xs:restriction base="xs:string">
+        <xs:enumeration value="S"/>
+        <xs:enumeration value="N"/>
+        <xs:enumeration value="I"/>
+      </xs:restriction>
+    </xs:simpleType>
+  </xs:element>
+  <xs:element name="conjunt">
+    <xs:simpleType>
+      <xs:restriction base="xs:string">
+        <xs:minLength value="1"/>
+        <xs:maxLength value="15"/>
+        <xs:whiteSpace value="collapse"/>
+      </xs:restriction>
+    </xs:simpleType>
+  </xs:element>
+  <xs:element name="codiEstudi">
+    <xs:simpleType>
+      <xs:restriction base="xs:string">
+        <xs:whiteSpace value="collapse"/>
+        <xs:pattern value="\d{7}"/>
+      </xs:restriction>
+    </xs:simpleType>
+  </xs:element>
+  <xs:element name="estudi">
+    <xs:simpleType>
+      <xs:restriction base="xs:string">
+        <xs:minLength value="1"/>
+        <xs:maxLength value="650"/>
+        <xs:whiteSpace value="collapse"/>
+      </xs:restriction>
+    </xs:simpleType>
+  </xs:element>
+  <xs:element name="codiBranca">
+    <xs:simpleType>
+      <xs:restriction base="xs:int">
+        <xs:enumeration value="1"/>
+        <xs:enumeration value="2"/>
+        <xs:enumeration value="3"/>
+        <xs:enumeration value="4"/>
+        <xs:enumeration value="5"/>
+      </xs:restriction>
+    </xs:simpleType>
+  </xs:element>
+  <xs:element name="branca">
+    <xs:simpleType>
+      <xs:restriction base="xs:string">
+        <xs:minLength value="1"/>
+        <xs:maxLength value="30"/>
+        <xs:whiteSpace value="collapse"/>
+      </xs:restriction>
+    </xs:simpleType>
+  </xs:element>
+  <xs:element name="codiTipusEstudi">
+    <xs:simpleType>
+      <xs:restriction base="xs:string">
+        <xs:enumeration value="C"/>
+        <xs:enumeration value="G"/>
+        <xs:enumeration value="T"/>
+        <xs:enumeration value="M93"/>
+        <xs:enumeration value="M56"/>
+        <xs:enumeration value="D93"/>
+        <xs:enumeration value="D56"/>
+        <xs:enumeration value="D99"/>
+      </xs:restriction>
+    </xs:simpleType>
+  </xs:element>
+  <xs:element name="tipusEstudi">
+    <xs:simpleType>
+      <xs:restriction base="xs:string">
+        <xs:minLength value="1"/>
+        <xs:maxLength value="50"/>
+        <xs:whiteSpace value="collapse"/>
+      </xs:restriction>
+    </xs:simpleType>
+  </xs:element>
+  <xs:element name="denominacioCurta">
+    <xs:simpleType>
+      <xs:restriction base="xs:string">
+        <xs:minLength value="1"/>
+        <xs:maxLength value="250"/>
+        <xs:whiteSpace value="collapse"/>
+      </xs:restriction>
+    </xs:simpleType>
+  </xs:element>
+  <xs:element name="codiSituacio">
+    <xs:simpleType>
+      <xs:restriction base="xs:string">
+        <xs:enumeration value="A"/>
+        <xs:enumeration value="B"/>
+        <xs:enumeration value="X"/>
+        <xs:enumeration value="T"/>
+      </xs:restriction>
+    </xs:simpleType>
+  </xs:element>
+  <xs:element name="codiTramitacio">
+    <xs:simpleType>
+      <xs:restriction base="xs:string">
+        <xs:whiteSpace value="collapse"/>
+        <xs:pattern value="\d{17}"/>
+      </xs:restriction>
+    </xs:simpleType>
+  </xs:element>
+  <xs:element name="habilita">
+    <xs:simpleType>
+      <xs:restriction base="xs:string">
+        <xs:enumeration value="S"/>
+        <xs:enumeration value="N"/>
+      </xs:restriction>
+    </xs:simpleType>
+  </xs:element>
+  <xs:element name="codiProfessioRegulada">
+    <xs:simpleType>
+      <xs:restriction base="xs:int">
+        <xs:whiteSpace value="collapse"/>
+        <xs:minInclusive value="1"/>
+        <xs:maxInclusive value="50"/>
+      </xs:restriction>
+    </xs:simpleType>
+  </xs:element>
+  <xs:element name="professioRegulada">
+    <xs:simpleType>
+      <xs:restriction base="xs:string">
+        <xs:minLength value="1"/>
+        <xs:maxLength value="150"/>
+        <xs:whiteSpace value="collapse"/>
+      </xs:restriction>
+    </xs:simpleType>
+  </xs:element>
+  <xs:element name="credits">
+    <xs:complexType>
+      <xs:all>
+        <xs:element ref="creditsFormacioBasica" minOccurs="0"/>
+        <xs:element ref="creditsObligatoris" minOccurs="0"/>
+        <xs:element ref="creditsOptatius" minOccurs="0"/>
+        <xs:element ref="creditsPractiquesExternes" minOccurs="0"/>
+        <xs:element ref="creditsTreballFiCarrera" minOccurs="0"/>
+        <xs:element ref="creditsTitol" minOccurs="0"/>
+        <xs:element ref="creditsComplementsFormatius" minOccurs="0"/>
+      </xs:all>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="creditsFormacioBasica">
+    <xs:simpleType>
+      <xs:restriction base="xs:int">
+        <xs:minInclusive value="0"/>
+        <xs:maxInclusive value="500"/>
+        <xs:whiteSpace value="collapse"/>
+      </xs:restriction>
+    </xs:simpleType>
+  </xs:element>
+  <xs:element name="creditsObligatoris">
+    <xs:simpleType>
+      <xs:restriction base="xs:int">
+        <xs:minInclusive value="0"/>
+        <xs:maxInclusive value="500"/>
+        <xs:whiteSpace value="collapse"/>
+      </xs:restriction>
+    </xs:simpleType>
+  </xs:element>
+  <xs:element name="creditsOptatius">
+    <xs:simpleType>
+      <xs:restriction base="xs:int">
+        <xs:minInclusive value="0"/>
+        <xs:maxInclusive value="500"/>
+        <xs:whiteSpace value="collapse"/>
+      </xs:restriction>
+    </xs:simpleType>
+  </xs:element>
+  <xs:element name="creditsPractiquesExternes">
+    <xs:simpleType>
+      <xs:restriction base="xs:int">
+        <xs:minInclusive value="0"/>
+        <xs:maxInclusive value="500"/>
+        <xs:whiteSpace value="collapse"/>
+      </xs:restriction>
+    </xs:simpleType>
+  </xs:element>
+  <xs:element name="creditsTreballFiCarrera">
+    <xs:simpleType>
+      <xs:restriction base="xs:int">
+        <xs:minInclusive value="0"/>
+        <xs:maxInclusive value="500"/>
+        <xs:whiteSpace value="collapse"/>
+      </xs:restriction>
+    </xs:simpleType>
+  </xs:element>
+  <xs:element name="creditsTitol">
+    <xs:simpleType>
+      <xs:restriction base="xs:int">
+        <xs:minInclusive value="0"/>
+        <xs:maxInclusive value="500"/>
+        <xs:whiteSpace value="collapse"/>
+      </xs:restriction>
+    </xs:simpleType>
+  </xs:element>
+  <xs:element name="creditsComplementsFormatius">
+    <xs:simpleType>
+      <xs:restriction base="xs:int">
+        <xs:minInclusive value="0"/>
+        <xs:maxInclusive value="500"/>
+        <xs:whiteSpace value="collapse"/>
+      </xs:restriction>
+    </xs:simpleType>
+  </xs:element>
+  <xs:element name="codiIsced1">
+    <xs:simpleType>
+      <xs:restriction base="xs:string">
+        <xs:whiteSpace value="collapse"/>
+        <xs:pattern value="\d{3}"/>
+      </xs:restriction>
+    </xs:simpleType>
+  </xs:element>
+  <xs:element name="isced1">
+    <xs:simpleType>
+      <xs:restriction base="xs:string">
+        <xs:minLength value="1"/>
+        <xs:maxLength value="100"/>
+        <xs:whiteSpace value="collapse"/>
+      </xs:restriction>
+    </xs:simpleType>
+  </xs:element>
+  <xs:element name="codiIsced2">
+    <xs:simpleType>
+      <xs:restriction base="xs:string">
+        <xs:whiteSpace value="collapse"/>
+        <xs:pattern value="\d{3}"/>
+      </xs:restriction>
+    </xs:simpleType>
+  </xs:element>
+  <xs:element name="isced2">
+    <xs:simpleType>
+      <xs:restriction base="xs:string">
+        <xs:minLength value="1"/>
+        <xs:maxLength value="100"/>
+        <xs:whiteSpace value="collapse"/>
+      </xs:restriction>
+    </xs:simpleType>
+  </xs:element>
+  <xs:element name="BOE">
+    <xs:complexType>
+      <xs:all>
+        <xs:element name="dataPublicacio" type="xs:date" minOccurs="0"/>
+        <xs:element ref="enllac" minOccurs="0"/>
+        <xs:element name="dataCorreccio" type="xs:date" minOccurs="0"/>
+        <xs:element ref="enllacCorreccio" minOccurs="0"/>
+      </xs:all>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="pla">
+    <xs:complexType>
+      <xs:all>
+        <xs:element name="data" type="xs:date" minOccurs="0"/>
+        <xs:element ref="enllac" minOccurs="0"/>
+        <xs:element name="dataCorreccio" type="xs:date" minOccurs="0"/>
+        <xs:element ref="enllacCorreccio" minOccurs="0"/>
+      </xs:all>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="enllac">
+    <xs:simpleType>
+      <xs:restriction base="xs:string">
+        <xs:minLength value="1"/>
+        <xs:maxLength value="250"/>
+        <xs:whiteSpace value="collapse"/>
+      </xs:restriction>
+    </xs:simpleType>
+  </xs:element>
+  <xs:element name="enllacCorreccio">
+    <xs:simpleType>
+      <xs:restriction base="xs:string">
+        <xs:minLength value="1"/>
+        <xs:maxLength value="250"/>
+        <xs:whiteSpace value="collapse"/>
+      </xs:restriction>
+    </xs:simpleType>
+  </xs:element>
+  <xs:element name="titulacioErasmus">
+    <xs:simpleType>
+      <xs:restriction base="xs:string">
+        <xs:enumeration value="S"/>
+        <xs:enumeration value="N"/>
+      </xs:restriction>
+    </xs:simpleType>
+  </xs:element>
+  <xs:element name="consorci">
+    <xs:simpleType>
+      <xs:restriction base="xs:string">
+        <xs:minLength value="1"/>
+        <xs:maxLength value="150"/>
+        <xs:whiteSpace value="collapse"/>
+      </xs:restriction>
+    </xs:simpleType>
+  </xs:element>
+  <xs:element name="condicioAccesTitolProfessional">
+    <xs:simpleType>
+      <xs:restriction base="xs:string">
+        <xs:enumeration value="S"/>
+        <xs:enumeration value="N"/>
+      </xs:restriction>
+    </xs:simpleType>
+  </xs:element>
+  <xs:element name="codiTitolProfessionalVinculat">
+    <xs:simpleType>
+      <xs:restriction base="xs:int">
+        <xs:minInclusive value="1"/>
+        <xs:maxInclusive value="15"/>
+      </xs:restriction>
+    </xs:simpleType>
+  </xs:element>
+  <xs:element name="titolProfessionalVinculat">
+    <xs:simpleType>
+      <xs:restriction base="xs:string">
+        <xs:minLength value="1"/>
+        <xs:maxLength value="100"/>
+        <xs:whiteSpace value="collapse"/>
+      </xs:restriction>
+    </xs:simpleType>
+  </xs:element>
+  <xs:element name="tipusEnsenyamentPresencial">
+    <xs:simpleType>
+      <xs:restriction base="xs:string">
+        <xs:enumeration value="S"/>
+        <xs:enumeration value="N"/>
+      </xs:restriction>
+    </xs:simpleType>
+  </xs:element>
+  <xs:element name="tipusEnsenyamentSemipresencial">
+    <xs:simpleType>
+      <xs:restriction base="xs:string">
+        <xs:enumeration value="S"/>
+        <xs:enumeration value="N"/>
+      </xs:restriction>
+    </xs:simpleType>
+  </xs:element>
+  <xs:element name="tipusEnsenyamentVirtual">
+    <xs:simpleType>
+      <xs:restriction base="xs:string">
+        <xs:enumeration value="S"/>
+        <xs:enumeration value="N"/>
+      </xs:restriction>
+    </xs:simpleType>
+  </xs:element>
+  <xs:element name="placesPrimerAny">
+    <xs:simpleType>
+      <xs:restriction base="xs:int">
+        <xs:minInclusive value="0"/>
+        <xs:maxInclusive value="100000"/>
+      </xs:restriction>
+    </xs:simpleType>
+  </xs:element>
+  <xs:element name="placesSegonAny">
+    <xs:simpleType>
+      <xs:restriction base="xs:int">
+        <xs:minInclusive value="0"/>
+        <xs:maxInclusive value="100000"/>
+      </xs:restriction>
+    </xs:simpleType>
+  </xs:element>
+  <xs:element name="placesTercerAny">
+    <xs:simpleType>
+      <xs:restriction base="xs:int">
+        <xs:minInclusive value="0"/>
+        <xs:maxInclusive value="100000"/>
+      </xs:restriction>
+    </xs:simpleType>
+  </xs:element>
+  <xs:element name="placesQuartAny">
+    <xs:simpleType>
+      <xs:restriction base="xs:int">
+        <xs:minInclusive value="0"/>
+        <xs:maxInclusive value="100000"/>
+      </xs:restriction>
+    </xs:simpleType>
+  </xs:element>
+  <!--competències-->
+  <xs:element name="competencies">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="basiques" minOccurs="0">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element ref="competencia" maxOccurs="unbounded"/>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="especifiques" minOccurs="0">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element ref="competencia" maxOccurs="unbounded"/>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="generals" minOccurs="0">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element ref="competencia" maxOccurs="unbounded"/>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="transversals" minOccurs="0">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element ref="competencia" maxOccurs="unbounded"/>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="competencia">
+    <xs:complexType>
+      <xs:all>
+        <xs:element name="codi">
+          <xs:simpleType>
+            <xs:restriction base="xs:string">
+              <xs:minLength value="1"/>
+              <xs:maxLength value="10"/>
+              <xs:whiteSpace value="collapse"/>
+            </xs:restriction>
+          </xs:simpleType>
+        </xs:element>
+        <xs:element ref="denominacio"/>
+        <xs:element ref="actiu"/>
+      </xs:all>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="denominacio">
+    <xs:simpleType>
+      <xs:restriction base="xs:string">
+        <xs:minLength value="1"/>
+        <xs:maxLength value="1000"/>
+        <xs:whiteSpace value="collapse"/>
+      </xs:restriction>
+    </xs:simpleType>
+  </xs:element>
+  <xs:element name="actiu">
+    <xs:simpleType>
+      <xs:restriction base="xs:string">
+        <xs:enumeration value="S"/>
+        <xs:enumeration value="N"/>
+      </xs:restriction>
+    </xs:simpleType>
+  </xs:element>
+  <!--especialitats-->
+  <xs:element name="especialitats">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="especialitat" maxOccurs="unbounded"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="especialitat">
+    <xs:complexType>
+      <xs:all>
+        <xs:element name="codi">
+          <xs:simpleType>
+            <xs:restriction base="xs:string">
+              <xs:minLength value="1"/>
+              <xs:maxLength value="10"/>
+              <xs:whiteSpace value="collapse"/>
+            </xs:restriction>
+          </xs:simpleType>
+        </xs:element>
+        <xs:element ref="denominacio"/>
+        <xs:element name="dataInici" type="xs:date"/>
+        <xs:element name="dataFi" type="xs:date" minOccurs="0"/>
+      </xs:all>
+    </xs:complexType>
+  </xs:element>
+  <!--ensenyament extingir-->
+  <xs:element name="ensenyamentsExtingir">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="ensenyament" maxOccurs="unbounded"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ensenyament">
+    <xs:complexType>
+      <xs:all>
+        <xs:element name="codi">
+          <xs:simpleType>
+            <xs:restriction base="xs:string">
+              <xs:minLength value="1"/>
+              <xs:maxLength value="10"/>
+              <xs:whiteSpace value="collapse"/>
+            </xs:restriction>
+          </xs:simpleType>
+        </xs:element>
+        <xs:element ref="denominacio"/>
+      </xs:all>
+    </xs:complexType>
+  </xs:element>
+  <!--nencions-->
+  <xs:element name="mencions">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="mencio" maxOccurs="unbounded"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="mencio">
+    <xs:complexType>
+      <xs:all>
+        <xs:element name="codi">
+          <xs:simpleType>
+            <xs:restriction base="xs:string">
+              <xs:minLength value="1"/>
+              <xs:maxLength value="10"/>
+              <xs:whiteSpace value="collapse"/>
+            </xs:restriction>
+          </xs:simpleType>
+        </xs:element>
+        <xs:element ref="denominacio"/>
+        <xs:element name="dataInici" type="xs:date"/>
+        <xs:element name="dataFi" type="xs:date" minOccurs="0"/>
+      </xs:all>
+    </xs:complexType>
+  </xs:element>
+  <!--=======================================================-->
+  <!--Resultat-->
+  <!--=======================================================-->
+  <xs:element name="resultat">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="codiResultat" type="xs:string"/>
+        <xs:element name="descripcio" type="xs:string"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
 </xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part></con:definitionCache><con:endpoints><con:endpoint>http://serveis3-pre.iop.aoc.cat:80/siri-proxy/services/Sincron</con:endpoint><con:endpoint>https://serveis3-pre.app.aoc.cat:443/siri-proxy/services/Sincron</con:endpoint><con:endpoint>https://serveis3-pre.iop.aoc.cat:443/siri-proxy/services/Sincron</con:endpoint></con:endpoints><con:operation id="0e1b6498-d8a1-4efa-8ebe-81577bd3f48c" isOneWay="false" action="http://www.openuri.org/procesa" name="procesa" bindingOperationName="procesa" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/></con:operation></con:interface><con:interface xsi:type="con:WsdlInterface" id="d2a4e61c-1023-4d2f-954b-bcfcd6a2a521" wsaVersion="NONE" name="AsincronSoap" type="wsdl" bindingName="{http://www.openuri.org/}AsincronSoap" soapVersion="1_1" anonymous="optional" definition="https://serveis3-pre.iop.aoc.cat/siri-proxy/services/Asincron?wsdl" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache type="TEXT" rootPart="https://serveis3-pre.iop.aoc.cat/siri-proxy/services/Asincron?wsdl"><con:part><con:url>https://serveis3-pre.iop.aoc.cat/siri-proxy/services/Asincron?wsdl</con:url><con:content><![CDATA[<!--Published by JAX-WS RI at http://jax-ws.dev.java.net. RI's version is Metro/2.2 (branches/2.2-7015; 2012-02-20T20:31:25+0000) JAXWS-RI/2.2.6 JAXWS/2.2 svn-revision#unknown.-->
 <wsdl:definitions targetNamespace="http://www.openuri.org/" xmlns:conv="http://www.openuri.org/2002/04/soap/conversation/" xmlns:cw="http://www.openuri.org/2002/04/wsdl/conversation/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:jms="http://www.openuri.org/2002/04/wsdl/jms/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:s0="http://www.openuri.org/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:xmime="http://www.w3.org/2005/05/xmlmime" xmlns:xs="http://www.w3.org/2001/XMLSchema">
   <wsdl:types>
@@ -56167,7 +57401,7 @@ estimación objetiva-->
       <open:procesa>\r
          <ns1:Peticion xmlns:ns1="http://gencat.net/scsp/esquemes/peticion">\r
             <ns1:Atributos>\r
-               <ns1:IdPeticion>9821920002-AEAT_PPE-${=(long)(System.currentTimeMillis())}</ns1:IdPeticion>\r
+               <ns1:IdPeticion>9821920002-AEAT_ECOT-${=(long)(System.currentTimeMillis())}</ns1:IdPeticion>\r
                <ns1:NumElementos>1</ns1:NumElementos>\r
                <ns1:TimeStamp>2026-03-06 07:57:42.825</ns1:TimeStamp>\r
                <ns1:CodigoCertificado>ECOT103</ns1:CodigoCertificado>\r
@@ -56215,7 +57449,7 @@ estimación objetiva-->
                      </ns1:Transmision>\r
                   </ns1:DatosGenericos>\r
                   <ns1:DatosEspecificos>\r
-                     <ns3:peticioConsultaObligacionsTributaries xmlns:ns3="http://www.aocat.net/aeat/obligacions" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+                     <ns3:peticioConsultaObligacionsTributaries xmlns:ns3="http://www.aoc.cat/aeat/obligacions" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 					<ns3:dataPassada>2025-01-01</ns3:dataPassada>
 				</ns3:peticioConsultaObligacionsTributaries>
                   </ns1:DatosEspecificos>\r
@@ -56282,7 +57516,7 @@ estimación objetiva-->
                   <ns1:DatosEspecificos>\r
                      <ns2:peticioConsultaIRPF xmlns:aeat="http://intermediacion.redsara.es/scsp/esquemas/datosespecificos" xmlns:ns2="http://www.aocat.net/aeat/irpf" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">\r
                         <aeat:DatosEspecificos>\r
-                           <aeat:Ejercicio>2021</aeat:Ejercicio>\r
+                           <aeat:Ejercicio>2024</aeat:Ejercicio>\r
                         </aeat:DatosEspecificos>\r
                      </ns2:peticioConsultaIRPF>\r
                   </ns1:DatosEspecificos>\r
@@ -58633,6 +59867,330 @@ estimación objetiva-->
          </ns1:Peticion>\r
       </open:procesa>\r
    </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:assertion type="SOAP Response" id="1c7555af-bbba-435a-b18c-e5f8ad74c6e6" name="SOAP Response"/><con:credentials><con:selectedAuthProfile>Basic</con:selectedAuthProfile><con:addedBasicAuthenticationTypes>Basic</con:addedBasicAuthenticationTypes><con:preemptive>true</con:preemptive><con:authType>Preemptive</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://www.openuri.org/procesa"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:testStep type="request" id="abffb2d4-ab0b-41ca-9fa2-8e52bfb9827f" name="VO - AEAT - IRPF20 - WSS - AWS"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>SincronSoap</con:interface><con:operation>procesa</con:operation><con:request name="VO - AEAT - IRPF20 - WSS - AWS" outgoingWss="" incomingWss="" timeout="" sslKeystore="" useWsAddressing="false" useWsReliableMessaging="false" wssPasswordType="" id="b8102efb-d443-4dfc-b817-02e7693fa0e0"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://10.151.20.4:8201/aoc-pci3-mti/Sincron</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:open="http://www.openuri.org/" xmlns:pet="http://gencat.net/scsp/esquemes/peticion" xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/">\r
+   <soapenv:Header>\r
+      <wsse:Security xmlns:wsse="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd"/>\r
+   </soapenv:Header>\r
+   <soapenv:Body>\r
+      <open:procesa>\r
+         <ns1:Peticion xmlns:ns1="http://gencat.net/scsp/esquemes/peticion">\r
+            <ns1:Atributos>\r
+               <ns1:IdPeticion>9821920002-AEAT_IRPF20-${=(long)(System.currentTimeMillis())}</ns1:IdPeticion>\r
+               <ns1:NumElementos>1</ns1:NumElementos>\r
+               <ns1:TimeStamp>2018-07-05 09:28:22.28</ns1:TimeStamp>\r
+               <ns1:Estado/>\r
+               <ns1:CodigoCertificado>IRPF</ns1:CodigoCertificado>\r
+               <ns1:CodigoProducto>AEAT_IRPF</ns1:CodigoProducto>\r
+               <ns1:DatosAutorizacion>\r
+                  <ns1:IdentificadorSolicitante>${Properties#IdentificadorSolicitante}</ns1:IdentificadorSolicitante>\r
+                  <ns1:NombreSolicitante>Ajuntament</ns1:NombreSolicitante>\r
+                  <ns1:Finalidad>PROVES</ns1:Finalidad>\r
+               </ns1:DatosAutorizacion>\r
+               <ns1:Emisor>\r
+                  <ns1:NifEmisor>Q0801175A</ns1:NifEmisor>\r
+                  <ns1:NombreEmisor>CAOC</ns1:NombreEmisor>\r
+               </ns1:Emisor>\r
+               <ns1:Funcionario>\r
+                  <ns1:NombreCompletoFuncionario>${Properties#NombreCompletoFuncionario}</ns1:NombreCompletoFuncionario>\r
+                  <ns1:NifFuncionario>${Properties#NIFFuncionario}</ns1:NifFuncionario>\r
+               </ns1:Funcionario>\r
+            </ns1:Atributos>\r
+            <ns1:Solicitudes>\r
+               <ns1:SolicitudTransmision>\r
+                  <ns1:DatosGenericos>\r
+                     <ns1:Emisor>\r
+                        <ns1:NifEmisor>Q0801175A</ns1:NifEmisor>\r
+                        <ns1:NombreEmisor>CAOC</ns1:NombreEmisor>\r
+                     </ns1:Emisor>\r
+                     <ns1:Solicitante>\r
+                        <ns1:IdentificadorSolicitante>${Properties#IdentificadorSolicitante}</ns1:IdentificadorSolicitante>\r
+                        <ns1:NombreSolicitante>Ajuntament</ns1:NombreSolicitante>\r
+                        <ns1:Finalidad>PROVES</ns1:Finalidad>\r
+                        <ns1:Consentimiento>Ley</ns1:Consentimiento>\r
+                        <ns1:Funcionario>\r
+                           <ns1:NombreCompletoFuncionario>${Properties#NombreCompletoFuncionario</ns1:NombreCompletoFuncionario>\r
+                           <ns1:NifFuncionario>${Properties#NIFFuncionario}</ns1:NifFuncionario>\r
+                        </ns1:Funcionario>\r
+                     </ns1:Solicitante>\r
+                     <ns1:Titular>\r
+                        <ns1:TipoDocumentacion>NIF</ns1:TipoDocumentacion>\r
+                        <ns1:Documentacion>89890006A</ns1:Documentacion>\r
+                     </ns1:Titular>\r
+                     <ns1:Transmision>\r
+                        <ns1:CodigoCertificado>IRPF</ns1:CodigoCertificado>\r
+                        <ns1:IdSolicitud>${=(long)(System.currentTimeMillis())}</ns1:IdSolicitud>\r
+                        <ns1:IdTransmision>32017</ns1:IdTransmision>\r
+                     </ns1:Transmision>\r
+                  </ns1:DatosGenericos>\r
+                  <ns1:DatosEspecificos>\r
+                     <ns2:peticioConsultaIRPF xmlns:aeat="http://intermediacion.redsara.es/scsp/esquemas/datosespecificos" xmlns:ns2="http://www.aocat.net/aeat/irpf" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">\r
+                        <aeat:DatosEspecificos>\r
+                           <aeat:Ejercicio>2024</aeat:Ejercicio>\r
+                        </aeat:DatosEspecificos>\r
+                     </ns2:peticioConsultaIRPF>\r
+                  </ns1:DatosEspecificos>\r
+               </ns1:SolicitudTransmision>\r
+            </ns1:Solicitudes>\r
+         </ns1:Peticion>\r
+      </open:procesa>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:assertion type="SOAP Response" id="1c7555af-bbba-435a-b18c-e5f8ad74c6e6" name="SOAP Response"/><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://www.openuri.org/procesa"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:testStep type="request" id="c62ba19c-7859-468d-ba83-365bbdaa934d" name="VO - RJCU_UNIVERSITATS - WSS"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>SincronSoap</con:interface><con:operation>procesa</con:operation><con:request name="VO - RJCU_UNIVERSITATS - WSS" outgoingWss="CERT_PROVES" incomingWss="" timeout="" sslKeystore="" useWsAddressing="false" useWsReliableMessaging="false" wssPasswordType="" id="b8102efb-d443-4dfc-b817-02e7693fa0e0"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>https://serveis3-pre.iop.aoc.cat:443/siri-proxy/services/Sincron</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:open="http://www.openuri.org/" xmlns:pet="http://gencat.net/scsp/esquemes/peticion" xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/">\r
+   <soapenv:Header/>\r
+   <soapenv:Body wsu:Id="id-2FCB69B934F938128B162694603391719" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd">\r
+      <open:procesa>\r
+         <ns1:Peticion xmlns:ns1="http://gencat.net/scsp/esquemes/peticion">\r
+            <ns1:Atributos>\r
+               <ns1:IdPeticion>9821920002-MEPSYD_RJCU_UNIVERSITATS_${=(long)(System.currentTimeMillis())}</ns1:IdPeticion>\r
+               <ns1:NumElementos>1</ns1:NumElementos>\r
+               <ns1:TimeStamp>2018-07-05 09:28:22.28</ns1:TimeStamp>\r
+               <ns1:Estado/>\r
+               <ns1:CodigoCertificado>RJCU_UNIVERSITATS</ns1:CodigoCertificado>\r
+               <ns1:CodigoProducto>MEPSYD</ns1:CodigoProducto>\r
+               <ns1:DatosAutorizacion>\r
+                  <ns1:IdentificadorSolicitante>${Properties#IdentificadorSolicitante}</ns1:IdentificadorSolicitante>\r
+                  <ns1:NombreSolicitante>Ajuntament</ns1:NombreSolicitante>\r
+                  <ns1:Finalidad>9821920002_PROVES</ns1:Finalidad>\r
+               </ns1:DatosAutorizacion>\r
+               <ns1:Emisor>\r
+                  <ns1:NifEmisor>Q0801175A</ns1:NifEmisor>\r
+                  <ns1:NombreEmisor>CAOC</ns1:NombreEmisor>\r
+               </ns1:Emisor>\r
+               <ns1:Funcionario>\r
+                  <ns1:NombreCompletoFuncionario>${Properties#NombreCompletoFuncionario}</ns1:NombreCompletoFuncionario>\r
+                  <ns1:NifFuncionario>${Properties#NIFFuncionario}</ns1:NifFuncionario>\r
+               </ns1:Funcionario>\r
+            </ns1:Atributos>\r
+            <ns1:Solicitudes>\r
+               <ns1:SolicitudTransmision>\r
+                  <ns1:DatosGenericos>\r
+                     <ns1:Emisor>\r
+                        <ns1:NifEmisor>Q0801175A</ns1:NifEmisor>\r
+                        <ns1:NombreEmisor>CAOC</ns1:NombreEmisor>\r
+                     </ns1:Emisor>\r
+                     <ns1:Solicitante>\r
+                        <ns1:IdentificadorSolicitante>${Properties#IdentificadorSolicitante}</ns1:IdentificadorSolicitante>\r
+                        <ns1:NombreSolicitante>Ajuntament</ns1:NombreSolicitante>\r
+                        <ns1:Finalidad>9821920002_PROVES</ns1:Finalidad>\r
+                        <ns1:Consentimiento>Ley</ns1:Consentimiento>\r
+                        <ns1:Funcionario>\r
+                           <ns1:NombreCompletoFuncionario>${Properties#NombreCompletoFuncionario}</ns1:NombreCompletoFuncionario>\r
+                           <ns1:NifFuncionario>${Properties#NIFFuncionario}</ns1:NifFuncionario>\r
+                        </ns1:Funcionario>\r
+                     </ns1:Solicitante>\r
+                     <!--<ns1:Titular>
+                        <ns1:TipoDocumentacion>NIE</ns1:TipoDocumentacion>
+                        <ns1:Documentacion>Y0000000Z</ns1:Documentacion>
+                        <ns1:Apellido1>BLANCO</ns1:Apellido1>
+                     </ns1:Titular>-->\r
+                     <ns1:Transmision>\r
+                        <ns1:CodigoCertificado>RJCU_UNIVERSITATS</ns1:CodigoCertificado>\r
+                        <ns1:IdSolicitud>${=(long)(System.currentTimeMillis())}</ns1:IdSolicitud>\r
+                        <ns1:IdTransmision>32017</ns1:IdTransmision>\r
+                     </ns1:Transmision>\r
+                  </ns1:DatosGenericos>\r
+                  <ns1:DatosEspecificos>\r
+                     <ns3:peticioConsultaUniversitats xmlns="http://www.aoc.cat/titulacions/rjcu" xmlns:ns3="http://www.aoc.cat/titulacions/rjcu" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">\r
+                        <ns3:dataInici>2020-01-01</ns3:dataInici>\r
+                     </ns3:peticioConsultaUniversitats>\r
+                  </ns1:DatosEspecificos>\r
+               </ns1:SolicitudTransmision>\r
+            </ns1:Solicitudes>\r
+         </ns1:Peticion>\r
+      </open:procesa>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:assertion type="SOAP Response" id="1c7555af-bbba-435a-b18c-e5f8ad74c6e6" name="SOAP Response"/><con:credentials><con:selectedAuthProfile>Basic</con:selectedAuthProfile><con:addedBasicAuthenticationTypes>Basic</con:addedBasicAuthenticationTypes><con:preemptive>true</con:preemptive><con:authType>Preemptive</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://www.openuri.org/procesa"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:testStep type="request" id="1f0ccf84-90ef-4b10-a7a7-a59e9abbd08e" name="VO - RJCU_CENTRES - WSS"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>SincronSoap</con:interface><con:operation>procesa</con:operation><con:request name="VO - RJCU_CENTRES - WSS" outgoingWss="CERT_PROVES" incomingWss="" timeout="" sslKeystore="" useWsAddressing="false" useWsReliableMessaging="false" wssPasswordType="" id="b8102efb-d443-4dfc-b817-02e7693fa0e0"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>https://serveis3-pre.iop.aoc.cat:443/siri-proxy/services/Sincron</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:open="http://www.openuri.org/" xmlns:pet="http://gencat.net/scsp/esquemes/peticion" xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/">\r
+   <soapenv:Header/>\r
+   <soapenv:Body wsu:Id="id-2FCB69B934F938128B162694603391719" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd">\r
+      <open:procesa>\r
+         <ns1:Peticion xmlns:ns1="http://gencat.net/scsp/esquemes/peticion">\r
+            <ns1:Atributos>\r
+               <ns1:IdPeticion>9821920002-MEPSYD_RJCU_TITOLS_${=(long)(System.currentTimeMillis())}</ns1:IdPeticion>\r
+               <ns1:NumElementos>1</ns1:NumElementos>\r
+               <ns1:TimeStamp>2018-07-05 09:28:22.28</ns1:TimeStamp>\r
+               <ns1:Estado/>\r
+               <ns1:CodigoCertificado>RJCU_TITOLS</ns1:CodigoCertificado>\r
+               <ns1:CodigoProducto>MEPSYD</ns1:CodigoProducto>\r
+               <ns1:DatosAutorizacion>\r
+                  <ns1:IdentificadorSolicitante>${Properties#IdentificadorSolicitante}</ns1:IdentificadorSolicitante>\r
+                  <ns1:NombreSolicitante>Ajuntament</ns1:NombreSolicitante>\r
+                  <ns1:Finalidad>9821920002_PROVES</ns1:Finalidad>\r
+               </ns1:DatosAutorizacion>\r
+               <ns1:Emisor>\r
+                  <ns1:NifEmisor>Q0801175A</ns1:NifEmisor>\r
+                  <ns1:NombreEmisor>CAOC</ns1:NombreEmisor>\r
+               </ns1:Emisor>\r
+               <ns1:Funcionario>\r
+                  <ns1:NombreCompletoFuncionario>${Properties#NombreCompletoFuncionario}</ns1:NombreCompletoFuncionario>\r
+                  <ns1:NifFuncionario>${Properties#NIFFuncionario}</ns1:NifFuncionario>\r
+               </ns1:Funcionario>\r
+            </ns1:Atributos>\r
+            <ns1:Solicitudes>\r
+               <ns1:SolicitudTransmision>\r
+                  <ns1:DatosGenericos>\r
+                     <ns1:Emisor>\r
+                        <ns1:NifEmisor>Q0801175A</ns1:NifEmisor>\r
+                        <ns1:NombreEmisor>CAOC</ns1:NombreEmisor>\r
+                     </ns1:Emisor>\r
+                     <ns1:Solicitante>\r
+                        <ns1:IdentificadorSolicitante>${Properties#IdentificadorSolicitante}</ns1:IdentificadorSolicitante>\r
+                        <ns1:NombreSolicitante>Ajuntament</ns1:NombreSolicitante>\r
+                        <ns1:Finalidad>9821920002_PROVES</ns1:Finalidad>\r
+                        <ns1:Consentimiento>Ley</ns1:Consentimiento>\r
+                        <ns1:Funcionario>\r
+                           <ns1:NombreCompletoFuncionario>${Properties#NombreCompletoFuncionario}</ns1:NombreCompletoFuncionario>\r
+                           <ns1:NifFuncionario>${Properties#NIFFuncionario}</ns1:NifFuncionario>\r
+                        </ns1:Funcionario>\r
+                     </ns1:Solicitante>\r
+                     <!--<ns1:Titular>
+                        <ns1:TipoDocumentacion>NIE</ns1:TipoDocumentacion>
+                        <ns1:Documentacion>Y0000000Z</ns1:Documentacion>
+                        <ns1:Apellido1>BLANCO</ns1:Apellido1>
+                     </ns1:Titular>-->\r
+                     <ns1:Transmision>\r
+                        <ns1:CodigoCertificado>RJCU_TITOLS</ns1:CodigoCertificado>\r
+                        <ns1:IdSolicitud>${=(long)(System.currentTimeMillis())}</ns1:IdSolicitud>\r
+                        <ns1:IdTransmision>32017</ns1:IdTransmision>\r
+                     </ns1:Transmision>\r
+                  </ns1:DatosGenericos>\r
+                  <ns1:DatosEspecificos>\r
+                     <ns3:peticioConsultaTitolsUniversitaris xmlns="http://www.aoc.cat/titulacions/rjcu" xmlns:ns3="http://www.aoc.cat/titulacions/rjcu" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">\r
+                        <ns3:codiComunitatAutonoma>09</ns3:codiComunitatAutonoma>\r
+                     </ns3:peticioConsultaTitolsUniversitaris>\r
+                  </ns1:DatosEspecificos>\r
+               </ns1:SolicitudTransmision>\r
+            </ns1:Solicitudes>\r
+         </ns1:Peticion>\r
+      </open:procesa>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:assertion type="SOAP Response" id="1c7555af-bbba-435a-b18c-e5f8ad74c6e6" name="SOAP Response"/><con:credentials><con:selectedAuthProfile>Basic</con:selectedAuthProfile><con:addedBasicAuthenticationTypes>Basic</con:addedBasicAuthenticationTypes><con:preemptive>true</con:preemptive><con:authType>Preemptive</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://www.openuri.org/procesa"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:testStep type="request" id="a88bac69-8953-47dc-a741-7b8042596eaf" name="VO - RJCU_TITOLS - WSS"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>SincronSoap</con:interface><con:operation>procesa</con:operation><con:request name="VO - RJCU_TITOLS - WSS" outgoingWss="CERT_PROVES" incomingWss="" timeout="" sslKeystore="" useWsAddressing="false" useWsReliableMessaging="false" wssPasswordType="" id="b8102efb-d443-4dfc-b817-02e7693fa0e0"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>https://serveis3-pre.iop.aoc.cat:443/siri-proxy/services/Sincron</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:open="http://www.openuri.org/" xmlns:pet="http://gencat.net/scsp/esquemes/peticion" xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/">\r
+   <soapenv:Header/>\r
+   <soapenv:Body wsu:Id="id-2FCB69B934F938128B162694603391719" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd">\r
+      <open:procesa>\r
+         <ns1:Peticion xmlns:ns1="http://gencat.net/scsp/esquemes/peticion">\r
+            <ns1:Atributos>\r
+               <ns1:IdPeticion>9821920002-MEPSYD_RJCU_CENTRES_${=(long)(System.currentTimeMillis())}</ns1:IdPeticion>\r
+               <ns1:NumElementos>1</ns1:NumElementos>\r
+               <ns1:TimeStamp>2018-07-05 09:28:22.28</ns1:TimeStamp>\r
+               <ns1:Estado/>\r
+               <ns1:CodigoCertificado>RJCU_CENTRES</ns1:CodigoCertificado>\r
+               <ns1:CodigoProducto>MEPSYD</ns1:CodigoProducto>\r
+               <ns1:DatosAutorizacion>\r
+                  <ns1:IdentificadorSolicitante>${Properties#IdentificadorSolicitante}</ns1:IdentificadorSolicitante>\r
+                  <ns1:NombreSolicitante>Ajuntament</ns1:NombreSolicitante>\r
+                  <ns1:Finalidad>9821920002_PROVES</ns1:Finalidad>\r
+               </ns1:DatosAutorizacion>\r
+               <ns1:Emisor>\r
+                  <ns1:NifEmisor>Q0801175A</ns1:NifEmisor>\r
+                  <ns1:NombreEmisor>CAOC</ns1:NombreEmisor>\r
+               </ns1:Emisor>\r
+               <ns1:Funcionario>\r
+                  <ns1:NombreCompletoFuncionario>${Properties#NombreCompletoFuncionario}</ns1:NombreCompletoFuncionario>\r
+                  <ns1:NifFuncionario>${Properties#NIFFuncionario}</ns1:NifFuncionario>\r
+               </ns1:Funcionario>\r
+            </ns1:Atributos>\r
+            <ns1:Solicitudes>\r
+               <ns1:SolicitudTransmision>\r
+                  <ns1:DatosGenericos>\r
+                     <ns1:Emisor>\r
+                        <ns1:NifEmisor>Q0801175A</ns1:NifEmisor>\r
+                        <ns1:NombreEmisor>CAOC</ns1:NombreEmisor>\r
+                     </ns1:Emisor>\r
+                     <ns1:Solicitante>\r
+                        <ns1:IdentificadorSolicitante>${Properties#IdentificadorSolicitante}</ns1:IdentificadorSolicitante>\r
+                        <ns1:NombreSolicitante>Ajuntament</ns1:NombreSolicitante>\r
+                        <ns1:Finalidad>9821920002_PROVES</ns1:Finalidad>\r
+                        <ns1:Consentimiento>Ley</ns1:Consentimiento>\r
+                        <ns1:Funcionario>\r
+                           <ns1:NombreCompletoFuncionario>${Properties#NombreCompletoFuncionario}</ns1:NombreCompletoFuncionario>\r
+                           <ns1:NifFuncionario>${Properties#NIFFuncionario}</ns1:NifFuncionario>\r
+                        </ns1:Funcionario>\r
+                     </ns1:Solicitante>\r
+                     <!--<ns1:Titular>
+                        <ns1:TipoDocumentacion>NIE</ns1:TipoDocumentacion>
+                        <ns1:Documentacion>Y0000000Z</ns1:Documentacion>
+                        <ns1:Apellido1>BLANCO</ns1:Apellido1>
+                     </ns1:Titular>-->\r
+                     <ns1:Transmision>\r
+                        <ns1:CodigoCertificado>RJCU_CENTRES</ns1:CodigoCertificado>\r
+                        <ns1:IdSolicitud>${=(long)(System.currentTimeMillis())}</ns1:IdSolicitud>\r
+                        <ns1:IdTransmision>32017</ns1:IdTransmision>\r
+                     </ns1:Transmision>\r
+                  </ns1:DatosGenericos>\r
+                  <ns1:DatosEspecificos>\r
+                     <ns3:peticioConsultaCentresUniversitaris xmlns="http://www.aoc.cat/titulacions/rjcu" xmlns:ns3="http://www.aoc.cat/titulacions/rjcu" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">\r
+                        <ns3:codiUniversitat>08019</ns3:codiUniversitat>\r
+                     </ns3:peticioConsultaCentresUniversitaris>\r
+                  </ns1:DatosEspecificos>\r
+               </ns1:SolicitudTransmision>\r
+            </ns1:Solicitudes>\r
+         </ns1:Peticion>\r
+      </open:procesa>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:assertion type="SOAP Response" id="1c7555af-bbba-435a-b18c-e5f8ad74c6e6" name="SOAP Response"/><con:credentials><con:selectedAuthProfile>Basic</con:selectedAuthProfile><con:addedBasicAuthenticationTypes>Basic</con:addedBasicAuthenticationTypes><con:preemptive>true</con:preemptive><con:authType>Preemptive</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://www.openuri.org/procesa"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:testStep type="request" id="7a94916e-47b5-4d88-90b6-bb80c3e40c94" name="VO - RJCU_TITOL_DETALL - WSS"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>SincronSoap</con:interface><con:operation>procesa</con:operation><con:request name="VO - RJCU_TITOL_DETALL - WSS" outgoingWss="CERT_PROVES" incomingWss="" timeout="" sslKeystore="" useWsAddressing="false" useWsReliableMessaging="false" wssPasswordType="" id="b8102efb-d443-4dfc-b817-02e7693fa0e0"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>https://serveis3-pre.iop.aoc.cat:443/siri-proxy/services/Sincron</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:open="http://www.openuri.org/" xmlns:pet="http://gencat.net/scsp/esquemes/peticion" xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/">\r
+   <soapenv:Header/>\r
+   <soapenv:Body wsu:Id="id-2FCB69B934F938128B162694603391719" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd">\r
+      <open:procesa>\r
+         <ns1:Peticion xmlns:ns1="http://gencat.net/scsp/esquemes/peticion">\r
+            <ns1:Atributos>\r
+               <ns1:IdPeticion>9821920002-MEPSYD_RJCU_TITOL_DETALL_${=(long)(System.currentTimeMillis())}</ns1:IdPeticion>\r
+               <ns1:NumElementos>1</ns1:NumElementos>\r
+               <ns1:TimeStamp>2018-07-05 09:28:22.28</ns1:TimeStamp>\r
+               <ns1:Estado/>\r
+               <ns1:CodigoCertificado>RJCU_TITOL_DETALL</ns1:CodigoCertificado>\r
+               <ns1:CodigoProducto>MEPSYD</ns1:CodigoProducto>\r
+               <ns1:DatosAutorizacion>\r
+                  <ns1:IdentificadorSolicitante>${Properties#IdentificadorSolicitante}</ns1:IdentificadorSolicitante>\r
+                  <ns1:NombreSolicitante>Ajuntament</ns1:NombreSolicitante>\r
+                  <ns1:Finalidad>9821920002_PROVES</ns1:Finalidad>\r
+               </ns1:DatosAutorizacion>\r
+               <ns1:Emisor>\r
+                  <ns1:NifEmisor>Q0801175A</ns1:NifEmisor>\r
+                  <ns1:NombreEmisor>CAOC</ns1:NombreEmisor>\r
+               </ns1:Emisor>\r
+               <ns1:Funcionario>\r
+                  <ns1:NombreCompletoFuncionario>${Properties#NombreCompletoFuncionario}</ns1:NombreCompletoFuncionario>\r
+                  <ns1:NifFuncionario>${Properties#NIFFuncionario}</ns1:NifFuncionario>\r
+               </ns1:Funcionario>\r
+            </ns1:Atributos>\r
+            <ns1:Solicitudes>\r
+               <ns1:SolicitudTransmision>\r
+                  <ns1:DatosGenericos>\r
+                     <ns1:Emisor>\r
+                        <ns1:NifEmisor>Q0801175A</ns1:NifEmisor>\r
+                        <ns1:NombreEmisor>CAOC</ns1:NombreEmisor>\r
+                     </ns1:Emisor>\r
+                     <ns1:Solicitante>\r
+                        <ns1:IdentificadorSolicitante>${Properties#IdentificadorSolicitante}</ns1:IdentificadorSolicitante>\r
+                        <ns1:NombreSolicitante>Ajuntament</ns1:NombreSolicitante>\r
+                        <ns1:Finalidad>9821920002_PROVES</ns1:Finalidad>\r
+                        <ns1:Consentimiento>Ley</ns1:Consentimiento>\r
+                        <ns1:Funcionario>\r
+                           <ns1:NombreCompletoFuncionario>${Properties#NombreCompletoFuncionario}</ns1:NombreCompletoFuncionario>\r
+                           <ns1:NifFuncionario>${Properties#NIFFuncionario}</ns1:NifFuncionario>\r
+                        </ns1:Funcionario>\r
+                     </ns1:Solicitante>\r
+                     <!--<ns1:Titular>
+                        <ns1:TipoDocumentacion>NIE</ns1:TipoDocumentacion>
+                        <ns1:Documentacion>Y0000000Z</ns1:Documentacion>
+                        <ns1:Apellido1>BLANCO</ns1:Apellido1>
+                     </ns1:Titular>-->\r
+                     <ns1:Transmision>\r
+                        <ns1:CodigoCertificado>RJCU_TITOL_DETALL</ns1:CodigoCertificado>\r
+                        <ns1:IdSolicitud>${=(long)(System.currentTimeMillis())}</ns1:IdSolicitud>\r
+                        <ns1:IdTransmision>32017</ns1:IdTransmision>\r
+                     </ns1:Transmision>\r
+                  </ns1:DatosGenericos>\r
+                  <ns1:DatosEspecificos>\r
+                     <ns3:peticioConsultaTitolUniversitariDetall xmlns="http://www.aoc.cat/titulacions/rjcu" xmlns:ns3="http://www.aoc.cat/titulacions/rjcu" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">\r
+                        <ns3:codiUniversitat>099</ns3:codiUniversitat>\r
+                        <ns3:codiEstudi>9000164</ns3:codiEstudi>\r
+                     </ns3:peticioConsultaTitolUniversitariDetall>\r
+                  </ns1:DatosEspecificos>\r
+               </ns1:SolicitudTransmision>\r
+            </ns1:Solicitudes>\r
+         </ns1:Peticion>\r
+      </open:procesa>\r
+   </soapenv:Body>\r
 </soapenv:Envelope>]]></con:request><con:assertion type="SOAP Response" id="1c7555af-bbba-435a-b18c-e5f8ad74c6e6" name="SOAP Response"/><con:credentials><con:selectedAuthProfile>Basic</con:selectedAuthProfile><con:addedBasicAuthenticationTypes>Basic</con:addedBasicAuthenticationTypes><con:preemptive>true</con:preemptive><con:authType>Preemptive</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://www.openuri.org/procesa"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:properties/></con:testCase><con:testCase id="e11d9b51-157d-425e-b928-02273a72b32b" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="VO - Local" searchProperties="true"><con:settings/><con:testStep type="properties" name="Properties" id="c5dda397-a502-4bbc-9845-d5c726bfb489"><con:settings/><con:config xsi:type="con:PropertiesStep" saveFirst="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:properties><con:property><con:name>NombreCompletoFuncionario</con:name><con:value>PROVA PROVA PROVA</con:value></con:property><con:property><con:name>NIFFuncionario</con:name><con:value>12345678Z</con:value></con:property><con:property><con:name>IdentificadorSolicitante</con:name><con:value>9821920002</con:value></con:property><con:property><con:name>tipoDocumentacion</con:name><con:value>1</con:value></con:property><con:property><con:name>documentacion</con:name><con:value>21777952B</con:value></con:property><con:property><con:name>codigoMunicipio</con:name><con:value>019</con:value></con:property><con:property><con:name>codigoProvincia</con:name><con:value>08</con:value></con:property><con:property><con:name>idescat</con:name><con:value>0</con:value></con:property><con:property><con:name>numeroConvivientes</con:name><con:value>3</con:value></con:property></con:properties></con:config></con:testStep><con:testStep type="request" id="af3c349a-a2ce-469f-a5ba-ddd2dcb48c2b" name="VO - PADRO - CONVIVENTS - WSS"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>SincronSoap</con:interface><con:operation>procesa</con:operation><con:request name="VO - PADRO - CONVIVENTS - WSS" outgoingWss="SEG_AOC" incomingWss="" timeout="" sslKeystore="" useWsAddressing="false" useWsReliableMessaging="false" wssPasswordType="" id="b8102efb-d443-4dfc-b817-02e7693fa0e0"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>https://serveis3-pre.iop.aoc.cat:443/siri-proxy/services/Sincron</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:open="http://www.openuri.org/" xmlns:pet="http://gencat.net/scsp/esquemes/peticion">
    <soapenv:Header/>
    <soapenv:Body>
@@ -58815,8 +60373,8 @@ estimación objetiva-->
                      </ns1:Solicitante>\r
                      <ns1:Titular>\r
                         <ns1:TipoDocumentacion>CIF</ns1:TipoDocumentacion>\r
-                        <ns1:Documentacion>A83717355</ns1:Documentacion>\r
-                        <ns1:NombreCompleto>PELUQUERIA MERCADO AVILA SA</ns1:NombreCompleto>\r
+                        <ns1:Documentacion>B85364222</ns1:Documentacion>\r
+                      <!--  <ns1:NombreCompleto>PELUQUERIA MERCADO AVILA SA</ns1:NombreCompleto>\r -->
                      </ns1:Titular>\r
                      <ns1:Transmision>\r
                         <ns1:CodigoCertificado>INFO_MERCANTIL</ns1:CodigoCertificado>\r
@@ -59308,4 +60866,136 @@ if (keyStoreUrl.trim().length() > 0) {
   }else{
   	log.error "$keyStoreUrl NO EXISTEIX"
   }
-}</script></con:config></con:testStep><con:properties/></con:testCase><con:properties/></con:testSuite><con:properties/><con:wssContainer/><con:oAuth2ProfileContainer/><con:oAuth1ProfileContainer/><con:sensitiveInformation/></con:soapui-project>
+}</script></con:config></con:testStep><con:properties/></con:testCase><con:testCase id="031bb895-96e5-4d3c-87af-6df2629781a0" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="VO - METASERVEIS" searchProperties="true"><con:settings/><con:testStep type="properties" name="Properties" id="0648faf8-d39c-49a6-88f0-a3e70b842384"><con:settings/><con:config xsi:type="con:PropertiesStep" saveFirst="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:properties><con:property><con:name>NombreCompletoFuncionario</con:name><con:value>PROVA PROVA PROVA</con:value></con:property><con:property><con:name>NIFFuncionario</con:name><con:value>12345678Z</con:value></con:property><con:property><con:name>IdentificadorSolicitante</con:name><con:value>9821920002</con:value></con:property></con:properties></con:config></con:testStep><con:testStep type="request" id="e05cd807-32f5-4452-b320-b15c04cbe494" name="VO - CONTRACTACIO - WSS"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>SincronSoap</con:interface><con:operation>procesa</con:operation><con:request name="VO - CONTRACTACIO - WSS" outgoingWss="CERT_PROVES" incomingWss="" timeout="" sslKeystore="" useWsAddressing="false" useWsReliableMessaging="false" wssPasswordType="" id="b8102efb-d443-4dfc-b817-02e7693fa0e0"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>https://serveis3-pre.iop.aoc.cat:443/siri-proxy/services/Sincron</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:open="http://www.openuri.org/" xmlns:pet="http://gencat.net/scsp/esquemes/peticion" xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/">\r
+   <soapenv:Header/>\r
+   <soapenv:Body wsu:Id="id-2FCB69B934F938128B162694603391719" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd">\r
+      <open:procesa>\r
+         <ns1:Peticion xmlns:ns1="http://gencat.net/scsp/esquemes/peticion">\r
+            <ns1:Atributos>\r
+               <ns1:IdPeticion>9821920002-CONTRACTACIO-${=(long)(System.currentTimeMillis())}</ns1:IdPeticion>\r
+               <ns1:NumElementos>1</ns1:NumElementos>\r
+               <ns1:TimeStamp>2018-07-05 09:28:22.28</ns1:TimeStamp>\r
+               <ns1:Estado/>\r
+               <ns1:CodigoCertificado>CONTRACTACIO</ns1:CodigoCertificado>\r
+               <ns1:CodigoProducto>CONTRACTACIO</ns1:CodigoProducto>\r
+               <ns1:DatosAutorizacion>\r
+                  <ns1:IdentificadorSolicitante>${Properties#IdentificadorSolicitante}</ns1:IdentificadorSolicitante>\r
+                  <ns1:NombreSolicitante>Ajuntament</ns1:NombreSolicitante>\r
+                  <ns1:Finalidad>PROVES</ns1:Finalidad>\r
+               </ns1:DatosAutorizacion>\r
+               <ns1:Emisor>\r
+                  <ns1:NifEmisor>Q0801175A</ns1:NifEmisor>\r
+                  <ns1:NombreEmisor>CAOC</ns1:NombreEmisor>\r
+               </ns1:Emisor>\r
+               <ns1:Funcionario>\r
+                  <ns1:NombreCompletoFuncionario>${Properties#NombreCompletoFuncionario}</ns1:NombreCompletoFuncionario>\r
+                  <ns1:NifFuncionario>${Properties#NIFFuncionario}</ns1:NifFuncionario>\r
+               </ns1:Funcionario>\r
+            </ns1:Atributos>\r
+            <ns1:Solicitudes>\r
+               <ns1:SolicitudTransmision>\r
+                  <ns1:DatosGenericos>\r
+                     <ns1:Emisor>\r
+                        <ns1:NifEmisor>Q0801175A</ns1:NifEmisor>\r
+                        <ns1:NombreEmisor>CAOC</ns1:NombreEmisor>\r
+                     </ns1:Emisor>\r
+                     <ns1:Solicitante>\r
+                        <ns1:IdentificadorSolicitante>${Properties#IdentificadorSolicitante}</ns1:IdentificadorSolicitante>\r
+                        <ns1:NombreSolicitante>Ajuntament</ns1:NombreSolicitante>\r
+                        <ns1:Finalidad>PROVES</ns1:Finalidad>\r
+                        <ns1:Consentimiento>Ley</ns1:Consentimiento>\r
+                        <ns1:Funcionario>\r
+                           <ns1:NombreCompletoFuncionario>${Properties#NombreCompletoFuncionario}</ns1:NombreCompletoFuncionario>\r
+                           <ns1:NifFuncionario>${Properties#NIFFuncionario}</ns1:NifFuncionario>\r
+                        </ns1:Funcionario>\r
+                     </ns1:Solicitante>\r
+                     <ns1:Titular>\r
+                        <ns1:TipoDocumentacion>NIF</ns1:TipoDocumentacion>\r
+                        <ns1:Documentacion>80000003T</ns1:Documentacion>\r
+                        <ns1:NombreCompleto>NOMBRE APELLIDO1 APELLIDO2</ns1:NombreCompleto>
+                        <ns1:Nombre>NOMBRE</ns1:Nombre>
+                        <ns1:Apellido1>APELLIDO1</ns1:Apellido1>
+                        <ns1:Apellido2>APELLIDO2</ns1:Apellido2>
+                     </ns1:Titular>\r
+                     <ns1:Transmision>\r
+                        <ns1:CodigoCertificado>CONTRACTACIO</ns1:CodigoCertificado>\r
+                        <ns1:IdSolicitud>${=(long)(System.currentTimeMillis())}</ns1:IdSolicitud>\r
+                        <ns1:IdTransmision>EXPEDIENT</ns1:IdTransmision>\r
+                     </ns1:Transmision>\r
+                  </ns1:DatosGenericos>\r
+                  <ns1:DatosEspecificos>\r
+                     <peticioConsultaCertificat xmlns="http://www.aoc.cat/actic">\r
+                        <nivell>1</nivell>\r
+                     </peticioConsultaCertificat>\r
+                  </ns1:DatosEspecificos>\r
+               </ns1:SolicitudTransmision>\r
+            </ns1:Solicitudes>\r
+         </ns1:Peticion>\r
+      </open:procesa>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:assertion type="SOAP Response" id="1c7555af-bbba-435a-b18c-e5f8ad74c6e6" name="SOAP Response"/><con:credentials><con:selectedAuthProfile>Basic</con:selectedAuthProfile><con:addedBasicAuthenticationTypes>Basic</con:addedBasicAuthenticationTypes><con:preemptive>true</con:preemptive><con:authType>Preemptive</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://www.openuri.org/procesa"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:testStep type="request" id="f11d2e32-d9cf-4736-a260-e49fdbe089ad" name="VO - IVTM - WSS"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>SincronSoap</con:interface><con:operation>procesa</con:operation><con:request name="VO - IVTM - WSS" outgoingWss="CERT_PROVES" incomingWss="" timeout="" sslKeystore="" useWsAddressing="false" useWsReliableMessaging="false" wssPasswordType="" id="b8102efb-d443-4dfc-b817-02e7693fa0e0"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>https://serveis3-pre.iop.aoc.cat:443/siri-proxy/services/Sincron</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:open="http://www.openuri.org/" xmlns:pet="http://gencat.net/scsp/esquemes/peticion" xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/">\r
+   <soapenv:Header/>\r
+   <soapenv:Body wsu:Id="id-2FCB69B934F938128B162694603391719" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd">\r
+      <open:procesa>\r
+         <ns1:Peticion xmlns:ns1="http://gencat.net/scsp/esquemes/peticion">\r
+            <ns1:Atributos>\r
+               <ns1:IdPeticion>9821920002-IVTMSEU-${=(long)(System.currentTimeMillis())}</ns1:IdPeticion>\r
+               <ns1:NumElementos>1</ns1:NumElementos>\r
+               <ns1:TimeStamp>2018-07-05 09:28:22.28</ns1:TimeStamp>\r
+               <ns1:Estado/>\r
+               <ns1:CodigoCertificado>IVTM</ns1:CodigoCertificado>\r
+               <ns1:CodigoProducto>IVTM</ns1:CodigoProducto>\r
+               <ns1:DatosAutorizacion>\r
+                  <ns1:IdentificadorSolicitante>${Properties#IdentificadorSolicitante}</ns1:IdentificadorSolicitante>\r
+                  <ns1:NombreSolicitante>Ajuntament</ns1:NombreSolicitante>\r
+                  <ns1:Finalidad>PROVES</ns1:Finalidad>\r
+               </ns1:DatosAutorizacion>\r
+               <ns1:Emisor>\r
+                  <ns1:NifEmisor>Q0801175A</ns1:NifEmisor>\r
+                  <ns1:NombreEmisor>CAOC</ns1:NombreEmisor>\r
+               </ns1:Emisor>\r
+               <ns1:Funcionario>\r
+                  <ns1:NombreCompletoFuncionario>${Properties#NombreCompletoFuncionario}</ns1:NombreCompletoFuncionario>\r
+                  <ns1:NifFuncionario>${Properties#NIFFuncionario}</ns1:NifFuncionario>\r
+               </ns1:Funcionario>\r
+            </ns1:Atributos>\r
+            <ns1:Solicitudes>\r
+               <ns1:SolicitudTransmision>\r
+                  <ns1:DatosGenericos>\r
+                     <ns1:Emisor>\r
+                        <ns1:NifEmisor>Q0801175A</ns1:NifEmisor>\r
+                        <ns1:NombreEmisor>CAOC</ns1:NombreEmisor>\r
+                     </ns1:Emisor>\r
+                     <ns1:Solicitante>\r
+                        <ns1:IdentificadorSolicitante>${Properties#IdentificadorSolicitante}</ns1:IdentificadorSolicitante>\r
+                        <ns1:NombreSolicitante>Ajuntament</ns1:NombreSolicitante>\r
+                        <ns1:Finalidad>PROVES</ns1:Finalidad>\r
+                        <ns1:Consentimiento>Ley</ns1:Consentimiento>\r
+                        <ns1:Funcionario>\r
+                           <ns1:NombreCompletoFuncionario>${Properties#NombreCompletoFuncionario}</ns1:NombreCompletoFuncionario>\r
+                           <ns1:NifFuncionario>${Properties#NIFFuncionario}</ns1:NifFuncionario>\r
+                        </ns1:Funcionario>\r
+                     </ns1:Solicitante>\r
+                     <ns1:Titular>\r
+                        <ns1:TipoDocumentacion>NIF</ns1:TipoDocumentacion>\r
+                        <ns1:Documentacion>80000003T</ns1:Documentacion>\r
+                        <ns1:Apellido1>APELLIDO1</ns1:Apellido1>
+                     </ns1:Titular>\r
+                     <ns1:Transmision>\r
+                        <ns1:CodigoCertificado>IVTM</ns1:CodigoCertificado>\r
+                        <ns1:IdSolicitud>${=(long)(System.currentTimeMillis())}</ns1:IdSolicitud>\r
+                        <ns1:IdTransmision>EXPEDIENT</ns1:IdTransmision>\r
+                     </ns1:Transmision>\r
+                  </ns1:DatosGenericos>\r
+                  <ns1:DatosEspecificos>
+                     <ns1:peticioExempcioIVTM xmlns:ns1="http://www.aoc.cat/dgt" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+                        <ns1:numeroSuport>AAA123456</ns1:numeroSuport>
+                        <ns1:matricula>AB1234D</ns1:matricula>
+                     </ns1:peticioExempcioIVTM>
+                  </ns1:DatosEspecificos>                 
+               </ns1:SolicitudTransmision>\r
+            </ns1:Solicitudes>\r
+         </ns1:Peticion>\r
+      </open:procesa>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:assertion type="SOAP Response" id="1c7555af-bbba-435a-b18c-e5f8ad74c6e6" name="SOAP Response"/><con:credentials><con:selectedAuthProfile>Basic</con:selectedAuthProfile><con:addedBasicAuthenticationTypes>Basic</con:addedBasicAuthenticationTypes><con:preemptive>true</con:preemptive><con:authType>Preemptive</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://www.openuri.org/procesa"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:properties/></con:testCase><con:properties/></con:testSuite><con:properties/><con:wssContainer/><con:oAuth2ProfileContainer/><con:oAuth1ProfileContainer/><con:sensitiveInformation/></con:soapui-project>
