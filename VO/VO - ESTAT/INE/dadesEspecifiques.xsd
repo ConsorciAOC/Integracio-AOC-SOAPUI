@@ -1,0 +1,579 @@
+<?xml version="1.0"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="http://www.aoc.cat/ine" targetNamespace="http://www.aoc.cat/ine" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<!-- ======================================================= -->
+	<!-- HISTORIC_RESIDENCIA_CONVIVENTS_SECOPA                   -->
+	<!-- ======================================================= -->
+	<xs:element name="peticioConsultaHistoricResidenciaConvivents">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="residencia" minOccurs="0"/>
+				<xs:element ref="naixement" minOccurs="0"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="respostaConsultaHistoricResidenciaConvivents">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="peticioConsultaHistoricResidenciaConvivents" minOccurs="0"/>
+				<xs:element name="resposta" minOccurs="0">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="domicilis">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element ref="domicili" maxOccurs="unbounded"/>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+							<xs:element ref="origenDades" minOccurs="0"/>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element ref="resultat"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<!-- ======================================================= -->
+	<!-- HISTORIC_MUNICIPIS_RESIDENCIA_SECOPA                    -->
+	<!-- ======================================================= -->
+	<xs:element name="peticioConsultaHistoricMunicipisResidencia">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="dataFi" type="xs:date" minOccurs="0"/>
+				<xs:element ref="residencia" minOccurs="0"/>
+				<xs:element ref="naixement" minOccurs="0"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="respostaConsultaHistoricMunicipisResidencia">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="peticioConsultaHistoricMunicipisResidencia" minOccurs="0"/>
+				<xs:element name="resposta" minOccurs="0">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="municipis">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element name="municipi" maxOccurs="unbounded">
+											<xs:complexType>
+												<xs:sequence>
+													<xs:element ref="provincia"/>
+													<xs:element ref="municipi"/>
+													<xs:element name="dataInici" type="xs:date"/>
+													<xs:element name="dataFi" type="xs:date" minOccurs="0"/>
+												</xs:sequence>
+											</xs:complexType>
+										</xs:element>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element ref="resultat"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="residencia">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="provincia" type="tCodiProvincia"/>
+				<xs:element name="municipi" type="tCodiMunicipi" minOccurs="0"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="naixement">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="data" type="xs:date" minOccurs="0"/>
+				<xs:choice minOccurs="0">
+					<xs:element name="pais" type="tCodiPais"/>
+					<xs:sequence>
+						<xs:element name="provincia" type="tCodiProvincia"/>
+						<xs:element name="municipi" type="tCodiMunicipi" minOccurs="0"/>
+					</xs:sequence>
+				</xs:choice>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="domicili">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="dataInici" type="xs:date"/>
+				<xs:element name="dataFi" type="xs:date" minOccurs="0"/>
+				<xs:element ref="titular" minOccurs="0"/>
+				<xs:element ref="darreraVariacio" minOccurs="0"/>
+				<xs:element ref="codiPostal"/>
+				<xs:element ref="localitat"/>
+				<xs:element ref="adreca"/>
+				<xs:element ref="numeroConvivents"/>
+				<xs:element ref="convivents" minOccurs="0"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="titular">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="tipusDocumentacio" minOccurs="0"/>
+				<xs:element ref="documentacio" minOccurs="0"/>
+				<xs:element ref="nom"/>
+				<xs:element ref="primerCognom"/>
+				<xs:element ref="segonCognom" minOccurs="0"/>
+				<xs:element name="dataNaixement" type="xs:date" minOccurs="0"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="localitat">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="provincia"/>
+				<xs:element ref="municipi"/>
+				<xs:element ref="codiUnitatPoblacional"/>
+				<xs:element ref="entitatCollectiva"/>
+				<xs:element ref="entitatSingular"/>
+				<xs:element ref="nucli"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="provincia">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="codi" type="tCodiProvincia"/>
+				<xs:element name="nom">
+					<xs:simpleType>
+						<xs:restriction base="xs:string">
+							<xs:minLength value="1"/>
+							<xs:maxLength value="70"/>
+						</xs:restriction>
+					</xs:simpleType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="municipi">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="codi" type="tCodiMunicipi"/>
+				<xs:element name="nom">
+					<xs:simpleType>
+						<xs:restriction base="xs:string">
+							<xs:minLength value="1"/>
+							<xs:maxLength value="70"/>
+						</xs:restriction>
+					</xs:simpleType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="codiUnitatPoblacional">
+		<xs:simpleType>
+			<xs:restriction base="xs:string">
+				<xs:whiteSpace value="collapse"/>
+				<xs:pattern value="\d{7}"/>
+			</xs:restriction>
+		</xs:simpleType>
+	</xs:element>
+	<xs:element name="entitatCollectiva">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="codi" type="tCodiUP"/>
+				<xs:element name="nom" type="tNomUP" minOccurs="0"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="entitatSingular">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="codi" type="tCodiUP"/>
+				<xs:element name="nom" type="tNomUP"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="nucli">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="codi" type="tCodiUP"/>
+				<xs:element name="nom" type="tNomUP"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="adreca">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="via" minOccurs="0"/>
+				<xs:element ref="numeracio"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="via">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="codi" minOccurs="0">
+					<xs:simpleType>
+						<xs:restriction base="xs:integer">
+							<xs:minInclusive value="0"/>
+							<xs:maxInclusive value="99999"/>
+						</xs:restriction>
+					</xs:simpleType>
+				</xs:element>
+				<xs:element name="tipus" minOccurs="0">
+					<xs:simpleType>
+						<xs:restriction base="xs:string">
+							<xs:minLength value="1"/>
+							<xs:maxLength value="5"/>
+							<xs:whiteSpace value="collapse"/>
+						</xs:restriction>
+					</xs:simpleType>
+				</xs:element>
+				<xs:element name="nom" minOccurs="0">
+					<xs:simpleType>
+						<xs:restriction base="xs:string">
+							<xs:minLength value="1"/>
+							<xs:maxLength value="70"/>
+							<xs:whiteSpace value="collapse"/>
+						</xs:restriction>
+					</xs:simpleType>
+				</xs:element>
+				<xs:element name="pseudovia" minOccurs="0">
+					<xs:simpleType>
+						<xs:restriction base="xs:string">
+							<xs:minLength value="1"/>
+							<xs:maxLength value="50"/>
+							<xs:whiteSpace value="collapse"/>
+						</xs:restriction>
+					</xs:simpleType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="numeracio">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="numero" minOccurs="0">
+					<xs:simpleType>
+						<xs:restriction base="xs:string">
+							<xs:minLength value="1"/>
+							<xs:maxLength value="4"/>
+						</xs:restriction>
+					</xs:simpleType>
+				</xs:element>
+				<xs:element name="qualificadorNumero" minOccurs="0">
+					<xs:simpleType>
+						<xs:restriction base="xs:string">
+							<xs:length value="1"/>
+						</xs:restriction>
+					</xs:simpleType>
+				</xs:element>
+				<xs:element name="numeroSuperior" minOccurs="0">
+					<xs:simpleType>
+						<xs:restriction base="xs:string">
+							<xs:minLength value="1"/>
+							<xs:maxLength value="4"/>
+						</xs:restriction>
+					</xs:simpleType>
+				</xs:element>
+				<xs:element name="qualificadorNumeroSuperior" minOccurs="0">
+					<xs:simpleType>
+						<xs:restriction base="xs:string">
+							<xs:length value="1"/>
+						</xs:restriction>
+					</xs:simpleType>
+				</xs:element>
+				<xs:element name="quilometre" minOccurs="0">
+					<xs:simpleType>
+						<xs:restriction base="xs:integer">
+							<xs:totalDigits value="3"/>
+						</xs:restriction>
+					</xs:simpleType>
+				</xs:element>
+				<xs:element name="hectometre" minOccurs="0">
+					<xs:simpleType>
+						<xs:restriction base="xs:integer">
+							<xs:totalDigits value="1"/>
+						</xs:restriction>
+					</xs:simpleType>
+				</xs:element>
+				<xs:element name="bloc" minOccurs="0">
+					<xs:simpleType>
+						<xs:restriction base="xs:string">
+							<xs:minLength value="1"/>
+							<xs:maxLength value="2"/>
+						</xs:restriction>
+					</xs:simpleType>
+				</xs:element>
+				<xs:element name="portal" minOccurs="0">
+					<xs:simpleType>
+						<xs:restriction base="xs:string">
+							<xs:minLength value="1"/>
+							<xs:maxLength value="2"/>
+						</xs:restriction>
+					</xs:simpleType>
+				</xs:element>
+				<xs:element name="escala" minOccurs="0">
+					<xs:simpleType>
+						<xs:restriction base="xs:string">
+							<xs:minLength value="1"/>
+							<xs:maxLength value="2"/>
+						</xs:restriction>
+					</xs:simpleType>
+				</xs:element>
+				<xs:element name="planta" minOccurs="0">
+					<xs:simpleType>
+						<xs:restriction base="xs:string">
+							<xs:minLength value="1"/>
+							<xs:maxLength value="3"/>
+						</xs:restriction>
+					</xs:simpleType>
+				</xs:element>
+				<xs:element name="porta" minOccurs="0">
+					<xs:simpleType>
+						<xs:restriction base="xs:string">
+							<xs:minLength value="1"/>
+							<xs:maxLength value="4"/>
+						</xs:restriction>
+					</xs:simpleType>
+				</xs:element>
+				<xs:element name="tipusLocal" minOccurs="0">
+					<xs:simpleType>
+						<xs:restriction base="xs:integer">
+							<xs:minInclusive value="1"/>
+							<xs:maxInclusive value="2"/>
+						</xs:restriction>
+					</xs:simpleType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="darreraVariacio">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="codi" minOccurs="0">
+					<xs:simpleType>
+						<xs:restriction base="xs:string">
+							<xs:length value="3"/>
+						</xs:restriction>
+					</xs:simpleType>
+				</xs:element>
+				<xs:element name="descripcio">
+					<xs:simpleType>
+						<xs:restriction base="xs:string">
+							<xs:minLength value="1"/>
+							<xs:maxLength value="250"/>
+						</xs:restriction>
+					</xs:simpleType>
+				</xs:element>
+				<xs:element name="data" type="xs:date"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="convivents">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="convivent" maxOccurs="unbounded"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="convivent">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="tipusDocumentacio" minOccurs="0"/>
+				<xs:element ref="documentacio" minOccurs="0"/>
+				<xs:element ref="nom" minOccurs="0"/>
+				<xs:element ref="primerCognom" minOccurs="0"/>
+				<xs:element ref="segonCognom" minOccurs="0"/>
+				<xs:element name="dataNaixement" type="xs:date" minOccurs="0"/>
+				<xs:element name="dataInici" type="xs:date"/>
+				<xs:element name="dataFi" type="xs:date" minOccurs="0"/>
+				<xs:element ref="darreraVariacio" minOccurs="0"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="codiPostal">
+		<xs:simpleType>
+			<xs:restriction base="xs:string">
+				<xs:whiteSpace value="collapse"/>
+				<xs:pattern value="\d{5}"/>
+			</xs:restriction>
+		</xs:simpleType>
+	</xs:element>
+	<xs:element name="numeroConvivents">
+		<xs:simpleType>
+			<xs:restriction base="xs:integer">
+				<xs:totalDigits value="3"/>
+			</xs:restriction>
+		</xs:simpleType>
+	</xs:element>
+	<xs:element name="tipusDocumentacio">
+		<xs:simpleType>
+			<xs:restriction base="xs:string">
+				<xs:enumeration value="DNI"/>
+				<xs:enumeration value="NIE"/>
+				<xs:enumeration value="Pasaporte"/>
+			</xs:restriction>
+		</xs:simpleType>
+	</xs:element>
+	<xs:element name="documentacio">
+		<xs:simpleType>
+			<xs:restriction base="xs:string">
+				<xs:minLength value="1"/>
+				<xs:maxLength value="30"/>
+				<xs:whiteSpace value="collapse"/>
+			</xs:restriction>
+		</xs:simpleType>
+	</xs:element>
+	<xs:element name="nom">
+		<xs:simpleType>
+			<xs:restriction base="xs:string">
+				<xs:minLength value="1"/>
+				<xs:maxLength value="50"/>
+				<xs:whiteSpace value="collapse"/>
+			</xs:restriction>
+		</xs:simpleType>
+	</xs:element>
+	<xs:element name="primerCognom">
+		<xs:simpleType>
+			<xs:restriction base="xs:string">
+				<xs:minLength value="1"/>
+				<xs:maxLength value="50"/>
+				<xs:whiteSpace value="collapse"/>
+			</xs:restriction>
+		</xs:simpleType>
+	</xs:element>
+	<xs:element name="segonCognom">
+		<xs:simpleType>
+			<xs:restriction base="xs:string">
+				<xs:minLength value="1"/>
+				<xs:maxLength value="50"/>
+				<xs:whiteSpace value="collapse"/>
+			</xs:restriction>
+		</xs:simpleType>
+	</xs:element>
+	<xs:element name="origenDades">
+		<xs:complexType>
+			<xs:all>
+				<xs:element name="provincia" type="tCodiProvincia"/>
+				<xs:element name="municipi" type="tCodiMunicipi"/>
+			</xs:all>
+		</xs:complexType>
+	</xs:element>
+	<xs:simpleType name="tCodiProvincia">
+		<xs:restriction base="xs:string">
+			<xs:pattern value="\d{2}"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="tCodiMunicipi">
+		<xs:restriction base="xs:string">
+			<xs:pattern value="\d{3}"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="tCodiPais">
+		<xs:restriction base="xs:string">
+			<xs:pattern value="\d{3}"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="tCodiUP">
+		<xs:restriction base="xs:string">
+			<xs:pattern value="\d{2}"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="tNomUP">
+		<xs:restriction base="xs:string">
+			<xs:minLength value="1"/>
+			<xs:maxLength value="70"/>
+			<xs:whiteSpace value="collapse"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<!-- ======================================================= -->
+	<!-- RESIDENCIA_DARRERA_VARIACIO_SECOPA                      -->
+	<!-- ======================================================= -->
+	<xs:element name="peticioConsultaResidenciaDarreraVariacio">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="espanyol" type="xs:boolean"/>
+				<xs:element ref="residencia" minOccurs="0"/>
+				<xs:element ref="naixement" minOccurs="0"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="respostaConsultaResidenciaDarreraVariacio">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="peticioConsultaResidenciaDarreraVariacio" minOccurs="0"/>
+				<xs:element name="resposta" minOccurs="0">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="domicili">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element ref="adreca"/>
+										<xs:element ref="localitat"/>
+										<xs:element ref="darreraVariacio" minOccurs="0"/>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element ref="resultat"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<!-- ======================================================= -->
+	<!-- CONVIVENCIA_ACTUAL_SECOPA      				         -->
+	<!-- ======================================================= -->
+	<xs:element name="peticioConsultaConvivenciaActual">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="residencia" minOccurs="0"/>
+				<xs:element ref="naixement" minOccurs="0"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="respostaConsultaConvivenciaActual">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="peticioConsultaConvivenciaActual" minOccurs="0"/>
+				<xs:element name="resposta" minOccurs="0">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element ref="domicili"/>
+							<xs:element ref="origenDades" minOccurs="0"/>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element ref="resultat"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<!-- ======================================================= -->
+	<!-- VERIFICACIO_RESIDENCIA_AMBIT      				         -->
+	<!-- ======================================================= -->
+	<xs:element name="peticioVerificacioResidenciaAmbit">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="residencia"/>
+				<xs:element ref="naixement" minOccurs="0"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="respostaVerificacioResidenciaAmbit">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="peticioVerificacioResidenciaAmbit" minOccurs="0"/>
+				<xs:element ref="resultat"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<!-- ======================================================= -->
+	<!-- Resultat                                                -->
+	<!-- ======================================================= -->
+	<xs:element name="resultat">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="codiResultat" type="xs:string"/>
+				<xs:element name="descripcio" type="xs:string"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

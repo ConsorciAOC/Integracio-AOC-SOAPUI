@@ -20,7 +20,7 @@
         </xs:complexType>
       </xs:element>
     </xs:schema>
-    <xs:schema targetNamespace="http://gencat.net/scsp/esquemes/peticion" elementFormDefault="qualified" attributeFormDefault="unqualified" xmlns="http://gencat.net/scsp/esquemes/peticion" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:grauccaa="http://www.aoc.cat/discapacitat/ccaa" xmlns:nivellc="http://www.aoc.cat/certificat-catala" xmlns:inem="http://www.aocat.net/inem" xmlns:rjcu="http://www.aoc.cat/titulacions/rjcu" xmlns:pscp="http://webservices.pscp.economia.gencat.capgemini.com" xmlns:tfn="http://www.aoc.cat/tfn" xmlns:tfm="http://www.aoc.cat/tfm" xmlns:idescat="http://www.aocat.net/padro" xmlns:grau="http://www.aocat.net/discapacitat" xmlns:soc="http://gencat.net/scsp/esquemes/SOC" xmlns:ecot="http://www.aoc.cat/aeat/obligacions" xmlns:rca="http://www.aocat.net/rca" xmlns:reg="http://www.aoc.cat/regentitats" xmlns:padro="http://www.aocat.net/padro" xmlns:merc="http://www.aocat.net/registradors" xmlns:prop="http://www.aocat.net/registradors" xmlns:dcoc="http://aoc.net/dcoc/v2/peticio" xmlns:ppe="http://www.aocat.net/aeat/irpf" xmlns:iae="http://www.aoc.cat/aeat/iae" xmlns:reli="http://www.aoc.cat/reli" xmlns:dicireg="http://www.aoc.cat/registre-civil/dicireg" xmlns:irpf20="http://www.aocat.net/aeat/irpf" xmlns:irpf="http://www.aocat.net/aeat/irpf" xmlns:tgss_alta_fecha="http://www.tgss.es/altafecha/esquemas/afiliacion/datosespecificos" xmlns:tgss_agra="http://www.tgss.es/actividadagraria/esquemas/afiliacion/datosespecificos" xmlns:tgss_lab="http://www.aoc.cat/tgss" xmlns:dgp="http://www.aoc.cat/dgp/identitat" xmlns:dgp_res_legal="http://www.aoc.cat/dgp-residencia-legal" xmlns:sct_denuncies="http://www.aoc.cat/sct/denuncies" xmlns:dgt="http://www.aoc.cat/dgt" xmlns:cad="http://www.aocat.net/cadastre" xmlns:tsd="http://www.aoc.cat/inss/tsd" xmlns:reg_civ="http://www.aoc.cat/registre-civil" xmlns:ant_pen="http://www.aoc.cat/antecedents-penals" xmlns:mux="http://net.aocat/MUX2/PeticioRegistre" xmlns:rpc="http://cat.aoc/rpc/peticion" xmlns:igae="http://www.aoc.cat/igae" xmlns:atmv="http://www.aocat.net/dgt/atmv" xmlns:rgc="http://www.aoc.cat/rgc" xmlns:rpe="http://www.aoc.cat/rpe" xmlns:mepsyd="http://www.aocat.net/mepsyd" xmlns:notaris="http://www.aoc.cat/poders-notarials" xmlns:dgp_residencia="http://www.aoc.cat/dgp-historic-residencia" xmlns:actic="http://www.aoc.cat/actic" xmlns:csuc="http://www.aoc.cat/csuc" xmlns:muface="http://www.aoc.cat/muface">
+    <xs:schema targetNamespace="http://gencat.net/scsp/esquemes/peticion" elementFormDefault="qualified" attributeFormDefault="unqualified" xmlns="http://gencat.net/scsp/esquemes/peticion" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:grauccaa="http://www.aoc.cat/discapacitat/ccaa" xmlns:ine="http://www.aoc.cat/ine" xmlns:nivellc="http://www.aoc.cat/certificat-catala" xmlns:inem="http://www.aocat.net/inem" xmlns:rjcu="http://www.aoc.cat/titulacions/rjcu" xmlns:pscp="http://webservices.pscp.economia.gencat.capgemini.com" xmlns:tfn="http://www.aoc.cat/tfn" xmlns:tfm="http://www.aoc.cat/tfm" xmlns:idescat="http://www.aocat.net/padro" xmlns:grau="http://www.aocat.net/discapacitat" xmlns:soc="http://gencat.net/scsp/esquemes/SOC" xmlns:ecot="http://www.aoc.cat/aeat/obligacions" xmlns:rca="http://www.aocat.net/rca" xmlns:reg="http://www.aoc.cat/regentitats" xmlns:padro="http://www.aocat.net/padro" xmlns:merc="http://www.aocat.net/registradors" xmlns:prop="http://www.aocat.net/registradors" xmlns:dcoc="http://aoc.net/dcoc/v2/peticio" xmlns:ppe="http://www.aocat.net/aeat/irpf" xmlns:iae="http://www.aoc.cat/aeat/iae" xmlns:reli="http://www.aoc.cat/reli" xmlns:dicireg="http://www.aoc.cat/registre-civil/dicireg" xmlns:irpf20="http://www.aocat.net/aeat/irpf" xmlns:irpf="http://www.aocat.net/aeat/irpf" xmlns:tgss_alta_fecha="http://www.tgss.es/altafecha/esquemas/afiliacion/datosespecificos" xmlns:tgss_agra="http://www.tgss.es/actividadagraria/esquemas/afiliacion/datosespecificos" xmlns:tgss_lab="http://www.aoc.cat/tgss" xmlns:dgp="http://www.aoc.cat/dgp/identitat" xmlns:dgp_res_legal="http://www.aoc.cat/dgp-residencia-legal" xmlns:sct_denuncies="http://www.aoc.cat/sct/denuncies" xmlns:dgt="http://www.aoc.cat/dgt" xmlns:cad="http://www.aocat.net/cadastre" xmlns:tsd="http://www.aoc.cat/inss/tsd" xmlns:reg_civ="http://www.aoc.cat/registre-civil" xmlns:ant_pen="http://www.aoc.cat/antecedents-penals" xmlns:mux="http://net.aocat/MUX2/PeticioRegistre" xmlns:rpc="http://cat.aoc/rpc/peticion" xmlns:igae="http://www.aoc.cat/igae" xmlns:atmv="http://www.aocat.net/dgt/atmv" xmlns:rgc="http://www.aoc.cat/rgc" xmlns:rpe="http://www.aoc.cat/rpe" xmlns:mepsyd="http://www.aocat.net/mepsyd" xmlns:notaris="http://www.aoc.cat/poders-notarials" xmlns:dgp_residencia="http://www.aoc.cat/dgp-historic-residencia" xmlns:actic="http://www.aoc.cat/actic" xmlns:csuc="http://www.aoc.cat/csuc" xmlns:muface="http://www.aoc.cat/muface">
       <xs:import namespace="http://www.aocat.net/inem" schemaLocation="./VO/VO - ESTAT/INEM/dadesEspecifiques.xsd"/>
       <xs:import namespace="http://www.aoc.cat/tfn" schemaLocation="./VO/VO - GENE/TFN/dadesEspecifiques.xsd"/>
       <xs:import namespace="http://www.aocat.net/padro" schemaLocation="./VO/VO - GENE/IDESCAT/dadesEspecifiquesHistoric.xsd"/>
@@ -81,6 +81,7 @@
       <xs:import namespace="http://www.aoc.cat/aeat/obligacions" schemaLocation="./VO/VO - ESTAT/AEAT/dadesEspecifiques-ECOT10x.xsd"/>
       <xs:import namespace="http://www.aoc.cat/certificat-catala" schemaLocation="./VO/VO - GENE/NIVELL_C/dadesEspecifiques.xsd"/>
       <xs:import namespace="http://www.aoc.cat/aeat/obligacions" schemaLocation="./VO/VO - ESTAT/TITULACIONS_RJCU/dadesEspecifiques.xsd"/>
+      <xs:import namespace="http://www.aoc.cat/ine" schemaLocation="./VO/VO - ESTAT/INE/dadesEspecifiques.xsd"/>
       <xs:element name="Apellido1">
         <xs:simpleType>
           <xs:restriction base="xs:string">
@@ -441,6 +442,11 @@
             <xs:element ref="rjcu:peticioConsultaUniversitats" minOccurs="0"/>
             <xs:element ref="rjcu:peticioConsultaTitolsUniversitaris" minOccurs="0"/>
             <xs:element ref="rjcu:peticioConsultaTitolUniversitariDetall" minOccurs="0"/>
+            <xs:element ref="ine:peticioConsultaHistoricResidenciaConvivents" minOccurs="0"/>
+            <xs:element ref="ine:peticioConsultaHistoricMunicipisResidencia" minOccurs="0"/>
+            <xs:element ref="ine:peticioConsultaResidenciaDarreraVariacio" minOccurs="0"/>
+            <xs:element ref="ine:peticioConsultaConvivenciaActual" minOccurs="0"/>
+            <xs:element ref="ine:peticioVerificacioResidenciaAmbit" minOccurs="0"/>
           </xs:choice>
         </xs:complexType>
       </xs:element>
@@ -55209,6 +55215,583 @@ estimación objetiva-->
       </xs:sequence>
     </xs:complexType>
   </xs:element>
+</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>file:\C:\Users\CristianMorales\One%20Drive\OneDrive%20-%20Consorci%20Administració%20Oberta%20de%20Catalunya\Documents\GitHub\Integracio-AOC-SOAPUI\VO\VO - ESTAT\INE\dadesEspecifiques.xsd</con:url><con:content><![CDATA[<xs:schema targetNamespace="http://www.aoc.cat/ine" elementFormDefault="qualified" attributeFormDefault="unqualified" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="http://www.aoc.cat/ine">
+  <!--=======================================================-->
+  <!--HISTORIC_RESIDENCIA_CONVIVENTS_SECOPA-->
+  <!--=======================================================-->
+  <xs:element name="peticioConsultaHistoricResidenciaConvivents">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="residencia" minOccurs="0"/>
+        <xs:element ref="naixement" minOccurs="0"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="respostaConsultaHistoricResidenciaConvivents">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="peticioConsultaHistoricResidenciaConvivents" minOccurs="0"/>
+        <xs:element name="resposta" minOccurs="0">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="domicilis">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element ref="domicili" maxOccurs="unbounded"/>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+              <xs:element ref="origenDades" minOccurs="0"/>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element ref="resultat"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <!--=======================================================-->
+  <!--HISTORIC_MUNICIPIS_RESIDENCIA_SECOPA-->
+  <!--=======================================================-->
+  <xs:element name="peticioConsultaHistoricMunicipisResidencia">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="dataFi" type="xs:date" minOccurs="0"/>
+        <xs:element ref="residencia" minOccurs="0"/>
+        <xs:element ref="naixement" minOccurs="0"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="respostaConsultaHistoricMunicipisResidencia">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="peticioConsultaHistoricMunicipisResidencia" minOccurs="0"/>
+        <xs:element name="resposta" minOccurs="0">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="municipis">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="municipi" maxOccurs="unbounded">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element ref="provincia"/>
+                          <xs:element ref="municipi"/>
+                          <xs:element name="dataInici" type="xs:date"/>
+                          <xs:element name="dataFi" type="xs:date" minOccurs="0"/>
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element ref="resultat"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="residencia">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="provincia" type="tCodiProvincia"/>
+        <xs:element name="municipi" type="tCodiMunicipi" minOccurs="0"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="naixement">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="data" type="xs:date" minOccurs="0"/>
+        <xs:choice minOccurs="0">
+          <xs:element name="pais" type="tCodiPais"/>
+          <xs:sequence>
+            <xs:element name="provincia" type="tCodiProvincia"/>
+            <xs:element name="municipi" type="tCodiMunicipi" minOccurs="0"/>
+          </xs:sequence>
+        </xs:choice>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="domicili">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="dataInici" type="xs:date"/>
+        <xs:element name="dataFi" type="xs:date" minOccurs="0"/>
+        <xs:element ref="titular" minOccurs="0"/>
+        <xs:element ref="darreraVariacio" minOccurs="0"/>
+        <xs:element ref="codiPostal"/>
+        <xs:element ref="localitat"/>
+        <xs:element ref="adreca"/>
+        <xs:element ref="numeroConvivents"/>
+        <xs:element ref="convivents" minOccurs="0"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="titular">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="tipusDocumentacio" minOccurs="0"/>
+        <xs:element ref="documentacio" minOccurs="0"/>
+        <xs:element ref="nom"/>
+        <xs:element ref="primerCognom"/>
+        <xs:element ref="segonCognom" minOccurs="0"/>
+        <xs:element name="dataNaixement" type="xs:date" minOccurs="0"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="localitat">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="provincia"/>
+        <xs:element ref="municipi"/>
+        <xs:element ref="codiUnitatPoblacional"/>
+        <xs:element ref="entitatCollectiva"/>
+        <xs:element ref="entitatSingular"/>
+        <xs:element ref="nucli"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="provincia">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="codi" type="tCodiProvincia"/>
+        <xs:element name="nom">
+          <xs:simpleType>
+            <xs:restriction base="xs:string">
+              <xs:minLength value="1"/>
+              <xs:maxLength value="70"/>
+            </xs:restriction>
+          </xs:simpleType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="municipi">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="codi" type="tCodiMunicipi"/>
+        <xs:element name="nom">
+          <xs:simpleType>
+            <xs:restriction base="xs:string">
+              <xs:minLength value="1"/>
+              <xs:maxLength value="70"/>
+            </xs:restriction>
+          </xs:simpleType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="codiUnitatPoblacional">
+    <xs:simpleType>
+      <xs:restriction base="xs:string">
+        <xs:whiteSpace value="collapse"/>
+        <xs:pattern value="\d{7}"/>
+      </xs:restriction>
+    </xs:simpleType>
+  </xs:element>
+  <xs:element name="entitatCollectiva">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="codi" type="tCodiUP"/>
+        <xs:element name="nom" type="tNomUP" minOccurs="0"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="entitatSingular">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="codi" type="tCodiUP"/>
+        <xs:element name="nom" type="tNomUP"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="nucli">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="codi" type="tCodiUP"/>
+        <xs:element name="nom" type="tNomUP"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="adreca">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="via" minOccurs="0"/>
+        <xs:element ref="numeracio"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="via">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="codi" minOccurs="0">
+          <xs:simpleType>
+            <xs:restriction base="xs:integer">
+              <xs:minInclusive value="0"/>
+              <xs:maxInclusive value="99999"/>
+            </xs:restriction>
+          </xs:simpleType>
+        </xs:element>
+        <xs:element name="tipus" minOccurs="0">
+          <xs:simpleType>
+            <xs:restriction base="xs:string">
+              <xs:minLength value="1"/>
+              <xs:maxLength value="5"/>
+              <xs:whiteSpace value="collapse"/>
+            </xs:restriction>
+          </xs:simpleType>
+        </xs:element>
+        <xs:element name="nom" minOccurs="0">
+          <xs:simpleType>
+            <xs:restriction base="xs:string">
+              <xs:minLength value="1"/>
+              <xs:maxLength value="70"/>
+              <xs:whiteSpace value="collapse"/>
+            </xs:restriction>
+          </xs:simpleType>
+        </xs:element>
+        <xs:element name="pseudovia" minOccurs="0">
+          <xs:simpleType>
+            <xs:restriction base="xs:string">
+              <xs:minLength value="1"/>
+              <xs:maxLength value="50"/>
+              <xs:whiteSpace value="collapse"/>
+            </xs:restriction>
+          </xs:simpleType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="numeracio">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="numero" minOccurs="0">
+          <xs:simpleType>
+            <xs:restriction base="xs:string">
+              <xs:minLength value="1"/>
+              <xs:maxLength value="4"/>
+            </xs:restriction>
+          </xs:simpleType>
+        </xs:element>
+        <xs:element name="qualificadorNumero" minOccurs="0">
+          <xs:simpleType>
+            <xs:restriction base="xs:string">
+              <xs:length value="1"/>
+            </xs:restriction>
+          </xs:simpleType>
+        </xs:element>
+        <xs:element name="numeroSuperior" minOccurs="0">
+          <xs:simpleType>
+            <xs:restriction base="xs:string">
+              <xs:minLength value="1"/>
+              <xs:maxLength value="4"/>
+            </xs:restriction>
+          </xs:simpleType>
+        </xs:element>
+        <xs:element name="qualificadorNumeroSuperior" minOccurs="0">
+          <xs:simpleType>
+            <xs:restriction base="xs:string">
+              <xs:length value="1"/>
+            </xs:restriction>
+          </xs:simpleType>
+        </xs:element>
+        <xs:element name="quilometre" minOccurs="0">
+          <xs:simpleType>
+            <xs:restriction base="xs:integer">
+              <xs:totalDigits value="3"/>
+            </xs:restriction>
+          </xs:simpleType>
+        </xs:element>
+        <xs:element name="hectometre" minOccurs="0">
+          <xs:simpleType>
+            <xs:restriction base="xs:integer">
+              <xs:totalDigits value="1"/>
+            </xs:restriction>
+          </xs:simpleType>
+        </xs:element>
+        <xs:element name="bloc" minOccurs="0">
+          <xs:simpleType>
+            <xs:restriction base="xs:string">
+              <xs:minLength value="1"/>
+              <xs:maxLength value="2"/>
+            </xs:restriction>
+          </xs:simpleType>
+        </xs:element>
+        <xs:element name="portal" minOccurs="0">
+          <xs:simpleType>
+            <xs:restriction base="xs:string">
+              <xs:minLength value="1"/>
+              <xs:maxLength value="2"/>
+            </xs:restriction>
+          </xs:simpleType>
+        </xs:element>
+        <xs:element name="escala" minOccurs="0">
+          <xs:simpleType>
+            <xs:restriction base="xs:string">
+              <xs:minLength value="1"/>
+              <xs:maxLength value="2"/>
+            </xs:restriction>
+          </xs:simpleType>
+        </xs:element>
+        <xs:element name="planta" minOccurs="0">
+          <xs:simpleType>
+            <xs:restriction base="xs:string">
+              <xs:minLength value="1"/>
+              <xs:maxLength value="3"/>
+            </xs:restriction>
+          </xs:simpleType>
+        </xs:element>
+        <xs:element name="porta" minOccurs="0">
+          <xs:simpleType>
+            <xs:restriction base="xs:string">
+              <xs:minLength value="1"/>
+              <xs:maxLength value="4"/>
+            </xs:restriction>
+          </xs:simpleType>
+        </xs:element>
+        <xs:element name="tipusLocal" minOccurs="0">
+          <xs:simpleType>
+            <xs:restriction base="xs:integer">
+              <xs:minInclusive value="1"/>
+              <xs:maxInclusive value="2"/>
+            </xs:restriction>
+          </xs:simpleType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="darreraVariacio">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="codi" minOccurs="0">
+          <xs:simpleType>
+            <xs:restriction base="xs:string">
+              <xs:length value="3"/>
+            </xs:restriction>
+          </xs:simpleType>
+        </xs:element>
+        <xs:element name="descripcio">
+          <xs:simpleType>
+            <xs:restriction base="xs:string">
+              <xs:minLength value="1"/>
+              <xs:maxLength value="250"/>
+            </xs:restriction>
+          </xs:simpleType>
+        </xs:element>
+        <xs:element name="data" type="xs:date"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="convivents">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="convivent" maxOccurs="unbounded"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="convivent">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="tipusDocumentacio" minOccurs="0"/>
+        <xs:element ref="documentacio" minOccurs="0"/>
+        <xs:element ref="nom" minOccurs="0"/>
+        <xs:element ref="primerCognom" minOccurs="0"/>
+        <xs:element ref="segonCognom" minOccurs="0"/>
+        <xs:element name="dataNaixement" type="xs:date" minOccurs="0"/>
+        <xs:element name="dataInici" type="xs:date"/>
+        <xs:element name="dataFi" type="xs:date" minOccurs="0"/>
+        <xs:element ref="darreraVariacio" minOccurs="0"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="codiPostal">
+    <xs:simpleType>
+      <xs:restriction base="xs:string">
+        <xs:whiteSpace value="collapse"/>
+        <xs:pattern value="\d{5}"/>
+      </xs:restriction>
+    </xs:simpleType>
+  </xs:element>
+  <xs:element name="numeroConvivents">
+    <xs:simpleType>
+      <xs:restriction base="xs:integer">
+        <xs:totalDigits value="3"/>
+      </xs:restriction>
+    </xs:simpleType>
+  </xs:element>
+  <xs:element name="tipusDocumentacio">
+    <xs:simpleType>
+      <xs:restriction base="xs:string">
+        <xs:enumeration value="DNI"/>
+        <xs:enumeration value="NIE"/>
+        <xs:enumeration value="Pasaporte"/>
+      </xs:restriction>
+    </xs:simpleType>
+  </xs:element>
+  <xs:element name="documentacio">
+    <xs:simpleType>
+      <xs:restriction base="xs:string">
+        <xs:minLength value="1"/>
+        <xs:maxLength value="30"/>
+        <xs:whiteSpace value="collapse"/>
+      </xs:restriction>
+    </xs:simpleType>
+  </xs:element>
+  <xs:element name="nom">
+    <xs:simpleType>
+      <xs:restriction base="xs:string">
+        <xs:minLength value="1"/>
+        <xs:maxLength value="50"/>
+        <xs:whiteSpace value="collapse"/>
+      </xs:restriction>
+    </xs:simpleType>
+  </xs:element>
+  <xs:element name="primerCognom">
+    <xs:simpleType>
+      <xs:restriction base="xs:string">
+        <xs:minLength value="1"/>
+        <xs:maxLength value="50"/>
+        <xs:whiteSpace value="collapse"/>
+      </xs:restriction>
+    </xs:simpleType>
+  </xs:element>
+  <xs:element name="segonCognom">
+    <xs:simpleType>
+      <xs:restriction base="xs:string">
+        <xs:minLength value="1"/>
+        <xs:maxLength value="50"/>
+        <xs:whiteSpace value="collapse"/>
+      </xs:restriction>
+    </xs:simpleType>
+  </xs:element>
+  <xs:element name="origenDades">
+    <xs:complexType>
+      <xs:all>
+        <xs:element name="provincia" type="tCodiProvincia"/>
+        <xs:element name="municipi" type="tCodiMunicipi"/>
+      </xs:all>
+    </xs:complexType>
+  </xs:element>
+  <xs:simpleType name="tCodiProvincia">
+    <xs:restriction base="xs:string">
+      <xs:pattern value="\d{2}"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="tCodiMunicipi">
+    <xs:restriction base="xs:string">
+      <xs:pattern value="\d{3}"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="tCodiPais">
+    <xs:restriction base="xs:string">
+      <xs:pattern value="\d{3}"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="tCodiUP">
+    <xs:restriction base="xs:string">
+      <xs:pattern value="\d{2}"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="tNomUP">
+    <xs:restriction base="xs:string">
+      <xs:minLength value="1"/>
+      <xs:maxLength value="70"/>
+      <xs:whiteSpace value="collapse"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <!--=======================================================-->
+  <!--RESIDENCIA_DARRERA_VARIACIO_SECOPA-->
+  <!--=======================================================-->
+  <xs:element name="peticioConsultaResidenciaDarreraVariacio">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="espanyol" type="xs:boolean"/>
+        <xs:element ref="residencia" minOccurs="0"/>
+        <xs:element ref="naixement" minOccurs="0"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="respostaConsultaResidenciaDarreraVariacio">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="peticioConsultaResidenciaDarreraVariacio" minOccurs="0"/>
+        <xs:element name="resposta" minOccurs="0">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="domicili">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element ref="adreca"/>
+                    <xs:element ref="localitat"/>
+                    <xs:element ref="darreraVariacio" minOccurs="0"/>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element ref="resultat"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <!--=======================================================-->
+  <!--CONVIVENCIA_ACTUAL_SECOPA-->
+  <!--=======================================================-->
+  <xs:element name="peticioConsultaConvivenciaActual">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="residencia" minOccurs="0"/>
+        <xs:element ref="naixement" minOccurs="0"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="respostaConsultaConvivenciaActual">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="peticioConsultaConvivenciaActual" minOccurs="0"/>
+        <xs:element name="resposta" minOccurs="0">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element ref="domicili"/>
+              <xs:element ref="origenDades" minOccurs="0"/>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element ref="resultat"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <!--=======================================================-->
+  <!--VERIFICACIO_RESIDENCIA_AMBIT-->
+  <!--=======================================================-->
+  <xs:element name="peticioVerificacioResidenciaAmbit">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="residencia"/>
+        <xs:element ref="naixement" minOccurs="0"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="respostaVerificacioResidenciaAmbit">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="peticioVerificacioResidenciaAmbit" minOccurs="0"/>
+        <xs:element ref="resultat"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <!--=======================================================-->
+  <!--Resultat-->
+  <!--=======================================================-->
+  <xs:element name="resultat">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="codiResultat" type="xs:string"/>
+        <xs:element name="descripcio" type="xs:string"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
 </xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part></con:definitionCache><con:endpoints><con:endpoint>http://serveis3-pre.iop.aoc.cat:80/siri-proxy/services/Sincron</con:endpoint><con:endpoint>https://serveis3-pre.app.aoc.cat:443/siri-proxy/services/Sincron</con:endpoint><con:endpoint>https://serveis3-pre.iop.aoc.cat:443/siri-proxy/services/Sincron</con:endpoint></con:endpoints><con:operation id="0e1b6498-d8a1-4efa-8ebe-81577bd3f48c" isOneWay="false" action="http://www.openuri.org/procesa" name="procesa" bindingOperationName="procesa" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/></con:operation></con:interface><con:interface xsi:type="con:WsdlInterface" id="d2a4e61c-1023-4d2f-954b-bcfcd6a2a521" wsaVersion="NONE" name="AsincronSoap" type="wsdl" bindingName="{http://www.openuri.org/}AsincronSoap" soapVersion="1_1" anonymous="optional" definition="https://serveis3-pre.iop.aoc.cat/siri-proxy/services/Asincron?wsdl" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache type="TEXT" rootPart="https://serveis3-pre.iop.aoc.cat/siri-proxy/services/Asincron?wsdl"><con:part><con:url>https://serveis3-pre.iop.aoc.cat/siri-proxy/services/Asincron?wsdl</con:url><con:content><![CDATA[<!--Published by JAX-WS RI at http://jax-ws.dev.java.net. RI's version is Metro/2.2 (branches/2.2-7015; 2012-02-20T20:31:25+0000) JAXWS-RI/2.2.6 JAXWS/2.2 svn-revision#unknown.-->
 <wsdl:definitions targetNamespace="http://www.openuri.org/" xmlns:conv="http://www.openuri.org/2002/04/soap/conversation/" xmlns:cw="http://www.openuri.org/2002/04/wsdl/conversation/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:jms="http://www.openuri.org/2002/04/wsdl/jms/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:s0="http://www.openuri.org/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:xmime="http://www.w3.org/2005/05/xmlmime" xmlns:xs="http://www.w3.org/2001/XMLSchema">
   <wsdl:types>
@@ -60644,6 +61227,74 @@ estimación objetiva-->
                         <ns3:codiUniversitat>099</ns3:codiUniversitat>\r
                         <ns3:codiEstudi>9000164</ns3:codiEstudi>\r
                      </ns3:peticioConsultaTitolUniversitariDetall>\r
+                  </ns1:DatosEspecificos>\r
+               </ns1:SolicitudTransmision>\r
+            </ns1:Solicitudes>\r
+         </ns1:Peticion>\r
+      </open:procesa>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:assertion type="SOAP Response" id="1c7555af-bbba-435a-b18c-e5f8ad74c6e6" name="SOAP Response"/><con:credentials><con:selectedAuthProfile>Basic</con:selectedAuthProfile><con:addedBasicAuthenticationTypes>Basic</con:addedBasicAuthenticationTypes><con:preemptive>true</con:preemptive><con:authType>Preemptive</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://www.openuri.org/procesa"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:testStep type="request" id="9f13cb0c-18e0-462f-8be9-11aa0bc4d491" name="VO - INE - HISTORIC_RESIDENCIA_CONVIVENTS_SECOPA - WSS"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>SincronSoap</con:interface><con:operation>procesa</con:operation><con:request name="VO - INE - HISTORIC_RESIDENCIA_CONVIVENTS_SECOPA - WSS" outgoingWss="CERT_PROVES" incomingWss="" timeout="" sslKeystore="" useWsAddressing="false" useWsReliableMessaging="false" wssPasswordType="" id="b8102efb-d443-4dfc-b817-02e7693fa0e0"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>https://serveis3-pre.iop.aoc.cat:443/siri-proxy/services/Sincron</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:open="http://www.openuri.org/" xmlns:pet="http://gencat.net/scsp/esquemes/peticion" xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/">\r
+   <soapenv:Header/>\r
+   <soapenv:Body wsu:Id="id-2FCB69B934F938128B162694603391719" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd">\r
+      <open:procesa>\r
+         <ns1:Peticion xmlns:ns1="http://gencat.net/scsp/esquemes/peticion">\r
+            <ns1:Atributos>\r
+               <ns1:IdPeticion>9821920002-HISTORIC_RESIDENCIA_CONVIVENTS_SECOPA_${=(long)(System.currentTimeMillis())}</ns1:IdPeticion>\r
+               <ns1:NumElementos>1</ns1:NumElementos>\r
+               <ns1:TimeStamp>2018-07-05 09:28:22.28</ns1:TimeStamp>\r
+               <ns1:Estado/>\r
+               <ns1:CodigoCertificado>HISTORIC_RESIDENCIA_CONVIVENTS_SECOPA</ns1:CodigoCertificado>\r
+               <ns1:CodigoProducto>INE</ns1:CodigoProducto>\r
+               <ns1:DatosAutorizacion>\r
+                  <ns1:IdentificadorSolicitante>${Properties#IdentificadorSolicitante}</ns1:IdentificadorSolicitante>\r
+                  <ns1:NombreSolicitante>Ajuntament</ns1:NombreSolicitante>\r
+                  <ns1:Finalidad>0000000001_PROVES</ns1:Finalidad>\r
+               </ns1:DatosAutorizacion>\r
+               <ns1:Emisor>\r
+                  <ns1:NifEmisor>Q0801175A</ns1:NifEmisor>\r
+                  <ns1:NombreEmisor>CAOC</ns1:NombreEmisor>\r
+               </ns1:Emisor>\r
+               <ns1:Funcionario>\r
+                  <ns1:NombreCompletoFuncionario>${Properties#NombreCompletoFuncionario}</ns1:NombreCompletoFuncionario>\r
+                  <ns1:NifFuncionario>${Properties#NIFFuncionario}</ns1:NifFuncionario>\r
+               </ns1:Funcionario>\r
+            </ns1:Atributos>\r
+            <ns1:Solicitudes>\r
+               <ns1:SolicitudTransmision>\r
+                  <ns1:DatosGenericos>\r
+                     <ns1:Emisor>\r
+                        <ns1:NifEmisor>Q0801175A</ns1:NifEmisor>\r
+                        <ns1:NombreEmisor>CAOC</ns1:NombreEmisor>\r
+                     </ns1:Emisor>\r
+                     <ns1:Solicitante>\r
+                        <ns1:IdentificadorSolicitante>${Properties#IdentificadorSolicitante}</ns1:IdentificadorSolicitante>\r
+                        <ns1:NombreSolicitante>Ajuntament</ns1:NombreSolicitante>\r
+                        <ns1:Finalidad>0000000001_PROVES</ns1:Finalidad>\r
+                        <ns1:Consentimiento>Ley</ns1:Consentimiento>\r
+                        <ns1:Funcionario>\r
+                           <ns1:NombreCompletoFuncionario>${Properties#NombreCompletoFuncionario}</ns1:NombreCompletoFuncionario>\r
+                           <ns1:NifFuncionario>${Properties#NIFFuncionario}</ns1:NifFuncionario>\r
+                        </ns1:Funcionario>\r
+                     </ns1:Solicitante>\r
+                     <ns1:Titular>\r
+                        <ns1:TipoDocumentacion>NIF</ns1:TipoDocumentacion>\r
+                        <ns1:Documentacion>33339886Y</ns1:Documentacion>\r
+                        <ns1:Nombre>FICTICIO214</ns1:Nombre>\r
+                        <ns1:Apellido1>CARDENAS</ns1:Apellido1>\r
+                        <ns1:Apellido2>ESPECIMEN214</ns1:Apellido2>\r
+                     </ns1:Titular>\r
+                     <ns1:Transmision>\r
+                        <ns1:CodigoCertificado>HISTORIC_RESIDENCIA_CONVIVENTS_SECOPA</ns1:CodigoCertificado>\r
+                        <ns1:IdSolicitud>${=(long)(System.currentTimeMillis())}</ns1:IdSolicitud>\r
+                        <ns1:IdTransmision>32017</ns1:IdTransmision>\r
+                     </ns1:Transmision>\r
+                  </ns1:DatosGenericos>\r
+                  <ns1:DatosEspecificos>\r
+                     <ns0:peticioConsultaHistoricResidenciaConvivents xmlns:ns0="http://www.aoc.cat/ine" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">\r
+                        <ns0:naixement>\r
+                           <ns0:data>1982-07-26</ns0:data>\r
+                        </ns0:naixement>\r
+                     </ns0:peticioConsultaHistoricResidenciaConvivents>\r
                   </ns1:DatosEspecificos>\r
                </ns1:SolicitudTransmision>\r
             </ns1:Solicitudes>\r
