@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:soapui-project id="523a6f6d-9b62-4ed0-854d-86b95cdf8915" activeEnvironment="Default" name="serveis3-pre.iop.aoc" resourceRoot="" soapui-version="5.10.0" abortOnError="false" runType="SEQUENTIAL" xmlns:con="http://eviware.com/soapui/config"><con:settings/><con:interface xsi:type="con:WsdlInterface" id="9a5a52bf-55e1-481f-a091-747f93712472" wsaVersion="NONE" name="SincronSoap" type="wsdl" bindingName="{http://www.openuri.org/}SincronSoap" soapVersion="1_1" anonymous="optional" definition="file:/C:/Users/CristianMorales/One%20Drive/OneDrive%20-%20Consorci%20Administració%20Oberta%20de%20Catalunya/Documents/GitHub/Integracio-AOC-SOAPUI/Sincron_iop.wsdl" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache type="TEXT" rootPart="file:/C:/Users/CristianMorales/One%20Drive/OneDrive%20-%20Consorci%20Administració%20Oberta%20de%20Catalunya/Documents/GitHub/Integracio-AOC-SOAPUI/Sincron_iop.wsdl"><con:part><con:url>file:/C:/Users/CristianMorales/One%20Drive/OneDrive%20-%20Consorci%20Administració%20Oberta%20de%20Catalunya/Documents/GitHub/Integracio-AOC-SOAPUI/Sincron_iop.wsdl</con:url><con:content><![CDATA[<!--Published by JAX-WS RI at http://jax-ws.dev.java.net. RI's version is Metro/2.2 (branches/2.2-7015; 2012-02-20T20:31:25+0000) JAXWS-RI/2.2.6 JAXWS/2.2 svn-revision#unknown.-->
+<con:soapui-project id="523a6f6d-9b62-4ed0-854d-86b95cdf8915" activeEnvironment="Default" name="serveis3-pre.iop.aoc" resourceRoot="" soapui-version="5.10.0" abortOnError="false" runType="SEQUENTIAL" xmlns:con="http://eviware.com/soapui/config"><con:settings/><con:interface xsi:type="con:WsdlInterface" id="9a5a52bf-55e1-481f-a091-747f93712472" wsaVersion="NONE" name="SincronSoap" type="wsdl" bindingName="{http://www.openuri.org/}SincronSoap" soapVersion="1_1" anonymous="optional" definition="file:/c:/Users/CristianMorales/One%20Drive/OneDrive%20-%20Consorci%20Administració%20Oberta%20de%20Catalunya/Documents/GitHub/Integracio-AOC-SOAPUI/Sincron_iop.wsdl" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache type="TEXT" rootPart="file:/c:/Users/CristianMorales/One%20Drive/OneDrive%20-%20Consorci%20Administració%20Oberta%20de%20Catalunya/Documents/GitHub/Integracio-AOC-SOAPUI/Sincron_iop.wsdl"><con:part><con:url>file:/c:/Users/CristianMorales/One%20Drive/OneDrive%20-%20Consorci%20Administració%20Oberta%20de%20Catalunya/Documents/GitHub/Integracio-AOC-SOAPUI/Sincron_iop.wsdl</con:url><con:content><![CDATA[<!--Published by JAX-WS RI at http://jax-ws.dev.java.net. RI's version is Metro/2.2 (branches/2.2-7015; 2012-02-20T20:31:25+0000) JAXWS-RI/2.2.6 JAXWS/2.2 svn-revision#unknown.-->
 <wsdl:definitions targetNamespace="http://www.openuri.org/" xmlns:conv="http://www.openuri.org/2002/04/soap/conversation/" xmlns:cw="http://www.openuri.org/2002/04/wsdl/conversation/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:jms="http://www.openuri.org/2002/04/wsdl/jms/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:s0="http://www.openuri.org/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:xmime="http://www.w3.org/2005/05/xmlmime">
   <wsdl:types>
     <xs:schema elementFormDefault="qualified" targetNamespace="http://www.openuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:pet="http://gencat.net/scsp/esquemes/peticion" xmlns:res="http://gencat.net/scsp/esquemes/respuesta">
@@ -976,7 +976,7 @@
       <soap:address location="http://serveis3-pre.iop.aoc.cat:80/siri-proxy/services/Sincron"/>
     </wsdl:port>
   </wsdl:service>
-</wsdl:definitions>]]></con:content><con:type>http://schemas.xmlsoap.org/wsdl/</con:type></con:part><con:part><con:url>file:\C:\Users\CristianMorales\One%20Drive\OneDrive%20-%20Consorci%20Administració%20Oberta%20de%20Catalunya\Documents\GitHub\Integracio-AOC-SOAPUI\VO\VO - ESTAT\INEM\dadesEspecifiques.xsd</con:url><con:content><![CDATA[<xs:schema targetNamespace="http://www.aocat.net/inem" elementFormDefault="qualified" attributeFormDefault="unqualified" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="http://www.aocat.net/inem" xmlns:map="http://www.map.es/scsp/esquemas/datosespecificos">
+</wsdl:definitions>]]></con:content><con:type>http://schemas.xmlsoap.org/wsdl/</con:type></con:part><con:part><con:url>file:\c:\Users\CristianMorales\One%20Drive\OneDrive%20-%20Consorci%20Administració%20Oberta%20de%20Catalunya\Documents\GitHub\Integracio-AOC-SOAPUI\VO\VO - ESTAT\INEM\dadesEspecifiques.xsd</con:url><con:content><![CDATA[<xs:schema targetNamespace="http://www.aocat.net/inem" elementFormDefault="qualified" attributeFormDefault="unqualified" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="http://www.aocat.net/inem" xmlns:map="http://www.map.es/scsp/esquemas/datosespecificos">
   <xs:import namespace="http://www.map.es/scsp/esquemas/datosespecificos" schemaLocation="datos-especificos.xsd"/>
   <!--=======================================================-->
   <!--Verificació dades atur-->
@@ -1029,7 +1029,7 @@
       </xs:sequence>
     </xs:complexType>
   </xs:element>
-</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>file:\C:\Users\CristianMorales\One%20Drive\OneDrive%20-%20Consorci%20Administració%20Oberta%20de%20Catalunya\Documents\GitHub\Integracio-AOC-SOAPUI\VO\VO - ESTAT\INEM\datos-especificos.xsd</con:url><con:content><![CDATA[<xs:schema targetNamespace="http://www.map.es/scsp/esquemas/datosespecificos" elementFormDefault="qualified" attributeFormDefault="unqualified" xmlns="http://www.map.es/scsp/esquemas/datosespecificos" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>file:\c:\Users\CristianMorales\One%20Drive\OneDrive%20-%20Consorci%20Administració%20Oberta%20de%20Catalunya\Documents\GitHub\Integracio-AOC-SOAPUI\VO\VO - ESTAT\INEM\datos-especificos.xsd</con:url><con:content><![CDATA[<xs:schema targetNamespace="http://www.map.es/scsp/esquemas/datosespecificos" elementFormDefault="qualified" attributeFormDefault="unqualified" xmlns="http://www.map.es/scsp/esquemas/datosespecificos" xmlns:xs="http://www.w3.org/2001/XMLSchema">
   <xs:element name="DatosEspecificos" type="DatosEspecificos"/>
   <xs:complexType name="DatosEspecificos">
     <xs:all>
@@ -1412,7 +1412,7 @@
 			</xs:restriction>
 		</xs:simpleType>
 	</xs:element>-->
-</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>file:\C:\Users\CristianMorales\One%20Drive\OneDrive%20-%20Consorci%20Administració%20Oberta%20de%20Catalunya\Documents\GitHub\Integracio-AOC-SOAPUI\VO\VO - GENE\TFN\dadesEspecifiques.xsd</con:url><con:content><![CDATA[<xs:schema targetNamespace="http://www.aoc.cat/tfn" elementFormDefault="qualified" attributeFormDefault="unqualified" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="http://www.aoc.cat/tfn">
+</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>file:\c:\Users\CristianMorales\One%20Drive\OneDrive%20-%20Consorci%20Administració%20Oberta%20de%20Catalunya\Documents\GitHub\Integracio-AOC-SOAPUI\VO\VO - GENE\TFN\dadesEspecifiques.xsd</con:url><con:content><![CDATA[<xs:schema targetNamespace="http://www.aoc.cat/tfn" elementFormDefault="qualified" attributeFormDefault="unqualified" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="http://www.aoc.cat/tfn">
   <xs:element name="resultat">
     <xs:complexType>
       <xs:sequence>
@@ -1591,7 +1591,7 @@
       </xs:sequence>
     </xs:complexType>
   </xs:element>
-</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>file:\C:\Users\CristianMorales\One%20Drive\OneDrive%20-%20Consorci%20Administració%20Oberta%20de%20Catalunya\Documents\GitHub\Integracio-AOC-SOAPUI\VO\VO - GENE\IDESCAT\dadesEspecifiquesHistoric.xsd</con:url><con:content><![CDATA[<xsd:schema targetNamespace="http://www.aocat.net/padro" elementFormDefault="qualified" attributeFormDefault="unqualified" version="1.0" xmlns="http://www.aocat.net/padro" xmlns:volante="http://www.red.es/padron" xmlns:ine="http://www.map.es/scsp/esquemas/datosespecificos" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>file:\c:\Users\CristianMorales\One%20Drive\OneDrive%20-%20Consorci%20Administració%20Oberta%20de%20Catalunya\Documents\GitHub\Integracio-AOC-SOAPUI\VO\VO - GENE\IDESCAT\dadesEspecifiquesHistoric.xsd</con:url><con:content><![CDATA[<xsd:schema targetNamespace="http://www.aocat.net/padro" elementFormDefault="qualified" attributeFormDefault="unqualified" version="1.0" xmlns="http://www.aocat.net/padro" xmlns:volante="http://www.red.es/padron" xmlns:ine="http://www.map.es/scsp/esquemas/datosespecificos" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <xsd:import namespace="http://www.red.es/padron" schemaLocation="VolanteEmpadronamiento.xsd"/>
   <xsd:element name="peticionDatosTitularHistorico">
     <xsd:complexType>
@@ -1690,10 +1690,10 @@
       </xsd:sequence>
     </xsd:complexType>
   </xsd:element>
-</xsd:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>file:\C:\Users\CristianMorales\One%20Drive\OneDrive%20-%20Consorci%20Administració%20Oberta%20de%20Catalunya\Documents\GitHub\Integracio-AOC-SOAPUI\VO\VO - GENE\IDESCAT\VolanteEmpadronamiento.xsd</con:url><con:content>&lt;xs:schema targetNamespace="http://www.red.es/padron" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="http://www.red.es/padron">&#13;
+</xsd:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>file:\c:\Users\CristianMorales\One%20Drive\OneDrive%20-%20Consorci%20Administració%20Oberta%20de%20Catalunya\Documents\GitHub\Integracio-AOC-SOAPUI\VO\VO - GENE\IDESCAT\VolanteEmpadronamiento.xsd</con:url><con:content>&lt;xs:schema targetNamespace="http://www.red.es/padron" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="http://www.red.es/padron">&#13;
   &lt;xs:element name="VolanteEmpadronamiento" type="xs:anyType"/>&#13;
   &lt;xs:element name="DireccionEmpadronamiento" type="xs:anyType"/>&#13;
-&lt;/xs:schema></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>file:\C:\Users\CristianMorales\One%20Drive\OneDrive%20-%20Consorci%20Administració%20Oberta%20de%20Catalunya\Documents\GitHub\Integracio-AOC-SOAPUI\VO\VO - GENE\TFM\dadesEspecifiques.xsd</con:url><con:content><![CDATA[<xs:schema targetNamespace="http://www.aoc.cat/tfm" elementFormDefault="qualified" attributeFormDefault="unqualified" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="http://www.aoc.cat/tfm">
+&lt;/xs:schema></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>file:\c:\Users\CristianMorales\One%20Drive\OneDrive%20-%20Consorci%20Administració%20Oberta%20de%20Catalunya\Documents\GitHub\Integracio-AOC-SOAPUI\VO\VO - GENE\TFM\dadesEspecifiques.xsd</con:url><con:content><![CDATA[<xs:schema targetNamespace="http://www.aoc.cat/tfm" elementFormDefault="qualified" attributeFormDefault="unqualified" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="http://www.aoc.cat/tfm">
   <xs:element name="resultat">
     <xs:complexType>
       <xs:sequence>
@@ -1870,7 +1870,7 @@
       </xs:sequence>
     </xs:complexType>
   </xs:element>
-</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>file:\C:\Users\CristianMorales\One%20Drive\OneDrive%20-%20Consorci%20Administració%20Oberta%20de%20Catalunya\Documents\GitHub\Integracio-AOC-SOAPUI\VO\VO - GENE\GRAU_DISC\dadesEspecifiques.xsd</con:url><con:content><![CDATA[<xs:schema targetNamespace="http://www.aocat.net/discapacitat" elementFormDefault="qualified" attributeFormDefault="unqualified" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="http://www.aocat.net/discapacitat">
+</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>file:\c:\Users\CristianMorales\One%20Drive\OneDrive%20-%20Consorci%20Administració%20Oberta%20de%20Catalunya\Documents\GitHub\Integracio-AOC-SOAPUI\VO\VO - GENE\GRAU_DISC\dadesEspecifiques.xsd</con:url><con:content><![CDATA[<xs:schema targetNamespace="http://www.aocat.net/discapacitat" elementFormDefault="qualified" attributeFormDefault="unqualified" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="http://www.aocat.net/discapacitat">
   <!--=======================================================-->
   <!--Consulta simple-->
   <!--=======================================================-->
@@ -1989,7 +1989,7 @@
       </xs:sequence>
     </xs:complexType>
   </xs:element>
-</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>file:\C:\Users\CristianMorales\One%20Drive\OneDrive%20-%20Consorci%20Administració%20Oberta%20de%20Catalunya\Documents\GitHub\Integracio-AOC-SOAPUI\VO\VO - GENE\SOC\dadesEspecifiquesPICA.xsd</con:url><con:content><![CDATA[<xsd:schema targetNamespace="http://gencat.net/scsp/esquemes/SOC" elementFormDefault="qualified" attributeFormDefault="unqualified" xmlns="http://gencat.net/scsp/esquemes/SOC" xmlns:ns1="http://gencat.net/scsp/esquemes/PicaError" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>file:\c:\Users\CristianMorales\One%20Drive\OneDrive%20-%20Consorci%20Administració%20Oberta%20de%20Catalunya\Documents\GitHub\Integracio-AOC-SOAPUI\VO\VO - GENE\SOC\dadesEspecifiquesPICA.xsd</con:url><con:content><![CDATA[<xsd:schema targetNamespace="http://gencat.net/scsp/esquemes/SOC" elementFormDefault="qualified" attributeFormDefault="unqualified" xmlns="http://gencat.net/scsp/esquemes/SOC" xmlns:ns1="http://gencat.net/scsp/esquemes/PicaError" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <xsd:import namespace="http://gencat.net/scsp/esquemes/PicaError" schemaLocation="PicaError.xsd"/>
   <xsd:element name="CertificatRequest">
     <xsd:complexType>
@@ -2574,7 +2574,7 @@
       </xsd:sequence>
     </xsd:complexType>
   </xsd:element>
-</xsd:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>file:\C:\Users\CristianMorales\One%20Drive\OneDrive%20-%20Consorci%20Administració%20Oberta%20de%20Catalunya\Documents\GitHub\Integracio-AOC-SOAPUI\VO\VO - GENE\SOC\PicaError.xsd</con:url><con:content><![CDATA[<!--edited with XMLSpy v2005 rel. 3 U (http://www.altova.com) by  ()-->
+</xsd:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>file:\c:\Users\CristianMorales\One%20Drive\OneDrive%20-%20Consorci%20Administració%20Oberta%20de%20Catalunya\Documents\GitHub\Integracio-AOC-SOAPUI\VO\VO - GENE\SOC\PicaError.xsd</con:url><con:content><![CDATA[<!--edited with XMLSpy v2005 rel. 3 U (http://www.altova.com) by  ()-->
 <xs:schema targetNamespace="http://gencat.net/scsp/esquemes/PicaError" elementFormDefault="qualified" attributeFormDefault="unqualified" xmlns="http://gencat.net/scsp/esquemes/PicaError" xmlns:xs="http://www.w3.org/2001/XMLSchema">
   <xs:element name="PICAError">
     <xs:complexType>
@@ -2586,7 +2586,7 @@
       </xs:sequence>
     </xs:complexType>
   </xs:element>
-</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>file:\C:\Users\CristianMorales\One%20Drive\OneDrive%20-%20Consorci%20Administració%20Oberta%20de%20Catalunya\Documents\GitHub\Integracio-AOC-SOAPUI\VO\VO - GENE\RCA\dadesEspecifiques.xsd</con:url><con:content><![CDATA[<xs:schema targetNamespace="http://www.aocat.net/rca" elementFormDefault="qualified" attributeFormDefault="unqualified" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="http://www.aocat.net/rca">
+</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>file:\c:\Users\CristianMorales\One%20Drive\OneDrive%20-%20Consorci%20Administració%20Oberta%20de%20Catalunya\Documents\GitHub\Integracio-AOC-SOAPUI\VO\VO - GENE\RCA\dadesEspecifiques.xsd</con:url><con:content><![CDATA[<xs:schema targetNamespace="http://www.aocat.net/rca" elementFormDefault="qualified" attributeFormDefault="unqualified" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="http://www.aocat.net/rca">
   <!--=======================================================-->
   <!--RCA_CONSULTA-->
   <!--=======================================================-->
@@ -2716,7 +2716,7 @@
       </xs:sequence>
     </xs:complexType>
   </xs:element>
-</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>file:\C:\Users\CristianMorales\One%20Drive\OneDrive%20-%20Consorci%20Administració%20Oberta%20de%20Catalunya\Documents\GitHub\Integracio-AOC-SOAPUI\VO\VO - GENE\REG_ENT\dadesEspecifiques.xsd</con:url><con:content><![CDATA[<!--edited with XMLSpy v2008 rel. 2 sp2 (http://www.altova.com) by Sergio Figueras (Consorci Administració Oberta de Catalunya)-->
+</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>file:\c:\Users\CristianMorales\One%20Drive\OneDrive%20-%20Consorci%20Administració%20Oberta%20de%20Catalunya\Documents\GitHub\Integracio-AOC-SOAPUI\VO\VO - GENE\REG_ENT\dadesEspecifiques.xsd</con:url><con:content><![CDATA[<!--edited with XMLSpy v2008 rel. 2 sp2 (http://www.altova.com) by Sergio Figueras (Consorci Administració Oberta de Catalunya)-->
 <xs:schema targetNamespace="http://www.aoc.cat/regentitats" elementFormDefault="qualified" attributeFormDefault="unqualified" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="http://www.aoc.cat/regentitats">
   <xs:element name="peticioDadesConsulta">
     <xs:complexType>
@@ -3226,7 +3226,7 @@
       </xs:sequence>
     </xs:complexType>
   </xs:element>
-</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>file:\C:\Users\CristianMorales\One%20Drive\OneDrive%20-%20Consorci%20Administració%20Oberta%20de%20Catalunya\Documents\GitHub\Integracio-AOC-SOAPUI\VO\VO - LOCAL\dadesEspecifiques.xsd</con:url><con:content><![CDATA[<xsd:schema targetNamespace="http://www.aocat.net/padro" elementFormDefault="qualified" attributeFormDefault="unqualified" version="1.0" xmlns="http://www.aocat.net/padro" xmlns:volante="http://www.red.es/padron" xmlns:ine="http://www.map.es/scsp/esquemas/datosespecificos" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>file:\c:\Users\CristianMorales\One%20Drive\OneDrive%20-%20Consorci%20Administració%20Oberta%20de%20Catalunya\Documents\GitHub\Integracio-AOC-SOAPUI\VO\VO - LOCAL\dadesEspecifiques.xsd</con:url><con:content><![CDATA[<xsd:schema targetNamespace="http://www.aocat.net/padro" elementFormDefault="qualified" attributeFormDefault="unqualified" version="1.0" xmlns="http://www.aocat.net/padro" xmlns:volante="http://www.red.es/padron" xmlns:ine="http://www.map.es/scsp/esquemas/datosespecificos" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <xsd:import namespace="http://www.red.es/padron" schemaLocation="VolanteEmpadronamiento.xsd"/>
   <xsd:import namespace="http://www.map.es/scsp/esquemas/datosespecificos" schemaLocation="datos-especificos-ine.xsd"/>
   <xsd:element name="peticionResidente">
@@ -3591,10 +3591,10 @@
       </xsd:sequence>
     </xsd:complexType>
   </xsd:element>
-</xsd:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>file:\C:\Users\CristianMorales\One%20Drive\OneDrive%20-%20Consorci%20Administració%20Oberta%20de%20Catalunya\Documents\GitHub\Integracio-AOC-SOAPUI\VO\VO - LOCAL\VolanteEmpadronamiento.xsd</con:url><con:content>&lt;xs:schema targetNamespace="http://www.red.es/padron" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="http://www.red.es/padron">&#13;
+</xsd:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>file:\c:\Users\CristianMorales\One%20Drive\OneDrive%20-%20Consorci%20Administració%20Oberta%20de%20Catalunya\Documents\GitHub\Integracio-AOC-SOAPUI\VO\VO - LOCAL\VolanteEmpadronamiento.xsd</con:url><con:content>&lt;xs:schema targetNamespace="http://www.red.es/padron" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="http://www.red.es/padron">&#13;
   &lt;xs:element name="VolanteEmpadronamiento" type="xs:anyType"/>&#13;
   &lt;xs:element name="DireccionEmpadronamiento" type="xs:anyType"/>&#13;
-&lt;/xs:schema></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>file:\C:\Users\CristianMorales\One%20Drive\OneDrive%20-%20Consorci%20Administració%20Oberta%20de%20Catalunya\Documents\GitHub\Integracio-AOC-SOAPUI\VO\VO - LOCAL\datos-especificos-ine.xsd</con:url><con:content><![CDATA[<xs:schema targetNamespace="http://www.map.es/scsp/esquemas/datosespecificos" elementFormDefault="qualified" attributeFormDefault="unqualified" xmlns="http://www.map.es/scsp/esquemas/datosespecificos" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+&lt;/xs:schema></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>file:\c:\Users\CristianMorales\One%20Drive\OneDrive%20-%20Consorci%20Administració%20Oberta%20de%20Catalunya\Documents\GitHub\Integracio-AOC-SOAPUI\VO\VO - LOCAL\datos-especificos-ine.xsd</con:url><con:content><![CDATA[<xs:schema targetNamespace="http://www.map.es/scsp/esquemas/datosespecificos" elementFormDefault="qualified" attributeFormDefault="unqualified" xmlns="http://www.map.es/scsp/esquemas/datosespecificos" xmlns:xs="http://www.w3.org/2001/XMLSchema">
   <xs:element name="DatosEspecificos">
     <xs:complexType>
       <xs:all>
@@ -4034,7 +4034,7 @@
       </xs:restriction>
     </xs:simpleType>
   </xs:element>
-</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>file:\C:\Users\CristianMorales\One%20Drive\OneDrive%20-%20Consorci%20Administració%20Oberta%20de%20Catalunya\Documents\GitHub\Integracio-AOC-SOAPUI\VO\VO - DCOC_CORPME\PROP\dadesEspecifiques.xsd</con:url><con:content><![CDATA[<xsd:schema targetNamespace="http://www.aocat.net/registradors" elementFormDefault="qualified" attributeFormDefault="unqualified" version="1.0" xmlns="http://www.aocat.net/registradors" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>file:\c:\Users\CristianMorales\One%20Drive\OneDrive%20-%20Consorci%20Administració%20Oberta%20de%20Catalunya\Documents\GitHub\Integracio-AOC-SOAPUI\VO\VO - DCOC_CORPME\PROP\dadesEspecifiques.xsd</con:url><con:content><![CDATA[<xsd:schema targetNamespace="http://www.aocat.net/registradors" elementFormDefault="qualified" attributeFormDefault="unqualified" version="1.0" xmlns="http://www.aocat.net/registradors" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <xsd:element name="peticionNotaSimpleRegistroPropiedad">
     <xsd:complexType>
       <xsd:sequence>
@@ -4091,9 +4091,27 @@
         <xsd:element name="provincia" type="xsd:int"/>
         <xsd:element name="seccion" type="xsd:int"/>
         <xsd:element name="finca" type="xsd:int"/>
-        <xsd:element name="subfinca" type="xsd:string" minOccurs="0"/>
-        <xsd:element name="duplicado" type="xsd:string" minOccurs="0"/>
-        <xsd:element name="datosAdicionales" type="xsd:string" minOccurs="0"/>
+        <xsd:element name="subfinca" minOccurs="0">
+          <xsd:simpleType>
+            <xsd:restriction base="xsd:string">
+              <xsd:maxLength value="6"/>
+            </xsd:restriction>
+          </xsd:simpleType>
+        </xsd:element>
+        <xsd:element name="duplicado" minOccurs="0">
+          <xsd:simpleType>
+            <xsd:restriction base="xsd:string">
+              <xsd:maxLength value="15"/>
+            </xsd:restriction>
+          </xsd:simpleType>
+        </xsd:element>
+        <xsd:element name="datosAdicionales" minOccurs="0">
+          <xsd:simpleType>
+            <xsd:restriction base="xsd:string">
+              <xsd:maxLength value="200"/>
+            </xsd:restriction>
+          </xsd:simpleType>
+        </xsd:element>
       </xsd:sequence>
     </xsd:complexType>
   </xsd:element>
@@ -4146,7 +4164,7 @@
       </xsd:sequence>
     </xsd:complexType>
   </xsd:element>
-</xsd:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>file:\C:\Users\CristianMorales\One%20Drive\OneDrive%20-%20Consorci%20Administració%20Oberta%20de%20Catalunya\Documents\GitHub\Integracio-AOC-SOAPUI\VO\VO - DCOC_CORPME\MERC\dadesEspecifiques.xsd</con:url><con:content><![CDATA[<xsd:schema targetNamespace="http://www.aocat.net/registradors" elementFormDefault="qualified" attributeFormDefault="unqualified" version="1.0" xmlns="http://www.aocat.net/registradors" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+</xsd:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>file:\c:\Users\CristianMorales\One%20Drive\OneDrive%20-%20Consorci%20Administració%20Oberta%20de%20Catalunya\Documents\GitHub\Integracio-AOC-SOAPUI\VO\VO - DCOC_CORPME\MERC\dadesEspecifiques.xsd</con:url><con:content><![CDATA[<xsd:schema targetNamespace="http://www.aocat.net/registradors" elementFormDefault="qualified" attributeFormDefault="unqualified" version="1.0" xmlns="http://www.aocat.net/registradors" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <xsd:element name="peticionHonorariosInformacionGeneralMercantil">
     <xsd:complexType>
       <xsd:sequence>
@@ -4194,7 +4212,7 @@
       <xsd:element name="libros" type="xsd:string" minOccurs="0"/>
     </xsd:sequence>
   </xsd:complexType>
-</xsd:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>file:\C:\Users\CristianMorales\One%20Drive\OneDrive%20-%20Consorci%20Administració%20Oberta%20de%20Catalunya\Documents\GitHub\Integracio-AOC-SOAPUI\VO\VO - DCOC_CORPME\DCOC\DCOC-peticiov2.xsd</con:url><con:content><![CDATA[<xs:schema targetNamespace="http://aoc.net/dcoc/v2/peticio" elementFormDefault="qualified" attributeFormDefault="unqualified" xmlns:pet="http://aoc.net/dcoc/v2/peticio" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+</xsd:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>file:\c:\Users\CristianMorales\One%20Drive\OneDrive%20-%20Consorci%20Administració%20Oberta%20de%20Catalunya\Documents\GitHub\Integracio-AOC-SOAPUI\VO\VO - DCOC_CORPME\DCOC\DCOC-peticiov2.xsd</con:url><con:content><![CDATA[<xs:schema targetNamespace="http://aoc.net/dcoc/v2/peticio" elementFormDefault="qualified" attributeFormDefault="unqualified" xmlns:pet="http://aoc.net/dcoc/v2/peticio" xmlns:xs="http://www.w3.org/2001/XMLSchema">
   <xs:element name="peticioDCOC">
     <xs:annotation>
       <xs:documentation>Peticio</xs:documentation>
@@ -4209,7 +4227,7 @@
       </xs:sequence>
     </xs:complexType>
   </xs:element>
-</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>file:\C:\Users\CristianMorales\One%20Drive\OneDrive%20-%20Consorci%20Administració%20Oberta%20de%20Catalunya\Documents\GitHub\Integracio-AOC-SOAPUI\VO\VO - ESTAT\AEAT\dadesEspecifiques-AEATPPE.xsd</con:url><con:content><![CDATA[<xs:schema targetNamespace="http://www.aocat.net/aeat/irpf" elementFormDefault="qualified" attributeFormDefault="unqualified" xmlns="http://www.aocat.net/aeat/irpf" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:aeat="http://intermediacion.redsara.es/scsp/esquemas/datosespecificos">
+</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>file:\c:\Users\CristianMorales\One%20Drive\OneDrive%20-%20Consorci%20Administració%20Oberta%20de%20Catalunya\Documents\GitHub\Integracio-AOC-SOAPUI\VO\VO - ESTAT\AEAT\dadesEspecifiques-AEATPPE.xsd</con:url><con:content><![CDATA[<xs:schema targetNamespace="http://www.aocat.net/aeat/irpf" elementFormDefault="qualified" attributeFormDefault="unqualified" xmlns="http://www.aocat.net/aeat/irpf" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:aeat="http://intermediacion.redsara.es/scsp/esquemas/datosespecificos">
   <xs:import namespace="http://intermediacion.redsara.es/scsp/esquemas/datosespecificos" schemaLocation="ADWSPPE_respuesta.xsd"/>
   <xs:element name="respostaConsultaPPE">
     <xs:complexType>
@@ -4237,7 +4255,7 @@
       </xs:sequence>
     </xs:complexType>
   </xs:element>
-</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>file:\C:\Users\CristianMorales\One%20Drive\OneDrive%20-%20Consorci%20Administració%20Oberta%20de%20Catalunya\Documents\GitHub\Integracio-AOC-SOAPUI\VO\VO - ESTAT\AEAT\ADWSPPE_respuesta.xsd</con:url><con:content><![CDATA[<!--edited with XMLSpy v2009 sp1 (http://www.altova.com) by PC Corporativo (AGENCIA TRIBUTARIA)-->
+</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>file:\c:\Users\CristianMorales\One%20Drive\OneDrive%20-%20Consorci%20Administració%20Oberta%20de%20Catalunya\Documents\GitHub\Integracio-AOC-SOAPUI\VO\VO - ESTAT\AEAT\ADWSPPE_respuesta.xsd</con:url><con:content><![CDATA[<!--edited with XMLSpy v2009 sp1 (http://www.altova.com) by PC Corporativo (AGENCIA TRIBUTARIA)-->
 <xs:schema targetNamespace="http://intermediacion.redsara.es/scsp/esquemas/datosespecificos" elementFormDefault="qualified" attributeFormDefault="unqualified" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="http://intermediacion.redsara.es/scsp/esquemas/datosespecificos">
   <xs:element name="DatosEspecificos">
     <xs:complexType>
@@ -4409,7 +4427,7 @@
       </xs:choice>
     </xs:complexType>
   </xs:element>
-</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>file:\C:\Users\CristianMorales\One%20Drive\OneDrive%20-%20Consorci%20Administració%20Oberta%20de%20Catalunya\Documents\GitHub\Integracio-AOC-SOAPUI\VO\VO - ESTAT\AEAT\dadesEspecifiques-AEATIAE.xsd</con:url><con:content><![CDATA[<xs:schema targetNamespace="http://www.aoc.cat/aeat/iae" elementFormDefault="qualified" attributeFormDefault="unqualified" xmlns="http://www.aoc.cat/aeat/iae" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:aeat="http://intermediacion.redsara.es/scsp/esquemas/datosespecificos">
+</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>file:\c:\Users\CristianMorales\One%20Drive\OneDrive%20-%20Consorci%20Administració%20Oberta%20de%20Catalunya\Documents\GitHub\Integracio-AOC-SOAPUI\VO\VO - ESTAT\AEAT\dadesEspecifiques-AEATIAE.xsd</con:url><con:content><![CDATA[<xs:schema targetNamespace="http://www.aoc.cat/aeat/iae" elementFormDefault="qualified" attributeFormDefault="unqualified" xmlns="http://www.aoc.cat/aeat/iae" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:aeat="http://intermediacion.redsara.es/scsp/esquemas/datosespecificos">
   <xs:import namespace="http://intermediacion.redsara.es/scsp/esquemas/datosespecificos" schemaLocation="ADWSIAE_respuesta.xsd"/>
   <xs:element name="peticioConsultaIAE">
     <xs:complexType>
@@ -4437,7 +4455,7 @@
       </xs:sequence>
     </xs:complexType>
   </xs:element>
-</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>file:\C:\Users\CristianMorales\One%20Drive\OneDrive%20-%20Consorci%20Administració%20Oberta%20de%20Catalunya\Documents\GitHub\Integracio-AOC-SOAPUI\VO\VO - ESTAT\AEAT\ADWSIAE_respuesta.xsd</con:url><con:content><![CDATA[<xs:schema targetNamespace="http://intermediacion.redsara.es/scsp/esquemas/datosespecificos" elementFormDefault="qualified" attributeFormDefault="unqualified" xmlns="http://intermediacion.redsara.es/scsp/esquemas/datosespecificos" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>file:\c:\Users\CristianMorales\One%20Drive\OneDrive%20-%20Consorci%20Administració%20Oberta%20de%20Catalunya\Documents\GitHub\Integracio-AOC-SOAPUI\VO\VO - ESTAT\AEAT\ADWSIAE_respuesta.xsd</con:url><con:content><![CDATA[<xs:schema targetNamespace="http://intermediacion.redsara.es/scsp/esquemas/datosespecificos" elementFormDefault="qualified" attributeFormDefault="unqualified" xmlns="http://intermediacion.redsara.es/scsp/esquemas/datosespecificos" xmlns:xs="http://www.w3.org/2001/XMLSchema">
   <xs:element name="DatosEspecificos">
     <xs:complexType>
       <xs:choice>
@@ -4627,7 +4645,7 @@
       </xs:restriction>
     </xs:simpleType>
   </xs:element>
-</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>file:\C:\Users\CristianMorales\One%20Drive\OneDrive%20-%20Consorci%20Administració%20Oberta%20de%20Catalunya\Documents\GitHub\Integracio-AOC-SOAPUI\VO\VO - ESTAT\AEAT\dadesEspecifiques-ADWSIRPF-202X.xsd</con:url><con:content><![CDATA[<xs:schema targetNamespace="http://www.aocat.net/aeat/irpf" elementFormDefault="qualified" attributeFormDefault="unqualified" xmlns="http://www.aocat.net/aeat/irpf" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:aeat="http://intermediacion.redsara.es/scsp/esquemas/datosespecificos">
+</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>file:\c:\Users\CristianMorales\One%20Drive\OneDrive%20-%20Consorci%20Administració%20Oberta%20de%20Catalunya\Documents\GitHub\Integracio-AOC-SOAPUI\VO\VO - ESTAT\AEAT\dadesEspecifiques-ADWSIRPF-202X.xsd</con:url><con:content><![CDATA[<xs:schema targetNamespace="http://www.aocat.net/aeat/irpf" elementFormDefault="qualified" attributeFormDefault="unqualified" xmlns="http://www.aocat.net/aeat/irpf" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:aeat="http://intermediacion.redsara.es/scsp/esquemas/datosespecificos">
   <xs:import namespace="http://intermediacion.redsara.es/scsp/esquemas/datosespecificos" schemaLocation="schema_JAV3_ADWSIRPFXML_datos-especificos.xsd"/>
   <xs:element name="respostaConsultaIRPF">
     <xs:complexType>
@@ -4655,7 +4673,7 @@
       </xs:sequence>
     </xs:complexType>
   </xs:element>
-</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>file:\C:\Users\CristianMorales\One%20Drive\OneDrive%20-%20Consorci%20Administració%20Oberta%20de%20Catalunya\Documents\GitHub\Integracio-AOC-SOAPUI\VO\VO - ESTAT\AEAT\schema_JAV3_ADWSIRPFXML_datos-especificos.xsd</con:url><con:content><![CDATA[<!--editado con XMLSpy v2019 sp1 (x64) (http://www.altova.com) por MRI0194R (Agencia Estatal de Administracion Tributaria ((AEAT)))-->
+</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>file:\c:\Users\CristianMorales\One%20Drive\OneDrive%20-%20Consorci%20Administració%20Oberta%20de%20Catalunya\Documents\GitHub\Integracio-AOC-SOAPUI\VO\VO - ESTAT\AEAT\schema_JAV3_ADWSIRPFXML_datos-especificos.xsd</con:url><con:content><![CDATA[<!--editado con XMLSpy v2019 sp1 (x64) (http://www.altova.com) por MRI0194R (Agencia Estatal de Administracion Tributaria ((AEAT)))-->
 <xs:schema targetNamespace="http://intermediacion.redsara.es/scsp/esquemas/datosespecificos" elementFormDefault="qualified" attributeFormDefault="unqualified" xmlns="http://intermediacion.redsara.es/scsp/esquemas/datosespecificos" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:r2020="http://intermediacion.redsara.es/scsp/esquemas/datosespecificos/renta2020" xmlns:r2021="http://intermediacion.redsara.es/scsp/esquemas/datosespecificos/renta2021" xmlns:r2022="http://intermediacion.redsara.es/scsp/esquemas/datosespecificos/renta2022" xmlns:r2023="http://intermediacion.redsara.es/scsp/esquemas/datosespecificos/renta2023" xmlns:r2024="http://intermediacion.redsara.es/scsp/esquemas/datosespecificos/renta2024">
   <!--xs:import namespace="http://intermediacion.redsara.es/scsp/esquemas/datosespecificos/renta2020" schemaLocation="schema_JAV3_ADWSIRPF_datos-especificos_renta2020.xsd"/-->
   <xs:import namespace="http://intermediacion.redsara.es/scsp/esquemas/datosespecificos/renta2020" schemaLocation="schema_JAV3_ADWSIRPFXML_datos-especificos_renta2020.xsd"/>
@@ -5318,7 +5336,7 @@
       <xs:attribute name="Id" type="xs:string" use="optional"/>
     </xs:complexType>
   </xs:element>
-</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>file:\C:\Users\CristianMorales\One%20Drive\OneDrive%20-%20Consorci%20Administració%20Oberta%20de%20Catalunya\Documents\GitHub\Integracio-AOC-SOAPUI\VO\VO - ESTAT\AEAT\schema_JAV3_ADWSIRPFXML_datos-especificos_renta2020.xsd</con:url><con:content><![CDATA[<xs:schema targetNamespace="http://intermediacion.redsara.es/scsp/esquemas/datosespecificos/renta2020" elementFormDefault="qualified" attributeFormDefault="unqualified" xmlns="http://intermediacion.redsara.es/scsp/esquemas/datosespecificos/renta2020" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>file:\c:\Users\CristianMorales\One%20Drive\OneDrive%20-%20Consorci%20Administració%20Oberta%20de%20Catalunya\Documents\GitHub\Integracio-AOC-SOAPUI\VO\VO - ESTAT\AEAT\schema_JAV3_ADWSIRPFXML_datos-especificos_renta2020.xsd</con:url><con:content><![CDATA[<xs:schema targetNamespace="http://intermediacion.redsara.es/scsp/esquemas/datosespecificos/renta2020" elementFormDefault="qualified" attributeFormDefault="unqualified" xmlns="http://intermediacion.redsara.es/scsp/esquemas/datosespecificos/renta2020" xmlns:xs="http://www.w3.org/2001/XMLSchema">
   <!--Tipos básicos RENTA-->
   <xs:simpleType name="tipo_VersionXSD">
     <xs:restriction base="xs:string">
@@ -13388,7 +13406,7 @@
       <xs:attribute name="versionxsd" type="tipo_VersionXSD"/>
     </xs:complexType>
   </xs:element>
-</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>file:\C:\Users\CristianMorales\One%20Drive\OneDrive%20-%20Consorci%20Administració%20Oberta%20de%20Catalunya\Documents\GitHub\Integracio-AOC-SOAPUI\VO\VO - ESTAT\AEAT\schema_JAV3_ADWSIRPFXML_datos-especificos_renta2021.xsd</con:url><con:content><![CDATA[<xs:schema targetNamespace="http://intermediacion.redsara.es/scsp/esquemas/datosespecificos/renta2021" elementFormDefault="qualified" attributeFormDefault="unqualified" xmlns="http://intermediacion.redsara.es/scsp/esquemas/datosespecificos/renta2021" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>file:\c:\Users\CristianMorales\One%20Drive\OneDrive%20-%20Consorci%20Administració%20Oberta%20de%20Catalunya\Documents\GitHub\Integracio-AOC-SOAPUI\VO\VO - ESTAT\AEAT\schema_JAV3_ADWSIRPFXML_datos-especificos_renta2021.xsd</con:url><con:content><![CDATA[<xs:schema targetNamespace="http://intermediacion.redsara.es/scsp/esquemas/datosespecificos/renta2021" elementFormDefault="qualified" attributeFormDefault="unqualified" xmlns="http://intermediacion.redsara.es/scsp/esquemas/datosespecificos/renta2021" xmlns:xs="http://www.w3.org/2001/XMLSchema">
   <!--Tipos básicos RENTA-->
   <xs:simpleType name="tipo_VersionXSD">
     <xs:restriction base="xs:string">
@@ -18138,7 +18156,7 @@
       <xs:attribute name="versionxsd" type="tipo_VersionXSD"/>
     </xs:complexType>
   </xs:element>
-</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>file:\C:\Users\CristianMorales\One%20Drive\OneDrive%20-%20Consorci%20Administració%20Oberta%20de%20Catalunya\Documents\GitHub\Integracio-AOC-SOAPUI\VO\VO - ESTAT\AEAT\schema_JAV3_ADWSIRPFXML_datos-especificos_renta2022.xsd</con:url><con:content><![CDATA[<xs:schema targetNamespace="http://intermediacion.redsara.es/scsp/esquemas/datosespecificos/renta2022" elementFormDefault="qualified" attributeFormDefault="unqualified" xmlns="http://intermediacion.redsara.es/scsp/esquemas/datosespecificos/renta2022" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>file:\c:\Users\CristianMorales\One%20Drive\OneDrive%20-%20Consorci%20Administració%20Oberta%20de%20Catalunya\Documents\GitHub\Integracio-AOC-SOAPUI\VO\VO - ESTAT\AEAT\schema_JAV3_ADWSIRPFXML_datos-especificos_renta2022.xsd</con:url><con:content><![CDATA[<xs:schema targetNamespace="http://intermediacion.redsara.es/scsp/esquemas/datosespecificos/renta2022" elementFormDefault="qualified" attributeFormDefault="unqualified" xmlns="http://intermediacion.redsara.es/scsp/esquemas/datosespecificos/renta2022" xmlns:xs="http://www.w3.org/2001/XMLSchema">
   <!--Tipos básicos RENTA-->
   <xs:simpleType name="tipo_VersionXSD">
     <xs:restriction base="xs:string">
@@ -23531,7 +23549,7 @@
       <xs:attribute name="versionxsd" type="tipo_VersionXSD"/>
     </xs:complexType>
   </xs:element>
-</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>file:\C:\Users\CristianMorales\One%20Drive\OneDrive%20-%20Consorci%20Administració%20Oberta%20de%20Catalunya\Documents\GitHub\Integracio-AOC-SOAPUI\VO\VO - ESTAT\AEAT\schema_JAV3_ADWSIRPFXML_datos-especificos_renta2023.xsd</con:url><con:content><![CDATA[<xs:schema targetNamespace="http://intermediacion.redsara.es/scsp/esquemas/datosespecificos/renta2023" elementFormDefault="qualified" attributeFormDefault="unqualified" xmlns="http://intermediacion.redsara.es/scsp/esquemas/datosespecificos/renta2023" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>file:\c:\Users\CristianMorales\One%20Drive\OneDrive%20-%20Consorci%20Administració%20Oberta%20de%20Catalunya\Documents\GitHub\Integracio-AOC-SOAPUI\VO\VO - ESTAT\AEAT\schema_JAV3_ADWSIRPFXML_datos-especificos_renta2023.xsd</con:url><con:content><![CDATA[<xs:schema targetNamespace="http://intermediacion.redsara.es/scsp/esquemas/datosespecificos/renta2023" elementFormDefault="qualified" attributeFormDefault="unqualified" xmlns="http://intermediacion.redsara.es/scsp/esquemas/datosespecificos/renta2023" xmlns:xs="http://www.w3.org/2001/XMLSchema">
   <!--Tipos básicos RENTA-->
   <xs:simpleType name="tipo_VersionXSD">
     <xs:restriction base="xs:string">
@@ -28264,7 +28282,7 @@ estimación objetiva-->
       <xs:attribute name="versionxsd" type="tipo_VersionXSD"/>
     </xs:complexType>
   </xs:element>
-</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>file:\C:\Users\CristianMorales\One%20Drive\OneDrive%20-%20Consorci%20Administració%20Oberta%20de%20Catalunya\Documents\GitHub\Integracio-AOC-SOAPUI\VO\VO - ESTAT\AEAT\schema_JAV3_ADWSIRPFXML_datos-especificos_renta2024.xsd</con:url><con:content><![CDATA[<xs:schema targetNamespace="http://intermediacion.redsara.es/scsp/esquemas/datosespecificos/renta2024" elementFormDefault="qualified" attributeFormDefault="unqualified" xmlns="http://intermediacion.redsara.es/scsp/esquemas/datosespecificos/renta2024" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>file:\c:\Users\CristianMorales\One%20Drive\OneDrive%20-%20Consorci%20Administració%20Oberta%20de%20Catalunya\Documents\GitHub\Integracio-AOC-SOAPUI\VO\VO - ESTAT\AEAT\schema_JAV3_ADWSIRPFXML_datos-especificos_renta2024.xsd</con:url><con:content><![CDATA[<xs:schema targetNamespace="http://intermediacion.redsara.es/scsp/esquemas/datosespecificos/renta2024" elementFormDefault="qualified" attributeFormDefault="unqualified" xmlns="http://intermediacion.redsara.es/scsp/esquemas/datosespecificos/renta2024" xmlns:xs="http://www.w3.org/2001/XMLSchema">
   <!--Tipos básicos RENTA-->
   <xs:simpleType name="tipo_VersionXSD">
     <xs:restriction base="xs:string">
@@ -33218,7 +33236,7 @@ estimación objetiva-->
       <xs:attribute name="versionxsd" type="tipo_VersionXSD"/>
     </xs:complexType>
   </xs:element>
-</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>file:\C:\Users\CristianMorales\One%20Drive\OneDrive%20-%20Consorci%20Administració%20Oberta%20de%20Catalunya\Documents\GitHub\Integracio-AOC-SOAPUI\VO\VO - ESTAT\AEAT\dadesEspecifiques-ADWSIRPF.xsd</con:url><con:content><![CDATA[<xs:schema targetNamespace="http://www.aocat.net/aeat/irpf" elementFormDefault="qualified" attributeFormDefault="unqualified" xmlns="http://www.aocat.net/aeat/irpf" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:aeat="http://intermediacion.redsara.es/scsp/esquemas/datosespecificos">
+</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>file:\c:\Users\CristianMorales\One%20Drive\OneDrive%20-%20Consorci%20Administració%20Oberta%20de%20Catalunya\Documents\GitHub\Integracio-AOC-SOAPUI\VO\VO - ESTAT\AEAT\dadesEspecifiques-ADWSIRPF.xsd</con:url><con:content><![CDATA[<xs:schema targetNamespace="http://www.aocat.net/aeat/irpf" elementFormDefault="qualified" attributeFormDefault="unqualified" xmlns="http://www.aocat.net/aeat/irpf" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:aeat="http://intermediacion.redsara.es/scsp/esquemas/datosespecificos">
   <xs:import namespace="http://intermediacion.redsara.es/scsp/esquemas/datosespecificos" schemaLocation="ADWSIRPF_respuesta.xsd"/>
   <xs:element name="respostaConsultaIRPF">
     <xs:complexType>
@@ -33246,7 +33264,7 @@ estimación objetiva-->
       </xs:sequence>
     </xs:complexType>
   </xs:element>
-</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>file:\C:\Users\CristianMorales\One%20Drive\OneDrive%20-%20Consorci%20Administració%20Oberta%20de%20Catalunya\Documents\GitHub\Integracio-AOC-SOAPUI\VO\VO - ESTAT\AEAT\ADWSIRPF_respuesta.xsd</con:url><con:content><![CDATA[<xs:schema targetNamespace="http://intermediacion.redsara.es/scsp/esquemas/datosespecificos" elementFormDefault="qualified" attributeFormDefault="unqualified" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="http://intermediacion.redsara.es/scsp/esquemas/datosespecificos">
+</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>file:\c:\Users\CristianMorales\One%20Drive\OneDrive%20-%20Consorci%20Administració%20Oberta%20de%20Catalunya\Documents\GitHub\Integracio-AOC-SOAPUI\VO\VO - ESTAT\AEAT\ADWSIRPF_respuesta.xsd</con:url><con:content><![CDATA[<xs:schema targetNamespace="http://intermediacion.redsara.es/scsp/esquemas/datosespecificos" elementFormDefault="qualified" attributeFormDefault="unqualified" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="http://intermediacion.redsara.es/scsp/esquemas/datosespecificos">
   <xs:element name="DatosEspecificos">
     <xs:complexType>
       <xs:choice>
@@ -33872,7 +33890,7 @@ estimación objetiva-->
       </xs:choice>
     </xs:complexType>
   </xs:element>
-</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>file:\C:\Users\CristianMorales\One%20Drive\OneDrive%20-%20Consorci%20Administració%20Oberta%20de%20Catalunya\Documents\GitHub\Integracio-AOC-SOAPUI\VO\VO - ESTAT\TGSS\datos-especificos-Q2827003ATGSS006.xsd</con:url><con:content><![CDATA[<!--edited with XMLSPY v2004 rel. 2 U (http://www.xmlspy.com) by xmlspy (xmlspy)-->
+</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>file:\c:\Users\CristianMorales\One%20Drive\OneDrive%20-%20Consorci%20Administració%20Oberta%20de%20Catalunya\Documents\GitHub\Integracio-AOC-SOAPUI\VO\VO - ESTAT\TGSS\datos-especificos-Q2827003ATGSS006.xsd</con:url><con:content><![CDATA[<!--edited with XMLSPY v2004 rel. 2 U (http://www.xmlspy.com) by xmlspy (xmlspy)-->
 <xs:schema targetNamespace="http://www.tgss.es/altafecha/esquemas/afiliacion/datosespecificos" elementFormDefault="qualified" attributeFormDefault="unqualified" xmlns="http://www.tgss.es/altafecha/esquemas/afiliacion/datosespecificos" xmlns:xs="http://www.w3.org/2001/XMLSchema">
   <xs:element name="DatosEspecificos" type="DatosEspecificos"/>
   <xs:complexType name="DatosEspecificos">
@@ -33921,7 +33939,7 @@ estimación objetiva-->
       <!--edited with XMLSPY v2004 rel. 2 U (http://www.xmlspy.com) by xmlspy (xmlspy)-->
     </xs:all>
   </xs:complexType>
-</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>file:\C:\Users\CristianMorales\One%20Drive\OneDrive%20-%20Consorci%20Administració%20Oberta%20de%20Catalunya\Documents\GitHub\Integracio-AOC-SOAPUI\VO\VO - ESTAT\TGSS\datos-especificos-Q2827003ATGSS008.xsd</con:url><con:content><![CDATA[<!--edited with XMLSpy v2008 rel. 2 sp1 (http://www.altova.com) by AppsPortables (Aplicaciones Portables)-->
+</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>file:\c:\Users\CristianMorales\One%20Drive\OneDrive%20-%20Consorci%20Administració%20Oberta%20de%20Catalunya\Documents\GitHub\Integracio-AOC-SOAPUI\VO\VO - ESTAT\TGSS\datos-especificos-Q2827003ATGSS008.xsd</con:url><con:content><![CDATA[<!--edited with XMLSpy v2008 rel. 2 sp1 (http://www.altova.com) by AppsPortables (Aplicaciones Portables)-->
 <!--edited with XMLSPY v2004 rel. 2 U (http://www.xmlspy.com) by xmlspy (xmlspy)-->
 <xs:schema targetNamespace="http://www.tgss.es/actividadagraria/esquemas/afiliacion/datosespecificos" elementFormDefault="qualified" attributeFormDefault="unqualified" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="http://www.tgss.es/actividadagraria/esquemas/afiliacion/datosespecificos">
   <xs:element name="DatosEspecificos" type="DatosEspecificos"/>
@@ -34072,7 +34090,7 @@ estimación objetiva-->
       <!--edited with XMLSPY v2004 rel. 2 U (http://www.xmlspy.com) by xmlspy (xmlspy)-->
     </xs:all>
   </xs:complexType>
-</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>file:\C:\Users\CristianMorales\One%20Drive\OneDrive%20-%20Consorci%20Administració%20Oberta%20de%20Catalunya\Documents\GitHub\Integracio-AOC-SOAPUI\VO\VO - ESTAT\TGSS_VIDA_LAB\dadesEspecifiques.xsd</con:url><con:content><![CDATA[<xs:schema targetNamespace="http://www.aoc.cat/tgss" elementFormDefault="qualified" attributeFormDefault="unqualified" xmlns="http://www.aoc.cat/tgss" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>file:\c:\Users\CristianMorales\One%20Drive\OneDrive%20-%20Consorci%20Administració%20Oberta%20de%20Catalunya\Documents\GitHub\Integracio-AOC-SOAPUI\VO\VO - ESTAT\TGSS_VIDA_LAB\dadesEspecifiques.xsd</con:url><con:content><![CDATA[<xs:schema targetNamespace="http://www.aoc.cat/tgss" elementFormDefault="qualified" attributeFormDefault="unqualified" xmlns="http://www.aoc.cat/tgss" xmlns:xs="http://www.w3.org/2001/XMLSchema">
   <xs:element name="peticioConsultaVidaLaboral">
     <xs:complexType>
       <xs:sequence>
@@ -34278,7 +34296,7 @@ estimación objetiva-->
   <!--=======================================================-->
   <!--Tipus-->
   <!--=======================================================-->
-</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>file:\C:\Users\CristianMorales\One%20Drive\OneDrive%20-%20Consorci%20Administració%20Oberta%20de%20Catalunya\Documents\GitHub\Integracio-AOC-SOAPUI\VO\VO - ESTAT\DGP\dadesEspecifiques.xsd</con:url><con:content><![CDATA[<xs:schema targetNamespace="http://www.aoc.cat/dgp/identitat" elementFormDefault="qualified" attributeFormDefault="unqualified" xmlns="http://www.aoc.cat/dgp/identitat" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>file:\c:\Users\CristianMorales\One%20Drive\OneDrive%20-%20Consorci%20Administració%20Oberta%20de%20Catalunya\Documents\GitHub\Integracio-AOC-SOAPUI\VO\VO - ESTAT\DGP\dadesEspecifiques.xsd</con:url><con:content><![CDATA[<xs:schema targetNamespace="http://www.aoc.cat/dgp/identitat" elementFormDefault="qualified" attributeFormDefault="unqualified" xmlns="http://www.aoc.cat/dgp/identitat" xmlns:xs="http://www.w3.org/2001/XMLSchema">
   <!--=======================================================-->
   <!--Consulta dades identitat-->
   <!--=======================================================-->
@@ -34495,7 +34513,7 @@ estimación objetiva-->
       <xs:element ref="pais" minOccurs="0"/>
     </xs:all>
   </xs:complexType>
-</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>file:\C:\Users\CristianMorales\One%20Drive\OneDrive%20-%20Consorci%20Administració%20Oberta%20de%20Catalunya\Documents\GitHub\Integracio-AOC-SOAPUI\VO\VO - ESTAT\DGT\dadesEspecifiques-DGT_DADES_VEHICLE.xsd</con:url><con:content><![CDATA[<xs:schema targetNamespace="http://www.aoc.cat/dgt" elementFormDefault="qualified" attributeFormDefault="unqualified" xmlns="http://www.aoc.cat/dgt" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:dgt="http://intermediacion.redsara.es/scsp/esquemas/datosespecificos">
+</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>file:\c:\Users\CristianMorales\One%20Drive\OneDrive%20-%20Consorci%20Administració%20Oberta%20de%20Catalunya\Documents\GitHub\Integracio-AOC-SOAPUI\VO\VO - ESTAT\DGT\dadesEspecifiques-DGT_DADES_VEHICLE.xsd</con:url><con:content><![CDATA[<xs:schema targetNamespace="http://www.aoc.cat/dgt" elementFormDefault="qualified" attributeFormDefault="unqualified" xmlns="http://www.aoc.cat/dgt" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:dgt="http://intermediacion.redsara.es/scsp/esquemas/datosespecificos">
   <xs:import namespace="http://intermediacion.redsara.es/scsp/esquemas/datosespecificos" schemaLocation="datos-especificos-SVDDGTVEHICULODATOSWS01.xsd"/>
   <!--=======================================================-->
   <!--Consulta vehicles-->
@@ -34537,7 +34555,7 @@ estimación objetiva-->
       </xs:sequence>
     </xs:complexType>
   </xs:element>
-</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>file:\C:\Users\CristianMorales\One%20Drive\OneDrive%20-%20Consorci%20Administració%20Oberta%20de%20Catalunya\Documents\GitHub\Integracio-AOC-SOAPUI\VO\VO - ESTAT\DGT\datos-especificos-SVDDGTVEHICULODATOSWS01.xsd</con:url><con:content><![CDATA[<xs:schema targetNamespace="http://intermediacion.redsara.es/scsp/esquemas/datosespecificos" elementFormDefault="qualified" attributeFormDefault="unqualified" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="http://intermediacion.redsara.es/scsp/esquemas/datosespecificos">
+</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>file:\c:\Users\CristianMorales\One%20Drive\OneDrive%20-%20Consorci%20Administració%20Oberta%20de%20Catalunya\Documents\GitHub\Integracio-AOC-SOAPUI\VO\VO - ESTAT\DGT\datos-especificos-SVDDGTVEHICULODATOSWS01.xsd</con:url><con:content><![CDATA[<xs:schema targetNamespace="http://intermediacion.redsara.es/scsp/esquemas/datosespecificos" elementFormDefault="qualified" attributeFormDefault="unqualified" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="http://intermediacion.redsara.es/scsp/esquemas/datosespecificos">
   <xs:element name="DatosEspecificos">
     <xs:complexType>
       <xs:choice>
@@ -36046,7 +36064,7 @@ estimación objetiva-->
       </xs:sequence>
     </xs:complexType>
   </xs:element>
-</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>file:\C:\Users\CristianMorales\One%20Drive\OneDrive%20-%20Consorci%20Administració%20Oberta%20de%20Catalunya\Documents\GitHub\Integracio-AOC-SOAPUI\VO\VO - ESTAT\DGT\dadesEspecifiques-DGT_DADES_VEHICLE_IVTM.xsd</con:url><con:content><![CDATA[<xs:schema targetNamespace="http://www.aoc.cat/dgt" elementFormDefault="qualified" attributeFormDefault="unqualified" xmlns="http://www.aoc.cat/dgt" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:dgt="http://intermediacion.redsara.es/scsp/esquemas/datosespecificos">
+</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>file:\c:\Users\CristianMorales\One%20Drive\OneDrive%20-%20Consorci%20Administració%20Oberta%20de%20Catalunya\Documents\GitHub\Integracio-AOC-SOAPUI\VO\VO - ESTAT\DGT\dadesEspecifiques-DGT_DADES_VEHICLE_IVTM.xsd</con:url><con:content><![CDATA[<xs:schema targetNamespace="http://www.aoc.cat/dgt" elementFormDefault="qualified" attributeFormDefault="unqualified" xmlns="http://www.aoc.cat/dgt" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:dgt="http://intermediacion.redsara.es/scsp/esquemas/datosespecificos">
   <xs:import namespace="http://intermediacion.redsara.es/scsp/esquemas/datosespecificos" schemaLocation="datos-especificos-SVDDGTVEHICULOIVTMWS01.xsd"/>
   <!--=======================================================-->
   <!--Consulta vehicles	IVTM-->
@@ -36088,7 +36106,7 @@ estimación objetiva-->
       </xs:sequence>
     </xs:complexType>
   </xs:element>
-</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>file:\C:\Users\CristianMorales\One%20Drive\OneDrive%20-%20Consorci%20Administració%20Oberta%20de%20Catalunya\Documents\GitHub\Integracio-AOC-SOAPUI\VO\VO - ESTAT\DGT\datos-especificos-SVDDGTVEHICULOIVTMWS01.xsd</con:url><con:content><![CDATA[<xs:schema targetNamespace="http://intermediacion.redsara.es/scsp/esquemas/datosespecificos" elementFormDefault="qualified" attributeFormDefault="unqualified" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="http://intermediacion.redsara.es/scsp/esquemas/datosespecificos">
+</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>file:\c:\Users\CristianMorales\One%20Drive\OneDrive%20-%20Consorci%20Administració%20Oberta%20de%20Catalunya\Documents\GitHub\Integracio-AOC-SOAPUI\VO\VO - ESTAT\DGT\datos-especificos-SVDDGTVEHICULOIVTMWS01.xsd</con:url><con:content><![CDATA[<xs:schema targetNamespace="http://intermediacion.redsara.es/scsp/esquemas/datosespecificos" elementFormDefault="qualified" attributeFormDefault="unqualified" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="http://intermediacion.redsara.es/scsp/esquemas/datosespecificos">
   <xs:element name="DatosEspecificos">
     <xs:complexType>
       <xs:choice>
@@ -37620,7 +37638,7 @@ estimación objetiva-->
       </xs:sequence>
     </xs:complexType>
   </xs:element>
-</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>file:\C:\Users\CristianMorales\One%20Drive\OneDrive%20-%20Consorci%20Administració%20Oberta%20de%20Catalunya\Documents\GitHub\Integracio-AOC-SOAPUI\VO\VO - ESTAT\DGT\dadesEspecifiques-DGT_DADES_VEHICLE_SANCIONS.xsd</con:url><con:content><![CDATA[<xs:schema targetNamespace="http://www.aoc.cat/dgt" elementFormDefault="qualified" attributeFormDefault="unqualified" xmlns="http://www.aoc.cat/dgt" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:dgt="http://intermediacion.redsara.es/scsp/esquemas/datosespecificos">
+</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>file:\c:\Users\CristianMorales\One%20Drive\OneDrive%20-%20Consorci%20Administració%20Oberta%20de%20Catalunya\Documents\GitHub\Integracio-AOC-SOAPUI\VO\VO - ESTAT\DGT\dadesEspecifiques-DGT_DADES_VEHICLE_SANCIONS.xsd</con:url><con:content><![CDATA[<xs:schema targetNamespace="http://www.aoc.cat/dgt" elementFormDefault="qualified" attributeFormDefault="unqualified" xmlns="http://www.aoc.cat/dgt" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:dgt="http://intermediacion.redsara.es/scsp/esquemas/datosespecificos">
   <xs:import namespace="http://intermediacion.redsara.es/scsp/esquemas/datosespecificos" schemaLocation="datos-especificos-SVDDGTVEHICULOSANCWS01.xsd"/>
   <!--=======================================================-->
   <!--Consulta vehicles-->
@@ -37662,7 +37680,7 @@ estimación objetiva-->
       </xs:sequence>
     </xs:complexType>
   </xs:element>
-</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>file:\C:\Users\CristianMorales\One%20Drive\OneDrive%20-%20Consorci%20Administració%20Oberta%20de%20Catalunya\Documents\GitHub\Integracio-AOC-SOAPUI\VO\VO - ESTAT\DGT\datos-especificos-SVDDGTVEHICULOSANCWS01.xsd</con:url><con:content><![CDATA[<xs:schema targetNamespace="http://intermediacion.redsara.es/scsp/esquemas/datosespecificos" elementFormDefault="qualified" attributeFormDefault="unqualified" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="http://intermediacion.redsara.es/scsp/esquemas/datosespecificos">
+</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>file:\c:\Users\CristianMorales\One%20Drive\OneDrive%20-%20Consorci%20Administració%20Oberta%20de%20Catalunya\Documents\GitHub\Integracio-AOC-SOAPUI\VO\VO - ESTAT\DGT\datos-especificos-SVDDGTVEHICULOSANCWS01.xsd</con:url><con:content><![CDATA[<xs:schema targetNamespace="http://intermediacion.redsara.es/scsp/esquemas/datosespecificos" elementFormDefault="qualified" attributeFormDefault="unqualified" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="http://intermediacion.redsara.es/scsp/esquemas/datosespecificos">
   <xs:element name="DatosEspecificos">
     <xs:complexType>
       <xs:choice>
@@ -39141,7 +39159,7 @@ estimación objetiva-->
       </xs:sequence>
     </xs:complexType>
   </xs:element>
-</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>file:\C:\Users\CristianMorales\One%20Drive\OneDrive%20-%20Consorci%20Administració%20Oberta%20de%20Catalunya\Documents\GitHub\Integracio-AOC-SOAPUI\VO\VO - ESTAT\DGT\dadesEspecifiques-DGT_DISTINTIU_MEDIAMBIENTAL.xsd</con:url><con:content><![CDATA[<xs:schema targetNamespace="http://www.aoc.cat/dgt" elementFormDefault="qualified" attributeFormDefault="unqualified" xmlns="http://www.aoc.cat/dgt" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:dgt="http://intermediacion.redsara.es/scsp/esquemas/datosespecificos">
+</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>file:\c:\Users\CristianMorales\One%20Drive\OneDrive%20-%20Consorci%20Administració%20Oberta%20de%20Catalunya\Documents\GitHub\Integracio-AOC-SOAPUI\VO\VO - ESTAT\DGT\dadesEspecifiques-DGT_DISTINTIU_MEDIAMBIENTAL.xsd</con:url><con:content><![CDATA[<xs:schema targetNamespace="http://www.aoc.cat/dgt" elementFormDefault="qualified" attributeFormDefault="unqualified" xmlns="http://www.aoc.cat/dgt" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:dgt="http://intermediacion.redsara.es/scsp/esquemas/datosespecificos">
   <xs:import namespace="http://intermediacion.redsara.es/scsp/esquemas/datosespecificos" schemaLocation="datos-especificos-SVDDGTTARJETAAMBIENTALWS01.xsd"/>
   <!--=======================================================-->
   <!--Consulta distintiu mediambiental-->
@@ -39179,7 +39197,7 @@ estimación objetiva-->
       </xs:sequence>
     </xs:complexType>
   </xs:element>
-</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>file:\C:\Users\CristianMorales\One%20Drive\OneDrive%20-%20Consorci%20Administració%20Oberta%20de%20Catalunya\Documents\GitHub\Integracio-AOC-SOAPUI\VO\VO - ESTAT\DGT\datos-especificos-SVDDGTTARJETAAMBIENTALWS01.xsd</con:url><con:content><![CDATA[<xs:schema targetNamespace="http://intermediacion.redsara.es/scsp/esquemas/datosespecificos" elementFormDefault="qualified" attributeFormDefault="unqualified" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="http://intermediacion.redsara.es/scsp/esquemas/datosespecificos">
+</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>file:\c:\Users\CristianMorales\One%20Drive\OneDrive%20-%20Consorci%20Administració%20Oberta%20de%20Catalunya\Documents\GitHub\Integracio-AOC-SOAPUI\VO\VO - ESTAT\DGT\datos-especificos-SVDDGTTARJETAAMBIENTALWS01.xsd</con:url><con:content><![CDATA[<xs:schema targetNamespace="http://intermediacion.redsara.es/scsp/esquemas/datosespecificos" elementFormDefault="qualified" attributeFormDefault="unqualified" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="http://intermediacion.redsara.es/scsp/esquemas/datosespecificos">
   <xs:element name="DatosEspecificos">
     <xs:complexType>
       <xs:choice>
@@ -39312,7 +39330,7 @@ estimación objetiva-->
       <xs:documentation>Fecha de alta del distintivo, no indica una fecha exacta sino que el día indicado ese vehículo disponía de ese distintivo. Formato: YYYY-MM-DD</xs:documentation>
     </xs:annotation>
   </xs:element>
-</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>file:\C:\Users\CristianMorales\One%20Drive\OneDrive%20-%20Consorci%20Administració%20Oberta%20de%20Catalunya\Documents\GitHub\Integracio-AOC-SOAPUI\VO\VO - ESTAT\DGT\dadesEspecifiques-DGT_EUCARIS.xsd</con:url><con:content><![CDATA[<xs:schema targetNamespace="http://www.aoc.cat/dgt" elementFormDefault="qualified" attributeFormDefault="unqualified" xmlns="http://www.aoc.cat/dgt" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:dgt="http://intermediacion.redsara.es/scsp/esquemas/datosespecificos">
+</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>file:\c:\Users\CristianMorales\One%20Drive\OneDrive%20-%20Consorci%20Administració%20Oberta%20de%20Catalunya\Documents\GitHub\Integracio-AOC-SOAPUI\VO\VO - ESTAT\DGT\dadesEspecifiques-DGT_EUCARIS.xsd</con:url><con:content><![CDATA[<xs:schema targetNamespace="http://www.aoc.cat/dgt" elementFormDefault="qualified" attributeFormDefault="unqualified" xmlns="http://www.aoc.cat/dgt" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:dgt="http://intermediacion.redsara.es/scsp/esquemas/datosespecificos">
   <xs:import namespace="http://intermediacion.redsara.es/scsp/esquemas/datosespecificos" schemaLocation="datos-especificos-SVDDGTEUCARISWS01.xsd"/>
   <!--=======================================================-->
   <!--Consulta vehicles Eucaris-->
@@ -39416,7 +39434,7 @@ estimación objetiva-->
       </xs:sequence>
     </xs:complexType>
   </xs:element>
-</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>file:\C:\Users\CristianMorales\One%20Drive\OneDrive%20-%20Consorci%20Administració%20Oberta%20de%20Catalunya\Documents\GitHub\Integracio-AOC-SOAPUI\VO\VO - ESTAT\DGT\datos-especificos-SVDDGTEUCARISWS01.xsd</con:url><con:content><![CDATA[<!--edited with XMLSpy v2011 sp1 (http://www.altova.com) by End User (free.org)-->
+</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>file:\c:\Users\CristianMorales\One%20Drive\OneDrive%20-%20Consorci%20Administració%20Oberta%20de%20Catalunya\Documents\GitHub\Integracio-AOC-SOAPUI\VO\VO - ESTAT\DGT\datos-especificos-SVDDGTEUCARISWS01.xsd</con:url><con:content><![CDATA[<!--edited with XMLSpy v2011 sp1 (http://www.altova.com) by End User (free.org)-->
 <xs:schema targetNamespace="http://intermediacion.redsara.es/scsp/esquemas/datosespecificos" elementFormDefault="qualified" attributeFormDefault="unqualified" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="http://intermediacion.redsara.es/scsp/esquemas/datosespecificos">
   <xs:element name="DatosEspecificos">
     <xs:complexType>
@@ -39782,7 +39800,7 @@ estimación objetiva-->
       </xs:all>
     </xs:complexType>
   </xs:element>
-</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>file:\C:\Users\CristianMorales\One%20Drive\OneDrive%20-%20Consorci%20Administració%20Oberta%20de%20Catalunya\Documents\GitHub\Integracio-AOC-SOAPUI\VO\VO - ESTAT\DGT\dadesEspecifiques-DGT_PERMISOS_CONDUCTOR.xsd</con:url><con:content><![CDATA[<xs:schema targetNamespace="http://www.aoc.cat/dgt" elementFormDefault="qualified" attributeFormDefault="unqualified" xmlns="http://www.aoc.cat/dgt" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:dgt="http://intermediacion.redsara.es/scsp/esquemas/datosespecificos">
+</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>file:\c:\Users\CristianMorales\One%20Drive\OneDrive%20-%20Consorci%20Administració%20Oberta%20de%20Catalunya\Documents\GitHub\Integracio-AOC-SOAPUI\VO\VO - ESTAT\DGT\dadesEspecifiques-DGT_PERMISOS_CONDUCTOR.xsd</con:url><con:content><![CDATA[<xs:schema targetNamespace="http://www.aoc.cat/dgt" elementFormDefault="qualified" attributeFormDefault="unqualified" xmlns="http://www.aoc.cat/dgt" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:dgt="http://intermediacion.redsara.es/scsp/esquemas/datosespecificos">
   <xs:import namespace="http://intermediacion.redsara.es/scsp/esquemas/datosespecificos" schemaLocation="datos-especificos-SVDDGTCONDUCTORPERMISOWS01.xsd"/>
   <!--=======================================================-->
   <!--Permisos conductor-->
@@ -39813,7 +39831,7 @@ estimación objetiva-->
       </xs:sequence>
     </xs:complexType>
   </xs:element>
-</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>file:\C:\Users\CristianMorales\One%20Drive\OneDrive%20-%20Consorci%20Administració%20Oberta%20de%20Catalunya\Documents\GitHub\Integracio-AOC-SOAPUI\VO\VO - ESTAT\DGT\datos-especificos-SVDDGTCONDUCTORPERMISOWS01.xsd</con:url><con:content><![CDATA[<xs:schema targetNamespace="http://intermediacion.redsara.es/scsp/esquemas/datosespecificos" elementFormDefault="qualified" attributeFormDefault="unqualified" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="http://intermediacion.redsara.es/scsp/esquemas/datosespecificos">
+</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>file:\c:\Users\CristianMorales\One%20Drive\OneDrive%20-%20Consorci%20Administració%20Oberta%20de%20Catalunya\Documents\GitHub\Integracio-AOC-SOAPUI\VO\VO - ESTAT\DGT\datos-especificos-SVDDGTCONDUCTORPERMISOWS01.xsd</con:url><con:content><![CDATA[<xs:schema targetNamespace="http://intermediacion.redsara.es/scsp/esquemas/datosespecificos" elementFormDefault="qualified" attributeFormDefault="unqualified" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="http://intermediacion.redsara.es/scsp/esquemas/datosespecificos">
   <xs:element name="DatosEspecificos">
     <xs:complexType>
       <xs:all>
@@ -40001,7 +40019,7 @@ estimación objetiva-->
       </xs:sequence>
     </xs:complexType>
   </xs:element>
-</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>file:\C:\Users\CristianMorales\One%20Drive\OneDrive%20-%20Consorci%20Administració%20Oberta%20de%20Catalunya\Documents\GitHub\Integracio-AOC-SOAPUI\VO\VO - ESTAT\DGT\dadesEspecifiques-DGT_SANCIONS_CONDUCTOR.xsd</con:url><con:content><![CDATA[<xs:schema targetNamespace="http://www.aoc.cat/dgt" elementFormDefault="qualified" attributeFormDefault="unqualified" xmlns="http://www.aoc.cat/dgt" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:dgt="http://intermediacion.redsara.es/scsp/esquemas/datosespecificos">
+</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>file:\c:\Users\CristianMorales\One%20Drive\OneDrive%20-%20Consorci%20Administració%20Oberta%20de%20Catalunya\Documents\GitHub\Integracio-AOC-SOAPUI\VO\VO - ESTAT\DGT\dadesEspecifiques-DGT_SANCIONS_CONDUCTOR.xsd</con:url><con:content><![CDATA[<xs:schema targetNamespace="http://www.aoc.cat/dgt" elementFormDefault="qualified" attributeFormDefault="unqualified" xmlns="http://www.aoc.cat/dgt" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:dgt="http://intermediacion.redsara.es/scsp/esquemas/datosespecificos">
   <xs:import namespace="http://intermediacion.redsara.es/scsp/esquemas/datosespecificos" schemaLocation="datos-especificos-SVDDGTCONDUCTORSANCWS01.xsd"/>
   <!--=======================================================-->
   <!--Sancions conductor-->
@@ -40032,7 +40050,7 @@ estimación objetiva-->
       </xs:sequence>
     </xs:complexType>
   </xs:element>
-</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>file:\C:\Users\CristianMorales\One%20Drive\OneDrive%20-%20Consorci%20Administració%20Oberta%20de%20Catalunya\Documents\GitHub\Integracio-AOC-SOAPUI\VO\VO - ESTAT\DGT\datos-especificos-SVDDGTCONDUCTORSANCWS01.xsd</con:url><con:content><![CDATA[<!--edited with XMLSpy v2011 sp1 (http://www.altova.com) by End User (free.org)-->
+</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>file:\c:\Users\CristianMorales\One%20Drive\OneDrive%20-%20Consorci%20Administració%20Oberta%20de%20Catalunya\Documents\GitHub\Integracio-AOC-SOAPUI\VO\VO - ESTAT\DGT\datos-especificos-SVDDGTCONDUCTORSANCWS01.xsd</con:url><con:content><![CDATA[<!--edited with XMLSpy v2011 sp1 (http://www.altova.com) by End User (free.org)-->
 <xs:schema targetNamespace="http://intermediacion.redsara.es/scsp/esquemas/datosespecificos" elementFormDefault="qualified" attributeFormDefault="unqualified" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="http://intermediacion.redsara.es/scsp/esquemas/datosespecificos">
   <xs:element name="DatosEspecificos">
     <xs:complexType>
@@ -40878,7 +40896,7 @@ estimación objetiva-->
       </xs:sequence>
     </xs:complexType>
   </xs:element>
-</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>file:\C:\Users\CristianMorales\One%20Drive\OneDrive%20-%20Consorci%20Administració%20Oberta%20de%20Catalunya\Documents\GitHub\Integracio-AOC-SOAPUI\VO\VO - ESTAT\DGT\dadesEspecifiques-DGT_TITULAR_VIA.xsd</con:url><con:content><![CDATA[<xs:schema targetNamespace="http://www.aoc.cat/dgt" elementFormDefault="qualified" attributeFormDefault="unqualified" xmlns="http://www.aoc.cat/dgt" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:dgt="http://intermediacion.redsara.es/scsp/esquemas/datosespecificos">
+</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>file:\c:\Users\CristianMorales\One%20Drive\OneDrive%20-%20Consorci%20Administració%20Oberta%20de%20Catalunya\Documents\GitHub\Integracio-AOC-SOAPUI\VO\VO - ESTAT\DGT\dadesEspecifiques-DGT_TITULAR_VIA.xsd</con:url><con:content><![CDATA[<xs:schema targetNamespace="http://www.aoc.cat/dgt" elementFormDefault="qualified" attributeFormDefault="unqualified" xmlns="http://www.aoc.cat/dgt" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:dgt="http://intermediacion.redsara.es/scsp/esquemas/datosespecificos">
   <xs:import namespace="http://intermediacion.redsara.es/scsp/esquemas/datosespecificos" schemaLocation="datos-especificos-SVDDGTVEHICULODANOSVIAWS01.xsd"/>
   <!--=======================================================-->
   <!--Consulta titular via-->
@@ -40923,7 +40941,7 @@ estimación objetiva-->
       </xs:sequence>
     </xs:complexType>
   </xs:element>
-</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>file:\C:\Users\CristianMorales\One%20Drive\OneDrive%20-%20Consorci%20Administració%20Oberta%20de%20Catalunya\Documents\GitHub\Integracio-AOC-SOAPUI\VO\VO - ESTAT\DGT\datos-especificos-SVDDGTVEHICULODANOSVIAWS01.xsd</con:url><con:content><![CDATA[<xs:schema targetNamespace="http://intermediacion.redsara.es/scsp/esquemas/datosespecificos" elementFormDefault="qualified" attributeFormDefault="unqualified" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="http://intermediacion.redsara.es/scsp/esquemas/datosespecificos">
+</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>file:\c:\Users\CristianMorales\One%20Drive\OneDrive%20-%20Consorci%20Administració%20Oberta%20de%20Catalunya\Documents\GitHub\Integracio-AOC-SOAPUI\VO\VO - ESTAT\DGT\datos-especificos-SVDDGTVEHICULODANOSVIAWS01.xsd</con:url><con:content><![CDATA[<xs:schema targetNamespace="http://intermediacion.redsara.es/scsp/esquemas/datosespecificos" elementFormDefault="qualified" attributeFormDefault="unqualified" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="http://intermediacion.redsara.es/scsp/esquemas/datosespecificos">
   <xs:element name="DatosEspecificos">
     <xs:complexType>
       <xs:choice>
@@ -41442,7 +41460,7 @@ estimación objetiva-->
       </xs:sequence>
     </xs:complexType>
   </xs:element>
-</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>file:\C:\Users\CristianMorales\One%20Drive\OneDrive%20-%20Consorci%20Administració%20Oberta%20de%20Catalunya\Documents\GitHub\Integracio-AOC-SOAPUI\VO\VO - ESTAT\DGT\dadesEspecifiques-DGT_VEHICLES_CONDUCTOR.xsd</con:url><con:content><![CDATA[<xs:schema targetNamespace="http://www.aoc.cat/dgt" elementFormDefault="qualified" attributeFormDefault="unqualified" xmlns="http://www.aoc.cat/dgt" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:dgt="http://intermediacion.redsara.es/scsp/esquemas/datosespecificos">
+</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>file:\c:\Users\CristianMorales\One%20Drive\OneDrive%20-%20Consorci%20Administració%20Oberta%20de%20Catalunya\Documents\GitHub\Integracio-AOC-SOAPUI\VO\VO - ESTAT\DGT\dadesEspecifiques-DGT_VEHICLES_CONDUCTOR.xsd</con:url><con:content><![CDATA[<xs:schema targetNamespace="http://www.aoc.cat/dgt" elementFormDefault="qualified" attributeFormDefault="unqualified" xmlns="http://www.aoc.cat/dgt" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:dgt="http://intermediacion.redsara.es/scsp/esquemas/datosespecificos">
   <xs:import namespace="http://intermediacion.redsara.es/scsp/esquemas/datosespecificos" schemaLocation="datos-especificos-SVDDGTVEHICULOHISTWS01.xsd"/>
   <!--=======================================================-->
   <!--Vehicles conductor-->
@@ -41473,7 +41491,7 @@ estimación objetiva-->
       </xs:sequence>
     </xs:complexType>
   </xs:element>
-</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>file:\C:\Users\CristianMorales\One%20Drive\OneDrive%20-%20Consorci%20Administració%20Oberta%20de%20Catalunya\Documents\GitHub\Integracio-AOC-SOAPUI\VO\VO - ESTAT\DGT\datos-especificos-SVDDGTVEHICULOHISTWS01.xsd</con:url><con:content><![CDATA[<xs:schema targetNamespace="http://intermediacion.redsara.es/scsp/esquemas/datosespecificos" elementFormDefault="qualified" attributeFormDefault="unqualified" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="http://intermediacion.redsara.es/scsp/esquemas/datosespecificos">
+</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>file:\c:\Users\CristianMorales\One%20Drive\OneDrive%20-%20Consorci%20Administració%20Oberta%20de%20Catalunya\Documents\GitHub\Integracio-AOC-SOAPUI\VO\VO - ESTAT\DGT\datos-especificos-SVDDGTVEHICULOHISTWS01.xsd</con:url><con:content><![CDATA[<xs:schema targetNamespace="http://intermediacion.redsara.es/scsp/esquemas/datosespecificos" elementFormDefault="qualified" attributeFormDefault="unqualified" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="http://intermediacion.redsara.es/scsp/esquemas/datosespecificos">
   <xs:element name="DatosEspecificos">
     <xs:complexType>
       <xs:all>
@@ -41583,7 +41601,7 @@ estimación objetiva-->
       </xs:sequence>
     </xs:complexType>
   </xs:element>
-</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>file:\C:\Users\CristianMorales\One%20Drive\OneDrive%20-%20Consorci%20Administració%20Oberta%20de%20Catalunya\Documents\GitHub\Integracio-AOC-SOAPUI\VO\VO - ESTAT\DGT\dadesEspecifiques-DGT_VERIFICACIO_TITULAR.xsd</con:url><con:content><![CDATA[<xs:schema targetNamespace="http://www.aoc.cat/dgt" elementFormDefault="qualified" attributeFormDefault="unqualified" xmlns="http://www.aoc.cat/dgt" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:dgt="http://intermediacion.redsara.es/scsp/esquemas/datosespecificos">
+</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>file:\c:\Users\CristianMorales\One%20Drive\OneDrive%20-%20Consorci%20Administració%20Oberta%20de%20Catalunya\Documents\GitHub\Integracio-AOC-SOAPUI\VO\VO - ESTAT\DGT\dadesEspecifiques-DGT_VERIFICACIO_TITULAR.xsd</con:url><con:content><![CDATA[<xs:schema targetNamespace="http://www.aoc.cat/dgt" elementFormDefault="qualified" attributeFormDefault="unqualified" xmlns="http://www.aoc.cat/dgt" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:dgt="http://intermediacion.redsara.es/scsp/esquemas/datosespecificos">
   <xs:import namespace="http://intermediacion.redsara.es/scsp/esquemas/datosespecificos" schemaLocation="datos-especificos-SVDDGTVERIFICATITULARVEHICULOWS01.xsd"/>
   <!--=======================================================-->
   <!--Verificació titular-->
@@ -41630,7 +41648,7 @@ estimación objetiva-->
       </xs:sequence>
     </xs:complexType>
   </xs:element>
-</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>file:\C:\Users\CristianMorales\One%20Drive\OneDrive%20-%20Consorci%20Administració%20Oberta%20de%20Catalunya\Documents\GitHub\Integracio-AOC-SOAPUI\VO\VO - ESTAT\DGT\datos-especificos-SVDDGTVERIFICATITULARVEHICULOWS01.xsd</con:url><con:content><![CDATA[<xs:schema targetNamespace="http://intermediacion.redsara.es/scsp/esquemas/datosespecificos" elementFormDefault="qualified" attributeFormDefault="unqualified" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="http://intermediacion.redsara.es/scsp/esquemas/datosespecificos">
+</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>file:\c:\Users\CristianMorales\One%20Drive\OneDrive%20-%20Consorci%20Administració%20Oberta%20de%20Catalunya\Documents\GitHub\Integracio-AOC-SOAPUI\VO\VO - ESTAT\DGT\datos-especificos-SVDDGTVERIFICATITULARVEHICULOWS01.xsd</con:url><con:content><![CDATA[<xs:schema targetNamespace="http://intermediacion.redsara.es/scsp/esquemas/datosespecificos" elementFormDefault="qualified" attributeFormDefault="unqualified" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="http://intermediacion.redsara.es/scsp/esquemas/datosespecificos">
   <xs:element name="DatosEspecificos">
     <xs:complexType>
       <xs:choice>
@@ -41721,7 +41739,7 @@ estimación objetiva-->
       </xs:restriction>
     </xs:simpleType>
   </xs:element>
-</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>file:\C:\Users\CristianMorales\One%20Drive\OneDrive%20-%20Consorci%20Administració%20Oberta%20de%20Catalunya\Documents\GitHub\Integracio-AOC-SOAPUI\VO\VO - ESTAT\DGT\dadesEspecifiques-DGT_HISTORIAL_DOMICILIS_PROPIETARI.xsd</con:url><con:content><![CDATA[<xs:schema targetNamespace="http://www.aoc.cat/dgt" elementFormDefault="qualified" attributeFormDefault="unqualified" xmlns="http://www.aoc.cat/dgt" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:dgt="http://intermediacion.redsara.es/scsp/esquemas/datosespecificos">
+</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>file:\c:\Users\CristianMorales\One%20Drive\OneDrive%20-%20Consorci%20Administració%20Oberta%20de%20Catalunya\Documents\GitHub\Integracio-AOC-SOAPUI\VO\VO - ESTAT\DGT\dadesEspecifiques-DGT_HISTORIAL_DOMICILIS_PROPIETARI.xsd</con:url><con:content><![CDATA[<xs:schema targetNamespace="http://www.aoc.cat/dgt" elementFormDefault="qualified" attributeFormDefault="unqualified" xmlns="http://www.aoc.cat/dgt" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:dgt="http://intermediacion.redsara.es/scsp/esquemas/datosespecificos">
   <xs:import namespace="http://intermediacion.redsara.es/scsp/esquemas/datosespecificos" schemaLocation="datos-especificos-SVDDGTHISTORIALDOMICILIOPROPIETARIOWS01.xsd"/>
   <!--=======================================================-->
   <!--Historial domicilis propietari-->
@@ -41760,7 +41778,7 @@ estimación objetiva-->
       </xs:sequence>
     </xs:complexType>
   </xs:element>
-</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>file:\C:\Users\CristianMorales\One%20Drive\OneDrive%20-%20Consorci%20Administració%20Oberta%20de%20Catalunya\Documents\GitHub\Integracio-AOC-SOAPUI\VO\VO - ESTAT\DGT\datos-especificos-SVDDGTHISTORIALDOMICILIOPROPIETARIOWS01.xsd</con:url><con:content><![CDATA[<xs:schema targetNamespace="http://intermediacion.redsara.es/scsp/esquemas/datosespecificos" elementFormDefault="qualified" attributeFormDefault="unqualified" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="http://intermediacion.redsara.es/scsp/esquemas/datosespecificos">
+</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>file:\c:\Users\CristianMorales\One%20Drive\OneDrive%20-%20Consorci%20Administració%20Oberta%20de%20Catalunya\Documents\GitHub\Integracio-AOC-SOAPUI\VO\VO - ESTAT\DGT\datos-especificos-SVDDGTHISTORIALDOMICILIOPROPIETARIOWS01.xsd</con:url><con:content><![CDATA[<xs:schema targetNamespace="http://intermediacion.redsara.es/scsp/esquemas/datosespecificos" elementFormDefault="qualified" attributeFormDefault="unqualified" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="http://intermediacion.redsara.es/scsp/esquemas/datosespecificos">
   <xs:element name="DatosEspecificos">
     <xs:complexType>
       <xs:choice>
@@ -41903,7 +41921,7 @@ estimación objetiva-->
   <xs:simpleType name="Fecha">
     <xs:restriction base="xs:date"/>
   </xs:simpleType>
-</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>file:\C:\Users\CristianMorales\One%20Drive\OneDrive%20-%20Consorci%20Administració%20Oberta%20de%20Catalunya\Documents\GitHub\Integracio-AOC-SOAPUI\VO\VO - ESTAT\DGT\dadesEspecifiques-DGT_HISTORIAL_DOMICILIS_VEHICLE.xsd</con:url><con:content><![CDATA[<xs:schema targetNamespace="http://www.aoc.cat/dgt" elementFormDefault="qualified" attributeFormDefault="unqualified" xmlns="http://www.aoc.cat/dgt" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:dgt="http://intermediacion.redsara.es/scsp/esquemas/datosespecificos">
+</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>file:\c:\Users\CristianMorales\One%20Drive\OneDrive%20-%20Consorci%20Administració%20Oberta%20de%20Catalunya\Documents\GitHub\Integracio-AOC-SOAPUI\VO\VO - ESTAT\DGT\dadesEspecifiques-DGT_HISTORIAL_DOMICILIS_VEHICLE.xsd</con:url><con:content><![CDATA[<xs:schema targetNamespace="http://www.aoc.cat/dgt" elementFormDefault="qualified" attributeFormDefault="unqualified" xmlns="http://www.aoc.cat/dgt" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:dgt="http://intermediacion.redsara.es/scsp/esquemas/datosespecificos">
   <xs:import namespace="http://intermediacion.redsara.es/scsp/esquemas/datosespecificos" schemaLocation="datos-especificos-SVDDGTHISTORIALDOMICILIOVEHICULOWS01.xsd"/>
   <!--=======================================================-->
   <!--Historial domicilis vehicles-->
@@ -41943,7 +41961,7 @@ estimación objetiva-->
       </xs:sequence>
     </xs:complexType>
   </xs:element>
-</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>file:\C:\Users\CristianMorales\One%20Drive\OneDrive%20-%20Consorci%20Administració%20Oberta%20de%20Catalunya\Documents\GitHub\Integracio-AOC-SOAPUI\VO\VO - ESTAT\DGT\datos-especificos-SVDDGTHISTORIALDOMICILIOVEHICULOWS01.xsd</con:url><con:content><![CDATA[<xs:schema targetNamespace="http://intermediacion.redsara.es/scsp/esquemas/datosespecificos" elementFormDefault="qualified" attributeFormDefault="unqualified" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="http://intermediacion.redsara.es/scsp/esquemas/datosespecificos">
+</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>file:\c:\Users\CristianMorales\One%20Drive\OneDrive%20-%20Consorci%20Administració%20Oberta%20de%20Catalunya\Documents\GitHub\Integracio-AOC-SOAPUI\VO\VO - ESTAT\DGT\datos-especificos-SVDDGTHISTORIALDOMICILIOVEHICULOWS01.xsd</con:url><con:content><![CDATA[<xs:schema targetNamespace="http://intermediacion.redsara.es/scsp/esquemas/datosespecificos" elementFormDefault="qualified" attributeFormDefault="unqualified" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="http://intermediacion.redsara.es/scsp/esquemas/datosespecificos">
   <xs:element name="DatosEspecificos">
     <xs:complexType>
       <xs:choice>
@@ -42137,7 +42155,7 @@ estimación objetiva-->
       </xs:restriction>
     </xs:simpleType>
   </xs:element>
-</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>file:\C:\Users\CristianMorales\One%20Drive\OneDrive%20-%20Consorci%20Administració%20Oberta%20de%20Catalunya\Documents\GitHub\Integracio-AOC-SOAPUI\VO\VO - ESTAT\DGT\dadesEspecifiques-DGT_DADES_VEHICLE_CAMERES.xsd</con:url><con:content><![CDATA[<xs:schema targetNamespace="http://www.aoc.cat/dgt" elementFormDefault="qualified" attributeFormDefault="unqualified" xmlns="http://www.aoc.cat/dgt" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:dgt="http://intermediacion.redsara.es/scsp/esquemas/datosespecificos">
+</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>file:\c:\Users\CristianMorales\One%20Drive\OneDrive%20-%20Consorci%20Administració%20Oberta%20de%20Catalunya\Documents\GitHub\Integracio-AOC-SOAPUI\VO\VO - ESTAT\DGT\dadesEspecifiques-DGT_DADES_VEHICLE_CAMERES.xsd</con:url><con:content><![CDATA[<xs:schema targetNamespace="http://www.aoc.cat/dgt" elementFormDefault="qualified" attributeFormDefault="unqualified" xmlns="http://www.aoc.cat/dgt" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:dgt="http://intermediacion.redsara.es/scsp/esquemas/datosespecificos">
   <xs:import namespace="http://intermediacion.redsara.es/scsp/esquemas/datosespecificos" schemaLocation="datos-especificos-SVDDGTVEHICULOCAMARASWS01.xsd"/>
   <!--=======================================================-->
   <!--Consulta vehicle càmeres-->
@@ -42175,7 +42193,7 @@ estimación objetiva-->
       </xs:sequence>
     </xs:complexType>
   </xs:element>
-</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>file:\C:\Users\CristianMorales\One%20Drive\OneDrive%20-%20Consorci%20Administració%20Oberta%20de%20Catalunya\Documents\GitHub\Integracio-AOC-SOAPUI\VO\VO - ESTAT\DGT\datos-especificos-SVDDGTVEHICULOCAMARASWS01.xsd</con:url><con:content><![CDATA[<xs:schema targetNamespace="http://intermediacion.redsara.es/scsp/esquemas/datosespecificos" elementFormDefault="qualified" attributeFormDefault="unqualified" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="http://intermediacion.redsara.es/scsp/esquemas/datosespecificos">
+</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>file:\c:\Users\CristianMorales\One%20Drive\OneDrive%20-%20Consorci%20Administració%20Oberta%20de%20Catalunya\Documents\GitHub\Integracio-AOC-SOAPUI\VO\VO - ESTAT\DGT\datos-especificos-SVDDGTVEHICULOCAMARASWS01.xsd</con:url><con:content><![CDATA[<xs:schema targetNamespace="http://intermediacion.redsara.es/scsp/esquemas/datosespecificos" elementFormDefault="qualified" attributeFormDefault="unqualified" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="http://intermediacion.redsara.es/scsp/esquemas/datosespecificos">
   <xs:element name="DatosEspecificos">
     <xs:complexType>
       <xs:choice>
@@ -42535,7 +42553,7 @@ estimación objetiva-->
   <xs:simpleType name="Fecha">
     <xs:restriction base="xs:date"/>
   </xs:simpleType>
-</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>file:\C:\Users\CristianMorales\One%20Drive\OneDrive%20-%20Consorci%20Administració%20Oberta%20de%20Catalunya\Documents\GitHub\Integracio-AOC-SOAPUI\VO\VO - ESTAT\CADASTRE\dadesEspecifiques-CERTIFICACIO_TITULARITAT.xsd</con:url><con:content><![CDATA[<xs:schema targetNamespace="http://www.aocat.net/cadastre" elementFormDefault="qualified" attributeFormDefault="unqualified" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="http://www.aocat.net/cadastre" xmlns:map="http://www.map.es/scsp/esquemas/datosespecificos">
+</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>file:\c:\Users\CristianMorales\One%20Drive\OneDrive%20-%20Consorci%20Administració%20Oberta%20de%20Catalunya\Documents\GitHub\Integracio-AOC-SOAPUI\VO\VO - ESTAT\CADASTRE\dadesEspecifiques-CERTIFICACIO_TITULARITAT.xsd</con:url><con:content><![CDATA[<xs:schema targetNamespace="http://www.aocat.net/cadastre" elementFormDefault="qualified" attributeFormDefault="unqualified" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="http://www.aocat.net/cadastre" xmlns:map="http://www.map.es/scsp/esquemas/datosespecificos">
   <xs:import namespace="http://www.map.es/scsp/esquemas/datosespecificos" schemaLocation="datos-especificos-CertificacionTitularidad.xsd"/>
   <!--=======================================================-->
   <!--CertificacionTitular-->
@@ -42567,7 +42585,7 @@ estimación objetiva-->
       </xs:sequence>
     </xs:complexType>
   </xs:element>
-</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>file:\C:\Users\CristianMorales\One%20Drive\OneDrive%20-%20Consorci%20Administració%20Oberta%20de%20Catalunya\Documents\GitHub\Integracio-AOC-SOAPUI\VO\VO - ESTAT\CADASTRE\datos-especificos-CertificacionTitularidad.xsd</con:url><con:content><![CDATA[<xs:schema targetNamespace="http://www.map.es/scsp/esquemas/datosespecificos" elementFormDefault="qualified" attributeFormDefault="unqualified" xmlns="http://www.map.es/scsp/esquemas/datosespecificos" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>file:\c:\Users\CristianMorales\One%20Drive\OneDrive%20-%20Consorci%20Administració%20Oberta%20de%20Catalunya\Documents\GitHub\Integracio-AOC-SOAPUI\VO\VO - ESTAT\CADASTRE\datos-especificos-CertificacionTitularidad.xsd</con:url><con:content><![CDATA[<xs:schema targetNamespace="http://www.map.es/scsp/esquemas/datosespecificos" elementFormDefault="qualified" attributeFormDefault="unqualified" xmlns="http://www.map.es/scsp/esquemas/datosespecificos" xmlns:xs="http://www.w3.org/2001/XMLSchema">
   <xs:element name="DatosEspecificos" type="DatosEspecificos"/>
   <xs:complexType name="DatosEspecificos">
     <xs:all>
@@ -42717,7 +42735,7 @@ estimación objetiva-->
   <!--CAOC-->
   <xs:element name="DatosEntrada" type="DatosEntrada"/>
   <xs:element name="DatosSalida" type="DatosSalida"/>
-</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>file:\C:\Users\CristianMorales\One%20Drive\OneDrive%20-%20Consorci%20Administració%20Oberta%20de%20Catalunya\Documents\GitHub\Integracio-AOC-SOAPUI\VO\VO - ESTAT\CADASTRE\dadesEspecifiques-DADES_CADASTRALS.xsd</con:url><con:content><![CDATA[<xs:schema targetNamespace="http://www.aocat.net/cadastre" elementFormDefault="qualified" attributeFormDefault="unqualified" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="http://www.aocat.net/cadastre" xmlns:map="http://www.map.es/scsp/esquemas/datosespecificos">
+</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>file:\c:\Users\CristianMorales\One%20Drive\OneDrive%20-%20Consorci%20Administració%20Oberta%20de%20Catalunya\Documents\GitHub\Integracio-AOC-SOAPUI\VO\VO - ESTAT\CADASTRE\dadesEspecifiques-DADES_CADASTRALS.xsd</con:url><con:content><![CDATA[<xs:schema targetNamespace="http://www.aocat.net/cadastre" elementFormDefault="qualified" attributeFormDefault="unqualified" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="http://www.aocat.net/cadastre" xmlns:map="http://www.map.es/scsp/esquemas/datosespecificos">
   <xs:import namespace="http://www.map.es/scsp/esquemas/datosespecificos" schemaLocation="datos-especificos-ConsultaDatos.xsd"/>
   <!--=======================================================-->
   <!--ConsultaDatos-->
@@ -42749,7 +42767,7 @@ estimación objetiva-->
       </xs:sequence>
     </xs:complexType>
   </xs:element>
-</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>file:\C:\Users\CristianMorales\One%20Drive\OneDrive%20-%20Consorci%20Administració%20Oberta%20de%20Catalunya\Documents\GitHub\Integracio-AOC-SOAPUI\VO\VO - ESTAT\CADASTRE\datos-especificos-ConsultaDatos.xsd</con:url><con:content><![CDATA[<xs:schema targetNamespace="http://www.map.es/scsp/esquemas/datosespecificos" elementFormDefault="qualified" attributeFormDefault="unqualified" xmlns="http://www.map.es/scsp/esquemas/datosespecificos" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>file:\c:\Users\CristianMorales\One%20Drive\OneDrive%20-%20Consorci%20Administració%20Oberta%20de%20Catalunya\Documents\GitHub\Integracio-AOC-SOAPUI\VO\VO - ESTAT\CADASTRE\datos-especificos-ConsultaDatos.xsd</con:url><con:content><![CDATA[<xs:schema targetNamespace="http://www.map.es/scsp/esquemas/datosespecificos" elementFormDefault="qualified" attributeFormDefault="unqualified" xmlns="http://www.map.es/scsp/esquemas/datosespecificos" xmlns:xs="http://www.w3.org/2001/XMLSchema">
   <xs:element name="DatosEspecificos" type="DatosEspecificos"/>
   <xs:complexType name="DatosEspecificos">
     <xs:all>
@@ -46905,7 +46923,7 @@ estimación objetiva-->
   <!--CAOC-->
   <xs:element name="DatosEntrada" type="DatosEntrada"/>
   <xs:element name="listaBienesInmuebles" type="listaBienesInmuebles"/>
-</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>file:\C:\Users\CristianMorales\One%20Drive\OneDrive%20-%20Consorci%20Administració%20Oberta%20de%20Catalunya\Documents\GitHub\Integracio-AOC-SOAPUI\VO\VO - ESTAT\CADASTRE\dadesEspecifiques-DESCRIPTIVA_GRAFICA.xsd</con:url><con:content><![CDATA[<xs:schema targetNamespace="http://www.aocat.net/cadastre" elementFormDefault="qualified" attributeFormDefault="unqualified" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="http://www.aocat.net/cadastre" xmlns:map="http://www.map.es/scsp/esquemas/datosespecificos">
+</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>file:\c:\Users\CristianMorales\One%20Drive\OneDrive%20-%20Consorci%20Administració%20Oberta%20de%20Catalunya\Documents\GitHub\Integracio-AOC-SOAPUI\VO\VO - ESTAT\CADASTRE\dadesEspecifiques-DESCRIPTIVA_GRAFICA.xsd</con:url><con:content><![CDATA[<xs:schema targetNamespace="http://www.aocat.net/cadastre" elementFormDefault="qualified" attributeFormDefault="unqualified" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="http://www.aocat.net/cadastre" xmlns:map="http://www.map.es/scsp/esquemas/datosespecificos">
   <xs:import namespace="http://www.map.es/scsp/esquemas/datosespecificos" schemaLocation="datos-especificos-ObtenerDescriptivaYGrafica.xsd"/>
   <!--=======================================================-->
   <!--DescriptivaYGrafica-->
@@ -46937,7 +46955,7 @@ estimación objetiva-->
       </xs:sequence>
     </xs:complexType>
   </xs:element>
-</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>file:\C:\Users\CristianMorales\One%20Drive\OneDrive%20-%20Consorci%20Administració%20Oberta%20de%20Catalunya\Documents\GitHub\Integracio-AOC-SOAPUI\VO\VO - ESTAT\CADASTRE\datos-especificos-ObtenerDescriptivaYGrafica.xsd</con:url><con:content><![CDATA[<xs:schema targetNamespace="http://www.map.es/scsp/esquemas/datosespecificos" elementFormDefault="qualified" attributeFormDefault="unqualified" xmlns="http://www.map.es/scsp/esquemas/datosespecificos" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>file:\c:\Users\CristianMorales\One%20Drive\OneDrive%20-%20Consorci%20Administració%20Oberta%20de%20Catalunya\Documents\GitHub\Integracio-AOC-SOAPUI\VO\VO - ESTAT\CADASTRE\datos-especificos-ObtenerDescriptivaYGrafica.xsd</con:url><con:content><![CDATA[<xs:schema targetNamespace="http://www.map.es/scsp/esquemas/datosespecificos" elementFormDefault="qualified" attributeFormDefault="unqualified" xmlns="http://www.map.es/scsp/esquemas/datosespecificos" xmlns:xs="http://www.w3.org/2001/XMLSchema">
   <xs:element name="DatosEspecificos" type="DatosEspecificos"/>
   <xs:complexType name="DatosEspecificos">
     <xs:all>
@@ -47139,7 +47157,7 @@ estimación objetiva-->
   <!--CAOC-->
   <xs:element name="DatosEntrada" type="DatosEntrada"/>
   <xs:element name="DatosSalida" type="DatosSalida"/>
-</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>file:\C:\Users\CristianMorales\One%20Drive\OneDrive%20-%20Consorci%20Administració%20Oberta%20de%20Catalunya\Documents\GitHub\Integracio-AOC-SOAPUI\VO\VO - ESTAT\INSS_TSD\dadesEspecifiques.xsd</con:url><con:content><![CDATA[<xs:schema targetNamespace="http://www.aoc.cat/inss/tsd" elementFormDefault="qualified" attributeFormDefault="unqualified" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="http://www.aoc.cat/inss/tsd">
+</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>file:\c:\Users\CristianMorales\One%20Drive\OneDrive%20-%20Consorci%20Administració%20Oberta%20de%20Catalunya\Documents\GitHub\Integracio-AOC-SOAPUI\VO\VO - ESTAT\INSS_TSD\dadesEspecifiques.xsd</con:url><con:content><![CDATA[<xs:schema targetNamespace="http://www.aoc.cat/inss/tsd" elementFormDefault="qualified" attributeFormDefault="unqualified" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="http://www.aoc.cat/inss/tsd">
   <!--=======================================================-->
   <!--TSD_DADES_ECONOMIQUES-->
   <!--=======================================================-->
@@ -47430,7 +47448,7 @@ estimación objetiva-->
       </xs:sequence>
     </xs:complexType>
   </xs:element>
-</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>file:\C:\Users\CristianMorales\One%20Drive\OneDrive%20-%20Consorci%20Administració%20Oberta%20de%20Catalunya\Documents\GitHub\Integracio-AOC-SOAPUI\VO\VO - ESTAT\REG_CIVIL\dadesEspecifiques.xsd</con:url><con:content><![CDATA[<xs:schema targetNamespace="http://www.aoc.cat/registre-civil" elementFormDefault="qualified" attributeFormDefault="unqualified" xmlns="http://www.aoc.cat/registre-civil" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>file:\c:\Users\CristianMorales\One%20Drive\OneDrive%20-%20Consorci%20Administració%20Oberta%20de%20Catalunya\Documents\GitHub\Integracio-AOC-SOAPUI\VO\VO - ESTAT\REG_CIVIL\dadesEspecifiques.xsd</con:url><con:content><![CDATA[<xs:schema targetNamespace="http://www.aoc.cat/registre-civil" elementFormDefault="qualified" attributeFormDefault="unqualified" xmlns="http://www.aoc.cat/registre-civil" xmlns:xs="http://www.w3.org/2001/XMLSchema">
   <xs:element name="peticioConsultaRegistreCivil">
     <xs:complexType>
       <xs:sequence>
@@ -47593,7 +47611,7 @@ estimación objetiva-->
       <xs:enumeration value="D"/>
     </xs:restriction>
   </xs:simpleType>
-</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>file:\C:\Users\CristianMorales\One%20Drive\OneDrive%20-%20Consorci%20Administració%20Oberta%20de%20Catalunya\Documents\GitHub\Integracio-AOC-SOAPUI\VO\VO - ESTAT\ANT_PENAL\dadesEspecifiques.xsd</con:url><con:content><![CDATA[<xs:schema targetNamespace="http://www.aoc.cat/antecedents-penals" elementFormDefault="qualified" attributeFormDefault="unqualified" xmlns="http://www.aoc.cat/antecedents-penals" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>file:\c:\Users\CristianMorales\One%20Drive\OneDrive%20-%20Consorci%20Administració%20Oberta%20de%20Catalunya\Documents\GitHub\Integracio-AOC-SOAPUI\VO\VO - ESTAT\ANT_PENAL\dadesEspecifiques.xsd</con:url><con:content><![CDATA[<xs:schema targetNamespace="http://www.aoc.cat/antecedents-penals" elementFormDefault="qualified" attributeFormDefault="unqualified" xmlns="http://www.aoc.cat/antecedents-penals" xmlns:xs="http://www.w3.org/2001/XMLSchema">
   <xs:complexType name="tAntecedentsPenals">
     <xs:sequence>
       <xs:choice>
@@ -47827,7 +47845,7 @@ estimación objetiva-->
       </xs:sequence>
     </xs:complexType>
   </xs:element>
-</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>file:\C:\Users\CristianMorales\One%20Drive\OneDrive%20-%20Consorci%20Administració%20Oberta%20de%20Catalunya\Documents\GitHub\Integracio-AOC-SOAPUI\MUX\PeticioMUX2.xsd</con:url><con:content><![CDATA[<xs:schema targetNamespace="http://net.aocat/MUX2/PeticioRegistre" elementFormDefault="qualified" attributeFormDefault="unqualified" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:pet="http://net.aocat/MUX2/PeticioRegistre">
+</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>file:\c:\Users\CristianMorales\One%20Drive\OneDrive%20-%20Consorci%20Administració%20Oberta%20de%20Catalunya\Documents\GitHub\Integracio-AOC-SOAPUI\MUX\PeticioMUX2.xsd</con:url><con:content><![CDATA[<xs:schema targetNamespace="http://net.aocat/MUX2/PeticioRegistre" elementFormDefault="qualified" attributeFormDefault="unqualified" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:pet="http://net.aocat/MUX2/PeticioRegistre">
   <xs:element name="PeticioRegistre">
     <xs:complexType>
       <xs:choice>
@@ -48484,7 +48502,7 @@ estimación objetiva-->
       <xs:element name="NumeroAssentamentSortida" type="xs:string"/>
     </xs:choice>
   </xs:complexType>
-</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>file:\C:\Users\CristianMorales\One%20Drive\OneDrive%20-%20Consorci%20Administració%20Oberta%20de%20Catalunya\Documents\GitHub\Integracio-AOC-SOAPUI\RPC\dadesEspecifiques.xsd</con:url><con:content><![CDATA[<xs:schema elementFormDefault="qualified" targetNamespace="http://cat.aoc/rpc/peticion" version="1.0" xmlns:ns1="http://schemas.xmlsoap.org/soap/http" xmlns:pet="http://cat.aoc/rpc/peticion" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tns="http://cat.aoc/rpc/peticion" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>file:\c:\Users\CristianMorales\One%20Drive\OneDrive%20-%20Consorci%20Administració%20Oberta%20de%20Catalunya\Documents\GitHub\Integracio-AOC-SOAPUI\RPC\dadesEspecifiques.xsd</con:url><con:content><![CDATA[<xs:schema elementFormDefault="qualified" targetNamespace="http://cat.aoc/rpc/peticion" version="1.0" xmlns:ns1="http://schemas.xmlsoap.org/soap/http" xmlns:pet="http://cat.aoc/rpc/peticion" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tns="http://cat.aoc/rpc/peticion" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <xs:element name="comunicacio" type="tns:comunicacio"/>
   <xs:complexType name="comunicacio">
     <xs:sequence>
@@ -50055,7 +50073,7 @@ estimación objetiva-->
       <xs:element name="idModificacioLot" type="tns:idModificacioLot"/>
     </xs:sequence>
   </xs:complexType>
-</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>file:\C:\Users\CristianMorales\One%20Drive\OneDrive%20-%20Consorci%20Administració%20Oberta%20de%20Catalunya\Documents\GitHub\Integracio-AOC-SOAPUI\VO\VO - ESTAT\IGAE\dadesEspecifiques.xsd</con:url><con:content><![CDATA[<xs:schema targetNamespace="http://www.aoc.cat/igae" elementFormDefault="qualified" attributeFormDefault="unqualified" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="http://www.aoc.cat/igae">
+</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>file:\c:\Users\CristianMorales\One%20Drive\OneDrive%20-%20Consorci%20Administració%20Oberta%20de%20Catalunya\Documents\GitHub\Integracio-AOC-SOAPUI\VO\VO - ESTAT\IGAE\dadesEspecifiques.xsd</con:url><con:content><![CDATA[<xs:schema targetNamespace="http://www.aoc.cat/igae" elementFormDefault="qualified" attributeFormDefault="unqualified" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="http://www.aoc.cat/igae">
   <!--=======================================================-->
   <!--Inhabilitacions-->
   <!--=======================================================-->
@@ -50403,7 +50421,7 @@ estimación objetiva-->
       </xs:sequence>
     </xs:complexType>
   </xs:element>
-</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>file:\C:\Users\CristianMorales\One%20Drive\OneDrive%20-%20Consorci%20Administració%20Oberta%20de%20Catalunya\Documents\GitHub\Integracio-AOC-SOAPUI\VO\VO - ESTAT\ATMV\dadesEspecifiques.xsd</con:url><con:content><![CDATA[<xsd:schema targetNamespace="http://www.aocat.net/dgt/atmv" elementFormDefault="qualified" attributeFormDefault="unqualified" xmlns="http://www.aocat.net/dgt/atmv" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>file:\c:\Users\CristianMorales\One%20Drive\OneDrive%20-%20Consorci%20Administració%20Oberta%20de%20Catalunya\Documents\GitHub\Integracio-AOC-SOAPUI\VO\VO - ESTAT\ATMV\dadesEspecifiques.xsd</con:url><con:content><![CDATA[<xsd:schema targetNamespace="http://www.aocat.net/dgt/atmv" elementFormDefault="qualified" attributeFormDefault="unqualified" xmlns="http://www.aocat.net/dgt/atmv" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <!--=======================================================-->
   <!--Alta impagament-->
   <!--=======================================================-->
@@ -50487,7 +50505,7 @@ estimación objetiva-->
       </xsd:sequence>
     </xsd:complexType>
   </xsd:element>
-</xsd:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>file:\C:\Users\CristianMorales\One%20Drive\OneDrive%20-%20Consorci%20Administració%20Oberta%20de%20Catalunya\Documents\GitHub\Integracio-AOC-SOAPUI\VO\VO - GENE\RGC\dadesEspecifiques.xsd</con:url><con:content><![CDATA[<xs:schema targetNamespace="http://www.aoc.cat/rgc" elementFormDefault="qualified" attributeFormDefault="unqualified" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="http://www.aoc.cat/rgc">
+</xsd:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>file:\c:\Users\CristianMorales\One%20Drive\OneDrive%20-%20Consorci%20Administració%20Oberta%20de%20Catalunya\Documents\GitHub\Integracio-AOC-SOAPUI\VO\VO - GENE\RGC\dadesEspecifiques.xsd</con:url><con:content><![CDATA[<xs:schema targetNamespace="http://www.aoc.cat/rgc" elementFormDefault="qualified" attributeFormDefault="unqualified" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="http://www.aoc.cat/rgc">
   <!--=======================================================-->
   <!--RGC_CONSULTA-->
   <!--=======================================================-->
@@ -50604,7 +50622,7 @@ estimación objetiva-->
       </xs:sequence>
     </xs:complexType>
   </xs:element>
-</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>file:\C:\Users\CristianMorales\One%20Drive\OneDrive%20-%20Consorci%20Administració%20Oberta%20de%20Catalunya\Documents\GitHub\Integracio-AOC-SOAPUI\VO\VO - GENE\RPE\dadesEspecifiques.xsd</con:url><con:content><![CDATA[<xs:schema targetNamespace="http://www.aoc.cat/rpe" elementFormDefault="qualified" attributeFormDefault="unqualified" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="http://www.aoc.cat/rpe">
+</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>file:\c:\Users\CristianMorales\One%20Drive\OneDrive%20-%20Consorci%20Administració%20Oberta%20de%20Catalunya\Documents\GitHub\Integracio-AOC-SOAPUI\VO\VO - GENE\RPE\dadesEspecifiques.xsd</con:url><con:content><![CDATA[<xs:schema targetNamespace="http://www.aoc.cat/rpe" elementFormDefault="qualified" attributeFormDefault="unqualified" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="http://www.aoc.cat/rpe">
   <!--=======================================================-->
   <!--RPE_CONSULTA-->
   <!--=======================================================-->
@@ -50688,7 +50706,7 @@ estimación objetiva-->
       </xs:sequence>
     </xs:complexType>
   </xs:element>
-</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>file:\C:\Users\CristianMorales\One%20Drive\OneDrive%20-%20Consorci%20Administració%20Oberta%20de%20Catalunya\Documents\GitHub\Integracio-AOC-SOAPUI\VO\VO - ESTAT\MEPSYD\dadesEspecifiques.xsd</con:url><con:content><![CDATA[<xs:schema targetNamespace="http://www.aocat.net/mepsyd" elementFormDefault="qualified" attributeFormDefault="unqualified" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="http://www.aocat.net/mepsyd" xmlns:map="http://www.map.es/scsp/esquemas/datosespecificos">
+</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>file:\c:\Users\CristianMorales\One%20Drive\OneDrive%20-%20Consorci%20Administració%20Oberta%20de%20Catalunya\Documents\GitHub\Integracio-AOC-SOAPUI\VO\VO - ESTAT\MEPSYD\dadesEspecifiques.xsd</con:url><con:content><![CDATA[<xs:schema targetNamespace="http://www.aocat.net/mepsyd" elementFormDefault="qualified" attributeFormDefault="unqualified" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="http://www.aocat.net/mepsyd" xmlns:map="http://www.map.es/scsp/esquemas/datosespecificos">
   <xs:import namespace="http://www.map.es/scsp/esquemas/datosespecificos" schemaLocation="datos-especificos-adaptat.xsd"/>
   <!--=======================================================-->
   <!--Titols universitaris-->
@@ -50739,7 +50757,7 @@ estimación objetiva-->
       </xs:sequence>
     </xs:complexType>
   </xs:element>
-</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>file:\C:\Users\CristianMorales\One%20Drive\OneDrive%20-%20Consorci%20Administració%20Oberta%20de%20Catalunya\Documents\GitHub\Integracio-AOC-SOAPUI\VO\VO - ESTAT\MEPSYD\datos-especificos-adaptat.xsd</con:url><con:content><![CDATA[<!--===================================================================================================-->
+</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>file:\c:\Users\CristianMorales\One%20Drive\OneDrive%20-%20Consorci%20Administració%20Oberta%20de%20Catalunya\Documents\GitHub\Integracio-AOC-SOAPUI\VO\VO - ESTAT\MEPSYD\datos-especificos-adaptat.xsd</con:url><con:content><![CDATA[<!--===================================================================================================-->
 <!--CAOC / implementació BEA: ha estat necessari escapçar les dades específiques del servei del MAP-->
 <!--deixant únicament els elements comuns de més alt nivell de les dues consultes ja que la missatgeria-->
 <!--de les consultes, tot i ser diferents, compartien namespace i noms d'elements ==> col·lisió-->
@@ -50786,7 +50804,7 @@ estimación objetiva-->
   </xs:element>
   <xs:element name="DatosTitular" type="xs:anyType"/>
   <xs:element name="ListaTitulos" type="xs:anyType"/>
-</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>file:\C:\Users\CristianMorales\One%20Drive\OneDrive%20-%20Consorci%20Administració%20Oberta%20de%20Catalunya\Documents\GitHub\Integracio-AOC-SOAPUI\VO\VO - ESTAT\NOTARIS\dadesEspecifiques.xsd</con:url><con:content><![CDATA[<xs:schema targetNamespace="http://www.aoc.cat/poders-notarials" elementFormDefault="qualified" attributeFormDefault="unqualified" xmlns="http://www.aoc.cat/poders-notarials" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>file:\c:\Users\CristianMorales\One%20Drive\OneDrive%20-%20Consorci%20Administració%20Oberta%20de%20Catalunya\Documents\GitHub\Integracio-AOC-SOAPUI\VO\VO - ESTAT\NOTARIS\dadesEspecifiques.xsd</con:url><con:content><![CDATA[<xs:schema targetNamespace="http://www.aoc.cat/poders-notarials" elementFormDefault="qualified" attributeFormDefault="unqualified" xmlns="http://www.aoc.cat/poders-notarials" xmlns:xs="http://www.w3.org/2001/XMLSchema">
   <xs:element name="peticioConsultaSubsistenciaAdministradors">
     <xs:complexType>
       <xs:sequence>
@@ -51322,7 +51340,7 @@ estimación objetiva-->
       <xs:pattern value=""/>
     </xs:restriction>
   </xs:simpleType>
-</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>file:\C:\Users\CristianMorales\One%20Drive\OneDrive%20-%20Consorci%20Administració%20Oberta%20de%20Catalunya\Documents\GitHub\Integracio-AOC-SOAPUI\VO\VO - ESTAT\DGP_RESIDENCIA\dadesEspecifiques.xsd</con:url><con:content><![CDATA[<xs:schema targetNamespace="http://www.aoc.cat/dgp-historic-residencia" elementFormDefault="qualified" attributeFormDefault="unqualified" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="http://www.aoc.cat/dgp-historic-residencia">
+</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>file:\c:\Users\CristianMorales\One%20Drive\OneDrive%20-%20Consorci%20Administració%20Oberta%20de%20Catalunya\Documents\GitHub\Integracio-AOC-SOAPUI\VO\VO - ESTAT\DGP_RESIDENCIA\dadesEspecifiques.xsd</con:url><con:content><![CDATA[<xs:schema targetNamespace="http://www.aoc.cat/dgp-historic-residencia" elementFormDefault="qualified" attributeFormDefault="unqualified" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="http://www.aoc.cat/dgp-historic-residencia">
   <xs:element name="peticioConsultaHistoricResidencia">
     <xs:complexType>
       <xs:sequence>
@@ -51469,7 +51487,7 @@ estimación objetiva-->
       </xs:sequence>
     </xs:complexType>
   </xs:element>
-</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>file:\C:\Users\CristianMorales\One%20Drive\OneDrive%20-%20Consorci%20Administració%20Oberta%20de%20Catalunya\Documents\GitHub\Integracio-AOC-SOAPUI\VO\VO - ESTAT\REG_CIVIL DICIREG\dadesEspecifiques.xsd</con:url><con:content><![CDATA[<xs:schema targetNamespace="http://www.aoc.cat/registre-civil/dicireg" elementFormDefault="qualified" attributeFormDefault="unqualified" xmlns="http://www.aoc.cat/registre-civil/dicireg" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>file:\c:\Users\CristianMorales\One%20Drive\OneDrive%20-%20Consorci%20Administració%20Oberta%20de%20Catalunya\Documents\GitHub\Integracio-AOC-SOAPUI\VO\VO - ESTAT\REG_CIVIL DICIREG\dadesEspecifiques.xsd</con:url><con:content><![CDATA[<xs:schema targetNamespace="http://www.aoc.cat/registre-civil/dicireg" elementFormDefault="qualified" attributeFormDefault="unqualified" xmlns="http://www.aoc.cat/registre-civil/dicireg" xmlns:xs="http://www.w3.org/2001/XMLSchema">
   <!--=======================================================-->
   <!--Dades-->
   <!--=======================================================-->
@@ -51959,7 +51977,7 @@ estimación objetiva-->
       </xs:sequence>
     </xs:complexType>
   </xs:element>
-</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>file:\C:\Users\CristianMorales\One%20Drive\OneDrive%20-%20Consorci%20Administració%20Oberta%20de%20Catalunya\Documents\GitHub\Integracio-AOC-SOAPUI\VO\VO - GENE\SCT_DENUNCIES\dadesEspecifiques.xsd</con:url><con:content><![CDATA[<xs:schema targetNamespace="http://www.aoc.cat/sct/denuncies" elementFormDefault="qualified" attributeFormDefault="unqualified" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="http://www.aoc.cat/sct/denuncies" xmlns:sct-norma="http://www.gencat.cat/transit/denuncies/normativesPDAResposta" xmlns:sct-rang-pet="http://www.gencat.cat/transit/denuncies/rangPDA" xmlns:sct-rang-res="http://www.gencat.cat/transit/denuncies/rangPDAResposta" xmlns:sct-rem="http://www.gencat.cat/transit/denuncies">
+</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>file:\c:\Users\CristianMorales\One%20Drive\OneDrive%20-%20Consorci%20Administració%20Oberta%20de%20Catalunya\Documents\GitHub\Integracio-AOC-SOAPUI\VO\VO - GENE\SCT_DENUNCIES\dadesEspecifiques.xsd</con:url><con:content><![CDATA[<xs:schema targetNamespace="http://www.aoc.cat/sct/denuncies" elementFormDefault="qualified" attributeFormDefault="unqualified" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="http://www.aoc.cat/sct/denuncies" xmlns:sct-norma="http://www.gencat.cat/transit/denuncies/normativesPDAResposta" xmlns:sct-rang-pet="http://www.gencat.cat/transit/denuncies/rangPDA" xmlns:sct-rang-res="http://www.gencat.cat/transit/denuncies/rangPDAResposta" xmlns:sct-rem="http://www.gencat.cat/transit/denuncies">
   <xs:import namespace="http://www.gencat.cat/transit/denuncies" schemaLocation="RemesaRespostaPDA.xsd"/>
   <xs:import namespace="http://www.gencat.cat/transit/denuncies/rangPDA" schemaLocation="RangPDA.xsd"/>
   <xs:import namespace="http://www.gencat.cat/transit/denuncies/rangPDAResposta" schemaLocation="RangPDAResposta.xsd"/>
@@ -52017,7 +52035,7 @@ estimación objetiva-->
       </xs:sequence>
     </xs:complexType>
   </xs:element>
-</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>file:\C:\Users\CristianMorales\One%20Drive\OneDrive%20-%20Consorci%20Administració%20Oberta%20de%20Catalunya\Documents\GitHub\Integracio-AOC-SOAPUI\VO\VO - GENE\SCT_DENUNCIES\RemesaRespostaPDA.xsd</con:url><con:content><![CDATA[<xs:schema targetNamespace="http://www.gencat.cat/transit/denuncies" elementFormDefault="qualified" attributeFormDefault="unqualified" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="http://www.gencat.cat/transit/denuncies">
+</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>file:\c:\Users\CristianMorales\One%20Drive\OneDrive%20-%20Consorci%20Administració%20Oberta%20de%20Catalunya\Documents\GitHub\Integracio-AOC-SOAPUI\VO\VO - GENE\SCT_DENUNCIES\RemesaRespostaPDA.xsd</con:url><con:content><![CDATA[<xs:schema targetNamespace="http://www.gencat.cat/transit/denuncies" elementFormDefault="qualified" attributeFormDefault="unqualified" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="http://www.gencat.cat/transit/denuncies">
   <xs:element name="DADES">
     <xs:complexType>
       <xs:sequence>
@@ -52157,7 +52175,7 @@ estimación objetiva-->
       <xs:pattern value="\d{4}(0[1-9]|1[012])(0[1-9]|[12][0-9]|3[01])"/>
     </xs:restriction>
   </xs:simpleType>
-</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>file:\C:\Users\CristianMorales\One%20Drive\OneDrive%20-%20Consorci%20Administració%20Oberta%20de%20Catalunya\Documents\GitHub\Integracio-AOC-SOAPUI\VO\VO - GENE\SCT_DENUNCIES\RangPDA.xsd</con:url><con:content><![CDATA[<xs:schema targetNamespace="http://www.gencat.cat/transit/denuncies/rangPDA" elementFormDefault="qualified" attributeFormDefault="unqualified" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="http://www.gencat.cat/transit/denuncies/rangPDA">
+</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>file:\c:\Users\CristianMorales\One%20Drive\OneDrive%20-%20Consorci%20Administració%20Oberta%20de%20Catalunya\Documents\GitHub\Integracio-AOC-SOAPUI\VO\VO - GENE\SCT_DENUNCIES\RangPDA.xsd</con:url><con:content><![CDATA[<xs:schema targetNamespace="http://www.gencat.cat/transit/denuncies/rangPDA" elementFormDefault="qualified" attributeFormDefault="unqualified" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="http://www.gencat.cat/transit/denuncies/rangPDA">
   <xs:element name="PETICIO_ENTRADA">
     <xs:complexType>
       <xs:sequence>
@@ -52194,7 +52212,7 @@ estimación objetiva-->
       </xs:restriction>
     </xs:simpleType>
   </xs:element>
-</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>file:\C:\Users\CristianMorales\One%20Drive\OneDrive%20-%20Consorci%20Administració%20Oberta%20de%20Catalunya\Documents\GitHub\Integracio-AOC-SOAPUI\VO\VO - GENE\SCT_DENUNCIES\RangPDAResposta.xsd</con:url><con:content><![CDATA[<xs:schema targetNamespace="http://www.gencat.cat/transit/denuncies/rangPDAResposta" elementFormDefault="qualified" attributeFormDefault="unqualified" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="http://www.gencat.cat/transit/denuncies/rangPDAResposta">
+</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>file:\c:\Users\CristianMorales\One%20Drive\OneDrive%20-%20Consorci%20Administració%20Oberta%20de%20Catalunya\Documents\GitHub\Integracio-AOC-SOAPUI\VO\VO - GENE\SCT_DENUNCIES\RangPDAResposta.xsd</con:url><con:content><![CDATA[<xs:schema targetNamespace="http://www.gencat.cat/transit/denuncies/rangPDAResposta" elementFormDefault="qualified" attributeFormDefault="unqualified" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="http://www.gencat.cat/transit/denuncies/rangPDAResposta">
   <xs:element name="PETICIO_SORTIDA">
     <xs:complexType>
       <xs:sequence>
@@ -52301,7 +52319,7 @@ estimación objetiva-->
       </xs:sequence>
     </xs:complexType>
   </xs:element>
-</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>file:\C:\Users\CristianMorales\One%20Drive\OneDrive%20-%20Consorci%20Administració%20Oberta%20de%20Catalunya\Documents\GitHub\Integracio-AOC-SOAPUI\VO\VO - GENE\SCT_DENUNCIES\NormativesPDAResposta.xsd</con:url><con:content><![CDATA[<xs:schema targetNamespace="http://www.gencat.cat/transit/denuncies/normativesPDAResposta" elementFormDefault="qualified" attributeFormDefault="unqualified" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="http://www.gencat.cat/transit/denuncies/normativesPDAResposta">
+</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>file:\c:\Users\CristianMorales\One%20Drive\OneDrive%20-%20Consorci%20Administració%20Oberta%20de%20Catalunya\Documents\GitHub\Integracio-AOC-SOAPUI\VO\VO - GENE\SCT_DENUNCIES\NormativesPDAResposta.xsd</con:url><con:content><![CDATA[<xs:schema targetNamespace="http://www.gencat.cat/transit/denuncies/normativesPDAResposta" elementFormDefault="qualified" attributeFormDefault="unqualified" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="http://www.gencat.cat/transit/denuncies/normativesPDAResposta">
   <xs:element name="PETICIO_SORTIDA">
     <xs:complexType>
       <xs:sequence>
@@ -52443,7 +52461,7 @@ estimación objetiva-->
       </xs:sequence>
     </xs:complexType>
   </xs:element>
-</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>file:\C:\Users\CristianMorales\One%20Drive\OneDrive%20-%20Consorci%20Administració%20Oberta%20de%20Catalunya\Documents\GitHub\Integracio-AOC-SOAPUI\VO\VO - ESTAT\DGP_RESIDENCIA_LEGAL\dadesEspecifiques.xsd</con:url><con:content><![CDATA[<xs:schema targetNamespace="http://www.aoc.cat/dgp-residencia-legal" elementFormDefault="qualified" attributeFormDefault="unqualified" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="http://www.aoc.cat/dgp-residencia-legal">
+</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>file:\c:\Users\CristianMorales\One%20Drive\OneDrive%20-%20Consorci%20Administració%20Oberta%20de%20Catalunya\Documents\GitHub\Integracio-AOC-SOAPUI\VO\VO - ESTAT\DGP_RESIDENCIA_LEGAL\dadesEspecifiques.xsd</con:url><con:content><![CDATA[<xs:schema targetNamespace="http://www.aoc.cat/dgp-residencia-legal" elementFormDefault="qualified" attributeFormDefault="unqualified" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="http://www.aoc.cat/dgp-residencia-legal">
   <xs:element name="peticioConsultaResidenciaLegal">
     <xs:complexType>
       <xs:sequence>
@@ -52791,7 +52809,7 @@ estimación objetiva-->
       </xs:sequence>
     </xs:complexType>
   </xs:element>
-</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>file:\C:\Users\CristianMorales\One%20Drive\OneDrive%20-%20Consorci%20Administració%20Oberta%20de%20Catalunya\Documents\GitHub\Integracio-AOC-SOAPUI\VO\VO - GENE\ACTIC\dadesEspecifiques.xsd</con:url><con:content><![CDATA[<xs:schema targetNamespace="http://www.aoc.cat/actic" elementFormDefault="qualified" attributeFormDefault="unqualified" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="http://www.aoc.cat/actic">
+</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>file:\c:\Users\CristianMorales\One%20Drive\OneDrive%20-%20Consorci%20Administració%20Oberta%20de%20Catalunya\Documents\GitHub\Integracio-AOC-SOAPUI\VO\VO - GENE\ACTIC\dadesEspecifiques.xsd</con:url><con:content><![CDATA[<xs:schema targetNamespace="http://www.aoc.cat/actic" elementFormDefault="qualified" attributeFormDefault="unqualified" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="http://www.aoc.cat/actic">
   <xs:element name="resultat">
     <xs:complexType>
       <xs:sequence>
@@ -52893,7 +52911,7 @@ estimación objetiva-->
       </xs:sequence>
     </xs:complexType>
   </xs:element>
-</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>file:\C:\Users\CristianMorales\One%20Drive\OneDrive%20-%20Consorci%20Administració%20Oberta%20de%20Catalunya\Documents\GitHub\Integracio-AOC-SOAPUI\VO\VO - ESTAT\MUFACE\dadesEspecifiques-MUFACE_AFILIACIO.xsd</con:url><con:content><![CDATA[<xs:schema targetNamespace="http://www.aoc.cat/muface" elementFormDefault="qualified" attributeFormDefault="unqualified" xmlns="http://www.aoc.cat/muface" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:muface="http://intermediacion.redsara.es/scsp/esquemas/datosespecificos">
+</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>file:\c:\Users\CristianMorales\One%20Drive\OneDrive%20-%20Consorci%20Administració%20Oberta%20de%20Catalunya\Documents\GitHub\Integracio-AOC-SOAPUI\VO\VO - ESTAT\MUFACE\dadesEspecifiques-MUFACE_AFILIACIO.xsd</con:url><con:content><![CDATA[<xs:schema targetNamespace="http://www.aoc.cat/muface" elementFormDefault="qualified" attributeFormDefault="unqualified" xmlns="http://www.aoc.cat/muface" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:muface="http://intermediacion.redsara.es/scsp/esquemas/datosespecificos">
   <xs:import namespace="http://intermediacion.redsara.es/scsp/esquemas/datosespecificos" schemaLocation="datos-especificos-SVDMUFAFIXMLWS01.xsd"/>
   <xs:element name="peticioConsultaDadesAfiliacio">
     <xs:complexType>
@@ -52928,7 +52946,7 @@ estimación objetiva-->
       </xs:sequence>
     </xs:complexType>
   </xs:element>
-</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>file:\C:\Users\CristianMorales\One%20Drive\OneDrive%20-%20Consorci%20Administració%20Oberta%20de%20Catalunya\Documents\GitHub\Integracio-AOC-SOAPUI\VO\VO - ESTAT\MUFACE\datos-especificos-SVDMUFAFIXMLWS01.xsd</con:url><con:content><![CDATA[<xs:schema targetNamespace="http://intermediacion.redsara.es/scsp/esquemas/datosespecificos" elementFormDefault="qualified" xmlns="http://intermediacion.redsara.es/scsp/esquemas/datosespecificos" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>file:\c:\Users\CristianMorales\One%20Drive\OneDrive%20-%20Consorci%20Administració%20Oberta%20de%20Catalunya\Documents\GitHub\Integracio-AOC-SOAPUI\VO\VO - ESTAT\MUFACE\datos-especificos-SVDMUFAFIXMLWS01.xsd</con:url><con:content><![CDATA[<xs:schema targetNamespace="http://intermediacion.redsara.es/scsp/esquemas/datosespecificos" elementFormDefault="qualified" xmlns="http://intermediacion.redsara.es/scsp/esquemas/datosespecificos" xmlns:xs="http://www.w3.org/2001/XMLSchema">
   <xs:element name="DatosEspecificos">
     <xs:complexType>
       <xs:choice>
@@ -53085,7 +53103,7 @@ estimación objetiva-->
       </xs:element>
     </xs:sequence>
   </xs:complexType>
-</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>file:\C:\Users\CristianMorales\One%20Drive\OneDrive%20-%20Consorci%20Administració%20Oberta%20de%20Catalunya\Documents\GitHub\Integracio-AOC-SOAPUI\VO\VO - ESTAT\GRAU_DISC CCAA\dadesEspecifiques.xsd</con:url><con:content><![CDATA[<xs:schema targetNamespace="http://www.aoc.cat/discapacitat/ccaa" elementFormDefault="qualified" xmlns="http://www.aoc.cat/discapacitat/ccaa" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>file:\c:\Users\CristianMorales\One%20Drive\OneDrive%20-%20Consorci%20Administració%20Oberta%20de%20Catalunya\Documents\GitHub\Integracio-AOC-SOAPUI\VO\VO - ESTAT\GRAU_DISC CCAA\dadesEspecifiques.xsd</con:url><con:content><![CDATA[<xs:schema targetNamespace="http://www.aoc.cat/discapacitat/ccaa" elementFormDefault="qualified" xmlns="http://www.aoc.cat/discapacitat/ccaa" xmlns:xs="http://www.w3.org/2001/XMLSchema">
   <xs:element name="peticioConsultaDadesDiscapacitat">
     <xs:complexType>
       <xs:sequence>
@@ -53246,7 +53264,7 @@ estimación objetiva-->
       </xs:sequence>
     </xs:complexType>
   </xs:element>
-</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>file:\C:\Users\CristianMorales\One%20Drive\OneDrive%20-%20Consorci%20Administració%20Oberta%20de%20Catalunya\Documents\GitHub\Integracio-AOC-SOAPUI\VO\VO - GENE\RELI\dadesEspecifiques.xsd</con:url><con:content><![CDATA[<xs:schema targetNamespace="http://www.aoc.cat/reli" elementFormDefault="qualified" attributeFormDefault="unqualified" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="http://www.aoc.cat/reli">
+</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>file:\c:\Users\CristianMorales\One%20Drive\OneDrive%20-%20Consorci%20Administració%20Oberta%20de%20Catalunya\Documents\GitHub\Integracio-AOC-SOAPUI\VO\VO - GENE\RELI\dadesEspecifiques.xsd</con:url><con:content><![CDATA[<xs:schema targetNamespace="http://www.aoc.cat/reli" elementFormDefault="qualified" attributeFormDefault="unqualified" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="http://www.aoc.cat/reli">
   <!--=======================================================-->
   <!--RELI_CONSULTA_EMPRESA-->
   <!--=======================================================-->
@@ -53619,7 +53637,7 @@ estimación objetiva-->
       </xs:sequence>
     </xs:complexType>
   </xs:element>
-</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>file:\C:\Users\CristianMorales\One%20Drive\OneDrive%20-%20Consorci%20Administració%20Oberta%20de%20Catalunya\Documents\GitHub\Integracio-AOC-SOAPUI\VO\VO - GENE\CAMINS\dadesEspecifiques.xsd</con:url><con:content><![CDATA[<xs:schema targetNamespace="http://www.aoc.cat/csuc" elementFormDefault="qualified" attributeFormDefault="unqualified" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="http://www.aoc.cat/csuc">
+</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>file:\c:\Users\CristianMorales\One%20Drive\OneDrive%20-%20Consorci%20Administració%20Oberta%20de%20Catalunya\Documents\GitHub\Integracio-AOC-SOAPUI\VO\VO - GENE\CAMINS\dadesEspecifiques.xsd</con:url><con:content><![CDATA[<xs:schema targetNamespace="http://www.aoc.cat/csuc" elementFormDefault="qualified" attributeFormDefault="unqualified" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="http://www.aoc.cat/csuc">
   <xs:element name="resultat">
     <xs:complexType>
       <xs:sequence>
@@ -53689,7 +53707,7 @@ estimación objetiva-->
       </xs:sequence>
     </xs:complexType>
   </xs:element>
-</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>file:\C:\Users\CristianMorales\One%20Drive\OneDrive%20-%20Consorci%20Administració%20Oberta%20de%20Catalunya\Documents\GitHub\Integracio-AOC-SOAPUI\VO\VO - GENE\BDSEU\dadesEspecifiques.xsd</con:url><con:content><![CDATA[<xs:schema targetNamespace="http://www.aoc.cat/bd-seu" elementFormDefault="qualified" xmlns="http://www.aoc.cat/bd-seu" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>file:\c:\Users\CristianMorales\One%20Drive\OneDrive%20-%20Consorci%20Administració%20Oberta%20de%20Catalunya\Documents\GitHub\Integracio-AOC-SOAPUI\VO\VO - GENE\BDSEU\dadesEspecifiques.xsd</con:url><con:content><![CDATA[<xs:schema targetNamespace="http://www.aoc.cat/bd-seu" elementFormDefault="qualified" xmlns="http://www.aoc.cat/bd-seu" xmlns:xs="http://www.w3.org/2001/XMLSchema">
   <xs:element name="respostaConsultaDadesContacte">
     <xs:complexType>
       <xs:sequence>
@@ -53768,7 +53786,7 @@ estimación objetiva-->
       </xs:sequence>
     </xs:complexType>
   </xs:element>
-</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>file:\C:\Users\CristianMorales\One%20Drive\OneDrive%20-%20Consorci%20Administració%20Oberta%20de%20Catalunya\Documents\GitHub\Integracio-AOC-SOAPUI\VO\VO - ESTAT\AEAT\dadesEspecifiques-ECOT10x.xsd</con:url><con:content><![CDATA[<xs:schema targetNamespace="http://www.aoc.cat/aeat/obligacions" elementFormDefault="qualified" attributeFormDefault="unqualified" xmlns="http://www.aoc.cat/aeat/obligacions" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:aeat="http://intermediacion.redsara.es/scsp/esquemas/datosespecificos">
+</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>file:\c:\Users\CristianMorales\One%20Drive\OneDrive%20-%20Consorci%20Administració%20Oberta%20de%20Catalunya\Documents\GitHub\Integracio-AOC-SOAPUI\VO\VO - ESTAT\AEAT\dadesEspecifiques-ECOT10x.xsd</con:url><con:content><![CDATA[<xs:schema targetNamespace="http://www.aoc.cat/aeat/obligacions" elementFormDefault="qualified" attributeFormDefault="unqualified" xmlns="http://www.aoc.cat/aeat/obligacions" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:aeat="http://intermediacion.redsara.es/scsp/esquemas/datosespecificos">
   <xs:import namespace="http://intermediacion.redsara.es/scsp/esquemas/datosespecificos" schemaLocation="JAV3_ECOT_respuesta.xsd"/>
   <xs:element name="peticioConsultaObligacionsTributaries">
     <xs:complexType>
@@ -53797,7 +53815,7 @@ estimación objetiva-->
       </xs:sequence>
     </xs:complexType>
   </xs:element>
-</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>file:\C:\Users\CristianMorales\One%20Drive\OneDrive%20-%20Consorci%20Administració%20Oberta%20de%20Catalunya\Documents\GitHub\Integracio-AOC-SOAPUI\VO\VO - ESTAT\AEAT\JAV3_ECOT_respuesta.xsd</con:url><con:content><![CDATA[<!--edited with XMLSpy v2007 (http://www.altova.com) by Juan Ramon Rubio Antequera (TECSIDEL, S.A.)-->
+</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>file:\c:\Users\CristianMorales\One%20Drive\OneDrive%20-%20Consorci%20Administració%20Oberta%20de%20Catalunya\Documents\GitHub\Integracio-AOC-SOAPUI\VO\VO - ESTAT\AEAT\JAV3_ECOT_respuesta.xsd</con:url><con:content><![CDATA[<!--edited with XMLSpy v2007 (http://www.altova.com) by Juan Ramon Rubio Antequera (TECSIDEL, S.A.)-->
 <xs:schema targetNamespace="http://intermediacion.redsara.es/scsp/esquemas/datosespecificos" elementFormDefault="qualified" attributeFormDefault="unqualified" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="http://intermediacion.redsara.es/scsp/esquemas/datosespecificos">
   <xs:element name="DatosEspecificos">
     <xs:complexType>
@@ -53892,7 +53910,7 @@ estimación objetiva-->
       </xs:sequence>
     </xs:complexType>
   </xs:element>
-</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>file:\C:\Users\CristianMorales\One%20Drive\OneDrive%20-%20Consorci%20Administració%20Oberta%20de%20Catalunya\Documents\GitHub\Integracio-AOC-SOAPUI\VO\VO - GENE\NIVELL_C\dadesEspecifiques.xsd</con:url><con:content><![CDATA[<xs:schema targetNamespace="http://www.aoc.cat/certificat-catala" elementFormDefault="qualified" attributeFormDefault="unqualified" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="http://www.aoc.cat/certificat-catala">
+</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>file:\c:\Users\CristianMorales\One%20Drive\OneDrive%20-%20Consorci%20Administració%20Oberta%20de%20Catalunya\Documents\GitHub\Integracio-AOC-SOAPUI\VO\VO - GENE\NIVELL_C\dadesEspecifiques.xsd</con:url><con:content><![CDATA[<xs:schema targetNamespace="http://www.aoc.cat/certificat-catala" elementFormDefault="qualified" attributeFormDefault="unqualified" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="http://www.aoc.cat/certificat-catala">
   <!--=======================================================-->
   <!--CERTIFICAT_CATALA_CONSULTA-->
   <!--=======================================================-->
@@ -53986,7 +54004,7 @@ estimación objetiva-->
       </xs:sequence>
     </xs:complexType>
   </xs:element>
-</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>file:\C:\Users\CristianMorales\One%20Drive\OneDrive%20-%20Consorci%20Administració%20Oberta%20de%20Catalunya\Documents\GitHub\Integracio-AOC-SOAPUI\VO\VO - ESTAT\TITULACIONS_RJCU\dadesEspecifiques.xsd</con:url><con:content><![CDATA[<xs:schema targetNamespace="http://www.aoc.cat/titulacions/rjcu" elementFormDefault="qualified" attributeFormDefault="unqualified" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="http://www.aoc.cat/titulacions/rjcu">
+</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>file:\c:\Users\CristianMorales\One%20Drive\OneDrive%20-%20Consorci%20Administració%20Oberta%20de%20Catalunya\Documents\GitHub\Integracio-AOC-SOAPUI\VO\VO - ESTAT\TITULACIONS_RJCU\dadesEspecifiques.xsd</con:url><con:content><![CDATA[<xs:schema targetNamespace="http://www.aoc.cat/titulacions/rjcu" elementFormDefault="qualified" attributeFormDefault="unqualified" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="http://www.aoc.cat/titulacions/rjcu">
   <!--=======================================================-->
   <!--RJCU_CENTRES-->
   <!--=======================================================-->
@@ -55215,7 +55233,7 @@ estimación objetiva-->
       </xs:sequence>
     </xs:complexType>
   </xs:element>
-</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>file:\C:\Users\CristianMorales\One%20Drive\OneDrive%20-%20Consorci%20Administració%20Oberta%20de%20Catalunya\Documents\GitHub\Integracio-AOC-SOAPUI\VO\VO - ESTAT\INE\dadesEspecifiques.xsd</con:url><con:content><![CDATA[<xs:schema targetNamespace="http://www.aoc.cat/ine" elementFormDefault="qualified" attributeFormDefault="unqualified" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="http://www.aoc.cat/ine">
+</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>file:\c:\Users\CristianMorales\One%20Drive\OneDrive%20-%20Consorci%20Administració%20Oberta%20de%20Catalunya\Documents\GitHub\Integracio-AOC-SOAPUI\VO\VO - ESTAT\INE\dadesEspecifiques.xsd</con:url><con:content><![CDATA[<xs:schema targetNamespace="http://www.aoc.cat/ine" elementFormDefault="qualified" attributeFormDefault="unqualified" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="http://www.aoc.cat/ine">
   <!--=======================================================-->
   <!--HISTORIC_RESIDENCIA_CONVIVENTS_SECOPA-->
   <!--=======================================================-->

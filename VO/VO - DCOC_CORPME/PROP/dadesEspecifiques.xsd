@@ -56,9 +56,27 @@
 				<xsd:element name="provincia" type="xsd:int"/>
 				<xsd:element name="seccion" type="xsd:int"/>
 				<xsd:element name="finca" type="xsd:int"/>
-				<xsd:element name="subfinca" type="xsd:string" minOccurs="0"/>
-				<xsd:element name="duplicado" type="xsd:string" minOccurs="0"/>
-				<xsd:element name="datosAdicionales" type="xsd:string" minOccurs="0"/>
+				<xsd:element name="subfinca" minOccurs="0">
+					<xsd:simpleType>
+						<xsd:restriction base="xsd:string">
+							<xsd:maxLength value="6"/>
+						</xsd:restriction>
+					</xsd:simpleType>
+				</xsd:element>
+				<xsd:element name="duplicado" minOccurs="0">
+					<xsd:simpleType>
+						<xsd:restriction base="xsd:string">
+							<xsd:maxLength value="15"/>
+						</xsd:restriction>
+					</xsd:simpleType>
+				</xsd:element>
+				<xsd:element name="datosAdicionales" minOccurs="0">
+					<xsd:simpleType>
+						<xsd:restriction base="xsd:string">
+							<xsd:maxLength value="200"/>
+						</xsd:restriction>
+					</xsd:simpleType>
+				</xsd:element>
 			</xsd:sequence>
 		</xsd:complexType>
 	</xsd:element>
@@ -78,22 +96,22 @@
 				<xsd:element name="registro" type="xsd:int"/>
 				<xsd:element name="municipio" type="xsd:int"/>
 				<xsd:element name="provincia" type="xsd:int"/>
-               <xsd:element name="finca" minOccurs="0">
-                 <xsd:complexType>
-                   <xsd:sequence>
-                     <xsd:element name="numero" type="xsd:int" minOccurs="0"/>
-                     <xsd:element name="nombre" type="xsd:string" minOccurs="0"/>
-                   </xsd:sequence>
-                 </xsd:complexType>
-               </xsd:element>
-               <xsd:element name="direccion" minOccurs="0">
-                 <xsd:complexType>
-                   <xsd:sequence>
-                     <xsd:element name="calle" type="xsd:string"/>
-                     <xsd:element name="numero" type="xsd:string"  minOccurs="0"/>
-                   </xsd:sequence>
-                 </xsd:complexType>
-               </xsd:element>
+				<xsd:element name="finca" minOccurs="0">
+					<xsd:complexType>
+						<xsd:sequence>
+							<xsd:element name="numero" type="xsd:int" minOccurs="0"/>
+							<xsd:element name="nombre" type="xsd:string" minOccurs="0"/>
+						</xsd:sequence>
+					</xsd:complexType>
+				</xsd:element>
+				<xsd:element name="direccion" minOccurs="0">
+					<xsd:complexType>
+						<xsd:sequence>
+							<xsd:element name="calle" type="xsd:string"/>
+							<xsd:element name="numero" type="xsd:string" minOccurs="0"/>
+						</xsd:sequence>
+					</xsd:complexType>
+				</xsd:element>
 				<xsd:element name="titular" type="xsd:string" minOccurs="0"/>
 				<xsd:element name="datosAdicionales" type="xsd:string" minOccurs="0"/>
 				<xsd:element name="datosAnteriores" type="xsd:string" minOccurs="0"/>
